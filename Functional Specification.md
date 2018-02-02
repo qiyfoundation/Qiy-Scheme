@@ -4,144 +4,144 @@ From Qiy Nodes to data exchange
 
 # Contents
 
-1. [1 Introduction]
-	1. [1.1 Purpose]
-	1. [1.2 Reader guidance]
-1. [2 Overview]
-	1. [2.1 Data Reuse]
-		1. [2.1.1 Privacy concern]
-1. [3 Architectural Description]
-	1. [3.1 Architectural Layers]
-	1. [3.2 Privacy]
-	1. [3.3 Security]
-	1. [3.4 Interoperability]
-	1. [3.5 Governance]
-	1. [3.6 Compliancy]
-1. [4 The User Layer]
-	1. [4.1 Qiy Users]
-	1. [4.2 Provider]
-	1. [4.3 Qiy Node]
-	1. [4.4 Connect via Qiy]
-		1. [4.4.1 Generate token]
-		1. [4.4.2 Media]
-			1. [4.4.2.1 The web]
-			1. [4.4.2.2 Print]
-	1. [4.5 Setup]
-		1. [4.5.1 Relying Party]
-		1. [4.5.1 Data Provider]
-		1. [4.5.2 Individual]
-	1. [4.6 Subscribe]
-	1. [4.7 Consent]
-	1. [4.8 Routing]
-	1. [4.9 Source]
-	1. [4.10 Session]
-1. [5 The Application Layer]
-	1. [5.1 Qiy Application]
-		1. [5.1.1 Application Provider]
-		1. [5.1.2 Qiy Application Protocol]
-		1. [5.1.3 Creating Qiy Nodes for Individuals]
-			1. [5.1.3.1 Security consideration]
-		1. [5.1.4 Link with an existing Qiy Node]
-	1. [5.2 Connect]
-		1. [5.2.1 Application Connect Token]
-		1. [5.2.2 Proposer: Connect]
-		1. [5.2.3 Generate Application Connect Token]
-		1. [5.2.4 Accepter: Connect]
-	1. [5.3 Consent]
-		1. [5.3.1 Relying Party: Request consent]
-		1. [5.3.2 Individual: Consider consent request]
-	1. [5.4 Service Discovery]
-	1. [5.5 Data by Reference]
-		1. [5.5.1 Service by Reference]
-		1. [5.5.1 Request data reference]
-		1. [5.4.2 Create reference]
-		1. [5.5.1 Request data]
-		1. [5.5.2 Provide data]
-1. [6 The Qiy Node Layer]
-	1. [6.1 Access Provider]
-		1. [6.1.1 Portability]
-	1. [6.2 Qiy Node]
-		1. [6.2.1 Qiy Node Protocol]
-		1. [6.2.2 Qiy Node API]
-		1. [6.2.3 Qiy Node Implementation]
-		1. [6.2.4 Qiy Node Instantiation]
-		1. [6.2.5 Deleting a Qiy Node]
-	1. [6.3 Connect]
-		1. [6.3.1 Connection Uri]
-			1. [6.3.1.1 Security concern]
-		1. [6.3.2 Connect Token]
-			1. [6.3.2.1 Security concern]
-			1. [6.3.2.2 Creating a Connect Token]
-			1. [6.3.2.3 Creating a Transport Connect Token]
-		1. [6.3.3 Connecting]
-		1. [6.3.4 Deleting a Connection]
-	1. [6.4 Consent]
-		1. [6.4.1 Consent Uri]
-		1. [6.4.2 Consent Service Descriptor]
-		1. [6.4.3 Consent Data Descriptor]
-			1. [6.4.3.1 Privacy concern]
-	1. [6.5 Qiy Node Request]
-	1. [6.6 Qiy Node Requests]
-		1. [6.6.1 Connect Token Creation Request]
-		1. [6.6.2 Connect Token Registration Request]
-		1. [6.6.3 Connect Token Update Request]
-		1. [6.6.4 Connection Create Request]
-		1. [6.6.5 Connection Delete Request]
-		1. [6.6.6 Connections Request]
-		1. [6.6.7 Consent Denied Request]
-		1. [6.6.8 Consent Granted Request]
-		1. [6.6.9 Consent Request]
-		1. [6.6.10 Consent Withdrawn Request]
-		1. [6.6.11 Consents Request]
-		1. [6.6.12 Message Post Request]
-		1. [6.6.13 Messages Request]
-		1. [6.6.14 Operation Execution Request]
-		1. [6.6.15 Operation Registration Request]
-		1. [6.6.16 Operation References Request]
-		1. [6.6.17 Source Candidates Request]
-		1. [6.6.18 Source Registration Request]
-	1. [6.7 Qiy Node Message]
-	1. [6.8 Qiy Node Messages]
-		1. [6.8.1 Consent Denied Message]
-		1. [6.8.2 Consent Granted Message]
-		1. [6.8.3 Consent Request Message]
-		1. [6.8.4 Operation Reference Message]
-		1. [6.8.5 Operation Reference Request Message]
-	1. [6.9 Qiy Node Event]
-	1. [6.10 Qiy Node Events]
-		1. [6.10.1 Connection Created Event]
-		1. [6.10.2 Consent Withdrawn Event]
-		1. [6.10.3 Message Received Event]
-		1. [6.10.4 Operation Reference Received Event]
-		1. [6.10.5 Source Candidate Event]
-1. [7 The Service Layer]
-	1. [7.1 Access Provider]
-		1. [7.1.1 Portability]
-	1. [7.2 Service]
-	1. [7.3 Service Endpoints]
-	1. [7.4 Service Library]
-	1. [7.5 Consent Service]
-1. [8 The Transport Layer]
-	1. [8.1 Access Provider]
-		1. [8.1.1 Portability]
-	1. [8.2 Transporter]
-	1. [8.2.1 Transport Protocol]
-	1. [8.2.2 Transporter API]
-	1. [8.2.3 Transporter Implementation]
-	1. [8.2.4 Transporter Instantiation]
-	1. [8.2.5 Deleting a Transporter]
-	1. [8.3 Path]
-		1. [8.3.1 Path Creation]
-		1. [8.3.2 Deleting a Path]
-1. [9 The Carrier Layer]
-	1. [9.1 Access Provider]
-		1. [9.1.1 Portability]
-	1. [9.2 Carrier]
-	1. [9.2.1 Carrier Protocol]
-	1. [9.2.2 Carrier API]
-	1. [9.2.3 Carrier Implementation]
-	1. [9.3 Carrier Node]
-1. [10 Definitions]
+1. [Introduction](#1-introduction)
+	1. [Purpose](#1.1-purpose)
+	1. [Reader guidance](#1.2-reader-guidance)
+1. [Overview](#2-overview)
+	1. [Data Reuse](#2.1-data-reuse)
+		1. [Privacy concern](#2.1.1-privacy-concern)
+1. [Architectural Description](#3-architectural-description)
+	1. [Architectural Layers](#3.1-architectural-layers)
+	1. [Privacy](#3.2-privacy)
+	1. [Security](#3.3-security)
+	1. [Interoperability](#3.4-interoperability)
+	1. [Governance](#3.5-governance)
+	1. [Compliancy](#3.6-compliancy)
+1. [The User Layer](#4-the-user-layer)
+	1. [Qiy Users](#4.1-qiy-users)
+	1. [Provider](#4.2-provider)
+	1. [Qiy Node](#4.3-qiy-node)
+	1. [Connect via Qiy](#4.4-connect-via-qiy)
+		1. [Generate token](#4.4.1-generate-token)
+		1. [Media](#4.4.2-media)
+			1. [The web](#4.4.2.1-the-web)
+			1. [Print](#4.4.2.2-print)
+	1. [Setup](#4.5-setup)
+		1. [Relying Party](#4.5.1-relying-party)
+		1. [Data Provider](#4.5.1-data-provider)
+		1. [Individual](#4.5.2-individual)
+	1. [Subscribe](#4.6-subscribe)
+	1. [Consent](#4.7-consent)
+	1. [Routing](#4.8-routing)
+	1. [Source](#4.9-source)
+	1. [Session](#4.10-session)
+1. [The Application Layer](#5-the-application-layer)
+	1. [Qiy Application](#5.1-qiy-application)
+		1. [Application Provider](#5.1.1-application-provider)
+		1. [Qiy Application Protocol](#5.1.2-qiy-application-protocol)
+		1. [Creating Qiy Nodes for Individuals](#5.1.3-creating-qiy-nodes-for-individuals)
+			1. [Security consideration](#5.1.3.1-security-consideration)
+		1. [Link with an existing Qiy Node](#5.1.4-link-with-an-existing-qiy-node)
+	1. [Connect](#5.2-connect)
+		1. [Application Connect Token](#5.2.1-application-connect-token)
+		1. [Proposer: Connect](#5.2.2-proposer:-connect)
+		1. [Generate Application Connect Token](#5.2.3-generate-application-connect-token)
+		1. [Accepter: Connect](#5.2.4-accepter:-connect)
+	1. [Consent](#5.3-consent)
+		1. [Relying Party: Request consent](#5.3.1-relying-party:-request-consent)
+		1. [Individual: Consider consent request](#5.3.2-individual:-consider-consent-request)
+	1. [Service Discovery](#5.4-service-discovery)
+	1. [Data by Reference](#5.5-data-by-reference)
+		1. [Service by Reference](#5.5.1-service-by-reference)
+		1. [Request data reference](#5.5.1-request-data-reference)
+		1. [Create reference](#5.4.2-create-reference)
+		1. [Request data](#5.5.1-request-data)
+		1. [Provide data](#5.5.2-provide-data)
+1. [The Qiy Node Layer](#6-the-qiy-node-layer)
+	1. [Access Provider](#6.1-access-provider)
+		1. [Portability](#6.1.1-portability)
+	1. [Qiy Node](#6.2-qiy-node)
+		1. [Qiy Node Protocol](#6.2.1-qiy-node-protocol)
+		1. [Qiy Node API](#6.2.2-qiy-node-api)
+		1. [Qiy Node Implementation](#6.2.3-qiy-node-implementation)
+		1. [Qiy Node Instantiation](#6.2.4-qiy-node-instantiation)
+		1. [Deleting a Qiy Node](#6.2.5-deleting-a-qiy-node)
+	1. [Connect](#6.3-connect)
+		1. [Connection Uri](#6.3.1-connection-uri)
+			1. [Security concern](#6.3.1.1-security-concern)
+		1. [Connect Token](#6.3.2-connect-token)
+			1. [Security concern](#6.3.2.1-security-concern)
+			1. [Creating a Connect Token](#6.3.2.2-creating-a-connect-token)
+			1. [Creating a Transport Connect Token](#6.3.2.3-creating-a-transport-connect-token)
+		1. [Connecting](#6.3.3-connecting)
+		1. [Deleting a Connection](#6.3.4-deleting-a-connection)
+	1. [Consent](#6.4-consent)
+		1. [Consent Uri](#6.4.1-consent-uri)
+		1. [Consent Service Descriptor](#6.4.2-consent-service-descriptor)
+		1. [Consent Data Descriptor](#6.4.3-consent-data-descriptor)
+			1. [Privacy concern](#6.4.3.1-privacy-concern)
+	1. [Qiy Node Request](#6.5-qiy-node-request)
+	1. [Qiy Node Requests](#6.6-qiy-node-requests)
+		1. [Connect Token Creation Request](#6.6.1-connect-token-creation-request)
+		1. [Connect Token Registration Request](#6.6.2-connect-token-registration-request)
+		1. [Connect Token Update Request](#6.6.3-connect-token-update-request)
+		1. [Connection Create Request](#6.6.4-connection-create-request)
+		1. [Connection Delete Request](#6.6.5-connection-delete-request)
+		1. [Connections Request](#6.6.6-connections-request)
+		1. [Consent Denied Request](#6.6.7-consent-denied-request)
+		1. [Consent Granted Request](#6.6.8-consent-granted-request)
+		1. [Consent Request](#6.6.9-consent-request)
+		1. [Consent Withdrawn Request](#6.6.10-consent-withdrawn-request)
+		1. [Consents Request](#6.6.11-consents-request)
+		1. [Message Post Request](#6.6.12-message-post-request)
+		1. [Messages Request](#6.6.13-messages-request)
+		1. [Operation Execution Request](#6.6.14-operation-execution-request)
+		1. [Operation Registration Request](#6.6.15-operation-registration-request)
+		1. [Operation References Request](#6.6.16-operation-references-request)
+		1. [Source Candidates Request](#6.6.17-source-candidates-request)
+		1. [Source Registration Request](#6.6.18-source-registration-request)
+	1. [Qiy Node Message](#6.7-qiy-node-message)
+	1. [Qiy Node Messages](#6.8-qiy-node-messages)
+		1. [Consent Denied Message](#6.8.1-consent-denied-message)
+		1. [Consent Granted Message](#6.8.2-consent-granted-message)
+		1. [Consent Request Message](#6.8.3-consent-request-message)
+		1. [Operation Reference Message](#6.8.4-operation-reference-message)
+		1. [Operation Reference Request Message](#6.8.5-operation-reference-request-message)
+	1. [Qiy Node Event](#6.9-qiy-node-event)
+	1. [Qiy Node Events](#6.10-qiy-node-events)
+		1. [Connection Created Event](#6.10.1-connection-created-event)
+		1. [Consent Withdrawn Event](#6.10.2-consent-withdrawn-event)
+		1. [Message Received Event](#6.10.3-message-received-event)
+		1. [Operation Reference Received Event](#6.10.4-operation-reference-received-event)
+		1. [Source Candidate Event](#6.10.5-source-candidate-event)
+1. [The Service Layer](#7-the-service-layer)
+	1. [Access Provider](#7.1-access-provider)
+		1. [Portability](#7.1.1-portability)
+	1. [Service](#7.2-service)
+	1. [Service Endpoints](#7.3-service-endpoints)
+	1. [Service Library](#7.4-service-library)
+	1. [Consent Service](#7.5-consent-service)
+1. [The Transport Layer](#8-the-transport-layer)
+	1. [Access Provider](#8.1-access-provider)
+		1. [Portability](#8.1.1-portability)
+	1. [Transporter](#8.2-transporter)
+	1. [Transport Protocol](#8.2.1-transport-protocol)
+	1. [Transporter API](#8.2.2-transporter-api)
+	1. [Transporter Implementation](#8.2.3-transporter-implementation)
+	1. [Transporter Instantiation](#8.2.4-transporter-instantiation)
+	1. [Deleting a Transporter](#8.2.5-deleting-a-transporter)
+	1. [Path](#8.3-path)
+		1. [Path Creation](#8.3.1-path-creation)
+		1. [Deleting a Path](#8.3.2-deleting-a-path)
+1. [The Carrier Layer](#9-the-carrier-layer)
+	1. [Access Provider](#9.1-access-provider)
+		1. [Portability](#9.1.1-portability)
+	1. [Carrier](#9.2-carrier)
+	1. [Carrier Protocol](#9.2.1-carrier-protocol)
+	1. [Carrier API](#9.2.2-carrier-api)
+	1. [Carrier Implementation](#9.2.3-carrier-implementation)
+	1. [Carrier Node](#9.3-carrier-node)
+1. [Definitions](#10-definitions)
 
 # 1 Introduction
 Qiy, or rather: the <a href="Qiy Scheme">Qiy Scheme</a>, puts people back in control of their <a href="Personal Data">Personal Data</a> while creating value for organizations that process it (<a href="Relying Party">Relying Parties</a>).
@@ -175,7 +175,7 @@ This chapter gives an overview of this document.
 
 ## 2.1 Data Reuse
 
-This document describes how Qiy realizes a <a name="data-reuse">Data Reuse</a> scenario in which a <a href="Data Subject">Data Subject</a> (<a href="Individual">Individual</a>) reuses his <a href="Personal Data">Personal Data</a> stored at one organization (<a href="Data Provider">Data Provider</a>) and provide it to another organization (<a href="Relying Party">Relying Party</a>) to consume one of its services.
+This document describes how Qiy realizes a <a id="data-reuse">Data Reuse</a> scenario in which a <a href="Data Subject">Data Subject</a> (<a href="Individual">Individual</a>) reuses his <a href="Personal Data">Personal Data</a> stored at one organization (<a href="Data Provider">Data Provider</a>) and provide it to another organization (<a href="Relying Party">Relying Party</a>) to consume one of its services.
 
 In essence, the <a href="Data Reuse">Data Reuse</a> goes as follows:
 * The <a href="Individual">Individual</a> subscribes to a service.
@@ -487,7 +487,7 @@ This goes as follows:
 * The <a href="Qiy Application">Qiy Application</a> uses the <a href="Data Reference">Data Reference</a> to acquire the data.
 
 ### 5.5.1 Service by Reference
-In Qiy providing data is viewed as a service and requesting data as an operation of this service, so the 'data by reference'-pattern is implemented as using a <a name="service-by-reference">Service by Reference</a>-pattern:
+In Qiy providing data is viewed as a service and requesting data as an operation of this service, so the 'data by reference'-pattern is implemented as using a <a id="service-by-reference">Service by Reference</a>-pattern:
 * A <a href="Qiy Application">Qiy Application</a> requests an <a href="Operation Reference">Operation Reference</a> (<a href="Operation Reference Request">Operation Reference Request</a>).
 * A <a href="Operation Reference">Operation Reference</a> is created by registrating the specification of the operation <a href="Operation Specification">Operation Specification</a> and returned (<a href="Operation Registration">Operation Registration</a>).
 * The <a href="Qiy Application">Qiy Application</a> uses the <a href="Data Reference">Data Reference</a> to acquire the data (<a href="Operation Execution">Operation Execution</a>).
@@ -651,9 +651,9 @@ A <a href="Data Descriptor">Data Descriptor</a> can be used to obtain a descript
 A <a href="Relying Party">Relying Party</a> can only ask <a href="Consent">Consent</a> for <a href="Personal Data">Personal Data</a> that can be provided by one of the available <a href="Data Provider">Data Providers</a>, eg for which a <a href="Data Descriptor">Data Descriptor</a> exists in the <a href="Service Library">Service Library</a>.
   
 ## 6.5 Qiy Node Request
-A <a name="qiy-node-request">Qiy Node Request</a> is a <a href="Http Request">Http Request</a> for a <a href="Qiy Node">Qiy Node</a>. 
+A <a id="qiy-node-request">Qiy Node Request</a> is a <a href="Http Request">Http Request</a> for a <a href="Qiy Node">Qiy Node</a>. 
 <a href="Qiy Node Request">Qiy Node Requests</a> are only accepted when they are correctly authenticated with:
-* the <a name="node-id">Node Id</a>.
+* the <a id="node-id">Node Id</a>.
 * an actual timestamp
 * a digital signature over the <a href="Node Id">Node Id</a>, the timestamp and the contents of the body of the request made with the private key
 
@@ -662,63 +662,63 @@ This section gives an overview of the <a href="Qiy Node Request">Qiy Node Reques
 Details of <a href="Qiy Node Request">Qiy Node Requests</a> can be found in the <a href="Qiy Node API">Qiy Node API</a>.
 
 ### 6.6.1 Connect Token Creation Request
-<a name="connect-token-creation-request">Connect Token Creation Request</a>
+<a id="connect-token-creation-request">Connect Token Creation Request</a>
 Met dit request kan een <a href="Connect Token">Connect Token</a> worden gecre&euml;erd door the <a href="Qiy Node">Qiy Node</a>.
 
 ### 6.6.2 Connect Token Registration Request
-<a name="connect-token-registration-request">Connect Token Registration Request</a>
+<a id="connect-token-registration-request">Connect Token Registration Request</a>
 Met dit request kan een <a href="Connect Token">Connect Token</a> worden geregistreerd.
 
 ### 6.6.3 Connect Token Update Request
-The <a name="connect-token-update-request">Connect Token Update Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to update a <a href="Connect Token">Connect Token</a>.
+The <a id="connect-token-update-request">Connect Token Update Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to update a <a href="Connect Token">Connect Token</a>.
 
 ### 6.6.4 Connection Create Request
-The <a name="connection-create-request">Connection Create Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to create a <a href="Connection">Connection</a> with a <a href="Connect Token">Connect Token</a>.
+The <a id="connection-create-request">Connection Create Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to create a <a href="Connection">Connection</a> with a <a href="Connect Token">Connect Token</a>.
 
 ### 6.6.5 Connection Delete Request
-The <a name="connection-delete-request">Connection Delete Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to delete a <a href="Connection">Connection</a>.
+The <a id="connection-delete-request">Connection Delete Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to delete a <a href="Connection">Connection</a>.
 
 ### 6.6.6 Connections Request
-The <a name="connections-request">Connections Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Connection">Connections</a> of a <a href="Qiy Node">Qiy Node</a>.
+The <a id="connections-request">Connections Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Connection">Connections</a> of a <a href="Qiy Node">Qiy Node</a>.
 
 ### 6.6.7 Consent Denied Request
-The <a name="consent-denied-request">Consent Denied Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to record the denial of a <a href="Consent">Consent</a>.
+The <a id="consent-denied-request">Consent Denied Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to record the denial of a <a href="Consent">Consent</a>.
 
 ### 6.6.8 Consent Granted Request
-The <a name="consent-granted-request">Consent Granted Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to record the granting of a <a href="Consent">Consent</a>.
+The <a id="consent-granted-request">Consent Granted Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to record the granting of a <a href="Consent">Consent</a>.
 
 ### 6.6.9 Consent Request
-The <a name="consent-request">Consent Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> which can be used to request for a <a href="Consent">Consent</a>.
+The <a id="consent-request">Consent Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> which can be used to request for a <a href="Consent">Consent</a>.
 
 ### 6.6.10 Consent Withdrawn Request
-The <a name="consent-withdrawn-request">Consent Withdrawn Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to record the withdrawal of a <a href="Consent">Consent</a>.
+The <a id="consent-withdrawn-request">Consent Withdrawn Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to record the withdrawal of a <a href="Consent">Consent</a>.
 
 ### 6.6.11 Consents Request
-The <a name="consents-request">Consents Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Consent">Consents</a> of a <a href="Qiy Node">Qiy Node</a>.
+The <a id="consents-request">Consents Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Consent">Consents</a> of a <a href="Qiy Node">Qiy Node</a>.
 
 ### 6.6.12 Message Post Request
-The <a name="message-post-request">Message Post Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to post a <a href="Qiy Node Message">Qiy Node Message</a>.
+The <a id="message-post-request">Message Post Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to post a <a href="Qiy Node Message">Qiy Node Message</a>.
 
 ### 6.6.13 Messages Request
-The <a name="messages-request">Messages Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Message">Messages</a> of a <a href="Qiy Node">Qiy Node</a>.
+The <a id="messages-request">Messages Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Message">Messages</a> of a <a href="Qiy Node">Qiy Node</a>.
 
 ### 6.6.14 Operation Execution Request
-The <a name="operation-execution-request">Operation Execution Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to command the execution of an <a href="Operation">Operation</a> by reference using an <a href="Operation Reference">Operation Reference</a>.
+The <a id="operation-execution-request">Operation Execution Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to command the execution of an <a href="Operation">Operation</a> by reference using an <a href="Operation Reference">Operation Reference</a>.
 
 ### 6.6.15 Operation Registration Request
-The <a name="operation-registration-request">Operation Registration Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain an <a href="Operation Reference">Operation Reference</a> by registrating an <a href="Operation Specification">Operation Specification</a>.
+The <a id="operation-registration-request">Operation Registration Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain an <a href="Operation Reference">Operation Reference</a> by registrating an <a href="Operation Specification">Operation Specification</a>.
 
 ### 6.6.16 Operation References Request
-The <a name="operation-references-request">Operation References Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Operation Reference">Operation References</a> of a <a href="Qiy Node">Qiy Node</a>.
+The <a id="operation-references-request">Operation References Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> that can be used to obtain a list of all the <a href="Operation Reference">Operation References</a> of a <a href="Qiy Node">Qiy Node</a>.
 
 ### 6.6.17 Source Candidates Request
-The <a name="source-candidates-request">Source Candidates Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> to obtain candidate <a href="Provider">Providers</a> for a <a href="Service">Service</a>.
+The <a id="source-candidates-request">Source Candidates Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> to obtain candidate <a href="Provider">Providers</a> for a <a href="Service">Service</a>.
 
 ### 6.6.18 Source Registration Request
-The <a name="source-registration-request">Source Registration Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> to register a <a href="Provider">Provider</a> as source for a <a href="Service">Service</a>.
+The <a id="source-registration-request">Source Registration Request</a> is a <a href="Qiy Node Request">Qiy Node Request</a> to register a <a href="Provider">Provider</a> as source for a <a href="Service">Service</a>.
  
 ## 6.7 Qiy Node Message
-A <a name="qiy-node-message">Qiy Node Message</a> is a <a href="Message">Message</a> that is exchanged using a <a href="Connection">Connection</a>.
+A <a id="qiy-node-message">Qiy Node Message</a> is a <a href="Message">Message</a> that is exchanged using a <a href="Connection">Connection</a>.
 <a href="Qiy Node Message">Qiy Node Messages</a> can be sent with the <a href="Message Post Request">Message Post Request</a>, obtained using a <a href="Messages Request">Messages Request</a> and monitored with <a href="Qiy Node Event">Qiy Node Events</a> like <a href="Message Received Event">Message Received Event</a>.
 
 ## 6.8 Qiy Node Messages
@@ -726,43 +726,43 @@ This section gives an overview of the <a href="Qiy Node Message">Qiy Node Messag
 Details of <a href="Qiy Node Message">Qiy Node Messages</a> can be found in the <a href="Qiy Node Protocol">Qiy Node Protocol</a>.
 
 ### 6.8.1 Consent Denied Message
-The <a name="consent-denied-message">Consent Denied Message</a> is a <a href="Qiy Node Message">Qiy Node Message</a> which can be used to communicate the denial of a <a href="Consent">Consent</a>.
+The <a id="consent-denied-message">Consent Denied Message</a> is a <a href="Qiy Node Message">Qiy Node Message</a> which can be used to communicate the denial of a <a href="Consent">Consent</a>.
 
 ### 6.8.2 Consent Granted Message
-The <a name="consent-granted-message">Consent Granted Message</a> is a <a href="Qiy Node Message">Qiy Node Message</a> which can be used to communicate the granting of a <a href="Consent">Consent</a>.
+The <a id="consent-granted-message">Consent Granted Message</a> is a <a href="Qiy Node Message">Qiy Node Message</a> which can be used to communicate the granting of a <a href="Consent">Consent</a>.
 
 ### 6.8.3 Consent Request Message
-The <a name="consent-request-message">Consent Request Message</a> is a <a href="Qiy Node Message">Qiy Node Message</a> which can be used to request for a <a href="Consent">Consent</a>.
+The <a id="consent-request-message">Consent Request Message</a> is a <a href="Qiy Node Message">Qiy Node Message</a> which can be used to request for a <a href="Consent">Consent</a>.
 
 ### 6.8.4 Operation Reference Message
-<a name="operation-reference-message">Operation Reference Message</a>
+<a id="operation-reference-message">Operation Reference Message</a>
 This message can be used to convey <a href="Operation Reference">Operation References</a>.
  
 ### 6.8.5 Operation Reference Request Message
-<a name="operation-reference-request-message">Operation Reference Request Message</a>
+<a id="operation-reference-request-message">Operation Reference Request Message</a>
 This message can be used to request for <a href="Operation Reference">Operation References</a>.
  
 ## 6.9 Qiy Node Event
-A <a name="qiy-node-event">Qiy Node Event</a> is a <a name="technology-event">Technology Event</a> of a <a href="Qiy Node">Qiy Node</a>.
+A <a id="qiy-node-event">Qiy Node Event</a> is a <a id="technology-event">Technology Event</a> of a <a href="Qiy Node">Qiy Node</a>.
 
 ## 6.10 Qiy Node Events
 This section gives an overview of the <a href="Qiy Node Event">Qiy Node Events</a>.
 Details of <a href="Qiy Node Event">Qiy Node Events</a> can be found in the <a href="Qiy Node Protocol">Qiy Node Protocol</a>.
 
 ### 6.10.1 Connection Created Event
-The <a name="connection-created-event">Connection Created Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Connection">Connection</a> has been created.
+The <a id="connection-created-event">Connection Created Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Connection">Connection</a> has been created.
 
 ### 6.10.2 Consent Withdrawn Event
-The <a name="consent-withdrawn-event">Consent Withdrawn Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Consent">Consent</a> has been withdrawn.
+The <a id="consent-withdrawn-event">Consent Withdrawn Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Consent">Consent</a> has been withdrawn.
 
 ### 6.10.3 Message Received Event
-The <a name="message-received-event">Message Received Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Qiy Node Message">Qiy Node Message</a> has been received.
+The <a id="message-received-event">Message Received Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Qiy Node Message">Qiy Node Message</a> has been received.
 
 ### 6.10.4 Operation Reference Received Event
-The <a name="operation-reference-received-event">Operation Reference Received Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Qiy Node">Qiy Node</a> has received a new <a href="Operation Reference">Operation Reference</a>.
+The <a id="operation-reference-received-event">Operation Reference Received Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Qiy Node">Qiy Node</a> has received a new <a href="Operation Reference">Operation Reference</a>.
 
 ### 6.10.5 Source Candidate Event
-The <a name="source-candidate-event">Source Candidate Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Qiy Node">Qiy Node</a> has received a new <a href="Source Candidate">Source Candidate</a> for a <a href="Consent">Consent</a>.
+The <a id="source-candidate-event">Source Candidate Event</a> is a <a href="Qiy Node Event">Qiy Node Event</a> that is generated when a <a href="Qiy Node">Qiy Node</a> has received a new <a href="Source Candidate">Source Candidate</a> for a <a href="Consent">Consent</a>.
 
 # 7 The Service Layer
 The <a href="Service Layer">Service Layer</a> provides the following <a href="Technology Service">Technology Services</a> to support the provisioning and consumption of <a href="Service">Services</a> via Qiy:
@@ -900,101 +900,101 @@ This document uses the following definitions:
 
 Term	| Definition
 ------- | ----------
-<a name="access-provider">Access Provider</a>	| An organization which provides <a href="Qiy User">Qiy Users</a> access to the <a href="Qiy Trust Framework">Qiy Trust Framework</a>, either an <a href="Issuer">Issuer</a> or a <a href="Service Provider">Service Provider</a>.
-<a name="access-principle">Access Principle</a>	| The principle which authorizes the access of an <a href="Individual">Individual</a> to his <a href="Personal Data">Personal Data</a>, one of the <a href="Qiy Trust Principle">Qiy Trust Principles</a>.
-<a name="accepter">Accepter</a>	| A <a href="Business Role">Business Role</a> for a <a href="Qiy User">Qiy User</a> who is creating a <a href="Connection">Connection</a> using a <a href="Connect Token">Connect Token</a> that is provided by a <a href="Proposer">Proposer</a>.
-<a name="application-connect-token">Application Connect Token</a>	| A <a href="Token">Token</a> that is used by <a href="Qiy Application">Qiy Applications</a> to create <a href="Connection">Connections</a>.
-<a name="application-interface">Application Interface</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="application-layer">Application Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
-<a name="application-provider">Application Provider</a>	| A <a href="Bussiness Role">Bussiness Role</a> for suppliers of <a href="Qiy Application">Qiy Applications</a>.
-<a name="application-service">Application Service</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="architectural-layers-of-the-qiy-scheme">Architectural Layers of the Qiy Scheme</a>	| The architectural layers of the <a href="Qiy Scheme">Qiy Scheme</a>: the <a href="User Layer">User Layer</a>, the <a href="Application Layer">Application Layer</a>, the <a href="Qiy Node Layer">Qiy Node Layer</a>, the <a href="Service Layer">Service Layer</a>, the <a href="Transport Layer">Transport Layer</a> and the <a href="Carrier Layer">Carrier Layer</a>.
-<a name="binding-individual-rights">Binding Individual Rights</a>	| One of the documents of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
-<a name="binding-principles-for-relying-parties-and-data-providers">Binding Principles for Relying Parties and Data Providers</a>	| One of the documents of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
-<a name="business-actor">Business Actor</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="business-object">Business Object</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="business-process">Business Process</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="business-role">Business Role</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="carrier">Carrier</a>	| A <a href="Technology Service">Technology Service</a> that provides the services of the <a href="Carrier Layer">Carrier Layer</a>. 
-<a name="carrier-api">Carrier API</a>	| <a href="Technology Interface">Technology Interface</a> of the <a href="Carrier">Carrier</a>.
-<a name="carrier-implementation">Carrier Implementation</a>	| A software package which can be used to realize a <a href="Carrier">Carrier</a>.
-<a name="carrier-layer">Carrier Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
-<a name="carrier-node">Carrier Node</a>	| A <a href="Node">Node</a> which hosts one or more <a href="Carrier">Carriers</a>.
-<a name="connect-proposal">Connect Proposal</a>	| A <a href="Business Object">Business Object</a> for a proposal to connect via Qiy.
-<a name="connect-token">Connect Token</a>	| A Literal used to create a <a href="Connection">Connection</a>.
-<a name="connection">Connection</a>	| A connection between two <a href="Qiy Node">Qiy Nodes</a>.
-<a name="connection-uri">Connection Uri</a>	| <a href="Uri">Uri</a> voor the id van een <a href="Connection">Connection</a>.
-<a name="consent">Consent</a>	| As defined in the <a href="GDPR">GDPR</a>.
-<a name="consent-data-descriptor">Consent Data Descriptor</a>	| <a href="Data Descriptor">Data Descriptor</a> in een <a href="Service Description">Service Description</a> voor the beschrijving van the voor the <a href="Service">Service</a> benodigde <a href="Personal Data">Personal Data</a>.
-<a name="consent-service">Consent Service</a>	| A <a href="Technology Service">Technology Service</a> used to maintain <a href="Consent">Consents</a> and their status.
-<a name="consent-service-description">Consent Service Description</a>	| A <a href="Service Description">Service Description</a> of the <a href="Service">Service</a> for which a <a href="Consent">Consent</a> applies.
-<a name="consent-service-descriptor">Consent Service Descriptor</a>	| A <a href="Service Descriptor">Service Descriptor</a> of a <a href="Consent Service Description">Consent Service Description</a>.
-<a name="consent-uri">Consent Uri</a>	| A <a href="Uri">Uri</a> which is used to identify a <a href="Consent">Consent</a>.
-<a name="data-by-reference">Data by Reference</a>	| A pattern for exchanging data indirectly using a <a href="Data Reference">Data Reference</a>, see also <a href="Service by Reference">Service by Reference</a>.
-<a name="data-description">Data Description</a>	| A description of data.
-<a name="data-descriptor">Data Descriptor</a>	| An <a href="Uri">Uri</a> which can be used to identify and obtain a <a href="Data Description">Data Description</a>.
-<a name="data-provider">Data Provider</a>	| A <a href="Business Role">Business Role</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="data-provider-agreement">Data Provider Agreement</a>	| An agreement required for <a href="Data Provider">Data Providers</a>.
-<a name="data-reference">Data Reference</a>	| An <a href="Operation Reference">Operation Reference</a> which can be used to obtain <a href="Personal Data">Personal Data</a> of an <a href="Individual">Individual</a>.
-<a name="data-subject">Data Subject</a>	| As defined in the <a href="GDPR">GDPR</a>.
-<a name="definitions-of-the-qiy-scheme">Definitions of the Qiy Scheme</a>	| One of the documents of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
-<a name="gdpr">GDPR</a>	| General Data Protection Regulation, see http://eur-lex.europa.eu/legal-content/EN-NL/TXT/?uri=CELEX:32016R0679&from=EN. 
-<a name="governance-model-for-the-qiy-scheme">Governance Model for the Qiy Scheme</a>	| Governance Model for the <a href="Qiy Scheme">Qiy Scheme</a>, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/.
-<a name="http-request">HTTP Request</a>	| As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
-<a name="individual">Individual</a>	| A <a href="Business Role">Business Role</a> of a <a href="Qiy User">Qiy User</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="issuer">Issuer</a>	| A <a href="Business Role">Business Role</a> for an <a href="Access Provider">Access Provider</a> that provides services to natural persons, see <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="licence-agreement-application-provider">Licence Agreement Application Provider</a>	| A licence agreement for <a href="Application Provider">Application Providers</a>.
-<a name="licence-agreement-issuer">Licence Agreement Issuer</a>	| A licence agreement for <a href="Issuer">Issuers</a>, the template of which is part of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
-<a name="licence-agreement-service-provider">Licence Agreement Service Provider</a>	| A licence agreement for <a href="Service Provider">Service Providers</a>, the template of which is part of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
-<a name="literal">Literal</a>	| A fixex value, see https://en.wikipedia.org/wiki/Literal_(computer_programming).
-<a name="node">Node</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="operation">Operation</a> | A 'sub-service' which can be used to consume a <a href="Service">Service</a>.
-<a name="operation-reference">Operation Reference</a>	| A <a href="Business Object">Business Object</a> used by the <a href="Service by Reference">Service by Reference</a>-pattern.
-<a name="operation-specification">Operation Specification</a> | A specification of a <a href="Http Request">Http Request</a> for the execution of an <a href="Operation">Operation</a>.
-<a name="personal-data">Personal Data</a>	| As defined in the <a href="GDPR">GDPR</a>.
-<a name="path">Path</a>	| A connection between two <a href="Transporter">Transporters</a> which is used to exchange <a href="Transport Message">Transport Messages</a>.
-<a name="proposer">Proposer</a>	| A <a href="Business Role">Business Role</a> for a <a href="Qiy User">Qiy User</a> that initiates creating a <a href="Connection">Connection</a> by providing a <a href="Connect Token">Connect Token</a>, sometimes using a <a href="Connect Proposal">Connect Proposal</a>.
-<a name="provider">Provider</a>	| A <a href="Business Role">Business Role</a> for a <a href="Qiy User">Qiy User</a> that is providing one or more <a href="Service">Services</a> using Qiy, that is a <a href="Data Provider">Data Provider</a> or a <a href="Relying Party">Relying Party</a>.
-<a name="qiy-application">Qiy Application</a>	| An <a href="Application Service">Application Service</a> or software that is authorized for use with Qiy.
-<a name="qiy-application-protocol">Qiy Application Protocol</a>	| A protocol for the interactions between <a href="Qiy Application">Qiy Applications</a> and the underlying layers.
-<a name="qiy-foundation">Qiy Foundation</a>	| A foundation dedicated to putting people back in control of their personal data while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
-<a name="qiy-foundation-member">Qiy Foundation Member</a>	| A member of the <a href="Qiy Foundation">Qiy Foundation</a>, see https://www.qiyfoundation.org/membership/.
-<a name="qiy-node">Qiy Node</a>	| A <a href="Technology Service">Technology Service</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="qiy-node-api">Qiy Node API</a>	| A <a href="Technology Interface">Technology Interface</a> of the <a href="Qiy Node">Qiy Node</a> that is part of the <a href="Qiy Open Standard">Qiy Open Standard</a>.
-<a name="qiy-node-implementation">Qiy Node Implementation</a>	| A software package which can be used to realize a <a href="Qiy Node">Qiy Node</a>.
-<a name="qiy-node-layer">Qiy Node Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
-<a name="qiy-node-protocol">Qiy Node Protocol</a>	| A protocol describing the interaction between <a href="Qiy Node">Qiy Nodes</a> and the underlying layers.
-<a name="qiy-open-standard">Qiy Open Standard</a>	| A set of open standards for Qiy, maintained by the <a href="Work Stream Functionality & Technology">Work Stream Functionality & Technology</a>, see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
-<a name="qiy-scheme">Qiy Scheme</a>	| See https://www.qiyfoundation.org/qiy-scheme/.
-<a name="qiy-scheme-rulebook">Qiy Scheme Rulebook</a>	| A set of documents concerning governance, legal and technical aspects of the <a href="Qiy Scheme">Qiy Scheme</a>, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/
-<a name="qiy-trust-framework">Qiy Trust Framework</a>	| As defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="qiy-trust-principles">Qiy Trust Principles</a>	| As defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>, see https://www.qiyfoundation.org/qiy-trust-principles/.
-<a name="qiy-user">Qiy User</a>	| A <a href="Business Actor">Business Actor</a>; defined as 'User' in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="reference">Reference</a>	| A <a href="Literal">Literal</a>.
-<a name="relying-party">Relying Party</a>	| A <a href="Business Role">Business Role</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="relying-party-agreement">Relying Party Agreement</a>	| An agreement that is required for <a href="Relying Party">Relying Parties</a>.
-<a name="request">Request</a>	| A <a href="Business Object">Business Object</a>: a message requesting something.
-<a name="transport-message">Transport Message</a>	| A message that is exchanged over a <a href="Path">Path</a> between two <a href="Transporter">Transporters</a>.
-<a name="transport-message-description">Transport Message Description</a>	| A <a href="Data Description">Data Description</a> that describes the contents, format and encryption (if any) of a <a href="Transport Message">Transport Message</a>.
-<a name="service">Service</a>	| An 'information society service' as defined in the <a href="GDPR">GDPR</a>.
-<a name="service-by-reference">Service by Reference</a>	| A pattern for consuming <a href="Service">Services</a> indirectly using references (<a href="Operation Reference">Operation Reference</a>).
-<a name="service-discovery">Service Discovery</a>	| A <a href="Business Proces">Business Process</a> to find <a href="Provider">Providers</a> for a given <a href="Service">Service</a>.
-<a name="service-endpoint">Service Endpoint</a>	| A <a href="Technology Service">Technology Service</a> provided by a <a href="Provider">Provider</a> to allow the consumption of his <a href="Service">Services</a>.
-<a name="service-layer">Service Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
-<a name="service-library">Service Library</a>	| A <a href="Technology Service">Technology Service</a> that supports the <a href="Service">Service</a> processes of the <a href="Individual">Individuals</a> and the <a href="Provider">Providers</a>.
-<a name="service-provider">Service Provider</a>	| A <a href="Business Role">Business Role</a>: an <a href="Access Provider">Access Provider</a> which provides business-to-business services as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
-<a name="service-source">Service Source</a>	| A <a href="Provider">Provider</a> that can or is providing a specific <a href="Service">Service</a>.
-<a name="technology-event">Technology Event</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="technology-interface">Technology Interface</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-<a name="technology-service">Technology Service</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
-<a name="transport-connect-token">Transport Connect Token</a>	| A Literal used to create <a href="Path">Paths</a>.
-<a name="transport-layer">Transport Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
-<a name="transport-protocol">Transport Protocol</a>	| A protocol that is part of the <a href="Qiy Open Standard">Qiy Open Standard</a> and which describes the interaction between <a href="Transporter">Transporters</a> and the lower layers.
-<a name="transporter">Transporter</a>	| A <a href="Technology Service">Technology Service</a> that provides transport services.
-<a name="transporter-api">Transporter API</a>	| <a href="Technology Interface">Technology Interface</a> of a <a href="Transporter">Transporter</a>.
-<a name="transporter-implementation">Transporter Implementation</a>	| A software package which can be used to realize a <a href="Transporter">Transporter</a>.
-<a name="user-layer">User Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
-<a name="uri">Uri</a>	| See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
-<a name="url">Url</a>	| See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
-<a name="work-stream-functionality-&-technology">Work Stream Functionality & Technology</a>	| One of the work streams of the <a href="Qiy Foundation">Qiy Foundation</a>, see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
+<a id="access-provider">Access Provider</a>	| An organization which provides <a href="Qiy User">Qiy Users</a> access to the <a href="Qiy Trust Framework">Qiy Trust Framework</a>, either an <a href="Issuer">Issuer</a> or a <a href="Service Provider">Service Provider</a>.
+<a id="access-principle">Access Principle</a>	| The principle which authorizes the access of an <a href="Individual">Individual</a> to his <a href="Personal Data">Personal Data</a>, one of the <a href="Qiy Trust Principle">Qiy Trust Principles</a>.
+<a id="accepter">Accepter</a>	| A <a href="Business Role">Business Role</a> for a <a href="Qiy User">Qiy User</a> who is creating a <a href="Connection">Connection</a> using a <a href="Connect Token">Connect Token</a> that is provided by a <a href="Proposer">Proposer</a>.
+<a id="application-connect-token">Application Connect Token</a>	| A <a href="Token">Token</a> that is used by <a href="Qiy Application">Qiy Applications</a> to create <a href="Connection">Connections</a>.
+<a id="application-interface">Application Interface</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="application-layer">Application Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
+<a id="application-provider">Application Provider</a>	| A <a href="Bussiness Role">Bussiness Role</a> for suppliers of <a href="Qiy Application">Qiy Applications</a>.
+<a id="application-service">Application Service</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="architectural-layers-of-the-qiy-scheme">Architectural Layers of the Qiy Scheme</a>	| The architectural layers of the <a href="Qiy Scheme">Qiy Scheme</a>: the <a href="User Layer">User Layer</a>, the <a href="Application Layer">Application Layer</a>, the <a href="Qiy Node Layer">Qiy Node Layer</a>, the <a href="Service Layer">Service Layer</a>, the <a href="Transport Layer">Transport Layer</a> and the <a href="Carrier Layer">Carrier Layer</a>.
+<a id="binding-individual-rights">Binding Individual Rights</a>	| One of the documents of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
+<a id="binding-principles-for-relying-parties-and-data-providers">Binding Principles for Relying Parties and Data Providers</a>	| One of the documents of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
+<a id="business-actor">Business Actor</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="business-object">Business Object</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="business-process">Business Process</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="business-role">Business Role</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="carrier">Carrier</a>	| A <a href="Technology Service">Technology Service</a> that provides the services of the <a href="Carrier Layer">Carrier Layer</a>. 
+<a id="carrier-api">Carrier API</a>	| <a href="Technology Interface">Technology Interface</a> of the <a href="Carrier">Carrier</a>.
+<a id="carrier-implementation">Carrier Implementation</a>	| A software package which can be used to realize a <a href="Carrier">Carrier</a>.
+<a id="carrier-layer">Carrier Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
+<a id="carrier-node">Carrier Node</a>	| A <a href="Node">Node</a> which hosts one or more <a href="Carrier">Carriers</a>.
+<a id="connect-proposal">Connect Proposal</a>	| A <a href="Business Object">Business Object</a> for a proposal to connect via Qiy.
+<a id="connect-token">Connect Token</a>	| A Literal used to create a <a href="Connection">Connection</a>.
+<a id="connection">Connection</a>	| A connection between two <a href="Qiy Node">Qiy Nodes</a>.
+<a id="connection-uri">Connection Uri</a>	| <a href="Uri">Uri</a> voor the id van een <a href="Connection">Connection</a>.
+<a id="consent">Consent</a>	| As defined in the <a href="GDPR">GDPR</a>.
+<a id="consent-data-descriptor">Consent Data Descriptor</a>	| <a href="Data Descriptor">Data Descriptor</a> in een <a href="Service Description">Service Description</a> voor the beschrijving van the voor the <a href="Service">Service</a> benodigde <a href="Personal Data">Personal Data</a>.
+<a id="consent-service">Consent Service</a>	| A <a href="Technology Service">Technology Service</a> used to maintain <a href="Consent">Consents</a> and their status.
+<a id="consent-service-description">Consent Service Description</a>	| A <a href="Service Description">Service Description</a> of the <a href="Service">Service</a> for which a <a href="Consent">Consent</a> applies.
+<a id="consent-service-descriptor">Consent Service Descriptor</a>	| A <a href="Service Descriptor">Service Descriptor</a> of a <a href="Consent Service Description">Consent Service Description</a>.
+<a id="consent-uri">Consent Uri</a>	| A <a href="Uri">Uri</a> which is used to identify a <a href="Consent">Consent</a>.
+<a id="data-by-reference">Data by Reference</a>	| A pattern for exchanging data indirectly using a <a href="Data Reference">Data Reference</a>, see also <a href="Service by Reference">Service by Reference</a>.
+<a id="data-description">Data Description</a>	| A description of data.
+<a id="data-descriptor">Data Descriptor</a>	| An <a href="Uri">Uri</a> which can be used to identify and obtain a <a href="Data Description">Data Description</a>.
+<a id="data-provider">Data Provider</a>	| A <a href="Business Role">Business Role</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="data-provider-agreement">Data Provider Agreement</a>	| An agreement required for <a href="Data Provider">Data Providers</a>.
+<a id="data-reference">Data Reference</a>	| An <a href="Operation Reference">Operation Reference</a> which can be used to obtain <a href="Personal Data">Personal Data</a> of an <a href="Individual">Individual</a>.
+<a id="data-subject">Data Subject</a>	| As defined in the <a href="GDPR">GDPR</a>.
+<a id="definitions-of-the-qiy-scheme">Definitions of the Qiy Scheme</a>	| One of the documents of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
+<a id="gdpr">GDPR</a>	| General Data Protection Regulation, see http://eur-lex.europa.eu/legal-content/EN-NL/TXT/?uri=CELEX:32016R0679&from=EN. 
+<a id="governance-model-for-the-qiy-scheme">Governance Model for the Qiy Scheme</a>	| Governance Model for the <a href="Qiy Scheme">Qiy Scheme</a>, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/.
+<a id="http-request">HTTP Request</a>	| As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
+<a id="individual">Individual</a>	| A <a href="Business Role">Business Role</a> of a <a href="Qiy User">Qiy User</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="issuer">Issuer</a>	| A <a href="Business Role">Business Role</a> for an <a href="Access Provider">Access Provider</a> that provides services to natural persons, see <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="licence-agreement-application-provider">Licence Agreement Application Provider</a>	| A licence agreement for <a href="Application Provider">Application Providers</a>.
+<a id="licence-agreement-issuer">Licence Agreement Issuer</a>	| A licence agreement for <a href="Issuer">Issuers</a>, the template of which is part of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
+<a id="licence-agreement-service-provider">Licence Agreement Service Provider</a>	| A licence agreement for <a href="Service Provider">Service Providers</a>, the template of which is part of the <a href="Qiy Scheme Rulebook">Qiy Scheme Rulebook</a>.
+<a id="literal">Literal</a>	| A fixex value, see https://en.wikipedia.org/wiki/Literal_(computer_programming).
+<a id="node">Node</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="operation">Operation</a> | A 'sub-service' which can be used to consume a <a href="Service">Service</a>.
+<a id="operation-reference">Operation Reference</a>	| A <a href="Business Object">Business Object</a> used by the <a href="Service by Reference">Service by Reference</a>-pattern.
+<a id="operation-specification">Operation Specification</a> | A specification of a <a href="Http Request">Http Request</a> for the execution of an <a href="Operation">Operation</a>.
+<a id="personal-data">Personal Data</a>	| As defined in the <a href="GDPR">GDPR</a>.
+<a id="path">Path</a>	| A connection between two <a href="Transporter">Transporters</a> which is used to exchange <a href="Transport Message">Transport Messages</a>.
+<a id="proposer">Proposer</a>	| A <a href="Business Role">Business Role</a> for a <a href="Qiy User">Qiy User</a> that initiates creating a <a href="Connection">Connection</a> by providing a <a href="Connect Token">Connect Token</a>, sometimes using a <a href="Connect Proposal">Connect Proposal</a>.
+<a id="provider">Provider</a>	| A <a href="Business Role">Business Role</a> for a <a href="Qiy User">Qiy User</a> that is providing one or more <a href="Service">Services</a> using Qiy, that is a <a href="Data Provider">Data Provider</a> or a <a href="Relying Party">Relying Party</a>.
+<a id="qiy-application">Qiy Application</a>	| An <a href="Application Service">Application Service</a> or software that is authorized for use with Qiy.
+<a id="qiy-application-protocol">Qiy Application Protocol</a>	| A protocol for the interactions between <a href="Qiy Application">Qiy Applications</a> and the underlying layers.
+<a id="qiy-foundation">Qiy Foundation</a>	| A foundation dedicated to putting people back in control of their personal data while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
+<a id="qiy-foundation-member">Qiy Foundation Member</a>	| A member of the <a href="Qiy Foundation">Qiy Foundation</a>, see https://www.qiyfoundation.org/membership/.
+<a id="qiy-node">Qiy Node</a>	| A <a href="Technology Service">Technology Service</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="qiy-node-api">Qiy Node API</a>	| A <a href="Technology Interface">Technology Interface</a> of the <a href="Qiy Node">Qiy Node</a> that is part of the <a href="Qiy Open Standard">Qiy Open Standard</a>.
+<a id="qiy-node-implementation">Qiy Node Implementation</a>	| A software package which can be used to realize a <a href="Qiy Node">Qiy Node</a>.
+<a id="qiy-node-layer">Qiy Node Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
+<a id="qiy-node-protocol">Qiy Node Protocol</a>	| A protocol describing the interaction between <a href="Qiy Node">Qiy Nodes</a> and the underlying layers.
+<a id="qiy-open-standard">Qiy Open Standard</a>	| A set of open standards for Qiy, maintained by the <a href="Work Stream Functionality & Technology">Work Stream Functionality & Technology</a>, see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
+<a id="qiy-scheme">Qiy Scheme</a>	| See https://www.qiyfoundation.org/qiy-scheme/.
+<a id="qiy-scheme-rulebook">Qiy Scheme Rulebook</a>	| A set of documents concerning governance, legal and technical aspects of the <a href="Qiy Scheme">Qiy Scheme</a>, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/
+<a id="qiy-trust-framework">Qiy Trust Framework</a>	| As defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="qiy-trust-principles">Qiy Trust Principles</a>	| As defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>, see https://www.qiyfoundation.org/qiy-trust-principles/.
+<a id="qiy-user">Qiy User</a>	| A <a href="Business Actor">Business Actor</a>; defined as 'User' in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="reference">Reference</a>	| A <a href="Literal">Literal</a>.
+<a id="relying-party">Relying Party</a>	| A <a href="Business Role">Business Role</a> as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="relying-party-agreement">Relying Party Agreement</a>	| An agreement that is required for <a href="Relying Party">Relying Parties</a>.
+<a id="request">Request</a>	| A <a href="Business Object">Business Object</a>: a message requesting something.
+<a id="transport-message">Transport Message</a>	| A message that is exchanged over a <a href="Path">Path</a> between two <a href="Transporter">Transporters</a>.
+<a id="transport-message-description">Transport Message Description</a>	| A <a href="Data Description">Data Description</a> that describes the contents, format and encryption (if any) of a <a href="Transport Message">Transport Message</a>.
+<a id="service">Service</a>	| An 'information society service' as defined in the <a href="GDPR">GDPR</a>.
+<a id="service-by-reference">Service by Reference</a>	| A pattern for consuming <a href="Service">Services</a> indirectly using references (<a href="Operation Reference">Operation Reference</a>).
+<a id="service-discovery">Service Discovery</a>	| A <a href="Business Proces">Business Process</a> to find <a href="Provider">Providers</a> for a given <a href="Service">Service</a>.
+<a id="service-endpoint">Service Endpoint</a>	| A <a href="Technology Service">Technology Service</a> provided by a <a href="Provider">Provider</a> to allow the consumption of his <a href="Service">Services</a>.
+<a id="service-layer">Service Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
+<a id="service-library">Service Library</a>	| A <a href="Technology Service">Technology Service</a> that supports the <a href="Service">Service</a> processes of the <a href="Individual">Individuals</a> and the <a href="Provider">Providers</a>.
+<a id="service-provider">Service Provider</a>	| A <a href="Business Role">Business Role</a>: an <a href="Access Provider">Access Provider</a> which provides business-to-business services as defined in <a href="Definitions of the Qiy Scheme">Definitions of the Qiy Scheme</a>.
+<a id="service-source">Service Source</a>	| A <a href="Provider">Provider</a> that can or is providing a specific <a href="Service">Service</a>.
+<a id="technology-event">Technology Event</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="technology-interface">Technology Interface</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+<a id="technology-service">Technology Service</a>	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
+<a id="transport-connect-token">Transport Connect Token</a>	| A Literal used to create <a href="Path">Paths</a>.
+<a id="transport-layer">Transport Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
+<a id="transport-protocol">Transport Protocol</a>	| A protocol that is part of the <a href="Qiy Open Standard">Qiy Open Standard</a> and which describes the interaction between <a href="Transporter">Transporters</a> and the lower layers.
+<a id="transporter">Transporter</a>	| A <a href="Technology Service">Technology Service</a> that provides transport services.
+<a id="transporter-api">Transporter API</a>	| <a href="Technology Interface">Technology Interface</a> of a <a href="Transporter">Transporter</a>.
+<a id="transporter-implementation">Transporter Implementation</a>	| A software package which can be used to realize a <a href="Transporter">Transporter</a>.
+<a id="user-layer">User Layer</a>	| One of the <a href="Architectural Layers of the Qiy Scheme">Architectural Layers of the Qiy Scheme</a>.
+<a id="uri">Uri</a>	| See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+<a id="url">Url</a>	| See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+<a id="work-stream-functionality-&-technology">Work Stream Functionality & Technology</a>	| One of the work streams of the <a href="Qiy Foundation">Qiy Foundation</a>, see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
 
