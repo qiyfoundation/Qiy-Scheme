@@ -207,8 +207,8 @@ The realization of the Data Reuse as described in this document demonstrates tha
 * The Individual can securily exchange data and/or messages with another person or organization (Qiy User) via Qiy, using connections, see [4 The User Layer](#4-the-user-layer).
 * The Individual controls what Qiy Users he connects with and, in principle, when he wants to end it.
 * When an Individual connects with a Qiy User that is providing a Service via Qiy (Provider), the Individual is provided with the identity of the latter, but not the other way around.
-* The Individual can access his Personal Data that is kept by another [Qiy User](Data Provider as a result of the Access Principle, one of the Qiy Trust Principles.
-* The Individual controls what data he shares with what service provider (Relying Party) and under what terms using proveable Consents.
+* The Individual can access his Personal Data that is kept by another Qiy User (Data Provider) as a result of the Access Principle, one of the Qiy Trust Principles.
+* The Individual controls what data he shares with what Provider (Relying Party) and under what terms using proveable Consents.
 * Qiy Users use applications that are authorized for use with Qiy (Qiy Applications).
 * Access to Qiy, data exchange via Qiy, consent services and potentially Qiy Nodes are provided by Access Providers.
 
@@ -227,7 +227,7 @@ As described above, privacy is at the heart of Qiy and security being a 'conditi
 An Individual can only control his Personal Data, when all concerned systems are interoperable.
 This is achieved as follows:
 * Applications exchange data and/or messages via Qiy using open standards of the Qiy Scheme (Qiy Open Standard).
-* Applications exchange described data using Data Descriptions which are available to all concerned parties.
+* Applications exchange described data using Data Descriptions which are available to all concerned parties (via the Service Library).
 
 ## 3.5 Governance
 
@@ -433,7 +433,7 @@ For a Qiy Application of a Proposer, a Connection is established as follows:
 * The Qiy Application generates an Application Conenct Token, see [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
 * The Qiy Application composes a Connect Proposal for the Proposer.
 * The Proposer presents it out-of-band to the Accepter.
-* When the Accepter wants to connect, he uses the Connect Proposal to create a connection with his Qiy Application, see [5.2.4 'Accepter: Connect'](#524-accepter:-connect).
+* When the Accepter wants to connect, he uses the Connect Proposal to create a connection with his Qiy Application, see [5.2.4 'Accepter: Connect'](#524-accepter-connect).
 * The Proposer detects this by use of polling (using the Connections Request) or events (using the Connection Created Event).
  
 ![Proposer: Connect](./images/proposer--connect.png)
