@@ -262,8 +262,8 @@ Two Qiy Users can connect via Qiy by creating a connection between their Qiy Nod
 The Connection can be initiated by either of the two Qiy Users.
 The Qiy User initiating the Connection is called the Proposer, the other one Accepter.
 This goes as follows:
-* The Proposer uses a Qiy Application to generate a token (see [4.7.1 Generate token](#471-generate-token)) and compose Connect Proposal.
-* The Proposer provides it out-of-band to the Accepter, for example by lettre, see [4.7.2 Media](#472-media).
+* The Proposer uses a Qiy Application to generate a token (see [4.4.1 Generate token](#441-generate-token)) and compose Connect Proposal.
+* The Proposer provides it out-of-band to the Accepter, for example by lettre, see [4.4.2 Media](#442-media).
 * The Accepter may read the proposal and use a Qiy Application to extract the Connect Token and create a new Connection with the Proposer.
 
 As stated before, when a Connection is established, the identity of the Qiy User is provided to the other one if the Qiy User is a Provider. 
