@@ -182,7 +182,7 @@ In essence, the _Data Reuse_ goes as follows:
 * The _Individual_ retrieves the data from a _Data Provider_.
 * The _Individual_ provides the data to the _Relying Party_.
 
-![Qiy Data Reuse](./images/Qiy Data Reuse.png)
+![Qiy Data Reuse](./images/qiy-data-reuse.png)
 
 ### 2.1.1 Privacy concern
 
