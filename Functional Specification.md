@@ -32,6 +32,7 @@ From Qiy Nodes to data exchange
 			1. [Webpage with QR Code](#4433-webpage-with-qr-code)
 			1. [Webpage with button](#4434-webpage-with-button)
 			1. [Accepting a Connect Proposal by scanning a QR code](#4435-accepting-a-connect-proposal-by-scanning-a-qr-code)
+			1. [Confirmation](#4436-confirmation)
 	1. [Setup](#45-setup)
 		1. [Relying Party](#451-relying-party)
 		1. [Data Provider](#451-data-provider)
@@ -342,6 +343,13 @@ The picture below shows an example of a _Connect Proposal_ in a webpage which di
 The picture below shows an example of scanning the QR code in a _Connect Proposal_ using a _Qiy Application_:
 
 ![An example of scanning a QR code](./images/example--connect-proposal--scan-qr-code.PNG)
+
+#### 4.4.3.6 Confirmation
+
+The picture below shows an example of an _Qiy Application_ verifying the acceptance of a _Connect Proposal_:
+
+![An example of scanning a QR code](./images/example--connect-proposal--verify.PNG)
+
 
 ## 4.5 Setup
 
