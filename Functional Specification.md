@@ -29,7 +29,8 @@ From Qiy Nodes to data exchange
 		1. [Examples](#443-examples)
 			1. [Connect Proposal](#4431-connect-proposal)
 			1. [Email](#4432-email)
-			1. [Webpage](#4433-webpage)
+			1. [Webpage with QR Code](#4433-webpage-with-qr-code)
+			1. [Webpage with button](#4434-webpage-with-button)
 	1. [Setup](#45-setup)
 		1. [Relying Party](#451-relying-party)
 		1. [Data Provider](#451-data-provider)
@@ -325,10 +326,15 @@ The picture below shows an example of a _Connect Proposal_ in an email:
 
 ![An example of a Connect Proposal in an email](./images/example--connect-proposal--email.PNG)
 
-#### 4.4.3.3 Webpage
+#### 4.4.3.3 Webpage with QR Code
 The picture below shows an example of a _Connect Proposal_ in a webpage which displays a QR code when viewed on a laptop, pc or tablet:
 
 ![An example of a Connect Proposal in a webpage with QR code](./images/example--connect-proposal--webpage-laptop-pc-tablet.PNG)
+
+#### 4.4.3.4 Webpage with button
+The picture below shows an example of a _Connect Proposal_ in a webpage which displays a button when viewed on smartphone:
+
+![An example of a Connect Proposal in a webpage with button](./images/example--connect-proposal--phone.PNG)
 
 ## 4.5 Setup
 
