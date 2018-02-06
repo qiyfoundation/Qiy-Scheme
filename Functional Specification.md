@@ -326,9 +326,9 @@ The picture below shows an example of a _Connect Proposal_ in an email:
 ![An example of a Connect Proposal in an email](./images/example--connect-proposal--email.PNG)
 
 #### 4.4.3.3 Webpage
-The picture below shows an example of a _Connect Proposal_ in a webpage when viewed on a laptop, pc or tablet:
+The picture below shows an example of a _Connect Proposal_ in a webpage which displays a QR code when viewed on a laptop, pc or tablet:
 
-![An example of a Connect Proposal in a webpage on laptop, pc or tablet](./images/example--connect-proposal--webpage-laptop-pc-tablet.PNG)
+![An example of a Connect Proposal in a webpage with QR code](./images/example--connect-proposal--webpage-laptop-pc-tablet.PNG)
 
 ## 4.5 Setup
 
