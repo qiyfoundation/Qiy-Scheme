@@ -334,7 +334,7 @@ The picture below shows an example of a _Connect Proposal_ in a webpage which di
 #### 4.4.3.4 Webpage with button
 The picture below shows an example of a _Connect Proposal_ in a webpage which displays a button when viewed on smartphone:
 
-![An example of a Connect Proposal in a webpage with button](./images/example--connect-proposal--phone.PNG)
+![An example of a Connect Proposal in a webpage with button](./images/example--connect-proposal--webpage-phone.PNG)
 
 ## 4.5 Setup
 
