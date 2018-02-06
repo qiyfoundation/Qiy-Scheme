@@ -33,6 +33,7 @@ From Qiy Nodes to data exchange
 			1. [Webpage with button](#4434-webpage-with-button)
 			1. [Accepting a Connect Proposal by scanning a QR code](#4435-accepting-a-connect-proposal-by-scanning-a-qr-code)
 			1. [Confirmation](#4436-confirmation)
+			1. [Accepting a Connect Proposal with a button click](#4435-accepting-a-connect-proposal-with-a-button-click)
 	1. [Setup](#45-setup)
 		1. [Relying Party](#451-relying-party)
 		1. [Data Provider](#451-data-provider)
@@ -346,9 +347,16 @@ The picture below shows an example of scanning the QR code in a _Connect Proposa
 
 #### 4.4.3.6 Confirmation
 
-The picture below shows an example of an _Qiy Application_ verifying the acceptance of a _Connect Proposal_:
+The picture below shows an example of an _Qiy Application_ verifying the acceptance of a _Connect Proposal_.
+The _Qiy Application_ will create the _Connection_ when the _Accepter_ has confirmed that he wants to _Connect_ with the _Proposer_.
 
-![An example of scanning a QR code](./images/example--connect-proposal--verify.PNG)
+![An example of confirming the acceptance a Connect Proposal](./images/example--connect-proposal--verify.PNG)
+
+#### 4.4.3.5 Accepting a Connect Proposal with a button click
+
+When an _Accepter_ has viewed a webpage with a _Connect Proposal_ on his phone and clicked the button to accept it, he will be asked to confirm that he will be redirected to a _Qiy Application_:
+
+![An example of confirming the redirect to a Qiy Application](./images/example--connect-proposal--after-the-button-click.PNG)
 
 
 ## 4.5 Setup
