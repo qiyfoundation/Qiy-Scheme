@@ -602,7 +602,7 @@ The _Qiy Node API_ is the _Technology Interface_ of the _Qiy Node_, one of the A
 
 ### 6.2.3 Qiy Node Implementation
 A _Qiy Node Implementation_ is a software package which can be used to realize a _Qiy Node_.
-The _Qiy Scheme_ puts no limit on the number of _Qiy Node Implementation_s, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
+The _Qiy Scheme_ puts no limit on the number of _Qiy Node Implementations_, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
 
 ### 6.2.4 Qiy Node Instantiation
 A _Qiy Node_ can be created in two ways:
@@ -785,7 +785,7 @@ The _Consent Granted Message_ is a _Qiy Node Message_ which can be used to commu
 The _Consent Request Message_ is a _Qiy Node Message_ which can be used to request for a _Consent_.
 
 ### 6.8.4 Operation Reference Message
-The _Operation Reference Message_ is a _Qiy Node Message_ that can be used to convey _Operation References_over a _Connection_.
+The _Operation Reference Message_ is a _Qiy Node Message_ that can be used to convey _Operation References_ over a _Connection_.
  
 ### 6.8.5 Operation Reference Request Message
 The _Operation Reference Request Message_ is a _Qiy Node Message_ that can be used to request for _Operation References_.
@@ -887,7 +887,7 @@ The _Transporter API_ is the _Technology Interface_ of the _Transporter_, one of
 
 ## 8.2.3 Transporter Implementation
 A _Transporter Implementation_ is a software package which can be used to realize a _Transporter_.
-The _Qiy Scheme_ puts no limit on the number of _Transporter Implementation_s, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
+The _Qiy Scheme_ puts no limit on the number of _Transporter Implementations_, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
 
 ## 8.2.4 Transporter Instantiation
 A _Transporter_ can only be instantiated by an _Access Provider_.
@@ -946,135 +946,135 @@ A _Carrier Node_ is a _Node_ which hosts one or more _Carriers_.
 # 10 Definitions
 This document uses the following definitions:
 
-Term	| Definition
+Term | Definition
 ------- | ----------
-Accepter	| A _Business Role_ for a _Qiy User_ who is creating a _Connection_ using a _Connect Token_ that is provided by a _Proposer_.
-Access Principle	| The principle which authorizes the access of an _Individual_ to his _Personal Data_, one of the _Qiy Trust Principles_.
-Access Provider	| An organization which provides _Qiy Users_ access to the _Qiy Trust Framework_, either an _Issuer_ or a _Service Provider_.
-Application Connect Token	| A _Token_ that is used by _Qiy Applications_ to create _Connections_.
-Application Interface	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Application Layer	| One of the _Architectural Layers of the Qiy Scheme_.
-Application Provider	| A _Bussiness Role_ for suppliers of _Qiy Applications_.
-Application Service	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Architectural Layers of the Qiy Scheme	| The architectural layers of the _Qiy Scheme_: the _User Layer_, the _Application Layer_, the _Qiy Node Layer_, the _Service Layer_, the _Transport Layer_ and the _Carrier Layer_.
-Binding Individual Rights	| One of the documents of the _Qiy Scheme Rulebook_.
-Binding Principles for Relying Parties and Data Providers	| One of the documents of the _Qiy Scheme Rulebook_.
-Business Actor	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Business Object	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Business Process	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Business Role	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Carrier API	| _Technology Interface_ of the _Carrier_.
-Carrier Implementation	| A software package which can be used to realize a _Carrier_.
-Carrier Layer	| One of the _Architectural Layers of the Qiy Scheme_.
-Carrier Node	| A _Node_ which hosts one or more _Carriers_.
-Carrier	| A _Technology Service_ that provides the services of the _Carrier Layer_. 
-Connect Proposal	| A _Business Object_ for a proposal to connect via Qiy.
-Connect Token Creation Request 	| A _Qiy Node Request_ that can be used to obtain a _Connect Token_ from the _Qiy Node_.
-Connect Token Registration Request 	| A _Qiy Node Request_ that can be used to register a _Connect Token_.
-Connect Token Update Request 	| A _Qiy Node Request_ that can be used to update a _Connect Token_.
-Connect Token	| A Literal used to create a _Connection_.
-Connection Create Request 	| A _Qiy Node Request_ that can be used to create a _Connection_ with a _Connect Token_.
-Connection Created Event 	| A _Qiy Node Event_ that is generated when a _Connection_ has been created.
-Connection Delete Request 	| A _Qiy Node Request_ that can be used to delete a _Connection_.
-Connection Uri	| _Uri_ voor the id van een _Connection_.
-Connection	| A connection between two _Qiy Nodes_.
-Connections Request 	| A _Qiy Node Request_ that can be used to obtain a list of all the _Connections_ of a _Qiy Node_.
-Consent Data Descriptor	| _Data Descriptor_ in een _Service Description_ voor the beschrijving van the voor the _Service_ benodigde _Personal Data_.
-Consent Denied Message 	| A _Qiy Node Message_ which can be used to communicate the denial of a _Consent_.
-Consent Denied Request 	| A _Qiy Node Request_ that can be used to record the denial of a _Consent_.
-Consent Granted Message 	| A _Qiy Node Message_ which can be used to communicate the granting of a _Consent_.
-Consent Granted Request 	| A _Qiy Node Request_ that can be used to record the granting of a _Consent_.
-Consent Request Message 	| A _Qiy Node Message_ which can be used to request for a _Consent_.
-Consent Request 	| A _Qiy Node Request_ which can be used to request for a _Consent_.
-Consent Service Description	| A _Service Description_ of the _Service_ for which a _Consent_ applies.
-Consent Service Descriptor	| A _Service Descriptor_ of a _Consent Service Description_.
-Consent Service	| A _Technology Service_ used to maintain _Consents_ and their status.
-Consent Uri	| A _Uri_ which is used to identify a _Consent_.
-Consent Withdrawn Event 	| A _Qiy Node Event_ that is generated when a _Consent_ has been withdrawn.
-Consent Withdrawn Request 	| A _Qiy Node Request_ that can be used to record the withdrawal of a _Consent_.
-Consent	| As defined in the _GDPR_.
-Consents Request 	| A _Qiy Node Request_ that can be used to obtain a list of all the _Consents_ of a _Qiy Node_.
-Data Description	| A description of data.
-Data Descriptor	| An _Uri_ which can be used to identify and obtain a _Data Description_.
-Data Provider Agreement	| An agreement required for _Data Providers_.
-Data Provider	| A _Business Role_ as defined in _Definitions of the Qiy Scheme_.
-Data Reference	| An _Operation Reference_ which can be used to obtain _Personal Data_ of an _Individual_.
-Data Subject	| As defined in the _GDPR_.
-Data by Reference	| A pattern for exchanging data indirectly using a _Data Reference_, see also _Service by Reference_.
-Definitions of the Qiy Scheme	| One of the documents of the _Qiy Scheme Rulebook_.
-GDPR	| General Data Protection Regulation, see http://eur-lex.europa.eu/legal-content/EN-NL/TXT/?uri=CELEX:32016R0679&from=EN. 
-Governance Model for the Qiy Scheme	| Governance Model for the _Qiy Scheme_, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/.
-HTTP Request	| As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
-Individual	| A _Business Role_ of a _Qiy User_ as defined in _Definitions of the Qiy Scheme_.
-Issuer	| A _Business Role_ for an _Access Provider_ that provides services to natural persons, see _Definitions of the Qiy Scheme_.
-Licence Agreement Application Provider	| A licence agreement for _Application Providers_.
-Licence Agreement Issuer	| A licence agreement for _Issuers_, the template of which is part of the _Qiy Scheme Rulebook_.
-Licence Agreement Service Provider	| A licence agreement for _Service Providers_, the template of which is part of the _Qiy Scheme Rulebook_.
-Literal	| A fixex value, see https://en.wikipedia.org/wiki/Literal_(computer_programming).
-Message Post Request 	| A _Qiy Node Request_ that can be used to post a _Qiy Node Message_.
-Message Received Event 	| A _Qiy Node Event_ that is generated when a _Qiy Node Message_ has been received.
-Messages Request 	| A _Qiy Node Request_ that can be used to obtain a list of all the _Messages_ of a _Qiy Node_.
-Node Id	| A _Qiy Node_ id.
-Node	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Operation Execution Request 	| A _Qiy Node Request_ that can be used to command the execution of an _Operation_ by reference using an _Operation Reference_.
-Operation Reference Message 	| A _Qiy Node Message_ that can be used to convey _Operation References_over a _Connection_.
-Operation Reference Received Event 	| A _Qiy Node Event_ that is generated when a _Qiy Node_ has received a new _Operation Reference_.
-Operation Reference Request Message 	| A _Qiy Node Message_ that can be used to request for _Operation References_.
-Operation Reference	| A _Business Object_ used by the _Service by Reference_-pattern.
-Operation References Request 	| A _Qiy Node Request_ that can be used to obtain a list of all the _Operation References_ of a _Qiy Node_.
-Operation Registration Request 	| A _Qiy Node Request_ that can be used to obtain an _Operation Reference_ by registrating an _Operation Specification_.
-Operation Specification | A specification of a _Http Request_ for the execution of an _Operation_.
+Accepter | A _Business Role_ for a _Qiy User_ who is creating a _Connection_ using a _Connect Token_ that is provided by a _Proposer_.
+Access Principle | The principle which authorizes the access of an _Individual_ to his _Personal Data_, one of the _Qiy Trust Principles_.
+Access Provider | An organization which provides _Qiy Users_ access to the _Qiy Trust Framework_, either an _Issuer_ or a _Service Provider_.
+Application Connect Token | A _Token_ that is used by _Qiy Applications_ to create _Connections_.
+Application Interface | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Application Layer | One of the _Architectural Layers of the Qiy Scheme_.
+Application Provider | A _Bussiness Role_ for suppliers of _Qiy Applications_.
+Application Service | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Architectural Layers of the Qiy Scheme | The architectural layers of the _Qiy Scheme_: the _User Layer_, the _Application Layer_, the _Qiy Node Layer_, the _Service Layer_, the _Transport Layer_ and the _Carrier Layer_.
+Binding Individual Rights | One of the documents of the _Qiy Scheme Rulebook_.
+Binding Principles for Relying Parties and Data Providers | One of the documents of the _Qiy Scheme Rulebook_.
+Business Actor | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Business Object | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Business Process | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Business Role | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Carrier | A _Technology Service_ that provides the services of the _Carrier Layer_. 
+Carrier API | _Technology Interface_ of the _Carrier_.
+Carrier Implementation | A software package which can be used to realize a _Carrier_.
+Carrier Layer | One of the _Architectural Layers of the Qiy Scheme_.
+Carrier Node | A _Node_ which hosts one or more _Carriers_.
+Connect Proposal | A _Business Object_ for a proposal to connect via Qiy.
+Connect Token | A _Literal_ used to create a _Connection_.
+Connect Token Creation Request | A _Qiy Node Request_ that can be used to obtain a _Connect Token_ from the _Qiy Node_.
+Connect Token Registration Request | A _Qiy Node Request_ that can be used to register a _Connect Token_.
+Connect Token Update Request | A _Qiy Node Request_ that can be used to update a _Connect Token_.
+Connection | A connection between two _Qiy Nodes_.
+Connection Create Request | A _Qiy Node Request_ that can be used to create a _Connection_ with a _Connect Token_.
+Connection Created Event | A _Qiy Node Event_ that is generated when a _Connection_ has been created.
+Connection Delete Request | A _Qiy Node Request_ that can be used to delete a _Connection_.
+Connection Uri | _Uri_ voor the id van een _Connection_.
+Connections Request | A _Qiy Node Request_ that can be used to obtain a list of all the _Connections_ of a _Qiy Node_.
+Consent | As defined in the _GDPR_.
+Consent Data Descriptor | _Data Descriptor_ in een _Service Description_ voor the beschrijving van the voor the _Service_ benodigde _Personal Data_.
+Consent Denied Message | A _Qiy Node Message_ which can be used to communicate the denial of a _Consent_.
+Consent Denied Request | A _Qiy Node Request_ that can be used to record the denial of a _Consent_.
+Consent Granted Message | A _Qiy Node Message_ which can be used to communicate the granting of a _Consent_.
+Consent Granted Request | A _Qiy Node Request_ that can be used to record the granting of a _Consent_.
+Consent Request | A _Qiy Node Request_ which can be used to request for a _Consent_.
+Consent Request Message | A _Qiy Node Message_ which can be used to request for a _Consent_.
+Consent Service | A _Technology Service_ used to maintain _Consents_ and their status.
+Consent Service Description | A _Service Description_ of the _Service_ for which a _Consent_ applies.
+Consent Service Descriptor | A _Service Descriptor_ of a _Consent Service Description_.
+Consent Uri | A _Uri_ which is used to identify a _Consent_.
+Consent Withdrawn Event | A _Qiy Node Event_ that is generated when a _Consent_ has been withdrawn.
+Consent Withdrawn Request | A _Qiy Node Request_ that can be used to record the withdrawal of a _Consent_.
+Consents Request | A _Qiy Node Request_ that can be used to obtain a list of all the _Consents_ of a _Qiy Node_.
+Data Description | A description of data.
+Data Descriptor | An _Uri_ which can be used to identify and obtain a _Data Description_.
+Data Provider | A _Business Role_ as defined in _Definitions of the Qiy Scheme_.
+Data Provider Agreement | An agreement required for _Data Providers_.
+Data Reference | An _Operation Reference_ which can be used to obtain _Personal Data_ of an _Individual_.
+Data Subject | As defined in the _GDPR_.
+Data by Reference | A pattern for exchanging data indirectly using a _Data Reference_, see also _Service by Reference_.
+Definitions of the Qiy Scheme | One of the documents of the _Qiy Scheme Rulebook_.
+GDPR | General Data Protection Regulation, see http://eur-lex.europa.eu/legal-content/EN-NL/TXT/?uri=CELEX:32016R0679&from=EN. 
+Governance Model for the Qiy Scheme | Governance Model for the _Qiy Scheme_, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/.
+HTTP Request | As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
+Individual | A _Business Role_ of a _Qiy User_ as defined in _Definitions of the Qiy Scheme_.
+Issuer | A _Business Role_ for an _Access Provider_ that provides services to natural persons, see _Definitions of the Qiy Scheme_.
+Licence Agreement Application Provider | A licence agreement for _Application Providers_.
+Licence Agreement Issuer | A licence agreement for _Issuers_, the template of which is part of the _Qiy Scheme Rulebook_.
+Licence Agreement Service Provider | A licence agreement for _Service Providers_, the template of which is part of the _Qiy Scheme Rulebook_.
+Literal | A fixex value, see https://en.wikipedia.org/wiki/Literal_(computer_programming).
+Message Post Request | A _Qiy Node Request_ that can be used to post a _Qiy Node Message_.
+Message Received Event | A _Qiy Node Event_ that is generated when a _Qiy Node Message_ has been received.
+Messages Request | A _Qiy Node Request_ that can be used to obtain a list of all the _Messages_ of a _Qiy Node_.
+Node | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Node Id | A _Qiy Node_ id.
 Operation | A 'sub-service' which can be used to consume a _Service_.
-Path	| A connection between two _Transporters_ which is used to exchange _Transport Messages_.
-Personal Data	| As defined in the _GDPR_.
-Proposer	| A _Business Role_ for a _Qiy User_ that initiates creating a _Connection_ by providing a _Connect Token_, sometimes using a _Connect Proposal_.
-Provider	| A _Business Role_ for a _Qiy User_ that is providing one or more _Services_ using Qiy, that is a _Data Provider_ or a _Relying Party_.
-Qiy Application Protocol	| A protocol for the interactions between _Qiy Applications_ and the underlying layers.
-Qiy Application	| An _Application Service_ or software that is authorized for use with Qiy.
-Qiy Foundation Member	| A member of the _Qiy Foundation_, see https://www.qiyfoundation.org/membership/.
-Qiy Foundation	| A foundation dedicated to putting people back in control of their personal data while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
-Qiy Node API	| A _Technology Interface_ of the _Qiy Node_ that is part of the _Qiy Open Standard_.
-Qiy Node Event 	| A Technology Event of a _Qiy Node_.
-Qiy Node Implementation	| A software package which can be used to realize a _Qiy Node_.
-Qiy Node Layer	| One of the _Architectural Layers of the Qiy Scheme_.
-Qiy Node Message 	| A _Message_ that is exchanged using a _Connection_.
-Qiy Node Protocol	| A protocol describing the interaction between _Qiy Nodes_ and the underlying layers.
-Qiy Node Request 	| A _Http Request_ for a _Qiy Node_.
-Qiy Node	| A _Technology Service_ as defined in _Definitions of the Qiy Scheme_.
-Qiy Open Standard	| A set of open standards for Qiy, maintained by the _Work Stream Functionality & Technology_, see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
-Qiy Scheme Rulebook	| A set of documents concerning governance, legal and technical aspects of the _Qiy Scheme_, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/
-Qiy Scheme	| See https://www.qiyfoundation.org/qiy-scheme/.
-Qiy Trust Framework	| As defined in _Definitions of the Qiy Scheme_.
-Qiy Trust Principles	| As defined in _Definitions of the Qiy Scheme_, see https://www.qiyfoundation.org/qiy-trust-principles/.
-Qiy User	| A _Business Actor_; defined as 'User' in _Definitions of the Qiy Scheme_.
-Reference	| A _Literal_.
-Relying Party Agreement	| An agreement that is required for _Relying Parties_.
-Relying Party	| A _Business Role_ as defined in _Definitions of the Qiy Scheme_.
-Request	| A _Business Object_: a message requesting something.
-Service Discovery	| A _Business Process_ to find _Providers_ for a given _Service_.
-Service Endpoint	| A _Technology Service_ provided by a _Provider_ to allow the consumption of his _Services_.
-Service Layer	| One of the _Architectural Layers of the Qiy Scheme_.
-Service Library	| A _Technology Service_ that supports the _Service_ processes of the _Individuals_ and the _Providers_.
-Service Provider	| A _Business Role_: an _Access Provider_ which provides business-to-business services as defined in _Definitions of the Qiy Scheme_.
-Service Source	| A _Provider_ that can or is providing a specific _Service_.
-Service by Reference	| A pattern for consuming _Services_ indirectly using references (_Operation Reference_).
-Service	| An 'information society service' as defined in the _GDPR_.
-Source Candidate Event 	| A _Qiy Node Event_ that is generated when a _Qiy Node_ has received a new _Source Candidate_ for a _Consent_.
-Source Candidates Request 	| A _Qiy Node Request_ to obtain candidate _Providers_ for a _Service_.
-Source Registration Request 	| A _Qiy Node Request_ to register a _Provider_ as source for a _Service_.
-Technology Event	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Technology Interface	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
-Technology Service	| As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
-Transport Connect Token	| A Literal used to create _Paths_.
-Transport Layer	| One of the _Architectural Layers of the Qiy Scheme_.
-Transport Message Description	| A _Data Description_ that describes the contents, format and encryption (if any) of a _Transport Message_.
-Transport Message	| A message that is exchanged over a _Path_ between two _Transporters_.
-Transport Protocol	| A protocol that is part of the _Qiy Open Standard_ and which describes the interaction between _Transporters_ and the lower layers.
-Transporter API	| _Technology Interface_ of a _Transporter_.
-Transporter Implementation	| A software package which can be used to realize a _Transporter_.
-Transporter	| A _Technology Service_ that provides transport services.
-Uri	| See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
-Url	| See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
-User Layer	| One of the _Architectural Layers of the Qiy Scheme_.
-Work Stream Functionality & Technology	| One of the work streams of the _Qiy Foundation_, see https://www.qiyfoundation.org/qiy-scheme/workstreams/
+Operation Execution Request | A _Qiy Node Request_ that can be used to command the execution of an _Operation_ by reference using an _Operation Reference_.
+Operation Reference | A _Business Object_ used by the _Service by Reference_-pattern.
+Operation Reference Message | A _Qiy Node Message_ that can be used to convey _Operation References_ over a _Connection_.
+Operation Reference Received Event | A _Qiy Node Event_ that is generated when a _Qiy Node_ has received a new _Operation Reference_.
+Operation Reference Request Message | A _Qiy Node Message_ that can be used to request for _Operation References_.
+Operation References Request | A _Qiy Node Request_ that can be used to obtain a list of all the _Operation References_ of a _Qiy Node_.
+Operation Registration Request | A _Qiy Node Request_ that can be used to obtain an _Operation Reference_ by registrating an _Operation Specification_.
+Operation Specification | A specification of a _Http Request_ for the execution of an _Operation_.
+Path | A connection between two _Transporters_ which is used to exchange _Transport Messages_.
+Personal Data | As defined in the _GDPR_.
+Proposer | A _Business Role_ for a _Qiy User_ that initiates creating a _Connection_ by providing a _Connect Token_, sometimes using a _Connect Proposal_.
+Provider | A _Business Role_ for a _Qiy User_ that is providing one or more _Services_ using Qiy, that is a _Data Provider_ or a _Relying Party_.
+Qiy Application | An _Application Service_ or software that is authorized for use with Qiy.
+Qiy Application Protocol | A protocol for the interactions between _Qiy Applications_ and the underlying layers.
+Qiy Foundation | A foundation dedicated to putting people back in control of their personal data while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
+Qiy Foundation Member | A member of the _Qiy Foundation_, see https://www.qiyfoundation.org/membership/.
+Qiy Node | A _Technology Service_ as defined in _Definitions of the Qiy Scheme_.
+Qiy Node API | A _Technology Interface_ of the _Qiy Node_ that is part of the _Qiy Open Standard_.
+Qiy Node Event | A Technology Event of a _Qiy Node_.
+Qiy Node Implementation | A software package which can be used to realize a _Qiy Node_.
+Qiy Node Layer | One of the _Architectural Layers of the Qiy Scheme_.
+Qiy Node Message | A _Message_ that is exchanged using a _Connection_.
+Qiy Node Protocol | A protocol describing the interaction between _Qiy Nodes_ and the underlying layers.
+Qiy Node Request | A _Http Request_ for a _Qiy Node_.
+Qiy Open Standard | A set of open standards for Qiy, maintained by the _Work Stream Functionality & Technology_, see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
+Qiy Scheme | See https://www.qiyfoundation.org/qiy-scheme/.
+Qiy Scheme Rulebook | A set of documents concerning governance, legal and technical aspects of the _Qiy Scheme_, see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/
+Qiy Trust Framework | As defined in _Definitions of the Qiy Scheme_.
+Qiy Trust Principles | As defined in _Definitions of the Qiy Scheme_, see https://www.qiyfoundation.org/qiy-trust-principles/.
+Qiy User | A _Business Actor_; defined as 'User' in _Definitions of the Qiy Scheme_.
+Reference | A _Literal_.
+Relying Party | A _Business Role_ as defined in _Definitions of the Qiy Scheme_.
+Relying Party Agreement | An agreement that is required for _Relying Parties_.
+Request | A _Business Object_: a message requesting something.
+Service | An 'information society service' as defined in the _GDPR_.
+Service Discovery | A _Business Process_ to find _Providers_ for a given _Service_.
+Service Endpoint | A _Technology Service_ provided by a _Provider_ to allow the consumption of his _Services_.
+Service Layer | One of the _Architectural Layers of the Qiy Scheme_.
+Service Library | A _Technology Service_ that supports the _Service_ processes of the _Individuals_ and the _Providers_.
+Service Provider | A _Business Role_: an _Access Provider_ which provides business-to-business services as defined in _Definitions of the Qiy Scheme_.
+Service Source | A _Provider_ that can or is providing a specific _Service_.
+Service by Reference | A pattern for consuming _Services_ indirectly using references (_Operation Reference_).
+Source Candidate Event | A _Qiy Node Event_ that is generated when a _Qiy Node_ has received a new _Source Candidate_ for a _Consent_.
+Source Candidates Request | A _Qiy Node Request_ to obtain candidate _Providers_ for a _Service_.
+Source Registration Request | A _Qiy Node Request_ to register a _Provider_ as source for a _Service_.
+Technology Event | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Technology Interface | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+Technology Service | As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
+Transport Connect Token | A _Literal_ used to create _Paths_.
+Transport Layer | One of the _Architectural Layers of the Qiy Scheme_.
+Transport Message | A message that is exchanged over a _Path_ between two _Transporters_.
+Transport Message Description | A _Data Description_ that describes the contents, format and encryption (if any) of a _Transport Message_.
+Transport Protocol | A protocol that is part of the _Qiy Open Standard_ and which describes the interaction between _Transporters_ and the lower layers.
+Transporter | A _Technology Service_ that provides transport services.
+Transporter API | _Technology Interface_ of a _Transporter_.
+Transporter Implementation | A software package which can be used to realize a _Transporter_.
+Uri | See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+Url | See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+User Layer | One of the _Architectural Layers of the Qiy Scheme_.
+Work Stream Functionality & Technology | One of the work streams of the _Qiy Foundation_, see https://www.qiyfoundation.org/qiy-scheme/workstreams/
 
