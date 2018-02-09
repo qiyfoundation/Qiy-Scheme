@@ -36,8 +36,8 @@ From Qiy Nodes to data exchange
 			1. [Confirmation](#4437-confirmation)
 	1. [Setup](#45-setup)
 		1. [Relying Party](#451-relying-party)
-		1. [Data Provider](#451-data-provider)
-		1. [Individual](#452-individual)
+		1. [Data Provider](#452-data-provider)
+		1. [Individual](#453-individual)
 	1. [Subscribe](#46-subscribe)
 	1. [Consent](#47-consent)
 	1. [Routing](#48-routing)
@@ -61,10 +61,10 @@ From Qiy Nodes to data exchange
 	1. [Service Discovery](#54-service-discovery)
 	1. [Data by Reference](#55-data-by-reference)
 		1. [Service by Reference](#551-service-by-reference)
-		1. [Request data reference](#551-request-data-reference)
-		1. [Create reference](#542-create-reference)
-		1. [Request data](#551-request-data)
-		1. [Provide data](#552-provide-data)
+		1. [Request data reference](#552-request-data-reference)
+		1. [Create reference](#553-create-reference)
+		1. [Request data](#554-request-data)
+		1. [Provide data](#555-provide-data)
 1. [The Qiy Node Layer](#6-the-qiy-node-layer)
 	1. [Access Provider](#61-access-provider)
 		1. [Portability](#611-portability)
@@ -133,22 +133,22 @@ From Qiy Nodes to data exchange
 	1. [Access Provider](#81-access-provider)
 		1. [Portability](#811-portability)
 	1. [Transporter](#82-transporter)
-	1. [Transport Protocol](#821-transport-protocol)
-	1. [Transporter API](#822-transporter-api)
-	1. [Transporter Implementation](#823-transporter-implementation)
-	1. [Transporter Instantiation](#824-transporter-instantiation)
-	1. [Deleting a Transporter](#825-deleting-a-transporter)
-	1. [Path](#83-path)
-		1. [Path Creation](#831-path-creation)
-		1. [Deleting a Path](#832-deleting-a-path)
+	1. [Transport Protocol](#83-transport-protocol)
+	1. [Transporter API](#84-transporter-api)
+	1. [Transporter Implementation](#85-transporter-implementation)
+	1. [Transporter Instantiation](#86-transporter-instantiation)
+	1. [Deleting a Transporter](#87-deleting-a-transporter)
+	1. [Path](#88-path)
+		1. [Path Creation](#881-path-creation)
+		1. [Deleting a Path](#882-deleting-a-path)
 1. [The Carrier Layer](#9-the-carrier-layer)
 	1. [Access Provider](#91-access-provider)
 		1. [Portability](#911-portability)
 	1. [Carrier](#92-carrier)
-	1. [Carrier Protocol](#921-carrier-protocol)
-	1. [Carrier API](#922-carrier-api)
-	1. [Carrier Implementation](#923-carrier-implementation)
-	1. [Carrier Node](#93-carrier-node)
+	1. [Carrier Protocol](#93-carrier-protocol)
+	1. [Carrier API](#94-carrier-api)
+	1. [Carrier Implementation](#95-carrier-implementation)
+	1. [Carrier Node](#96-carrier-node)
 1. [Definitions](#10-definitions)
 
 # 1 Introduction
@@ -371,7 +371,7 @@ In order to be able to offer his services via Qiy, a _Relying Party_ has met the
 * The _Service Library_ contains the _Service Catalogue_ of the _Relying Party_ defining the provided services.
 * The _Service Library_ contains _Service Descriptions_ for all the provided services, which also includes the terms of use, especially with regard to Personal Data.
 
-### 4.5.1 Data Provider
+### 4.5.2 Data Provider
 
 In order to be able to provide the _Personal Data_ via Qiy, a _Data Provider_ has met the following preconditions:
 * The _Data Provider_ has acquired access to Qiy with the help of an Access Provider.
@@ -382,7 +382,7 @@ In order to be able to provide the _Personal Data_ via Qiy, a _Data Provider_ ha
 * The _Service Library_ contains the _Service Catalogue_ of the _Data Provider_ defining the provided data services and the related endpoints.
 * The _Service Library_ contains _Service Descriptions_ for the provided data services.
 
-### 4.5.2 Individual
+### 4.5.3 Individual
 
 In order to be able to reuse _Personal Data_ via Qiy, an _Individual_ has met the following preconditions:
 * The _Individual_ has access to his _Personal Data_ stored by one or more _Data Providers_.
@@ -397,7 +397,7 @@ When an _Individual_ subscribes to a service, the subscription is registered by 
 * The record shows:
 	* the start datetime of the subscription.
 	* the _Provider_ of the service (the _Relying Party_).
-	* what service is provided (using the _Service Library_.
+	* what service is provided (using the _Service Library_).
 	* the related _Consent_.
 
 ## 4.7 Consent
@@ -544,20 +544,20 @@ In Qiy providing data is viewed as a service and requesting data as an operation
 * A _Operation Reference_ is created by registrating the specification of the operation _Operation Specification_ and returned (_Operation Registration_).
 * The _Qiy Application_ uses the _Data Reference_ to acquire the data (_Operation Execution_).
 
-### 5.5.1 Request data reference
+### 5.5.2 Request data reference
 The _Qiy Application_ of a _Relying Party_ can request an _Individual_ for a data reference as follows:
 * The _Qiy Application_ sends a _Operation Reference Request Message_ using the _Connection_ of the _Individual_.
 * The _Qiy Application_ receives the _Operation Reference_ in an _Operation Reference Message_.
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
 
-### 5.4.2 Create reference
+### 5.5.3 Create reference
 A _Qiy Application_ can create an _Operation Reference_ using a specification of the operation (_Operation Specification_).
 This goes as follows:
 * The _Qiy Application_ uses the _Operation Specification_ in an _Operation Registration Request_ to the _Qiy Node_ it is linked with.
 * The _Qiy Node_ creates the _Operation Reference_ and returns it.
 
-### 5.5.1 Request data
+### 5.5.4 Request data
 The _Qiy Application_ of a _Relying Party_ can obtain data using a _Data Reference_ / _Operation Reference_. 
 This goes as follows:
 * The _Qiy Application_ uses the _Operation Reference_ in a _Operation Execution Request_ to its _Qiy Node_.
@@ -565,7 +565,7 @@ This goes as follows:
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
 
-### 5.5.2 Provide data
+### 5.5.5 Provide data
 The _Data Provider_ produces the data using his _Service Endpoint_.
 This does not involve any of the _Qiy Applications_ of the _Data Provider_ nor his _Qiy Node_.
 
@@ -583,7 +583,7 @@ The services of this layer can be provided by an _Access Provider_:
 An _Access Provider_ can offer _Qiy Node_-services to _Qiy Users_, but must enable _Qiy Users_ to easily transfer the services to a different _Access Provider_.
 
 ## 6.2 Qiy Node
-A _Qiy Node_ is een _Technology Service_ as defined in _Definitions of the Qiy Scheme_.
+A _Qiy Node_ is a _Technology Service_ as defined in _Definitions of the Qiy Scheme_.
 A _Qiy Node_:
 * ... must comply with the rules of the _Qiy Scheme_.
 * ... can be hosted on any host (_Node_).
@@ -877,33 +877,33 @@ A _Transporter_ can be used for:
 * Creating _Paths_ with other _Transporters_.
 * Securely transmitting _Transport Messages_ over these _Paths_.
 
-## 8.2.1 Transport Protocol
+## 8.3 Transport Protocol
 The _Transport Protocol_ describes the interaction between _Transporters_ and the underlying layer.
 The protocol is one of the protocols of the _Qiy Open Standard_.
 
-## 8.2.2 Transporter API
+## 8.4 Transporter API
 The _Transporter API_ is the _Technology Interface_ of the _Transporter_, one of the APIs of the _Qiy Open Standard_.
 * The _Transporter API_ is intended for use by _Qiy Nodes_.
 
-## 8.2.3 Transporter Implementation
+## 8.5 Transporter Implementation
 A _Transporter Implementation_ is a software package which can be used to realize a _Transporter_.
 The _Qiy Scheme_ puts no limit on the number of _Transporter Implementations_, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
 
-## 8.2.4 Transporter Instantiation
+## 8.6 Transporter Instantiation
 A _Transporter_ can only be instantiated by an _Access Provider_.
 
-## 8.2.5 Deleting a Transporter
+## 8.7 Deleting a Transporter
 A _Transporter_ can be deleted by its _Qiy Node_.
 In this case, the _Transporter_ will be deleted including any persisted data and _Routes_.
 
-## 8.3 Path
+## 8.8 Path
 A _Path_ is a logical connection between two _Transporters_ that can be used to exchange _Transport Messages_.
 Physically seen, the _Path_ may be dynamic and stretch over several _Carriers_.
 
-### 8.3.1 Path Creation
+### 8.8.1 Path Creation
 A _Path_ can be created by a _Transporter_ with a _Transport Connect Token_.
 
-### 8.3.2 Deleting a Path
+### 8.8.2 Deleting a Path
 A _Path_ can be deleted by either of the ending _Transporters_. 
 The _Path_ will be deleted including any persisted data and/or messages.
 
@@ -927,18 +927,18 @@ The _Carrier_ comes with the following rules:
 * A _Carrier_ must comply with the rules of the _Qiy Scheme_.
 * A _Carrier_ must support the _Carrier API_.
 
-## 9.2.1 Carrier Protocol
+## 9.3 Carrier Protocol
 The _Carrier Protocol_ describes the interaction between _Carriers_.
 The protocol is part of the _Qiy Open Standard_.
 
-## 9.2.2 Carrier API
+## 9.4 Carrier API
 The _Carrier API_ is the _Technology Interface_ of the _Carrier_ and is part of the _Qiy Open Standard_.
 
-## 9.2.3 Carrier Implementation
+## 9.5 Carrier Implementation
 A _Carrier Implementation_ is a software package which can be used to realize a _Carrier_.
 The _Qiy Scheme_ puts no limit on the number of _Carrier Implementations_, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
 
-## 9.3 Carrier Node
+## 9.6 Carrier Node
 A _Carrier Node_ is a _Node_ which hosts one or more _Carriers_.
 * The _Carrier Node_ is provided by an _Access Provider_.
 * The _Access Provider_ can provide one or more _Carrier Nodes_.
