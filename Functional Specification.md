@@ -43,6 +43,11 @@ From Qiy Nodes to data exchange
 	1. [Routing](#48-routing)
 	1. [Source](#49-source)
 	1. [Session](#410-session)
+	1. [Application Examples](#411-application-examples)
+		1. ['Help, I am lost!'](#4111-'help,-i-am-lost!')
+		1. ['Let us know'](#4112-'let-us-know')
+		1. [Login](#4113-login)
+		1. [Share Medical Data](#4114-share-medical-data)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -172,7 +177,7 @@ The document is aimed at people who know that Qiy puts people back in control of
 This chapter gives an overview of this document.
 * [2.1 Data Reuse](#21-data-reuse) describes how data can be reused with Qiy.
 * [3 Architectural Description](#3-architectural-description) describes the [Architectural Layers](#architectural-layers) and addresses various concerns like privacy and security.
-* [4 The User Layer](#4-the-user-layer) describes the setup and processes of the data reuse at the user level.
+* [4 The User Layer](#4-the-user-layer) describes the setup and processes of the Data Reuse scenario at the user level.
 * [5 The Application Layer](#5-the-application-layer) describes the processes at the application level.
 * [6 The Qiy Node Layer](#6-the-qiy-node-layer) describes the same at the Qiy Node level.
 * [7 The Service Layer](#7-the-service-layer) describes the [Service Layer](#service-layer) support.
@@ -183,6 +188,7 @@ This chapter gives an overview of this document.
 ## 2.1 Data Reuse
 
 This document describes how Qiy realizes a Data Reuse scenario in which a [Data Subject](#data-subject) ([Individual](#individual)) reuses his [Personal Data](#personal-data) stored at one organization ([Data Provider](#data-provider)) and provide it to another organization ([Relying Party](#relying-party)) to consume one of its services.
+Qiy can also be used for other applications, examples of wich can be found in [4.11 Application examples](#411-application-examples)
 
 In essence, the Data Reuse goes as follows:
 * The [Individual](#individual) subscribes to a service.
@@ -425,6 +431,33 @@ The [Service Portfolio](#service-portfolio) will be updated with the outcome.
 A Service Endpoint will only process a request when issued over an active Session. This Session may be started earlier, for example when the Individual selects a Data Provider as a source, but a new Session will be started if need be.
 More often then not, this may require input from the Individual.
 The session credentials are persisted in the [Service Catalogue](#service-catalogue) of the Individual.
+
+## 4.11 Application Examples
+
+This section gives some examples of other applications of Qiy.
+
+### 4.11.1 'Help, I am lost!'
+
+The [Connect Proposal](#connect-proposal) can be used on a badge to contact the parents of a wandering child:
+![Scan the code to contact my parents](./images/example-application--help-iam-lost.PNG)
+
+### 4.11.2 'Let us know'
+
+The [Connect Proposal](#connect-proposal) can be used to react anonymously to a news item in a newspaper:
+
+![Scan the code to let us know](./images/example-application--let-us-know.PNG)
+
+### 4.11.3 Login
+
+The [Connect Proposal](#connect-proposal) can be used by websites as a user friendly login alternative:
+
+![Login](./images/example-application--login.PNG)
+
+### 4.11.4 Share Medical Data
+
+The [Connect Proposal](#connect-proposal) can be used to anonymously share medical data for a visit at a medical facility:
+
+![Share medical data](./images/example-application--share-medical-data.PNG)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
