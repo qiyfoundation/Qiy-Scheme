@@ -1042,7 +1042,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all
 As defined in the [GDPR](#gdpr).
 
 ### Consent Data Descriptor
-[Data Descriptor](#data-descriptor) in een [Service Description](#service-description) voor the beschrijving van the voor the [Service](#service) benodigde [Personal Data](#personal-data).
+[Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
 
 ### Consent Denied Message
 A [Qiy Node Message](#qiy-node-message) which can be used to communicate the denial of a [Consent](#consent).
@@ -1084,7 +1084,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to record the withdrawa
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Consents](#consent) of a [Qiy Node](#qiy-node).
 
 ### Data Description
-A description of data which is both human- and machine-readable.
+A description of data that is both human- and machine-readable.
 
 ### Data Descriptor
 An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
@@ -1256,6 +1256,9 @@ A [Business Object](#business-object): a message requesting something.
 
 ### Service
 An 'information society service' as defined in the [GDPR](#gdpr).
+
+### Service Description
+A description of a [Service](#service) that is both human- and machine-readable.
 
 ### Service Discovery
 A [Business Process](#business-proces) to find [Providers](#provider) for a given [Service](#service).
