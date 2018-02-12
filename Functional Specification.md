@@ -235,7 +235,7 @@ As described above, privacy is at the heart of Qiy and security being a 'conditi
 An _Individual_ can only control his _Personal Data_, when all concerned systems are interoperable.
 This is achieved as follows:
 * Applications exchange data and/or messages via Qiy using open standards of the _Qiy Scheme_ (_Qiy Open Standard_).
-* Applications exchange described data using _Data Descriptions_ which are available to all concerned parties (via the _Service Library_).
+* Applications exchange self-describing data using _Data Descriptions_ which are available to all concerned parties (via the _Service Library_).
 
 ## 3.5 Governance
 
@@ -935,7 +935,7 @@ The protocol is part of the _Qiy Open Standard_.
 The _Carrier API_ is the _Technology Interface_ of the _Carrier_ and is part of the _Qiy Open Standard_.
 
 ## 9.5 Carrier Implementation
-A _Carrier Implementation_ is a software package which can be used to realize a _Carrier_.
+A _Carrier Implementation_ is a software package which can be used to realize a _Carrier_
 The _Qiy Scheme_ puts no limit on the number of _Carrier Implementations_, as long as the implementation complies with the _Qiy Open Standard_ and the rules of the _Qiy Scheme_. 
 
 ## 9.6 Carrier Node
@@ -994,7 +994,7 @@ Consent Uri | A _Uri_ which is used to identify a _Consent_.
 Consent Withdrawn Event | A _Qiy Node Event_ that is generated when a _Consent_ has been withdrawn.
 Consent Withdrawn Request | A _Qiy Node Request_ that can be used to record the withdrawal of a _Consent_.
 Consents Request | A _Qiy Node Request_ that can be used to obtain a list of all the _Consents_ of a _Qiy Node_.
-Data Description | A description of data.
+Data Description | A description of data which is both human- and machine-readable.
 Data Descriptor | An _Uri_ which can be used to identify and obtain a _Data Description_.
 Data Provider | A _Business Role_ as defined in _Definitions of the Qiy Scheme_.
 Data Provider Agreement | An agreement required for _Data Providers_.
