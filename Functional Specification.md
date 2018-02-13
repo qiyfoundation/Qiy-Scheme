@@ -53,6 +53,7 @@ From Qiy Nodes to data exchange
 		1. ['The lines are open: scan now!'](#4117-the-lines-are-open-scan-now)
 		1. [Clothing Label](#4118-clothing-label)
 		1. [Formal Elections](#4119-formal-elections)
+		1. [Luggage Label](#41110-luggage-label)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -492,8 +493,13 @@ A [Connect Token](#connect-token) in its representation as a QR Code can be used
 
 A [Connect Token](#connect-token) in its representation as a QR Code can be used in formal elections to vote for a candidate:
 
-![Formal elections](./images/example-application--serious-voting.jpg)
+![Formal Elections](./images/example-application--serious-voting.jpg)
 
+### 4.11.10 Luggage Label
+
+A [Connect Token](#connect-token) in its representation as a QR Code can be used as a luggage label:
+
+![Luggage Label](./images/example-application--luggage-label.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
