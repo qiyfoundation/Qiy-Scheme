@@ -48,6 +48,7 @@ From Qiy Nodes to data exchange
 		1. ['Let us know'](#4112-'let-us-know')
 		1. [Login](#4113-login)
 		1. [Share Medical Data](#4114-share-medical-data)
+		1. ['Have you seen this man?'](#4115-'have-you-seen-this-man?')
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -458,6 +459,12 @@ The [Connect Proposal](#connect-proposal) can be used by websites as a user frie
 The [Connect Proposal](#connect-proposal) can be used to anonymously share medical data for a visit at a medical facility:
 
 ![Share medical data](./images/example-application--share-medical-data.PNG)
+
+### 4.11.5 'Have you seen this man?'
+
+The [Connect Proposal](#connect-proposal) can be used to anonymously contribute to reduce crime:
+
+![Have you seen this man?](./images/example-application--have-you-seen-this-man.PNG)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
