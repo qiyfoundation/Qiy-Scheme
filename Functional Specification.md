@@ -50,6 +50,7 @@ From Qiy Nodes to data exchange
 		1. [Share Medical Data](#4114-share-medical-data)
 		1. ['Have you seen this man?'](#4115-have-you-seen-this-man)
 		1. [At the airport](#4116-at-the-airport)
+		1. ['The lines are open: scan now!'](#4117-the-lines-are-open-scan-now!)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -472,6 +473,12 @@ The [Connect Proposal](#connect-proposal) can be used to anonymously contribute 
 Qiy can be used to route verifiable identifying data, for example to digitally use your passport to authenticate yourself at an airport:
 
 ![Digital passport](./images/example-application--digital-passport.PNG)
+
+### 4.11.7 'The lines are open: scan now!'
+
+The [Connect Proposal](#connect-proposal) can be used to vote for your favourite singer at a song contest:
+
+![The lines are open: scan now!](./images/example-application--the-lines-are-open-scan-now.PNG)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
