@@ -51,6 +51,8 @@ From Qiy Nodes to data exchange
 		1. ['Have you seen this man?'](#4115-have-you-seen-this-man)
 		1. [At the airport](#4116-at-the-airport)
 		1. ['The lines are open: scan now!'](#4117-the-lines-are-open-scan-now)
+		1. [Clothing Label](#4118-clothing-label)
+		1. [Formal Elections](#4119-formal-elections)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -479,6 +481,19 @@ Qiy can be used to route verifiable identifying data, for example to digitally u
 The [Connect Proposal](#connect-proposal) can be used to vote for your favourite singer at a song contest:
 
 ![The lines are open: scan now!](./images/example-application--the-lines-are-open-scan-now.PNG)
+
+### 4.11.8 Clothing Label
+
+A [Connect Token](#connect-token) in its representation as a QR Code can be used in a clothing label to disclose product details:
+
+![Clothing label](./images/example-application--clothing-label.jpg)
+
+### 4.11.9 Formal Elections
+
+A [Connect Token](#connect-token) in its representation as a QR Code can be used in formal elections to vote for a candidate:
+
+![Formal elections](./images/example-application--serious-voting.jpg)
+
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
