@@ -241,7 +241,7 @@ As described above, privacy is at the heart of Qiy and security being a 'conditi
 An [Individual](#individual) can only control his [Personal Data](#personal-data), when all concerned systems are interoperable.
 This is achieved as follows:
 * Applications exchange data and/or messages via Qiy using open standards of the [Qiy Scheme](#qiy-scheme) ([Qiy Open Standard](#qiy-open-standard)).
-* Applications exchange self-describing data using [Data Descriptions](#data-description) which are available to all concerned parties (via the [Service Library](#service-library)).
+* Applications exchange self-describing data and/or messages using [Data Descriptions](#data-description) which are available to all concerned parties (via the [Service Library](#service-library)).
 
 ## 3.5 Governance
 
@@ -1117,7 +1117,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to record the withdrawa
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Consents](#consent) of a [Qiy Node](#qiy-node).
 
 ### Data Description
-A description of data that is both human- and machine-readable.
+A description of data that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
 ### Data Descriptor
 An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
@@ -1291,7 +1291,7 @@ A [Business Object](#business-object): a message requesting something.
 An 'information society service' as defined in the [GDPR](#gdpr).
 
 ### Service Description
-A description of a [Service](#service) that is both human- and machine-readable.
+A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
 ### Service Discovery
 A [Business Process](#business-proces) to find [Providers](#provider) for a given [Service](#service).
