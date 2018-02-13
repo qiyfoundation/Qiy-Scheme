@@ -55,7 +55,7 @@ From Qiy Nodes to data exchange
 		1. [Formal Elections](#4119-formal-elections)
 		1. [Luggage Label](#41110-luggage-label)
 		1. [Track & Trace](#41111-track-&-trace)
-		1. [Video Doorbell](#41112-video-doorbell)
+		1. [Video Doorbell / Electronic Access](#41112-video-doorbell--electronic-access)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -509,9 +509,9 @@ Barcodes in existing Track & Trace systems can be used as [Connect Tokens](#conn
 
 ![Track & Trace](./images/example-application--track-and-trace.jpg)
 
-### 4.11.12 Video Doorbell
+### 4.11.12 Video Doorbell / Electronic Access
 
-A [Connect Token](#connect-token) in its representation as a QR Code can be used to ring a doorbell and start a video call with the reception or house owner:
+Scanning a QR Code placed next to an entrance may be used to ring a doorbell and start a video call with the reception or house owner or result in the opening of a door when the visitor was invited for a meeting at the premises:
 
 ![Video Doorbell](./images/example-application--video-doorbell.jpg)
 
