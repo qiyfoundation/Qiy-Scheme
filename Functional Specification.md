@@ -165,7 +165,7 @@ From Qiy Nodes to data exchange
 1. [Definitions](#10-definitions)
 
 # 1 Introduction
-Qiy, or rather: the [Qiy Scheme](#qiy-scheme), puts people back in control of their [Personal Data](#personal-data) while creating value for organizations that process it ([Relying Parties](#relying-partie)).
+Qiy, or rather: the [Qiy Scheme](#qiy-scheme), puts people back in control of their [Personal Data](#personal-data) while creating value for organizations that process it ([Relying Parties](#relying-party)).
 
 
 ## 1.1 Purpose
@@ -231,6 +231,8 @@ The realization of the Data Reuse as described in this document demonstrates tha
 * When an [Individual](#individual) connects with a [Qiy User](#qiy-user) that is providing a [Service](#service) via Qiy ([Provider](#provider)), the [Individual](#individual) is provided with the identity of the latter, but not the other way around.
 * The [Individual](#individual) can access his [Personal Data](#personal-data) that is kept by another [Qiy User](#qiy-user) ([Data Provider](#data-provider)) as a result of the [Access Principle](#access-principle), one of the [Qiy Trust Principles](#qiy-trust-principles).
 * The [Individual](#individual) controls what data he shares with what [Provider](#provider) ([Relying Party](#relying-party)) and under what terms using proveable [Consents](#consent).
+* The [Data Provider](#data-provider) knows what data is obtained by (or in name of) an [Individual](#individual), but he does not know whether the data is shared and if so, with what [Relying Parties](#relying-party).
+* [Relying Parties](#relying-party) however know the [Data Provider](#data-provider) of shared data and can use this information to assess the trustworthiness of the data and/or to verify the validity of the data.
 * [Qiy Users](#qiy-user) use applications that are authorized for use with Qiy ([Qiy Applications](#qiy-application)).
 * Access to Qiy, data exchange via Qiy, consent services and potentially [Qiy Nodes](#qiy-node) are provided by [Access Providers](#access-provider).
 
@@ -523,7 +525,7 @@ A [Qiy Application](#qiy-application) is an [Application Service](#application-s
 * A [Qiy Application](#qiy-application) must comply with the requirements of the [Qiy Scheme](#qiy-scheme).
 * A [Qiy User](#qiy-user) can only use Qiy with a [Qiy Application](#qiy-application).
 * A [Qiy User](#qiy-user) can use one or more [Qiy Applications](#qiy-application).
-* [Qiy Applications](#qiy-application) can use a [Qiy Node](#qiy-node) at the same time.
+* Two or more [Qiy Applications](#qiy-application) can concurrently use one and the same [Qiy Node](#qiy-node).
 
 ### 5.1.1 Application Provider
 [Qiy Applications](#qiy-application) can be provided by [Application Providers](#application-provider). An [Application Provider](#application-provider) can only do so with a valid [Qiy Licence Agreement Application Provider](#qiy-licence-agreement-application-provider).
@@ -922,7 +924,7 @@ In general, a [Service](#service) is an 'information society service' as defined
 * The [Services](#service) that an [Individual](#individual) consumes are described in his [Service Portfolio](#service-portfolio).
 
 As for Qiy, the following definitions apply:
-* Both [Relying Parties](#relying-partie) and [Data Providers](#data-provider) are [Providers](#provider).
+* Both [Relying Parties](#relying-party) and [Data Providers](#data-provider) are [Providers](#provider).
 
 ## 7.3 Service Endpoints
 A [Service Endpoint](#service-endpoint) is a [Technology Service](#technology-service) provided by a [Provider](#provider) to allow the consumption of his [Services](#service):
@@ -1338,7 +1340,7 @@ A [Literal](#literal).
 A [Business Role](#business-role) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
 
 ### Relying Party Agreement
-An agreement that is required for [Relying Parties](#relying-partie).
+An agreement that is required for [Relying Parties](#relying-party).
 
 ### Request
 A [Business Object](#business-object): a message requesting something.
