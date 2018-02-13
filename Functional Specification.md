@@ -55,6 +55,7 @@ From Qiy Nodes to data exchange
 		1. [Formal Elections](#4119-formal-elections)
 		1. [Luggage Label](#41110-luggage-label)
 		1. [Track & Trace](#41111-track-&-trace)
+		1. [Video Doorbell](#41112-video-doorbell)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -507,6 +508,12 @@ A [Connect Token](#connect-token) in its representation as a QR Code can be used
 Barcodes in existing Track & Trace systems can be used as [Connect Tokens](#connect-token) for example to track and trace the delivery of a parcel:
 
 ![Track & Trace](./images/example-application--track-and-trace.jpg)
+
+### 4.11.12 Video Doorbell
+
+A [Connect Token](#connect-token) in its representation as a QR Code can be used to ring a doorbell and start a video call with the reception or house owner:
+
+![Video Doorbell](./images/example-application--video-doorbell.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
