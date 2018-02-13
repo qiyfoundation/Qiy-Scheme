@@ -54,6 +54,7 @@ From Qiy Nodes to data exchange
 		1. [Clothing Label](#4118-clothing-label)
 		1. [Formal Elections](#4119-formal-elections)
 		1. [Luggage Label](#41110-luggage-label)
+		1. [Track & Trace](#41111-track-&-trace)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -500,6 +501,12 @@ A [Connect Token](#connect-token) in its representation as a QR Code can be used
 A [Connect Token](#connect-token) in its representation as a QR Code can be used as a luggage label:
 
 ![Luggage Label](./images/example-application--luggage-label.jpg)
+
+### 4.11.11 Track & Trace
+
+Barcodes in existing Track & Trace systems can be used as [Connect Tokens](#connect-token) for example to track and trace the delivery of a parcel:
+
+![Track & Trace](./images/example-application--track-and-trace.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
