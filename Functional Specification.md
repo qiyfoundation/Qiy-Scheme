@@ -58,6 +58,7 @@ From Qiy Nodes to data exchange
 		1. [Video Doorbell / Electronic Access](#41112-video-doorbell--electronic-access)
 		1. [Trustable Reviews](#41113-trustable-reviews)
 		1. [Tickets](#41114-tickets)
+		1. [News Source](#41115-news-source)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -530,6 +531,12 @@ Qiy allows solutions in which consumers can trust posted reviews on products or 
 Qiy allows ticketing-solutions were consumers can easily join an event and where ticket distribution is more under control of the organizer:
 
 ![Ticket](./images/example-application--ticket.jpg)
+
+### 4.11.15 News Source
+
+Qiy allows solutions were consumers can verify the source of news articles:
+
+![Ticket](./images/example-application--trustable-news-source.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
