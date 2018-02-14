@@ -57,6 +57,7 @@ From Qiy Nodes to data exchange
 		1. [Track & Trace](#41111-track-&-trace)
 		1. [Video Doorbell / Electronic Access](#41112-video-doorbell--electronic-access)
 		1. [Trustable Reviews](#41113-trustable-reviews)
+		1. [Tickets](#41114-tickets)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -523,6 +524,12 @@ Scanning a QR Code placed next to an entrance may be used to ring a doorbell and
 Qiy allows solutions in which consumers can trust posted reviews on products or services:
 
 ![Trustable Reviews](./images/example-application--trustable-reviews.jpg)
+
+### 4.11.14 Tickets
+
+Qiy allows ticketing-solutions were consumers can easily join an event and where ticket distribution is more under control of the organizer:
+
+![Ticket](./images/example-application--ticket.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
