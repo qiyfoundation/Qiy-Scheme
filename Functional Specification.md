@@ -59,6 +59,7 @@ From Qiy Nodes to data exchange
 		1. [Trustable Reviews](#41113-trustable-reviews)
 		1. [Tickets](#41114-tickets)
 		1. [News Source](#41115-news-source)
+		1. [Product Data](#41116-product-data)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -537,6 +538,12 @@ Qiy allows ticketing-solutions were consumers can easily join an event and where
 Qiy allows solutions were consumers can verify the source of news articles:
 
 ![Ticket](./images/example-application--trustable-news-source.jpg)
+
+### 4.11.16 Product Data
+
+Qiy allows consumers to share product data and/or experiences with manufacturers:
+
+![Product Data](./images/example-application--product-data.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
