@@ -56,6 +56,7 @@ From Qiy Nodes to data exchange
 		1. [Luggage Label](#41110-luggage-label)
 		1. [Track & Trace](#41111-track-&-trace)
 		1. [Video Doorbell / Electronic Access](#41112-video-doorbell--electronic-access)
+		1. [Trustable Reviews](#41113-trustable-reviews)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
 		1. [Application Provider](#511-application-provider)
@@ -516,6 +517,12 @@ Barcodes in existing Track & Trace systems can be used as [Connect Tokens](#conn
 Scanning a QR Code placed next to an entrance may be used to ring a doorbell and start a video call with the reception or house owner or result in the opening of a door when the visitor was invited for a meeting at the premises:
 
 ![Video Doorbell](./images/example-application--video-doorbell.jpg)
+
+### 4.11.13 Trustable Reviews
+
+Qiy allows solutions in which consumers can trust posted reviews on products or services:
+
+![Trustable Reviews](./images/example-application--trustable-reviews.jpg)
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](#application-layer) and how it supports the processes of the Data Reuse scenario.
