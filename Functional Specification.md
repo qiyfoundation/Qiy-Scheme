@@ -177,11 +177,6 @@ From Qiy Nodes to data exchange
 			1. [Connect using a token in a website address](#11124-connect-using-a-token-in-a-website-address)
 			1. [Connect using a QR Code](#11125-connect-using-a-qr-code)
 			1. [Present proposal containing a QR Code](#11126-present-proposal-containing-a-qr-code)
-		1. [Authenticate](#1113-authenticate)
-			1. [Data Provider: Authenticate](#11131-data-provider-authenticate)
-		1. [Consent](#1114-consent)
-		1. [Service discovery](#1115-service-discovery)
-		1. [Request data](#1116-request-data)
 	1. [Application Layer](#112-application-layer)
 		1. [Connect](#1121-connect)
 			1. [Proposer: Connect](#11211-proposer-connect)
@@ -190,14 +185,9 @@ From Qiy Nodes to data exchange
 		1. [Consent](#1122-consent)
 			1. [Relying Party: Request consent](#11221-relying-party-request-consent)
 			1. [Individual: Consider consent request](#11222-individual-consider-consent-request)
-		1. [Service Discovery ](#1123-service-discovery-)
-			1. [Individual: Select source](#11231-individual-select-source)
-			1. [Qiy Node: Generate and distribute references](#11232-qiy-node-generate-and-distribute-references)
-			1. [Generate operation reference](#11233-generate-operation-reference)
-			1. [Relying Party: Persist reference](#11234-relying-party-persist-reference)
-		1. [Request data](#1124-request-data)
-			1. [Relying Party: Request data](#11241-relying-party-request-data)
-			1. [Data Provider: Provide data](#11242-data-provider-provide-data)
+		1. [Request data](#1123-request-data)
+			1. [Relying Party: Request data](#11231-relying-party-request-data)
+			1. [Data Provider: Provide data](#11232-data-provider-provide-data)
 
 # 1 Introduction
 Qiy, or rather: the [Qiy Scheme](#qiy-scheme), puts people back in control of their [Personal Data](#personal-data) while creating value for organizations that process it ([Relying Parties](#relying-party)).
@@ -241,6 +231,7 @@ In essence, the Data Reuse goes as follows:
 * The [Individual](#individual) provides the data to the [Relying Party](#relying-party).
 
 ![Qiy Data Reuse](./images/qiy-data-reuse.png)
+(Diagram source code: [11.1.1 Qiy Data Reuse](#1111-qiy-data-reuse))
 
 ### 2.1.1 Privacy concern
 
@@ -330,6 +321,7 @@ As stated before, when a [Connection](#connection) is established, the identity 
 This information may be used to reuse a formerly created [Connection](#connection) and delete the new [Connection](#connection).
 
 ![Users Connect](./images/users-connect.png)
+(Diagram source code: [11.1.2.1 Users Connect](#11121-users-connect))
 
 ### 4.4.1 Generate token
 A [Proposer](#proposer) can create a token using a [Qiy Application](#qiy-application) and the following details:
@@ -341,29 +333,34 @@ In most cases, the expiration and budget are set by the application.
 The Expiration and the Budget can be changed afterwards, for example to re-activate an expired token.
 
 ![Generate token](./images/generate-token.png)
+(Diagram source code: [11.1.2.2 Generate token](#11122-generate-token))
 
  
 ### 4.4.2 Media
 [Qiy Users](#qiy-user) can use different media to connect as illustrated in this diagram:
 
 ![Media](./images/Connect.png)
+(Diagram source code: [11.1.2.3 Media](#11123-media))
 
  
 #### 4.4.2.1 The web
 [Qiy Users](#qiy-user) can connect by transfering a token as a query parameter in a website address:
  
 ![Connect using a token in a website address](./images/connect-using-a-token-in-a-website-address.png)
+(Diagram source code: [11.1.2.4 Connect using a token in a website address](#11124-connect-using-a-token-in-a-website-address))
 
  
 #### 4.4.2.2 Print
 [Qiy Users](#qiy-user) can convert the token to a QR Code and use various 'Print'-media to connect:
 
 ![Present proposal containing a QR Code](./images/present-proposal-containing-a-qr-code.png)
+(Diagram source code: [11.1.2.6 Present proposal containing a QR Code](#11126-present-proposal-containing-a-qr-code))
 
 
 The QR Code can be used as follows to create the [Connection](#connection):
  
 ![Connect using a QR Code](./images/connect-using-a-qr-code.png)
+(Diagram source code: [11.1.2.5 Connect using a QR Code](#11125-connect-using-a-qr-code))
  
 
 ### 4.4.3 Examples
@@ -641,6 +638,7 @@ For a [Qiy Application](#qiy-application) of a [Proposer](#proposer), a Connecti
 * The [Proposer](#proposer) detects this by use of polling (using the [Connections Request](#connections-request)) or events (using the [Connection Created Event](#connection-created-event)).
  
 ![Proposer: Connect](./images/proposer--connect.png)
+(Diagram source code: [11.2.1.1 Proposer: Connect](#11211-proposer-connect))
 
 ### 5.2.3 Generate Application Connect Token
 The main part of an [Application Connect Token](#application-connect-token) is the [Connect Token](#connect-token). The [Qiy Application](#qiy-application) can create this both online and offline:
@@ -648,6 +646,7 @@ The main part of an [Application Connect Token](#application-connect-token) is t
 * Online using a [Connect Token Creation Request](#connect-token-creation-request).
 
 ![Generate Application Connect Token](./images/generate-application-connect-token.png)
+(Diagram source code: [11.2.1.2 Generate Application Connect Token](#11212-generate-application-connect-token))
 
 ### 5.2.4 Accepter: Connect
 At the [Accepter](#accepter)-side, a [Qiy Application](#qiy-application) creates a [Connection](#connection) with a [Connect Proposal](#connect-proposal) or [Connect Token](#connect-token) as follows:
@@ -656,6 +655,7 @@ At the [Accepter](#accepter)-side, a [Qiy Application](#qiy-application) creates
 * The [Qiy Node](#qiy-node) creates the [Connection](#connection) and returns the id of the [Connection](#connection) ([Connection Uri](#connection-uri)).
 
 ![Accepter: Connect](./images/accepter--connect.png)
+(Diagram source code: [11.2.1.3 Accepter: Connect](#11213-accepter-connect))
 
 ## 5.3 Consent
 
@@ -666,6 +666,7 @@ A [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can r
 * The [Qiy Application](#qiy-application) receives a message with the outcome, either a [Consent Granted Message](#consent-granted-message) or a [Consent Denied Message](#consent-denied-message).
 
 ![Relying Party: Request consent](./images/relying-party--request-consent.png)
+(Diagram source code: [11.2.2.1 Relying Party: Request consent](#11221-relying-party-request-consent))
 
 ### 5.3.2 Individual: Consider consent request
 A [Qiy Application](#qiy-application) of an [Individual](#individual) processes a [Consent Request](#consent-request) as follows:
@@ -673,7 +674,8 @@ A [Qiy Application](#qiy-application) of an [Individual](#individual) processes 
 * The [Qiy Application](#qiy-application) extracts the [Consent Request](#consent-request) and presents it to the [Individual](#individual).
 * Depending on the choice of the [Individual](#individual), the [Qiy Application](#qiy-application) returns a [Consent Granted Message](#consent-granted-message) or a [Consent Denied Message](#consent-denied-message) using the [Connection](#connection) with the [Relying Party](#relying-party).
 
-![Individual--consider-consent-request](./images/individual--consider-consent-request.png)
+![Individual: Consider consent request](./images/individual--consider-consent-request.png)
+(Diagram source code: [11.2.2.2 Individual: Consider consent request](#11222-individual-consider-consent-request))
 
 ## 5.4 Service Discovery
 A [Qiy Application](#qiy-application) can present an [Individual](#individual) a list of suitable [Data Providers](#data-provider) (or in general [Providers](#provider)) that can produce some requested data (or services) as follows:
@@ -701,6 +703,7 @@ The [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can
 * The [Qiy Application](#qiy-application) receives the [Operation Reference](#operation-reference) in an [Operation Reference Message](#operation-reference-message).
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
+(Diagram source code: [11.2.3.1 Relying Party: Request data](#11231-relying-party-request-data))
 
 ### 5.5.3 Create reference
 A [Qiy Application](#qiy-application) can create an [Operation Reference](#operation-reference) using a specification of the operation ([Operation Specification](#operation-specification)).
@@ -715,12 +718,14 @@ This goes as follows:
 * The [Qiy Node](#qiy-node) returns the requested data.
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
+(Diagram source code: [11.2.3.1 Relying Party: Request data](#11231-relying-party-request-data))
 
 ### 5.5.5 Provide data
 The [Data Provider](#data-provider) produces the data using his [Service Endpoint](#service-endpoint).
 This does not involve any of the [Qiy Applications](#qiy-application) of the [Data Provider](#data-provider) nor his [Qiy Node](#qiy-node).
 
 ![Data Provider: Provide data](./images/data-provider--provide-data.png)
+(Diagram source code: [11.2.3.2 Data Provider: Provide data](#11232-data-provider-provide-data))
 
 # 6 The Qiy Node Layer
 This chapter describes the [Qiy Node Layer](#qiy-node-layer) and how it supports the upper layers.
@@ -1602,53 +1607,6 @@ else ...
 end
 ```
 
-### 11.1.3 Authenticate
-#### 11.1.3.1 Data Provider: Authenticate
-```
-title Data Provider: Authenticate
-
-Data Provider->Individual: Identify & authenticate
-alt pass
-Data Provider->Data Provider: Persist connection id 
-else fail
-end
-```
-### 11.1.4 Consent
-```
-title Consent
-
-Relying Party->Individual: Request consent
-Individual->Individual: Consider
-alt 
-Individual->Relying Party: Grant
-else
-Individual->Relying Party: Deny
-end
-```
-
-### 11.1.5 Service discovery
-```
-title Service discovery
-Individual->Qiy: Request service catalogue
-Individual->+Individual: Select source
-opt For other then self-declared data
-    Individual->Data Provider: Connect
-end
-```
-
-### 11.1.6 Request data
-```
-title Request data
-
-Individual->Data Provider: Request reference
-Data Provider->Qiy: Register request
-Qiy-->Data Provider: Reference
-Data Provider-->Individual: Reference
-Individual-->Relying Party: Reference
-Relying Party-->Qiy: Reference
-Qiy->Data Provider: Execute registered request
-Qiy-->Relying Party: Data
-```
 ## 11.2 Application Layer
 ### 11.2.1 Connect
 #### 11.2.1.1 Proposer: Connect
@@ -1721,61 +1679,8 @@ else Deny
 end
 ```
 
-### 11.2.3 Service Discovery 
-#### 11.2.3.1 Individual: Select source
-```
-title Individual: Select source
-
-Qiy Application->Qiy Node: Request source candidates
-Qiy Node->Qiy Node: Search for source candidates
-Qiy Node->Qiy Application: Return candidate(s)
-
-opt For not connected candidate(s)
-    Qiy Application->Qiy Application: Propose candidate
-    opt Connect with Data Provider
-    end
-end
-
-Qiy Application->Qiy Application: Propose candidate(s)
-opt Select candidate(s)
-Qiy Application->Qiy Node: Set source
-Qiy Node->Qiy Node: Generate and distribute reference(s)
-```
-
-#### 11.2.3.2 Qiy Node: Generate and distribute references
-```
-title Qiy Node: Generate and distribute references
-
-Individual Qiy Node->Data Provider Qiy Node: Request reference(s)
-Data Provider Qiy Node->Data Provider Qiy Node: Generate reference(s)
-Data Provider Qiy Node-->Individual Qiy Node: Return reference(s)
-Individual Qiy Node-->Relying Party Qiy Node: Provide reference(s)
-```
-
-#### 11.2.3.3 Generate operation reference
-```
-title Generate operation reference
-
-Qiy Application->Qiy Application: Specify operation
-Qiy Application->Qiy Node: Register operation specification
-Qiy Node->Qiy Node: Generate operation reference
-Qiy Node->Qiy Application: Operation reference
-```
-
-#### 11.2.3.4 Relying Party: Persist reference
-```
-title Relying Party: Persist reference
-
-alt Events
-Qiy Node-->Qiy Application: Operation Reference Received Event
-else Polling
-Qiy Application->Qiy Node: Request references
-end
-Qiy Application->Qiy Application: Persist reference
-```
-
-### 11.2.4 Request data
-#### 11.2.4.1 Relying Party: Request data
+### 11.2.3 Request data
+#### 11.2.3.1 Relying Party: Request data
 ```
 title Relying Party: Request data
 
@@ -1785,7 +1690,7 @@ Qiy Node->Qiy Node: Look-up and use request
 Qiy Node-->Qiy Application: data
 ```
 
-#### 11.2.4.2 Data Provider: Provide data
+#### 11.2.3.2 Data Provider: Provide data
 ```
 title Data Provider: Provide data
 
