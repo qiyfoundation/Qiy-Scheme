@@ -227,6 +227,7 @@ This chapter gives an overview of this document.
 * [8 The Transport Layer](#8-the-transport-layer) describes the [Transport Layer](#transport-layer) support.
 * [9 The Carrier Layer](#9-the-carrier-layer) describes the [Carrier Layer](#carrier-layer) support.
 * [10 Definitions](#10-definitions) contains the definitions used in this document.
+* [11 Diagram sources](#11-diagram-sources) contains the source code that has been used to generate the diagrams in this document.
 
 ## 2.1 Data Reuse
 
