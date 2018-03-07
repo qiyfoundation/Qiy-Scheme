@@ -167,6 +167,37 @@ From Qiy Nodes to data exchange
 	1. [Carrier Implementation](#95-carrier-implementation)
 	1. [Carrier Node](#96-carrier-node)
 1. [Definitions](#10-definitions)
+1. [Diagram](#diagram)
+	1. [User Layer](#111-user-layer)
+		1. [Qiy Data Reuse](#1111-qiy-data-reuse)
+		1. [Connect](#1112-connect)
+			1. [Users Connect](#11121-users-connect)
+			1. [Generate token](#11122-generate-token)
+			1. [Media](#11123-media)
+			1. [Connect using a token in a website address](#11124-connect-using-a-token-in-a-website-address)
+			1. [Connect using a QR Code](#11125-connect-using-a-qr-code)
+			1. [Present proposal containing a QR Code](#11126-present-proposal-containing-a-qr-code)
+		1. [Authenticate](#1113-authenticate)
+			1. [Data Provider: Authenticate](#11131-data-provider-authenticate)
+		1. [Consent](#1114-consent)
+		1. [Service discovery](#1115-service-discovery)
+		1. [Request data](#1116-request-data)
+	1. [Application Layer](#112-application-layer)
+		1. [Connect](#1121-connect)
+			1. [Proposer: Connect](#11211-proposer-connect)
+			1. [Generate Application Connect Token](#11212-generate-application-connect-token)
+			1. [Accepter: Connect](#11213-accepter-connect)
+		1. [Consent](#1122-consent)
+			1. [Relying Party: Request consent](#11221-relying-party-request-consent)
+			1. [Individual: Consider consent request](#11222-individual-consider-consent-request)
+		1. [Service Discovery ](#1123-service-discovery-)
+			1. [Individual: Select source](#11231-individual-select-source)
+			1. [Qiy Node: Generate and distribute references](#11232-qiy-node-generate-and-distribute-references)
+			1. [Generate operation reference](#11233-generate-operation-reference)
+			1. [Relying Party: Persist reference](#11234-relying-party-persist-reference)
+		1. [Request data](#1124-request-data)
+			1. [Relying Party: Request data](#11241-relying-party-request-data)
+			1. [Data Provider: Provide data](#11242-data-provider-provide-data)
 
 # 1 Introduction
 Qiy, or rather: the [Qiy Scheme](#qiy-scheme), puts people back in control of their [Personal Data](#personal-data) while creating value for organizations that process it ([Relying Parties](#relying-party)).
@@ -1453,5 +1484,312 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 
 ### Work Stream Functionality & Technology
 One of the work streams of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation.org/qiy-scheme/workstreams/
+
+
+# Diagram sources
+
+## 11.1 User Layer
+### 11.1.1 Qiy Data Reuse
+```
+title Qiy Data Reuse
+
+Individual->Relying Party: Subscribe
+loop Route data
+Relying Party->Individual: Request data
+opt No consent
+    Individual->Relying Party: Grant consent 
+end
+opt No source selected
+    Individual->Individual: Select source
+end
+Individual->Data Provider: Request data
+opt No session
+    Data Provider->Individual: Start session
+end
+Data Provider-->Individual: Data
+Individual -->Relying Party: Data
+end
+```
+### 11.1.2 Connect
+#### 11.1.2.1 Users Connect
+```
+title Users Connect
+
+Proposer->Proposer: Generate token
+Proposer->Proposer: Compose proposal
+Proposer->Accepter: Propose
+Accepter->Accepter: Consider proposal
+
+alt Accept proposal
+Accepter->Accepter: Extract token
+Accepter->Proposer: Connect
+else Ignore proposal
+end
+```
+
+#### 11.1.2.2 Generate token
+```
+title Generate token
+
+Proposer->Proposer: Set name, expiration & budget
+Proposer->+Qiy Application: Request token
+Qiy Application->Qiy Application: Generate token
+Qiy Application-->Proposer: token
+```
+
+#### 11.1.2.3 Media
+```
+title Connect
+
+Proposer->Accepter: ... using ...
+alt ... the web
+else ... print
+else ... apps
+else ... NFC
+else ... sound
+else ... images
+else ...
+end
+```
+#### 11.1.2.4 Connect using a token in a website address
+```
+title Connect using a token in a website address
+
+Proposer->Proposer: Generate token
+Proposer->Proposer: Set query parameter in website address
+Proposer->Accepter: Visit website
+Accepter->Accepter: Consider to connect
+alt Accept
+Accepter->Accepter: Extract token
+Accepter->Proposer: Connect
+else Ignore
+end
+```
+#### 11.1.2.5 Connect using a QR Code
+```
+title Connect using a QR Code
+
+Proposer->Proposer: Generate token
+Proposer->Proposer: Convert to QR Code
+Proposer->Proposer: Compose proposal
+Proposer->Accepter: Present proposal
+Accepter->Accepter: Consider proposal
+
+alt Accept proposal
+Accepter->Accepter: Scan QR Code
+Accepter->Accepter: Extract token
+Accepter->Accepter: Verify token
+Accepter->Proposer: Connect
+else Ignore proposal
+end
+```
+#### 11.1.2.6 Present proposal containing a QR Code
+```
+title Present proposal containing a QR Code
+
+Proposer->Accepter: ... using ...
+
+alt ... a poster
+else ... e-mail
+else ... a letter
+else ... a newspaper
+else ... a website
+else ...
+end
+```
+
+### 11.1.3 Authenticate
+#### 11.1.3.1 Data Provider: Authenticate
+```
+title Data Provider: Authenticate
+
+Data Provider->Individual: Identify & authenticate
+alt pass
+Data Provider->Data Provider: Persist connection id 
+else fail
+end
+```
+### 11.1.4 Consent
+```
+title Consent
+
+Relying Party->Individual: Request consent
+Individual->Individual: Consider
+alt 
+Individual->Relying Party: Grant
+else
+Individual->Relying Party: Deny
+end
+```
+
+### 11.1.5 Service discovery
+```
+title Service discovery
+Individual->Qiy: Request service catalogue
+Individual->+Individual: Select source
+opt For other then self-declared data
+    Individual->Data Provider: Connect
+end
+```
+
+### 11.1.6 Request data
+```
+title Request data
+
+Individual->Data Provider: Request reference
+Data Provider->Qiy: Register request
+Qiy-->Data Provider: Reference
+Data Provider-->Individual: Reference
+Individual-->Relying Party: Reference
+Relying Party-->Qiy: Reference
+Qiy->Data Provider: Execute registered request
+Qiy-->Relying Party: Data
+```
+## 11.2 Application Layer
+### 11.2.1 Connect
+#### 11.2.1.1 Proposer: Connect
+```
+title Proposer: Connect
+
+note over Qiy Application,Qiy Node: Generate token
+Qiy Application->Qiy Application: Create connect proposal
+alt event
+Qiy Node-->Qiy Application: Connection Created Event
+else polling
+Qiy Application->Qiy Node: Get connections
+end
+```
+#### 11.2.1.2 Generate Application Connect Token
+```
+title Generate Application Connect Token
+
+alt online
+Qiy Application->Qiy Node: Get Connect Token
+Qiy Node->Qiy Node: Create Connect Token
+Qiy Node-->Qiy Application: Connect Token
+else offline
+Qiy Application->Qiy Application: Create Connect Token
+note right of Qiy Application
+    When online again:
+end note
+Qiy Application->Qiy Node: Register Connect Token
+Qiy Node->Qiy Node: Register Connect Token
+end
+Qiy Application->Qiy Application: Create Application Connect Token
+```
+
+#### 11.2.1.3 Accepter: Connect
+```
+title Accepter: Connect
+
+Qiy Application->Qiy Application: Extract Connect Token from connect proposal
+Qiy Application->Qiy Node: Connect
+Qiy Node-->Qiy Application: Connection Uri, [Proposer Id](#proposer-id)```
+
+### 11.2.2 Consent
+#### 11.2.2.1 Relying Party: Request consent
+```
+title Relying Party: Request consent
+
+Qiy Application->Qiy Node: Request consent
+alt Grant
+    Qiy Node->Qiy Application: Consent Granted Event
+else Deny
+    Qiy Node->Qiy Application: Consent Denied Event
+end
+```
+#### 11.2.2.2 Individual: Consider consent request
+```
+title Individual: Consider consent request
+
+alt Use events
+Qiy Node-->Qiy Application: Consent Request Message
+else Use polling
+Qiy Application->Qiy Node: Request consents
+end
+Qiy Application->Qiy Application: Present Consent Request
+alt Grant
+    Qiy Application->Qiy Node: Consent Granted Request
+    Qiy Node->Qiy Node: Initiate service discovery
+else Deny
+    Qiy Application->Qiy Node: Consent Denied Request
+end
+```
+
+### 11.2.3 Service Discovery 
+#### 11.2.3.1 Individual: Select source
+```
+title Individual: Select source
+
+Qiy Application->Qiy Node: Request source candidates
+Qiy Node->Qiy Node: Search for source candidates
+Qiy Node->Qiy Application: Return candidate(s)
+
+opt For not connected candidate(s)
+    Qiy Application->Qiy Application: Propose candidate
+    opt Connect with Data Provider
+    end
+end
+
+Qiy Application->Qiy Application: Propose candidate(s)
+opt Select candidate(s)
+Qiy Application->Qiy Node: Set source
+Qiy Node->Qiy Node: Generate and distribute reference(s)
+```
+
+#### 11.2.3.2 Qiy Node: Generate and distribute references
+```
+title Qiy Node: Generate and distribute references
+
+Individual Qiy Node->Data Provider Qiy Node: Request reference(s)
+Data Provider Qiy Node->Data Provider Qiy Node: Generate reference(s)
+Data Provider Qiy Node-->Individual Qiy Node: Return reference(s)
+Individual Qiy Node-->Relying Party Qiy Node: Provide reference(s)
+```
+
+#### 11.2.3.3 Generate operation reference
+```
+title Generate operation reference
+
+Qiy Application->Qiy Application: Specify operation
+Qiy Application->Qiy Node: Register operation specification
+Qiy Node->Qiy Node: Generate operation reference
+Qiy Node->Qiy Application: Operation reference
+```
+
+#### 11.2.3.4 Relying Party: Persist reference
+```
+title Relying Party: Persist reference
+
+alt Events
+Qiy Node-->Qiy Application: Operation Reference Received Event
+else Polling
+Qiy Application->Qiy Node: Request references
+end
+Qiy Application->Qiy Application: Persist reference
+```
+
+### 11.2.4 Request data
+#### 11.2.4.1 Relying Party: Request data
+```
+title Relying Party: Request data
+
+Qiy Application->Qiy Application: Look-up reference
+Qiy Application->+Qiy Node: Request data
+Qiy Node->Qiy Node: Look-up and use request
+Qiy Node-->Qiy Application: data
+```
+
+#### 11.2.4.2 Data Provider: Provide data
+```
+title Data Provider: Provide data
+
+note over Qiy Application,Qiy Node: 
+The data is fetched and returned by 
+the Service Endpoint 
+of the Data Provider.
+```
+
+
 
 
