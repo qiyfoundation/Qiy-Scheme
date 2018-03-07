@@ -801,6 +801,7 @@ The [Connection Uri](#connection-uri) is the [Uri](#uri) which identifies a [Con
 EXAMPLE: [Connection Uris](#connection-uri) of a [Connection](#connection) between [Qiy Node](#qiy-node) 1 and [Qiy Node](#qiy-node) 2:
 
 [Qiy Node](#qiy-node) | [Connection Uri](#connection-uri)
+---- | --------------
 Qiy Node 1	| http://127.0.0.1:8087/user/connections/user/usernodeB/93590b55-9194-4cf4-944f-2cbceab7dbcd
 Qiy Node 2	| http://127.0.0.1:8087/user/connections/user/usernodeA/f96bc541-e98b-449e-bfc5-48ec928e0dc9
 
