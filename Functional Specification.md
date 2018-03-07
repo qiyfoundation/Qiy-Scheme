@@ -1489,7 +1489,7 @@ One of the work streams of the [Qiy Foundation](#qiy-foundation), see https://ww
 
 # 11 Diagram sources
 
-The diagrams in this document are generated using the online sequence diagram generator of https://www.websequencediagrams.com .
+The diagrams in this document are generated using the online sequence diagram generator of https://www.websequencediagrams.com.
 This chapter contains the source code of these diagrams.
 
 ## 11.1 User Layer
