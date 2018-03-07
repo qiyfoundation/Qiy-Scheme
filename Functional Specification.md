@@ -167,7 +167,7 @@ From Qiy Nodes to data exchange
 	1. [Carrier Implementation](#95-carrier-implementation)
 	1. [Carrier Node](#96-carrier-node)
 1. [Definitions](#10-definitions)
-1. [Diagram](#diagram)
+1. [Diagram sources](#11-diagram-sources)
 	1. [User Layer](#111-user-layer)
 		1. [Qiy Data Reuse](#1111-qiy-data-reuse)
 		1. [Connect](#1112-connect)
@@ -1486,7 +1486,7 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 One of the work streams of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation.org/qiy-scheme/workstreams/
 
 
-# Diagram sources
+# 11 Diagram sources
 
 ## 11.1 User Layer
 ### 11.1.1 Qiy Data Reuse
@@ -1684,7 +1684,8 @@ title Accepter: Connect
 
 Qiy Application->Qiy Application: Extract Connect Token from connect proposal
 Qiy Application->Qiy Node: Connect
-Qiy Node-->Qiy Application: Connection Uri, [Proposer Id](#proposer-id)```
+Qiy Node-->Qiy Application: Connection Uri, [Proposer Id](#proposer-id)
+```
 
 ### 11.2.2 Consent
 #### 11.2.2.1 Relying Party: Request consent
