@@ -231,6 +231,7 @@ In essence, the Data Reuse goes as follows:
 * The [Individual](#individual) provides the data to the [Relying Party](#relying-party).
 
 ![Qiy Data Reuse](./images/qiy-data-reuse.png)
+
 (Diagram source code: [11.1.1 Qiy Data Reuse](#1111-qiy-data-reuse))
 
 ### 2.1.1 Privacy concern
@@ -321,6 +322,7 @@ As stated before, when a [Connection](#connection) is established, the identity 
 This information may be used to reuse a formerly created [Connection](#connection) and delete the new [Connection](#connection).
 
 ![Users Connect](./images/users-connect.png)
+
 (Diagram source code: [11.1.2.1 Users Connect](#11121-users-connect))
 
 ### 4.4.1 Generate token
@@ -333,6 +335,7 @@ In most cases, the expiration and budget are set by the application.
 The Expiration and the Budget can be changed afterwards, for example to re-activate an expired token.
 
 ![Generate token](./images/generate-token.png)
+
 (Diagram source code: [11.1.2.2 Generate token](#11122-generate-token))
 
  
@@ -340,6 +343,7 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 [Qiy Users](#qiy-user) can use different media to connect as illustrated in this diagram:
 
 ![Media](./images/Connect.png)
+
 (Diagram source code: [11.1.2.3 Media](#11123-media))
 
  
@@ -347,6 +351,7 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 [Qiy Users](#qiy-user) can connect by transfering a token as a query parameter in a website address:
  
 ![Connect using a token in a website address](./images/connect-using-a-token-in-a-website-address.png)
+
 (Diagram source code: [11.1.2.4 Connect using a token in a website address](#11124-connect-using-a-token-in-a-website-address))
 
  
@@ -354,12 +359,14 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 [Qiy Users](#qiy-user) can convert the token to a QR Code and use various 'Print'-media to connect:
 
 ![Present proposal containing a QR Code](./images/present-proposal-containing-a-qr-code.png)
+
 (Diagram source code: [11.1.2.6 Present proposal containing a QR Code](#11126-present-proposal-containing-a-qr-code))
 
 
 The QR Code can be used as follows to create the [Connection](#connection):
  
 ![Connect using a QR Code](./images/connect-using-a-qr-code.png)
+
 (Diagram source code: [11.1.2.5 Connect using a QR Code](#11125-connect-using-a-qr-code))
  
 
@@ -638,6 +645,7 @@ For a [Qiy Application](#qiy-application) of a [Proposer](#proposer), a Connecti
 * The [Proposer](#proposer) detects this by use of polling (using the [Connections Request](#connections-request)) or events (using the [Connection Created Event](#connection-created-event)).
  
 ![Proposer: Connect](./images/proposer--connect.png)
+
 (Diagram source code: [11.2.1.1 Proposer: Connect](#11211-proposer-connect))
 
 ### 5.2.3 Generate Application Connect Token
@@ -646,6 +654,7 @@ The main part of an [Application Connect Token](#application-connect-token) is t
 * Online using a [Connect Token Creation Request](#connect-token-creation-request).
 
 ![Generate Application Connect Token](./images/generate-application-connect-token.png)
+
 (Diagram source code: [11.2.1.2 Generate Application Connect Token](#11212-generate-application-connect-token))
 
 ### 5.2.4 Accepter: Connect
@@ -655,6 +664,7 @@ At the [Accepter](#accepter)-side, a [Qiy Application](#qiy-application) creates
 * The [Qiy Node](#qiy-node) creates the [Connection](#connection) and returns the id of the [Connection](#connection) ([Connection Uri](#connection-uri)).
 
 ![Accepter: Connect](./images/accepter--connect.png)
+
 (Diagram source code: [11.2.1.3 Accepter: Connect](#11213-accepter-connect))
 
 ## 5.3 Consent
@@ -666,6 +676,7 @@ A [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can r
 * The [Qiy Application](#qiy-application) receives a message with the outcome, either a [Consent Granted Message](#consent-granted-message) or a [Consent Denied Message](#consent-denied-message).
 
 ![Relying Party: Request consent](./images/relying-party--request-consent.png)
+
 (Diagram source code: [11.2.2.1 Relying Party: Request consent](#11221-relying-party-request-consent))
 
 ### 5.3.2 Individual: Consider consent request
@@ -675,6 +686,7 @@ A [Qiy Application](#qiy-application) of an [Individual](#individual) processes 
 * Depending on the choice of the [Individual](#individual), the [Qiy Application](#qiy-application) returns a [Consent Granted Message](#consent-granted-message) or a [Consent Denied Message](#consent-denied-message) using the [Connection](#connection) with the [Relying Party](#relying-party).
 
 ![Individual: Consider consent request](./images/individual--consider-consent-request.png)
+
 (Diagram source code: [11.2.2.2 Individual: Consider consent request](#11222-individual-consider-consent-request))
 
 ## 5.4 Service Discovery
@@ -703,6 +715,7 @@ The [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can
 * The [Qiy Application](#qiy-application) receives the [Operation Reference](#operation-reference) in an [Operation Reference Message](#operation-reference-message).
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
+
 (Diagram source code: [11.2.3.1 Relying Party: Request data](#11231-relying-party-request-data))
 
 ### 5.5.3 Create reference
@@ -718,6 +731,7 @@ This goes as follows:
 * The [Qiy Node](#qiy-node) returns the requested data.
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
+
 (Diagram source code: [11.2.3.1 Relying Party: Request data](#11231-relying-party-request-data))
 
 ### 5.5.5 Provide data
@@ -725,6 +739,7 @@ The [Data Provider](#data-provider) produces the data using his [Service Endpoin
 This does not involve any of the [Qiy Applications](#qiy-application) of the [Data Provider](#data-provider) nor his [Qiy Node](#qiy-node).
 
 ![Data Provider: Provide data](./images/data-provider--provide-data.png)
+
 (Diagram source code: [11.2.3.2 Data Provider: Provide data](#11232-data-provider-provide-data))
 
 # 6 The Qiy Node Layer
