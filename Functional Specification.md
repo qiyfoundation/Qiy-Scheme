@@ -705,9 +705,9 @@ This goes as follows:
 
 ### 5.5.1 Service by Reference
 In Qiy providing data is viewed as a service and requesting data as an operation of this service, so the 'data by reference'-pattern is implemented as using a [Service by Reference](#service-by-reference)-pattern:
-* A [Qiy Application](#qiy-application) requests an [Operation Reference](#operation-reference) ([Operation Reference Request](#operation-reference-request)).
-* A [Operation Reference](#operation-reference) is created by registrating the specification of the operation [Operation Specification](#operation-specification) and returned ([Operation Registration](#operation-registration)).
-* The [Qiy Application](#qiy-application) uses the [Data Reference](#data-reference) to acquire the data ([Operation Execution](#operation-execution)).
+* A [Qiy Application](#qiy-application) requests an [Operation Reference](#operation-reference) using an [Operation Reference Request Message](#operation-reference-request-message).
+* An [Operation Reference](#operation-reference) is created by registrating the [Operation Specification](#operation-specification) using an [Operation Registration Request](#operation-registration-request) and returned using an [Operation Reference Message](#operation-reference-message).
+* The [Qiy Application](#qiy-application) can call for the execution of an operation by submitting the [Operation Reference](#operation-reference) in an [Operation Execution Request](#operation-execution-request).
 
 ### 5.5.2 Request data reference
 The [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can request an [Individual](#individual) for a data reference as follows:
@@ -1431,6 +1431,9 @@ An 'information society service' as defined in the [GDPR](#gdpr).
 
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
+
+### Service Descriptor
+An [Uri](#uri) which can be used to identify and obtain a [Service Description](#service-description).
 
 ### Service Discovery
 A [Business Process](#business-proces) to find [Providers](#provider) for a given [Service](#service).
