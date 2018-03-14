@@ -112,19 +112,20 @@ From Qiy Nodes to data exchange
 		1. [Connect Token Update Request](#663-connect-token-update-request)
 		1. [Connection Create Request](#664-connection-create-request)
 		1. [Connection Delete Request](#665-connection-delete-request)
-		1. [Connections Request](#666-connections-request)
-		1. [Consent Denied Request](#667-consent-denied-request)
-		1. [Consent Granted Request](#668-consent-granted-request)
-		1. [Consent Request](#669-consent-request)
-		1. [Consent Withdrawn Request](#6610-consent-withdrawn-request)
-		1. [Consents Request](#6611-consents-request)
-		1. [Message Post Request](#6612-message-post-request)
-		1. [Messages Request](#6613-messages-request)
-		1. [Operation Execution Request](#6614-operation-execution-request)
-		1. [Operation Registration Request](#6615-operation-registration-request)
-		1. [Operation References Request](#6616-operation-references-request)
-		1. [Source Candidates Request](#6617-source-candidates-request)
-		1. [Source Registration Request](#6618-source-registration-request)
+		1. [Connection Details Request](#666-connection-details-request)
+		1. [Connections Request](#667-connections-request)
+		1. [Consent Denied Request](#668-consent-denied-request)
+		1. [Consent Granted Request](#669-consent-granted-request)
+		1. [Consent Request](#6610-consent-request)
+		1. [Consent Withdrawn Request](#6611-consent-withdrawn-request)
+		1. [Consents Request](#6612-consents-request)
+		1. [Message Post Request](#6613-message-post-request)
+		1. [Messages Request](#6614-messages-request)
+		1. [Operation Execution Request](#6615-operation-execution-request)
+		1. [Operation Registration Request](#6616-operation-registration-request)
+		1. [Operation References Request](#6617-operation-references-request)
+		1. [Source Candidates Request](#6618-source-candidates-request)
+		1. [Source Registration Request](#6619-source-registration-request)
 	1. [Qiy Node Message](#67-qiy-node-message)
 	1. [Qiy Node Messages](#68-qiy-node-messages)
 		1. [Consent Denied Message](#681-consent-denied-message)
@@ -899,43 +900,46 @@ The [Connection Create Request](#connection-create-request) is a [Qiy Node Reque
 ### 6.6.5 Connection Delete Request
 The [Connection Delete Request](#connection-delete-request) is a [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection](#connection).
 
-### 6.6.6 Connections Request
+### 6.6.6 Connection Details Request
+The [Connection Details Request](#connection-details-request) is a [Qiy Node Request](#qiy-node-request) that can be used to acquire the details of a [Connection](#connection).
+
+### 6.6.7 Connections Request
 The [Connections Request](#connections-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Connections](#connection) of a [Qiy Node](#qiy-node).
 
-### 6.6.7 Consent Denied Request
+### 6.6.8 Consent Denied Request
 The [Consent Denied Request](#consent-denied-request) is a [Qiy Node Request](#qiy-node-request) that can be used to record the denial of a [Consent](#consent).
 
-### 6.6.8 Consent Granted Request
+### 6.6.9 Consent Granted Request
 The [Consent Granted Request](#consent-granted-request) is a [Qiy Node Request](#qiy-node-request) that can be used to record the granting of a [Consent](#consent).
 
-### 6.6.9 Consent Request
+### 6.6.10 Consent Request
 The [Consent Request](#consent-request) is a [Qiy Node Request](#qiy-node-request) which can be used to request for a [Consent](#consent).
 
-### 6.6.10 Consent Withdrawn Request
+### 6.6.11 Consent Withdrawn Request
 The [Consent Withdrawn Request](#consent-withdrawn-request) is a [Qiy Node Request](#qiy-node-request) that can be used to record the withdrawal of a [Consent](#consent).
 
-### 6.6.11 Consents Request
+### 6.6.12 Consents Request
 The [Consents Request](#consents-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Consents](#consent) of a [Qiy Node](#qiy-node).
 
-### 6.6.12 Message Post Request
+### 6.6.13 Message Post Request
 The [Message Post Request](#message-post-request) is a [Qiy Node Request](#qiy-node-request) that can be used to post a [Qiy Node Message](#qiy-node-message).
 
-### 6.6.13 Messages Request
+### 6.6.14 Messages Request
 The [Messages Request](#messages-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Messages](#message) of a [Qiy Node](#qiy-node).
 
-### 6.6.14 Operation Execution Request
+### 6.6.15 Operation Execution Request
 The [Operation Execution Request](#operation-execution-request) is a [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by reference using an [Operation Reference](#operation-reference).
 
-### 6.6.15 Operation Registration Request
+### 6.6.16 Operation Registration Request
 The [Operation Registration Request](#operation-registration-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
 
-### 6.6.16 Operation References Request
+### 6.6.17 Operation References Request
 The [Operation References Request](#operation-references-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Operation References](#operation-reference) of a [Qiy Node](#qiy-node).
 
-### 6.6.17 Source Candidates Request
+### 6.6.18 Source Candidates Request
 The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](#qiy-node-request) to obtain candidate [Providers](#provider) for a [Service](#service).
 
-### 6.6.18 Source Registration Request
+### 6.6.19 Source Registration Request
 The [Source Registration Request](#source-registration-request) is a [Qiy Node Request](#qiy-node-request) to register a [Provider](#provider) as source for a [Service](#service).
  
 ## 6.7 Qiy Node Message
@@ -1203,6 +1207,9 @@ A [Qiy Node Event](#qiy-node-event) that is generated when a [Connection](#conne
 
 ### Connection Delete Request
 A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection](#connection).
+
+### Connection Details Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain the details of a [Connection](#connection).
 
 ### Connection Uri
 [Uri](#uri) voor the id van een [Connection](#connection).
