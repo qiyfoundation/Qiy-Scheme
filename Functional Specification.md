@@ -481,7 +481,7 @@ The [Service Portfolio](#service-portfolio) will be updated with the outcome.
 
 A Service Endpoint will only process a request when issued over an active Session. This Session may be started earlier, for example when the Individual selects a Data Provider as a source, but a new Session will be started if need be.
 More often then not, this may require input from the Individual.
-The session credentials are persisted in the [Service Catalogue](#service-catalogue) of the Individual.
+The session credentials are persisted in the [Service Portfolio](#service-portfolio) of the [Individual](#individual).
 
 ## 4.11 Application Examples
 
