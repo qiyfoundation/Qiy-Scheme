@@ -1429,6 +1429,9 @@ A [Business Object](#business-object): a message requesting something.
 ### Service
 An 'information society service' as defined in the [GDPR](#gdpr).
 
+### Service Catalogue
+A [Business Object](#business-object) for information about all the [Services](#service) that a [Service Provider](#service-provider) can provide.
+
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
@@ -1446,6 +1449,9 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 
 ### Service Library
 A [Technology Service](#technology-service) that supports the [Service](#service) processes of the [Individuals](#individual) and the [Providers](#provider).
+
+### Service Portfolio
+A [Business Object](#business-object) for information about all the [Services](#service) that an [Individual](#individual) is or has been consuming.
 
 ### Service Provider
 A [Business Role](#business-role): an [Access Provider](#access-provider) which provides business-to-business services as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
