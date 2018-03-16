@@ -107,8 +107,8 @@ From Qiy Nodes to data exchange
 			1. [Privacy concern](#6431-privacy-concern)
 	1. [Qiy Node Request](#65-qiy-node-request)
 	1. [Qiy Node Requests](#66-qiy-node-requests)
-		1. [Connect Token Creation Request](#661-connect-token-creation-request)
-		1. [Connect Token Registration Request](#662-connect-token-registration-request)
+		1. [Connect Token Create Request](#661-connect-token-create-request)
+		1. [Connect Token Register Request](#662-connect-token-register-request)
 		1. [Connect Token Update Request](#663-connect-token-update-request)
 		1. [Connection Create Request](#664-connection-create-request)
 		1. [Connection Delete Request](#665-connection-delete-request)
@@ -121,11 +121,11 @@ From Qiy Nodes to data exchange
 		1. [Consents Request](#6612-consents-request)
 		1. [Message Post Request](#6613-message-post-request)
 		1. [Messages Request](#6614-messages-request)
-		1. [Operation Execution Request](#6615-operation-execution-request)
-		1. [Operation Registration Request](#6616-operation-registration-request)
+		1. [Operation Execute Request](#6615-operation-execute-request)
+		1. [Operation Register Request](#6616-operation-register-request)
 		1. [Operation References Request](#6617-operation-references-request)
 		1. [Source Candidates Request](#6618-source-candidates-request)
-		1. [Source Registration Request](#6619-source-registration-request)
+		1. [Source Register Request](#6619-source-register-request)
 	1. [Qiy Node Message](#67-qiy-node-message)
 	1. [Qiy Node Messages](#68-qiy-node-messages)
 		1. [Consent Denied Message](#681-consent-denied-message)
@@ -651,8 +651,8 @@ For a [Qiy Application](#qiy-application) of a [Proposer](#proposer), a Connecti
 
 ### 5.2.3 Generate Application Connect Token
 The main part of an [Application Connect Token](#application-connect-token) is the [Connect Token](#connect-token). The [Qiy Application](#qiy-application) can create this both online and offline:
-* Offline by creating a [Connect Token](#connect-token) and registering it later using a [Connect Token Registration Request](#connect-token-registration-request).
-* Online using a [Connect Token Creation Request](#connect-token-creation-request).
+* Offline by creating a [Connect Token](#connect-token) and registering it later using a [Connect Token Register Request](#connect-token-register-request).
+* Online using a [Connect Token Create Request](#connect-token-create-request).
 
 ![Generate Application Connect Token](./images/generate-application-connect-token.png)
 
@@ -695,7 +695,7 @@ A [Qiy Application](#qiy-application) can present an [Individual](#individual) a
 * The [Qiy Application](#qiy-application) asks the [Qiy Node](#qiy-node) of the [Individual](#individual) for a list of suitable [Data Providers](#data-provider) with a [Source Candidates Request](#source-candidates-request).
 * The [Qiy Node](#qiy-node) consults the [Service Library](#service-library) and returns the outcome to the [Qiy Application](#qiy-application).
 * The [Qiy Application](#qiy-application) presents the result to the [Individual](#individual).
-* The [Qiy Application](#qiy-application) registers the selected sources with a [Source Registration Request](#source-registration-request).
+* The [Qiy Application](#qiy-application) registers the selected sources with a [Source Register Request](#source-register-request).
 
 ## 5.5 Data by Reference
 [Qiy Applications](#qiy-application) exchange [data by reference](#data-by-reference) rather then by value.
@@ -707,8 +707,8 @@ This goes as follows:
 ### 5.5.1 Service by Reference
 In Qiy providing data is viewed as a service and requesting data as an operation of this service, so the 'data by reference'-pattern is implemented as using a [Service by Reference](#service-by-reference)-pattern:
 * A [Qiy Application](#qiy-application) requests an [Operation Reference](#operation-reference) using an [Operation Reference Request Message](#operation-reference-request-message).
-* An [Operation Reference](#operation-reference) is created by registrating the [Operation Specification](#operation-specification) using an [Operation Registration Request](#operation-registration-request) and returned using an [Operation Reference Message](#operation-reference-message).
-* The [Qiy Application](#qiy-application) can call for the execution of an operation by submitting the [Operation Reference](#operation-reference) in an [Operation Execution Request](#operation-execution-request).
+* An [Operation Reference](#operation-reference) is created by registrating the [Operation Specification](#operation-specification) using an [Operation Register Request](#operation-register-request) and returned using an [Operation Reference Message](#operation-reference-message).
+* The [Qiy Application](#qiy-application) can call for the execution of an operation by submitting the [Operation Reference](#operation-reference) in an [Operation Execute Request](#operation-execute-request).
 
 ### 5.5.2 Request data reference
 The [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can request an [Individual](#individual) for a data reference as follows:
@@ -722,13 +722,13 @@ The [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can
 ### 5.5.3 Create reference
 A [Qiy Application](#qiy-application) can create an [Operation Reference](#operation-reference) using a specification of the operation ([Operation Specification](#operation-specification)).
 This goes as follows:
-* The [Qiy Application](#qiy-application) uses the [Operation Specification](#operation-specification) in an [Operation Registration Request](#operation-registration-request) to the [Qiy Node](#qiy-node) it is linked with.
+* The [Qiy Application](#qiy-application) uses the [Operation Specification](#operation-specification) in an [Operation Register Request](#operation-register-request) to the [Qiy Node](#qiy-node) it is linked with.
 * The [Qiy Node](#qiy-node) creates the [Operation Reference](#operation-reference) and returns it.
 
 ### 5.5.4 Request data
 The [Qiy Application](#qiy-application) of a [Relying Party](#relying-party) can obtain data using a [Data Reference](#data-reference) / [Operation Reference](#operation-reference). 
 This goes as follows:
-* The [Qiy Application](#qiy-application) uses the [Operation Reference](#operation-reference) in a [Operation Execution Request](#operation-execution-request) to its [Qiy Node](#qiy-node).
+* The [Qiy Application](#qiy-application) uses the [Operation Reference](#operation-reference) in a [Operation Execute Request](#operation-execute-request) to its [Qiy Node](#qiy-node).
 * The [Qiy Node](#qiy-node) returns the requested data.
 
 ![Relying Party: Request data](./images/relying-party--request-data.png)
@@ -829,8 +829,8 @@ By itself, it cannot be used for any other purpose, for example gain access to a
 
 #### 6.3.2.2 Creating a Connect Token
 A [Connect Token](#connect-token) can be created both offline and online:
-* A [Connect Token](#connect-token) can be obtained from the [Qiy Node](#qiy-node) using a [Connect Token Creation Request](#connect-token-creation-request) ([Online Connect Token](#online-connect-token)).
-* A [Connect Token](#connect-token) can be created by a [Qiy Application](#qiy-application) and registered later using a [Connect Token Registration Request](#connect-token-registration-request) ([Offline Connect Token](#offline-connect-token)).
+* A [Connect Token](#connect-token) can be obtained from the [Qiy Node](#qiy-node) using a [Connect Token Create Request](#connect-token-create-request) ([Online Connect Token](#online-connect-token)).
+* A [Connect Token](#connect-token) can be created by a [Qiy Application](#qiy-application) and registered later using a [Connect Token Register Request](#connect-token-register-request) ([Offline Connect Token](#offline-connect-token)).
 
 The [Offline Connect Token](#offline-connect-token) allows initiating a [Connection](#connection) (creating a [Connect Token](#connect-token)) even when Qiy is temporarily not available.
 However, care must be taken that the created token is unique, especially so for the created [Transport Connect Token](#transport-connect-token).
@@ -846,7 +846,7 @@ Two [Qiy Nodes](#qiy-node) connect as follows:
 * The [Qiy Node](#qiy-node) either 1) provides the [Transport Connect Token](#transport-connect-token) to the [Qiy Application](#qiy-application) or 2) registers the [Transport Connect Token](#transport-connect-token) at its [Transporter](#transporter).
 * The [Transport Connect Token](#transport-connect-token) is made available (partly out-of-bands, for example in a [Connect Proposal](#connect-proposal)) to the [Qiy Node](#qiy-node) of the [Accepter](#accepter).
 * The [Qiy Node](#qiy-node) of the [Accepter](#accepter) uses its [Transporter](#transporter) to create a [Path](#path) using the [Transport Connect Token](#transport-connect-token).
-Each accepted [Path Creation Request](#path-creation-request) leads to a new [Path](#path), irrespective of the number of existing [Paths](#path) between the two [Qiy Nodes](#qiy-node).
+Each accepted [Path Create Request](#path-create-request) leads to a new [Path](#path), irrespective of the number of existing [Paths](#path) between the two [Qiy Nodes](#qiy-node).
 
 ### 6.3.4 Deleting a Connection
 A [Connection](#connection) can be deleted with a [Connection Delete Request](#connection-delete-request).
@@ -885,11 +885,11 @@ A [Qiy Node Request](#qiy-node-request) is a [Http Request](#http-request) for a
 This section gives an overview of the [Qiy Node Requests](#qiy-node-request).
 Details of [Qiy Node Requests](#qiy-node-request) can be found in the [Qiy Node API](#qiy-node-api).
 
-### 6.6.1 Connect Token Creation Request
-The [Connect Token Creation Request](#connect-token-creation-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
+### 6.6.1 Connect Token Create Request
+The [Connect Token Create Request](#connect-token-create-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
 
-### 6.6.2 Connect Token Registration Request
-The [Connect Token Registration Request](#connect-token-registration-request) is a [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
+### 6.6.2 Connect Token Register Request
+The [Connect Token Register Request](#connect-token-register-request) is a [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
 
 ### 6.6.3 Connect Token Update Request
 The [Connect Token Update Request](#connect-token-update-request) is a [Qiy Node Request](#qiy-node-request) that can be used to update a [Connect Token](#connect-token).
@@ -927,11 +927,11 @@ The [Message Post Request](#message-post-request) is a [Qiy Node Request](#qiy-n
 ### 6.6.14 Messages Request
 The [Messages Request](#messages-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Messages](#message) of a [Qiy Node](#qiy-node).
 
-### 6.6.15 Operation Execution Request
-The [Operation Execution Request](#operation-execution-request) is a [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by reference using an [Operation Reference](#operation-reference).
+### 6.6.15 Operation Execute Request
+The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by reference using an [Operation Reference](#operation-reference).
 
-### 6.6.16 Operation Registration Request
-The [Operation Registration Request](#operation-registration-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
+### 6.6.16 Operation Register Request
+The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
 
 ### 6.6.17 Operation References Request
 The [Operation References Request](#operation-references-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Operation References](#operation-reference) of a [Qiy Node](#qiy-node).
@@ -939,8 +939,8 @@ The [Operation References Request](#operation-references-request) is a [Qiy Node
 ### 6.6.18 Source Candidates Request
 The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](#qiy-node-request) to obtain candidate [Providers](#provider) for a [Service](#service).
 
-### 6.6.19 Source Registration Request
-The [Source Registration Request](#source-registration-request) is a [Qiy Node Request](#qiy-node-request) to register a [Provider](#provider) as source for a [Service](#service).
+### 6.6.19 Source Register Request
+The [Source Register Request](#source-register-request) is a [Qiy Node Request](#qiy-node-request) to register a [Provider](#provider) as source for a [Service](#service).
  
 ## 6.7 Qiy Node Message
 A [Qiy Node Message](#qiy-node-message) is a [Message](#message) that is exchanged using a [Connection](#connection).
@@ -1187,10 +1187,10 @@ A [Business Object](#business-object) for a proposal to connect via Qiy.
 ### Connect Token
 A [Literal](#literal) used to create a [Connection](#connection).
 
-### Connect Token Creation Request
+### Connect Token Create Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
 
-### Connect Token Registration Request
+### Connect Token Register Request
 A [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
 
 ### Connect Token Update Request
@@ -1331,7 +1331,7 @@ A [Qiy Node](#qiy-node) id.
 ### Operation
 A 'sub-service' which can be used to consume a [Service](#service).
 
-### Operation Execution Request
+### Operation Execute Request
 A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by reference using an [Operation Reference](#operation-reference).
 
 ### Operation Reference
@@ -1349,7 +1349,7 @@ A [Qiy Node Message](#qiy-node-message) that can be used to request for [Operati
 ### Operation References Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Operation References](#operation-reference) of a [Qiy Node](#qiy-node).
 
-### Operation Registration Request
+### Operation Register Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
 
 ### Operation Specification
@@ -1475,7 +1475,7 @@ A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node](#qiy-nod
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Providers](#provider) for a [Service](#service).
 
-### Source Registration Request
+### Source Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Provider](#provider) as source for a [Service](#service).
 
 ### Technology Event
