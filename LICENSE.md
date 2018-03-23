@@ -1,0 +1,1 @@
+All documents in this Repository are licensed by contributors under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
