@@ -471,7 +471,7 @@ When all related conditions are met, a request for data from a [Relying Party](D
 
 When a [Relying Party](Definitions.md#relying-party) has requested for data, the [Service Portfolio](Definitions.md#service-portfolio) is used to look up the data source: the [Provider](Definitions.md#provider) or [Providers](Definitions.md#provider) that will provide the data ([Service Source](Definitions.md#service-source)).
 This can be the [Individual](Definitions.md#individual) himself, for self-declared data, but it can also be one or more [Data Providers](Definitions.md#data-provider).
-The source of the data may have been defined before at the time of subscription, but if that it is not the case, the [Individual](Definitions.md#individual) will be asked to make a selection from a list of suitable [Data Providers](Definitions.md#data-provider) ([Servive Discovery](Definitions.md#servive-discovery)).
+The source of the data may have been defined before at the time of subscription, but if that it is not the case, the [Individual](Definitions.md#individual) will be asked to make a selection from a list of suitable [Data Providers](Definitions.md#data-provider) ([Service Discovery](Definitions.md#service-discovery)).
 The list will be generated using the [Service Catalogues](Definitions.md#service-catalogue) from the [Service Library](Definitions.md#service-library).
 The [Service Portfolio](Definitions.md#service-portfolio) will be updated with the outcome.
 
@@ -591,7 +591,7 @@ A [Qiy Application](Definitions.md#qiy-application) is an [Application Service](
 * Two or more [Qiy Applications](Definitions.md#qiy-application) can concurrently use one and the same [Qiy Node](Definitions.md#qiy-node).
 
 ### 5.1.1 Application Provider
-[Qiy Applications](Definitions.md#qiy-application) can be provided by [Application Providers](Definitions.md#application-provider). An [Application Provider](Definitions.md#application-provider) can only do so with a valid [Qiy Licence Agreement Application Provider](Definitions.md#qiy-licence-agreement-application-provider).
+[Qiy Applications](Definitions.md#qiy-application) can be provided by [Application Providers](Definitions.md#application-provider). An [Application Provider](Definitions.md#application-provider) can only do so with a valid [License Agreement Application Provider](Definitions.md#license-agreement-application-provider).
 
 ### 5.1.2 Qiy Application Protocol
 The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describes the interactions of the [Qiy Applications](Definitions.md#qiy-application) with eachother and the underlying layers.
@@ -602,7 +602,7 @@ The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describe
 * ... can be linked to a [Qiy Node](Definitions.md#qiy-node) of a [Qiy User](Definitions.md#qiy-user).
 * ... create [Connections](Definitions.md#connection).
 * ... create a 'backup' of a [Qiy Node](Definitions.md#qiy-node).
-* ... exchange [Connection Tokens](Definitions.md#connection-token) out-of-band.
+* ... exchange [Connect Tokens](Definitions.md#connect-token) out-of-band.
 * ... exchange messages.
 * ... exchange [Personal Data](Definitions.md#personal-data).
 
@@ -637,7 +637,7 @@ For more information, please refer to [5.2.3 'Generate Application Connect Token
 
 ### 5.2.2 Proposer: Connect
 For a [Qiy Application](Definitions.md#qiy-application) of a [Proposer](Definitions.md#proposer), a Connection is established as follows:
-* The [Qiy Application](Definitions.md#qiy-application) generates an [Application Conenct Token](Definitions.md#application-conenct-token), see [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
+* The [Qiy Application](Definitions.md#qiy-application) generates an [Application Connect Token](Definitions.md#application-connect-token), see [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
 * The [Qiy Application](Definitions.md#qiy-application) composes a [Connect Proposal](Definitions.md#connect-proposal) for the [Proposer](Definitions.md#proposer).
 * The [Proposer](Definitions.md#proposer) presents it out-of-band to the [Accepter](Definitions.md#accepter).
 * When the [Accepter](Definitions.md#accepter) wants to connect, he uses the [Connect Proposal](Definitions.md#connect-proposal) to create a connection with his [Qiy Application](Definitions.md#qiy-application), see [5.2.4 'Accepter: Connect'](#524-accepter-connect).

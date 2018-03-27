@@ -83,6 +83,9 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 ### Carrier Node
 A [Node](#node) which hosts one or more [Carriers](#carrier).
 
+### Carrier Protocol
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
+
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
 
@@ -114,7 +117,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain the details of a [Connection](#connection).
 
 ### Connection Uri
-[Uri](#uri) voor the id van een [Connection](#connection).
+A [Uri](#uri) which is used to identify a [Connection](#connection).
 
 ### Connections Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Connections](#connection) of a [Qiy Node](#qiy-node).
@@ -278,6 +281,12 @@ As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archima
 ### Node Id
 A [Qiy Node](#qiy-node) id.
 
+### Offline Connect Token
+A [Connect Token](#connect-token) created by a [Qiy Application](#qiy-application), for example when its [Qiy Node](#qiy-node) was temporarily not accessible.
+
+### Online Connect Token
+A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
+
 ### Operation
 A 'sub-service' which can be used to consume a [Service](#service).
 
@@ -308,6 +317,9 @@ A specification of a [Http Request](#http-request) for the execution of an [Oper
 ### Path
 A connection between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
 
+### Path Create Request
+A request of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
+
 ### Personal Data
 Data relating to an Individual. This can be the name, address, telephone number, age, health data, account balance, but also personal preferences, etcetera. Data are stored at Data Providers servers or at the site of the Individual (e.g. in a data vault) and can be shared with Relying Parties by Individuals.
 
@@ -326,7 +338,7 @@ Synonymous with Identifier
 An [Application Service](#application-service) or software that is authorized for use with Qiy.
 
 ### Qiy Application Protocol
-A protocol for the interactions between [Qiy Applications](#qiy-application) and the underlying layers.
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
 
 ### Qiy Foundation
 A foundation dedicated to putting people back in control of their personal data while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
@@ -355,7 +367,7 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 A [Message](#message) that is exchanged using a [Connection](#connection).
 
 ### Qiy Node Protocol
-A protocol describing the interaction between [Qiy Nodes](#qiy-node) and the underlying layers.
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node).
 
 ### Qiy Node Request
 A [Http Request](#http-request) for a [Qiy Node](#qiy-node).
@@ -426,6 +438,9 @@ A [Business Process](#business-proces) to find [Providers](#provider) for a give
 ### Service Endpoint
 A [Technology Service](#technology-service) provided by a [Provider](#provider) to allow the consumption of his [Services](#service).
 
+### Service Endpoint API
+[Technology Interface](#technology-interface) of a [Service Endpoint](#service-endpoint).
+
 ### Service Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
@@ -483,7 +498,7 @@ A message that is exchanged over a [Path](#path) between two [Transporters](#tra
 A [Data Description](#data-description) that describes the contents, format and encryption (if any) of a [Transport Message](#transport-message).
 
 ### Transport Protocol
-A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interaction between [Transporters](#transporter) and the lower layers.
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Transporters](#transporter).
 
 ### Transporter
 A [Technology Service](#technology-service) that provides transport services.
@@ -499,6 +514,9 @@ An Entity's confident reliance on the outcome of an interaction.
 
 ### Trust Relation
 A link between multiple Entities, which is characterized by a mutual reliance on the outcome of an interaction.
+
+### Uuid
+See https://en.wikipedia.org/wiki/Universally_unique_identifier
 
 ### Uri
 See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
