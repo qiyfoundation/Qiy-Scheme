@@ -54,6 +54,114 @@ The general conditions on which basis the individual may agree to exchange perso
 ### Binding Principles for Relying Parties and Data Providers
 The rules for Entities (Relying Parties and Data Providers) to follow in order to be allowed to participate in the Qiy Scheme.
 
+One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
+
+### Business Actor
+As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+
+### Business Object
+As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+
+### Business Process
+As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+
+### Business Role
+As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+
+### Carrier
+A [Technology Service](#technology-service) that provides the services of the [Carrier Layer](#carrier-layer). 
+
+### Carrier API
+[Technology Interface](#technology-interface) of the [Carrier](#carrier).
+
+### Carrier Implementation
+A software package which can be used to realize a [Carrier](#carrier).
+
+### Carrier Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Carrier Node
+A [Node](#node) which hosts one or more [Carriers](#carrier).
+
+### Connect Proposal
+A [Business Object](#business-object) for a proposal to connect via Qiy.
+
+### Connect Token
+A [Literal](#literal) used to create a [Connection](#connection).
+
+### Connect Token Create Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
+
+### Connect Token Register Request
+A [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
+
+### Connect Token Update Request
+A [Qiy Node Request](#qiy-node-request) that can be used to update a [Connect Token](#connect-token).
+
+### Connection
+A connection between two [Qiy Nodes](#qiy-node).
+
+### Connection Create Request
+A [Qiy Node Request](#qiy-node-request) that can be used to create a [Connection](#connection) with a [Connect Token](#connect-token).
+
+### Connection Created Event
+A [Qiy Node Event](#qiy-node-event) that is generated when a [Connection](#connection) has been created.
+
+### Connection Delete Request
+A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection](#connection).
+
+### Connection Details Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain the details of a [Connection](#connection).
+
+### Connection Uri
+[Uri](#uri) voor the id van een [Connection](#connection).
+
+### Connections Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Connections](#connection) of a [Qiy Node](#qiy-node).
+
+### Consent
+As defined in the [GDPR](#gdpr).
+
+### Consent Data Descriptor
+[Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
+
+### Consent Denied Message
+A [Qiy Node Message](#qiy-node-message) which can be used to communicate the denial of a [Consent](#consent).
+
+### Consent Denied Request
+A [Qiy Node Request](#qiy-node-request) that can be used to record the denial of a [Consent](#consent).
+
+### Consent Granted Message
+A [Qiy Node Message](#qiy-node-message) which can be used to communicate the granting of a [Consent](#consent).
+
+### Consent Granted Request
+A [Qiy Node Request](#qiy-node-request) that can be used to record the granting of a [Consent](#consent).
+
+### Consent Request
+A [Qiy Node Request](#qiy-node-request) which can be used to request for a [Consent](#consent).
+
+### Consent Request Message
+A [Qiy Node Message](#qiy-node-message) which can be used to request for a [Consent](#consent).
+
+### Consent Service
+A [Technology Service](#technology-service) used to maintain [Consents](#consent) and their status.
+
+### Consent Service Description
+A [Service Description](#service-description) of the [Service](#service) for which a [Consent](#consent) applies.
+
+### Consent Service Descriptor
+A [Service Descriptor](#service-descriptor) of a [Consent Service Description](#consent-service-description).
+
+### Consent Uri
+A [Uri](#uri) which is used to identify a [Consent](#consent).
+
+### Consent Withdrawn Event
+A [Qiy Node Event](#qiy-node-event) that is generated when a [Consent](#consent) has been withdrawn.
+
+### Consent Withdrawn Request
+A [Qiy Node Request](#qiy-node-request) that can be used to record the withdrawal of a [Consent](#consent).
+
+### Consents Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Consents](#consent) of a [Qiy Node](#qiy-node).
 
 ### Core Identifier
@@ -196,9 +304,14 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation
 
 ### Operation Specification
 A specification of a [Http Request](#http-request) for the execution of an [Operation](#operation).
+
+### Path
+A connection between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
+
 ### Personal Data
 Data relating to an Individual. This can be the name, address, telephone number, age, health data, account balance, but also personal preferences, etcetera. Data are stored at Data Providers servers or at the site of the Individual (e.g. in a data vault) and can be shared with Relying Parties by Individuals.
 
+As defined in the [GDPR](#gdpr).
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
