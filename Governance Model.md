@@ -1,7 +1,7 @@
 # Governance Model 'Qiy Scheme V1.0'
 
 ## Abstract
-The [Qiy Scheme] defines a framework for [Individuals], companies and governmental organisations to safely control and exchange personal information. This document describes the way the [Qiy Scheme] is organised, managed and governed.
+The [Qiy Scheme](Definitions.md#qiy-scheme) defines a framework for [Individuals](Definitions.md#individual), companies and governmental organisations to safely control and exchange personal information. This document describes the way the [Qiy Scheme](Definitions.md#qiy-scheme) is organised, managed and governed.
 
 # Content
 
@@ -34,99 +34,99 @@ The [Qiy Scheme] defines a framework for [Individuals], companies and government
 		1. [Abuse and Fraud Coordination](#422-abuse-and-fraud-coordination)
 
 # 1 Qiy Scheme
-This document describes the way the [Qiy Scheme] is intended to be organised, managed and governed. In a nutshell, the [Qiy Scheme] will be managed through an independent (international) organisation, called the [Scheme Authority]. At the national or regional level, a so-called [Regional Authority] will be responsible for the implementation of the Scheme in the relevant geographical market. At all times the independence of the [Scheme Authority] and its geographical 'branches' shall be warranted. Also, at all times the Scheme in its implementation shall be open and non-discriminatory. To ensure this, appropriate audits and sanctions will be in place in each of the geographical regions and at the international level. 
+This document describes the way the [Qiy Scheme](Definitions.md#qiy-scheme) is intended to be organised, managed and governed. In a nutshell, the [Qiy Scheme](Definitions.md#qiy-scheme) will be managed through an independent (international) organisation, called the [Scheme Authority](Definitions.md#scheme-authority). At the national or regional level, a so-called [Regional Authority](Definitions.md#regional-authority) will be responsible for the implementation of the Scheme in the relevant geographical market. At all times the independence of the [Scheme Authority](Definitions.md#scheme-authority) and its geographical 'branches' shall be warranted. Also, at all times the Scheme in its implementation shall be open and non-discriminatory. To ensure this, appropriate audits and sanctions will be in place in each of the geographical regions and at the international level. 
 
 ## 1.1 Qiy Foundation
 
 ### Vision
-The vision of [Qiy Foundation] is that the position of man in the digital world should be equal to the position of man in the physical world. Human values and acting in accordance with the human dimensions are important principles.
+The vision of [Qiy Foundation](Definitions.md#qiy-foundation) is that the position of man in the digital world should be equal to the position of man in the physical world. Human values and acting in accordance with the human dimensions are important principles.
 
 ### Mission
-The [Qiy Foundation]'s mission is to give people control over their [Data] and facilitate them to do smart things with it. This applies to [Data] they produce themselves and [Data] that is available from third parties.
+The [Qiy Foundation](Definitions.md#qiy-foundation)'s mission is to give people control over their [Data](Definitions.md#data) and facilitate them to do smart things with it. This applies to [Data](Definitions.md#data) they produce themselves and [Data](Definitions.md#data) that is available from third parties.
 
-The vision and mission have led to the [Qiy Scheme], which is administered by the [Qiy Foundation]. [Qiy Trust Framework] is the open standard infrastructure based on the rules and regulations of the [Qiy Scheme]. [Issuers] and [Service Providers] create and offer the [Qiy Trust Framework] and auxiliary [Services] to the market under a license of the [Qiy Foundation]. At the core of the [Qiy Trust Framework] are privacy, [Data] security and the [Individual] in control of his or her [Personal Data].
+The vision and mission have led to the [Qiy Scheme](Definitions.md#qiy-scheme), which is administered by the [Qiy Foundation](Definitions.md#qiy-foundation). [Qiy Trust Framework](Definitions.md#qiy-trust-framework) is the open standard infrastructure based on the rules and regulations of the [Qiy Scheme](Definitions.md#qiy-scheme). [Issuers](Definitions.md#issuer) and [Service Providers](Definitions.md#service-provider) create and offer the [Qiy Trust Framework](Definitions.md#qiy-trust-framework) and auxiliary [Services](Definitions.md#service) to the market under a license of the [Qiy Foundation](Definitions.md#qiy-foundation). At the core of the [Qiy Trust Framework](Definitions.md#qiy-trust-framework) are privacy, [Data](Definitions.md#data) security and the [Individual](Definitions.md#individual) in control of his or her [Personal Data](Definitions.md#personal-data).
 
-The [Qiy Foundation] has outsourced or otherwise removed all activities, which are not required for or essential to the development and maintenance of the [Qiy Scheme], whilst ensuring that all activities and assets related to the [Qiy Scheme] (Rules and Regulations and the [Qiy Standard]) remain inside and under the control of the [Scheme Authority]. This means that the development of implementations on the basis of the [Qiy Scheme] is left to market parties.
+The [Qiy Foundation](Definitions.md#qiy-foundation) has outsourced or otherwise removed all activities, which are not required for or essential to the development and maintenance of the [Qiy Scheme](Definitions.md#qiy-scheme), whilst ensuring that all activities and assets related to the [Qiy Scheme](Definitions.md#qiy-scheme) (Rules and Regulations and the [Qiy Standard](Definitions.md#qiy-standard)) remain inside and under the control of the [Scheme Authority](Definitions.md#scheme-authority). This means that the development of implementations on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme) is left to market parties.
 
 ## 1.2 Qiy Scheme
-The [Qiy Scheme] is an open standard and a set of technical, operational and business rules and agreements which fosters interoperability between the interconnected persons, organisations and devices which enables the exchange of [Data] between [Data Providers], [Individuals] and [Relying Parties] under the control and with the [Consent] of the [Individual]. The [Qiy Scheme] forms the basis of the [Qiy Trust Framework], the technical infrastructure which is based on an open standard and which respects the rules and regulations of the [Qiy Scheme]. The [Qiy Trust Framework] makes it possible to exchange between [Individuals], organisations and devices in a safe and secure manner, [Personal Data] to which an [Individual] can [Connect] on the basis of the [Qiy Scheme]. The [Qiy Scheme] regulates issues such as, functionality, security, reliability levels, access criteria, communication, liabilities and availability. Market parties, which respect the requirements of the [Qiy Scheme], may offer the [Qiy Trust Framework] as a [Service].
+The [Qiy Scheme](Definitions.md#qiy-scheme) is an open standard and a set of technical, operational and business rules and agreements which fosters interoperability between the interconnected persons, organisations and devices which enables the exchange of [Data](Definitions.md#data) between [Data Providers](Definitions.md#data-provider), [Individuals](Definitions.md#individual) and [Relying Parties](Definitions.md#relying-party) under the control and with the [Consent](Definitions.md#consent) of the [Individual](Definitions.md#individual). The [Qiy Scheme](Definitions.md#qiy-scheme) forms the basis of the [Qiy Trust Framework](Definitions.md#qiy-trust-framework), the technical infrastructure which is based on an open standard and which respects the rules and regulations of the [Qiy Scheme](Definitions.md#qiy-scheme). The [Qiy Trust Framework](Definitions.md#qiy-trust-framework) makes it possible to exchange between [Individuals](Definitions.md#individual), organisations and devices in a safe and secure manner, [Personal Data](Definitions.md#personal-data) to which an [Individual](Definitions.md#individual) can [Connect](Definitions.md#connect) on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme). The [Qiy Scheme](Definitions.md#qiy-scheme) regulates issues such as, functionality, security, reliability levels, access criteria, communication, liabilities and availability. Market parties, which respect the requirements of the [Qiy Scheme](Definitions.md#qiy-scheme), may offer the [Qiy Trust Framework](Definitions.md#qiy-trust-framework) as a [Service](Definitions.md#service).
 
 ### 1.2.1 Rules and Regulations 
 
-The Rules & Regulations, hereafter R&R, are intended to create a level playing field for all those parties wishing to make use of the [Qiy Trust Framework].
+The Rules & Regulations, hereafter R&R, are intended to create a level playing field for all those parties wishing to make use of the [Qiy Trust Framework](Definitions.md#qiy-trust-framework).
 
-Thus, the R&R must be transparent and non-discriminatory and applicable to all players participating in the Scheme. The requirements laid down in the R&R, are to be compiled according to a system of roles, with each role corresponding to a specific activity in the [Qiy Trust Framework].
+Thus, the R&R must be transparent and non-discriminatory and applicable to all players participating in the Scheme. The requirements laid down in the R&R, are to be compiled according to a system of roles, with each role corresponding to a specific activity in the [Qiy Trust Framework](Definitions.md#qiy-trust-framework).
 
-Parties, which meet the requirements of the [Qiy Scheme], may qualify for a license to operate on the basis of the [Qiy Scheme] and offer [Qiy Trust Framework] [Services]. The [Scheme Authority], as the owner of the Scheme, will delegate the issuing of these licenses to the [Regional Authority] via a so-called 'Master license'.
+Parties, which meet the requirements of the [Qiy Scheme](Definitions.md#qiy-scheme), may qualify for a license to operate on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme) and offer [Qiy Trust Framework](Definitions.md#qiy-trust-framework) [Services](Definitions.md#service). The [Scheme Authority](Definitions.md#scheme-authority), as the owner of the Scheme, will delegate the issuing of these licenses to the [Regional Authority](Definitions.md#regional-authority) via a so-called 'Master license'.
 
 ### 1.2.2 Qiy Standard
-The [Qiy Standard] is a normative specification describing features that are mandatory and optional for implementations claiming conformance to the [Qiy Standard] V 1.0. The Standard also specifies the entire set of documents comprising V 1.0.
+The [Qiy Standard](Definitions.md#qiy-standard) is a normative specification describing features that are mandatory and optional for implementations claiming conformance to the [Qiy Standard](Definitions.md#qiy-standard) V 1.0. The Standard also specifies the entire set of documents comprising V 1.0.
 
-Overview and Specification of [Qiy Standard] V 1.0:
+Overview and Specification of [Qiy Standard](Definitions.md#qiy-standard) V 1.0:
 * Conformance requirements for the Qiy standard V 1.0
-* [Qiy Node], interfaces and protocols for the [Qiy Standard] V 1.0
-* Security and privacy considerations for the [Qiy Schem]e V 1.0
-* Glossary to clarify the meanings of the specification for the [Qiy Standard] V 1.0
-* Technical overview [Qiy Standard] V 1.0
-* Controlled artifacts (e.g. software packages) for conformance testing. To aid conformance testing to the standard, test procedures, tooling and setups will be developed and maintained by the [Scheme Authority]. This does not include any software other than software required to facilitate conformance tests (model implementation).
+* [Qiy Node](Definitions.md#qiy-node), interfaces and protocols for the [Qiy Standard](Definitions.md#qiy-standard) V 1.0
+* Security and privacy considerations for the [Qiy Schem](Definitions.md#qiy-schem)e V 1.0
+* Glossary to clarify the meanings of the specification for the [Qiy Standard](Definitions.md#qiy-standard) V 1.0
+* Technical overview [Qiy Standard](Definitions.md#qiy-standard) V 1.0
+* Controlled artifacts (e.g. software packages) for conformance testing. To aid conformance testing to the standard, test procedures, tooling and setups will be developed and maintained by the [Scheme Authority](Definitions.md#scheme-authority). This does not include any software other than software required to facilitate conformance tests (model implementation).
 
 # 2 Governance Model
 ## 2.1 Context Governance Model
-The overall development- and management model for the [Qiy Scheme] consists of several elements: the model is divided in strategic, tactical and operational parts, together with elements relating to implementation support and communication.
+The overall development- and management model for the [Qiy Scheme](Definitions.md#qiy-scheme) consists of several elements: the model is divided in strategic, tactical and operational parts, together with elements relating to implementation support and communication.
  
 ![Global view on governance model](./images/global-view-on-governance-model.png)
-Figure 1: Global view on [Governance Model]
+Figure 1: Global view on [Governance Model](Definitions.md#governance-model)
 
 ## 2.2 Governance Model
-The characteristics of the [Governance Model] must support the vision and the mission of the [Qiy Foundation] to put people in the center of a [Trust Framework] so that they can access and control their [Personal Data]. 
+The characteristics of the [Governance Model](Definitions.md#governance-model) must support the vision and the mission of the [Qiy Foundation](Definitions.md#qiy-foundation) to put people in the center of a [Trust Framework](Definitions.md#trust-framework) so that they can access and control their [Personal Data](Definitions.md#personal-data). 
 
 The model is built on the concept of the 'Trias Politica': the division of powers into three branches, each with separate and independent powers and areas of responsibility so that the powers of one branch are not in conflict with the powers associated with the other branches. The typical division of these three branches is into a 'legislative', an 'executive', and a 'judiciary' branch.
 
 ![Governance model Qiy Scheme](./images/governance-model-qiy-scheme.png)
-Figure 2: Governance model [Qiy Scheme]
+Figure 2: Governance model [Qiy Scheme](Definitions.md#qiy-scheme)
 
 ### 2.2.1 The legislative branch
-The rules of the [Qiy Scheme] are developed and enforced by an independent and formal body, the [Scheme Authority]. The [Scheme Authority] must be independent to ensure integrity and in order to create a favorable environment in which the [Qiy Trust Framework] can be further developed and managed. The [Supervisory Board] of the [Scheme Authority] should warrant and safeguard the legitimate interests of all [Users] of the [Qiy Scheme] and promote competition between the parties which operate on the basis of the [Qiy Scheme]. The [Scheme Authority] sets the licensing conditions for the [Regional Authorities] and monitors compliance with those licensing conditions. The [Qiy Foundation] fulfills the role of [Scheme Authority].
+The rules of the [Qiy Scheme](Definitions.md#qiy-scheme) are developed and enforced by an independent and formal body, the [Scheme Authority](Definitions.md#scheme-authority). The [Scheme Authority](Definitions.md#scheme-authority) must be independent to ensure integrity and in order to create a favorable environment in which the [Qiy Trust Framework](Definitions.md#qiy-trust-framework) can be further developed and managed. The [Supervisory Board](Definitions.md#supervisory-board) of the [Scheme Authority](Definitions.md#scheme-authority) should warrant and safeguard the legitimate interests of all [Users](Definitions.md#user) of the [Qiy Scheme](Definitions.md#qiy-scheme) and promote competition between the parties which operate on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme). The [Scheme Authority](Definitions.md#scheme-authority) sets the licensing conditions for the [Regional Authorities](Definitions.md#regional-authority) and monitors compliance with those licensing conditions. The [Qiy Foundation](Definitions.md#qiy-foundation) fulfills the role of [Scheme Authority](Definitions.md#scheme-authority).
 
-[Regional Authorities] represent the [Scheme Authority] in their country, based on a Master license provided by the [Scheme Authority]. [Regional Authorities] must adhere to the overall Scheme. This implies among others that there will be open access based on transparent criteria for all parties who want to operate on the basis of the [Qiy Scheme]. 
+[Regional Authorities](Definitions.md#regional-authority) represent the [Scheme Authority](Definitions.md#scheme-authority) in their country, based on a Master license provided by the [Scheme Authority](Definitions.md#scheme-authority). [Regional Authorities](Definitions.md#regional-authority) must adhere to the overall Scheme. This implies among others that there will be open access based on transparent criteria for all parties who want to operate on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme). 
 
 ### 2.2.2 The executive branch
-The [Qiy Scheme] distinguishes four generic [Business Roles] for the delivery of specific [Services] within the [Qiy Trust Framework]: [Issuers], [Service Providers], [Data Providers] and [Relying Parties]. Each private or public entity operating on the basis of the [Qiy Scheme] can assume one or more of these roles. [Issuers] offer [Services] to the [Individuals] who want to [Connect] to the [Qiy Trust Framework]. [Service Providers] do the same for organisations (i.e., [Relying Parties] and [Data Providers]), which want to operate on the basis of the [Qiy Scheme].
+The [Qiy Scheme](Definitions.md#qiy-scheme) distinguishes four generic [Business Roles](Definitions.md#business-role) for the delivery of specific [Services](Definitions.md#service) within the [Qiy Trust Framework](Definitions.md#qiy-trust-framework): [Issuers](Definitions.md#issuer), [Service Providers](Definitions.md#service-provider), [Data Providers](Definitions.md#data-provider) and [Relying Parties](Definitions.md#relying-party). Each private or public entity operating on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme) can assume one or more of these roles. [Issuers](Definitions.md#issuer) offer [Services](Definitions.md#service) to the [Individuals](Definitions.md#individual) who want to [Connect](Definitions.md#connect) to the [Qiy Trust Framework](Definitions.md#qiy-trust-framework). [Service Providers](Definitions.md#service-provider) do the same for organisations (i.e., [Relying Parties](Definitions.md#relying-party) and [Data Providers](Definitions.md#data-provider)), which want to operate on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme).
 
 ### 2.2.3 The judiciary branch
-The [Qiy Scheme] is administered by the [Scheme Authority]. The [Scheme Authority] is responsible for defining and managing the requirements, which are associated with the different roles that are specified in the [Qiy Scheme]. The Rules & Regulations, together with the [Qiy Standard] itself, are part of the [Qiy Scheme]. The Rules & Regulations define the different roles in more detail and provide a regulatory framework for the activities of [Users] of the [Qiy Scheme]. In a Master license the [Scheme Authority] also sets out the licensing requirements, which must be included in licenses which will be issued by [Regional Authorities]. An independent audit mechanism monitors the behavior of the different parties in the executive branch for compliance with the Rules & Regulations. On the basis of a similar mechanism compliance by the [Qiy Foundation] with the Rules & Regulations is monitored.
+The [Qiy Scheme](Definitions.md#qiy-scheme) is administered by the [Scheme Authority](Definitions.md#scheme-authority). The [Scheme Authority](Definitions.md#scheme-authority) is responsible for defining and managing the requirements, which are associated with the different roles that are specified in the [Qiy Scheme](Definitions.md#qiy-scheme). The Rules & Regulations, together with the [Qiy Standard](Definitions.md#qiy-standard) itself, are part of the [Qiy Scheme](Definitions.md#qiy-scheme). The Rules & Regulations define the different roles in more detail and provide a regulatory framework for the activities of [Users](Definitions.md#user) of the [Qiy Scheme](Definitions.md#qiy-scheme). In a Master license the [Scheme Authority](Definitions.md#scheme-authority) also sets out the licensing requirements, which must be included in licenses which will be issued by [Regional Authorities](Definitions.md#regional-authority). An independent audit mechanism monitors the behavior of the different parties in the executive branch for compliance with the Rules & Regulations. On the basis of a similar mechanism compliance by the [Qiy Foundation](Definitions.md#qiy-foundation) with the Rules & Regulations is monitored.
 
 # 3 Scheme Authority
-The [Scheme Authority] sets the standards, policies and carries out the management of the [Qiy Scheme]. [Scheme Authority] is responsible for defining and managing requirements for the different roles that are recognized in the [Qiy Scheme]. This includes the process of preparing changes to the Scheme and organises structured decision-making. 
+The [Scheme Authority](Definitions.md#scheme-authority) sets the standards, policies and carries out the management of the [Qiy Scheme](Definitions.md#qiy-scheme). [Scheme Authority](Definitions.md#scheme-authority) is responsible for defining and managing requirements for the different roles that are recognized in the [Qiy Scheme](Definitions.md#qiy-scheme). This includes the process of preparing changes to the Scheme and organises structured decision-making. 
 
 ## 3.1 Structure
-This paragraph describes the separation between substantive activities in the executive organisation of the [Scheme Authority] and decision-making.
+This paragraph describes the separation between substantive activities in the executive organisation of the [Scheme Authority](Definitions.md#scheme-authority) and decision-making.
 
 ### 3.1.1 Supervisory Board
-The [Supervisory Board] has a duty to supervise the policy of the [Executive Board] of the [Scheme Authority] and the general affairs within [Scheme Authority]. The [Supervisory Board] shall: 
-* Supervise the policy of the [Executive Board] of the [Scheme Authority] and the general affairs within [Scheme Authority].
-* Supervise and monitor the achievement of the objectives of the [Scheme Authority];
+The [Supervisory Board](Definitions.md#supervisory-board) has a duty to supervise the policy of the [Executive Board](Definitions.md#executive-board) of the [Scheme Authority](Definitions.md#scheme-authority) and the general affairs within [Scheme Authority](Definitions.md#scheme-authority). The [Supervisory Board](Definitions.md#supervisory-board) shall: 
+* Supervise the policy of the [Executive Board](Definitions.md#executive-board) of the [Scheme Authority](Definitions.md#scheme-authority) and the general affairs within [Scheme Authority](Definitions.md#scheme-authority).
+* Supervise and monitor the achievement of the objectives of the [Scheme Authority](Definitions.md#scheme-authority);
 * Supervise and monitor the strategy and risks inherent in business activities;
 * Monitor and verify the design and operation of the risk management and control systems;
-* Warrant and safeguard the legitimate interests of all [Users] of the [Qiy Scheme] and promote competition between the parties which operate on the basis of the [Qiy Scheme];
-* Advise the [Executive Board] upon request or at its own initiative on all issues it deems fit.
+* Warrant and safeguard the legitimate interests of all [Users](Definitions.md#user) of the [Qiy Scheme](Definitions.md#qiy-scheme) and promote competition between the parties which operate on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme);
+* Advise the [Executive Board](Definitions.md#executive-board) upon request or at its own initiative on all issues it deems fit.
 
-The [Supervisory Board] shall initially be composed of three (3) board members. Additional members shall be added over time according to the needs of the organisation.
+The [Supervisory Board](Definitions.md#supervisory-board) shall initially be composed of three (3) board members. Additional members shall be added over time according to the needs of the organisation.
 
 
 
 ### 3.1.2 Executive Board
-The [Executive Board] runs the [Scheme Authority] on a day-to-day basis. The [Executive Board] is responsible for:
-* Issuing a Master license to [Regional Authorities];
+The [Executive Board](Definitions.md#executive-board) runs the [Scheme Authority](Definitions.md#scheme-authority) on a day-to-day basis. The [Executive Board](Definitions.md#executive-board) is responsible for:
+* Issuing a Master license to [Regional Authorities](Definitions.md#regional-authority);
 * Monitoring compliance with the terms set and the possible imposition of penalties, other sanctions and/or remedies for non-compliance or violation;
-* The development and maintenance of the Scheme (Rules and Regulations and the Standard). A process will be defined how to ensure an appropriate change management process for the [Qiy Scheme], involving all interested parties.
+* The development and maintenance of the Scheme (Rules and Regulations and the Standard). A process will be defined how to ensure an appropriate change management process for the [Qiy Scheme](Definitions.md#qiy-scheme), involving all interested parties.
 
 
 ## 3.2 Products and services
-The following 'products and services' are developed and maintained by the [Scheme Authority]:
-* The Scheme(R&R and [Qiy Standard]) development and maintenance
-* Stakeholder engagement ([RegionalAuthorities], Participants and [Users])
-* Master license [Regional Authorities]
+The following 'products and services' are developed and maintained by the [Scheme Authority](Definitions.md#scheme-authority):
+* The Scheme(R&R and [Qiy Standard](Definitions.md#qiy-standard)) development and maintenance
+* Stakeholder engagement ([RegionalAuthorities](Definitions.md#regionalauthority), Participants and [Users](Definitions.md#user))
+* Master license [Regional Authorities](Definitions.md#regional-authority)
 * Intellectual property of the Scheme
 * Antitrust guidelines
 * Model implementation
@@ -134,34 +134,34 @@ The following 'products and services' are developed and maintained by the [Schem
 * Public relations, public affairs, spokesperson, brand promotion
 
 ### 3.2.1 The development and maintenance of the Qiy Scheme
-In the context of developing the [Qiy Scheme], all participants are allowed to submit change requests. The proposed change requests should outline the background and rationale for the change, determine which parts of the [Qiy Scheme] are affected and which parties are involved (impact analysis).
+In the context of developing the [Qiy Scheme](Definitions.md#qiy-scheme), all participants are allowed to submit change requests. The proposed change requests should outline the background and rationale for the change, determine which parts of the [Qiy Scheme](Definitions.md#qiy-scheme) are affected and which parties are involved (impact analysis).
 
 ### 3.2.2 Master License Regional Authorities
-The [Master License] gives the operational responsibility for the [Qiy Trust Framework] to the [Qiy Regional Authority]. It permits the [Regional Authority] to license, under the Rules and Regulations of the [Scheme Authority], [Issuers] and [Service] [Providers] at the Regional level. 
+The [Master License](Definitions.md#master-license) gives the operational responsibility for the [Qiy Trust Framework](Definitions.md#qiy-trust-framework) to the [Qiy Regional Authority](Definitions.md#qiy-regional-authority). It permits the [Regional Authority](Definitions.md#regional-authority) to license, under the Rules and Regulations of the [Scheme Authority](Definitions.md#scheme-authority), [Issuers](Definitions.md#issuer) and [Service](Definitions.md#service) [Providers](Definitions.md#provider) at the Regional level. 
 
-The [Regional Authority] works on Regional stakeholder engagement and performs Regional marketing, communication and PR/PA tasks.
-The Master license will impose requirements on the [Regional Authority] regarding financing, staff, etc. in the interest of the overall Scheme. 
+The [Regional Authority](Definitions.md#regional-authority) works on Regional stakeholder engagement and performs Regional marketing, communication and PR/PA tasks.
+The Master license will impose requirements on the [Regional Authority](Definitions.md#regional-authority) regarding financing, staff, etc. in the interest of the overall Scheme. 
 
 ### 3.2.3 Public relations, public affairs, spokesperson, brand promotion
-The general public and specific interest groups need general information on how to use Qiy as a framework. The [Scheme Authority] is proactive in providing information and keeping a dialogue with all stakeholders. Similarly, Qiy is marketed as reliable, easy and efficient.
+The general public and specific interest groups need general information on how to use Qiy as a framework. The [Scheme Authority](Definitions.md#scheme-authority) is proactive in providing information and keeping a dialogue with all stakeholders. Similarly, Qiy is marketed as reliable, easy and efficient.
 
 
 # 4 Regional Authority
 ## 4.1 Structure
-The optimal organisational structure of the [Regional Authority] will very much be linked to the scope of the relevant geographical market/regional customs/regional legal framework.
+The optimal organisational structure of the [Regional Authority](Definitions.md#regional-authority) will very much be linked to the scope of the relevant geographical market/regional customs/regional legal framework.
 
 ## 4.2 Products & services Regional Authority
-The [Regional Authority]'s areas of responsibility are:
+The [Regional Authority](Definitions.md#regional-authority)'s areas of responsibility are:
 * To organise Regional stakeholder engagement
-* To license regional [Issuers] and [Service Providers] 
+* To license regional [Issuers](Definitions.md#issuer) and [Service Providers](Definitions.md#service-provider) 
 * To ensure compliance (audits)
 * To ensure an independent complaints and appeal process for licensees
 * To establish an information and consultation mechanism on the further development of the Scheme
 
 ### 4.2.1 Licensing and certification
-Parties wishing to offer [Services] in one (or more) of the roles defined by the Scheme must satisfy the conditions imposed by the [Scheme Authority] for the role(s) concerned. This may include requirements regarding the organisation itself and its business processes. If a dispute arises, arbitration is mandatory through an independent Council for Complaints and Appeal.
+Parties wishing to offer [Services](Definitions.md#service) in one (or more) of the roles defined by the Scheme must satisfy the conditions imposed by the [Scheme Authority](Definitions.md#scheme-authority) for the role(s) concerned. This may include requirements regarding the organisation itself and its business processes. If a dispute arises, arbitration is mandatory through an independent Council for Complaints and Appeal.
 
 ### 4.2.2 Abuse and Fraud Coordination
-The [Scheme Authority] must ensure the integrity and reliability of the overall [Qiy Trust Framework]. To do so the [Scheme Authority] must work closely together with all stakeholders, must be alert and must provide leadership in the joint fight against fraud. [Regional Authorities] have an important role to play in the signaling and prevention of abuse and/or fraud and must work together/collaborate with the [Scheme Authority] where necessary.
+The [Scheme Authority](Definitions.md#scheme-authority) must ensure the integrity and reliability of the overall [Qiy Trust Framework](Definitions.md#qiy-trust-framework). To do so the [Scheme Authority](Definitions.md#scheme-authority) must work closely together with all stakeholders, must be alert and must provide leadership in the joint fight against fraud. [Regional Authorities](Definitions.md#regional-authority) have an important role to play in the signaling and prevention of abuse and/or fraud and must work together/collaborate with the [Scheme Authority](Definitions.md#scheme-authority) where necessary.
 
 
