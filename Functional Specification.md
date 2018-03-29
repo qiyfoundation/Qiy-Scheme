@@ -178,7 +178,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchang
 			1. [Connect using a QR Code](#10125-connect-using-a-qr-code)
 			1. [Present proposal containing a QR Code](#10126-present-proposal-containing-a-qr-code)
 	1. [Application Layer](#102-application-layer)
-		1. [[Connect](Definitions.md#connect)](#1021-[connect](Definitions.md#connect))
+		1. [Connect](#1021-connect)
 			1. [Proposer: Connect](#10211-proposer-connect)
 			1. [Generate Application Connect Token](#10212-generate-application-connect-token)
 			1. [Accepter: Connect](#10213-accepter-connect)
@@ -251,9 +251,9 @@ Qiy has been conceived with the aim to put people back in control of their [Pers
 The aim has been elaborated in a set of principles called the [Qiy Trust Principles](Definitions.md#qiy-trust-principles) and technical, legal and governance rules, all of which are maintained by the [Qiy Foundation](Definitions.md#qiy-foundation) and the [Qiy Foundation Members](Definitions.md#qiy-foundation-member).
 
 The realization of the [Data Reuse](Definitions.md#data-reuse) as described in this document demonstrates that a natural person ([Individual](Definitions.md#individual)) is in control:
-* The [Individual](Definitions.md#individual) can securily exchange [Data](Definitions.md#data) and/or [Messages](Definitions.md#message) with another person or organization ([Qiy User](Definitions.md#qiy-user)) via Qiy, using [Connections](Definitions.md#connection), see [4 The User Layer](#4-the-user-layer).
-* The [Individual](Definitions.md#individual) controls what [Qiy Users](Definitions.md#qiy-user) he [Connects](Definitions.md#connect) with and, in principle, when he wants to end it.
-* When an [Individual](Definitions.md#individual) [Connects](Definitions.md#connect) with a [Qiy User](Definitions.md#qiy-user) that is providing a [Service](Definitions.md#service) via Qiy ([Provider](Definitions.md#provider)), the [Individual](Definitions.md#individual) is provided with the identity of the latter, but not the other way around.
+* The [Individual](Definitions.md#individual) can securily exchange [Data](Definitions.md#data) and/or messages with another person or organization ([Qiy User](Definitions.md#qiy-user)) via Qiy, using [Connections](Definitions.md#connection), see [4 The User Layer](#4-the-user-layer).
+* The [Individual](Definitions.md#individual) controls what [Qiy Users](Definitions.md#qiy-user) he connects with and, in principle, when he wants to end it.
+* When an [Individual](Definitions.md#individual) connects with a [Qiy User](Definitions.md#qiy-user) that is providing a [Service](Definitions.md#service) via Qiy ([Provider](Definitions.md#provider)), the [Individual](Definitions.md#individual) is provided with the [Identity](Definitions.md#identity) of the latter, but not the other way around.
 * The [Individual](Definitions.md#individual) can access his [Personal Data](Definitions.md#personal-data) that is kept by another [Qiy User](Definitions.md#qiy-user) ([Data Provider](Definitions.md#data-provider)) as a result of the [Access Principle](Definitions.md#access-principle), one of the [Qiy Trust Principles](Definitions.md#qiy-trust-principles).
 * The [Individual](Definitions.md#individual) controls what [Data](Definitions.md#data) he shares with what [Provider](Definitions.md#provider) ([Relying Party](Definitions.md#relying-party)) and under what terms using proveable [Consents](Definitions.md#consent).
 * The [Data Provider](Definitions.md#data-provider) knows what [Data](Definitions.md#data) is obtained by (or in name of) an [Individual](Definitions.md#individual), but he does not know whether the [Data](Definitions.md#data) is shared and if so, with what [Relying Parties](Definitions.md#relying-party).
@@ -275,8 +275,8 @@ As described above, privacy is at the heart of Qiy and security being a 'conditi
 
 An [Individual](Definitions.md#individual) can only control his [Personal Data](Definitions.md#personal-data), when all concerned systems are interoperable.
 This is achieved as follows:
-* Applications exchange [Data](Definitions.md#data) and/or [Messages](Definitions.md#message) via Qiy using open standards of the [Qiy Scheme](Definitions.md#qiy-scheme) ([Qiy Open Standard](Definitions.md#qiy-open-standard)).
-* Applications exchange self-describing [Data](Definitions.md#data) and/or [Messages](Definitions.md#message) using [Data Descriptions](Definitions.md#data-description) which are available to all concerned parties (via the [Service Library](Definitions.md#service-library)).
+* Applications exchange [Data](Definitions.md#data) and/or messages via Qiy using open standards of the [Qiy Scheme](Definitions.md#qiy-scheme) ([Qiy Open Standard](Definitions.md#qiy-open-standard)).
+* Applications exchange self-describing [Data](Definitions.md#data) and/or messages using [Data Descriptions](Definitions.md#data-description) which are available to all concerned parties (via the [Service Library](Definitions.md#service-library)).
 
 ## 3.5 Governance
 
@@ -297,7 +297,7 @@ As for natural persons, most of these will use Qiy as an [Individual](Definition
 
 ## 4.2 Provider
 A [Qiy User](Definitions.md#qiy-user) that provides one or more [Services](Definitions.md#service) to [Individuals](Definitions.md#individual) is said to be (or act in the [Business Role](Definitions.md#business-role) of) '[Providers](Definitions.md#provider)'.
-Any [Qiy User](Definitions.md#qiy-user) acting in one or both of the roles [Relying Party](Definitions.md#relying-party) or [Data Provider](Definitions.md#data-provider) is implicitely acting in this role.
+Any [Qiy User](Definitions.md#qiy-user) acting in one or both of the [Roles](Definitions.md#role) [Relying Party](Definitions.md#relying-party) or [Data Provider](Definitions.md#data-provider) is implicitely acting in this [Role](Definitions.md#role).
 
 ## 4.3 Qiy Node
 A [Qiy User](Definitions.md#qiy-user) must have a [Qiy Node](Definitions.md#qiy-node). 
@@ -307,7 +307,7 @@ Alternatively, [Qiy Users](Definitions.md#qiy-user) may instantiate a [Qiy Node]
 
 ## 4.4 Connect via Qiy
 
-Two [Qiy Users](Definitions.md#qiy-user) can [Connect](Definitions.md#connect) via Qiy by creating a [Connection](Definitions.md#connection) between their [Qiy Nodes](Definitions.md#qiy-node) ([Connection](Definitions.md#connection)).
+Two [Qiy Users](Definitions.md#qiy-user) can connect via Qiy by creating a [Connection](Definitions.md#connection) between their [Qiy Nodes](Definitions.md#qiy-node) ([Connection](Definitions.md#connection)).
 The [Connection](Definitions.md#connection) can be initiated by either of the two [Qiy Users](Definitions.md#qiy-user).
 The [Qiy User](Definitions.md#qiy-user) initiating the [Connection](Definitions.md#connection) is called the [Proposer](Definitions.md#proposer), the other one [Accepter](Definitions.md#accepter).
 This goes as follows:
@@ -315,14 +315,14 @@ This goes as follows:
 * The [Proposer](Definitions.md#proposer) provides it out-of-band to the [Accepter](Definitions.md#accepter), for example by lettre, see [4.4.2 Media](#442-media).
 * The [Accepter](Definitions.md#accepter) may read the proposal and use a [Qiy Application](Definitions.md#qiy-application) to extract the [Connect Token](Definitions.md#connect-token) and create a new [Connection](Definitions.md#connection) with the [Proposer](Definitions.md#proposer).
 
-As stated before, when a [Connection](Definitions.md#connection) is established, the identity of the [Qiy User](Definitions.md#qiy-user) is provided to the other one if the [Qiy User](Definitions.md#qiy-user) is a [Provider](Definitions.md#provider). 
+As stated before, when a [Connection](Definitions.md#connection) is established, the [Identity](Definitions.md#identity) of the [Qiy User](Definitions.md#qiy-user) is provided to the other one if the [Qiy User](Definitions.md#qiy-user) is a [Provider](Definitions.md#provider). 
 This information may be used to reuse a formerly created [Connection](Definitions.md#connection) and delete the new [Connection](Definitions.md#connection).
 
 ![Users Connect](./images/users-connect.png)
 
 ### 4.4.1 Generate token
 A [Proposer](Definitions.md#proposer) can create a [Token](Definitions.md#token) using a [Qiy Application](Definitions.md#qiy-application) and the following details:
-* Name: The name or pseudonym to use in the [Connect Proposal](Definitions.md#connect-proposal).
+* Name: The name or [Pseudonym](Definitions.md#pseudonym) to use in the [Connect Proposal](Definitions.md#connect-proposal).
 * Expiration: Whether the [Token](Definitions.md#token) expires and if so, on what date and time.
 * Budget: The number of times that the [Token](Definitions.md#token) can be used to create a [Connection](Definitions.md#connection).
 
@@ -335,7 +335,7 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 
  
 ### 4.4.2 Media
-[Qiy Users](Definitions.md#qiy-user) can use different media to [Connect](Definitions.md#connect) as illustrated in this diagram:
+[Qiy Users](Definitions.md#qiy-user) can use different media to connect as illustrated in this diagram:
 
 ![Media](./images/Connect.png)
 
@@ -343,7 +343,7 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 
  
 #### 4.4.2.1 The web
-[Qiy Users](Definitions.md#qiy-user) can [Connect](Definitions.md#connect) by transfering a [Token](Definitions.md#token) as a query parameter in a website address:
+[Qiy Users](Definitions.md#qiy-user) can connect by transfering a [Token](Definitions.md#token) as a query parameter in a website address:
  
 ![Connect using a token in a website address](./images/connect-using-a-token-in-a-website-address.png)
 
@@ -351,7 +351,7 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 
  
 #### 4.4.2.2 Print
-[Qiy Users](Definitions.md#qiy-user) can convert the [Token](Definitions.md#token) to a QR Code and use various 'Print'-media to [Connect](Definitions.md#connect):
+[Qiy Users](Definitions.md#qiy-user) can convert the [Token](Definitions.md#token) to a QR Code and use various 'Print'-media to connect:
 
 ![Present proposal containing a QR Code](./images/present-proposal-containing-a-qr-code.png)
 
@@ -371,7 +371,7 @@ The QR Code can be used as follows to create the [Connection](Definitions.md#con
 #### 4.4.3.1 Connect Proposal
 
 The picture below shows a [Connect Proposal](Definitions.md#connect-proposal) that is generated by an [Individual](Definitions.md#individual) using a mobile app containing a QR Code.
-The [Individual](Definitions.md#individual) can use this proposal to invite other [Individuals](Definitions.md#individual) to [Connect](Definitions.md#connect).
+The [Individual](Definitions.md#individual) can use this proposal to invite other [Individuals](Definitions.md#individual) to connect.
 
 ![An example of a Connect Proposal](./images/example--connect-proposal--qr-code-on-phone.PNG)
 
@@ -405,7 +405,7 @@ When an [Accepter](Definitions.md#accepter) has viewed a webpage with a [Connect
 #### 4.4.3.7 Confirmation
 
 The picture below shows an example of an [Qiy Application](Definitions.md#qiy-application) verifying the acceptance of a [Connect Proposal](Definitions.md#connect-proposal).
-The [Qiy Application](Definitions.md#qiy-application) will create the [Connection](Definitions.md#connection) when the [Accepter](Definitions.md#accepter) has confirmed that he wants to [Connect](Definitions.md#connect) with the [Proposer](Definitions.md#proposer).
+The [Qiy Application](Definitions.md#qiy-application) will create the [Connection](Definitions.md#connection) when the [Accepter](Definitions.md#accepter) has confirmed that he wants to connect with the [Proposer](Definitions.md#proposer).
 
 ![An example of confirming the acceptance a Connect Proposal](./images/example--connect-proposal--verify.PNG)
 
@@ -418,7 +418,7 @@ This section addresses the setup for the [Data Reuse](Definitions.md#data-reuse)
 
 In order to be able to offer his [Services](Definitions.md#service) via Qiy, a [Relying Party](Definitions.md#relying-party) has met the following preconditions:
 * The [Relying Party](Definitions.md#relying-party) has acquired access to Qiy with the help of an [Access Provider](Definitions.md#access-provider).
-* The [Access Provider](Definitions.md#access-provider) has verified and registered the identity of the [Relying Party](Definitions.md#relying-party) for use in Qiy.
+* The [Access Provider](Definitions.md#access-provider) has verified and registered the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party) for use in Qiy.
 * The [Service Library](Definitions.md#service-library) contains the [Service Catalogue](Definitions.md#service-catalogue) of the [Relying Party](Definitions.md#relying-party) defining the provided [Services](Definitions.md#service).
 * The [Service Library](Definitions.md#service-library) contains [Service Descriptions](Definitions.md#service-description) for all the provided [Services](Definitions.md#service), which also includes the terms of use, especially with regard to [Personal Data](Definitions.md#personal-data).
 
@@ -426,7 +426,7 @@ In order to be able to offer his [Services](Definitions.md#service) via Qiy, a [
 
 In order to be able to provide the [Personal Data](Definitions.md#personal-data) via Qiy, a [Data Provider](Definitions.md#data-provider) has met the following preconditions:
 * The [Data Provider](Definitions.md#data-provider) has acquired access to Qiy with the help of an [Access Provider](Definitions.md#access-provider).
-* The [Access Provider](Definitions.md#access-provider) has verified and registered the identity of the [Data Provider](Definitions.md#data-provider) for use in Qiy.
+* The [Access Provider](Definitions.md#access-provider) has verified and registered the [Identity](Definitions.md#identity) of the [Data Provider](Definitions.md#data-provider) for use in Qiy.
 * A [Service Endpoint](Definitions.md#service-endpoint) is available to access the [Data](Definitions.md#data).
 * The [Service Library](Definitions.md#service-library) contains the [Service Endpoint API](Definitions.md#service-endpoint-api) which describes how the [Data](Definitions.md#data) can be obtained.
 * The [Service Library](Definitions.md#service-library) contains [Data Descriptions](Definitions.md#data-description) for the available [Data](Definitions.md#data).
@@ -453,14 +453,14 @@ When an [Individual](Definitions.md#individual) subscribes to a [Service](Defini
 
 ## 4.7 Consent
 
-When a request for [Data](Definitions.md#data) is received, it is checked with the granted [Consents](Definitions.md#consent). If the request is not authorized by an active granted [Consent](Definitions.md#consent), this may be resolved by granting one, after which the [Data](Definitions.md#data) request is processed.
-In other cases, the request will not be accepted and no [Data](Definitions.md#data) will be returned.
+When a [Request](Definitions.md#request) for [Data](Definitions.md#data) is received, it is checked with the granted [Consents](Definitions.md#consent). If the [Request](Definitions.md#request) is not authorized by an active granted [Consent](Definitions.md#consent), this may be resolved by granting one, after which the [Data](Definitions.md#data) [Request](Definitions.md#request) is processed.
+In other cases, the [Request](Definitions.md#request) will not be accepted and no [Data](Definitions.md#data) will be returned.
 
 ## 4.8 Routing
 
 When all related conditions are met, a request for [Data](Definitions.md#data) from a [Relying Party](Definitions.md#relying-party) is processed as follows:
 * The [Service Portfolio](Definitions.md#service-portfolio) of the [Individual](Definitions.md#individual) is consulted to find the [Data Provider](Definitions.md#data-provider) or [Data Providers](Definitions.md#data-provider) and related [Service Endpoint API](Definitions.md#service-endpoint-api).
-* Using the API, requests are created and used to obtain the [Data](Definitions.md#data) from the [Service Endpoints](Definitions.md#service-endpoint).
+* Using the API, [Requests](Definitions.md#request) are created and used to obtain the [Data](Definitions.md#data) from the [Service Endpoints](Definitions.md#service-endpoint).
 * The received [Data](Definitions.md#data) is forwarded to the [Relying Party](Definitions.md#relying-party).
 
 ## 4.9 Source
@@ -473,9 +473,9 @@ The [Service Portfolio](Definitions.md#service-portfolio) will be updated with t
 
 ## 4.10 Session
 
-A [Service Endpoint](Definitions.md#service-endpoint) will only process a request when issued over an active Session. This session may be started earlier, for example when the [Individual](Definitions.md#individual) selects a [Data Provider](Definitions.md#data-provider) as a source, but a new Session will be started if need be.
+A [Service Endpoint](Definitions.md#service-endpoint) will only process a [Request](Definitions.md#request) when issued over an active Session. This session may be started earlier, for example when the [Individual](Definitions.md#individual) selects a [Data Provider](Definitions.md#data-provider) as a source, but a new Session will be started if need be.
 More often then not, this may require input from the [Individual](Definitions.md#individual).
-The session credentials are persisted in the [Service Portfolio](Definitions.md#service-portfolio) of the [Individual](Definitions.md#individual).
+The session [Credentials](Definitions.md#credential) are persisted in the [Service Portfolio](Definitions.md#service-portfolio) of the [Individual](Definitions.md#individual).
 
 ## 4.11 Application Examples
 
@@ -554,7 +554,7 @@ Scanning a QR Code placed next to an entrance may be used to ring a doorbell and
 
 ### 4.11.13 Trustable Reviews
 
-Qiy allows solutions in which consumers can trust posted reviews on products or [Services](Definitions.md#service):
+Qiy allows solutions in which consumers can [Trust](Definitions.md#trust) posted reviews on products or [Services](Definitions.md#service):
 
 ![Trustable Reviews](./images/example-application--trustable-reviews.jpg)
 
@@ -599,13 +599,13 @@ The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describe
 * ... create [Connections](Definitions.md#connection).
 * ... create a 'backup' of a [Qiy Node](Definitions.md#qiy-node).
 * ... exchange [Connect Tokens](Definitions.md#connect-token) out-of-band.
-* ... exchange [Messages](Definitions.md#message).
+* ... exchange messages.
 * ... exchange [Personal Data](Definitions.md#personal-data).
 
 ### 5.1.3 Creating Qiy Nodes for Individuals
 
 A [Qiy Application](Definitions.md#qiy-application) can create a [Qiy Node](Definitions.md#qiy-node) for a [Qiy User](Definitions.md#qiy-user), especially when he does not have one yet.
-The [Qiy Application](Definitions.md#qiy-application) can do so with the help of an [Access Provider](Definitions.md#access-provider), but first it has to generate the credentials for the [Qiy Node](Definitions.md#qiy-node) ([Qiy Node Credentials](Definitions.md#qiy-node-credential)):
+The [Qiy Application](Definitions.md#qiy-application) can do so with the help of an [Access Provider](Definitions.md#access-provider), but first it has to generate the [Credentials](Definitions.md#credential) for the [Qiy Node](Definitions.md#qiy-node) ([Qiy Node Credentials](Definitions.md#qiy-node-credential)):
 * A key pair, consisting of public key and a private key, 
 * A [Node Id](Definitions.md#node-id)
 
@@ -628,7 +628,7 @@ A [Qiy Application](Definitions.md#qiy-application) can be linked to an existing
 
 ### 5.2.1 Application Connect Token
 [Qiy Applications](Definitions.md#qiy-application) exchange [Application Connect Tokens](Definitions.md#application-connect-token) to create [Connections](Definitions.md#connection). 
-In addition to the [Connect Token](Definitions.md#connect-token) that is necessary to create the [Connection](Definitions.md#connection), it contains the name or pseudonym to be displayed in the [Connect Proposal](Definitions.md#connect-proposal). 
+In addition to the [Connect Token](Definitions.md#connect-token) that is necessary to create the [Connection](Definitions.md#connection), it contains the name or [Pseudonym](Definitions.md#pseudonym) to be displayed in the [Connect Proposal](Definitions.md#connect-proposal). 
 For more information, please refer to [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
 
 ### 5.2.2 Proposer: Connect
@@ -636,7 +636,7 @@ For a [Qiy Application](Definitions.md#qiy-application) of a [Proposer](Definiti
 * The [Qiy Application](Definitions.md#qiy-application) generates an [Application Connect Token](Definitions.md#application-connect-token), see [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
 * The [Qiy Application](Definitions.md#qiy-application) composes a [Connect Proposal](Definitions.md#connect-proposal) for the [Proposer](Definitions.md#proposer).
 * The [Proposer](Definitions.md#proposer) presents it out-of-band to the [Accepter](Definitions.md#accepter).
-* When the [Accepter](Definitions.md#accepter) wants to [Connect](Definitions.md#connect), he uses the [Connect Proposal](Definitions.md#connect-proposal) to create a [Connection](Definitions.md#connection) with his [Qiy Application](Definitions.md#qiy-application), see [5.2.4 'Accepter: Connect'](#524-accepter-connect).
+* When the [Accepter](Definitions.md#accepter) wants to connect, he uses the [Connect Proposal](Definitions.md#connect-proposal) to create a [Connection](Definitions.md#connection) with his [Qiy Application](Definitions.md#qiy-application), see [5.2.4 'Accepter: Connect'](#524-accepter-connect).
 * The [Proposer](Definitions.md#proposer) detects this by use of polling (using the [Connections Request](Definitions.md#connections-request)) or events (using the [Connection Created Event](Definitions.md#connection-created-event)).
  
 ![Proposer: Connect](./images/proposer--connect.png)
@@ -666,9 +666,9 @@ At the [Accepter](Definitions.md#accepter)-side, a [Qiy Application](Definitions
 
 ### 5.3.1 Relying Party: Request consent
 
-A [Qiy Application](Definitions.md#qiy-application) of a [Relying Party](Definitions.md#relying-party) can request an [Individual](Definitions.md#individual) for [Consent](Definitions.md#consent) as follows:
+A [Qiy Application](Definitions.md#qiy-application) of a [Relying Party](Definitions.md#relying-party) can [Request](Definitions.md#request) an [Individual](Definitions.md#individual) for [Consent](Definitions.md#consent) as follows:
 * The [Qiy Application](Definitions.md#qiy-application) sends a [Consent Request Message](Definitions.md#consent-request-message) over the [Connection](Definitions.md#connection) with the [Individual](Definitions.md#individual).
-* The [Qiy Application](Definitions.md#qiy-application) receives a [Message](Definitions.md#message) with the outcome, either a [Consent Granted Message](Definitions.md#consent-granted-message) or a [Consent Denied Message](Definitions.md#consent-denied-message).
+* The [Qiy Application](Definitions.md#qiy-application) receives a message with the outcome, either a [Consent Granted Message](Definitions.md#consent-granted-message) or a [Consent Denied Message](Definitions.md#consent-denied-message).
 
 ![Relying Party: Request consent](./images/relying-party--request-consent.png)
 
@@ -692,18 +692,18 @@ A [Qiy Application](Definitions.md#qiy-application) can present an [Individual](
 ## 5.5 Data by Reference
 [Qiy Applications](Definitions.md#qiy-application) exchange [data by reference](Definitions.md#data-by-reference) rather then by value.
 This goes as follows:
-* A [Qiy Application](Definitions.md#qiy-application) requests a reference for the [Data](Definitions.md#data) ([Data Reference](Definitions.md#data-reference)).
+* A [Qiy Application](Definitions.md#qiy-application) [Requests](Definitions.md#request) a [Reference](Definitions.md#reference) for the [Data](Definitions.md#data) ([Data Reference](Definitions.md#data-reference)).
 * The [Qiy Application](Definitions.md#qiy-application) receives a [Data Reference](Definitions.md#data-reference).
 * The [Qiy Application](Definitions.md#qiy-application) uses the [Data Reference](Definitions.md#data-reference) to acquire the [Data](Definitions.md#data).
 
 ### 5.5.1 Service by Reference
 In Qiy providing [Data](Definitions.md#data) is viewed as a [Service](Definitions.md#service) and requesting [Data](Definitions.md#data) as an [Operation](Definitions.md#operation) of this [Service](Definitions.md#service), so the 'data by reference'-pattern is implemented as using a [Service by Reference](Definitions.md#service-by-reference)-pattern:
-* A [Qiy Application](Definitions.md#qiy-application) requests an [Operation Reference](Definitions.md#operation-reference) using an [Operation Reference Request Message](Definitions.md#operation-reference-request-message).
+* A [Qiy Application](Definitions.md#qiy-application) [Requests](Definitions.md#request) an [Operation Reference](Definitions.md#operation-reference) using an [Operation Reference Request Message](Definitions.md#operation-reference-request-message).
 * An [Operation Reference](Definitions.md#operation-reference) is created by registrating the [Operation Specification](Definitions.md#operation-specification) using an [Operation Register Request](Definitions.md#operation-register-request) and returned using an [Operation Reference Message](Definitions.md#operation-reference-message).
 * The [Qiy Application](Definitions.md#qiy-application) can call for the execution of an [Operation](Definitions.md#operation) by submitting the [Operation Reference](Definitions.md#operation-reference) in an [Operation Execute Request](Definitions.md#operation-execute-request).
 
 ### 5.5.2 Request data reference
-The [Qiy Application](Definitions.md#qiy-application) of a [Relying Party](Definitions.md#relying-party) can request an [Individual](Definitions.md#individual) for a [Data Reference](Definitions.md#data-reference) as follows:
+The [Qiy Application](Definitions.md#qiy-application) of a [Relying Party](Definitions.md#relying-party) can [Request](Definitions.md#request) an [Individual](Definitions.md#individual) for a [Data Reference](Definitions.md#data-reference) as follows:
 * The [Qiy Application](Definitions.md#qiy-application) sends a [Operation Reference Request Message](Definitions.md#operation-reference-request-message) using the [Connection](Definitions.md#connection) of the [Individual](Definitions.md#individual).
 * The [Qiy Application](Definitions.md#qiy-application) receives the [Operation Reference](Definitions.md#operation-reference) in an [Operation Reference Message](Definitions.md#operation-reference-message).
 
@@ -747,14 +747,14 @@ A [Qiy Node](Definitions.md#qiy-node) is a [Technology Service](Definitions.md#t
 A [Qiy Node](Definitions.md#qiy-node):
 * ... must comply with the rules of the [Qiy Scheme](Definitions.md#qiy-scheme).
 * ... can be hosted on any host ([Node](Definitions.md#node)).
-* ... has its own [Transporter](Definitions.md#transporter) which ensures secure transport of [Messages](Definitions.md#message) and/or [Data](Definitions.md#data) via Qiy.
+* ... has its own [Transporter](Definitions.md#transporter) which ensures secure transport of messages and/or [Data](Definitions.md#data) via Qiy.
 
 ### 6.2.1 Qiy Node Protocol
 The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) describes the interaction between the [Qiy Nodes](Definitions.md#qiy-node) and the underlying layers.
 * The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) is one of the protocols in the [Qiy Open Standard](Definitions.md#qiy-open-standard).
 The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) describes for example:
 * How a [Qiy Node](Definitions.md#qiy-node) is instantiated.
-* How [Qiy Nodes](Definitions.md#qiy-node) create [Connections](Definitions.md#connection) and use them to exchange [Data](Definitions.md#data), [Messages](Definitions.md#message) or to provide/consume [Services](Definitions.md#service).
+* How [Qiy Nodes](Definitions.md#qiy-node) create [Connections](Definitions.md#connection) and use them to exchange [Data](Definitions.md#data), messages or to provide/consume [Services](Definitions.md#service).
 
 ### 6.2.2 Qiy Node API
 The [Qiy Node API](Definitions.md#qiy-node-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Qiy Node](Definitions.md#qiy-node), one of the APIs of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
@@ -776,14 +776,14 @@ In this case, the [Qiy Node](Definitions.md#qiy-node) will be deleted including 
 Related [Consents](Definitions.md#consent) will be withdrawn.
 
 ## 6.3 Connect
-Two [Qiy Nodes](Definitions.md#qiy-node) can [Connect](Definitions.md#connect) by creating a [Path](Definitions.md#path) between themselves.
-* A [Qiy Node](Definitions.md#qiy-node) can [Connect](Definitions.md#connect) with zero or more other [Qiy Nodes](Definitions.md#qiy-node).
+Two [Qiy Nodes](Definitions.md#qiy-node) can connect by creating a [Path](Definitions.md#path) between themselves.
+* A [Qiy Node](Definitions.md#qiy-node) can connect with zero or more other [Qiy Nodes](Definitions.md#qiy-node).
 * A [Qiy Node](Definitions.md#qiy-node) can have zero or more [Paths](Definitions.md#path) with any other [Qiy Node](Definitions.md#qiy-node).
-* A priori, a [Qiy Node](Definitions.md#qiy-node) does not know the identity of the [Qiy Node](Definitions.md#qiy-node) at the other side of a [Path](Definitions.md#path).
+* A priori, a [Qiy Node](Definitions.md#qiy-node) does not know the [Identity](Definitions.md#identity) of the [Qiy Node](Definitions.md#qiy-node) at the other side of a [Path](Definitions.md#path).
 
 ### 6.3.1 Connection Uri
-The [Connection Uri](Definitions.md#connection-uri) is the [Uri](Definitions.md#uri) which identifies a [Connection](Definitions.md#connection) for one of the [Qiy Node](Definitions.md#qiy-node) it [Connects](Definitions.md#connect).
-* A [Connection](Definitions.md#connection) has two [Connection Uris](Definitions.md#connection-uri); one for each of the two [Qiy Nodes](Definitions.md#qiy-node) it [Connects](Definitions.md#connect).
+The [Connection Uri](Definitions.md#connection-uri) is the [Uri](Definitions.md#uri) which identifies a [Connection](Definitions.md#connection) for one of the [Qiy Node](Definitions.md#qiy-node) it connects.
+* A [Connection](Definitions.md#connection) has two [Connection Uris](Definitions.md#connection-uri); one for each of the two [Qiy Nodes](Definitions.md#qiy-node) it connects.
 * The two [Connection Uris](Definitions.md#connection-uri) of one [Connection](Definitions.md#connection) are not related to one another.
 * A priori, a [Qiy Node](Definitions.md#qiy-node) does not know the other [Connection Uri](Definitions.md#connection-uri) of a [Connection](Definitions.md#connection).
 
@@ -796,7 +796,7 @@ EXAMPLE: [Connection Uris](Definitions.md#connection-uri) of a [Connection](Defi
 
 #### 6.3.1.1 Security concern
 The [Connection Uri](Definitions.md#connection-uri) has only meaning in the context of the [Qiy Node](Definitions.md#qiy-node) that knows it and is useless outside this scope.
-For example, the [Uri](Definitions.md#uri) by itself can not be used to exchange a [Message](Definitions.md#message) with the [Qiy Node](Definitions.md#qiy-node) nor any other existing [Qiy Node](Definitions.md#qiy-node).
+For example, the [Uri](Definitions.md#uri) by itself can not be used to exchange a message with the [Qiy Node](Definitions.md#qiy-node) nor any other existing [Qiy Node](Definitions.md#qiy-node).
 
 ### 6.3.2 Connect Token
 A [Connect Token](Definitions.md#connect-token) is a [Token](Definitions.md#token) which can be used by a [Qiy Application](Definitions.md#qiy-application) to create a [Connection](Definitions.md#connection).
@@ -829,7 +829,7 @@ A [Qiy Node](Definitions.md#qiy-node) will never create a [Transport Connect Tok
 * In case of an [Offline Connect Token](Definitions.md#offline-connect-token): The [Qiy Node](Definitions.md#qiy-node) will compose a [Transport Connect Token](Definitions.md#transport-connect-token) using the [Connect Token](Definitions.md#connect-token) provided by the [Qiy Application](Definitions.md#qiy-application) and register it at its [Transporter](Definitions.md#transporter).
 
 ### 6.3.3 Connecting
-Two [Qiy Nodes](Definitions.md#qiy-node) [Connect](Definitions.md#connect) as follows:
+Two [Qiy Nodes](Definitions.md#qiy-node) connect as follows:
 * The [Qiy Node](Definitions.md#qiy-node) of the [Proposer](Definitions.md#proposer) either 1) obtains a [Transport Connect Token](Definitions.md#transport-connect-token) from the [Transporter](Definitions.md#transporter) or 2) from a linked [Qiy Application](Definitions.md#qiy-application) in a [Connection Create Request](Definitions.md#connection-create-request).
 * The [Qiy Node](Definitions.md#qiy-node) either 1) provides the [Transport Connect Token](Definitions.md#transport-connect-token) to the [Qiy Application](Definitions.md#qiy-application) or 2) registers the [Transport Connect Token](Definitions.md#transport-connect-token) at its [Transporter](Definitions.md#transporter).
 * The [Transport Connect Token](Definitions.md#transport-connect-token) is made available (partly out-of-bands, for example in a [Connect Proposal](Definitions.md#connect-proposal)) to the [Qiy Node](Definitions.md#qiy-node) of the [Accepter](Definitions.md#accepter).
@@ -838,7 +838,7 @@ Each accepted [Path Create Request](Definitions.md#path-create-request) leads to
 
 ### 6.3.4 Deleting a Connection
 A [Connection](Definitions.md#connection) can be deleted with a [Connection Delete Request](Definitions.md#connection-delete-request).
-The [Connection](Definitions.md#connection) will be deleted completely, including any persisted [Data](Definitions.md#data) and/or [Messages](Definitions.md#message) and underlying [Paths](Definitions.md#path).
+The [Connection](Definitions.md#connection) will be deleted completely, including any persisted [Data](Definitions.md#data) and/or messages and underlying [Paths](Definitions.md#path).
 Any related [Consents](Definitions.md#consent) will be withdrawn.
 
 ## 6.4 Consent
@@ -867,7 +867,7 @@ A [Qiy Node Request](Definitions.md#qiy-node-request) is a [Http Request](Defini
 [Qiy Node Requests](Definitions.md#qiy-node-request) are only accepted when they are correctly authenticated with:
 * the [Node Id](Definitions.md#node-id).
 * an actual timestamp
-* a digital signature over the [Node Id](Definitions.md#node-id), the timestamp and the contents of the body of the request made with the private key
+* a digital signature over the [Node Id](Definitions.md#node-id), the timestamp and the contents of the body of the [Request](Definitions.md#request) made with the private key
 
 ## 6.6 Qiy Node Requests
 This section gives an overview of the [Qiy Node Requests](Definitions.md#qiy-node-request).
@@ -901,7 +901,7 @@ The [Consent Denied Request](Definitions.md#consent-denied-request) is a [Qiy No
 The [Consent Granted Request](Definitions.md#consent-granted-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to record the granting of a [Consent](Definitions.md#consent).
 
 ### 6.6.10 Consent Request
-The [Consent Request](Definitions.md#consent-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to request for a [Consent](Definitions.md#consent).
+The [Consent Request](Definitions.md#consent-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
 
 ### 6.6.11 Consent Withdrawn Request
 The [Consent Withdrawn Request](Definitions.md#consent-withdrawn-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to record the withdrawal of a [Consent](Definitions.md#consent).
@@ -913,10 +913,10 @@ The [Consents Request](Definitions.md#consents-request) is a [Qiy Node Request](
 The [Message Post Request](Definitions.md#message-post-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](Definitions.md#qiy-node-message).
 
 ### 6.6.14 Messages Request
-The [Messages Request](Definitions.md#messages-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Messages](Definitions.md#message) of a [Qiy Node](Definitions.md#qiy-node).
+The [Messages Request](Definitions.md#messages-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](Definitions.md#qiy-node).
 
 ### 6.6.15 Operation Execute Request
-The [Operation Execute Request](Definitions.md#operation-execute-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by reference using an [Operation Reference](Definitions.md#operation-reference).
+The [Operation Execute Request](Definitions.md#operation-execute-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
 
 ### 6.6.16 Operation Register Request
 The [Operation Register Request](Definitions.md#operation-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registrating an [Operation Specification](Definitions.md#operation-specification).
@@ -931,7 +931,7 @@ The [Source Candidates Request](Definitions.md#source-candidates-request) is a [
 The [Source Register Request](Definitions.md#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Provider](Definitions.md#provider) as source for a [Service](Definitions.md#service).
  
 ## 6.7 Qiy Node Message
-A [Qiy Node Message](Definitions.md#qiy-node-message) is a [Message](Definitions.md#message) that is exchanged using a [Connection](Definitions.md#connection).
+A [Qiy Node Message](Definitions.md#qiy-node-message) is a message that is exchanged using a [Connection](Definitions.md#connection).
 [Qiy Node Messages](Definitions.md#qiy-node-message) can be sent with the [Message Post Request](Definitions.md#message-post-request), obtained using a [Messages Request](Definitions.md#messages-request) and monitored with [Qiy Node Events](Definitions.md#qiy-node-event) like [Message Received Event](Definitions.md#message-received-event).
 
 ## 6.8 Qiy Node Messages
@@ -945,13 +945,13 @@ The [Consent Denied Message](Definitions.md#consent-denied-message) is a [Qiy No
 The [Consent Granted Message](Definitions.md#consent-granted-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to communicate the granting of a [Consent](Definitions.md#consent).
 
 ### 6.8.3 Consent Request Message
-The [Consent Request Message](Definitions.md#consent-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to request for a [Consent](Definitions.md#consent).
+The [Consent Request Message](Definitions.md#consent-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
 
 ### 6.8.4 Operation Reference Message
 The [Operation Reference Message](Definitions.md#operation-reference-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference) over a [Connection](Definitions.md#connection).
  
 ### 6.8.5 Operation Reference Request Message
-The [Operation Reference Request Message](Definitions.md#operation-reference-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to request for [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Request Message](Definitions.md#operation-reference-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
  
 ## 6.9 Qiy Node Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) is a [Technology Event](Definitions.md#technology-event) of a [Qiy Node](Definitions.md#qiy-node).
@@ -1022,7 +1022,7 @@ A [Consent](Definitions.md#consent) can be accessed by both of the involved [Qiy
 * A [Provider](Definitions.md#provider) can only obtain [Personal Data](Definitions.md#personal-data) under a [Consent](Definitions.md#consent) which has not been withdrawn.
 
 # 8 The Transport Layer
-The [Transport Layer](Definitions.md#transport-layer) supports the secure transmission of [Messages](Definitions.md#message) ([Transport Messages](Definitions.md#transport-message)) over [Paths](Definitions.md#path) between [Transporters](Definitions.md#transporter).
+The [Transport Layer](Definitions.md#transport-layer) supports the secure transmission of messages ([Transport Messages](Definitions.md#transport-message)) over [Paths](Definitions.md#path) between [Transporters](Definitions.md#transporter).
 
 ## 8.1 Access Provider
 The [Services](Definitions.md#service) of this layer are only provided by an [Access Provider](Definitions.md#access-provider).
@@ -1031,7 +1031,7 @@ The [Services](Definitions.md#service) of this layer are only provided by an [Ac
 The [Qiy Scheme](Definitions.md#qiy-scheme) prescribes that one can easily switch [Access Provider](Definitions.md#access-provider) for these [Services](Definitions.md#service).
 
 ## 8.2 Transporter
-A [Transporter](Definitions.md#transporter) is a [Technology Service](Definitions.md#technology-service) which allows the secure transmission of [Messages](Definitions.md#message) and/or [Data](Definitions.md#data).
+A [Transporter](Definitions.md#transporter) is a [Technology Service](Definitions.md#technology-service) which allows the secure transmission of messages and/or [Data](Definitions.md#data).
 * A [Transporter](Definitions.md#transporter) must comply with the rules of the [Qiy Scheme](Definitions.md#qiy-scheme).
 * A [Transporter](Definitions.md#transporter) is hosted on a [Carrier Node](Definitions.md#carrier-node).
 * Each [Qiy Node](Definitions.md#qiy-node) has its own [Transporter](Definitions.md#transporter).
@@ -1068,10 +1068,10 @@ A [Path](Definitions.md#path) can be created by a [Transporter](Definitions.md#t
 
 ### 8.8.2 Deleting a Path
 A [Path](Definitions.md#path) can be deleted by either of the ending [Transporters](Definitions.md#transporter). 
-The [Path](Definitions.md#path) will be deleted including any persisted [Data](Definitions.md#data) and/or [Messages](Definitions.md#message).
+The [Path](Definitions.md#path) will be deleted including any persisted [Data](Definitions.md#data) and/or messages.
 
 # 9 The Carrier Layer
-The [Carrier Layer](Definitions.md#carrier-layer) supports the creation of [Paths](Definitions.md#path) and the secure transport of [Messages](Definitions.md#message) over them.
+The [Carrier Layer](Definitions.md#carrier-layer) supports the creation of [Paths](Definitions.md#path) and the secure transport of messages over them.
 
 ## 9.1 Access Provider
 The [Services](Definitions.md#service) of this layer are only provided by an [Access Provider](Definitions.md#access-provider).
@@ -1223,7 +1223,7 @@ end
 ```
 
 ## 10.2 Application Layer
-### 10.2.1 [Connect](Definitions.md#connect)
+### 10.2.1 Connect
 #### 10.2.1.1 Proposer: Connect
 ```
 title Proposer: Connect

@@ -31,7 +31,7 @@ As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archima
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
 ### Application Provider
-A [Bussiness Role](#bussiness-role) for suppliers of [Qiy Applications](#qiy-application).
+A [Business Role](#business-role) for suppliers of [Qiy Applications](#qiy-application).
 
 ### Application Service
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
@@ -141,10 +141,10 @@ A [Qiy Node Message](#qiy-node-message) which can be used to communicate the gra
 A [Qiy Node Request](#qiy-node-request) that can be used to record the granting of a [Consent](#consent).
 
 ### Consent Request
-A [Qiy Node Request](#qiy-node-request) which can be used to request for a [Consent](#consent).
+A [Qiy Node Request](#qiy-node-request) which can be used to [Request](#request) for a [Consent](#consent).
 
 ### Consent Request Message
-A [Qiy Node Message](#qiy-node-message) which can be used to request for a [Consent](#consent).
+A [Qiy Node Message](#qiy-node-message) which can be used to [Request](#request) for a [Consent](#consent).
 
 ### Consent Service
 A [Technology Service](#technology-service) used to maintain [Consents](#consent) and their status.
@@ -183,7 +183,7 @@ A description of [Data](#data) that is both human- and machine-readable as addre
 An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
 
 ### Data Provider
-A [User](#user) who provides [Data](#data) (or Assertions) through the [Qiy Network](#qiy-network) to other [Users](#user) on request.
+A [User](#user) who provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Network](#qiy-network) to other [Users](#user) on [Request](#request).
 
 A [Business Role](#business-role) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
 
@@ -206,7 +206,7 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 5 January, 2015.
 
 ### Entitlement
-A usage right for a resource owned by some other Entity.
+A usage right for a [Resource](#resource) owned by some other Entity.
 
 ### Federation
 A formation of a unity by multiple Entities in which some components are shared, while each retains control of its own affairs.
@@ -221,10 +221,10 @@ A formation of a unity by multiple Entities in which some components are shared,
 As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
 
 ### Identifier
-An attribute of an identity, which identifies it, with sufficient uniqueness and immutability, that its trustworthiness can be assessed in a known context.
+An [Attribute](#attribute) of an [Identity](#identity), which identifies it, with sufficient uniqueness and immutability, that its trustworthiness can be assessed in a known context.
 
 ### Identity
-A [User](#user) centric term. An Entity uses an Identity to represent an aspect of itself (such as parent or employee and client or server) through a collection of Attributes, in any interactive situation.
+A [User](#user) centric term. An Entity uses an [Identity](#identity) to represent an aspect of itself (such as parent or employee and client or server) through a collection of [Attributes](#attribute), in any interactive situation.
 
 ### Individual
 A natural person provided with a [Qiy Node](#qiy-node) by an [Issuer](#issuer) allowing him or her to access and to control his or her [Personal Data](#personal-data).
@@ -243,7 +243,7 @@ A [Business Role](#business-role) for an [Access Provider](#access-provider) tha
 Any legal organisation, computing device, or tangible asset; also any self-managed collection or organisation of Entities.
 
 ### License
-All [Qiy Scheme Servicing Parties](#qiy-scheme-servicing-party) ([RegionalAuthority](#regionalauthority), [Issuer](#issuer), [Service Provider](#service-provider)) require a license to operate on the basis of the [Qiy Scheme](#qiy-scheme). Participants can apply for a License by paying a fee and by complying with the [Qiy Scheme](#qiy-scheme)?s Rules & Regulations.
+All [Qiy Scheme Servicing Parties](#qiy-scheme-servicing-party) ([RegionalAuthority](#regionalauthority), [Issuer](#issuer), [Service Provider](#service-provider)) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Participants can apply for a [License](#license) by paying a fee and by complying with the [Qiy Scheme](#qiy-scheme)?s Rules & Regulations.
 
 ### License Agreement Application Provider
 A licence agreement for [Application Providers](#application-provider).
@@ -255,13 +255,13 @@ A licence agreement for [Issuers](#issuer), the template of which is part of the
 A licence agreement for [Service Providers](#service-provider), the template of which is part of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
 ### License Fee
-The combination of annual fees to be paid by a [Service Provider](#service-provider) to the [Scheme Authority](#scheme-authority) in exchange for a license.
+The combination of annual fees to be paid by a [Service Provider](#service-provider) to the [Scheme Authority](#scheme-authority) in exchange for a [License](#license).
 
 ### Literal
 A fixex value, see https://en.wikipedia.org/wiki/Literal_(computer_programming).
 
 ### Local ID
-Synonymous with Identifier
+Synonymous with [Identifier](#identifier)
 
 ### Merchant
 [Data Provider](#data-provider) or a [Relying Party](#relying-party)
@@ -273,7 +273,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to post a [Qiy Node Mes
 A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node Message](#qiy-node-message) has been received.
 
 ### Messages Request
-A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Messages](#message) of a [Qiy Node](#qiy-node).
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](#qiy-node).
 
 ### Node
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
@@ -291,7 +291,7 @@ A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
 A 'sub-service' which can be used to consume a [Service](#service).
 
 ### Operation Execute Request
-A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by reference using an [Operation Reference](#operation-reference).
+A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](#reference) using an [Operation Reference](#operation-reference).
 
 ### Operation Reference
 A [Business Object](#business-object) used by the [Service by Reference](#service-by-reference)-pattern.
@@ -303,7 +303,7 @@ A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation Re
 A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node](#qiy-node) has received a new [Operation Reference](#operation-reference).
 
 ### Operation Reference Request Message
-A [Qiy Node Message](#qiy-node-message) that can be used to request for [Operation References](#operation-reference).
+A [Qiy Node Message](#qiy-node-message) that can be used to [Request](#request) for [Operation References](#operation-reference).
 
 ### Operation References Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Operation References](#operation-reference) of a [Qiy Node](#qiy-node).
@@ -318,7 +318,7 @@ A specification of a [Http Request](#http-request) for the execution of an [Oper
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
 
 ### Path Create Request
-A request of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
+A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
 
 ### Personal Data
 [Data](#data) relating to an [Individual](#individual). This can be the name, address, telephone number, age, health [Data](#data), account balance, but also personal preferences, etcetera. [Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared with [Relying Parties](#relying-party) by [Individuals](#individual).
@@ -332,7 +332,7 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates cre
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that is providing one or more [Services](#service) using Qiy, that is a [Data Provider](#data-provider) or a [Relying Party](#relying-party).
 
 ### Pseudonym
-Synonymous with Identifier
+Synonymous with [Identifier](#identifier)
 
 ### Qiy Application
 An [Application Service](#application-service) or software that is authorized for use with Qiy.
@@ -398,7 +398,7 @@ A [Business Actor](#business-actor); defined as 'User' in [Definitions of the Qi
 A [Literal](#literal).
 
 ### Regional Scheme Authority
-The [Scheme Authority](#scheme-authority), which adheres to the overall [Qiy Scheme](#qiy-scheme) and fulfils the following roles at the level of a geographic region: * License [Issuers](#issuer), [Service Providers](#service-provider) and [Identity Providers](#identity-provider) under the rules and regulations of the [Global Scheme Authority](#global-scheme-authority); * Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Global Scheme Authority](#global-scheme-authority) and to assist in fraud prevention; * Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme); * Facilitate an independent complaint and appeal process for licence and certificate holders; * Ensure compliance; * Collect [License Fees](#license-fee).
+The [Scheme Authority](#scheme-authority), which adheres to the overall [Qiy Scheme](#qiy-scheme) and fulfils the following [Roles](#role) at the level of a geographic region: * License [Issuers](#issuer), [Service Providers](#service-provider) and [Identity Providers](#identity-provider) under the rules and regulations of the [Global Scheme Authority](#global-scheme-authority); * Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Global Scheme Authority](#global-scheme-authority) and to assist in fraud prevention; * Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme); * Facilitate an independent complaint and appeal process for licence and certificate holders; * Ensure compliance; * Collect [License Fees](#license-fee).
 
 ### Relying Party
 A [User](#user) that relies on the [Qiy Network](#qiy-network) to deliver [Services](#service) to an [Individual](#individual).
@@ -412,13 +412,13 @@ An agreement that is required for [Relying Parties](#relying-party).
 A [Business Object](#business-object): a message requesting something.
 
 ### Resource
-A [Service](#service), which its owner can provide to another identity.
+A [Service](#service), which its owner can provide to another [Identity](#identity).
 
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
 
 ### Scheme Authority
-The non-profit Entity, which fulfils the following roles at a global level: * Supervision and monitoring * Definition of eligibility requirements for licenses and/or certifications * Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) * Lobbying and maintaining a constant dialogue with all stakeholders * Maintaining overall business continuity * Compliance
+The non-profit Entity, which fulfils the following [Roles](#role) at a global level: * Supervision and monitoring * Definition of eligibility requirements for [Licenses](#license) and/or certifications * Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) * Lobbying and maintaining a constant dialogue with all stakeholders * Maintaining overall business continuity * Compliance
 
 ### Service
 An 'information society service' as defined in the [GDPR](#gdpr).
@@ -459,7 +459,7 @@ A [Business Role](#business-role): an [Access Provider](#access-provider) which 
 A [Provider](#provider) that can or is providing a specific [Service](#service).
 
 ### Service by Reference
-A pattern for consuming [Services](#service) indirectly using references ([Operation Reference](#operation-reference)).
+A pattern for consuming [Services](#service) indirectly using [References](#reference) ([Operation Reference](#operation-reference)).
 
 ### Source Candidate Event
 A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node](#qiy-node) has received a new [Source Candidate](#source-candidate) for a [Consent](#consent).
@@ -483,7 +483,7 @@ As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archima
 The geographic region served by a [Regional Authority](#regional-authority).
 
 ### Transition Phase 
-[Temporarily Phase](#temporarily-phase) from July 1, 2015 to June 30, 2019 during which an ad-interim [Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme) is established. During this period the [Qiy Foundation](#qiy-foundation) fulfills the roles of [Global Scheme Authority](#global-scheme-authority) and [Regional Scheme Authority](#regional-scheme-authority). 
+[Temporarily Phase](#temporarily-phase) from July 1, 2015 to June 30, 2019 during which an ad-interim [Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme) is established. During this period the [Qiy Foundation](#qiy-foundation) fulfills the [Roles](#role) of [Global Scheme Authority](#global-scheme-authority) and [Regional Scheme Authority](#regional-scheme-authority). 
 
 ### Transport Connect Token
 A [Literal](#literal) used to create [Paths](#path).
@@ -534,10 +534,10 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 [Data](#data) whose source can be determined reliably
 
 ### Verified Attribute
-An Attribute that has been assigned to an Entity by a trusted third party.
+An [Attribute](#attribute) that has been assigned to an Entity by a trusted third party.
 
 ### Verified Identifier
-An Identifier that has been linked to an Entity by a trusted third party.
+An [Identifier](#identifier) that has been linked to an Entity by a trusted third party.
 
 ### Work Stream Functionality & Technology
 One of the work streams of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation.org/qiy-scheme/workstreams/
