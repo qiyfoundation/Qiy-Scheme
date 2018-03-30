@@ -186,7 +186,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to record the withdrawa
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Consents](#consent) of a [Qiy Node](#qiy-node).
 
 ### Core Identifier
-Immutable and secret means, which uniquely identify a [Qiy Node](#qiy-node) registration
+Immutable and secret means, which uniquely identify a [Qiy Node](#qiy-node) registration.
 
 ### Credential
 Immutable combination of [Verified Identifier](#verified-identifier) and [Verified Attributes](#verified-attribute)
@@ -236,6 +236,9 @@ See https://en.wikipedia.org/wiki/Entity.
 
 ### Entitlement
 A usage right for a [Resource](#resource) owned by some other [Entity](#entity).
+
+### Expiration Date
+The Expiration Date of the [Transition Phase](#transition-phase): 30 juni 2019, or any earlier date as set unilaterally by the [Scheme Authority](#scheme-authority).
 
 ### Executive Board
 tbd
@@ -396,9 +399,7 @@ A member of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation
 tbd
 
 ### Qiy Node
-A single point of entry for a [User](#user) to connect to his personal or organisational [Data](#data) and allowing to manage and share [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
-
-A [Technology Service](#technology-service) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+A [Techology Service](#techology-service): a point of entry for a [Qiy User](#qiy-user) to connect to his personal or organisational [Data](#data) and allowing to manage and reuse [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
 A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
@@ -446,9 +447,7 @@ tbd
 tbd
 
 ### Qiy Trust Principles
-The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Users](#user) must respect these principles.
-
-As defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme), see https://www.qiyfoundation.org/qiy-trust-principles/.
+The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Qiy Users](#qiy-user) must respect these principles.
 
 ### Qiy User
 A [Business Role](#business-role): an [Entity](#entity) that is using the [Qiy Trust Network](#qiy-trust-network).
@@ -460,7 +459,13 @@ A [Literal](#literal).
 tbd
 
 ### Regional Scheme Authority
-The [Scheme Authority](#scheme-authority), which adheres to the overall [Qiy Scheme](#qiy-scheme) and fulfils the following [Roles](#role) at the level of a geographic region: * License [Access Providers](#access-provider) under the rules and regulations of the [Global Scheme Authority](#global-scheme-authority); * Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Global Scheme Authority](#global-scheme-authority) and to assist in fraud prevention; * Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme); * Facilitate an independent complaint and appeal process for licence and certificate holders; * Ensure compliance; * Collect [License Fees](#license-fee).
+The [Scheme Authority](#scheme-authority), which adheres to the overall [Qiy Scheme](#qiy-scheme) and fulfils the following [Roles](#role) at the level of a geographic region: 
+* License [Access Providers](#access-provider) under the rules and regulations of the [Global Scheme Authority](#global-scheme-authority)
+* Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Global Scheme Authority](#global-scheme-authority) and to assist in fraud prevention
+* Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme)
+* Facilitate an independent complaint and appeal process for licence and certificate holders
+* Ensure compliance
+* Collect [License Fees](#license-fee)
 
 ### Relying Party
 A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
@@ -490,7 +495,13 @@ tbd
 tbd
 
 ### Scheme Authority
-The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at a global level: * Supervision and monitoring * Definition of eligibility requirements for [Licenses](#license) and/or certifications * Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) * Lobbying and maintaining a constant dialogue with all stakeholders * Maintaining overall business continuity * Compliance
+The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at a global level: 
+* Supervision and monitoring 
+* Definition of eligibility requirements for [Licenses](#license) and/or certifications 
+* Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) 
+* Lobbying and maintaining a constant dialogue with all stakeholders 
+* Maintaining overall business continuity 
+* Compliance
 
 ### Scheme Documents
 tbd
@@ -561,9 +572,6 @@ As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archima
 ### Technology Service
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
 
-### Temporarily Phase
-tbd
-
 ### Territory
 The geographic region served by a [Regional Authority](#regional-authority).
 
@@ -571,7 +579,7 @@ The geographic region served by a [Regional Authority](#regional-authority).
 See https://en.wikipedia.org/wiki/Token#Computing.
 
 ### Transition Phase 
-[Temporarily Phase](#temporarily-phase) from July 1, 2015 to June 30, 2019 during which an ad-interim [Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme) is established. During this period the [Qiy Foundation](#qiy-foundation) fulfills the [Roles](#role) of [Global Scheme Authority](#global-scheme-authority) and [Regional Scheme Authority](#regional-scheme-authority). 
+Temporarily phase from July 1, 2015 to the [Expiration Date](#expiration-date) during which an ad-interim [Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme) is established. During this period the [Qiy Foundation](#qiy-foundation) fulfills the [Roles](#role) of [Global Scheme Authority](#global-scheme-authority) and [Regional Scheme Authority](#regional-scheme-authority). 
 
 ### Transport Connect Token
 A [Literal](#literal) used to create [Paths](#path).
@@ -623,10 +631,10 @@ In the context of the Qiy Scheme, see: [Qiy User](#qiy-user).
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
 ### Uuid
-See https://en.wikipedia.org/wiki/Universally_unique_identifier
+See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 
 ### Validated data
-[Data](#data) whose source can be determined reliably
+[Data](#data) whose source can be determined reliably.
 
 ### Verified Attribute
 An [Attribute](#attribute) that has been assigned to an [Entity](#entity) by a trusted third party.
