@@ -2,7 +2,7 @@
 
 ## Abstract
 
-The [Qiy Scheme](#qiy-scheme) defines a framework for [Individual](#individual) [Users](#user), companies and governmental organizations to safely control and exchange personal information. This document defines the most important terms of the [Qiy Scheme](#qiy-scheme) and is referred to from all other [Scheme Documents](#scheme-document).
+The [Qiy Scheme](#qiy-scheme) defines a framework for [Individual](#individual) [Users](#user), companies and governmental organizations to safely control and exchange personal information. This document defines the most important terms of the [Qiy Scheme](#qiy-scheme) and is referred to from all other [Qiy Scheme](#qiy-scheme) documents.
 
 # Definitions
 
@@ -13,7 +13,7 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) who is creating a 
 The principle which authorizes the access of an [Individual](#individual) to his [Personal Data](#personal-data), one of the [Qiy Trust Principles](#qiy-trust-principles).
 
 ### Access Provider
-An organization which provides [Qiy Users](#qiy-user) access to the [Qiy Trust Framework](#qiy-trust-framework), either an [Issuer](#issuer) or a [Service Provider](#service-provider).
+An organization which provides [Qiy Users](#qiy-user) access to the [Qiy Trust Network](#qiy-trust-network).
 
 ### Accountability
 [Data Provider](#data-provider) and [Relying Party](#relying-party) are responsible for, and must be able to demonstrate compliance with the principles
@@ -30,8 +30,14 @@ As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archima
 ### Application Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
-### Application Provider
-A [Business Role](#business-role) for suppliers of [Qiy Applications](#qiy-application).
+### Application Management
+tbd
+
+### Application Message
+tbd
+
+### Application Protocol
+tbd
 
 ### Application Service
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
@@ -43,7 +49,7 @@ The [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-schem
 A positive statement or declaration about a [User](#user).
 
 ### Attribute
-A quality or characteristic of an Entity.
+A quality or characteristic of an [Entity](#entity).
 
 ### Binding Individual Rights
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
@@ -51,8 +57,11 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 ### Binding Individual Rules
 The general conditions on which basis the [Individual](#individual) may agree to exchange [Personal Data](#personal-data) with other parties via the [Qiy Scheme](#qiy-scheme). In particular, this charter supervises all forms of [Data](#data) exchange between an [Individual](#individual) and a third party offering its [Services](#service) within the [Qiy Scheme](#qiy-scheme) (called [Relying Parties](#relying-party) and [Data Providers](#data-provider)).
 
+### Binding Principles
+See [Binding Principles for Relying Parties and Data Providers](#binding-principles-for-relying-parties-and-data-provider).
+
 ### Binding Principles for Relying Parties and Data Providers
-The rules for Entities ([Relying Parties](#relying-party) and [Data Providers](#data-provider)) to follow in order to be allowed to participate in the [Qiy Scheme](#qiy-scheme).
+The rules for [Entities](#entity) ([Relying Parties](#relying-party) and [Data Providers](#data-provider)) to follow in order to be allowed to participate in the [Qiy Scheme](#qiy-scheme).
 
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
@@ -86,6 +95,9 @@ A [Node](#node) which hosts one or more [Carriers](#carrier).
 ### Carrier Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
 
+### Charter for Individuals
+tbd
+
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
 
@@ -116,6 +128,9 @@ A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection
 ### Connection Details Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain the details of a [Connection](#connection).
 
+### Connection Management
+tbd
+
 ### Connection Uri
 A [Uri](#uri) which is used to identify a [Connection](#connection).
 
@@ -139,6 +154,9 @@ A [Qiy Node Message](#qiy-node-message) which can be used to communicate the gra
 
 ### Consent Granted Request
 A [Qiy Node Request](#qiy-node-request) that can be used to record the granting of a [Consent](#consent).
+
+### Consent Management
+tbd
 
 ### Consent Request
 A [Qiy Node Request](#qiy-node-request) which can be used to [Request](#request) for a [Consent](#consent).
@@ -182,10 +200,12 @@ A description of [Data](#data) that is both human- and machine-readable as addre
 ### Data Descriptor
 An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
 
-### Data Provider
-A [User](#user) who provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Network](#qiy-network) to other [Users](#user) on [Request](#request).
+### Data Notifications
+tbd
 
-A [Business Role](#business-role) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+### Data Provider
+A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user): a [Legal Entity](#legal-entity) that provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Trust Network](#qiy-trust-network) to other [Qiy Users](#qiy-user) on [Request](#request).
+
 
 ### Data Provider Agreement
 An agreement required for [Data Providers](#data-provider).
@@ -202,69 +222,86 @@ A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
+### Disputes Commission
+tbd
+
+### Domain Name System
+See https://en.wikipedia.org/wiki/Domain_Name_System.
+
 ### Effective Date
 5 January, 2015.
 
+### Entity
+See https://en.wikipedia.org/wiki/Entity.
+
 ### Entitlement
-A usage right for a [Resource](#resource) owned by some other Entity.
+A usage right for a [Resource](#resource) owned by some other [Entity](#entity).
+
+### Executive Board
+tbd
 
 ### Federation
-A formation of a unity by multiple Entities in which some components are shared, while each retains control of its own affairs.
+A formation of a unity by multiple [Entities](#entity) in which some components are shared, while each retains control of its own affairs.
 
 ### GDPR
+See [General Data Protection Regulation](#general-data-protection-regulation).
+
+### General Data Protection Regulation
 [General Data Protection Regulation](#general-data-protection-regulation), see http://eur-lex.europa.eu/legal-content/EN-NL/TXT/?uri=CELEX:32016R0679&from=EN. 
 
+### Global Authority
+tbd
+
+### Global Scheme Authority
+tbd
+
+### Governance Model
+See [Governance Model for the Qiy Scheme](#governance-model-for-the-qiy-scheme).
+
 ### Governance Model for the Qiy Scheme
-[Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme), see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/.
+tbd
 
 ### HTTP Request
-As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
+As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
 An [Attribute](#attribute) of an [Identity](#identity), which identifies it, with sufficient uniqueness and immutability, that its trustworthiness can be assessed in a known context.
 
 ### Identity
-A [User](#user) centric term. An Entity uses an [Identity](#identity) to represent an aspect of itself (such as parent or employee and client or server) through a collection of [Attributes](#attribute), in any interactive situation.
+A [User](#user) centric term. An [Entity](#entity) uses an [Identity](#identity) to represent an aspect of itself (such as parent or employee and client or server) through a collection of [Attributes](#attribute), in any interactive situation.
+
+### Incoming Data Requests
+tbd
 
 ### Individual
-A natural person provided with a [Qiy Node](#qiy-node) by an [Issuer](#issuer) allowing him or her to access and to control his or her [Personal Data](#personal-data).
-
-A [Business Role](#business-role) of a [Qiy User](#qiy-user) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), for a natural person that uses the [Qiy Trust Network](#qiy-trust-network).
 
 ### Information 
 [Data](#data) processed, organised, structured, or presented in a certain context, so that it is usable. Information provides context to [Data](#data).
 
-### Issuer
-An Entity entitled to create [Qiy Nodes](#qiy-node) for [Individuals](#individual).
-
-A [Business Role](#business-role) for an [Access Provider](#access-provider) that provides [Services](#service) to natural persons, see [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+### Key Management
+See https://en.wikipedia.org/wiki/Key_management.
 
 ### Legal Entity
-Any legal organisation, computing device, or tangible asset; also any self-managed collection or organisation of Entities.
+See https://en.wikipedia.org/wiki/Entity#In_law.
 
 ### License
-All [Qiy Scheme Servicing Parties](#qiy-scheme-servicing-party) ([RegionalAuthority](#regionalauthority), [Issuer](#issuer), [Service Provider](#service-provider)) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Participants can apply for a [License](#license) by paying a fee and by complying with the [Qiy Scheme](#qiy-scheme)?s Rules & Regulations.
+[Regional Authorities](#regional-authority) and [Access Providers](#access-provider) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Parties can apply for a [License](#license) which requires paying a fee and complying with the [Qiy Scheme](#qiy-scheme)'s Rules & Regulations.
 
-### License Agreement Application Provider
-A licence agreement for [Application Providers](#application-provider).
-
-### License Agreement Issuer
-A licence agreement for [Issuers](#issuer), the template of which is part of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
-
-### License Agreement Service Provider
-A licence agreement for [Service Providers](#service-provider), the template of which is part of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
+### License Agreement Access Provider
+A licence agreement for [Access Providers](#access-provider), the template of which is part of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
 ### License Fee
-The combination of annual fees to be paid by a [Service Provider](#service-provider) to the [Scheme Authority](#scheme-authority) in exchange for a [License](#license).
+The combination of annual fees to be paid by an [Access Provider](#access-provider) to the [Scheme Authority](#scheme-authority) in exchange for a [License](#license).
 
 ### Literal
-A fixex value, see https://en.wikipedia.org/wiki/Literal_(computer_programming).
+See https://en.wikipedia.org/wiki/Literal_(computer_programming).
 
 ### Local ID
 Synonymous with [Identifier](#identifier)
 
-### Merchant
-[Data Provider](#data-provider) or a [Relying Party](#relying-party)
+### Master License
+tbd
 
 ### Message Post Request
 A [Qiy Node Request](#qiy-node-request) that can be used to post a [Qiy Node Message](#qiy-node-message).
@@ -312,7 +349,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
 
 ### Operation Specification
-A specification of a [Http Request](#http-request) for the execution of an [Operation](#operation).
+A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
 
 ### Path
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
@@ -328,11 +365,14 @@ As defined in the [GDPR](#gdpr).
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
 
-### Provider
-A [Business Role](#business-role) for a [Qiy User](#qiy-user) that is providing one or more [Services](#service) using Qiy, that is a [Data Provider](#data-provider) or a [Relying Party](#relying-party).
+### Proposer Id
+The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
 
 ### Pseudonym
 Synonymous with [Identifier](#identifier)
+
+### Public Key Infrastructure
+See https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
 ### Qiy Application
 An [Application Service](#application-service) or software that is authorized for use with Qiy.
@@ -340,19 +380,31 @@ An [Application Service](#application-service) or software that is authorized fo
 ### Qiy Application Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
 
+### Qiy Architecture
+tbd
+
+### Qiy Authority
+tbd
+
 ### Qiy Foundation
 A foundation dedicated to putting people back in control of their [Personal Data](#personal-data) while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
 
 ### Qiy Foundation Member
 A member of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation.org/membership/.
 
+### Qiy Infrastructure
+tbd
+
 ### Qiy Node
-A single point of entry for a [User](#user) to connect to his personal or organisational [Data](#data) and allowing to manage and share [Data](#data) via the [Qiy Network](#qiy-network).
+A single point of entry for a [User](#user) to connect to his personal or organisational [Data](#data) and allowing to manage and share [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
 
 A [Technology Service](#technology-service) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
 
 ### Qiy Node API
 A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
+
+### Qiy Node Credentials
+The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
 
 ### Qiy Node Event
 A [Technology Event](#technology-event) of a [Qiy Node](#qiy-node).
@@ -370,21 +422,28 @@ A message that is exchanged using a [Connection](#connection).
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node).
 
 ### Qiy Node Request
-A [Http Request](#http-request) for a [Qiy Node](#qiy-node).
+A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
+
+### Qiy Node Requirements
+tbd
 
 ### Qiy Open Standard
 A set of open standards for Qiy, maintained by the [Work Stream Functionality & Technology](#work-stream-functionality-&-technology), see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
 
 ### Qiy Scheme
-The open standard and the set of technical, operational and business rules and agreements which fosters interoperability between the interconnected Entities, and which enables the exchange of [Data](#data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Network](#qiy-network) through which [Users](#user) can safely control and exchange personal information to which an [Individual](#individual) can connect via a [Personal Qiy Node](#personal-qiy-node).
-
-See https://www.qiyfoundation.org/qiy-scheme/.
+The open standard and the set of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Data](#data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange personal information to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).
 
 ### Qiy Scheme Rulebook
-A set of documents concerning governance, legal and technical aspects of the [Qiy Scheme](#qiy-scheme), see https://www.qiyfoundation.org/qiy-scheme/qiy-scheme-rulebook/
+A set of documents concerning governance, legal and technical aspects of the [Qiy Scheme](#qiy-scheme).
 
-### Qiy Trust Framework
-As defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+### Qiy Security and Privacy Considerations Specification
+tbd
+
+### Qiy Standard
+tbd
+
+### Qiy Trust Network
+tbd
 
 ### Qiy Trust Principles
 The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Users](#user) must respect these principles.
@@ -392,18 +451,19 @@ The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overa
 As defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme), see https://www.qiyfoundation.org/qiy-trust-principles/.
 
 ### Qiy User
-A [Business Actor](#business-actor); defined as 'User' in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+A [Business Role](#business-role): an [Entity](#entity) that is using the [Qiy Trust Network](#qiy-trust-network).
 
 ### Reference
 A [Literal](#literal).
 
+### Regional Authority
+tbd
+
 ### Regional Scheme Authority
-The [Scheme Authority](#scheme-authority), which adheres to the overall [Qiy Scheme](#qiy-scheme) and fulfils the following [Roles](#role) at the level of a geographic region: * License [Issuers](#issuer), [Service Providers](#service-provider) and [Identity Providers](#identity-provider) under the rules and regulations of the [Global Scheme Authority](#global-scheme-authority); * Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Global Scheme Authority](#global-scheme-authority) and to assist in fraud prevention; * Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme); * Facilitate an independent complaint and appeal process for licence and certificate holders; * Ensure compliance; * Collect [License Fees](#license-fee).
+The [Scheme Authority](#scheme-authority), which adheres to the overall [Qiy Scheme](#qiy-scheme) and fulfils the following [Roles](#role) at the level of a geographic region: * License [Access Providers](#access-provider) under the rules and regulations of the [Global Scheme Authority](#global-scheme-authority); * Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Global Scheme Authority](#global-scheme-authority) and to assist in fraud prevention; * Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme); * Facilitate an independent complaint and appeal process for licence and certificate holders; * Ensure compliance; * Collect [License Fees](#license-fee).
 
 ### Relying Party
-A [User](#user) that relies on the [Qiy Network](#qiy-network) to deliver [Services](#service) to an [Individual](#individual).
-
-A [Business Role](#business-role) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
 
 ### Relying Party Agreement
 An agreement that is required for [Relying Parties](#relying-party).
@@ -417,8 +477,23 @@ A [Service](#service), which its owner can provide to another [Identity](#identi
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
 
+### Route
+tbd
+
+### Router
+tbd
+
+### Router Requirements
+tbd
+
+### Routing Layer
+tbd
+
 ### Scheme Authority
-The non-profit Entity, which fulfils the following [Roles](#role) at a global level: * Supervision and monitoring * Definition of eligibility requirements for [Licenses](#license) and/or certifications * Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) * Lobbying and maintaining a constant dialogue with all stakeholders * Maintaining overall business continuity * Compliance
+The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at a global level: * Supervision and monitoring * Definition of eligibility requirements for [Licenses](#license) and/or certifications * Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) * Lobbying and maintaining a constant dialogue with all stakeholders * Maintaining overall business continuity * Compliance
+
+### Scheme Documents
+tbd
 
 ### Service
 An 'information society service' as defined in the [GDPR](#gdpr).
@@ -433,10 +508,10 @@ A description of a [Service](#service) that is both human- and machine-readable 
 An [Uri](#uri) which can be used to identify and obtain a [Service Description](#service-description).
 
 ### Service Discovery
-A [Business Process](#business-proces) to find [Providers](#provider) for a given [Service](#service).
+A [Business Process](#business-proces) to find [Service Providers](#service-provider) for a given [Service](#service).
 
 ### Service Endpoint
-A [Technology Service](#technology-service) provided by a [Provider](#provider) to allow the consumption of his [Services](#service).
+A [Technology Service](#technology-service) provided by a [Service Provider](#service-provider) to allow the consumption of his [Services](#service).
 
 ### Service Endpoint API
 [Technology Interface](#technology-interface) of a [Service Endpoint](#service-endpoint).
@@ -445,30 +520,37 @@ A [Technology Service](#technology-service) provided by a [Provider](#provider) 
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
 ### Service Library
-A [Technology Service](#technology-service) that supports the [Service](#service) processes of the [Individuals](#individual) and the [Providers](#provider).
+A [Technology Service](#technology-service) that supports the [Service](#service) processes of the [Individuals](#individual) and the [Service Providers](#service-provider).
 
 ### Service Portfolio
 A [Business Object](#business-object) for information about all the [Services](#service) that an [Individual](#individual) is or has been consuming.
 
 ### Service Provider
-An Entity servicing [Relying Parties](#relying-party) and/or [Data Providers](#data-provider). A [Service Provider](#service-provider) servicing [Individuals](#individual) is called an [Issuer](#issuer).
-
-A [Business Role](#business-role): an [Access Provider](#access-provider) which provides business-to-business [Services](#service) as defined in [Definitions of the Qiy Scheme](#definitions-of-the-qiy-scheme).
+A [Business Role](#business-role): a legal entity which provides [Services](#service).
 
 ### Service Source
-A [Provider](#provider) that can or is providing a specific [Service](#service).
+A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
 
 ### Service by Reference
 A pattern for consuming [Services](#service) indirectly using [References](#reference) ([Operation Reference](#operation-reference)).
+
+### Session Management
+tbd
+
+### Source Candidate
+tbd
 
 ### Source Candidate Event
 A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node](#qiy-node) has received a new [Source Candidate](#source-candidate) for a [Consent](#consent).
 
 ### Source Candidates Request
-A [Qiy Node Request](#qiy-node-request) to obtain candidate [Providers](#provider) for a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
 
 ### Source Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Provider](#provider) as source for a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) as source for a [Service](#service).
+
+### Supervisory Board
+tbd
 
 ### Technology Event
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
@@ -479,8 +561,14 @@ As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archima
 ### Technology Service
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
 
+### Temporarily Phase
+tbd
+
 ### Territory
 The geographic region served by a [Regional Authority](#regional-authority).
+
+### Token
+See https://en.wikipedia.org/wiki/Token#Computing.
 
 ### Transition Phase 
 [Temporarily Phase](#temporarily-phase) from July 1, 2015 to June 30, 2019 during which an ad-interim [Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme) is established. During this period the [Qiy Foundation](#qiy-foundation) fulfills the [Roles](#role) of [Global Scheme Authority](#global-scheme-authority) and [Regional Scheme Authority](#regional-scheme-authority). 
@@ -510,13 +598,10 @@ A [Technology Service](#technology-service) that provides transport [Services](#
 A software package which can be used to realize a [Transporter](#transporter).
 
 ### Trust
-An Entity's confident reliance on the outcome of an interaction.
+An [Entity](#entity)'s confident reliance on the outcome of an interaction.
 
 ### Trust Relation
-A link between multiple Entities, which is characterized by a mutual reliance on the outcome of an interaction.
-
-### Uuid
-See https://en.wikipedia.org/wiki/Universally_unique_identifier
+A relation between multiple [Entities](#entity), which is characterized by a mutual reliance on the outcome of an interaction.
 
 ### Uri
 See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
@@ -524,20 +609,33 @@ See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 ### Url
 See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 
+### Use Case
+See https://en.wikipedia.org/wiki/Use_case.
+
 ### User
-A [User](#user) ([Individual](#individual) or [Legal Entity](#legal-entity)) is connected to the [Qiy Trust Framework](#qiy-trust-framework) in order to have access to, share and/or manage and/or use [Data](#data). 
+A [Business Role](#business-role) for [Entities](#entity).
+
+In general: a consumer of a [Service](#service).
+
+In the context of the Qiy Scheme, see: [Qiy User](#qiy-user).
 
 ### User Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Uuid
+See https://en.wikipedia.org/wiki/Universally_unique_identifier
 
 ### Validated data
 [Data](#data) whose source can be determined reliably
 
 ### Verified Attribute
-An [Attribute](#attribute) that has been assigned to an Entity by a trusted third party.
+An [Attribute](#attribute) that has been assigned to an [Entity](#entity) by a trusted third party.
 
 ### Verified Identifier
-An [Identifier](#identifier) that has been linked to an Entity by a trusted third party.
+An [Identifier](#identifier) that has been linked to an [Entity](#entity) by a trusted third party.
 
 ### Work Stream Functionality & Technology
 One of the work streams of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation.org/qiy-scheme/workstreams/
+
+### Work Stream Legal & Governance
+tbd

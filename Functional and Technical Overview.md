@@ -5,7 +5,7 @@
 
 The [Qiy Scheme](Definitions.md#qiy-scheme) is a set of agreements encompassing all necessary topics needed to realize the goals of the [Qiy Foundation](Definitions.md#qiy-foundation). The [Qiy Scheme](Definitions.md#qiy-scheme) consists of the [Qiy Standard](Definitions.md#qiy-standard) for technical aspects and the [Qiy Scheme Rulebook](Definitions.md#qiy-scheme-rulebook) for governance aspects.
 
-This document is produced by the [Work Stream Functionality](Definitions.md#work-stream-functionality) & Technology and intended for developers and architects who wish to design systems and applications that conform to the [Qiy Standard](Definitions.md#qiy-standard) of [Qiy Schem](Definitions.md#qiy-schem)e V1.0, which is the version released to the public in January 2015. 
+This document is produced by the [Work Stream Functionality & Technology](Definitions.md#work-stream-functionality-&-technology) and intended for developers and architects who wish to design systems and applications that conform to the [Qiy Standard](Definitions.md#qiy-standard) of [Qiy Scheme](Definitions.md#qiy-scheme) V1.0, which is the version released to the public in January 2015. 
 
 # Content
 
@@ -128,7 +128,7 @@ In the [Qiy Scheme](Definitions.md#qiy-scheme) different [Roles](Definitions.md#
 [Data Providers](Definitions.md#data-provider) will often be (government) organizations that have a relation with the [Orchestrator](Definitions.md#orchestrator). In some cases, an [Individual](Definitions.md#individual) can be a [Data Provider](Definitions.md#data-provider); in this case the [Individual](Definitions.md#individual) will be the original source and the [Assertion](Definitions.md#assertion) that is given is not vouched for by any other [User](Definitions.md#user).
 
 ### Relying Parties
-A [Relying Party](Definitions.md#relying-party) is a [User](Definitions.md#user) that relies on the [Trust Framework](Definitions.md#trust-framework) to receive [Data](Definitions.md#data) from an [Orchestrator](Definitions.md#orchestrator), typically for some kind of [Business Process](Definitions.md#business-proces). To receive this [Data](Definitions.md#data), it is required that the [Relying Party](Definitions.md#relying-party) establishes a [Connection](Definitions.md#connection) with the [Qiy Node](Definitions.md#qiy-node) of an [Orchestrator](Definitions.md#orchestrator). In practice, [Relying Party](Definitions.md#relying-party) will often also participate as a [Data Provider](Definitions.md#data-provider), making the exchange with the [Orchestrator](Definitions.md#orchestrator) possible in both ways.
+A [Relying Party](Definitions.md#relying-party) is a [User](Definitions.md#user) that relies on the [Qiy Trust Network](Definitions.md#qiy-trust-network) to receive [Data](Definitions.md#data) from an [Orchestrator](Definitions.md#orchestrator), typically for some kind of [Business Process](Definitions.md#business-proces). To receive this [Data](Definitions.md#data), it is required that the [Relying Party](Definitions.md#relying-party) establishes a [Connection](Definitions.md#connection) with the [Qiy Node](Definitions.md#qiy-node) of an [Orchestrator](Definitions.md#orchestrator). In practice, [Relying Party](Definitions.md#relying-party) will often also participate as a [Data Provider](Definitions.md#data-provider), making the exchange with the [Orchestrator](Definitions.md#orchestrator) possible in both ways.
 
 ### 2.2.2 Router
 [Router](Definitions.md#router) is the general term for [Service Providers](Definitions.md#service-provider) whose primary purpose is to connect [Users](Definitions.md#user) (respectively their [Qiy Nodes](Definitions.md#qiy-node)) to the [Qiy Scheme](Definitions.md#qiy-scheme). Some [Service Providers](Definitions.md#service-provider) focus on offering [Connections](Definitions.md#connection) to [Users](Definitions.md#user), others add additional [Services](Definitions.md#service) to the primary [Service](Definitions.md#service) of issuing [Qiy Nodes](Definitions.md#qiy-node).
@@ -177,7 +177,7 @@ To complete Alice's order, Webshop.com [Requests](Definitions.md#request) the ad
 # 3 Qiy Architecture
 This chapter describes the [Qiy Architecture](Definitions.md#qiy-architecture): the entities and their interrelations, which are involved in online communication and transactions. 
 
-The capabilities of the architecture will be illustrated using a limited real-life [Qiy Scheme](Definitions.md#qiy-scheme) web scenario. The rest of the chapter addresses the rationale behind the architecture: why it has been designed the way it has been designed and how it relates to the [Qiy Principles](Definitions.md#qiy-principle) proclaimed by the [Qiy Foundation](Definitions.md#qiy-foundation).
+The capabilities of the architecture will be illustrated using a limited real-life [Qiy Scheme](Definitions.md#qiy-scheme) web scenario. The rest of the chapter addresses the rationale behind the architecture: why it has been designed the way it has been designed and how it relates to the [Qiy Trust Principles](Definitions.md#qiy-trust-principles) proclaimed by the [Qiy Foundation](Definitions.md#qiy-foundation).
 ## 3.1 Basic Qiy Concepts
 ### 3.1.1 Qiy Node
 The [Qiy Node](Definitions.md#qiy-node) is a delegate component for Applications. The [Qiy Node](Definitions.md#qiy-node) is responsible for [Connection](Definitions.md#connection) management of global addresses, [Connections](Definitions.md#connection), [Key Management](Definitions.md#key-management), and cryptographic transformations of messages and implements the [Connection](Definitions.md#connection) to the [Qiy Infrastructure](Definitions.md#qiy-infrastructure).
@@ -199,7 +199,7 @@ After two [Qiy Nodes](Definitions.md#qiy-node) have completed the [Connection](D
 
 [Consent](Definitions.md#consent) information
 
-Per the [Qiy Principles](Definitions.md#qiy-principle), [Data](Definitions.md#data) may only be used with the [User](Definitions.md#user)'s permission only. [Consent](Definitions.md#consent) describes how an [Individual](Definitions.md#individual) allows his [Data](Definitions.md#data) to be used by a [Relying Party](Definitions.md#relying-party) in the [Qiy Scheme](Definitions.md#qiy-scheme). [Consent](Definitions.md#consent) specifies the permissions that are applied to a certain set of [Data](Definitions.md#data) for a specific [Relying Party](Definitions.md#relying-party). 
+Per the [Qiy Trust Principles](Definitions.md#qiy-trust-principles), [Data](Definitions.md#data) may only be used with the [User](Definitions.md#user)'s permission only. [Consent](Definitions.md#consent) describes how an [Individual](Definitions.md#individual) allows his [Data](Definitions.md#data) to be used by a [Relying Party](Definitions.md#relying-party) in the [Qiy Scheme](Definitions.md#qiy-scheme). [Consent](Definitions.md#consent) specifies the permissions that are applied to a certain set of [Data](Definitions.md#data) for a specific [Relying Party](Definitions.md#relying-party). 
 
 [Consent](Definitions.md#consent) specifies at least the following parameters:
 * What [Data](Definitions.md#data) the [Consent](Definitions.md#consent) is applied to
@@ -269,7 +269,7 @@ In designing and developing the [Qiy Scheme](Definitions.md#qiy-scheme), privacy
 
 Qiy has a number of mechanisms that support deployment in privacy:
 * Qiy implements an indirect routing strategy. When a [Qiy Node](Definitions.md#qiy-node) sends a message to another [Qiy Node](Definitions.md#qiy-node), that message is send to the [Router](Definitions.md#router) the sending [Qiy Node](Definitions.md#qiy-node) is registered at. The receiving [Router](Definitions.md#router) forwards the message to the [Router](Definitions.md#router) the destination [Qiy Node](Definitions.md#qiy-node) is registered at. Routing tables hold only information to forward to the next hop
-* Qiy supports the establishment of [Pseudonyms](Definitions.md#pseudonym) established between an [Orchestrator](Definitions.md#orchestrator) and other [Users](Definitions.md#user) ([RelyingParty](Definitions.md#relyingparty) and [Data Provider](Definitions.md#data-provider)). Such [Pseudonyms](Definitions.md#pseudonym) do not themselves enable inappropriate correlation between [Relying Parties](Definitions.md#relying-party) and [Data Providers](Definitions.md#data-provider) (as would be possible if the [Qiy Node](Definitions.md#qiy-node) asserted the same [Identifier](Definitions.md#identifier) for a [User](Definitions.md#user) to every other [User](Definitions.md#user), a so-called global address)
+* Qiy supports the establishment of [Pseudonyms](Definitions.md#pseudonym) established between an [Orchestrator](Definitions.md#orchestrator) and other [Users](Definitions.md#user) ([Relying Party](Definitions.md#relying-party) and [Data Provider](Definitions.md#data-provider)). Such [Pseudonyms](Definitions.md#pseudonym) do not themselves enable inappropriate correlation between [Relying Parties](Definitions.md#relying-party) and [Data Providers](Definitions.md#data-provider) (as would be possible if the [Qiy Node](Definitions.md#qiy-node) asserted the same [Identifier](Definitions.md#identifier) for a [User](Definitions.md#user) to every other [User](Definitions.md#user), a so-called global address)
 * Qiy supports one-time or transient [Identifiers](Definitions.md#identifier) ' such [Identifiers](Definitions.md#identifier) ensure that every time a certain [Orchestrator](Definitions.md#orchestrator) establishes a connector with a given [Relying Party](Definitions.md#relying-party) or [Data Provider](Definitions.md#data-provider), that party will be unable to recognize them as the same [Orchestrator](Definitions.md#orchestrator) that might have previously visited them (based solely on the [Identifier](Definitions.md#identifier), correlation may be possible through non-Qiy [Data](Definitions.md#data)).
 
 ## 3.4 Security in Qiy
@@ -294,7 +294,7 @@ Once a [Connection](Definitions.md#connection) between [Qiy Nodes](Definitions.m
 
 To exchange information an Application must communicate:
 * Definition of the format of the message, i.e. how the message can be understood by another Application protocol
-* What the message is about is that are terms understandable for an [Individual](Definitions.md#individual) (used for [Consent Messages](Definitions.md#consent-message))
+* What the message is about is that are terms understandable for an [Individual](Definitions.md#individual) (used for consent messages)
 * The meaningful content itself (also referred to as 'payload').
 
 The Application may use an interface on the [Qiy Node](Definitions.md#qiy-node) that supports encryption to protect the message from prying eyes, but the message itself should be transmitted plaintext.
@@ -361,15 +361,18 @@ The [Qiy Node](Definitions.md#qiy-node) addresses outgoing [Application Messages
 The delivery of incoming [Application Messages](Definitions.md#application-message) is based on the [Application Protocol](Definitions.md#application-protocol). Messages are delivered to a supporting Application. Which Application handles which message is determined either after [User](Definitions.md#user) interaction or by using preference. [Data](Definitions.md#data) [Requests](Definitions.md#request) and responses are delivered in the same way, but only when they have been consented for.
 
 ### 5.1.3 Consent Management
- All [Data](Definitions.md#data) exchanges are subject to [Consent](Definitions.md#consent) management:
-1. [Incoming Data Requests](Definitions.md#incoming-data-request) (from other [Users](Definitions.md#user)) for [Data](Definitions.md#data) owned by the [Qiy Node](Definitions.md#qiy-node)'s [User](Definitions.md#user) are only accepted when the associated [Consent](Definitions.md#consent) is (or has previously been) accepted by the [User](Definitions.md#user).
-2. [Incoming Data Requests](Definitions.md#incoming-data-request) for [Data](Definitions.md#data) of [Users](Definitions.md#user) other than the receiver or the sender are subject to the owner's [Consent](Definitions.md#consent). 
+All data exchanges are subject to [Consent Management](Definitions.md#consent-management):
+1. Incoming data requests (from other [Users](Definitions.md#user)) for [Data](Definitions.md#data) owned by the [Qiy Node](Definitions.md#qiy-node)'s [User](Definitions.md#user) are only accepted when the associated [Consent](Definitions.md#consent) is (or has previously been) accepted by the [User](Definitions.md#user).
+2. Incoming data requests for [Data](Definitions.md#data) of [Users](Definitions.md#user) other than the receiver or the sender are subject to the owner's [Consent](Definitions.md#consent). 
 
-The [Qiy Node](Definitions.md#qiy-node) keeps track of all [Data Requests](Definitions.md#data-request), [Data Responses](Definitions.md#data-response), [Data Notifications](Definitions.md#data-notification) and [Consents](Definitions.md#consent).
+The [Qiy Node](Definitions.md#qiy-node) keeps track of all data requests, data responses, data notifications and [Consents](Definitions.md#consent).
+
 ### 5.1.4 Digital Identity
-A [Qiy Node](Definitions.md#qiy-node) represents a [User](Definitions.md#user) in the digital realm and is as such his [Digital Identity](Definitions.md#digital-identity). A [Qiy Node](Definitions.md#qiy-node) can be addressed by any other [Qiy Node](Definitions.md#qiy-node) using global addresses when a [Connection](Definitions.md#connection) has been established between the two. This [Connection](Definitions.md#connection) can be regarded as the digital equivalent of a relationship between two [Users](Definitions.md#user), e.g. an [Individual](Definitions.md#individual) and a web shop.
+A [Qiy Node](Definitions.md#qiy-node) represents a [User](Definitions.md#user) in the digital realm and is as such his digital [Identity](Definitions.md#identity). A [Qiy Node](Definitions.md#qiy-node) can be addressed by any other [Qiy Node](Definitions.md#qiy-node) using global addresses when a [Connection](Definitions.md#connection) has been established between the two. This [Connection](Definitions.md#connection) can be regarded as the digital equivalent of a relationship between two [Users](Definitions.md#user), e.g. an [Individual](Definitions.md#individual) and a web shop.
+
 ### 5.1.5 Connection Management
 The [Qiy Node](Definitions.md#qiy-node) acts as a registry for its [Connections](Definitions.md#connection), the status and related information and provides means for their management. 
+
 ### 5.1.6 Key Management
 The [Qiy Node](Definitions.md#qiy-node) is responsible for the proper management of all the key pairs that are used to meet its responsibilities.
 ### 5.1.7 Preferences and Settings
@@ -380,6 +383,7 @@ Please refer to Error! [Reference](Definitions.md#reference) source not found. E
 ## 5.3 Router Connection
 Only [Qiy Nodes](Definitions.md#qiy-node) that fulfill the [Qiy Node Requirements](Definitions.md#qiy-node-requirement) can establish a [Connection](Definitions.md#connection) with a [Router](Definitions.md#router) and only with [Routers](Definitions.md#router) that fulfill the [Router Requirements](Definitions.md#router-requirement).
 Please refer to chapter 6 [Routing Layer](Definitions.md#routing-layer) for more information. 
+
 ## 5.4 Node Requirements
 TBD
 

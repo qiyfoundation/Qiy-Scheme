@@ -19,7 +19,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchang
 	1. [Compliancy](#36-compliancy)
 1. [The User Layer](#4-the-user-layer)
 	1. [Qiy Users](#41-qiy-users)
-	1. [Provider](#42-provider)
+	1. [Service Provider](#42-service-provider)
 	1. [Qiy Node](#43-qiy-node)
 	1. [Connect via Qiy](#44-connect-via-qiy)
 		1. [Generate token](#441-generate-token)
@@ -62,11 +62,10 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchang
 		1. [Product Data](#41116-product-data)
 1. [The Application Layer](#5-the-application-layer)
 	1. [Qiy Application](#51-qiy-application)
-		1. [Application Provider](#511-application-provider)
-		1. [Qiy Application Protocol](#512-qiy-application-protocol)
-		1. [Creating Qiy Nodes for Individuals](#513-creating-qiy-nodes-for-individuals)
-			1. [Security consideration](#5131-security-consideration)
-		1. [Link with an existing Qiy Node](#514-link-with-an-existing-qiy-node)
+		1. [Qiy Application Protocol](#511-qiy-application-protocol)
+		1. [Creating Qiy Nodes for Individuals](#512-creating-qiy-nodes-for-individuals)
+			1. [Security consideration](#5121-security-consideration)
+		1. [Link with an existing Qiy Node](#513-link-with-an-existing-qiy-node)
 	1. [Connect](#52-connect)
 		1. [Application Connect Token](#521-application-connect-token)
 		1. [Proposer: Connect](#522-proposer-connect)
@@ -169,9 +168,9 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchang
 	1. [Carrier Node](#96-carrier-node)
 1. [Diagram sources](#10-diagram-sources)
 	1. [User Layer](#101-user-layer)
-		1. [[Qiy Data Reuse](Definitions.md#qiy-data-reuse)](#1011-[qiy-data-reuse])
+		1. [Qiy Data Reuse](#1011-qiy-data-reuse)
 		1. [Connect](#1012-connect)
-			1. [[Users Connect](Definitions.md#users-connect)](#10121-[users-connect])
+			1. [Users Connect](#10121-users-connect)
 			1. [Generate token](#10122-generate-token)
 			1. [Media](#10123-media)
 			1. [Connect using a token in a website address](#10124-connect-using-a-token-in-a-website-address)
@@ -210,7 +209,7 @@ The document is aimed at people who know that Qiy puts people back in control of
 This chapter gives an overview of this document.
 * [2.1 Data Reuse](#21-data-reuse) describes how [Data](Definitions.md#data) can be reused with Qiy.
 * [3 Architectural Description](#3-architectural-description) describes the [Architectural Layers](Definitions.md#architectural-layers) and addresses various concerns like privacy and security.
-* [4 The User Layer](#4-the-user-layer) describes the setup and processes of the [Data Reuse](Definitions.md#data-reuse) scenario at the [User](Definitions.md#user) level.
+* [4 The User Layer](#4-the-user-layer) describes the setup and processes of the data reuse scenario at the [User](Definitions.md#user) level.
 * [5 The Application Layer](#5-the-application-layer) describes the processes at the application level.
 * [6 The Qiy Node Layer](#6-the-qiy-node-layer) describes the same at the [Qiy Node](Definitions.md#qiy-node) level.
 * [7 The Service Layer](#7-the-service-layer) describes the [Service Layer](Definitions.md#service-layer) support.
@@ -220,10 +219,10 @@ This chapter gives an overview of this document.
 
 ## 2.1 Data Reuse
 
-This document describes how Qiy realizes a [Data Reuse](Definitions.md#data-reuse) scenario in which a [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)) reuses his [Personal Data](Definitions.md#personal-data) stored at one organization ([Data Provider](Definitions.md#data-provider)) and provide it to another organization ([Relying Party](Definitions.md#relying-party)) to consume one of its [Services](Definitions.md#service).
+This document describes how Qiy realizes a data reuse scenario in which a [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)) reuses his [Personal Data](Definitions.md#personal-data) stored at one organization ([Data Provider](Definitions.md#data-provider)) and provide it to another organization ([Relying Party](Definitions.md#relying-party)) to consume one of its [Services](Definitions.md#service).
 Qiy can also be used for other applications, examples of wich can be found in [4.11 Application examples](#411-application-examples)
 
-In essence, the [Data Reuse](Definitions.md#data-reuse) goes as follows:
+In essence, the data reuse goes as follows:
 * The [Individual](Definitions.md#individual) subscribes to a [Service](Definitions.md#service).
 * The [Relying Party](Definitions.md#relying-party) asks the [Individual](Definitions.md#individual) for the [Data](Definitions.md#data) it needs to provide the [Service](Definitions.md#service).
 * The [Individual](Definitions.md#individual) retrieves the [Data](Definitions.md#data) from a [Data Provider](Definitions.md#data-provider).
@@ -231,9 +230,11 @@ In essence, the [Data Reuse](Definitions.md#data-reuse) goes as follows:
 
 ![Qiy Data Reuse](./images/qiy-data-reuse.png)
 
+(Diagram source code: [10.1.1 Qiy Data Reuse](#1011-qiy-data-reuse))
+
 ### 2.1.1 Privacy concern
 
-The [Data Reuse](Definitions.md#data-reuse) scenario shows that the [Data](Definitions.md#data) is transferred to the [Relying Party](Definitions.md#relying-party) by choice of the [Individual](Definitions.md#individual).
+The data reuse scenario shows that the [Data](Definitions.md#data) is transferred to the [Relying Party](Definitions.md#relying-party) by choice of the [Individual](Definitions.md#individual).
 This breaks the chain of responsibility for the [Data Provider](Definitions.md#data-provider); the responsibility for correct processing of the [Data](Definitions.md#data) does not extend to any processing that takes place after the handover to the [Individual](Definitions.md#individual). 
 
 # 3 Architectural Description
@@ -250,12 +251,12 @@ The realization of the scenario is described using the following layers:
 Qiy has been conceived with the aim to put people back in control of their [Personal Data](Definitions.md#personal-data), hence making privacy the primary concern of Qiy.
 The aim has been elaborated in a set of principles called the [Qiy Trust Principles](Definitions.md#qiy-trust-principles) and technical, legal and governance rules, all of which are maintained by the [Qiy Foundation](Definitions.md#qiy-foundation) and the [Qiy Foundation Members](Definitions.md#qiy-foundation-member).
 
-The realization of the [Data Reuse](Definitions.md#data-reuse) as described in this document demonstrates that a natural person ([Individual](Definitions.md#individual)) is in control:
+The realization of the data reuse as described in this document demonstrates that a natural person ([Individual](Definitions.md#individual)) is in control:
 * The [Individual](Definitions.md#individual) can securily exchange [Data](Definitions.md#data) and/or messages with another person or organization ([Qiy User](Definitions.md#qiy-user)) via Qiy, using [Connections](Definitions.md#connection), see [4 The User Layer](#4-the-user-layer).
 * The [Individual](Definitions.md#individual) controls what [Qiy Users](Definitions.md#qiy-user) he connects with and, in principle, when he wants to end it.
-* When an [Individual](Definitions.md#individual) connects with a [Qiy User](Definitions.md#qiy-user) that is providing a [Service](Definitions.md#service) via Qiy ([Provider](Definitions.md#provider)), the [Individual](Definitions.md#individual) is provided with the [Identity](Definitions.md#identity) of the latter, but not the other way around.
+* When an [Individual](Definitions.md#individual) connects with a [Qiy User](Definitions.md#qiy-user) that is providing a [Service](Definitions.md#service) via Qiy ([Service Provider](Definitions.md#service-provider)), the [Individual](Definitions.md#individual) is provided with the [Identity](Definitions.md#identity) of the latter, but not the other way around.
 * The [Individual](Definitions.md#individual) can access his [Personal Data](Definitions.md#personal-data) that is kept by another [Qiy User](Definitions.md#qiy-user) ([Data Provider](Definitions.md#data-provider)) as a result of the [Access Principle](Definitions.md#access-principle), one of the [Qiy Trust Principles](Definitions.md#qiy-trust-principles).
-* The [Individual](Definitions.md#individual) controls what [Data](Definitions.md#data) he shares with what [Provider](Definitions.md#provider) ([Relying Party](Definitions.md#relying-party)) and under what terms using proveable [Consents](Definitions.md#consent).
+* The [Individual](Definitions.md#individual) controls what [Data](Definitions.md#data) he shares with what [Service Provider](Definitions.md#service-provider) ([Relying Party](Definitions.md#relying-party)) and under what terms using proveable [Consents](Definitions.md#consent).
 * The [Data Provider](Definitions.md#data-provider) knows what [Data](Definitions.md#data) is obtained by (or in name of) an [Individual](Definitions.md#individual), but he does not know whether the [Data](Definitions.md#data) is shared and if so, with what [Relying Parties](Definitions.md#relying-party).
 * [Relying Parties](Definitions.md#relying-party) however know the [Data Provider](Definitions.md#data-provider) of shared [Data](Definitions.md#data) and can use this information to assess the trustworthiness of the [Data](Definitions.md#data) and/or to verify the validity of the [Data](Definitions.md#data).
 * [Qiy Users](Definitions.md#qiy-user) use applications that are authorized for use with Qiy ([Qiy Applications](Definitions.md#qiy-application)).
@@ -263,9 +264,8 @@ The realization of the [Data Reuse](Definitions.md#data-reuse) as described in t
 
 
 All parties involved are bound by the rules of the [Qiy Scheme](Definitions.md#qiy-scheme):
-* [Providers](Definitions.md#provider) are bound by the [Binding Individual Rights](Definitions.md#binding-individual-right) and the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-provider).
-* [Access Providers](Definitions.md#access-provider) are bound by the [Licence Agreement Issuer](Definitions.md#licence-agreement-issuer) or the [Licence Agreement Service Provider](Definitions.md#licence-agreement-service-provider).
-* [Application Providers](Definitions.md#application-provider) can only develop and produce [Qiy Application](Definitions.md#qiy-application)-[Services](Definitions.md#service) and/or software with a [Licence Agreement Application Provider](Definitions.md#licence-agreement-application-provider).
+* [Service Providers](Definitions.md#service-provider) are bound by the [Binding Individual Rights](Definitions.md#binding-individual-right) and the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-provider).
+* [Access Providers](Definitions.md#access-provider) are bound by the [License Agreement Access Provider](Definitions.md#license-agreement-access-provider).
 
 ## 3.3 Security
 
@@ -284,24 +284,24 @@ The governance rules are laid down in the [Governance Model for the Qiy Scheme](
 
 ## 3.6 Compliancy
 
-The compliancy rules for [Providers](Definitions.md#provider) can be found in the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-provider), one of the documents of the [Qiy Scheme Rulebook](Definitions.md#qiy-scheme-rulebook).
+The compliancy rules for [Service Providers](Definitions.md#service-provider) can be found in the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-provider), one of the documents of the [Qiy Scheme Rulebook](Definitions.md#qiy-scheme-rulebook).
 
 
 # 4 The User Layer
-This chapter describes the [User Layer](Definitions.md#user-layer) and the interaction between the [Relying Party](Definitions.md#relying-party), [Individual](Definitions.md#individual), [Data Provider](Definitions.md#data-provider) and the lower layers for the [Data Reuse](Definitions.md#data-reuse).
+This chapter describes the [User Layer](Definitions.md#user-layer) and the interaction between the [Relying Party](Definitions.md#relying-party), [Individual](Definitions.md#individual), [Data Provider](Definitions.md#data-provider) and the lower layers for the data reuse.
 
 ## 4.1 Qiy Users
 The organizations and/or persons using Qiy are called [Qiy Users](Definitions.md#qiy-user). They can use Qiy in different [roles](Definitions.md#role); they can use Qiy as a [Relying Party](Definitions.md#relying-party), [Individual](Definitions.md#individual), [Data Provider](Definitions.md#data-provider) or a combination of these.
 A business for example will generally use Qiy both as a [Relying Party](Definitions.md#relying-party) (for offering [Services](Definitions.md#service) using reliable [Personal Data](Definitions.md#personal-data)) and as a [Data Provider](Definitions.md#data-provider) (as a source of [Personal Data](Definitions.md#personal-data)).
 As for natural persons, most of these will use Qiy as an [Individual](Definitions.md#individual) to control their [Personal Data](Definitions.md#personal-data).
 
-## 4.2 Provider
-A [Qiy User](Definitions.md#qiy-user) that provides one or more [Services](Definitions.md#service) to [Individuals](Definitions.md#individual) is said to be (or act in the [Business Role](Definitions.md#business-role) of) '[Providers](Definitions.md#provider)'.
+## 4.2 Service Provider
+A [Qiy User](Definitions.md#qiy-user) that provides one or more [Services](Definitions.md#service) to [Individuals](Definitions.md#individual) or other [Users](Definitions.md#user) is said to be (or act in the [Business Role](Definitions.md#business-role) of) [Service Providers](Definitions.md#service-provider).
 Any [Qiy User](Definitions.md#qiy-user) acting in one or both of the [Roles](Definitions.md#role) [Relying Party](Definitions.md#relying-party) or [Data Provider](Definitions.md#data-provider) is implicitely acting in this [Role](Definitions.md#role).
 
 ## 4.3 Qiy Node
 A [Qiy User](Definitions.md#qiy-user) must have a [Qiy Node](Definitions.md#qiy-node). 
-[Providers](Definitions.md#provider) can acquire one from an [Access Provider](Definitions.md#access-provider).
+[Service Providers](Definitions.md#service-provider) can acquire one from an [Access Provider](Definitions.md#access-provider).
 [Individuals](Definitions.md#individual) obtain a [Qiy Node](Definitions.md#qiy-node) the first time they use a [Qiy Application](Definitions.md#qiy-application).
 Alternatively, [Qiy Users](Definitions.md#qiy-user) may instantiate a [Qiy Node](Definitions.md#qiy-node) themselves using a [Qiy Node Implementation](Definitions.md#qiy-node-implementation) and register it with an [Access Provider](Definitions.md#access-provider).
 
@@ -315,10 +315,12 @@ This goes as follows:
 * The [Proposer](Definitions.md#proposer) provides it out-of-band to the [Accepter](Definitions.md#accepter), for example by lettre, see [4.4.2 Media](#442-media).
 * The [Accepter](Definitions.md#accepter) may read the proposal and use a [Qiy Application](Definitions.md#qiy-application) to extract the [Connect Token](Definitions.md#connect-token) and create a new [Connection](Definitions.md#connection) with the [Proposer](Definitions.md#proposer).
 
-As stated before, when a [Connection](Definitions.md#connection) is established, the [Identity](Definitions.md#identity) of the [Qiy User](Definitions.md#qiy-user) is provided to the other one if the [Qiy User](Definitions.md#qiy-user) is a [Provider](Definitions.md#provider). 
+As stated before, when a [Connection](Definitions.md#connection) is established, the [Identity](Definitions.md#identity) of the [Qiy User](Definitions.md#qiy-user) is provided to the other one if the [Qiy User](Definitions.md#qiy-user) is a [Service Provider](Definitions.md#service-provider). 
 This information may be used to reuse a formerly created [Connection](Definitions.md#connection) and delete the new [Connection](Definitions.md#connection).
 
 ![Users Connect](./images/users-connect.png)
+
+(Diagram source code: [10.1.2.1 Users Connect](#10121-users-connect))
 
 ### 4.4.1 Generate token
 A [Proposer](Definitions.md#proposer) can create a [Token](Definitions.md#token) using a [Qiy Application](Definitions.md#qiy-application) and the following details:
@@ -412,7 +414,7 @@ The [Qiy Application](Definitions.md#qiy-application) will create the [Connectio
 
 ## 4.5 Setup
 
-This section addresses the setup for the [Data Reuse](Definitions.md#data-reuse)
+This section addresses the setup for the data reuse.
 
 ### 4.5.1 Relying Party
 
@@ -442,12 +444,12 @@ In order to be able to reuse [Personal Data](Definitions.md#personal-data) via Q
 
 ## 4.6 Subscribe
 
-[Data Reuse](Definitions.md#data-reuse) starts with an [Individual](Definitions.md#individual) subscribing to a [Service](Definitions.md#service), but only after considering and accepting the terms of use, including those regarding the use of [Personal Data](Definitions.md#personal-data).
+Data reuse starts with an [Individual](Definitions.md#individual) subscribing to a [Service](Definitions.md#service), but only after considering and accepting the terms of use, including those regarding the use of [Personal Data](Definitions.md#personal-data).
 When an [Individual](Definitions.md#individual) subscribes to a [Service](Definitions.md#service), the subscription is registered by the [Qiy Application](Definitions.md#qiy-application), so:
 * The subscribed [Service](Definitions.md#service) is recorded using the [Service Portfolio](Definitions.md#service-portfolio) of the [Individual](Definitions.md#individual).
 * The record shows:
 	* the start datetime of the subscription.
-	* the [Provider](Definitions.md#provider) of the [Service](Definitions.md#service) (the [Relying Party](Definitions.md#relying-party)).
+	* the [Service Provider](Definitions.md#service-provider) of the [Service](Definitions.md#service) (the [Relying Party](Definitions.md#relying-party)).
 	* what [Service](Definitions.md#service) is provided (using the [Service Library](Definitions.md#service-library)).
 	* the related [Consent](Definitions.md#consent).
 
@@ -465,7 +467,7 @@ When all related conditions are met, a request for [Data](Definitions.md#data) f
 
 ## 4.9 Source
 
-When a [Relying Party](Definitions.md#relying-party) has requested for [Data](Definitions.md#data), the [Service Portfolio](Definitions.md#service-portfolio) is used to look up the [Data](Definitions.md#data) source: the [Provider](Definitions.md#provider) or [Providers](Definitions.md#provider) that will provide the [Data](Definitions.md#data) ([Service Source](Definitions.md#service-source)).
+When a [Relying Party](Definitions.md#relying-party) has requested for [Data](Definitions.md#data), the [Service Portfolio](Definitions.md#service-portfolio) is used to look up the [Data](Definitions.md#data) source: the [Service Provider](Definitions.md#service-provider) or [Service Providers](Definitions.md#service-provider) that will provide the [Data](Definitions.md#data) ([Service Source](Definitions.md#service-source)).
 This can be the [Individual](Definitions.md#individual) himself, for self-declared [Data](Definitions.md#data), but it can also be one or more [Data Providers](Definitions.md#data-provider).
 The source of the [Data](Definitions.md#data) may have been defined before at the time of subscription, but if that it is not the case, the [Individual](Definitions.md#individual) will be asked to make a selection from a list of suitable [Data Providers](Definitions.md#data-provider) ([Service Discovery](Definitions.md#service-discovery)).
 The list will be generated using the [Service Catalogues](Definitions.md#service-catalogue) from the [Service Library](Definitions.md#service-library).
@@ -577,19 +579,15 @@ Qiy allows consumers to share product [Data](Definitions.md#data) and/or experie
 ![Product Data](./images/example-application--product-data.jpg)
 
 # 5 The Application Layer
-This chapter describes the [Application Layer](Definitions.md#application-layer) and how it supports the processes of the [Data Reuse](Definitions.md#data-reuse) scenario.
+This chapter describes the [Application Layer](Definitions.md#application-layer) and how it supports the processes of the data reuse scenario.
 
 ## 5.1 Qiy Application
-A [Qiy Application](Definitions.md#qiy-application) is an [Application Service](Definitions.md#application-service) or software which is authorized for use with Qiy.
-* A [Qiy Application](Definitions.md#qiy-application) must comply with the requirements of the [Qiy Scheme](Definitions.md#qiy-scheme).
+A [Qiy Application](Definitions.md#qiy-application) is an [Application Service](Definitions.md#application-service) or software which uses the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 * A [Qiy User](Definitions.md#qiy-user) can only use Qiy with a [Qiy Application](Definitions.md#qiy-application).
 * A [Qiy User](Definitions.md#qiy-user) can use one or more [Qiy Applications](Definitions.md#qiy-application).
 * Two or more [Qiy Applications](Definitions.md#qiy-application) can concurrently use one and the same [Qiy Node](Definitions.md#qiy-node).
 
-### 5.1.1 Application Provider
-[Qiy Applications](Definitions.md#qiy-application) can be provided by [Application Providers](Definitions.md#application-provider). An [Application Provider](Definitions.md#application-provider) can only do so with a valid [License Agreement Application Provider](Definitions.md#license-agreement-application-provider).
-
-### 5.1.2 Qiy Application Protocol
+### 5.1.1 Qiy Application Protocol
 The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describes the interactions of the [Qiy Applications](Definitions.md#qiy-application) with eachother and the underlying layers.
 * The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) is an open standard and is part of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
 
@@ -602,7 +600,7 @@ The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describe
 * ... exchange messages.
 * ... exchange [Personal Data](Definitions.md#personal-data).
 
-### 5.1.3 Creating Qiy Nodes for Individuals
+### 5.1.2 Creating Qiy Nodes for Individuals
 
 A [Qiy Application](Definitions.md#qiy-application) can create a [Qiy Node](Definitions.md#qiy-node) for a [Qiy User](Definitions.md#qiy-user), especially when he does not have one yet.
 The [Qiy Application](Definitions.md#qiy-application) can do so with the help of an [Access Provider](Definitions.md#access-provider), but first it has to generate the [Credentials](Definitions.md#credential) for the [Qiy Node](Definitions.md#qiy-node) ([Qiy Node Credentials](Definitions.md#qiy-node-credential)):
@@ -611,7 +609,7 @@ The [Qiy Application](Definitions.md#qiy-application) can do so with the help of
 
 The [Qiy Application](Definitions.md#qiy-application) must persists these in order to be able to keep using the [Qiy Node](Definitions.md#qiy-node).
 
-#### 5.1.3.1 Security consideration
+#### 5.1.2.1 Security consideration
 Some security considerations related to the [Qiy Node Credentials](Definitions.md#qiy-node-credential) are:
 * The [Node Id](Definitions.md#node-id) must be a [Uuid](Definitions.md#uuid) in order to assure that it is unique.
 * The key pair must be unique.
@@ -621,7 +619,7 @@ Some security considerations related to the [Qiy Node Credentials](Definitions.m
 * A [Qiy User](Definitions.md#qiy-user) must be able to control the devices that can access his [Qiy Node](Definitions.md#qiy-node), for example in order to be able to block access of a (possibly) stolen device.
 
 
-### 5.1.4 Link with an existing Qiy Node
+### 5.1.3 Link with an existing Qiy Node
 A [Qiy Application](Definitions.md#qiy-application) can be linked to an existing [Qiy Node](Definitions.md#qiy-node) by providing it with its [Qiy Node Credentials](Definitions.md#qiy-node-credential).
 
 ## 5.2 Connect
@@ -629,14 +627,14 @@ A [Qiy Application](Definitions.md#qiy-application) can be linked to an existing
 ### 5.2.1 Application Connect Token
 [Qiy Applications](Definitions.md#qiy-application) exchange [Application Connect Tokens](Definitions.md#application-connect-token) to create [Connections](Definitions.md#connection). 
 In addition to the [Connect Token](Definitions.md#connect-token) that is necessary to create the [Connection](Definitions.md#connection), it contains the name or [Pseudonym](Definitions.md#pseudonym) to be displayed in the [Connect Proposal](Definitions.md#connect-proposal). 
-For more information, please refer to [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
+For more information, please refer to [5.2.3 Generate Application Connect Token](#523-generate-application-connect-token).
 
 ### 5.2.2 Proposer: Connect
 For a [Qiy Application](Definitions.md#qiy-application) of a [Proposer](Definitions.md#proposer), a [Connection](Definitions.md#connection) is established as follows:
-* The [Qiy Application](Definitions.md#qiy-application) generates an [Application Connect Token](Definitions.md#application-connect-token), see [5.2.3 'Generate Application Connect Token'](#523-generate-application-connect-token).
+* The [Qiy Application](Definitions.md#qiy-application) generates an [Application Connect Token](Definitions.md#application-connect-token), see [5.2.3 Generate Application Connect Token](#523-generate-application-connect-token).
 * The [Qiy Application](Definitions.md#qiy-application) composes a [Connect Proposal](Definitions.md#connect-proposal) for the [Proposer](Definitions.md#proposer).
 * The [Proposer](Definitions.md#proposer) presents it out-of-band to the [Accepter](Definitions.md#accepter).
-* When the [Accepter](Definitions.md#accepter) wants to connect, he uses the [Connect Proposal](Definitions.md#connect-proposal) to create a [Connection](Definitions.md#connection) with his [Qiy Application](Definitions.md#qiy-application), see [5.2.4 'Accepter: Connect'](#524-accepter-connect).
+* When the [Accepter](Definitions.md#accepter) wants to connect, he uses the [Connect Proposal](Definitions.md#connect-proposal) to create a [Connection](Definitions.md#connection) with his [Qiy Application](Definitions.md#qiy-application), see [5.2.4 Accepter: Connect](#524-accepter-connect).
 * The [Proposer](Definitions.md#proposer) detects this by use of polling (using the [Connections Request](Definitions.md#connections-request)) or events (using the [Connection Created Event](Definitions.md#connection-created-event)).
  
 ![Proposer: Connect](./images/proposer--connect.png)
@@ -683,7 +681,7 @@ A [Qiy Application](Definitions.md#qiy-application) of an [Individual](Definitio
 (Diagram source code: [10.2.2.2 Individual: Consider consent request](#10222-individual-consider-consent-request))
 
 ## 5.4 Service Discovery
-A [Qiy Application](Definitions.md#qiy-application) can present an [Individual](Definitions.md#individual) a list of suitable [Data Providers](Definitions.md#data-provider) (or in general [Providers](Definitions.md#provider)) that can produce some requested [Data](Definitions.md#data) (or [Services](Definitions.md#service)) as follows:
+A [Qiy Application](Definitions.md#qiy-application) can present an [Individual](Definitions.md#individual) a list of suitable [Data Providers](Definitions.md#data-provider) (or in general [Service Providers](Definitions.md#service-provider)) that can produce some requested [Data](Definitions.md#data) (or [Services](Definitions.md#service)) as follows:
 * The [Qiy Application](Definitions.md#qiy-application) asks the [Qiy Node](Definitions.md#qiy-node) of the [Individual](Definitions.md#individual) for a list of suitable [Data Providers](Definitions.md#data-provider) with a [Source Candidates Request](Definitions.md#source-candidates-request).
 * The [Qiy Node](Definitions.md#qiy-node) consults the [Service Library](Definitions.md#service-library) and returns the outcome to the [Qiy Application](Definitions.md#qiy-application).
 * The [Qiy Application](Definitions.md#qiy-application) presents the result to the [Individual](Definitions.md#individual).
@@ -863,7 +861,7 @@ A [Data Descriptor](Definitions.md#data-descriptor) can be used to obtain a desc
 A [Relying Party](Definitions.md#relying-party) can only ask [Consent](Definitions.md#consent) for [Personal Data](Definitions.md#personal-data) that can be provided by one of the available [Data Providers](Definitions.md#data-provider), eg for which a [Data Descriptor](Definitions.md#data-descriptor) exists in the [Service Library](Definitions.md#service-library).
   
 ## 6.5 Qiy Node Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) is a [Http Request](Definitions.md#http-request) for a [Qiy Node](Definitions.md#qiy-node). 
+A [Qiy Node Request](Definitions.md#qiy-node-request) is a [HTTP Request](Definitions.md#http-request) for a [Qiy Node](Definitions.md#qiy-node). 
 [Qiy Node Requests](Definitions.md#qiy-node-request) are only accepted when they are correctly authenticated with:
 * the [Node Id](Definitions.md#node-id).
 * an actual timestamp
@@ -925,10 +923,10 @@ The [Operation Register Request](Definitions.md#operation-register-request) is a
 The [Operation References Request](Definitions.md#operation-references-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Operation References](Definitions.md#operation-reference) of a [Qiy Node](Definitions.md#qiy-node).
 
 ### 6.6.18 Source Candidates Request
-The [Source Candidates Request](Definitions.md#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to obtain candidate [Providers](Definitions.md#provider) for a [Service](Definitions.md#service).
+The [Source Candidates Request](Definitions.md#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to obtain candidate [Service Providers](Definitions.md#service-provider) for a [Service](Definitions.md#service) ([Source Candidates](Definitions.md#source-candidate)).
 
 ### 6.6.19 Source Register Request
-The [Source Register Request](Definitions.md#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Provider](Definitions.md#provider) as source for a [Service](Definitions.md#service).
+The [Source Register Request](Definitions.md#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service Provider](Definitions.md#service-provider) as source for a [Service](Definitions.md#service).
  
 ## 6.7 Qiy Node Message
 A [Qiy Node Message](Definitions.md#qiy-node-message) is a message that is exchanged using a [Connection](Definitions.md#connection).
@@ -990,36 +988,36 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) prescribes that one can easily chang
 ## 7.2 Service
 In general, a [Service](Definitions.md#service) is an 'information society service' as defined in the [GDPR](Definitions.md#gdpr), with the following enhancements:
 * A [Service](Definitions.md#service) can be consumed with the use of one or more [Operations](Definitions.md#operation).
-* A [Service](Definitions.md#service) is provided by a [Provider](Definitions.md#provider).
-* A [Provider](Definitions.md#provider) can offer one or more [Services](Definitions.md#service).
-* One [Service](Definitions.md#service) can be offered by one or more [Providers](Definitions.md#provider).
-* The [Services](Definitions.md#service) that a [Provider](Definitions.md#provider) offers are described in a [Service Catalogue](Definitions.md#service-catalogue).
+* A [Service](Definitions.md#service) is provided by a [Service Provider](Definitions.md#service-provider).
+* A [Service Provider](Definitions.md#service-provider) can offer one or more [Services](Definitions.md#service).
+* One [Service](Definitions.md#service) can be offered by one or more [Service Providers](Definitions.md#service-provider).
+* The [Services](Definitions.md#service) that a [Service Provider](Definitions.md#service-provider) offers are described in a [Service Catalogue](Definitions.md#service-catalogue).
 * The [Services](Definitions.md#service) that an [Individual](Definitions.md#individual) consumes are described in his [Service Portfolio](Definitions.md#service-portfolio).
 
 As for Qiy, the following definitions apply:
-* Both [Relying Parties](Definitions.md#relying-party) and [Data Providers](Definitions.md#data-provider) are [Providers](Definitions.md#provider).
+* Both [Relying Parties](Definitions.md#relying-party) and [Data Providers](Definitions.md#data-provider) are [Service Providers](Definitions.md#service-provider).
 
 ## 7.3 Service Endpoints
-A [Service Endpoint](Definitions.md#service-endpoint) is a [Technology Service](Definitions.md#technology-service) provided by a [Provider](Definitions.md#provider) to allow the consumption of his [Services](Definitions.md#service):
-* A [Provider](Definitions.md#provider) can employ one or more [Service Endpoints](Definitions.md#service-endpoint).
+A [Service Endpoint](Definitions.md#service-endpoint) is a [Technology Service](Definitions.md#technology-service) provided by a [Service Provider](Definitions.md#service-provider) to allow the consumption of his [Services](Definitions.md#service):
+* A [Service Provider](Definitions.md#service-provider) can employ one or more [Service Endpoints](Definitions.md#service-endpoint).
 * A [Service Endpoint](Definitions.md#service-endpoint) can be used for one or more [Services](Definitions.md#service).
 * A [Service](Definitions.md#service) can be consumed with the use of one or more [Service Endpoints](Definitions.md#service-endpoint).
 
 For example, a [Service Endpoint](Definitions.md#service-endpoint) may be used by a [Data Provider](Definitions.md#data-provider) to disclose the [Personal Data](Definitions.md#personal-data) from one of his databases.
 
 ## 7.4 Service Library
-The [Service Library](Definitions.md#service-library) is used for:
+The [Service Library](Definitions.md#service-library) is used to store (information about):
 * [Data Descriptions](Definitions.md#data-description)
-* [Providers](Definitions.md#provider)
+* [Service Providers](Definitions.md#service-provider)
 * [Service Catalogues](Definitions.md#service-catalogue)
 * [Service Descriptions](Definitions.md#service-description)
 
 ## 7.5 Consent Service
 A [Consent Service](Definitions.md#consent-service) is used for maintaining [Consents](Definitions.md#consent) and their status.
-A [Consent](Definitions.md#consent) can be accessed by both of the involved [Qiy Users](Definitions.md#qiy-user): the [Individual](Definitions.md#individual) and the [Provider](Definitions.md#provider).
+A [Consent](Definitions.md#consent) can be accessed by both of the involved [Qiy Users](Definitions.md#qiy-user): the [Individual](Definitions.md#individual) and the [Service Provider](Definitions.md#service-provider).
 
 * In principle, only an [Individual](Definitions.md#individual) can withdraw a [Consent](Definitions.md#consent) he has granted before.
-* A [Provider](Definitions.md#provider) can only obtain [Personal Data](Definitions.md#personal-data) under a [Consent](Definitions.md#consent) which has not been withdrawn.
+* A [Service Provider](Definitions.md#service-provider) can only obtain [Personal Data](Definitions.md#personal-data) under a [Consent](Definitions.md#consent) which has not been withdrawn.
 
 # 8 The Transport Layer
 The [Transport Layer](Definitions.md#transport-layer) supports the secure transmission of messages ([Transport Messages](Definitions.md#transport-message)) over [Paths](Definitions.md#path) between [Transporters](Definitions.md#transporter).
@@ -1113,7 +1111,7 @@ The diagrams in this document are generated using the online sequence diagram ge
 This chapter contains the source code of these diagrams.
 
 ## 10.1 User Layer
-### 10.1.1 [Qiy Data Reuse](Definitions.md#qiy-data-reuse)
+### 10.1.1 Qiy Data Reuse
 ```
 title Qiy Data Reuse
 
@@ -1135,7 +1133,7 @@ Individual -->Relying Party: Data
 end
 ```
 ### 10.1.2 Connect
-#### 10.1.2.1 [Users Connect](Definitions.md#users-connect)
+#### 10.1.2.1 Users Connect
 ```
 title Users Connect
 
