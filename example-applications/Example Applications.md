@@ -27,66 +27,66 @@ This document contains examples for some applications of the Qiy Scheme.
 
 # 1 'Help, I am lost!'
 
-The [Connect Proposal](Definitions.md#connect-proposal) can be used on a badge to contact the parents of a wandering child:
+The [Connect Proposal](../Definitions.md#connect-proposal) can be used on a badge to contact the parents of a wandering child:
 ![Scan the code to contact my parents](../images/example-application--help-iam-lost.PNG)
 
 # 2 'Let us know'
 
-The [Connect Proposal](Definitions.md#connect-proposal) can be used to react anonymously to a news item in a newspaper:
+The [Connect Proposal](../Definitions.md#connect-proposal) can be used to react anonymously to a news item in a newspaper:
 
 ![Scan the code to let us know](../images/example-application--let-us-know.PNG)
 
 # 3 Login
 
-The [Connect Proposal](Definitions.md#connect-proposal) can be used by websites as a [User](Definitions.md#user) friendly login alternative:
+The [Connect Proposal](../Definitions.md#connect-proposal) can be used by websites as a [User](../Definitions.md#user) friendly login alternative:
 
 ![Login](../images/example-application--login.PNG)
 
 # 4 Share Medical Data
 
-The [Connect Proposal](Definitions.md#connect-proposal) can be used to anonymously share medical [Data](Definitions.md#data) for a visit at a medical facility:
+The [Connect Proposal](../Definitions.md#connect-proposal) can be used to anonymously share medical [Data](../Definitions.md#data) for a visit at a medical facility:
 
 ![Share medical data](../images/example-application--share-medical-data.PNG)
 
 # 5 'Have you seen this man?'
 
-The [Connect Proposal](Definitions.md#connect-proposal) can be used to anonymously contribute to reduce crime:
+The [Connect Proposal](../Definitions.md#connect-proposal) can be used to anonymously contribute to reduce crime:
 
 ![Have you seen this man?](../images/example-application--have-you-seen-this-man.PNG)
 
 # 6 At the airport
 
-Qiy can be used to route verifiable identifying [Data](Definitions.md#data), for example to digitally use your passport to authenticate yourself at an airport:
+Qiy can be used to route verifiable identifying [Data](../Definitions.md#data), for example to digitally use your passport to authenticate yourself at an airport:
 
 ![Digital passport](../images/example-application--digital-passport.PNG)
 
 # 7 'The lines are open: scan now!'
 
-The [Connect Proposal](Definitions.md#connect-proposal) can be used to vote for your favourite singer at a song contest:
+The [Connect Proposal](../Definitions.md#connect-proposal) can be used to vote for your favourite singer at a song contest:
 
 ![The lines are open: scan now!](../images/example-application--the-lines-are-open-scan-now.PNG)
 
 # 8 Clothing Label
 
-A [Connect Token](Definitions.md#connect-token) in its representation as a QR Code can be used in a clothing label to disclose product details:
+A [Connect Token](../Definitions.md#connect-token) in its representation as a QR Code can be used in a clothing label to disclose product details:
 
 ![Clothing label](../images/example-application--clothing-label.jpg)
 
 # 9 Formal Elections
 
-A [Connect Token](Definitions.md#connect-token) in its representation as a QR Code can be used in formal elections to vote for a candidate:
+A [Connect Token](../Definitions.md#connect-token) in its representation as a QR Code can be used in formal elections to vote for a candidate:
 
 ![Formal Elections](../images/example-application--serious-voting.jpg)
 
 # 10 Luggage Label
 
-A [Connect Token](Definitions.md#connect-token) in its representation as a QR Code can be used as a luggage label:
+A [Connect Token](../Definitions.md#connect-token) in its representation as a QR Code can be used as a luggage label:
 
 ![Luggage Label](../images/example-application--luggage-label.jpg)
 
 # 11 Track & Trace
 
-Barcodes in existing Track & Trace systems can be used as [Connect Tokens](Definitions.md#connect-token) for example to track and trace the delivery of a parcel:
+Barcodes in existing Track & Trace systems can be used as [Connect Tokens](../Definitions.md#connect-token) for example to track and trace the delivery of a parcel:
 
 ![Track & Trace](../images/example-application--track-and-trace.jpg)
 
@@ -98,7 +98,7 @@ Scanning a QR Code placed next to an entrance may be used to ring a doorbell and
 
 # 13 Trustable Reviews
 
-Qiy allows solutions in which consumers can [Trust](Definitions.md#trust) posted reviews on products or [Services](Definitions.md#service):
+Qiy allows solutions in which consumers can [Trust](../Definitions.md#trust) posted reviews on products or [Services](../Definitions.md#service):
 
 ![Trustable Reviews](../images/example-application--trustable-reviews.jpg)
 
@@ -116,7 +116,7 @@ Qiy allows solutions were consumers can verify the source of news articles:
 
 # 16 Product Data
 
-Qiy allows consumers to share product [Data](Definitions.md#data) and/or experiences with manufacturers:
+Qiy allows consumers to share product [Data](../Definitions.md#data) and/or experiences with manufacturers:
 
 ![Product Data](../images/example-application--product-data.jpg)
 
