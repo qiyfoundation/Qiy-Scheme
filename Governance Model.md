@@ -26,7 +26,7 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) defines a framework for [Individuals
 	1. [Products and services](#32-products-and-services)
 		1. [The development and maintenance of the Qiy Scheme](#321-the-development-and-maintenance-of-the-qiy-scheme)
 		1. [Master License Regional Authorities](#322-master-license-regional-authorities)
-		1. [Public relations, public affairs, spokesperson, brand promotion](#323-public-relations,-public-affairs,-spokesperson,-brand-promotion)
+		1. [Public relations, public affairs, spokesperson, brand promotion](#323-public-relations-public-affairs-spokesperson-brand-promotion)
 1. [Regional Authority](#4-regional-authority)
 	1. [Structure](#41-structure)
 	1. [Products & services Regional Authority](#42-products-&-services-regional-authority)

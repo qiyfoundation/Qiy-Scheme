@@ -7,7 +7,7 @@ This document contains examples for some applications of the Qiy Scheme.
 
 # Contents
 
-1. ['Help, I am lost!'](#1-help,-i-am-lost)
+1. ['Help, I am lost!'](#1-help-i-am-lost)
 1. ['Let us know'](#2-let-us-know)
 1. [Login](#3-login)
 1. [Share Medical Data](#4-share-medical-data)
