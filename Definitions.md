@@ -1,4 +1,4 @@
-# Definitions of the 'Qiy Scheme V1.0'
+# Definitions of the Qiy Scheme
 
 ## Abstract
 
