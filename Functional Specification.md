@@ -465,7 +465,7 @@ The session [Credentials](Definitions.md#credential) are persisted in the [Servi
 
 ## 4.11 Application Examples
 
-Please refer to [Application Examples](./application-examples/Application Examples.md) for application examples of Qiy.
+Please refer to [Application Examples](./application-examples/Application%20Examples.md) for application examples of Qiy.
 
 # 5 The Application Layer
 This chapter describes the [Application Layer](Definitions.md#application-layer) and how it supports the processes of the data reuse scenario.
