@@ -66,7 +66,7 @@ This chapter is dedicated to use cases that relate to the lifecycle of a Qiy Nod
 * [UC20 Service Provider Creates Connection Proposal](UC20%20Service%20Provider%20Creates%20Connection%20Proposal.md)
 * [UC21 Accepter Creates Connection](UC21%20Accepter%20Creates%20Connection.md)
 * [UC22 Individual Creates Connection](UC22%20Individual%20Creates%20Connection.md)
-* [UC23 Application Creates Connection](UC23%20Application%20Creates%20Connection.md)
+* [UC23 Qiy Application Creates Connection](UC23%20Qiy%20Application%20Creates%20Connection.md)
 * [UC24 Service Provider Creates Connection](UC24%20Service%20Provider%20Creates%20Connection.md)
 * [UC25 Qiy User Deletes Connection](UC25%20Qiy%20User%20Deletes%20Connection.md)
 * [UC26 Qiy Application Deletes Connection](UC26%20Qiy%20Application%20Deletes%20Connection.md)
