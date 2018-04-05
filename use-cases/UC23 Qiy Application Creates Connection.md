@@ -3,9 +3,10 @@
 
 # Abstract
 
-This document is the use case specification for use case [UC23 Qiy Application Creates Connection](../../use-cases/UC23%20Qiy%20Application%20Creates%20Connection.md).
+This document is the use case specification for use case [UC23 Qiy Application Creates Connection](UC23%20Qiy%20Application%20Creates%20Connection.md).
 
 # Contents
+
 
 
 1. [Primary Actors](#primary-actors)
@@ -18,7 +19,7 @@ This document is the use case specification for use case [UC23 Qiy Application C
 
 # Primary Actors
 
-* [Individual](../../Definitions.md#individual)
+* [Individual](../Definitions.md#individual)
 * ...
 
 # Preconditions
