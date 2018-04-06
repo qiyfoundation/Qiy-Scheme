@@ -22,7 +22,6 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchang
 	1. [Service Provider](#42-service-provider)
 	1. [Qiy Node](#43-qiy-node)
 	1. [Connect via Qiy](#44-connect-via-qiy)
-		1. [Generate token](#441-generate-token)
 	1. [Setup](#45-setup)
 		1. [Relying Party](#451-relying-party)
 		1. [Data Provider](#452-data-provider)
@@ -296,21 +295,6 @@ This information may be used to reuse a formerly created [Connection](Definition
 ![Users Connect](./images/users-connect.png)
 
 (Diagram source code: [10.1.2.1 Users Connect](#10121-users-connect))
-
-### 4.4.1 Generate token
-A [Proposer](Definitions.md#proposer) can create a [Token](Definitions.md#token) using a [Qiy Application](Definitions.md#qiy-application) and the following details:
-* Name: The name or [Pseudonym](Definitions.md#pseudonym) to use in the [Connect Proposal](Definitions.md#connect-proposal).
-* Expiration: Whether the [Token](Definitions.md#token) expires and if so, on what date and time.
-* Budget: The number of times that the [Token](Definitions.md#token) can be used to create a [Connection](Definitions.md#connection).
-
-In most cases, the expiration and budget are set by the application.
-The Expiration and the Budget can be changed afterwards, for example to re-activate an expired [Token](Definitions.md#token).
-
-![Generate token](./images/generate-token.png)
-
-(Diagram source code: [10.1.2.2 Generate token](#10122-generate-token))
-
- 
 
 ## 4.5 Setup
 
