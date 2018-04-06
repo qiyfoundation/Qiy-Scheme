@@ -62,85 +62,74 @@ This chapter is dedicated to use cases that relate to the lifecycle of a Qiy Nod
 
 * [UC17 Qiy User Connects](UC17%20Qiy%20User%20Connects.md)
 * [UC18 Qiy User Creates Connection Proposal](UC18%20Qiy%20User%20Creates%20Connection%20Proposal.md)
-* [UC19 Individual Creates Connection Proposal](UC19%20Individual%20Creates%20Connection%20Proposal.md)
-* [UC20 Qiy Application Creates Connection Proposal](UC20%20Qiy%20Application%20Creates%20Connection%20Proposal.md)
-* [UC21 Service Provider Creates Connection Proposal](UC21%20Service%20Provider%20Creates%20Connection%20Proposal.md)
-* [UC22 Qiy User Accepts Connection Proposal](UC22%20Qiy%20User%20Accepts%20Connection%20Proposal.md)
-* [UC23 Individual Accepts Connection Proposal](UC23%20Individual%20Accepts%20Connection%20Proposal.md)
-* [UC24 Qiy Application Accepts Connection Proposal](UC24%20Qiy%20Application%20Accepts%20Connection%20Proposal.md)
-* [UC25 Service Provider Accepts Connection Proposal](UC25%20Service%20Provider%20Accepts%20Connection%20Proposal.md)
-* [UC26 Qiy User Deletes Connection](UC26%20Qiy%20User%20Deletes%20Connection.md)
-* [UC27 Qiy Application Deletes Connection](UC27%20Qiy%20Application%20Deletes%20Connection.md)
+* [UC19 Qiy User Deletes Connection](UC19%20Qiy%20User%20Deletes%20Connection.md)
 
 # 5 Connect Token
 
-* [UC28 Qiy User Creates Connect Token](UC28%20Qiy%20User%20Creates%20Connect%20Token.md)
-* [UC29 Qiy Application Creates Connect Token](UC29%20Qiy%20Application%20Creates%20Connect%20Token.md)
-* [UC30 Qiy User Manages Connect Tokens](UC30%20Qiy%20User%20Manages%20Connect%20Tokens.md)
-* [UC31 Qiy Application Requests Connect Tokens](UC31%20Qiy%20Application%20Requests%20Connect%20Tokens.md)
-* [UC32 Qiy User Views Connect Token](UC32%20Qiy%20User%20Views%20Connect%20Token.md)
-* [UC33 Qiy User Changes Connect Token](UC33%20Qiy%20User%20Changes%20Connect%20Token.md)
-* [UC34 Qiy Application Updates Connect Token](UC34%20Qiy%20Application%20Updates%20Connect%20Token.md)
-* [UC35 Qiy User Deletes Connect Token](UC35%20Qiy%20User%20Deletes%20Connect%20Token.md)
-* [UC36 Qiy Application Deletes Connect Token](UC36%20Qiy%20Application%20Deletes%20Connect%20Token.md)
+* [UC20 Qiy User Requests Connect Token](UC20%20Qiy%20User%20Requests%20Connect%20Token.md)
+* [UC21 Qiy User Creates Connect Token](UC21%20Qiy%20User%20Creates%20Connect%20Token.md)
+* [UC22 Qiy User Manages Connect Tokens](UC22%20Qiy%20User%20Manages%20Connect%20Tokens.md)
+* [UC23 Qiy User Views Connect Token Properties](UC23%20Qiy%20User%20Views%20Connect%20Token%20Properties.md)
+* [UC24 Qiy User Changes Connect Token Properties](UC24%20Qiy%20User%20Changes%20Connect%20Token%20Properties.md)
+* [UC25 Qiy User Deletes Connect Token](UC25%20Qiy%20User%20Deletes%20Connect%20Token.md)
 
 # 6 Consent
 
-* [UC37 Individual Manages Consents](UC37%20Individual%20Manages%20Consents.md)
-* [UC38 Individual Grants Consent](UC38%20Individual%20Grants%20Consent.md)
-* [UC39 Individual Withdraws Consent](UC39%20Individual%20Withdraws%20Consent.md)
-* [UC40 Relying Party Views Consents](UC40%20Relying%20Party%20Views%20Consents.md)
+* [UC26 Individual Manages Consents](UC26%20Individual%20Manages%20Consents.md)
+* [UC27 Individual Grants Consent](UC27%20Individual%20Grants%20Consent.md)
+* [UC28 Individual Withdraws Consent](UC28%20Individual%20Withdraws%20Consent.md)
+* [UC29 Relying Party Views Consents](UC29%20Relying%20Party%20Views%20Consents.md)
 
 # 7 Data Source
 
-* [UC41 Individual Manages Consent Data Sources](UC41%20Individual%20Manages%20Consent%20Data%20Sources.md)
-* [UC42 Individual Adds Data Source](UC42%20Individual%20Adds%20Data%20Source.md)
-* [UC43 Individual Removes Data Source](UC43%20Individual%20Removes%20Data%20Source.md)
-* [UC44 Individual Connects With Data Provider](UC44%20Individual%20Connects%20With%20Data%20Provider.md)
+* [UC30 Individual Manages Consent Data Sources](UC30%20Individual%20Manages%20Consent%20Data%20Sources.md)
+* [UC31 Individual Adds Data Source](UC31%20Individual%20Adds%20Data%20Source.md)
+* [UC32 Individual Removes Data Source](UC32%20Individual%20Removes%20Data%20Source.md)
+* [UC33 Individual Connects With Data Provider](UC33%20Individual%20Connects%20With%20Data%20Provider.md)
 
 # 8 Data
 
-* [UC45 Qiy User Requests Data](UC45%20Qiy%20User%20Requests%20Data.md)
-* [UC46 Qiy User Requests Data References](UC46%20Qiy%20User%20Requests%20Data%20References.md)
-* [UC47 Qiy User Receives Data References Update](UC47%20Qiy%20User%20Receives%20Data%20References%20Update.md)
+* [UC34 Qiy User Requests Data](UC34%20Qiy%20User%20Requests%20Data.md)
+* [UC35 Qiy User Requests Data References](UC35%20Qiy%20User%20Requests%20Data%20References.md)
+* [UC36 Qiy User Receives Data References Update](UC36%20Qiy%20User%20Receives%20Data%20References%20Update.md)
 
 # 9 Qiy Trust Network Access
 
-* [UC48 Service Provider Requests Access](UC48%20Service%20Provider%20Requests%20Access.md)
-* [UC49 Service Provider Requests Qiy Node](UC49%20Service%20Provider%20Requests%20Qiy%20Node.md)
-* [UC50 Service Provider Requests Transporter](UC50%20Service%20Provider%20Requests%20Transporter.md)
-* [UC51 Relying Party Requests Access](UC51%20Relying%20Party%20Requests%20Access.md)
-* [UC52 Data Provider Requests Access](UC52%20Data%20Provider%20Requests%20Access.md)
-* [UC53 Access Provider Registers Service Provider](UC53%20Access%20Provider%20Registers%20Service%20Provider.md)
-* [UC54 Access Provider Registers Relying Party](UC54%20Access%20Provider%20Registers%20Relying%20Party.md)
-* [UC55 Access Provider Registers Data Provider](UC55%20Access%20Provider%20Registers%20Data%20Provider.md)
-* [UC56 Access Provider Provides Access](UC56%20Access%20Provider%20Provides%20Access.md)
-* [UC57 Access Provider Provides Qiy Node](UC57%20Access%20Provider%20Provides%20Qiy%20Node.md)
-* [UC58 Access Provider Provides Transporter](UC58%20Access%20Provider%20Provides%20Transporter.md)
+* [UC37 Service Provider Requests Access](UC37%20Service%20Provider%20Requests%20Access.md)
+* [UC38 Service Provider Requests Qiy Node](UC38%20Service%20Provider%20Requests%20Qiy%20Node.md)
+* [UC39 Service Provider Requests Transporter](UC39%20Service%20Provider%20Requests%20Transporter.md)
+* [UC40 Relying Party Requests Access](UC40%20Relying%20Party%20Requests%20Access.md)
+* [UC41 Data Provider Requests Access](UC41%20Data%20Provider%20Requests%20Access.md)
+* [UC42 Access Provider Registers Service Provider](UC42%20Access%20Provider%20Registers%20Service%20Provider.md)
+* [UC43 Access Provider Registers Relying Party](UC43%20Access%20Provider%20Registers%20Relying%20Party.md)
+* [UC44 Access Provider Registers Data Provider](UC44%20Access%20Provider%20Registers%20Data%20Provider.md)
+* [UC45 Access Provider Provides Access](UC45%20Access%20Provider%20Provides%20Access.md)
+* [UC46 Access Provider Provides Qiy Node](UC46%20Access%20Provider%20Provides%20Qiy%20Node.md)
+* [UC47 Access Provider Provides Transporter](UC47%20Access%20Provider%20Provides%20Transporter.md)
 
 # 10 Service Catalogues
 
-* [UC59 Service Provider Manages Service Catalogue](UC59%20Service%20Provider%20Manages%20Service%20Catalogue.md)
-* [UC60 Service Provider Adds Service](UC60%20Service%20Provider%20Adds%20Service.md)
-* [UC61 Service Provider Changes Service](UC61%20Service%20Provider%20Changes%20Service.md)
-* [UC62 Service Provider Withdraws Service](UC62%20Service%20Provider%20Withdraws%20Service.md)
-* [UC63 Data Provider Manages Data Service Catalogue](UC63%20Data%20Provider%20Manages%20Data%20Service%20Catalogue.md)
-* [UC64 Data Provider Adds Data Service](UC64%20Data%20Provider%20Adds%20Data%20Service.md)
-* [UC65 Data Provider Changes Data Service](UC65%20Data%20Provider%20Changes%20Data%20Service.md)
-* [UC66 Data Provider Withdraws Data Service](UC66%20Data%20Provider%20Withdraws%20Data%20Service.md)
+* [UC48 Service Provider Manages Service Catalogue](UC48%20Service%20Provider%20Manages%20Service%20Catalogue.md)
+* [UC49 Service Provider Adds Service](UC49%20Service%20Provider%20Adds%20Service.md)
+* [UC50 Service Provider Changes Service](UC50%20Service%20Provider%20Changes%20Service.md)
+* [UC51 Service Provider Withdraws Service](UC51%20Service%20Provider%20Withdraws%20Service.md)
+* [UC52 Data Provider Manages Data Service Catalogue](UC52%20Data%20Provider%20Manages%20Data%20Service%20Catalogue.md)
+* [UC53 Data Provider Adds Data Service](UC53%20Data%20Provider%20Adds%20Data%20Service.md)
+* [UC54 Data Provider Changes Data Service](UC54%20Data%20Provider%20Changes%20Data%20Service.md)
+* [UC55 Data Provider Withdraws Data Service](UC55%20Data%20Provider%20Withdraws%20Data%20Service.md)
 
 # 11 Subscriptions
 
-* [UC67 Relying Party Publishes Service Catalogue](UC67%20Relying%20Party%20Publishes%20Service%20Catalogue.md)
-* [UC68 Individual Manages Subscriptions](UC68%20Individual%20Manages%20Subscriptions.md)
-* [UC69 Individual Subscribes to Service](UC69%20Individual%20Subscribes%20to%20Service.md)
-* [UC70 Individual Ends Subscription](UC70%20Individual%20Ends%20Subscription.md)
+* [UC56 Relying Party Publishes Service Catalogue](UC56%20Relying%20Party%20Publishes%20Service%20Catalogue.md)
+* [UC57 Individual Manages Subscriptions](UC57%20Individual%20Manages%20Subscriptions.md)
+* [UC58 Individual Subscribes to Service](UC58%20Individual%20Subscribes%20to%20Service.md)
+* [UC59 Individual Ends Subscription](UC59%20Individual%20Ends%20Subscription.md)
 
 # 12 Data Use
 
-* [UC71 Individual Views Data Use Report](UC71%20Individual%20Views%20Data%20Use%20Report.md)
-* [UC72 Qiy Application Requests Data Use Records](UC72%20Qiy%20Application%20Requests%20Data%20Use%20Records.md)
-* [UC73 Qiy Node Records Data Use](UC73%20Qiy%20Node%20Records%20Data%20Use.md)
-* [UC74 Relying Party Records Data Use](UC74%20Relying%20Party%20Records%20Data%20Use.md)
-* [UC75 Data Provider Records Data Use](UC75%20Data%20Provider%20Records%20Data%20Use.md)
+* [UC60 Individual Views Data Use Report](UC60%20Individual%20Views%20Data%20Use%20Report.md)
+* [UC61 Qiy Application Requests Data Use Records](UC61%20Qiy%20Application%20Requests%20Data%20Use%20Records.md)
+* [UC62 Qiy Node Records Data Use](UC62%20Qiy%20Node%20Records%20Data%20Use.md)
+* [UC63 Relying Party Records Data Use](UC63%20Relying%20Party%20Records%20Data%20Use.md)
+* [UC64 Data Provider Records Data Use](UC64%20Data%20Provider%20Records%20Data%20Use.md)
 

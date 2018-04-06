@@ -27,6 +27,7 @@ This document is the use case specification for use case [UC17 Qiy User Connects
 		1. [Connect with a button click](#connect-with-a-button-click)
 		1. [Connect using print](#connect-using-print)
 		1. [Confirmation](#confirmation)
+	1. [Proposer creates Connect Token](#11-proposer-creates-connect-token)
 
 # Primary Actors
 
@@ -117,4 +118,6 @@ The [Qiy Application](../Definitions.md#qiy-application) will create the [Connec
 
 ![An example of confirming the acceptance a Connect Proposal](../images/example--connect-proposal--verify.PNG)
 
+## 1.1 Proposer creates Connect Token
 
+Instead of acquiring a Connect Token from the Qiy Trust Network, the Proposer can also create a Connect Token himself, see [UC21 Qiy User Creates Connect Token](UC21%20Qiy%20User%20Creates%20Connect%20Token.md).
