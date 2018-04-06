@@ -100,49 +100,47 @@ This chapter is dedicated to use cases that relate to the lifecycle of a Qiy Nod
 
 # 8 Data
 
-* [UC45 Relying Party Requests Data](UC45%20Relying%20Party%20Requests%20Data.md)
-* [UC46 Qiy User Requests Data Reference](UC46%20Qiy%20User%20Requests%20Data%20Reference.md)
-* [UC47 Qiy User Generates Data Reference](UC47%20Qiy%20User%20Generates%20Data%20Reference.md)
-* [UC48 Relying Party Receives Data Reference](UC48%20Relying%20Party%20Receives%20Data%20Reference.md)
-* [UC49 Relying Party Resolves Data Reference](UC49%20Relying%20Party%20Resolves%20Data%20Reference.md)
+* [UC45 Qiy User Requests Data](UC45%20Qiy%20User%20Requests%20Data.md)
+* [UC46 Qiy User Requests Data References](UC46%20Qiy%20User%20Requests%20Data%20References.md)
+* [UC47 Qiy User Receives Data References Update](UC47%20Qiy%20User%20Receives%20Data%20References%20Update.md)
 
 # 9 Qiy Trust Network Access
 
-* [UC50 Service Provider Requests Access](UC50%20Service%20Provider%20Requests%20Access.md)
-* [UC51 Service Provider Requests Qiy Node](UC51%20Service%20Provider%20Requests%20Qiy%20Node.md)
-* [UC52 Service Provider Requests Transporter](UC52%20Service%20Provider%20Requests%20Transporter.md)
-* [UC53 Relying Party Requests Access](UC53%20Relying%20Party%20Requests%20Access.md)
-* [UC54 Data Provider Requests Access](UC54%20Data%20Provider%20Requests%20Access.md)
-* [UC55 Access Provider Registers Service Provider](UC55%20Access%20Provider%20Registers%20Service%20Provider.md)
-* [UC56 Access Provider Registers Relying Party](UC56%20Access%20Provider%20Registers%20Relying%20Party.md)
-* [UC57 Access Provider Registers Data Provider](UC57%20Access%20Provider%20Registers%20Data%20Provider.md)
-* [UC58 Access Provider Provides Access](UC58%20Access%20Provider%20Provides%20Access.md)
-* [UC59 Access Provider Provides Qiy Node](UC59%20Access%20Provider%20Provides%20Qiy%20Node.md)
-* [UC60 Access Provider Provides Transporter](UC60%20Access%20Provider%20Provides%20Transporter.md)
+* [UC48 Service Provider Requests Access](UC48%20Service%20Provider%20Requests%20Access.md)
+* [UC49 Service Provider Requests Qiy Node](UC49%20Service%20Provider%20Requests%20Qiy%20Node.md)
+* [UC50 Service Provider Requests Transporter](UC50%20Service%20Provider%20Requests%20Transporter.md)
+* [UC51 Relying Party Requests Access](UC51%20Relying%20Party%20Requests%20Access.md)
+* [UC52 Data Provider Requests Access](UC52%20Data%20Provider%20Requests%20Access.md)
+* [UC53 Access Provider Registers Service Provider](UC53%20Access%20Provider%20Registers%20Service%20Provider.md)
+* [UC54 Access Provider Registers Relying Party](UC54%20Access%20Provider%20Registers%20Relying%20Party.md)
+* [UC55 Access Provider Registers Data Provider](UC55%20Access%20Provider%20Registers%20Data%20Provider.md)
+* [UC56 Access Provider Provides Access](UC56%20Access%20Provider%20Provides%20Access.md)
+* [UC57 Access Provider Provides Qiy Node](UC57%20Access%20Provider%20Provides%20Qiy%20Node.md)
+* [UC58 Access Provider Provides Transporter](UC58%20Access%20Provider%20Provides%20Transporter.md)
 
 # 10 Service Catalogues
 
-* [UC61 Service Provider Manages Service Catalogue](UC61%20Service%20Provider%20Manages%20Service%20Catalogue.md)
-* [UC62 Service Provider Adds Service](UC62%20Service%20Provider%20Adds%20Service.md)
-* [UC63 Service Provider Changes Service](UC63%20Service%20Provider%20Changes%20Service.md)
-* [UC64 Service Provider Withdraws Service](UC64%20Service%20Provider%20Withdraws%20Service.md)
-* [UC65 Data Provider Manages Data Service Catalogue](UC65%20Data%20Provider%20Manages%20Data%20Service%20Catalogue.md)
-* [UC66 Data Provider Adds Data Service](UC66%20Data%20Provider%20Adds%20Data%20Service.md)
-* [UC67 Data Provider Changes Data Service](UC67%20Data%20Provider%20Changes%20Data%20Service.md)
-* [UC68 Data Provider Withdraws Data Service](UC68%20Data%20Provider%20Withdraws%20Data%20Service.md)
+* [UC59 Service Provider Manages Service Catalogue](UC59%20Service%20Provider%20Manages%20Service%20Catalogue.md)
+* [UC60 Service Provider Adds Service](UC60%20Service%20Provider%20Adds%20Service.md)
+* [UC61 Service Provider Changes Service](UC61%20Service%20Provider%20Changes%20Service.md)
+* [UC62 Service Provider Withdraws Service](UC62%20Service%20Provider%20Withdraws%20Service.md)
+* [UC63 Data Provider Manages Data Service Catalogue](UC63%20Data%20Provider%20Manages%20Data%20Service%20Catalogue.md)
+* [UC64 Data Provider Adds Data Service](UC64%20Data%20Provider%20Adds%20Data%20Service.md)
+* [UC65 Data Provider Changes Data Service](UC65%20Data%20Provider%20Changes%20Data%20Service.md)
+* [UC66 Data Provider Withdraws Data Service](UC66%20Data%20Provider%20Withdraws%20Data%20Service.md)
 
 # 11 Subscriptions
 
-* [UC69 Relying Party Publishes Service Catalogue](UC69%20Relying%20Party%20Publishes%20Service%20Catalogue.md)
-* [UC70 Individual Manages Subscriptions](UC70%20Individual%20Manages%20Subscriptions.md)
-* [UC71 Individual Subscribes to Service](UC71%20Individual%20Subscribes%20to%20Service.md)
-* [UC72 Individual Ends Subscription](UC72%20Individual%20Ends%20Subscription.md)
+* [UC67 Relying Party Publishes Service Catalogue](UC67%20Relying%20Party%20Publishes%20Service%20Catalogue.md)
+* [UC68 Individual Manages Subscriptions](UC68%20Individual%20Manages%20Subscriptions.md)
+* [UC69 Individual Subscribes to Service](UC69%20Individual%20Subscribes%20to%20Service.md)
+* [UC70 Individual Ends Subscription](UC70%20Individual%20Ends%20Subscription.md)
 
 # 12 Data Use
 
-* [UC73 Individual Views Data Use Report](UC73%20Individual%20Views%20Data%20Use%20Report.md)
-* [UC74 Qiy Application Requests Data Use Records](UC74%20Qiy%20Application%20Requests%20Data%20Use%20Records.md)
-* [UC75 Qiy Node Records Data Use](UC75%20Qiy%20Node%20Records%20Data%20Use.md)
-* [UC76 Relying Party Records Data Use](UC76%20Relying%20Party%20Records%20Data%20Use.md)
-* [UC77 Data Provider Records Data Use](UC77%20Data%20Provider%20Records%20Data%20Use.md)
+* [UC71 Individual Views Data Use Report](UC71%20Individual%20Views%20Data%20Use%20Report.md)
+* [UC72 Qiy Application Requests Data Use Records](UC72%20Qiy%20Application%20Requests%20Data%20Use%20Records.md)
+* [UC73 Qiy Node Records Data Use](UC73%20Qiy%20Node%20Records%20Data%20Use.md)
+* [UC74 Relying Party Records Data Use](UC74%20Relying%20Party%20Records%20Data%20Use.md)
+* [UC75 Data Provider Records Data Use](UC75%20Data%20Provider%20Records%20Data%20Use.md)
 
