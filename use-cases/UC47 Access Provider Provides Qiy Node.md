@@ -1,8 +1,8 @@
-# UC55 Data Provider Withdraws Data Service
+# UC47 Access Provider Provides Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC55 Data Provider Withdraws Data Service](UC55%20Data%20Provider%20Withdraws%20Data%20Service.md).
+This document is the use case specification for use case [UC47 Access Provider Provides Qiy Node](UC47%20Access%20Provider%20Provides%20Qiy%20Node.md).
 
 # Contents
 

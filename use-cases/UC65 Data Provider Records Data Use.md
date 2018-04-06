@@ -1,8 +1,8 @@
-# UC42 Access Provider Registers Service Provider
+# UC65 Data Provider Records Data Use
 
 # Abstract
 
-This document is the use case specification for use case [UC42 Access Provider Registers Service Provider](UC42%20Access%20Provider%20Registers%20Service%20Provider.md).
+This document is the use case specification for use case [UC65 Data Provider Records Data Use](UC65%20Data%20Provider%20Records%20Data%20Use.md).
 
 # Contents
 

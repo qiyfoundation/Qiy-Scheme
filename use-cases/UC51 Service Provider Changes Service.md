@@ -1,8 +1,8 @@
-# UC45 Access Provider Provides Access
+# UC51 Service Provider Changes Service
 
 # Abstract
 
-This document is the use case specification for use case [UC45 Access Provider Provides Access](UC45%20Access%20Provider%20Provides%20Access.md).
+This document is the use case specification for use case [UC51 Service Provider Changes Service](UC51%20Service%20Provider%20Changes%20Service.md).
 
 # Contents
 

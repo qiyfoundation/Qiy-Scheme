@@ -1,8 +1,8 @@
-# UC40 Relying Party Requests Access
+# UC60 Individual Ends Subscription
 
 # Abstract
 
-This document is the use case specification for use case [UC40 Relying Party Requests Access](UC40%20Relying%20Party%20Requests%20Access.md).
+This document is the use case specification for use case [UC60 Individual Ends Subscription](UC60%20Individual%20Ends%20Subscription.md).
 
 # Contents
 

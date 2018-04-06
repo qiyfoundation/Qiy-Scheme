@@ -1,8 +1,8 @@
-# UC37 Service Provider Requests Access
+# UC38 Service Provider Requests Access
 
 # Abstract
 
-This document is the use case specification for use case [UC37 Service Provider Requests Access](UC37%20Service%20Provider%20Requests%20Access.md).
+This document is the use case specification for use case [UC38 Service Provider Requests Access](UC38%20Service%20Provider%20Requests%20Access.md).
 
 # Contents
 

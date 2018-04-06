@@ -1,8 +1,8 @@
-# UC62 Qiy Node Records Data Use
+# UC46 Access Provider Provides Access
 
 # Abstract
 
-This document is the use case specification for use case [UC62 Qiy Node Records Data Use](UC62%20Qiy%20Node%20Records%20Data%20Use.md).
+This document is the use case specification for use case [UC46 Access Provider Provides Access](UC46%20Access%20Provider%20Provides%20Access.md).
 
 # Contents
 

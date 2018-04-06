@@ -1,8 +1,8 @@
-# UC43 Access Provider Registers Relying Party
+# UC37 Qiy User Receives Data References Update
 
 # Abstract
 
-This document is the use case specification for use case [UC43 Access Provider Registers Relying Party](UC43%20Access%20Provider%20Registers%20Relying%20Party.md).
+This document is the use case specification for use case [UC37 Qiy User Receives Data References Update](UC37%20Qiy%20User%20Receives%20Data%20References%20Update.md).
 
 # Contents
 

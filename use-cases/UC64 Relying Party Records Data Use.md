@@ -1,8 +1,8 @@
-# UC56 Relying Party Publishes Service Catalogue
+# UC64 Relying Party Records Data Use
 
 # Abstract
 
-This document is the use case specification for use case [UC56 Relying Party Publishes Service Catalogue](UC56%20Relying%20Party%20Publishes%20Service%20Catalogue.md).
+This document is the use case specification for use case [UC64 Relying Party Records Data Use](UC64%20Relying%20Party%20Records%20Data%20Use.md).
 
 # Contents
 

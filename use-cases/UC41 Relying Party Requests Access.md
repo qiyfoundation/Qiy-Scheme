@@ -1,8 +1,8 @@
-# UC64 Data Provider Records Data Use
+# UC41 Relying Party Requests Access
 
 # Abstract
 
-This document is the use case specification for use case [UC64 Data Provider Records Data Use](UC64%20Data%20Provider%20Records%20Data%20Use.md).
+This document is the use case specification for use case [UC41 Relying Party Requests Access](UC41%20Relying%20Party%20Requests%20Access.md).
 
 # Contents
 

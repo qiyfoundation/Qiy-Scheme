@@ -1,8 +1,8 @@
-# UC51 Service Provider Withdraws Service
+# UC39 Service Provider Requests Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC51 Service Provider Withdraws Service](UC51%20Service%20Provider%20Withdraws%20Service.md).
+This document is the use case specification for use case [UC39 Service Provider Requests Qiy Node](UC39%20Service%20Provider%20Requests%20Qiy%20Node.md).
 
 # Contents
 

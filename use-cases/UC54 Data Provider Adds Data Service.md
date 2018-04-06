@@ -1,8 +1,8 @@
-# UC54 Data Provider Changes Data Service
+# UC54 Data Provider Adds Data Service
 
 # Abstract
 
-This document is the use case specification for use case [UC54 Data Provider Changes Data Service](UC54%20Data%20Provider%20Changes%20Data%20Service.md).
+This document is the use case specification for use case [UC54 Data Provider Adds Data Service](UC54%20Data%20Provider%20Adds%20Data%20Service.md).
 
 # Contents
 

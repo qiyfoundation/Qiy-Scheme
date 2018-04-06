@@ -1,8 +1,8 @@
-# UC60 Individual Views Data Use Report
+# UC52 Service Provider Withdraws Service
 
 # Abstract
 
-This document is the use case specification for use case [UC60 Individual Views Data Use Report](UC60%20Individual%20Views%20Data%20Use%20Report.md).
+This document is the use case specification for use case [UC52 Service Provider Withdraws Service](UC52%20Service%20Provider%20Withdraws%20Service.md).
 
 # Contents
 

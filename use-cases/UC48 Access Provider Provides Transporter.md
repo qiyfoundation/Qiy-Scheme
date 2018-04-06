@@ -1,8 +1,8 @@
-# UC41 Data Provider Requests Access
+# UC48 Access Provider Provides Transporter
 
 # Abstract
 
-This document is the use case specification for use case [UC41 Data Provider Requests Access](UC41%20Data%20Provider%20Requests%20Access.md).
+This document is the use case specification for use case [UC48 Access Provider Provides Transporter](UC48%20Access%20Provider%20Provides%20Transporter.md).
 
 # Contents
 

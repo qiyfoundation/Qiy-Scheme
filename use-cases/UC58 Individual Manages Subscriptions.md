@@ -1,8 +1,8 @@
-# UC49 Service Provider Adds Service
+# UC58 Individual Manages Subscriptions
 
 # Abstract
 
-This document is the use case specification for use case [UC49 Service Provider Adds Service](UC49%20Service%20Provider%20Adds%20Service.md).
+This document is the use case specification for use case [UC58 Individual Manages Subscriptions](UC58%20Individual%20Manages%20Subscriptions.md).
 
 # Contents
 

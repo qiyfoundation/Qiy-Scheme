@@ -1,8 +1,8 @@
-# UC50 Service Provider Changes Service
+# UC36 Qiy User Resolves Data Reference
 
 # Abstract
 
-This document is the use case specification for use case [UC50 Service Provider Changes Service](UC50%20Service%20Provider%20Changes%20Service.md).
+This document is the use case specification for use case [UC36 Qiy User Resolves Data Reference](UC36%20Qiy%20User%20Resolves%20Data%20Reference.md).
 
 # Contents
 

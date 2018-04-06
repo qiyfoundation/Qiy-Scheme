@@ -1,8 +1,8 @@
-# UC63 Relying Party Records Data Use
+# UC49 Service Provider Manages Service Catalogue
 
 # Abstract
 
-This document is the use case specification for use case [UC63 Relying Party Records Data Use](UC63%20Relying%20Party%20Records%20Data%20Use.md).
+This document is the use case specification for use case [UC49 Service Provider Manages Service Catalogue](UC49%20Service%20Provider%20Manages%20Service%20Catalogue.md).
 
 # Contents
 

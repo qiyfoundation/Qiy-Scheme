@@ -1,8 +1,8 @@
-# UC36 Qiy User Receives Data References Update
+# UC42 Data Provider Requests Access
 
 # Abstract
 
-This document is the use case specification for use case [UC36 Qiy User Receives Data References Update](UC36%20Qiy%20User%20Receives%20Data%20References%20Update.md).
+This document is the use case specification for use case [UC42 Data Provider Requests Access](UC42%20Data%20Provider%20Requests%20Access.md).
 
 # Contents
 

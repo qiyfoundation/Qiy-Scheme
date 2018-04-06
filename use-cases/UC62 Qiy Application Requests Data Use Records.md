@@ -1,8 +1,8 @@
-# UC38 Service Provider Requests Qiy Node
+# UC62 Qiy Application Requests Data Use Records
 
 # Abstract
 
-This document is the use case specification for use case [UC38 Service Provider Requests Qiy Node](UC38%20Service%20Provider%20Requests%20Qiy%20Node.md).
+This document is the use case specification for use case [UC62 Qiy Application Requests Data Use Records](UC62%20Qiy%20Application%20Requests%20Data%20Use%20Records.md).
 
 # Contents
 

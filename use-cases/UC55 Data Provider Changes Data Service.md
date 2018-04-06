@@ -1,8 +1,8 @@
-# UC52 Data Provider Manages Data Service Catalogue
+# UC55 Data Provider Changes Data Service
 
 # Abstract
 
-This document is the use case specification for use case [UC52 Data Provider Manages Data Service Catalogue](UC52%20Data%20Provider%20Manages%20Data%20Service%20Catalogue.md).
+This document is the use case specification for use case [UC55 Data Provider Changes Data Service](UC55%20Data%20Provider%20Changes%20Data%20Service.md).
 
 # Contents
 

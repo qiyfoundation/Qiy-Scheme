@@ -1,8 +1,8 @@
-# UC44 Access Provider Registers Data Provider
+# UC50 Service Provider Adds Service
 
 # Abstract
 
-This document is the use case specification for use case [UC44 Access Provider Registers Data Provider](UC44%20Access%20Provider%20Registers%20Data%20Provider.md).
+This document is the use case specification for use case [UC50 Service Provider Adds Service](UC50%20Service%20Provider%20Adds%20Service.md).
 
 # Contents
 

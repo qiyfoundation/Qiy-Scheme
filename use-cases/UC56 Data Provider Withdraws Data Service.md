@@ -1,8 +1,8 @@
-# UC58 Individual Subscribes to Service
+# UC56 Data Provider Withdraws Data Service
 
 # Abstract
 
-This document is the use case specification for use case [UC58 Individual Subscribes to Service](UC58%20Individual%20Subscribes%20to%20Service.md).
+This document is the use case specification for use case [UC56 Data Provider Withdraws Data Service](UC56%20Data%20Provider%20Withdraws%20Data%20Service.md).
 
 # Contents
 

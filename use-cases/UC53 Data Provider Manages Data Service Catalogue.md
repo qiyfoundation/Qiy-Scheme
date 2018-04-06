@@ -1,8 +1,8 @@
-# UC59 Individual Ends Subscription
+# UC53 Data Provider Manages Data Service Catalogue
 
 # Abstract
 
-This document is the use case specification for use case [UC59 Individual Ends Subscription](UC59%20Individual%20Ends%20Subscription.md).
+This document is the use case specification for use case [UC53 Data Provider Manages Data Service Catalogue](UC53%20Data%20Provider%20Manages%20Data%20Service%20Catalogue.md).
 
 # Contents
 

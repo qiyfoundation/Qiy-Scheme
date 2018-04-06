@@ -1,8 +1,8 @@
-# UC39 Service Provider Requests Transporter
+# UC40 Service Provider Requests Transporter
 
 # Abstract
 
-This document is the use case specification for use case [UC39 Service Provider Requests Transporter](UC39%20Service%20Provider%20Requests%20Transporter.md).
+This document is the use case specification for use case [UC40 Service Provider Requests Transporter](UC40%20Service%20Provider%20Requests%20Transporter.md).
 
 # Contents
 

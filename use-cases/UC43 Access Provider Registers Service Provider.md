@@ -1,8 +1,8 @@
-# UC61 Qiy Application Requests Data Use Records
+# UC43 Access Provider Registers Service Provider
 
 # Abstract
 
-This document is the use case specification for use case [UC61 Qiy Application Requests Data Use Records](UC61%20Qiy%20Application%20Requests%20Data%20Use%20Records.md).
+This document is the use case specification for use case [UC43 Access Provider Registers Service Provider](UC43%20Access%20Provider%20Registers%20Service%20Provider.md).
 
 # Contents
 

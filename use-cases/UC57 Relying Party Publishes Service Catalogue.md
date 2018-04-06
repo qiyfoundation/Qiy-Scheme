@@ -1,8 +1,8 @@
-# UC47 Access Provider Provides Transporter
+# UC57 Relying Party Publishes Service Catalogue
 
 # Abstract
 
-This document is the use case specification for use case [UC47 Access Provider Provides Transporter](UC47%20Access%20Provider%20Provides%20Transporter.md).
+This document is the use case specification for use case [UC57 Relying Party Publishes Service Catalogue](UC57%20Relying%20Party%20Publishes%20Service%20Catalogue.md).
 
 # Contents
 

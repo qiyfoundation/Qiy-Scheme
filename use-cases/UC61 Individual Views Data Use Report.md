@@ -1,8 +1,8 @@
-# UC48 Service Provider Manages Service Catalogue
+# UC61 Individual Views Data Use Report
 
 # Abstract
 
-This document is the use case specification for use case [UC48 Service Provider Manages Service Catalogue](UC48%20Service%20Provider%20Manages%20Service%20Catalogue.md).
+This document is the use case specification for use case [UC61 Individual Views Data Use Report](UC61%20Individual%20Views%20Data%20Use%20Report.md).
 
 # Contents
 

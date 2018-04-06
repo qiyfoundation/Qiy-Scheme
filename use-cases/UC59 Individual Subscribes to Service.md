@@ -1,8 +1,8 @@
-# UC46 Access Provider Provides Qiy Node
+# UC59 Individual Subscribes to Service
 
 # Abstract
 
-This document is the use case specification for use case [UC46 Access Provider Provides Qiy Node](UC46%20Access%20Provider%20Provides%20Qiy%20Node.md).
+This document is the use case specification for use case [UC59 Individual Subscribes to Service](UC59%20Individual%20Subscribes%20to%20Service.md).
 
 # Contents
 
