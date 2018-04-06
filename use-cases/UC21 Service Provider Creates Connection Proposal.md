@@ -1,12 +1,10 @@
-
-# UC23 Qiy Application Creates Connection
+# UC21 Service Provider Creates Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC23 Qiy Application Creates Connection](UC23%20Qiy%20Application%20Creates%20Connection.md).
+This document is the use case specification for use case [UC21 Service Provider Creates Connection Proposal](UC21%20Service%20Provider%20Creates%20Connection%20Proposal.md).
 
 # Contents
-
 
 
 1. [Primary Actors](#primary-actors)

@@ -1,4 +1,3 @@
-
 # UC9 Individual Creates Qiy Node
 
 # Abstract

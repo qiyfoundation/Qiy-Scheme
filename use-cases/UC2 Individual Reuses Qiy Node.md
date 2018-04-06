@@ -1,4 +1,3 @@
-
 # UC2 Individual Reuses Qiy Node
 
 # Abstract

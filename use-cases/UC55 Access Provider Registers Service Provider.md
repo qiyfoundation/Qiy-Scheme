@@ -1,4 +1,3 @@
-
 # UC55 Access Provider Registers Service Provider
 
 # Abstract

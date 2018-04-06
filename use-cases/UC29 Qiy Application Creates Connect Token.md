@@ -1,4 +1,3 @@
-
 # UC29 Qiy Application Creates Connect Token
 
 # Abstract

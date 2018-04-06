@@ -1,4 +1,3 @@
-
 # UC34 Qiy Application Updates Connect Token
 
 # Abstract

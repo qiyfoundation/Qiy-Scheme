@@ -1,4 +1,3 @@
-
 # UC70 Individual Manages Subscriptions
 
 # Abstract

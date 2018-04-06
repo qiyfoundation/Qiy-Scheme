@@ -1,4 +1,3 @@
-
 # UC40 Relying Party Views Consents
 
 # Abstract

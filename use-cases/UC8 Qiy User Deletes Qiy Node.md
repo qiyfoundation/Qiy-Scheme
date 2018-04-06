@@ -1,4 +1,3 @@
-
 # UC8 Qiy User Deletes Qiy Node
 
 # Abstract

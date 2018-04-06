@@ -1,4 +1,3 @@
-
 # UC64 Service Provider Withdraws Service
 
 # Abstract

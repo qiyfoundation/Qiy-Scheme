@@ -1,9 +1,8 @@
-
-# UC27 Proposer Changes Connection Proposal
+# UC25 Service Provider Accepts Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC27 Proposer Changes Connection Proposal](UC27%20Proposer%20Changes%20Connection%20Proposal.md).
+This document is the use case specification for use case [UC25 Service Provider Accepts Connection Proposal](UC25%20Service%20Provider%20Accepts%20Connection%20Proposal.md).
 
 # Contents
 

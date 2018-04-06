@@ -1,4 +1,3 @@
-
 # UC71 Individual Subscribes to Service
 
 # Abstract

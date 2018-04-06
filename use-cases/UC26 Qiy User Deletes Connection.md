@@ -1,9 +1,8 @@
-
-# UC22 Individual Creates Connection
+# UC26 Qiy User Deletes Connection
 
 # Abstract
 
-This document is the use case specification for use case [UC22 Individual Creates Connection](UC22%20Individual%20Creates%20Connection.md).
+This document is the use case specification for use case [UC26 Qiy User Deletes Connection](UC26%20Qiy%20User%20Deletes%20Connection.md).
 
 # Contents
 

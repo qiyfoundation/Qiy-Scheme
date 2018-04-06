@@ -1,4 +1,3 @@
-
 # UC49 Relying Party Resolves Data Reference
 
 # Abstract

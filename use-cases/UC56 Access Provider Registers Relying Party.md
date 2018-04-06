@@ -1,4 +1,3 @@
-
 # UC56 Access Provider Registers Relying Party
 
 # Abstract

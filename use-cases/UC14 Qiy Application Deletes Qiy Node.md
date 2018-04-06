@@ -1,4 +1,3 @@
-
 # UC14 Qiy Application Deletes Qiy Node
 
 # Abstract

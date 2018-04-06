@@ -1,9 +1,8 @@
-
-# UC24 Service Provider Creates Connection
+# UC20 Qiy Application Creates Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC24 Service Provider Creates Connection](UC24%20Service%20Provider%20Creates%20Connection.md).
+This document is the use case specification for use case [UC20 Qiy Application Creates Connection Proposal](UC20%20Qiy%20Application%20Creates%20Connection%20Proposal.md).
 
 # Contents
 

@@ -1,4 +1,3 @@
-
 # UC16 Access Provider Deletes Qiy Node
 
 # Abstract

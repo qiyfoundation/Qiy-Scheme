@@ -1,4 +1,3 @@
-
 # UC77 Data Provider Records Data Use
 
 # Abstract

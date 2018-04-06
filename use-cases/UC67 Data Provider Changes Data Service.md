@@ -1,4 +1,3 @@
-
 # UC67 Data Provider Changes Data Service
 
 # Abstract

@@ -1,4 +1,3 @@
-
 # UC52 Service Provider Requests Transporter
 
 # Abstract

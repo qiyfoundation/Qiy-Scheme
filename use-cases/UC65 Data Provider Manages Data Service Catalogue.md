@@ -1,4 +1,3 @@
-
 # UC65 Data Provider Manages Data Service Catalogue
 
 # Abstract

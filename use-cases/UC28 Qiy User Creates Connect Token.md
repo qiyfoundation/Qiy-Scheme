@@ -1,4 +1,3 @@
-
 # UC28 Qiy User Creates Connect Token
 
 # Abstract

@@ -1,4 +1,3 @@
-
 # UC6 Individual Starts Using Qiy Application
 
 # Abstract

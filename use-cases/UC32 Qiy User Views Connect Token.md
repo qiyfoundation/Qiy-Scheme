@@ -1,4 +1,3 @@
-
 # UC32 Qiy User Views Connect Token
 
 # Abstract

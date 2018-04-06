@@ -1,4 +1,3 @@
-
 # UC36 Qiy Application Deletes Connect Token
 
 # Abstract

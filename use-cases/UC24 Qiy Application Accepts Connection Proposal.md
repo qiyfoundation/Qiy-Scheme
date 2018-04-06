@@ -1,9 +1,8 @@
-
-# UC17 Proposer Creates Connection Proposal
+# UC24 Qiy Application Accepts Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC17 Proposer Creates Connection Proposal](UC17%20Proposer%20Creates%20Connection%20Proposal.md).
+This document is the use case specification for use case [UC24 Qiy Application Accepts Connection Proposal](UC24%20Qiy%20Application%20Accepts%20Connection%20Proposal.md).
 
 # Contents
 

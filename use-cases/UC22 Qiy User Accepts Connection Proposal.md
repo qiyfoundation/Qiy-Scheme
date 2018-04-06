@@ -1,9 +1,8 @@
-
-# UC21 Accepter Creates Connection
+# UC22 Qiy User Accepts Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC21 Accepter Creates Connection](UC21%20Accepter%20Creates%20Connection.md).
+This document is the use case specification for use case [UC22 Qiy User Accepts Connection Proposal](UC22%20Qiy%20User%20Accepts%20Connection%20Proposal.md).
 
 # Contents
 

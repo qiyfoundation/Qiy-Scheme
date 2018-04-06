@@ -1,4 +1,3 @@
-
 # UC72 Individual Ends Subscription
 
 # Abstract

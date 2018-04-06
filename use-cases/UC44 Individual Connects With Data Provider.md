@@ -1,4 +1,3 @@
-
 # UC44 Individual Connects With Data Provider
 
 # Abstract

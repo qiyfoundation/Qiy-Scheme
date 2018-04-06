@@ -1,4 +1,3 @@
-
 # UC48 Relying Party Receives Data Reference
 
 # Abstract

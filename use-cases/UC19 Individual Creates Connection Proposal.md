@@ -1,9 +1,8 @@
-
-# UC26 Qiy Application Deletes Connection
+# UC19 Individual Creates Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC26 Qiy Application Deletes Connection](UC26%20Qiy%20Application%20Deletes%20Connection.md).
+This document is the use case specification for use case [UC19 Individual Creates Connection Proposal](UC19%20Individual%20Creates%20Connection%20Proposal.md).
 
 # Contents
 

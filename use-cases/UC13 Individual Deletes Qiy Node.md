@@ -1,4 +1,3 @@
-
 # UC13 Individual Deletes Qiy Node
 
 # Abstract

@@ -1,4 +1,3 @@
-
 # UC47 Qiy User Generates Data Reference
 
 # Abstract

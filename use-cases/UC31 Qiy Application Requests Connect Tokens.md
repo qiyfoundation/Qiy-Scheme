@@ -1,4 +1,3 @@
-
 # UC31 Qiy Application Requests Connect Tokens
 
 # Abstract

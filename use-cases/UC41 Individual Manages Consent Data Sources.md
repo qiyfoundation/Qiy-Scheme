@@ -1,4 +1,3 @@
-
 # UC41 Individual Manages Consent Data Sources
 
 # Abstract

@@ -1,4 +1,3 @@
-
 # UC69 Relying Party Publishes Service Catalogue
 
 # Abstract

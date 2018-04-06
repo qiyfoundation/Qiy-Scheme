@@ -1,4 +1,3 @@
-
 # UC15 Service Provider Deletes Qiy Node
 
 # Abstract

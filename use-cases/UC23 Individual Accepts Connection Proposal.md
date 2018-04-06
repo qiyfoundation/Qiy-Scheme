@@ -1,9 +1,8 @@
-
-# UC25 Qiy User Deletes Connection
+# UC23 Individual Accepts Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC25 Qiy User Deletes Connection](UC25%20Qiy%20User%20Deletes%20Connection.md).
+This document is the use case specification for use case [UC23 Individual Accepts Connection Proposal](UC23%20Individual%20Accepts%20Connection%20Proposal.md).
 
 # Contents
 

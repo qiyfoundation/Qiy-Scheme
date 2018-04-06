@@ -1,4 +1,3 @@
-
 # UC43 Individual Removes Data Source
 
 # Abstract

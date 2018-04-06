@@ -1,4 +1,3 @@
-
 # UC5 Individual Merges Qiy Nodes
 
 # Abstract

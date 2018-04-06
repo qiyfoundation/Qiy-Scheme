@@ -1,4 +1,3 @@
-
 # UC68 Data Provider Withdraws Data Service
 
 # Abstract

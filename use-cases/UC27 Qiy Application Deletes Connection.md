@@ -1,9 +1,8 @@
-
-# UC20 Service Provider Creates Connection Proposal
+# UC27 Qiy Application Deletes Connection
 
 # Abstract
 
-This document is the use case specification for use case [UC20 Service Provider Creates Connection Proposal](UC20%20Service%20Provider%20Creates%20Connection%20Proposal.md).
+This document is the use case specification for use case [UC27 Qiy Application Deletes Connection](UC27%20Qiy%20Application%20Deletes%20Connection.md).
 
 # Contents
 

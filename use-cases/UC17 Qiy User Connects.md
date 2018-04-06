@@ -1,9 +1,8 @@
-
-# UC19 Qiy Application Creates Connection Proposal
+# UC17 Qiy User Connects
 
 # Abstract
 
-This document is the use case specification for use case [UC19 Qiy Application Creates Connection Proposal](UC19%20Qiy%20Application%20Creates%20Connection%20Proposal.md).
+This document is the use case specification for use case [UC17 Qiy User Connects](UC17%20Qiy%20User%20Connects.md).
 
 # Contents
 

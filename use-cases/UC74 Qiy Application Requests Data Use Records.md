@@ -1,4 +1,3 @@
-
 # UC74 Qiy Application Requests Data Use Records
 
 # Abstract

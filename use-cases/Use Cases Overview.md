@@ -60,17 +60,17 @@ This chapter is dedicated to use cases that relate to the lifecycle of a Qiy Nod
 
 # 4 Connections
 
-* [UC17 Proposer Creates Connection Proposal](UC17%20Proposer%20Creates%20Connection%20Proposal.md)
-* [UC18 Individual Creates Connection Proposal](UC18%20Individual%20Creates%20Connection%20Proposal.md)
-* [UC19 Qiy Application Creates Connection Proposal](UC19%20Qiy%20Application%20Creates%20Connection%20Proposal.md)
-* [UC20 Service Provider Creates Connection Proposal](UC20%20Service%20Provider%20Creates%20Connection%20Proposal.md)
-* [UC21 Accepter Creates Connection](UC21%20Accepter%20Creates%20Connection.md)
-* [UC22 Individual Creates Connection](UC22%20Individual%20Creates%20Connection.md)
-* [UC23 Qiy Application Creates Connection](UC23%20Qiy%20Application%20Creates%20Connection.md)
-* [UC24 Service Provider Creates Connection](UC24%20Service%20Provider%20Creates%20Connection.md)
-* [UC25 Qiy User Deletes Connection](UC25%20Qiy%20User%20Deletes%20Connection.md)
-* [UC26 Qiy Application Deletes Connection](UC26%20Qiy%20Application%20Deletes%20Connection.md)
-* [UC27 Proposer Changes Connection Proposal](UC27%20Proposer%20Changes%20Connection%20Proposal.md)
+* [UC17 Qiy User Connects](UC17%20Qiy%20User%20Connects.md)
+* [UC18 Qiy User Creates Connection Proposal](UC18%20Qiy%20User%20Creates%20Connection%20Proposal.md)
+* [UC19 Individual Creates Connection Proposal](UC19%20Individual%20Creates%20Connection%20Proposal.md)
+* [UC20 Qiy Application Creates Connection Proposal](UC20%20Qiy%20Application%20Creates%20Connection%20Proposal.md)
+* [UC21 Service Provider Creates Connection Proposal](UC21%20Service%20Provider%20Creates%20Connection%20Proposal.md)
+* [UC22 Qiy User Accepts Connection Proposal](UC22%20Qiy%20User%20Accepts%20Connection%20Proposal.md)
+* [UC23 Individual Accepts Connection Proposal](UC23%20Individual%20Accepts%20Connection%20Proposal.md)
+* [UC24 Qiy Application Accepts Connection Proposal](UC24%20Qiy%20Application%20Accepts%20Connection%20Proposal.md)
+* [UC25 Service Provider Accepts Connection Proposal](UC25%20Service%20Provider%20Accepts%20Connection%20Proposal.md)
+* [UC26 Qiy User Deletes Connection](UC26%20Qiy%20User%20Deletes%20Connection.md)
+* [UC27 Qiy Application Deletes Connection](UC27%20Qiy%20Application%20Deletes%20Connection.md)
 
 # 5 Connect Token
 

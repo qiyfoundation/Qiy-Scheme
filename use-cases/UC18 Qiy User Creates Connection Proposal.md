@@ -1,9 +1,8 @@
-
-# UC18 Individual Creates Connection Proposal
+# UC18 Qiy User Creates Connection Proposal
 
 # Abstract
 
-This document is the use case specification for use case [UC18 Individual Creates Connection Proposal](UC18%20Individual%20Creates%20Connection%20Proposal.md).
+This document is the use case specification for use case [UC18 Qiy User Creates Connection Proposal](UC18%20Qiy%20User%20Creates%20Connection%20Proposal.md).
 
 # Contents
 

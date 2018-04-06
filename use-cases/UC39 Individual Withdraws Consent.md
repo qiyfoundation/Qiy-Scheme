@@ -1,4 +1,3 @@
-
 # UC39 Individual Withdraws Consent
 
 # Abstract

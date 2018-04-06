@@ -1,4 +1,3 @@
-
 # UC35 Qiy User Deletes Connect Token
 
 # Abstract

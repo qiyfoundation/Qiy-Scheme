@@ -1,4 +1,3 @@
-
 # UC61 Service Provider Manages Service Catalogue
 
 # Abstract

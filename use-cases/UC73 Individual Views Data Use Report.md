@@ -1,4 +1,3 @@
-
 # UC73 Individual Views Data Use Report
 
 # Abstract
