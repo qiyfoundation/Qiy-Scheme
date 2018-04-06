@@ -23,17 +23,6 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchang
 	1. [Qiy Node](#43-qiy-node)
 	1. [Connect via Qiy](#44-connect-via-qiy)
 		1. [Generate token](#441-generate-token)
-		1. [Media](#442-media)
-			1. [The web](#4421-the-web)
-			1. [Print](#4422-print)
-		1. [Examples](#443-examples)
-			1. [Connect Proposal](#4431-connect-proposal)
-			1. [Email](#4432-email)
-			1. [Webpage with QR Code](#4433-webpage-with-qr-code)
-			1. [Webpage with button](#4434-webpage-with-button)
-			1. [Accepting a Connect Proposal by scanning a QR code](#4435-accepting-a-connect-proposal-by-scanning-a-qr-code)
-			1. [Accepting a Connect Proposal with a button click](#4436-accepting-a-connect-proposal-with-a-button-click)
-			1. [Confirmation](#4437-confirmation)
 	1. [Setup](#45-setup)
 		1. [Relying Party](#451-relying-party)
 		1. [Data Provider](#452-data-provider)
@@ -292,12 +281,14 @@ Alternatively, [Qiy Users](Definitions.md#qiy-user) may instantiate a [Qiy Node]
 ## 4.4 Connect via Qiy
 
 Two [Qiy Users](Definitions.md#qiy-user) can connect via Qiy by creating a [Connection](Definitions.md#connection) between their [Qiy Nodes](Definitions.md#qiy-node) ([Connection](Definitions.md#connection)).
+This is described in full detail in the [Use Cases](Definitions.md#use-case), especially in [UC17 Qiy User Connects](./use-cases/UC17%20Qiy%20User%20Connects.md).
+
 The [Connection](Definitions.md#connection) can be initiated by either of the two [Qiy Users](Definitions.md#qiy-user).
 The [Qiy User](Definitions.md#qiy-user) initiating the [Connection](Definitions.md#connection) is called the [Proposer](Definitions.md#proposer), the other one [Accepter](Definitions.md#accepter).
 This goes as follows:
-* The [Proposer](Definitions.md#proposer) uses a [Qiy Application](Definitions.md#qiy-application) to generate a [Token](Definitions.md#token) (see [4.4.1 Generate token](#441-generate-token)) and to compose a [Connect Proposal](Definitions.md#connect-proposal).
-* The [Proposer](Definitions.md#proposer) provides it out-of-band to the [Accepter](Definitions.md#accepter), for example by lettre, see [4.4.2 Media](#442-media).
-* The [Accepter](Definitions.md#accepter) may read the proposal and use a [Qiy Application](Definitions.md#qiy-application) to extract the [Connect Token](Definitions.md#connect-token) and create a new [Connection](Definitions.md#connection) with the [Proposer](Definitions.md#proposer).
+* The [Proposer](Definitions.md#proposer) creates a [Connect Proposal](Definitions.md#connect-proposal) containing a [Connect Token](Definitions.md#connect-token).
+* The [Proposer](Definitions.md#proposer) provides it out-of-band to the [Accepter](Definitions.md#accepter), for example by lettre.
+* The [Accepter](Definitions.md#accepter) may read the proposal, extract the [Connect Token](Definitions.md#connect-token) and use it to create a [Connection](Definitions.md#connection) with the [Proposer](Definitions.md#proposer).
 
 As stated before, when a [Connection](Definitions.md#connection) is established, the [Identity](Definitions.md#identity) of the [Qiy User](Definitions.md#qiy-user) is provided to the other one if the [Qiy User](Definitions.md#qiy-user) is a [Service Provider](Definitions.md#service-provider). 
 This information may be used to reuse a formerly created [Connection](Definitions.md#connection) and delete the new [Connection](Definitions.md#connection).
@@ -320,81 +311,6 @@ The Expiration and the Budget can be changed afterwards, for example to re-activ
 (Diagram source code: [10.1.2.2 Generate token](#10122-generate-token))
 
  
-### 4.4.2 Media
-[Qiy Users](Definitions.md#qiy-user) can use different media to connect as illustrated in this diagram:
-
-![Media](./images/Connect.png)
-
-(Diagram source code: [10.1.2.3 Media](#10123-media))
-
- 
-#### 4.4.2.1 The web
-[Qiy Users](Definitions.md#qiy-user) can connect by transfering a [Token](Definitions.md#token) as a query parameter in a website address:
- 
-![Connect using a token in a website address](./images/connect-using-a-token-in-a-website-address.png)
-
-(Diagram source code: [10.1.2.4 Connect using a token in a website address](#10124-connect-using-a-token-in-a-website-address))
-
- 
-#### 4.4.2.2 Print
-[Qiy Users](Definitions.md#qiy-user) can convert the [Token](Definitions.md#token) to a QR Code and use various 'Print'-media to connect:
-
-![Present proposal containing a QR Code](./images/present-proposal-containing-a-qr-code.png)
-
-(Diagram source code: [10.1.2.6 Present proposal containing a QR Code](#10126-present-proposal-containing-a-qr-code))
-
-
-The QR Code can be used as follows to create the [Connection](Definitions.md#connection):
- 
-![Connect using a QR Code](./images/connect-using-a-qr-code.png)
-
-(Diagram source code: [10.1.2.5 Connect using a QR Code](#10125-connect-using-a-qr-code))
- 
-
-### 4.4.3 Examples
-
-
-#### 4.4.3.1 Connect Proposal
-
-The picture below shows a [Connect Proposal](Definitions.md#connect-proposal) that is generated by an [Individual](Definitions.md#individual) using a mobile app containing a QR Code.
-The [Individual](Definitions.md#individual) can use this proposal to invite other [Individuals](Definitions.md#individual) to connect.
-
-![An example of a Connect Proposal](./images/example--connect-proposal--qr-code-on-phone.PNG)
-
-#### 4.4.3.2 Email
-The picture below shows an example of a [Connect Proposal](Definitions.md#connect-proposal) in an email:
-
-![An example of a Connect Proposal in an email](./images/example--connect-proposal--email.PNG)
-
-#### 4.4.3.3 Webpage with QR Code
-The picture below shows an example of a [Connect Proposal](Definitions.md#connect-proposal) in a webpage which displays a QR code when viewed on a laptop, pc or tablet:
-
-![An example of a Connect Proposal in a webpage with QR code](./images/example--connect-proposal--webpage-laptop-pc-tablet.PNG)
-
-#### 4.4.3.4 Webpage with button
-The picture below shows an example of a [Connect Proposal](Definitions.md#connect-proposal) in a webpage which displays a button when viewed on smartphone:
-
-![An example of a Connect Proposal in a webpage with button](./images/example--connect-proposal--webpage-phone.PNG)
-
-#### 4.4.3.5 Accepting a Connect Proposal by scanning a QR code
-
-The picture below shows an example of scanning the QR code in a [Connect Proposal](Definitions.md#connect-proposal) using a [Qiy Application](Definitions.md#qiy-application):
-
-![An example of scanning a QR code](./images/example--connect-proposal--scan-qr-code.PNG)
-
-#### 4.4.3.6 Accepting a Connect Proposal with a button click
-
-When an [Accepter](Definitions.md#accepter) has viewed a webpage with a [Connect Proposal](Definitions.md#connect-proposal) on his phone and clicked the button to accept it, he will be asked to confirm that he will be redirected to a [Qiy Application](Definitions.md#qiy-application):
-
-![An example of confirming the redirect to a Qiy Application](./images/example--connect-proposal--after-the-button-click.PNG)
-
-#### 4.4.3.7 Confirmation
-
-The picture below shows an example of an [Qiy Application](Definitions.md#qiy-application) verifying the acceptance of a [Connect Proposal](Definitions.md#connect-proposal).
-The [Qiy Application](Definitions.md#qiy-application) will create the [Connection](Definitions.md#connection) when the [Accepter](Definitions.md#accepter) has confirmed that he wants to connect with the [Proposer](Definitions.md#proposer).
-
-![An example of confirming the acceptance a Connect Proposal](./images/example--connect-proposal--verify.PNG)
-
 
 ## 4.5 Setup
 
