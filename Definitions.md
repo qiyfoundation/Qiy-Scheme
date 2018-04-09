@@ -404,6 +404,9 @@ A [Techology Service](#techology-service): a point of entry for a [Qiy User](#qi
 ### Qiy Node API
 A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
 
+### Qiy Node Documentation
+The [Qiy Node Documentation](#qiy-node-documentation) consists of the [Qiy Node API](#qiy-node-api) and the [Qiy Node Protocol](#qiy-node-protocol).
+
 ### Qiy Node Credentials
 The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
 

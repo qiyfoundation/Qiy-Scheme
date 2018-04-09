@@ -1,8 +1,8 @@
-# UC17 Qiy User Connects
+# UC02 Connect with Qiy User
 
 # Abstract
 
-This document is the use case specification for use case [UC17 Qiy User Connects](UC17%20Qiy%20User%20Connects.md).
+This document is the use case specification for use case [UC02 Connect with Qiy User](UC02%20Connect%20with%20Qiy%20User.md).
 
 # Contents
 
@@ -10,14 +10,16 @@ This document is the use case specification for use case [UC17 Qiy User Connects
 1. [Primary Actors](#primary-actors)
 1. [Preconditions](#preconditions)
 1. [Basic Flow](#basic-flow)
-	1. [Proposer acquires a Connect Token from Qiy Trust Network](#1-proposer-acquires-a-connect-token-from-qiy-trust-network)
-	1. [Proposer creates a Connect Proposal containing the Connect Token](#2-proposer-creates-a-connect-proposal-containing-the-connect-token)
-	1. [Proposer provides Accepter with Connect Proposal](#3-proposer-provides-accepter-with-connect-proposal)
-	1. [Accepter extracts Connect Token from Connect Proposal](#4-accepter-extracts-connect-token-from-connect-proposal)
-	1. [Accepter asks Qiy Trust Network to create a Connection using the Connect Token](#5-accepter-asks-qiy-trust-network-to-create-a-connection-using-the-connect-token)
+	1. [Proposer requests Qiy Trust Network for a Connect Token](#1-proposer-requests-qiy-trust-network-for-a-connect-token)
+	1. [Proposer provides Accepter with Connect Token](#2-proposer-provides-accepter-with-connect-token)
+	1. [Accepter asks Qiy Trust Network to create a Connection using the Connect Token](#3-accepter-asks-qiy-trust-network-to-create-a-connection-using-the-connect-token)
 1. [Postconditions](#postconditions)
 1. [Extensions](#extensions)
-	1. [Ways to Connect](#ways-to-connect)
+	1. [Proposer creates Connect Token](#11-proposer-creates-connect-token)
+	1. [Expiration](#12-expiration)
+	1. [Budget](#12-budget)
+	1. [Change Connect Token Properties](#13-change-connect-token-properties)
+	1. [Ways to provide the Connect Token](#2-ways-to-provide-the-connect-token)
 		1. [Connect using Connect Token in a website address](#connect-using-connect-token-in-a-website-address)
 		1. [Representing the Connect Token as a QR Code](#representing-the-connect-token-as-a-qr-code)
 		1. [Email](#email)
@@ -42,19 +44,38 @@ This document is the use case specification for use case [UC17 Qiy User Connects
 
 # Basic Flow
 
-## 1. Proposer acquires a Connect Token from Qiy Trust Network
-## 2. Proposer creates a Connect Proposal containing the Connect Token
-## 3. Proposer provides Accepter with Connect Proposal
-## 4. Accepter extracts Connect Token from Connect Proposal
-## 5. Accepter asks Qiy Trust Network to create a Connection using the Connect Token
+## 1. Proposer requests Qiy Trust Network for a Connect Token
+## 2. Proposer provides Accepter with Connect Token
+## 3. Accepter asks Qiy Trust Network to create a Connection using the Connect Token
 
 # Postconditions
 
 1. [Proposer](../Definitions.md#proposer) and [Accepter](../Definitions.md#accepter) have a new [Connection](../Definitions.md#connection).
+1. [Proposer](../Definitions.md#proposer) has a new [Connect Token](../Definitions.md#connect-token).
+1. The [Connect Token](../Definitions.md#connect-token) can be used to create an unlimited number of [Connections](../Definitions.md#connection).
+1. The [Connect Token](../Definitions.md#connect-token) does not expire.
 
 # Extensions
 
-## Ways to Connect
+## 1.1 Proposer creates Connect Token
+
+tbd
+
+## 1.2 Expiration
+
+
+The [Proposer](../Definitions.md#proposer) can request for a Connect Token that will expire on a given date and time, see [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
+
+## 1.2 Budget
+
+The [Qiy User](../Definitions.md#qiy-user) can request for a Connect Token that can only be used to create a specific number of [Connections](../Definitions.md#connection), see [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
+
+## 1.3 Change Connect Token Properties
+
+The [Qiy User](../Definitions.md#qiy-user) can change the expiration and/or budget afterwards, see [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
+
+
+## 2. Ways to provide the Connect Token
 [Qiy Users](../Definitions.md#qiy-user) can use different media to connect as illustrated in this diagram:
 
 ![Media](./images/Connect.png)

@@ -1,8 +1,8 @@
-# UC31 Individual Adds Data Source
+# UC06 Manage Connections
 
 # Abstract
 
-This document is the use case specification for use case [UC31 Individual Adds Data Source](UC31%20Individual%20Adds%20Data%20Source.md).
+This document is the use case specification for use case [UC06 Manage Connections](UC06%20Manage%20Connections.md).
 
 # Contents
 

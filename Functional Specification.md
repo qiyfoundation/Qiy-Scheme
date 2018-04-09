@@ -1,43 +1,91 @@
 # FUNCTIONAL SPECIFICATION 'QIY SCHEME V1.1'
-From [Qiy Nodes](Definitions.md#qiy-node) to [Data](Definitions.md#data) exchange
+From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data-exchange)
 
 
 # Contents
 
 1. [Introduction](#1-introduction)
 	1. [Purpose](#11-purpose)
-	1. [Reader guidance](#12-reader-guidance)
+	1. [Readers' Guidance](#12-readers-guidance)
 1. [Overview](#2-overview)
-	1. [Data Reuse](#21-data-reuse)
+1. [Data Provider Acquires Access to Qiy Trust Network](#1-data-provider-acquires-access-to-qiy-trust-network)
+1. [Individual Acquires Access to Qiy Trust Network](#2-individual-acquires-access-to-qiy-trust-network)
+1. [Relying Party Acquires Access to Qiy Trust Network](#3-relying-party-acquires-access-to-qiy-trust-network)
+1. [Individual Connects with Data Provider](#4-individual-connects-with-data-provider)
+1. [Individual Connects with Relying Party](#5-individual-connects-with-relying-party)
+1. [Relying Party Requests Personal Data](#6-relying-party-requests-personal-data)
 
 # 1 Introduction
 
-tbd
+This document describes the basic Qiy Scheme scenarios as an introduction to the full functional description provided in the [Use Cases](Definitions.md#use-case) listed in [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
+These scenarios form the prelude for many other applications, examples of wich can be found in [Example Applications(example-applications/Example%20Applications.md).
+
 
 ## 1.1 Purpose
 
-tbd
+This document is the entry point for information analysts and software engineers that need to know how they can use the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-## 1.2 Reader guidance
+## 1.2 Readers' Guidance
 
-tbd
+* Information analysts are advised to read the scenarios of interest and the related [Use Case Specifications](use-cases/UC00 Use Cases Overvies.md).
+* Software engineers are advised to read the scenarios of interest, the related [Use Case Specifications](use-cases/UC00 Use Cases Overvies.md) and the related [Qiy Node Documentation](Definitions.md#qiy-node-documentation).
 
 # 2 Overview
 
-This chapter gives an overview of this document.
-* tbd
+This document describes the following scenarios:
+* [Data Provider](Definitions.md#data-provider) scenarios:
+  * [1 Data Provider Acquires Access to Qiy Trust Network](#1-data-provider-acquires-access-to-qiy-trust-network)
+  * [4 Individual Connects with Data Provider](#4-individual-connects-with-data-provider)
+* Scenarios for [Individuals](Definitions.md#individual):
+  * [2 Individual Acquires Access to Qiy Trust Network](#2-individual-acquires-access-to-qiy-trust-network)
+  * [2 Individual Connects with Data Provider](#2-individual-connects-with-data-provider)
+  * [5 Individual Connects with Relying Party](#5-individual-connects-with-relying-party)
+  * [6 Relying Party Requests Personal Data](#6-relying-party-requests-personal-data)
+* [Relying Party](Definitions.md#relying-party) Scenarios:
+  * [3 Relying Party Acquires Access to Qiy Trust Network](#3-relying-party-acquires-access-to-qiy-trust-network)
+  * [6 Relying Party Requests Personal Data](#6-relying-party-requests-personal-data)
 
-## 2.1 Data Reuse
 
-This chapter describes a typical data reuse scenario as an introduction to the full functional description provided by the [Use Cases](Definitions.md#use-case) listed in [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
-Qiy can also be used for many other applications, examples of wich can be found in [Example Applications](example-applications/Example%20Applications.md).
+# 1 Data Provider Acquires Access to Qiy Trust Network
 
-In this scenario a [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)) reuses his [Personal Data](Definitions.md#personal-data) stored at one organization ([Data Provider](Definitions.md#data-provider)) and provides it to another organization ([Relying Party](Definitions.md#relying-party)) to consume one of its [Services](Definitions.md#service). This goes as follows:
-* The [Individual](Definitions.md#individual) connects with a [Relying Party](Definitions.md#relying-party) and subscribes to one its [Services](Definitions.md#service) with the necessary and/or optional [Consents](Definitions.md#consent), see [UC17 Qiy User Connects](./use-cases/UC17%20Qiy%20User%20Connects.md) and [UC59 Individual Subscribes to Service](./use-cases/UC59%20Individual%20Subscribes%20to%20Service.md).
-* The [Relying Party](Definitions.md#relying-party) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) for [Personal Data](Definitions.md#personal-data) of the [Individual](Definitions.md#individual), see [UC34 Qiy User Requests Data](./use-cases/UC34%20Qiy%20User%20Requests%20Data.md).
-* The [Qiy Trust Network](Definitions.md#qiy-trust-network) returns a [Data Reference](Definitions.md#data-reference).
-* The [Relying Party](Definitions.md#relying-party) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to resolve the [Data Reference](Definitions.md#data-reference), see [UC36 Qiy User Resolves Data Reference](./use-cases/UC36%20Qiy%20User%20Resolves%20Data%20Reference.md).
-* The [Qiy Trust Network](Definitions.md#qiy-trust-network) acquires the [Data](Definitions.md#data) from the [Data Provider](Definitions.md#data-provider) and returns it to the [Relying Party](Definitions.md#relying-party).
+This chapter describes how Data Providers generally acquire access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+
+tbd
+
+
+# 2 Individual Acquires Access to Qiy Trust Network
+
+This chapter describes how Individuals generally acquire access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+
+tbd
+
+
+# 3 Relying Party Acquires Access to Qiy Trust Network
+
+This chapter describes how Relying Parties generally acquire access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+
+tbd
+
+
+# 4 Individual Connects with Data Provider
+
+This chapter describes how Individuals generally connect with a Data Provider as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
+
+tbd
+
+
+# 5 Individual Connects with Relying Party
+
+This chapter describes how Individuals generally connect with a Data Provider as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
+
+tbd
+
+
+# 6 Relying Party Requests Personal Data
+
+This chapter describes how Individuals generally connect with a Data Provider as an introduction to the full description provided in [UC03 Request Personal Data](./use-cases/UC03%20Request%20Personal%20Data.md).
+
+tbd
 
 
 

@@ -1,8 +1,8 @@
-# UC63 Qiy Node Records Data Use
+# UC05 Manage Consents
 
 # Abstract
 
-This document is the use case specification for use case [UC63 Qiy Node Records Data Use](UC63%20Qiy%20Node%20Records%20Data%20Use.md).
+This document is the use case specification for use case [UC05 Manage Consents](UC05%20Manage%20Consents.md).
 
 # Contents
 

@@ -1,8 +1,8 @@
-# UC50 Service Provider Adds Service
+# UC04 Manage Personal Data
 
 # Abstract
 
-This document is the use case specification for use case [UC50 Service Provider Adds Service](UC50%20Service%20Provider%20Adds%20Service.md).
+This document is the use case specification for use case [UC04 Manage Personal Data](UC04%20Manage%20Personal%20Data.md).
 
 # Contents
 

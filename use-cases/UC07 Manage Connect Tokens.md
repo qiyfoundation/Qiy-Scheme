@@ -1,8 +1,8 @@
-# UC49 Service Provider Manages Service Catalogue
+# UC07 Manage Connect Tokens
 
 # Abstract
 
-This document is the use case specification for use case [UC49 Service Provider Manages Service Catalogue](UC49%20Service%20Provider%20Manages%20Service%20Catalogue.md).
+This document is the use case specification for use case [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
 
 # Contents
 
