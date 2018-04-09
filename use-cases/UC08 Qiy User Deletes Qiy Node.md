@@ -1,8 +1,8 @@
-# UC4 Individual Restores Qiy Node
+# UC08 Qiy User Deletes Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC4 Individual Restores Qiy Node](UC4%20Individual%20Restores%20Qiy%20Node.md).
+This document is the use case specification for use case [UC08 Qiy User Deletes Qiy Node](UC08%20Qiy%20User%20Deletes%20Qiy%20Node.md).
 
 # Contents
 

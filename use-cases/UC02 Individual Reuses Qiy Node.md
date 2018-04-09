@@ -1,8 +1,8 @@
-# UC6 Individual Starts Using Qiy Application
+# UC02 Individual Reuses Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC6 Individual Starts Using Qiy Application](UC6%20Individual%20Starts%20Using%20Qiy%20Application.md).
+This document is the use case specification for use case [UC02 Individual Reuses Qiy Node](UC02%20Individual%20Reuses%20Qiy%20Node.md).
 
 # Contents
 

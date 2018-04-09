@@ -1,8 +1,8 @@
-# UC8 Qiy User Deletes Qiy Node
+# UC07 Qiy User Creates Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC8 Qiy User Deletes Qiy Node](UC8%20Qiy%20User%20Deletes%20Qiy%20Node.md).
+This document is the use case specification for use case [UC07 Qiy User Creates Qiy Node](UC07%20Qiy%20User%20Creates%20Qiy%20Node.md).
 
 # Contents
 

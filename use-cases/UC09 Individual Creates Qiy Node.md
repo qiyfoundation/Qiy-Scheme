@@ -1,8 +1,8 @@
-# UC3 Individual Backs Up Qiy Node
+# UC09 Individual Creates Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC3 Individual Backs Up Qiy Node](UC3%20Individual%20Backs%20Up%20Qiy%20Node.md).
+This document is the use case specification for use case [UC09 Individual Creates Qiy Node](UC09%20Individual%20Creates%20Qiy%20Node.md).
 
 # Contents
 

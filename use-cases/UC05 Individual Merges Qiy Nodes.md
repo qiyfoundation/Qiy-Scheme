@@ -1,8 +1,8 @@
-# UC1 Individual Starts Using Qiy Application
+# UC05 Individual Merges Qiy Nodes
 
 # Abstract
 
-This document is the use case specification for use case [UC1 Individual Starts Using Qiy Application](UC1%20Individual%20Starts%20Using%20Qiy%20Application.md).
+This document is the use case specification for use case [UC05 Individual Merges Qiy Nodes](UC05%20Individual%20Merges%20Qiy%20Nodes.md).
 
 # Contents
 

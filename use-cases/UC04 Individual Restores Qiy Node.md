@@ -1,8 +1,8 @@
-# UC9 Individual Creates Qiy Node
+# UC04 Individual Restores Qiy Node
 
 # Abstract
 
-This document is the use case specification for use case [UC9 Individual Creates Qiy Node](UC9%20Individual%20Creates%20Qiy%20Node.md).
+This document is the use case specification for use case [UC04 Individual Restores Qiy Node](UC04%20Individual%20Restores%20Qiy%20Node.md).
 
 # Contents
 

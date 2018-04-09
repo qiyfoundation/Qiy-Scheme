@@ -36,20 +36,20 @@ For the sake of overview, the use cases are grouped:
 
 # 2 Qiy Application Lifecycle
 
-* [UC1 Individual Starts Using Qiy Application](UC1%20Individual%20Starts%20Using%20Qiy%20Application.md)
-* [UC2 Individual Reuses Qiy Node](UC2%20Individual%20Reuses%20Qiy%20Node.md)
-* [UC3 Individual Backs Up Qiy Node](UC3%20Individual%20Backs%20Up%20Qiy%20Node.md)
-* [UC4 Individual Restores Qiy Node](UC4%20Individual%20Restores%20Qiy%20Node.md)
-* [UC5 Individual Merges Qiy Nodes](UC5%20Individual%20Merges%20Qiy%20Nodes.md)
-* [UC6 Individual Starts Using Qiy Application](UC6%20Individual%20Starts%20Using%20Qiy%20Application.md)
+* [UC01 Individual Starts Using Qiy Application](UC01%20Individual%20Starts%20Using%20Qiy%20Application.md)
+* [UC02 Individual Reuses Qiy Node](UC02%20Individual%20Reuses%20Qiy%20Node.md)
+* [UC03 Individual Backs Up Qiy Node](UC03%20Individual%20Backs%20Up%20Qiy%20Node.md)
+* [UC04 Individual Restores Qiy Node](UC04%20Individual%20Restores%20Qiy%20Node.md)
+* [UC05 Individual Merges Qiy Nodes](UC05%20Individual%20Merges%20Qiy%20Nodes.md)
+* [UC06 Individual Starts Using Qiy Application](UC06%20Individual%20Starts%20Using%20Qiy%20Application.md)
 
 # 3 Qiy Node Lifecycle
 
 This chapter is dedicated to use cases that relate to the lifecycle of a Qiy Node:
 
-* [UC7 Qiy User Creates Qiy Node](UC7%20Qiy%20User%20Creates%20Qiy%20Node.md)
-* [UC8 Qiy User Deletes Qiy Node](UC8%20Qiy%20User%20Deletes%20Qiy%20Node.md)
-* [UC9 Individual Creates Qiy Node](UC9%20Individual%20Creates%20Qiy%20Node.md)
+* [UC07 Qiy User Creates Qiy Node](UC07%20Qiy%20User%20Creates%20Qiy%20Node.md)
+* [UC08 Qiy User Deletes Qiy Node](UC08%20Qiy%20User%20Deletes%20Qiy%20Node.md)
+* [UC09 Individual Creates Qiy Node](UC09%20Individual%20Creates%20Qiy%20Node.md)
 * [UC10 Qiy Application Creates Qiy Node](UC10%20Qiy%20Application%20Creates%20Qiy%20Node.md)
 * [UC11 Service Provider Creates Qiy Node](UC11%20Service%20Provider%20Creates%20Qiy%20Node.md)
 * [UC12 Access Provider Creates Qiy Node](UC12%20Access%20Provider%20Creates%20Qiy%20Node.md)
