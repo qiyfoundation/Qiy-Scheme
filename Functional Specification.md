@@ -27,8 +27,8 @@ This document is the entry point for information analysts and software engineers
 
 ## 1.2 Readers' Guidance
 
-* Information analysts are advised to read the scenarios of interest and the related [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overvies.md).
-* Software engineers are advised to read the scenarios of interest, the related [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overvies.md) and the related [Qiy Node Documentation](Definitions.md#qiy-node-documentation).
+* Information analysts are advised to read the scenarios of interest and the related [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overview.md).
+* Software engineers are advised to read the scenarios of interest, the related [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overview.md) and the related [Qiy Node Documentation](Definitions.md#qiy-node-documentation).
 
 # 2 Overview
 

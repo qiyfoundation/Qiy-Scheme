@@ -447,7 +447,7 @@ tbd
 tbd
 
 ### Qiy Trust Network
-tbd
+A [Technology Service](#technology-service) which is provided by [Access Providers](#access-provider) to [Qiy Users](#qiy-user) which enables people to access, manage and share [Personal Data](#personal-data) under the rules of the [Qiy Scheme](#qiy-scheme). 
 
 ### Qiy Trust Principles
 The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Qiy Users](#qiy-user) must respect these principles.
