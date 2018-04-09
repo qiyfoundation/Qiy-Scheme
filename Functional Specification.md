@@ -18,7 +18,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data
 # 1 Introduction
 
 This document describes the basic Qiy Scheme scenarios as an introduction to the full functional description provided in the [Use Cases](Definitions.md#use-case) listed in [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
-These scenarios form the prelude for many other applications, examples of wich can be found in [Example Applications(example-applications/Example%20Applications.md).
+These scenarios form the prelude for many other applications, examples of wich can be found in [Example Applications](example-applications/Example%20Applications.md).
 
 
 ## 1.1 Purpose
@@ -27,8 +27,8 @@ This document is the entry point for information analysts and software engineers
 
 ## 1.2 Readers' Guidance
 
-* Information analysts are advised to read the scenarios of interest and the related [Use Case Specifications](use-cases/UC00 Use Cases Overvies.md).
-* Software engineers are advised to read the scenarios of interest, the related [Use Case Specifications](use-cases/UC00 Use Cases Overvies.md) and the related [Qiy Node Documentation](Definitions.md#qiy-node-documentation).
+* Information analysts are advised to read the scenarios of interest and the related [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overvies.md).
+* Software engineers are advised to read the scenarios of interest, the related [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overvies.md) and the related [Qiy Node Documentation](Definitions.md#qiy-node-documentation).
 
 # 2 Overview
 
@@ -41,7 +41,7 @@ This document describes the following scenarios:
   * [2 Individual Connects with Data Provider](#2-individual-connects-with-data-provider)
   * [5 Individual Connects with Relying Party](#5-individual-connects-with-relying-party)
   * [6 Relying Party Requests Personal Data](#6-relying-party-requests-personal-data)
-* [Relying Party](Definitions.md#relying-party) Scenarios:
+* [Relying Party](Definitions.md#relying-party) scenarios:
   * [3 Relying Party Acquires Access to Qiy Trust Network](#3-relying-party-acquires-access-to-qiy-trust-network)
   * [6 Relying Party Requests Personal Data](#6-relying-party-requests-personal-data)
 
