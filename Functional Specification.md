@@ -29,7 +29,7 @@ This chapter gives an overview of this document.
 
 ## 2.1 Data Reuse
 
-This chapter describes a typical data reuse scenario as an introduction to the full functional description provided by the [Use Cases](Definitions.md#use-case) listed in the [Use Cases Overview](use-cases/Use%20Cases%20Overview.md).
+This chapter describes a typical data reuse scenario as an introduction to the full functional description provided by the [Use Cases](Definitions.md#use-case) listed in [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
 Qiy can also be used for many other applications, examples of wich can be found in [Example Applications](example-applications/Example%20Applications.md).
 
 In this scenario a [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)) reuses his [Personal Data](Definitions.md#personal-data) stored at one organization ([Data Provider](Definitions.md#data-provider)) and provides it to another organization ([Relying Party](Definitions.md#relying-party)) to consume one of its [Services](Definitions.md#service). This goes as follows:
