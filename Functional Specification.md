@@ -78,25 +78,25 @@ This chapter describes a scenario in which a [Relying Party](Definitions.md#rely
 
 The [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md) describes the conditions under which a [Relying Party](Definitions.md#relying-party) can provide its [Services](Definitions.md#service) via Qiy while using verifiable [Personal Data](Definitions.md#personal-data) under control of their [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)).
 In this scenario, the [Relying Party](Definitions.md#relying-party) (to be) has already made the necessary arrangements to meet these conditions.
-The remaining steps for a [Relying Party](Definitions.md#relying-party) in order to enable [Individuals](Definitions.md#individual) to use its [Services](Definitions.md#service) are:
-*   The [Service Provider](Definitions.md#service-provider) selects an [Access Provider](Definitions.md#access-provider).
-*   The [Service Provider](Definitions.md#service-provider) concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
-*   The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Service Provider](Definitions.md#service-provider) in the [Service Library](Definitions.md#service-library).
-*   The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Service Provider](Definitions.md#service-provider) and provides the [Service Provider](Definitions.md#service-provider) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
-*   The [Service Provider](Definitions.md#service-provider) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-*   The [Service Provider](Definitions.md#service-provider) publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
+The remaining steps for a [Relying Party](Definitions.md#relying-party) in order to enable [Individuals](Definitions.md#individual) to use its [Services](Definitions.md#service) via the [Qiy Trust Network](Definitions.md#qiy-trust-network) are:
+*   The [Relying Party](Definitions.md#relying-party) selects an [Access Provider](Definitions.md#access-provider).
+*   The [Relying Party](Definitions.md#relying-party) concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
+*   The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party) in the [Service Library](Definitions.md#service-library).
+*   The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Relying Party](Definitions.md#relying-party) and provides the [Relying Party](Definitions.md#relying-party) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+*   The [Relying Party](Definitions.md#relying-party) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+*   The [Relying Party](Definitions.md#relying-party) publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
 
 
 # 6 Individual Connects with Data Provider
 
-This chapter describes how Individuals generally connect with a [Data Provider](Definitions.md#data-provider) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
+This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Data Provider](Definitions.md#data-provider) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
 
 tbd
 
 
 # 7 Individual Connects with Relying Party
 
-This chapter describes how Individuals generally connect with a [Data Provider](Definitions.md#data-provider) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
+This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Relying Party](Definitions.md#relying-party) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
 
 tbd
 
