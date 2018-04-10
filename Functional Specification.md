@@ -13,6 +13,10 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data
 1. [Relying Party Acquires Access to Qiy Trust Network](#5-relying-party-acquires-access-to-qiy-trust-network)
 1. [Individual Connects with Data Provider](#6-individual-connects-with-data-provider)
 1. [Individual Connects with Relying Party](#7-individual-connects-with-relying-party)
+1. [Connect](#71-connect)
+1. [Sign up and sign in](#72-sign-up-and-sign-in)
+1. [Consent](#73-consent)
+1. [Data source](#74-data-source)
 1. [Relying Party Requests Personal Data](#8-relying-party-requests-personal-data)
 
 # 1 Introduction
@@ -117,6 +121,9 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
 This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Relying Party](Definitions.md#relying-party) and grants it consent to use his [Personal Data](Definitions.md#personal-data) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
 
 The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#individual) to do so in many different ways, but the [Individual](Definitions.md#individual) in this scenario does it as follows:
+
+# 7.1 Connect
+
 * The [Individual](Definitions.md#individual) visits a website of a [Relying Party](Definitions.md#relying-party) using a laptop.
 * The website is a [Qiy Application](Definitions.md#qiy-application) and presents an option to sign on using Qiy.
 * The [Individual](Definitions.md#individual) chooses to use this option.
@@ -141,12 +148,20 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
 * The [Qiy Application](Definitions.md#qiy-application) informs the [Individual](Definitions.md#individual) that he is connected with the [Relying Party](Definitions.md#relying-party)
   * ... that he can view the contact details.
   * and that he is advised to return to the website.
+
+
+# 7.2 Sign up and sign in
+
 * The [Relying Party](Definitions.md#relying-party) looks up the related sign on page using the id of the [Connect Token](Definitions.md#connect-token),
   * ... removes the sign on page,
   * ... creates a local account for the [Individual](Definitions.md#individual),
   * ... persists the relation between the local account and the [Connection Uri](Definitions.md#connection-uri), 
-  * ... informs the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on
-  * and displays its [Service Catalogue](Definitions.md#service-catalogue).
+  * and informs the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on.
+
+
+# 7.3 Consent
+
+* The [Relying Party](Definitions.md#relying-party) displays its [Service Catalogue](Definitions.md#service-catalogue).
 * The [Individual](Definitions.md#individual) browses the [Service Catalogue](Definitions.md#service-catalogue),
   * ... selects a [Service](Definitions.md#service),
   * ... grants the mandatory [Consent](Definitions.md#consent) for [Personal Data](Definitions.md#personal-data)
@@ -154,7 +169,14 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
 * The [Relying Party](Definitions.md#relying-party) informs the [Qiy Trust Network](Definitions.md#qiy-trust-network) of the granted [Consents](Definitions.md#consent).
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) persists the granted [Consents](Definitions.md#consent)
   * and informs the [Qiy Application](Definitions.md#qiy-application) of them.
-* The [Qiy Application](Definitions.md#qiy-application) notifies the [Individual](Definitions.md#individual) of the granted [Consents](Definitions.md#consent).
+
+
+# 7.4 Data source
+
+* The [Qiy Application](Definitions.md#qiy-application) notifies the [Individual](Definitions.md#individual) of the granted [Consents](Definitions.md#consent)
+  * and proposes to use the [Data Provider](Definitions.md#data-provider) as data source.
+* The [Individual](Definitions.md#individual) accepts the proposal.
+* The [Qiy Application](Definitions.md#qiy-application) registers the [Data Provider](Definitions.md#data-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network) as data source for the [Consents](Definitions.md#consent).
 
 
 # 8 Relying Party Requests Personal Data
