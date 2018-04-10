@@ -166,15 +166,15 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
   * ... selects a [Service](Definitions.md#service),
   * ... grants the mandatory [Consent](Definitions.md#consent) for [Personal Data](Definitions.md#personal-data)
   * and subscribes to the [Service](Definitions.md#service).
-* The [Relying Party](Definitions.md#relying-party) informs the [Qiy Trust Network](Definitions.md#qiy-trust-network) of the granted [Consents](Definitions.md#consent).
-* The [Qiy Trust Network](Definitions.md#qiy-trust-network) persists the granted [Consents](Definitions.md#consent)
-  * and informs the [Qiy Application](Definitions.md#qiy-application) of them.
+* The [Relying Party](Definitions.md#relying-party) informs the [Qiy Trust Network](Definitions.md#qiy-trust-network) of the granted [Consent](Definitions.md#consent).
+* The [Qiy Trust Network](Definitions.md#qiy-trust-network) persists the granted [Consent](Definitions.md#consent)
+  * and informs the [Qiy Application](Definitions.md#qiy-application) of it.
+* The [Qiy Application](Definitions.md#qiy-application) notifies the [Individual](Definitions.md#individual) of the granted [Consent](Definitions.md#consent).
 
 
 # 7.4 Data source
 
-* The [Qiy Application](Definitions.md#qiy-application) notifies the [Individual](Definitions.md#individual) of the granted [Consents](Definitions.md#consent)
-  * and proposes to use the [Data Provider](Definitions.md#data-provider) as data source.
+* The [Qiy Application](Definitions.md#qiy-application) proposes to use the [Data Provider](Definitions.md#data-provider) as data source for the granted [Consent](Definitions.md#consent).
 * The [Individual](Definitions.md#individual) accepts the proposal.
 * The [Qiy Application](Definitions.md#qiy-application) registers the [Data Provider](Definitions.md#data-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network) as data source for the [Consents](Definitions.md#consent).
 
