@@ -89,9 +89,20 @@ The remaining steps for a [Relying Party](Definitions.md#relying-party) in order
 
 # 6 Individual Connects with Data Provider
 
-This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Data Provider](Definitions.md#data-provider) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
+This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Data Provider](Definitions.md#data-provider) and get access to his [Personal Data](Definitions.md#personal-data) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
 
-tbd
+The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#individual) to connect with a [Data Provider](Definitions.md#data-provider) and get access to his [Personal Data](Definitions.md#personal-data) in many different ways, but the [Individual](Definitions.md#individual) in this scenario does so as follows:
+* The [Individual](Definitions.md#individual) starts the previously installed [Qiy Application](Definitions.md#qiy-application) and enters the passcode.
+* The [Qiy Application](Definitions.md#qiy-application) presents an option to connect with a specific [Data Provider](Definitions.md#data-provider). 
+* The [Individual](Definitions.md#individual) selects the option to connect with the [Data Provider](Definitions.md#data-provider).
+* The [Qiy Application](Definitions.md#qiy-application) retrieves a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+* The [Qiy Application](Definitions.md#qiy-application) redirects the [Individual](Definitions.md#individual) to a webpage of the [Data Provider](Definitions.md#data-provider) while passing the [Connect Token](Definitions.md#connect-token) in the webpage address.
+* The [Individual](Definitions.md#individual) has an account with the [Data Provider](Definitions.md#data-provider) and uses his credentials to sign on.
+* The [Data Provider](Definitions.md#data-provider) verifies the credentials and looks up the local account id.
+* The [Data Provider](Definitions.md#data-provider) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection) using the [Connect Token](Definitions.md#connect-token) which was included in the webpage address.
+* The [Qiy Trust Framework](Definitions.md#qiy-trust-framework) creates the [Connection](Definitions.md#connection) with the [Indivdidual](Definitions.md#indivdidual) and returns the [Connection Uri](Definitions.md#connection-uri).
+* The [Data Provider](Definitions.md#data-provider) persists the relation between the local account id and the [Connection Uri](Definitions.md#connection-uri). 
+* The [Data Provider](Definitions.md#data-provider) informs the [Individual](Definitions.md#individual) that he can control his [Personal Data](Definitions.md#personal-data) via Qiy and redirects him back to his [Qiy Application](Definitions.md#qiy-application).
 
 
 # 7 Individual Connects with Relying Party
