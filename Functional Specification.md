@@ -62,9 +62,15 @@ The remaining steps for a [Data Provider](Definitions.md#data-provider) in order
 
 # 4 Individual Acquires Access to Qiy Trust Network
 
-This chapter describes how Individuals generally acquire access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+This chapter describes a scenario in which an [Individual](Definitions.md#individual) acquires access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
 
-tbd
+The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#individual) to use the [Qiy Trust Network](Definitions.md#qiy-trust-network) in many different ways, but the [Individual](Definitions.md#individual) in this scenario has never used the [Qiy Trust Network](Definitions.md#qiy-trust-network) before and acquires access as follows:
+* The [Individual](Definitions.md#individual) selects a [Qiy Application](Definitions.md#qiy-application).
+* The [Individual](Definitions.md#individual) installs the application on his smart phone and secures access to it by setting a passcode.
+* The [Qiy Application](Definitions.md#qiy-application) creates a [Qiy Node](Definitions.md#qiy-node) for the [Individual](Definitions.md#individual) and persists the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+
+After these steps, the [Individual](Definitions.md#individual) has gained access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) and he can use it by starting the [Qiy Application](Definitions.md#qiy-application).
+
 
 # 5 Relying Party Acquires Access to Qiy Trust Network
 
