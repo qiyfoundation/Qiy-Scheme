@@ -43,6 +43,7 @@ This document describes the following scenarios:
   * [8 Relying Party Requests Personal Data](#8-relying-party-requests-personal-data)
 * [Relying Party](Definitions.md#relying-party) scenarios:
   * [5 Relying Party Acquires Access to Qiy Trust Network](#5-relying-party-acquires-access-to-qiy-trust-network)
+  * [7 Individual Connects with Relying Party](#7-individual-connects-with-relying-party)
   * [8 Relying Party Requests Personal Data](#8-relying-party-requests-personal-data)
 
 
@@ -79,12 +80,13 @@ This chapter describes a scenario in which a [Relying Party](Definitions.md#rely
 The [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md) describes the conditions under which a [Relying Party](Definitions.md#relying-party) can provide its [Services](Definitions.md#service) via Qiy while using verifiable [Personal Data](Definitions.md#personal-data) under control of their [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)).
 In this scenario, the [Relying Party](Definitions.md#relying-party) (to be) has already made the necessary arrangements to meet these conditions.
 The remaining steps for a [Relying Party](Definitions.md#relying-party) in order to enable [Individuals](Definitions.md#individual) to use its [Services](Definitions.md#service) via the [Qiy Trust Network](Definitions.md#qiy-trust-network) are:
-*   The [Relying Party](Definitions.md#relying-party) selects an [Access Provider](Definitions.md#access-provider).
-*   The [Relying Party](Definitions.md#relying-party) concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
-*   The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party) in the [Service Library](Definitions.md#service-library).
-*   The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Relying Party](Definitions.md#relying-party) and provides the [Relying Party](Definitions.md#relying-party) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
-*   The [Relying Party](Definitions.md#relying-party) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-*   The [Relying Party](Definitions.md#relying-party) publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
+* The [Relying Party](Definitions.md#relying-party) selects an [Access Provider](Definitions.md#access-provider)
+  * and concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
+* The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party) in the [Service Library](Definitions.md#service-library),
+  * ... creates a [Qiy Node](Definitions.md#qiy-node) for the [Relying Party](Definitions.md#relying-party)
+  * and provides the [Relying Party](Definitions.md#relying-party) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+* The [Relying Party](Definitions.md#relying-party) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) to gain physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+  * and publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
 
 
 # 6 Individual Connects with Data Provider
@@ -97,24 +99,62 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
 * The [Individual](Definitions.md#individual) selects the option to connect with the [Data Provider](Definitions.md#data-provider).
 * The [Qiy Application](Definitions.md#qiy-application) retrieves a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network) and
   * ... redirects the [Individual](Definitions.md#individual) to a webpage of the [Data Provider](Definitions.md#data-provider) 
-  * ... while passing the [Connect Token](Definitions.md#connect-token) in the webpage address.
+  * while passing the [Connect Token](Definitions.md#connect-token) in the webpage address.
 * The [Individual](Definitions.md#individual) has an account with the [Data Provider](Definitions.md#data-provider) and uses his credentials to sign on.
 * The [Data Provider](Definitions.md#data-provider) verifies the credentials and looks up the local account id and
   * ... asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection) using the [Connect Token](Definitions.md#connect-token) which was included in the webpage address.
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) with the [Individual](Definitions.md#individual),
   * ... returns the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection) to the [Data Provider](Definitions.md#data-provider),
-  * ... sends the [Qiy Application](Definitions.md#qiy-application) the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection) and 
-  * ... the [Identity](Definitions.md#identity) of the [Data Provider](Definitions.md#data-provider).
+  * ... sends the [Qiy Application](Definitions.md#qiy-application) the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection) 
+  * and the [Identity](Definitions.md#identity) of the [Data Provider](Definitions.md#data-provider).
 * The [Data Provider](Definitions.md#data-provider) persists the relation between the local account id and the [Connection Uri](Definitions.md#connection-uri), 
-  * ... informs the [Individual](Definitions.md#individual) that he can control his [Personal Data](Definitions.md#personal-data) via Qiy and
-  * ... redirects him back to his [Qiy Application](Definitions.md#qiy-application).
+  * ... informs the [Individual](Definitions.md#individual) that he can control his [Personal Data](Definitions.md#personal-data) via Qiy
+  * and redirects him back to his [Qiy Application](Definitions.md#qiy-application).
 
 
 # 7 Individual Connects with Relying Party
 
-This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Relying Party](Definitions.md#relying-party) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
+This chapter describes a scenario in which an [Individual](Definitions.md#individual) connects with a [Relying Party](Definitions.md#relying-party) and grants it consent to use his [Personal Data](Definitions.md#personal-data) as an introduction to the full description provided in [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%20Qiy%20User.md).
 
-tbd
+The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#individual) to do so in many different ways, but the [Individual](Definitions.md#individual) in this scenario does it as follows:
+* The [Individual](Definitions.md#individual) visits a website of a [Relying Party](Definitions.md#relying-party) using a laptop.
+* The website is a [Qiy Application](Definitions.md#qiy-application) and presents an option to sign on using Qiy.
+* The [Individual](Definitions.md#individual) chooses to use this option.
+* The [Relying Party](Definitions.md#relying-party) retreives a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network),
+  * ... uses it in a [QR Code](Definitions.md#qr-code)
+  * ... persists the id of the [Connect Token](Definitions.md#connect-token),
+  * and presents it in a sig on page to the [Individual](Definitions.md#individual).
+* The [Individual](Definitions.md#individual) picks up his smartphone, 
+  * ... starts the previously installed [Qiy Application](Definitions.md#qiy-application),
+  * ... enters the passcode
+  * and scans the QR Code.
+* The [Qiy Application](Definitions.md#qiy-application) converts the [QR Code](Definitions.md#qr-code),
+  * ... extracts the [Connect Token](Definitions.md#connect-token)
+  * and asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection) with it.
+* The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) with the [Relying Party](Definitions.md#relying-party),
+  * ... provides the [Qiy Application](Definitions.md#qiy-application) with:
+    * the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection)
+    * the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party)
+  * and provides the [Relying Party](Definitions.md#relying-party) with:
+    * the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection)
+    * the id of the [Connect Token](Definitions.md#connect-token) that was used to create it.
+* The [Qiy Application](Definitions.md#qiy-application) informs the [Individual](Definitions.md#individual) that he is connected with the [Relying Party](Definitions.md#relying-party)
+  * ... that he can view the contact details.
+  * and that he is advised to return to the website.
+* The [Relying Party](Definitions.md#relying-party) looks up the related sign on page using the id of the [Connect Token](Definitions.md#connect-token),
+  * ... removes the sign on page,
+  * ... creates a local account for the [Individual](Definitions.md#individual),
+  * ... persists the relation between the local account and the [Connection Uri](Definitions.md#connection-uri), 
+  * ... informs the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on
+  * and displays its [Service Catalogue](Definitions.md#service-catalogue).
+* The [Individual](Definitions.md#individual) browses the [Service Catalogue](Definitions.md#service-catalogue),
+  * ... selects a [Service](Definitions.md#service),
+  * ... grants the mandatory [Consent](Definitions.md#consent) for [Personal Data](Definitions.md#personal-data)
+  * and subscribes to the [Service](Definitions.md#service).
+* The [Relying Party](Definitions.md#relying-party) informs the [Qiy Trust Network](Definitions.md#qiy-trust-network) of the granted [Consents](Definitions.md#consent).
+* The [Qiy Trust Network](Definitions.md#qiy-trust-network) persists the granted [Consents](Definitions.md#consent)
+  * and informs the [Qiy Application](Definitions.md#qiy-application) of them.
+* The [Qiy Application](Definitions.md#qiy-application) notifies the [Individual](Definitions.md#individual) of the granted [Consents](Definitions.md#consent).
 
 
 # 8 Relying Party Requests Personal Data
