@@ -378,7 +378,7 @@ Synonymous with [Identifier](#identifier)
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
 ### Qiy Application
-An [Application Service](#application-service) or software that is authorized for use with Qiy.
+An [Application Service](#application-service) or software that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-application).
 
 ### Qiy Application Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
@@ -436,6 +436,9 @@ A set of open standards for Qiy, maintained by the [Work Stream Functionality & 
 
 ### Qiy Scheme
 The open standard and the set of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Data](#data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange personal information to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).
+
+### Qiy Scheme Policy for Applications
+A set of [Qiy Scheme](#qiy-scheme) rules under which [Applications](#application) can access and use the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Scheme Rulebook
 A set of documents concerning governance, legal and technical aspects of the [Qiy Scheme](#qiy-scheme).
