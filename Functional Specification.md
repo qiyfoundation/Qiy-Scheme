@@ -56,7 +56,7 @@ The remaining steps for a [Data Provider](Definitions.md#data-provider) in order
 *   The [Data Provider](Definitions.md#data-provider) concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
 *   The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Data Provider](Definitions.md#data-provider) in the [Service Library](Definitions.md#service-library).
 *   The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Data Provider](Definitions.md#data-provider) and provides the [Data Provider](Definitions.md#data-provider) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
-*   The [Data Provider](Definitions.md#data-provider) configures his Applications with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+*   The [Data Provider](Definitions.md#data-provider) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 *   The [Data Provider](Definitions.md#data-provider) publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
 
 
@@ -69,14 +69,22 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
 * The [Individual](Definitions.md#individual) installs the application on his smart phone and secures access to it by setting a passcode.
 * The [Qiy Application](Definitions.md#qiy-application) creates a [Qiy Node](Definitions.md#qiy-node) for the [Individual](Definitions.md#individual) and persists the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
 
-After these steps, the [Individual](Definitions.md#individual) has gained access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) and he can use it by starting the [Qiy Application](Definitions.md#qiy-application).
+After these steps, the [Individual](Definitions.md#individual) has gained access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) and he can use it by means of the [Qiy Application](Definitions.md#qiy-application).
 
 
 # 5 Relying Party Acquires Access to Qiy Trust Network
 
-This chapter describes how Relying Parties generally acquire access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+This chapter describes a scenario in which a [Relying Party](Definitions.md#relying-party) acquires access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
 
-tbd
+The [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md) describes the conditions under which a [Relying Party](Definitions.md#relying-party) can provide its [Services](Definitions.md#service) via Qiy while using verifiable [Personal Data](Definitions.md#personal-data) under control of their [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)).
+In this scenario, the [Relying Party](Definitions.md#relying-party) (to be) has already made the necessary arrangements to meet these conditions.
+The remaining steps for a [Relying Party](Definitions.md#relying-party) in order to enable [Individuals](Definitions.md#individual) to use its [Services](Definitions.md#service) are:
+*   The [Service Provider](Definitions.md#service-provider) selects an [Access Provider](Definitions.md#access-provider).
+*   The [Service Provider](Definitions.md#service-provider) concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
+*   The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Service Provider](Definitions.md#service-provider) in the [Service Library](Definitions.md#service-library).
+*   The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Service Provider](Definitions.md#service-provider) and provides the [Service Provider](Definitions.md#service-provider) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+*   The [Service Provider](Definitions.md#service-provider) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+*   The [Service Provider](Definitions.md#service-provider) publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
 
 
 # 6 Individual Connects with Data Provider
