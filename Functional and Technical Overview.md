@@ -3,9 +3,8 @@
 
 # Abstract
 
-The [Qiy Scheme](Definitions.md#qiy-scheme) is a set of agreements encompassing all necessary topics needed to realize the goals of the [Qiy Foundation](Definitions.md#qiy-foundation). The [Qiy Scheme](Definitions.md#qiy-scheme) consists of the [Qiy Standard](Definitions.md#qiy-standard) for technical aspects and the [Qiy Scheme Rulebook](Definitions.md#qiy-scheme-rulebook) for governance aspects.
+This document is produced by the [Work Stream Functionality & Technology](Definitions.md#work-stream-functionality--technology) and is intended for people who know that Qiy puts people back in control of their [Personal Data](Definitions.md#personal-data), but who want or need to know the functional, technical, privacy, security, legal and/or compliancy aspects of Qiy.
 
-This document is produced by the [Work Stream Functionality & Technology](Definitions.md#work-stream-functionality--technology) and intended for developers and architects who wish to design systems and applications that conform to the [Qiy Standard](Definitions.md#qiy-standard) of [Qiy Scheme](Definitions.md#qiy-scheme) V1.0, which is the version released to the public in January 2015. 
 
 # Content
 
