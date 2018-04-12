@@ -10,8 +10,10 @@ This document is produced by the [Work Stream Functionality & Technology](Defini
 
 
 1. [Introduction](#1-introduction)
-	1. [Overview](#11-overview)
-	1. [Terminology](#12-terminology)
+	1. [Purpose](#11-purpose)
+	1. [Readers' Guidance](#12-readers-guidance)
+	1. [Overview](#13-overview)
+	1. [Terminology](#14-terminology)
 1. [High-Level Qiy Use Cases](#2-high-level-qiy-use-cases)
 	1. [Qiy Participants](#21-qiy-participants)
 		1. [Individuals](#individuals)
@@ -72,17 +74,40 @@ This document is produced by the [Work Stream Functionality & Technology](Defini
 
 
 # 1 Introduction
-## 1.1 Overview
-The chapters are:
-1. 'Introduction' introducing this document.
-2. 'High-Level Qiy Use Cases' describing some of the high-level [Use Cases](Definitions.md#use-case) that Qiy addresses.
-3. 'Qiy Architecture' providing a brief description of the key Qiy concepts, layers and components defined in the standard.
-4. 'Application Layer' describing the [Application Layer](Definitions.md#application-layer) and containing references to related documentation.
-5. 'Qiy Node Layer' describing the [Qiy Node Layer](Definitions.md#qiy-node-layer) and containing references to related documentation.
-6. 'Routing Layer' describing the [Routing Layer](Definitions.md#routing-layer) and containing references to related documentation.
 
-## 1.2 Terminology
-See [Definitions of the Qiy Scheme](./Definitions.md).
+This chapter describes the purpose, contents, structure and use of this document.
+
+
+## 1.1 Purpose
+
+Qiy, or rather: the [Qiy Scheme](Definitions.md#qiy-scheme), puts people back in control of their [Personal Data](Definitions.md#personal-data) while creating value for organizations that process it ([Relying Parties](Definitions.md#relying-party)).
+The document describes the functional, technical, privacy, security, legal and/or compliancy aspects of Qiy.
+
+
+## 1.2 Readers' Guidance
+
+* Privacy officers are advised to read chapters [2 High-Level Qiy Use Cases](#2-high-level-qiy-use-cases) and [3 Qiy Architecture](#3-qiy-architecture).
+* Security officers are advised to read chapters [2 High-Level Qiy Use Cases](#2-high-level-qiy-use-cases) and [3 Qiy Architecture](#3-qiy-architecture).
+* Information analysts are advised to read chapters [2 High-Level Qiy Use Cases](#2-high-level-qiy-use-cases), [3 Qiy Architecture](#3-qiy-architecture), [4 Application Layer](#4-application-layer) and [5 Qiy Node Layer](#5-qiy-node-layer).
+* Application developers are advised to read chapters [2 High-Level Qiy Use Cases](#2-high-level-qiy-use-cases), [3 Qiy Architecture](#3-qiy-architecture), [4 Application Layer](#4-application-layer) and [5 Qiy Node Layer](#5-qiy-node-layer).
+* Systems engineers are advised to read chapters [2 High-Level Qiy Use Cases](#2-high-level-qiy-use-cases), [3 Qiy Architecture](#3-qiy-architecture) and [6 Routing Layer](#6-routing-layer).
+
+
+## 1.3 Overview
+
+This document has the following chapters:
+* [1 Introduction](#1-introduction) - this chapter - describes the purpose, contents, structure and use of this document.
+* [2 High-Level Qiy Use Cases](#2-high-level-qiy-use-cases) describes some of the high-level [Use Cases](Definitions.md#use-case) that Qiy addresses.
+* [3 Qiy Architecture](#3-qiy-architecture) provides a brief description of the key Qiy concepts, layers and components.
+* [4 Application Layer](#4-application-layer) describes the [Application Layer](Definitions.md#application-layer).
+* [5 Qiy Node Layer](#5-qiy-node-layer) describes the [Qiy Node Layer](Definitions.md#qiy-node-layer).
+* [6 Routing Layer](#6-routing-layer) describes the [Routing Layer](Definitions.md#routing-layer).
+
+
+## 1.4 Terminology
+
+Please refer to [Definitions](./Definitions.md) for a description of the meaning of the used terms.
+
 
 # 2 High-Level Qiy Use Cases
 
