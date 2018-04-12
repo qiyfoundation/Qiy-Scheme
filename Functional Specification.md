@@ -155,7 +155,7 @@ The flow is as follows:
 
 ## 5.2 Data Reuse
 
-tbd
+The flow for a [Relying Party](Definitions.md#relying-party) in the scenario described in [6 Data Reuse scenario](#6-data-reuse-scenario) is:
 
 ![Relying Party - Data Reuse](./images/Relying_Party_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -443,15 +443,15 @@ participant "Relying Party" as RP
 participant Individual as User
 participant "Qiy Trust Network" as QTF
 
-User -> RP	 	: Connect
-RP -> RP        : Sign up
-User -> RP	 	: Subscribe
-User -> RP	 	: Consent
-RP -> QTF	 	: Register Consent
-QTF -> RP	 	: Send Data Reference
+User -> RP	 	: 4 Connect
+RP -> RP        : 5 Sign up
+User -> RP	 	: 6 Subscribe
+User -> RP	 	: 7 Consent
+RP -> QTF	 	: 8 Register Consent
+QTF -> RP	 	: 14 Send Data Reference
 
-RP -> QTF: Request Data
-QTF -> RP: Send Data
+RP -> QTF: 15 Request Data
+QTF -> RP: 18 Send Data
 
 ```
 
