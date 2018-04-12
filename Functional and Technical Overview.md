@@ -1,4 +1,4 @@
-# Functional and Technical Overview 'Qiy Scheme V1.0'
+# Functional and Technical Overview
 
 
 # Abstract
