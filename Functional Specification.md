@@ -107,14 +107,16 @@ The flow for a [Data Provider](Definitions.md#data-provider) in the scenario des
 
 ## 4.1 Setup
 
-This section describes a scenario in which an [Individual](Definitions.md#individual) acquires access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+This section describes a scenario in which an [Individual](Definitions.md#individual) acquires access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
 
 ![Individual - Setup](./images/Individual_-_Setup_-_Functional_Specification.png)
 
-The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#individual) to use the [Qiy Trust Network](Definitions.md#qiy-trust-network) in many different ways, but the [Individual](Definitions.md#individual) in this scenario has never used the [Qiy Trust Network](Definitions.md#qiy-trust-network) before and acquires access as follows:
-* The [Individual](Definitions.md#individual) selects a [Qiy Application](Definitions.md#qiy-application).
-* The [Individual](Definitions.md#individual) installs the application on his smart phone and secures access to it by setting a passcode.
-* The [Qiy Application](Definitions.md#qiy-application) creates a [Qiy Node](Definitions.md#qiy-node) for the [Individual](Definitions.md#individual) and persists the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#individual) to use the [Qiy Trust Network](Definitions.md#qiy-trust-network) in many different ways, but the [Individual](Definitions.md#individual) in this scenario has never used the [Qiy Trust Network](Definitions.md#qiy-trust-network) before and acquires access using his smartphone as follows:
+1 The [Individual](Definitions.md#individual) installs a [Qiy Application](Definitions.md#qiy-application) on his smartphone.
+1 The [Individual](Definitions.md#individual) sets a passcode to secure access the [Qiy Application](Definitions.md#qiy-application).
+1 The [Qiy Application](Definitions.md#qiy-application) generates [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+1 The [Qiy Application](Definitions.md#qiy-application) persists [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+1 The [Qiy Application](Definitions.md#qiy-application) uses the public parts of the credentials to create a [Qiy Node](Definitions.md#qiy-node) with the help of an [Access Provider](Definitions.md#access-provider).
 
 After these steps, the [Individual](Definitions.md#individual) has gained access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) and he can use it by means of the [Qiy Application](Definitions.md#qiy-application).
 
@@ -349,10 +351,11 @@ participant "Individual" as User
 participant "Qiy Application" as App
 participant "Access Provider" as AP
 
-User->App  : Install
-User->App  : Set passcode
-App->AP : Request Qiy Node
-AP-->App: Qiy Node Credentials
+User->App  : 1 Install
+User->App  : 2 Set Passcode
+App->App: 3 Create Credentials
+App->App: 4 Persist Credentials
+App->AP : 5 Create Qiy Node
 ```
 
 
