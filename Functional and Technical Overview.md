@@ -3,7 +3,7 @@
 
 # Abstract
 
-This document is produced by the [Work Stream Functionality & Technology](Definitions.md#work-stream-functionality--technology) and is intended for people who know that Qiy puts people back in control of their [Personal Data](Definitions.md#personal-data), but who want or need to know the functional, technical, privacy, security, legal and/or compliancy aspects of Qiy.
+This document is produced by the [Work Stream Functionality & Technology](Definitions.md#work-stream-functionality--technology) and describes the functional, technical, privacy, security, legal and/or compliancy aspects of Qiy.
 
 
 # Content
