@@ -88,7 +88,8 @@ The flow is as follows:
 1. The [Data Provider](Definitions.md#data-provider) selects an [Access Provider](Definitions.md#access-provider) and concludes an access agreement.
 1. The [Access Provider](Definitions.md#access-provider) registers the [Data Provider](Definitions.md#data-provider) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 1. The [Data Provider](Definitions.md#data-provider) asks the [Access Provider](Definitions.md#access-provider) for a [Qiy Node](Definitions.md#qiy-node).
-1. The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Data Provider](Definitions.md#data-provider)
+1. The [Access Provider](Definitions.md#access-provider) creates [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+1. The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node).
 1. The [Access Provider](Definitions.md#access-provider) returns the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
 1. The [Data Provider](Definitions.md#data-provider) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 1. The [Data Provider](Definitions.md#data-provider) registers its [Data Service](Definitions.md#data-service) by publishing the [Data Service Description](Definitions.md#data-service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
@@ -336,10 +337,11 @@ DP->DP: 4 Prepare Back-End
 DP->AP  : 5 Conclude Access Agreement
 AP-> QTN  : 6 Register Data Provider
 DP->AP  : 7 Request Qiy Node
-AP->AP : 8 Create Qiy Node
-AP-->DP: 9 Qiy Node Credentials
-DP->DP: 10 Configure Computing System
-DP-> QTN  : 11 Register Data Service
+AP->AP: 8 Create Qiy Node Credentials
+AP->AP : 9 Create Qiy Node
+AP-->DP: 10 Qiy Node Credentials
+DP->DP: 11 Configure Computing System
+DP-> QTN  : 12 Register Data Service
 ```
 
 
