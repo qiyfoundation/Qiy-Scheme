@@ -123,7 +123,7 @@ After these steps, the [Individual](Definitions.md#individual) has gained access
 
 ## 4.2 Data Reuse
 
-tbd
+The flow for an [Individual](Definitions.md#individual) in the scenario described in [6 Data Reuse scenario](#6-data-reuse-scenario) is:
 
 ![Individual - Data Reuse](./images/Individual_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -410,14 +410,14 @@ participant Individual as User
 participant "Data Provider" as DP
 participant "Qiy Trust Network" as QTF
 
-User -> DP	 	: Connect
-User -> DP	 	: Sign on
+User -> DP	 	: 1 Connect
+User -> DP	 	: 2 Sign on
 
-User -> RP	 	: Connect
-User -> RP	 	: Subscribe
-User -> RP	 	: Consent
-QTF -> Individual : Notify Consent
-QTF -> Individual : Propose Data Source
+User -> RP	 	: 4 Connect
+User -> RP	 	: 6 Subscribe
+User -> RP	 	: 7 Consent
+QTF -> Individual : 9 Notify Consent
+QTF -> Individual : 10 Propose Data Source
 ```
 
 
