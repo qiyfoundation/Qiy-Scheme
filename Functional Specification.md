@@ -17,7 +17,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data
 1. [Relying Party Scenarios](#5-relying-party-scenarios)
 	1. [Setup](#51-setup)
 	1. [Data Reuse](#52-data-reuse)
-1. [Personal Data Scenario - All](#6-personal-data-scenario---all)
+1. [Data Reuse Scenario](#6-data-reuse-scenario)
 	1. [Connect with Data Provider](#61-connect-with-data-provider)
 	1. [Sign on](#62-sign-on)
 	1. [Persist Connection Id](#63-persist-connection-id)
@@ -80,8 +80,7 @@ This section describes a scenario of a [Data Provider](Definitions.md#data-provi
 ![Data Provider - Setup](./images/Data_Provider_-_Setup_-_Functional_Specification.png)
 
 
-The [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md) describes the conditions under which a [Data Provider](Definitions.md#data-provider) can put a [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)) in control of his [Personal Data](Definitions.md#personal-data) via Qiy. In this scenario, the [Data Provider](Definitions.md#data-provider) (to be) has already made the necessary arrangements to meet these conditions.
-The remaining steps for a [Data Provider](Definitions.md#data-provider) in order to enable [Data Subjects](Definitions.md#data-subject) to get in control of their [Personal Data](Definitions.md#personal-data) via the [Qiy Trust Network](Definitions.md#qiy-trust-network) are:
+The flow is as follows:
 1. The [Data Provider](Definitions.md#data-provider) documents its [Data Service](Definitions.md#data-service) in a [Data Service Description](Definitions.md#data-service-description).
 1. The [Data Provider](Definitions.md#data-provider) establishes a [Service Endpoint](Definitions.md#service-endpoint) which will be used to provide [Personal Data](Definitions.md#personal-data) via the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 1. The [Data Provider](Definitions.md#data-provider) prepares the front-end of its computing system to be able to establish connections with its users via Qiy.
@@ -133,20 +132,24 @@ The flow for an [Individual](Definitions.md#individual) in the scenario describe
 
 ## 5.1 Setup
 
-This chapter describes a scenario in which a [Relying Party](Definitions.md#relying-party) acquires access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+This section describes a scenario of a [Relying Party](Definitions.md#relying-party) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+
 
 ![Relying Party - Setup](./images/Relying_Party-_Setup_-_Functional_Specification.png)
 
-The [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md) describes the conditions under which a [Relying Party](Definitions.md#relying-party) can provide its [Services](Definitions.md#service) via Qiy while using verifiable [Personal Data](Definitions.md#personal-data) under control of their [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)).
-In this scenario, the [Relying Party](Definitions.md#relying-party) (to be) has already made the necessary arrangements to meet these conditions.
-The remaining steps for a [Relying Party](Definitions.md#relying-party) in order to enable [Individuals](Definitions.md#individual) to use its [Services](Definitions.md#service) via the [Qiy Trust Network](Definitions.md#qiy-trust-network) are:
-* The [Relying Party](Definitions.md#relying-party) selects an [Access Provider](Definitions.md#access-provider)
-  * and concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
-* The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party) in the [Service Library](Definitions.md#service-library),
-  * ... creates a [Qiy Node](Definitions.md#qiy-node) for the [Relying Party](Definitions.md#relying-party)
-  * and provides the [Relying Party](Definitions.md#relying-party) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
-* The [Relying Party](Definitions.md#relying-party) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) to gain physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-  * and publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
+The flow is as follows:
+1. The [Relying Party](Definitions.md#relying-party) documents its [Service](Definitions.md#service) in a [Service Description](Definitions.md#service-description).
+1. The [Relying Party](Definitions.md#relying-party) prepares the front-end of its computing system to be able to establish (initially anonymous) connections with [Individuals](Definitions.md#individual) via Qiy.
+1. The [Relying Party](Definitions.md#relying-party) prepares the back-end of its computing system to be able to receive [Personal Data](Definitions.md#personal-data) via Qiy.
+1. The [Relying Party](Definitions.md#relying-party) selects an [Access Provider](Definitions.md#access-provider) and concludes an access agreement.
+1. The [Access Provider](Definitions.md#access-provider) registers the [Relying Party](Definitions.md#relying-party) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+1. The [Relying Party](Definitions.md#relying-party) asks the [Access Provider](Definitions.md#access-provider) for a [Qiy Node](Definitions.md#qiy-node).
+1. The [Access Provider](Definitions.md#access-provider) creates [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+1. The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node).
+1. The [Access Provider](Definitions.md#access-provider) returns the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+1. The [Relying Party](Definitions.md#relying-party) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+1. The [Relying Party](Definitions.md#relying-party) registers its [Service](Definitions.md#service) by publishing the [Service Description](Definitions.md#service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+
 
 
 ## 5.2 Data Reuse
@@ -157,7 +160,7 @@ tbd
 
 
 
-# 6 Personal Data Scenario - All
+# 6 Data Reuse Scenario
 
 This chapter describes the scenario in full.
  
@@ -364,17 +367,23 @@ App->AP : 5 Create Qiy Node
 ![Relying Party - Setup](./images/Relying_Party-_Setup_-_Functional_Specification.png)
 
 ```
-title " Relying Party - Setup"
+title "Relying Party - Setup"
 
-participant " Relying Party" as RP
-participant "Qiy Node" as QN
+participant "Relying Party" as RP
 participant "Access Provider" as AP
+participant "Qiy Trust Network" as QTN
 
-RP->AP  : Conclude Access Agreement
-RP->AP  : Request Qiy Node
-AP->AP : Create Qiy Node
-AP-->RP: Qiy Node Credentials
-RP-> QN  : Register Service Catalogue
+RP->RP: 1 Document Service
+RP->RP: 2 Prepare Front-End
+RP->RP: 3 Prepare Back-End
+RP->AP  : 4 Conclude Access Agreement
+AP-> QTN  : 5 Register Relying Party
+RP->AP  : 6 Request Qiy Node
+AP->AP : 7 Create Qiy Node Credentials
+AP->AP : 8 Create Qiy Node
+AP-->RP: 9 Qiy Node Credentials
+RP->RP: 10 Configure Computing System
+RP-> QTN  : 11 Register Service
 ```
 
 
