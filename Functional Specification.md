@@ -36,14 +36,14 @@ From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data
 	1. [Lookup Operation](#616-lookup-operation)
 	1. [Execute Operation](#617-execute-operation)
 	1. [Data](#618-data)
-1. [Diagrams](#10-diagrams)
-	1. [Data Provider - Setup](#101-data-provider---setup)
-	1. [Individual - Setup](#102-individual---setup)
-	1. [Relying Party - Setup](#103-relying-party---setup)
-	1. [Data Provider - Data Reuse](#104-data-provider---data-reuse)
-	1. [Individual - Data Reuse](#105-individual---data-reuse)
-	1. [Relying Party - Data Reuse](#106-relying-party---data-reuse)
-	1. [Data Reuse Scenario - All](#107-data-reuse-scenario---all)
+1. [Diagrams](#7-diagrams)
+	1. [Data Provider - Setup](#71-data-provider---setup)
+	1. [Individual - Setup](#72-individual---setup)
+	1. [Relying Party - Setup](#73-relying-party---setup)
+	1. [Data Provider - Data Reuse](#74-data-provider---data-reuse)
+	1. [Individual - Data Reuse](#75-individual---data-reuse)
+	1. [Relying Party - Data Reuse](#76-relying-party---data-reuse)
+	1. [Data Reuse Scenario - All](#77-data-reuse-scenario---all)
 
 # 1 Introduction
 
@@ -82,12 +82,17 @@ This section describes a scenario of a [Data Provider](Definitions.md#data-provi
 
 The [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md) describes the conditions under which a [Data Provider](Definitions.md#data-provider) can put a [Data Subject](Definitions.md#data-subject) ([Individual](Definitions.md#individual)) in control of his [Personal Data](Definitions.md#personal-data) via Qiy. In this scenario, the [Data Provider](Definitions.md#data-provider) (to be) has already made the necessary arrangements to meet these conditions.
 The remaining steps for a [Data Provider](Definitions.md#data-provider) in order to enable [Data Subjects](Definitions.md#data-subject) to get in control of their [Personal Data](Definitions.md#personal-data) via the [Qiy Trust Network](Definitions.md#qiy-trust-network) are:
-*   The [Data Provider](Definitions.md#data-provider) selects an [Access Provider](Definitions.md#access-provider).
-*   The [Data Provider](Definitions.md#data-provider) concludes an access agreement with the [Access Provider](Definitions.md#access-provider).
-*   The [Access Provider](Definitions.md#access-provider) authenticates and registers the [Identity](Definitions.md#identity) of the [Data Provider](Definitions.md#data-provider) in the [Service Library](Definitions.md#service-library).
-*   The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Data Provider](Definitions.md#data-provider) and provides the [Data Provider](Definitions.md#data-provider) with the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
-*   The [Data Provider](Definitions.md#data-provider) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-*   The [Data Provider](Definitions.md#data-provider) publishes its [Service Catalogue](Definitions.md#service-catalogue) in the [Service Library](Definitions.md#service-library).
+1 The [Data Provider](Definitions.md#data-provider) documents its [Data Service](Definitions.md#data-service) in a [Data Service Description](Definitions.md#data-service-description).
+1 The [Data Provider](Definitions.md#data-provider) establishes a [Service Endpoint](Definitions.md#service-endpoint) which will be used to provide [Personal Data](Definitions.md#personal-data) via the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+1 The [Data Provider](Definitions.md#data-provider) prepares the front-end of its computing system to be able to establish connections with its users via Qiy.
+1 The [Data Provider](Definitions.md#data-provider) prepares the back-end of its computing system to be able to distribute data via Qiy.
+1 The [Data Provider](Definitions.md#data-provider) selects an [Access Provider](Definitions.md#access-provider) and concludes an access agreement.
+1 The [Access Provider](Definitions.md#access-provider) registers the [Data Provider](Definitions.md#data-provider) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+1 The [Data Provider](Definitions.md#data-provider) asks the [Access Provider](Definitions.md#access-provider) for a [Qiy Node](Definitions.md#qiy-node).
+1 The [Access Provider](Definitions.md#access-provider) creates a [Qiy Node](Definitions.md#qiy-node) for the [Data Provider](Definitions.md#data-provider)
+1 The [Access Provider](Definitions.md#access-provider) returns the [Qiy Node Credentials](Definitions.md#qiy-node-credential).
+1 The [Data Provider](Definitions.md#data-provider) configures its computing system with the [Qiy Node Credentials](Definitions.md#qiy-node-credential) and gains physical access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+1 The [Data Provider](Definitions.md#data-provider) registers its [Data Service](Definitions.md#data-service) by publishing the [Data Service Description](Definitions.md#data-service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 
 ## 3.2 Data Reuse
@@ -305,10 +310,10 @@ This chapter describes the scenario in full.
 * The [Qiy Node](Definitions.md#qiy-node) returns the data to the [Relying Party](Definitions.md#relying-party).
 
 
-# 10 Diagrams
+# 7 Diagrams
 
 
-## 10.1 Data Provider - Setup
+## 7.1 Data Provider - Setup
 
 ![Data Provider - Setup](./images/Data_Provider_-_Setup_-_Functional_Specification.png)
 
@@ -316,18 +321,24 @@ This chapter describes the scenario in full.
 title "Data Provider - Setup"
 
 participant "Data Provider" as DP
-participant "Qiy Node" as QN
 participant "Access Provider" as AP
+participant "Qiy Trust Network" as QTN
 
-DP->AP  : Conclude Access Agreement
-DP->AP  : Request Qiy Node
-AP->AP : Create Qiy Node
-AP-->DP: Qiy Node Credentials
-DP-> QN  : Register Data Service
+DP->DP: 1 Document Data Service
+DP->DP: 2 Establish Service Endpoint
+DP->DP: 3 Prepare Front-End
+DP->DP: 4 Prepare Back-End
+DP->AP  : 5 Conclude Access Agreement
+AP-> QTN  : 6 Register Data Provider
+DP->AP  : 7 Request Qiy Node
+AP->AP : 8 Create Qiy Node
+AP-->DP: 9 Qiy Node Credentials
+DP->DP: 10 Configure Computing System
+DP-> QTN  : 11 Register Data Service
 ```
 
 
-## 10.2 Individual - Setup
+## 7.2 Individual - Setup
 
 ![Individual - Setup](./images/Individual_-_Setup_-_Functional_Specification.png)
 
@@ -345,7 +356,7 @@ AP-->App: Qiy Node Credentials
 ```
 
 
-## 10.3 Relying Party - Setup
+## 7.3 Relying Party - Setup
 
 ![Relying Party - Setup](./images/Relying_Party-_Setup_-_Functional_Specification.png)
 
@@ -364,7 +375,7 @@ RP-> QN  : Register Service Catalogue
 ```
 
 
-## 10.4 Data Provider - Data Reuse
+## 7.4 Data Provider - Data Reuse
 
 ![Data Provider - Data Reuse](./images/Data_Provider_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -384,7 +395,7 @@ QTF -> DP: Execute Operation
 ```
 
 
-## 10.5 Individual - Data Reuse
+## 7.5 Individual - Data Reuse
 
 ![Individual - Data Reuse](./images/Individual_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -407,7 +418,7 @@ QTF -> Individual : Propose Data Source
 ```
 
 
-## 10.6 Relying Party - Data Reuse
+## 7.6 Relying Party - Data Reuse
 
 ![Relying Party - Data Reuse](./images/Relying_Party_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -432,7 +443,7 @@ QTF -> RP: Send Data
 
 
 
-## 10.7 Data Reuse Scenario - All
+## 7.7 Data Reuse Scenario - All
 
 ![Data Reuse Scenario - All](./images/Data_Reuse_Scenario_-_All_-_Functional_Specification.png)
 
