@@ -75,7 +75,7 @@ The remainder of this document describes the scenarios for the different roles a
 
 ## 3.1 Setup
 
-This section describes a scenario of a [Data Provider](Definitions.md#data-provider) acquiring access to the Qiy Trust Network as an introduction to the full description provided in [UC01 Acquire Access to Qiy Trust Network](./use-cases/UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md).
+This section describes a scenario of a [Data Provider](Definitions.md#data-provider) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ![Data Provider - Setup](./images/Data_Provider_-_Setup_-_Functional_Specification.png)
 
@@ -97,7 +97,7 @@ The remaining steps for a [Data Provider](Definitions.md#data-provider) in order
 
 ## 3.2 Data Reuse
 
-tbd
+The flow for a [Data Provider](Definitions.md#data-provider) in the scenario described in [6 Data Reuse scenario](#6-data-reuse-scenario) is:
 
 ![Data Provider - Data Reuse](./images/Data_Provider_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -386,12 +386,12 @@ participant Individual as User
 participant "Data Provider" as DP
 participant "Qiy Trust Network" as QTF
 
-User -> DP	 	: Connect
-User -> DP	 	: Sign on
-DP-> DP         : Persist Connection Id
+User -> DP	 	: 1 Connect
+User -> DP	 	: 2 Sign on
+DP-> DP         : 3 Persist Connection Id
 
-QTF -> DP       : Request Operation Specification
-QTF -> DP: Execute Operation
+QTF -> DP       : 11 Request Operation Specification
+QTF -> DP: 17 Execute Operation
 ```
 
 
