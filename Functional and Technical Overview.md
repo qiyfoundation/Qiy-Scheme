@@ -15,19 +15,6 @@ This document is produced by the [Work Stream Functionality & Technology](Defini
 	1. [Overview](#13-overview)
 	1. [Terminology](#14-terminology)
 1. [High-Level Qiy Use Cases](#2-high-level-qiy-use-cases)
-	1. [Qiy Participants](#21-qiy-participants)
-		1. [Individuals](#individuals)
-		1. [Organizations](#organizations)
-	1. [Qiy Roles](#22-qiy-roles)
-		1. [Users](#221-users)
-		1. [Orchestrator](#orchestrator)
-		1. [Data Providers](#data-providers)
-		1. [Relying Parties](#relying-parties)
-		1. [Router](#222-router)
-		1. [Scheme Authority](#223-scheme-authority)
-	1. [Individual as Data Provider Use Case](#23-individual-as-data-provider-use-case)
-		1. [Overview](#231-overview)
-		1. [Zooming in](#232-zooming-in)
 1. [Qiy Architecture](#3-qiy-architecture)
 	1. [Basic Qiy Concepts](#31-basic-qiy-concepts)
 		1. [Qiy Node](#311-qiy-node)
@@ -111,92 +98,21 @@ Please refer to [Definitions](./Definitions.md) for a description of the meaning
 
 # 2 High-Level Qiy Use Cases
 
-[Individuals](Definitions.md#individual) and organizations, including government organizations can be participants in the [Qiy Scheme](Definitions.md#qiy-scheme) in different [Roles](Definitions.md#role).
+This chapter describes the main use cases that put individual persons ([Individuals](Definitions.md#individual)) in control of their [Personal Data](Definitions.md#personal-data) that are kept by organizations ([Data Providers](Definitions.md#data-provider)) and create value for organizations that process it ([Relying Parties](Definitions.md#relying-party)).
 
-## 2.1 Qiy Participants
+Qiy achieves this with the help of the [Qiy Trust Network](Definitions.md#qiy-trust-network) and [Consents](Definitions.md#consent). The [Qiy Trust Framework](Definitions.md#qiy-trust-framework) is a [Technology Service](Definitions.md#technology-service) which allows individuals and organizations to connect and interact under the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). The organizations that provide this service ([Access Providers](Definitions.md#access-provider)) can only do so under the same rules.
+[Relying Party](Definitions.md#relying-party) can only get Personal Data with the [Consent](Definitions.md#consent) of the [Data Subject](Definitions.md#data-subject).
 
-### Individuals
-[Individuals](Definitions.md#individual) benefit from participating in the [Qiy Scheme](Definitions.md#qiy-scheme), by gaining oversight and control over their personal information. By participating in the [Qiy Scheme](Definitions.md#qiy-scheme) they can:
-1. Know where their [Data](Definitions.md#data) is
-2. Access their [Data](Definitions.md#data) at the source
-3. Control who uses this [Data](Definitions.md#data) and for what purpose
-4. Re-use the [Data](Definitions.md#data) to create insight and value for themselves, or to share with others
-5. Re-use the [Data](Definitions.md#data) with a vouch for its correctness from the party providing the [Data](Definitions.md#data).
+Hence the main use cases:
 
-### Organizations 
-While the benefits of the [Qiy Scheme](Definitions.md#qiy-scheme) are obvious for [Individuals](Definitions.md#individual), organizations may benefit from participating as well. This includes government organizations, which can participate in the Scheme in a similar way as any other organization.
+* [Qiy User](Definitions.md#qiy-user) acquires access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+* [Individual](Definitions.md#individual) connects with [Data Provider](Definitions.md#data-provider).
+* [Individual](Definitions.md#individual) connects with [Relying Party](Definitions.md#relying-party).
+* [Individual](Definitions.md#individual) consents to the use of his data by a [Relying Party](Definitions.md#relying-party).
+* [Relying Party](Definitions.md#relying-party) gets [Personal Data](Definitions.md#personal-data).
 
-Organizations benefit in the following ways:
-1. The quality of the [Data](Definitions.md#data) is likely to be higher, as the [Individual](Definitions.md#individual) can keep it up to date himself, and only has to manage it in one location
-2. Unnecessary [Data](Definitions.md#data) replication is prevented, as [Data](Definitions.md#data) can remain at the source
-3. Organizations can make use of [Data](Definitions.md#data) that is enriched with the vouch of another organization, increasing the correctness and hence value of the [Data](Definitions.md#data) (if the vouching organization is trusted)
-4. Lower costs to get quality and [Consent](Definitions.md#consent) based [Data](Definitions.md#data)
-5. Dynamic [Data](Definitions.md#data): subscribe to actual (and validated) [Data](Definitions.md#data)
-6. Get to know one's customer not by collecting, but by connecting.
+Please refer to the [Functional Specification](Functional%20Specification.md) for more information.
 
-## 2.2 Qiy Roles
-In the [Qiy Scheme](Definitions.md#qiy-scheme) different [Roles](Definitions.md#role) can be distinguished. A single organization may participate in the [Qiy Scheme](Definitions.md#qiy-scheme) in more than one [Role](Definitions.md#role). At a minimum, a transaction in the [Qiy Scheme](Definitions.md#qiy-scheme) involves two [Users](Definitions.md#user) and their respective [Qiy Nodes](Definitions.md#qiy-node).
-
-![The roles in the Qiy Scheme](./images/the-roles-in-the-qiy-scheme.png)
-
-    Diagram 2-1 The [Roles](Definitions.md#role) in the [Qiy Scheme](Definitions.md#qiy-scheme)
-
-### 2.2.1 Users
-[Individuals](Definitions.md#individual) and organizations can participate in the [Qiy Scheme](Definitions.md#qiy-scheme) in different [Roles](Definitions.md#role). 
-
-### Orchestrator
-[Individuals](Definitions.md#individual) participate in the [Qiy Scheme](Definitions.md#qiy-scheme) in the [Role](Definitions.md#role) of [Orchestrator](Definitions.md#orchestrator). The [Orchestrator](Definitions.md#orchestrator) is represented in the [Qiy Scheme](Definitions.md#qiy-scheme) by his [Qiy Node](Definitions.md#qiy-node). The [Orchestrator](Definitions.md#orchestrator) is in control of his [Qiy Node](Definitions.md#qiy-node) enabling him to decide how other participants will interact with him. The [Orchestrator](Definitions.md#orchestrator) controls the relations with other participants and uses his [Qiy Node](Definitions.md#qiy-node) to manage his [Consent](Definitions.md#consent) for who may use his [Data](Definitions.md#data) for what purpose.
-
-### Data Providers
-[Data Providers](Definitions.md#data-provider) make [Data](Definitions.md#data) accessible to other [Users](Definitions.md#user) in the [Qiy Scheme](Definitions.md#qiy-scheme). A [Data Provider](Definitions.md#data-provider) can make [Data](Definitions.md#data) available to an [Orchestrator](Definitions.md#orchestrator) after he has established a [Connection](Definitions.md#connection) to the [Orchestrator](Definitions.md#orchestrator)'s [Qiy Node](Definitions.md#qiy-node), so that the [Orchestrator](Definitions.md#orchestrator) may use the [Data](Definitions.md#data) for his personal use, or share it in an interaction with another [User](Definitions.md#user). If an [Orchestrator](Definitions.md#orchestrator) has given [Consent](Definitions.md#consent), the [Data Provider](Definitions.md#data-provider) may also share [Data](Definitions.md#data) with a [Relying Party](Definitions.md#relying-party) on behalf of the [Orchestrator](Definitions.md#orchestrator). These [Assertions](Definitions.md#assertion) typically supply the receiving party some [Personal Data](Definitions.md#personal-data) of the [Individual](Definitions.md#individual) that is necessary to perform a transaction. If an [Assertion](Definitions.md#assertion) is sent by a [Data Provider](Definitions.md#data-provider), he can enrich the metadata belonging to the [Data](Definitions.md#data) with a vouch for correctness of the [Data](Definitions.md#data). The receiving party may value this vouch based on [Trust](Definitions.md#trust) and reputation of the [Data Provider](Definitions.md#data-provider).
-[Data Providers](Definitions.md#data-provider) will often be (government) organizations that have a relation with the [Orchestrator](Definitions.md#orchestrator). In some cases, an [Individual](Definitions.md#individual) can be a [Data Provider](Definitions.md#data-provider); in this case the [Individual](Definitions.md#individual) will be the original source and the [Assertion](Definitions.md#assertion) that is given is not vouched for by any other [User](Definitions.md#user).
-
-### Relying Parties
-A [Relying Party](Definitions.md#relying-party) is a [User](Definitions.md#user) that relies on the [Qiy Trust Network](Definitions.md#qiy-trust-network) to receive [Data](Definitions.md#data) from an [Orchestrator](Definitions.md#orchestrator), typically for some kind of [Business Process](Definitions.md#business-proces). To receive this [Data](Definitions.md#data), it is required that the [Relying Party](Definitions.md#relying-party) establishes a [Connection](Definitions.md#connection) with the [Qiy Node](Definitions.md#qiy-node) of an [Orchestrator](Definitions.md#orchestrator). In practice, [Relying Party](Definitions.md#relying-party) will often also participate as a [Data Provider](Definitions.md#data-provider), making the exchange with the [Orchestrator](Definitions.md#orchestrator) possible in both ways.
-
-### 2.2.2 Router
-[Router](Definitions.md#router) is the general term for [Service Providers](Definitions.md#service-provider) whose primary purpose is to connect [Users](Definitions.md#user) (respectively their [Qiy Nodes](Definitions.md#qiy-node)) to the [Qiy Scheme](Definitions.md#qiy-scheme). Some [Service Providers](Definitions.md#service-provider) focus on offering [Connections](Definitions.md#connection) to [Users](Definitions.md#user), others add additional [Services](Definitions.md#service) to the primary [Service](Definitions.md#service) of issuing [Qiy Nodes](Definitions.md#qiy-node).
-
-### 2.2.3 Scheme Authority
-The [Qiy Scheme](Definitions.md#qiy-scheme) is managed through an independent and international organization, called the [Scheme Authority](Definitions.md#scheme-authority). At the national level, the implementation of the Scheme in that national market is delegated to a [Regional Authority](Definitions.md#regional-authority). At all times the independence of the [Scheme Authority](Definitions.md#scheme-authority) and its national 'branches' shall be warranted. Also, at all times the Scheme in its implementation shall be open and non-discriminatory. To ensure this, appropriate audits and sanctions will be in place at both the national and the international level.
-The [Scheme Authority](Definitions.md#scheme-authority) and its national 'branches' set and enforce the rules and regulations and issue [Licenses](Definitions.md#license) to participants of the [Qiy Scheme](Definitions.md#qiy-scheme).
-
-The [Qiy Foundation](Definitions.md#qiy-foundation) fulfils the [Role](Definitions.md#role) of [Scheme Authority](Definitions.md#scheme-authority).
-
-## 2.3 Individual as Data Provider Use Case
-
-### 2.3.1 Overview
-In the following example, an [Individual](Definitions.md#individual) named Alice places an order from a web shop called Webshop.com.
-To connect with others on the [Qiy Infrastructure](Definitions.md#qiy-infrastructure), Alice uses an app on her smartphone that enables her to scan QR codes to connect. In her [Role](Definitions.md#role) as [Orchestrator](Definitions.md#orchestrator), Alice is in control of the process described in the [Use Case](Definitions.md#use-case).
-Webshop.com is an organization connected to the [Qiy Infrastructure](Definitions.md#qiy-infrastructure) by their [Router](Definitions.md#router). To serve Alice, Webshop.com relies on information to be supplied by her using the [Qiy Infrastructure](Definitions.md#qiy-infrastructure); Webshop.com is a [Relying Party](Definitions.md#relying-party) in this [Use Case](Definitions.md#use-case).
-
-The processing sequence is as follows:
-1. Alice visits the website of Webshop.com and puts an item in her shopping cart. 
-2. Alice proceeds to the check out to purchase the item in her cart.
-3. To further serve Alice, Webshop.com [Requests](Definitions.md#request) Alice to connect so that Webshop.com may use Alice's [Data](Definitions.md#data). Webshop.com presents Alice with a [Connect Token](Definitions.md#connect-token) in the form of a QR code so that Alice can connect with Webshop.com.
-4. Using the app on her smartphone, Alice scans the QR code, establishing a [Connection](Definitions.md#connection) with the Webshop.com.
-5. Alice can now share the necessary [Data](Definitions.md#data) (e.g. name, delivery address, preferences, etc.) with Webshop.com and complete her order.
-
-![The individual as a data provider](./images/the-individual-as-a-data-provider.png)
-
-    Diagram 2-2 The [Individual](Definitions.md#individual) as a [Data Provider](Definitions.md#data-provider)
-
-### 2.3.2 Zooming in
-The [Individual](Definitions.md#individual) and the [Qiy Node](Definitions.md#qiy-node)
-Alice is represented in the [Qiy Scheme](Definitions.md#qiy-scheme) by her personal [Qiy Node](Definitions.md#qiy-node). As an [Orchestrator](Definitions.md#orchestrator) she interacts with her [Qiy Node](Definitions.md#qiy-node) using one or more Applications. For the worked example, we assume that Alice uses an app on her smartphone that can interact with her [Qiy Node](Definitions.md#qiy-node). This app also enables Alice to connect with other parties that participate in the [Qiy Scheme](Definitions.md#qiy-scheme), such as Webshop.com in this example.
-
-Advertising the [Connect Token](Definitions.md#connect-token)
-
-Alice can visit the website of Webshop.com and put items in her cart without having to identify herself to Webshop.com. To complete the order however, Webshop.com requires some information about Alice; e.g. her real name and her address. To acquire this information using Qiy, Webshop.com invites Alice to connect them. To establish a [Connection](Definitions.md#connection) with her [Qiy Node](Definitions.md#qiy-node), Webshop.com generates a [Connect Token](Definitions.md#connect-token) and presents it out-of-band. In this example, the [Connect Token](Definitions.md#connect-token) is presented as a QR code that can be scanned using an appropriate app. The [Connect Token](Definitions.md#connect-token) contains the information necessary for the app to establish a [Connection](Definitions.md#connection) with Webshop.com. Alice scans this code using the app on her phone.
-
-Establishing a [Connection](Definitions.md#connection)
-
-Using the [Connect Token](Definitions.md#connect-token), the app establishes a secure, encrypted [Connection](Definitions.md#connection) between Alice's [Qiy Node](Definitions.md#qiy-node) and the [Qiy Node](Definitions.md#qiy-node) of Webshop.com via the [Routers](Definitions.md#router). Once this route has been established, Alice and Webshop.com may exchange [Data](Definitions.md#data) through the [Qiy Infrastructure](Definitions.md#qiy-infrastructure). All [Data](Definitions.md#data) transmitted over this [Connection](Definitions.md#connection) is shielded from other parties in between, i.e. the [Routers](Definitions.md#router) only forward the [Data](Definitions.md#data) to the destination [Qiy Node](Definitions.md#qiy-node), but cannot read the contents of the messages they are passing along.
-
-[Data](Definitions.md#data) exchange
-
-The route between Alice's [Qiy Node](Definitions.md#qiy-node) and Webshop.com can be used to securely exchange information; Alice is, as the [Orchestrator](Definitions.md#orchestrator), in control over what [Data](Definitions.md#data) will or will not be shared with [Relying Parties](Definitions.md#relying-party) connected to her [Qiy Node](Definitions.md#qiy-node).
-To complete Alice's order, Webshop.com [Requests](Definitions.md#request) the address where her order should be shipped to. Alice acts as a [Data Provider](Definitions.md#data-provider) and supplies this input herself. Webshop.com may then complete the order based on the [Data](Definitions.md#data) Alice has shared.
 
 # 3 Qiy Architecture
 This chapter describes the [Qiy Architecture](Definitions.md#qiy-architecture): the entities and their interrelations, which are involved in online communication and transactions. 
