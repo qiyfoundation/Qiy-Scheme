@@ -206,12 +206,20 @@ tbd
 ### Data Provider
 A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user): a [Legal Entity](#legal-entity) that provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Trust Network](#qiy-trust-network) to other [Qiy Users](#qiy-user) on [Request](#request).
 
-
 ### Data Provider Agreement
 An agreement required for [Data Providers](#data-provider).
 
 ### Data Reference
 An [Operation Reference](#operation-reference) which can be used to obtain [Personal Data](#personal-data) of an [Individual](#individual).
+
+### Data Service
+A [Service](#service), namely the provisioning of [Data](#data).
+
+### Data Service Description
+A [Service Description](#service-description) of a [Data Service](#data-service).
+
+### Data Service Descriptor
+A [Service Descriptor](#service-descriptor) for a [Data Service](#data-service).
 
 ### Data Subject
 As defined in the [GDPR](#gdpr).
