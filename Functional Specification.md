@@ -1,4 +1,4 @@
-# FUNCTIONAL SPECIFICATION 'QIY SCHEME V1.1'
+# Functional Specification
 From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data-exchange)
 
 
