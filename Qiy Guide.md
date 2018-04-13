@@ -25,6 +25,8 @@ The Qiy Guide contains guidance for the different interest groups.
 1. [Data Analysts](#data-analysts)
 1. [Information Analysts](#information-analysts)
 	1. ['Where can I find the information?'](#where-can-i-find-the-information)
+1. [System Engineers](#system-engineers)
+	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [Software Engineers](#software-engineers)
 1. [Access Providers](#access-providers)
 	1. ['Where can I find the information?'](#where-can-i-find-the-information)
@@ -88,6 +90,14 @@ For development, please refer to [Work Stream Alignment Vertical Standards](http
 
 
 # Information Analysts
+
+## 'Where can I find the information?'
+Please refer to [Functional Specification](Functional%20Specification.md).
+
+For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+
+
+# System Engineers
 
 ## 'Where can I find the information?'
 Please refer to [Functional Specification](Functional%20Specification.md).
