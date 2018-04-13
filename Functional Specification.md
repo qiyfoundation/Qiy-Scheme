@@ -140,6 +140,7 @@ This section describes a scenario of a [Relying Party](Definitions.md#relying-pa
 ![Relying Party - Setup](./images/Relying_Party-_Setup_-_Functional_Specification.png)
 
 The flow is as follows:
+1. The [Relying Party](Definitions.md#relying-party) endorses [Qiy](Definitions.md#qiy) by implementing the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-providers).
 1. The [Relying Party](Definitions.md#relying-party) documents its [Service](Definitions.md#service) in a [Service Description](Definitions.md#service-description).
 1. The [Relying Party](Definitions.md#relying-party) prepares the front-end of its computing system to be able to establish (initially anonymous) connections with [Individuals](Definitions.md#individual) via Qiy.
 1. The [Relying Party](Definitions.md#relying-party) prepares the back-end of its computing system to be able to receive [Personal Data](Definitions.md#personal-data) via Qiy.
@@ -377,17 +378,18 @@ participant "Relying Party" as RP
 participant "Access Provider" as AP
 participant "Qiy Trust Network" as QTN
 
-RP->RP: 1 Document Service
-RP->RP: 2 Prepare Front-End
-RP->RP: 3 Prepare Back-End
-RP->AP  : 4 Conclude Access Agreement
-AP-> QTN  : 5 Register Relying Party
-RP->AP  : 6 Request Qiy Node
-AP->AP : 7 Create Qiy Node Credentials
-AP->AP : 8 Create Qiy Node
-AP-->RP: 9 Qiy Node Credentials
-RP->RP: 10 Configure Computing System
-RP-> QTN  : 11 Register Service
+RP->RP: 1 Endorse Qiy
+RP->RP: 2 Document Service
+RP->RP: 3 Prepare Front-End
+RP->RP: 4 Prepare Back-End
+RP->AP  : 5 Conclude Access Agreement
+AP-> QTN  : 6 Register Relying Party
+RP->AP  : 7 Request Qiy Node
+AP->AP : 8 Create Qiy Node Credentials
+AP->AP : 9 Create Qiy Node
+AP-->RP: 10 Qiy Node Credentials
+RP->RP: 11 Configure Computing System
+RP-> QTN  : 12 Register Service
 ```
 
 
