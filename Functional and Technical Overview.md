@@ -106,12 +106,12 @@ Qiy achieves this with the help of the [Qiy Trust Network](Definitions.md#qiy-tr
 Hence the main use cases:
 
 * [Data Provider](Definitions.md#data-provider) joins Qiy (see [example flow](Functional%20Specification.md#31-setup)).
-* [Individual](Definitions.md#individual) starts using Qiy  (see [example flow](Functional%20Specification.md#32-setup)).
-* [Relying Party](Definitions.md#relying-party) joins Qiy  (see [example flow](Functional%20Specification.md#33-setup)).
-* [Individual](Definitions.md#individual) connects with [Data Provider](Definitions.md#data-provider)  (see [example flow](Functional%20Specification.md#61-connect-with-data-provider)).
-* [Individual](Definitions.md#individual) connects with [Relying Party](Definitions.md#relying-party)  (see [example flow](Functional%20Specification.md#64-connect-with-relying-party)).
-* [Individual](Definitions.md#individual) consents to the use of his data by a [Relying Party](Definitions.md#relying-party) (see [example flow](Functional%20Specification.md#67-consent)).
-* [Relying Party](Definitions.md#relying-party) gets [Personal Data](Definitions.md#personal-data) (see [example flow](Functional%20Specification.md#615-request-data)).
+* [Individual](Definitions.md#individual) starts using Qiy  (see [example flow](Functional%20Specification.md#41-setup)).
+* [Relying Party](Definitions.md#relying-party) joins Qiy  (see [example flow](Functional%20Specification.md#51-setup)).
+* [Individual](Definitions.md#individual) connects with [Data Provider](Definitions.md#data-provider)  (see [example flow](Functional%20Specification.md#42-data-reuse)).
+* [Individual](Definitions.md#individual) connects with [Relying Party](Definitions.md#relying-party)  (see [example flow](Functional%20Specification.md#42-data-reuse)).
+* [Individual](Definitions.md#individual) consents to the use of his data by a [Relying Party](Definitions.md#relying-party) (see [example flow](Functional%20Specification.md#42-data-reuse)).
+* [Relying Party](Definitions.md#relying-party) gets [Personal Data](Definitions.md#personal-data) (see [example flow](Functional%20Specification.md#52-data-reuse)).
 
 Please refer to the [Functional Specification](Functional%20Specification.md) for more information.
 
