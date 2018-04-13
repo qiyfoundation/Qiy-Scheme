@@ -2,12 +2,12 @@
 
 ## Abstract
 
-In the Work Stream Legal and Governance has been agreed to mirror the Binding Principles that apply to Data Providers and / or Relying Parties in a paper for individuals who use the Qiy Trust Framework, where the parent text is the Binding Principles document.
-The Binding Principles are designed and administered by the Scheme Authority (for now the Qiy Foundation). The Service Provider is required by the license agreement to include the Binding Principles in its contracts with Relying Parties and Data Providers. The following document represents the Binding Principles in Binding Individual Rights. It aims to inform the individual about his / her rights within the Qiy Trust Framework, and takes the form of a charter.
+In the Work Stream Legal and Governance has been agreed to mirror the Binding Principles that apply to Data Providers and / or Relying Parties in a paper for individuals who use the Qiy Trust Network, where the parent text is the Binding Principles document.
+The Binding Principles are designed and administered by the Scheme Authority (for now the Qiy Foundation). The Service Provider is required by the license agreement to include the Binding Principles in its contracts with Relying Parties and Data Providers. The following document represents the Binding Principles in Binding Individual Rights. It aims to inform the individual about his / her rights within the Qiy Trust Network, and takes the form of a charter.
 This text was first written in Dutch and then translated into English.
 
 
-# Rights of the individual  in regard to the availability and use of personal data within the Qiy Trust Framework
+# Rights of the individual  in regard to the availability and use of personal data within the Qiy Trust Network
 
 ## Charter of Individual Rights
 
