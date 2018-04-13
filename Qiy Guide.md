@@ -15,21 +15,14 @@ The Qiy Guide contains guidance for the different interest groups.
 1. [CIOs](#cios)
 	1. ['Where can my experts find the information?'](#where-can-my-experts-find-the-information)
 1. [Legal Experts](#legal-experts)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [Security Experts](#security-experts)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [Privacy Experts](#privacy-experts)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [Enterprise Architects](#enterprise-architects)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [Data Analysts](#data-analysts)
 1. [Information Analysts](#information-analysts)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [System Engineers](#system-engineers)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 1. [Software Engineers](#software-engineers)
 1. [Access Providers](#access-providers)
-	1. ['Where can I find the information?'](#where-can-i-find-the-information)
 
 # General Public
 
@@ -52,7 +45,6 @@ Please refer to the [Qiy Guide](Qiy%20Guide.md), this document, in the [latest r
 
 # Legal Experts
 
-## 'Where can I find the information?'
 Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
 
 For development, please refer to [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3).
@@ -60,7 +52,6 @@ For development, please refer to [Work Stream Governance, Rules & Regulations](h
 
 # Security Experts
 
-## 'Where can I find the information?'
 Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
@@ -68,7 +59,6 @@ For development, please refer to [Work Stream Functionality and Technology](http
 
 # Privacy Experts
 
-## 'Where can I find the information?'
 Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
@@ -76,7 +66,6 @@ For development, please refer to [Work Stream Functionality and Technology](http
 
 # Enterprise Architects
 
-## 'Where can I find the information?'
 Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
@@ -91,7 +80,6 @@ For development, please refer to [Work Stream Alignment Vertical Standards](http
 
 # Information Analysts
 
-## 'Where can I find the information?'
 Please refer to [Functional Specification](Functional%20Specification.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
@@ -99,7 +87,6 @@ For development, please refer to [Work Stream Functionality and Technology](http
 
 # System Engineers
 
-## 'Where can I find the information?'
 Please refer to [Functional Specification](Functional%20Specification.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
@@ -107,17 +94,15 @@ For development, please refer to [Work Stream Functionality and Technology](http
 
 # Software Engineers
 
-'Where can I find the information?'
-Please refer to [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overview.md) and [Qiy Node Documentation](Definitions.md#qiy-node-documentation) of the [Qiy Node Implementation](Definitions.md#qiy-node-implementation) of your [Access Provider](Definitions.md#access-provider).
+Please refer to the [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overview.md) and [Qiy Node Documentation](Definitions.md#qiy-node-documentation) of the [Qiy Node Implementation](Definitions.md#qiy-node-implementation) of your [Access Provider](Definitions.md#access-provider).
 
-For development, please refer to
+For development, please refer to:
 * [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) 
 * your [Access Provider](Definitions.md#access-provider)
 
 
 # Access Providers
 
-## 'Where can I find the information?'
 Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
 
 For development, please refer to:
