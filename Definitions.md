@@ -1,4 +1,4 @@
-# Definitions of the 'Qiy Scheme V1.0'
+# Definitions
 
 ## Abstract
 
@@ -440,7 +440,7 @@ A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
 tbd
 
 ### Qiy Open Standard
-A set of open standards for Qiy, maintained by the [Work Stream Functionality & Technology](#work-stream-functionality-&-technology), see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
+A set of open standards for Qiy, maintained by the [Work Stream Functionality & Technology](#work-stream-functionality--technology), see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
 
 ### Qiy Scheme
 The open standard and the set of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Data](#data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange personal information to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).

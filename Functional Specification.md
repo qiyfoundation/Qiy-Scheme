@@ -1,4 +1,4 @@
-# FUNCTIONAL SPECIFICATION 'QIY SCHEME V1.1'
+# Functional Specification
 From [Qiy Nodes](Definitions.md#qiy-node) to [Data exchange](Definitions.md#data-exchange)
 
 
@@ -81,6 +81,7 @@ This section describes a scenario of a [Data Provider](Definitions.md#data-provi
 
 
 The flow is as follows:
+1. The [Data Provider](Definitions.md#data-provider) endorses [Qiy](Definitions.md#qiy) by implementing the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-provider).
 1. The [Data Provider](Definitions.md#data-provider) documents its [Data Service](Definitions.md#data-service) in a [Data Service Description](Definitions.md#data-service-description).
 1. The [Data Provider](Definitions.md#data-provider) establishes a [Service Endpoint](Definitions.md#service-endpoint) which will be used to provide [Personal Data](Definitions.md#personal-data) via the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 1. The [Data Provider](Definitions.md#data-provider) prepares the front-end of its computing system to be able to establish connections with its users via Qiy.
@@ -330,18 +331,19 @@ participant "Data Provider" as DP
 participant "Access Provider" as AP
 participant "Qiy Trust Network" as QTN
 
-DP->DP: 1 Document Data Service
-DP->DP: 2 Establish Service Endpoint
-DP->DP: 3 Prepare Front-End
-DP->DP: 4 Prepare Back-End
-DP->AP  : 5 Conclude Access Agreement
-AP-> QTN  : 6 Register Data Provider
-DP->AP  : 7 Request Qiy Node
-AP->AP: 8 Create Qiy Node Credentials
-AP->AP : 9 Create Qiy Node
-AP-->DP: 10 Qiy Node Credentials
-DP->DP: 11 Configure Computing System
-DP-> QTN  : 12 Register Data Service
+DP->DP: 1 Endorse Qiy
+DP->DP: 2 Document Data Service
+DP->DP: 3 Establish Service Endpoint
+DP->DP: 4 Prepare Front-End
+DP->DP: 5 Prepare Back-End
+DP->AP  : 6 Conclude Access Agreement
+AP-> QTN  : 7 Register Data Provider
+DP->AP  : 8 Request Qiy Node
+AP->AP: 9 Create Qiy Node Credentials
+AP->AP : 10 Create Qiy Node
+AP-->DP: 11 Qiy Node Credentials
+DP->DP: 12 Configure Computing System
+DP-> QTN  : 13 Register Data Service
 ```
 
 
