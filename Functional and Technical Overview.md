@@ -100,16 +100,18 @@ Please refer to [Definitions](./Definitions.md) for a description of the meaning
 
 This chapter describes the main use cases that put individual persons ([Individuals](Definitions.md#individual)) in control of their [Personal Data](Definitions.md#personal-data) that are kept by organizations ([Data Providers](Definitions.md#data-provider)) and create value for organizations that process it ([Relying Parties](Definitions.md#relying-party)).
 
-Qiy achieves this with the help of the [Qiy Trust Network](Definitions.md#qiy-trust-network) and [Consents](Definitions.md#consent). The [Qiy Trust Framework](Definitions.md#qiy-trust-framework) is a [Technology Service](Definitions.md#technology-service) which allows individuals and organizations to connect and interact under the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). The organizations that provide this service ([Access Providers](Definitions.md#access-provider)) can only do so under the same rules.
+Qiy achieves this with the help of the [Qiy Trust Network](Definitions.md#qiy-trust-network) and [Consents](Definitions.md#consent). The [Qiy Trust Network](Definitions.md#qiy-trust-network) is a [Technology Service](Definitions.md#technology-service) which allows individuals and organizations to connect and interact under the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). The organizations that provide this service ([Access Providers](Definitions.md#access-provider)) can only do so under the same rules.
 [Relying Party](Definitions.md#relying-party) can only get Personal Data with the [Consent](Definitions.md#consent) of the [Data Subject](Definitions.md#data-subject).
 
 Hence the main use cases:
 
-* [Qiy User](Definitions.md#qiy-user) acquires access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-* [Individual](Definitions.md#individual) connects with [Data Provider](Definitions.md#data-provider).
-* [Individual](Definitions.md#individual) connects with [Relying Party](Definitions.md#relying-party).
-* [Individual](Definitions.md#individual) consents to the use of his data by a [Relying Party](Definitions.md#relying-party).
-* [Relying Party](Definitions.md#relying-party) gets [Personal Data](Definitions.md#personal-data).
+* [Data Provider](Definitions.md#data-provider) joins Qiy (see [example flow](Functional%20Specification.md#31-setup)).
+* [Individual](Definitions.md#individual) starts using Qiy  (see [example flow](Functional%20Specification.md#32-setup)).
+* [Relying Party](Definitions.md#relying-party) joins Qiy  (see [example flow](Functional%20Specification.md#33-setup)).
+* [Individual](Definitions.md#individual) connects with [Data Provider](Definitions.md#data-provider)  (see [example flow](Functional%20Specification.md#61-connect-with-data-provider)).
+* [Individual](Definitions.md#individual) connects with [Relying Party](Definitions.md#relying-party)  (see [example flow](Functional%20Specification.md#64-connect-with-relying-party)).
+* [Individual](Definitions.md#individual) consents to the use of his data by a [Relying Party](Definitions.md#relying-party) (see [example flow](Functional%20Specification.md#67-consent)).
+* [Relying Party](Definitions.md#relying-party) gets [Personal Data](Definitions.md#personal-data) (see [example flow](Functional%20Specification.md#615-request-data)).
 
 Please refer to the [Functional Specification](Functional%20Specification.md) for more information.
 
