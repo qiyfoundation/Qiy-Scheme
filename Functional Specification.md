@@ -81,7 +81,7 @@ This section describes a scenario of a [Data Provider](Definitions.md#data-provi
 
 
 The flow is as follows:
-1. The [Data Provider](Definitions.md#data-provider) endorses [Qiy](Definitions.md#qiy) by implementing the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-provider).
+1. The [Data Provider](Definitions.md#data-provider) endorses [Qiy](Definitions.md#qiy) by implementing the [Binding Principles for Relying Parties and Data Providers](Definitions.md#binding-principles-for-relying-parties-and-data-providers).
 1. The [Data Provider](Definitions.md#data-provider) documents its [Data Service](Definitions.md#data-service) in a [Data Service Description](Definitions.md#data-service-description).
 1. The [Data Provider](Definitions.md#data-provider) establishes a [Service Endpoint](Definitions.md#service-endpoint) which will be used to provide [Personal Data](Definitions.md#personal-data) via the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 1. The [Data Provider](Definitions.md#data-provider) prepares the front-end of its computing system to be able to establish connections with its users via Qiy.

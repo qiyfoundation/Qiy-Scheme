@@ -58,12 +58,12 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 The general conditions on which basis the [Individual](#individual) may agree to exchange [Personal Data](#personal-data) with other parties via the [Qiy Scheme](#qiy-scheme). In particular, this charter supervises all forms of [Data](#data) exchange between an [Individual](#individual) and a third party offering its [Services](#service) within the [Qiy Scheme](#qiy-scheme) (called [Relying Parties](#relying-party) and [Data Providers](#data-provider)).
 
 ### Binding Principles
-See [Binding Principles for Relying Parties and Data Providers](#binding-principles-for-relying-parties-and-data-provider).
+See [Binding Principles for Relying Parties and Data Providers](#binding-principles-for-relying-parties-and-data-providers).
 
 ### Binding Principles for Relying Parties and Data Providers
 The rules for [Entities](#entity) ([Relying Parties](#relying-party) and [Data Providers](#data-provider)) to follow in order to be allowed to participate in the [Qiy Scheme](#qiy-scheme).
 
-One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
+One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), see [Binding Principles for Relying Parties and Data Providers](Binding%20Principles%20for%20Relying%20Parties%20and%20Data%20Providers.md).
 
 ### Business Actor
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
