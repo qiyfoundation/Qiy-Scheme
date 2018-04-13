@@ -100,7 +100,9 @@ For development, please refer to [Work Stream Functionality and Technology](http
 'Where can I find the information?'
 Please refer to [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overview.md) and [Qiy Node Documentation](Definitions.md#qiy-node-documentation) of the [Qiy Node Implementation](Definitions.md#qiy-node-implementation) of your [Access Provider](Definitions.md#access-provider).
 
-For development, please refer to For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) and your [Access Provider](Definitions.md#access-provider).
+For development, please refer to
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) 
+* your [Access Provider](Definitions.md#access-provider)
 
 
 # Access Providers
