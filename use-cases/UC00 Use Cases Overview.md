@@ -19,4 +19,5 @@ The [Use Cases](../Definitions.md#use-case) are:
 * [UC06 Manage Connections](UC06%20Manage%20Connections.md)
 * [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md)
 * [UC08 Manage Access to Qiy Trust Network](UC08%20Manage%20Access%20to%20Qiy%20Trust%20Network.md)
+* [UC09 Manage Service Catalogue](UC09%20Manage%20Service%20Catalogue.md)
 
