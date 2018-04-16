@@ -553,8 +553,14 @@ A [Business Object](#business-object) for information about all the [Services](#
 ### Service Provider
 A [Business Role](#business-role): a legal entity which provides [Services](#service).
 
+### Service Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service), see [UC09 Manage Service Catalogue](./use-cases/UC09%20Manage%20Service%20Catalogue.md).
+
 ### Service Source
 A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
+
+### Service Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service), see [UC09 Manage Service Catalogue](./use-cases/UC09%20Manage%20Service%20Catalogue.md).
 
 ### Service by Reference
 A pattern for consuming [Services](#service) indirectly using [References](#reference) ([Operation Reference](#operation-reference)).
