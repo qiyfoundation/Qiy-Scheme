@@ -435,7 +435,7 @@ The set of [Credentials](#credential) that can be used to access a [Qiy Node](#q
 A [Technology Event](#technology-event) of a [Qiy Node](#qiy-node).
 
 ### Qiy Node Implementation
-A software package which can be used to realize a [Qiy Node](#qiy-node).
+An [Application](#application) which can be used to realize a [Qiy Node](#qiy-node).
 
 ### Qiy Node Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
