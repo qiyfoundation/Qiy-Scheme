@@ -1,8 +1,9 @@
 # Definitions
 
+
 ## Abstract
 
-The [Qiy Scheme](#qiy-scheme) defines a framework for [Individual](#individual) [Users](#user), companies and governmental organizations to safely control and exchange personal information. This document defines the most important terms of the [Qiy Scheme](#qiy-scheme) and is referred to from all other [Qiy Scheme](#qiy-scheme) documents.
+The [Qiy Scheme](#qiy-scheme) defines a framework for individual persons, companies and governmental organizations to safely control and exchange personal information. This document defines the terms of the [Qiy Scheme](#qiy-scheme) and is referred to from all other [Qiy Scheme](#qiy-scheme)-documents.
 
 # Definitions
 
@@ -20,6 +21,9 @@ An organization which provides [Qiy Users](#qiy-user) access to the [Qiy Trust N
 
 ### Anonymous
 Not directly or indirectly traceable to a natural person.
+
+### Application
+An [Application Service](#application-service) or software for such a service. 
 
 ### Application Connect Token
 A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create [Connections](#connection).
@@ -212,6 +216,9 @@ An agreement required for [Data Providers](#data-provider).
 ### Data Reference
 An [Operation Reference](#operation-reference) which can be used to obtain [Personal Data](#personal-data) of an [Individual](#individual).
 
+### Data Reference Request
+An [Operation Reference Request](#operation-reference-request) for a [Data Reference](#data-reference).
+
 ### Data Service
 A [Service](#service), namely the provisioning of [Data](#data).
 
@@ -335,6 +342,9 @@ A [Connect Token](#connect-token) created by a [Qiy Application](#qiy-applicatio
 ### Online Connect Token
 A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
 
+### Operate Request
+A [Request](#request) to a [Service Endpoint](#service-endpoint) of a [Service Provider](#service-provider) for the execution of an [Operation](#operation) of one of its [Services](#service).
+
 ### Operation
 A 'sub-service' which can be used to consume a [Service](#service).
 
@@ -342,13 +352,16 @@ A 'sub-service' which can be used to consume a [Service](#service).
 A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](#reference) using an [Operation Reference](#operation-reference).
 
 ### Operation Reference
-A [Business Object](#business-object) used by the [Service by Reference](#service-by-reference)-pattern.
+A [Business Object](#business-object) used by the [Service by Reference](#service-by-reference)-pattern to execute an [Operation](#operation) by reference.
 
 ### Operation Reference Message
 A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference) over a [Connection](#connection).
 
 ### Operation Reference Received Event
 A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node](#qiy-node) has received a new [Operation Reference](#operation-reference).
+
+### Operation Reference Request
+A request passed in an [Operation Reference Request Message](#operation-reference-request-message) for an [Operation Reference](#operation-reference).
 
 ### Operation Reference Request Message
 A [Qiy Node Message](#qiy-node-message) that can be used to [Request](#request) for [Operation References](#operation-reference).
@@ -386,7 +399,7 @@ Synonymous with [Identifier](#identifier)
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
 ### Qiy Application
-An [Application Service](#application-service) or software that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-application).
+An [Application](#application) that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-applications).
 
 ### Qiy Application Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
@@ -407,7 +420,7 @@ A member of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation
 tbd
 
 ### Qiy Node
-A [Techology Service](#techology-service): a point of entry for a [Qiy User](#qiy-user) to connect to his personal or organisational [Data](#data) and allowing to manage and reuse [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
+A [Technology Service](#technology-service): a point of entry for a [Qiy User](#qiy-user) to connect to his personal or organisational [Data](#data) and allowing to manage and reuse [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
 A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
@@ -488,7 +501,7 @@ A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user): a 
 An agreement that is required for [Relying Parties](#relying-party).
 
 ### Request
-A [Business Object](#business-object): a message requesting something.
+A [Business Object](#business-object): a call or message requesting something.
 
 ### Resource
 A [Service](#service), which its owner can provide to another [Identity](#identity).
@@ -533,7 +546,7 @@ A description of a [Service](#service) that is both human- and machine-readable 
 An [Uri](#uri) which can be used to identify and obtain a [Service Description](#service-description).
 
 ### Service Discovery
-A [Business Process](#business-proces) to find [Service Providers](#service-provider) for a given [Service](#service).
+A [Business Process](#business-process) to find [Service Providers](#service-provider) for a given [Service](#service).
 
 ### Service Endpoint
 A [Technology Service](#technology-service) provided by a [Service Provider](#service-provider) to allow the consumption of his [Services](#service).
@@ -554,13 +567,13 @@ A [Business Object](#business-object) for information about all the [Services](#
 A [Business Role](#business-role): a legal entity which provides [Services](#service).
 
 ### Service Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service), see [UC09 Manage Service Catalogue](./use-cases/UC09%20Manage%20Service%20Catalogue.md).
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
 
 ### Service Source
 A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
 
 ### Service Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service), see [UC09 Manage Service Catalogue](./use-cases/UC09%20Manage%20Service%20Catalogue.md).
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service).
 
 ### Service by Reference
 A pattern for consuming [Services](#service) indirectly using [References](#reference) ([Operation Reference](#operation-reference)).
@@ -598,7 +611,7 @@ The geographic region served by a [Regional Authority](#regional-authority).
 ### Token
 See https://en.wikipedia.org/wiki/Token#Computing.
 
-### Transition Phase 
+### Transition Phase
 Temporarily phase from July 1, 2015 to the [Expiration Date](#expiration-date) during which an ad-interim [Governance Model](#governance-model) for the [Qiy Scheme](#qiy-scheme) is established. During this period the [Qiy Foundation](#qiy-foundation) fulfills the [Roles](#role) of [Global Scheme Authority](#global-scheme-authority) and [Regional Scheme Authority](#regional-scheme-authority). 
 
 ### Transport Connect Token
