@@ -479,6 +479,9 @@ The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overa
 ### Qiy User
 A [Business Role](#business-role): an [Entity](#entity) that is using the [Qiy Trust Network](#qiy-trust-network).
 
+### QR Code
+See https://en.wikipedia.org/wiki/QR_code.
+
 ### Reference
 A [Literal](#literal).
 
