@@ -8,42 +8,45 @@ From [Qiy Nodes](Definitions.md#qiy-node) to data exchange
 	1. [Purpose](#11-purpose)
 	1. [Readers' Guidance](#12-readers-guidance)
 1. [Overview](#2-overview)
-1. [Data Provider Scenarios](#3-data-provider-scenarios)
+1. [Data Provider Scenario](#3-data-provider-scenario)
 	1. [Setup](#31-setup)
-	1. [Data Reuse](#32-data-reuse)
-1. [Scenarios for Individual](#4-scenarios-for-individual)
+	1. [Connect with Data Provider](#32-connect-with-data-provider)
+	1. [Data Reuse](#33-data-reuse)
+1. [Scenario for Individual](#4-scenario-for-individual)
 	1. [Setup](#41-setup)
-	1. [Data Reuse](#42-data-reuse)
-1. [Relying Party Scenarios](#5-relying-party-scenarios)
+	1. [Connect with Data Provider](#42-connect-with-data-provider)
+	1. [Connect with Relying Party](#43-connect-with-relying-party)
+	1. [Data Reuse](#44-data-reuse)
+1. [Relying Party Scenario](#5-relying-party-scenario)
 	1. [Setup](#51-setup)
-	1. [Data Reuse](#52-data-reuse)
-1. [Data Reuse Scenario](#6-data-reuse-scenario)
-	1. [Connect with Data Provider](#61-connect-with-data-provider)
-	1. [Sign on](#62-sign-on)
-	1. [Persist Connection Id](#63-persist-connection-id)
-	1. [Connect with Relying Party](#64-connect-with-relying-party)
-	1. [Sign up](#65-sign-up)
-	1. [Subscribe](#66-subscribe)
-	1. [Consent](#67-consent)
-	1. [Register Consent](#68-register-consent)
-	1. [Notify Consent](#69-notify-consent)
-	1. [Propose Data Source](#610-propose-data-source)
-	1. [Request Operation Specification](#611-request-operation-specification)
-	1. [Generate Data Reference](#612-generate-data-reference)
-	1. [Register Operation Specification](#613-register-operation-specification)
-	1. [Send Data Reference](#614-send-data-reference)
-	1. [Request Data](#615-request-data)
-	1. [Lookup Operation](#616-lookup-operation)
-	1. [Execute Operation](#617-execute-operation)
-	1. [Data](#618-data)
-1. [Diagrams](#7-diagrams)
-	1. [Data Provider - Setup](#71-data-provider---setup)
-	1. [Individual - Setup](#72-individual---setup)
-	1. [Relying Party - Setup](#73-relying-party---setup)
-	1. [Data Provider - Data Reuse](#74-data-provider---data-reuse)
-	1. [Individual - Data Reuse](#75-individual---data-reuse)
-	1. [Relying Party - Data Reuse](#76-relying-party---data-reuse)
-	1. [Data Reuse Scenario - All](#77-data-reuse-scenario---all)
+	1. [Connect with Relying Party](#52-connect-with-relying-party)
+	1. [Data Reuse](#53-data-reuse)
+1. [Connect with Data Provider](#6-connect-with-data-provider)
+1. [Connect with Relying Party](#7-connect-with-relying-party)
+1. [Data Reuse](#8-data-reuse)
+	1. [Subscribe](#81-subscribe)
+	1. [Consent](#82-consent)
+	1. [Register Consent](#83-register-consent)
+	1. [Notify Consent](#84-notify-consent)
+	1. [Propose Data Source](#85-propose-data-source)
+	1. [Request Operation Specification](#86-request-operation-specification)
+	1. [Generate Data Reference](#87-generate-data-reference)
+	1. [Register Operation Specification](#88-register-operation-specification)
+	1. [Send Data Reference](#89-send-data-reference)
+	1. [Request Data](#810-request-data)
+	1. [Lookup Operation](#811-lookup-operation)
+	1. [Execute Operation](#812-execute-operation)
+	1. [Data](#813-data)
+1. [Diagrams](#9-diagrams)
+	1. [Data Provider - Setup](#91-data-provider---setup)
+	1. [Individual - Setup](#92-individual---setup)
+	1. [Relying Party - Setup](#93-relying-party---setup)
+	1. [Connect Scenario - Data Provider](#94-connect-scenario---data-provider)
+	1. [Connect Scenario - Relying Party](#95-connect-scenario---relying-party)
+	1. [Data Provider - Data Reuse](#96-data-provider---data-reuse)
+	1. [Individual - Data Reuse](#97-individual---data-reuse)
+	1. [Relying Party - Data Reuse](#98-relying-party---data-reuse)
+	1. [Data Reuse Scenario - All](#99-data-reuse-scenario---all)
 
 # 1 Introduction
 
@@ -62,19 +65,21 @@ This document is the entry point for information analysts and software engineers
 # 2 Overview
 
 The remainder of this document describes the scenarios for the different roles and the Data Reuse scenario in full, finishing with the source code of the diagrams:
-* [3 Data Provider Scenarios](#3-data-provider-scenarios)
-* [4 Scenarios for Individual](#4-scenarios-for-individual)
-* [5 Relying Party Scenarios](#5-relying-party-scenarios)
-* [6 Data Reuse Scenario](#6-data-reuse-scenario)
-* [7 Diagrams](#7-diagrams)
+* [3 Data Provider Scenario](#3-data-provider-scenario)
+* [4 Scenario for Individual](#4-scenario-for-individual)
+* [5 Relying Party Scenario](#5-relying-party-scenario)
+* [6 Connect with Data Provider](#6-connect-with-data-provider)
+* [7 Connect with Relying Party](#7-connect-with-relying-party)
+* [8 Data Reuse](#8-data-reuse)
+* [9 Diagrams](#9-diagrams)
 
 
-# 3 Data Provider Scenarios
+# 3 Data Provider Scenario
 
 
 ## 3.1 Setup
 
-This section describes a scenario of a [Data Provider](Definitions.md#data-provider) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+This section describes the scenario for the [Data Provider](Definitions.md#data-provider) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ![Data Provider - Setup](./images/Data_Provider_-_Setup_-_Functional_Specification.png)
 
@@ -95,19 +100,27 @@ The flow is as follows:
 1. The [Data Provider](Definitions.md#data-provider) registers its [Data Service](Definitions.md#data-service) by publishing the [Data Service Description](Definitions.md#data-service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 
-## 3.2 Data Reuse
+## 3.2 Connect with Data Provider
 
-The flow for a [Data Provider](Definitions.md#data-provider) in the scenario described in [6 Data Reuse Scenario](#6-data-reuse-scenario) is:
+After the setup, the [Individual](Definitions.ms#individual) connects with the [Data Provider](Definitions.md#data-provider).
+The scenario for this is described in [6 Connect with Data Provider](#6-connect-with-data-provider).
+ 
+![Connect Scenario - Data Provider](./images/Connect_Scenario_-_Data_Provider_-_Functional_Specification.png)
+
+## 3.3 Data Reuse
+
+Finally, the [Data Provider](Definitions.md#data-provider) will deliver the [Personal Data](Definitions.md#personal-data) as shown below.
+The details of this flow are described in [8 Data Reuse](#8-data-reuse):
 
 ![Data Provider - Data Reuse](./images/Data_Provider_-_Data_Reuse_-_Functional_Specification.png)
 
 
-# 4 Scenarios for Individual
+# 4 Scenario for Individual
 
 
 ## 4.1 Setup
 
-This section describes a scenario in which an [Individual](Definitions.md#individual) acquires access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) as an introduction to the full description provided in the use case specification.
+This section describes the scenario for the [Individual](Definitions.md#individual) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ![Individual - Setup](./images/Individual_-_Setup_-_Functional_Specification.png)
 
@@ -120,20 +133,36 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) allows [Individuals](Definitions.md#
 
 After these steps, the [Individual](Definitions.md#individual) has gained access to the [Qiy Trust Network](Definitions.md#qiy-trust-network) and he can use it by means of the [Qiy Application](Definitions.md#qiy-application).
 
+## 4.2 Connect with Data Provider
 
-## 4.2 Data Reuse
+After setup, the [Individual](Definitions.ms#individual) connects with the [Data Provider](Definitions.md#data-provider).
+The details of the flow are described in [6 Connect with Data Provider](#6-connect-with-data-provider).
+ 
+![Connect Scenario - Data Provider](./images/Connect_Scenario_-_Data_Provider_-_Functional_Specification.png)
 
-The flow for an [Individual](Definitions.md#individual) in the scenario described in [6 Data Reuse Scenario](#6-data-reuse-scenario) is:
+
+## 4.3 Connect with Relying Party
+
+As a next step, the [Individual](Definitions.ms#individual) connects with the [Relying Party](Definitions.md#relying-party).
+The details of this flow are described in [7 Connect with Relying Party](#7-connect-with-relying-party).
+ 
+![Connect Scenario - Relying Party](./images/Connect_Scenario_-_Relying_Party_-_Functional_Specification.png)
+
+
+## 4.4 Data Reuse
+
+In this scenario, the [Personal Data](Definitions.md#personal-data) of the [Individual](Definitions.md#individual) consents use of his data to the [Relying Party](Definitions.md#relying-party) after which his data are provided without interaction with the him.
+The flow is described in detail in [8 Data Reuse](#8-data-reuse).
 
 ![Individual - Data Reuse](./images/Individual_-_Data_Reuse_-_Functional_Specification.png)
 
 
-# 5 Relying Party Scenarios
+# 5 Relying Party Scenario
 
 
 ## 5.1 Setup
 
-This section describes a scenario of a [Relying Party](Definitions.md#relying-party) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+This section describes the scenario for the [Relying Party](Definitions.md#relying-party) acquiring access to the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 
 ![Relying Party - Setup](./images/Relying_Party-_Setup_-_Functional_Specification.png)
@@ -153,90 +182,72 @@ The flow is as follows:
 1. The [Relying Party](Definitions.md#relying-party) registers its [Service](Definitions.md#service) by publishing the [Service Description](Definitions.md#service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 
+## 5.2 Connect with Relying Party
 
-## 5.2 Data Reuse
+After the setup, the [Individual](Definitions.ms#individual) visits the website of the [Relying Party](Definitions.md#relying-party) and connect via Qiy.
+This flow is described in detail in [7 Connect with Relying Party](#7-connect-with-relying-party).
+ 
+![Connect Scenario - Relying Party](./images/Connect_Scenario_-_Relying_Party_-_Functional_Specification.png)
 
-The flow for a [Relying Party](Definitions.md#relying-party) in the scenario described in [6 Data Reuse Scenario](#6-data-reuse-scenario) is:
+
+## 5.3 Data Reuse
+
+The [Relying Party](Definitions.md#relying-party) can acquire the [Personal Data](Definitions.md#personal-data) as shown below.
+Please refer to [8 Data Reuse](#8-data-reuse) for the details.
 
 ![Relying Party - Data Reuse](./images/Relying_Party_-_Data_Reuse_-_Functional_Specification.png)
 
 
+# 6 Connect with Data Provider
 
-# 6 Data Reuse Scenario
+This chapter describes the flow for the [Individual](Definitions.ms#individual) connecting with the [Data Provider](Definitions.md#data-provider).
+ 
+![Connect Scenario - Data Provider](./images/Connect_Scenario_-_Data_Provider_-_Functional_Specification.png)
 
-This chapter describes the scenario in full.
+1. The [Individual](Definitions.md#individual) opens the previously installed [Qiy Application](Definitions.md#qiy-application) on his phone and enters the passcode.
+2. The [Qiy Application](Definitions.md#qiy-application) presents an option to connect with the [Data Provider](Definitions.md#data-provider) which the [Individual](Definitions.md#individual) chooses.
+3. The [Qiy Application](Definitions.md#qiy-application) retrieves a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+4. The [Qiy Application](Definitions.md#qiy-application) incorporates the [Connect Token](Definitions.md#connect-token) in the webpage address of the [Data Provider](Definitions.md#data-provider) which is opened in a webbrowser.
+5. The [Individual](Definitions.md#individual) views the connect page asking him to sign on.
+6. The [Individual](Definitions.md#individual) has an account with the [Data Provider](Definitions.md#data-provider) and succesfully signs on.
+7. The [Data Provider](Definitions.md#data-provider) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a Connection|Definitions.md#] with the [Connect Token](Definitions.md#connect-token).
+8. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and sends the [Connection Uri](Definitions.md#connection-uri) to the [Data Provider](Definitions.md#data-provider).
+9. The [Data Provider](Definitions.md#data-provider) persists the [Connection Uri](Definitions.md#connection-uri) in the local profile of the [Individual](Definitions.md#individual).
+10. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Data Provider Id](Definitions.md#data-provider-id) to the [Qiy Application](Definitions.md#qiy-application) of the [Individual](Definitions.md#individual).
+11. The [Qiy Application](Definitions.md#qiy-application) adds the [Data Provider](Definitions.md#data-provider) to the list of connected [Data Providers](Definitions.md#data-provider).
+12. The [Data Provider](Definitions.md#data-provider) uses the webpage to inform the [Individual](Definitions.md#individual) that they are connected via Qiy and that he can control his [Personal Data](Definitions.md#personal-data) via Qiy and redirects him back to the [Qiy Application](Definitions.md#qiy-application).
+13. The [Individual](Definitions.md#individual) can view details of the newly added [Data Provider](Definitions.md#data-provider) in the app.
+
+
+# 7 Connect with Relying Party
+
+This chapter describes the flow for the [Individual](Definitions.ms#individual) connecting with the [Relying Party](Definitions.md#relying-party).
+ 
+![Connect Scenario - Relying Party](./images/Connect_Scenario_-_Relying_Party_-_Functional_Specification.png)
+
+1. The [Individual](Definitions.md#individual) gets his laptop and opens a webbrowser.
+1. The [Individual](Definitions.md#individual) visits the website of the [Relying Party](Definitions.md#relying-party). It presents an option to sign on using Qiy.
+1. The [Individual](Definitions.md#individual) chooses to use this option.
+1. The [Relying Party](Definitions.md#relying-party) retreives a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+1. The [Relying Party](Definitions.md#relying-party) uses it to generate a [QR Code](Definitions.md#qr-code) in a sign on page.
+1. The [Relying Party](Definitions.md#relying-party) sends the sig on page to the [Individual](Definitions.md#individual).
+1. The [Individual](Definitions.md#individual) picks up his smartphone, opens the previously installed [Qiy Application](Definitions.md#qiy-application) and scans the [QR Code](Definitions.md#qr-code).
+1. The [Qiy Application](Definitions.md#qiy-application) extracts the [Connect Token](Definitions.md#connect-token) and uses it to request the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection). 
+1. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and sends the [Connection Uri](Definitions.md#connection-uri) and the [Relying Party Id](Definitions.md#relying-party-id) to the [Qiy Application](Definitions.md#qiy-application) of the [Individual](Definitions.md#individual).
+1. The [Qiy Application](Definitions.md#qiy-application) asks the [Individual](Definitions.md#individual) to confirm the connection and to return to the website and the [Individual](Definitions.md#individual) complies.
+1. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Connection Uri](Definitions.md#connection-uri) to the [Relying Party](Definitions.md#relying-party).
+1. The [Relying Party](Definitions.md#relying-party) creates a local account for the [Individual](Definitions.md#individual).
+1. The [Relying Party](Definitions.md#relying-party) looks up the related sign on page and replaces it with a welcome page, informing the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on.
+
+
+# 8 Data Reuse
+
+This chapter describes the data reuse flow.
  
 ![Data Reuse Scenario - All](./images/Data_Reuse_Scenario_-_All_-_Functional_Specification.png)
 
 
-## 6.1 Connect with Data Provider
-
-* The [Individual](Definitions.md#individual) starts the previously installed [Qiy Application](Definitions.md#qiy-application) and enters the passcode.
-* The [Qiy Application](Definitions.md#qiy-application) presents an option to connect with a specific [Data Provider](Definitions.md#data-provider). 
-* The [Individual](Definitions.md#individual) selects the option to connect with the [Data Provider](Definitions.md#data-provider).
-* The [Qiy Application](Definitions.md#qiy-application) retrieves a [Connect Token](Definitions.md#connect-token) from the [Qiy Node](Definitions.md#qiy-node) and
-  * ... redirects the [Individual](Definitions.md#individual) to the webpage of the [Data Provider](Definitions.md#data-provider) 
-  * while passing the [Connect Token](Definitions.md#connect-token) in the webpage address.
-* The [Data Provider](Definitions.md#data-provider) asks its [Qiy Node](Definitions.md#qiy-node) to create a [Connection](Definitions.md#connection) using the [Connect Token](Definitions.md#connect-token) which was included in the webpage address.
-* The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) with the [Individual](Definitions.md#individual),
-  * ... sends the [Qiy Node](Definitions.md#qiy-node) of the [Data Provider](Definitions.md#data-provider) the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection),
-  * and sends the [Qiy Node](Definitions.md#qiy-node) of the [Qiy Application](Definitions.md#qiy-application):
-    * the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection) 
-    * and the [Identity](Definitions.md#identity) of the [Data Provider](Definitions.md#data-provider).
-
-
-## 6.2 Sign on
-
-* The [Individual](Definitions.md#individual) has an account with the [Data Provider](Definitions.md#data-provider) and signs on.
-
-
-## 6.3 Persist Connection Id
-
-* The [Data Provider](Definitions.md#data-provider) looks up the local account id,
-  * ... persists the relation between the local account id and the [Connection Uri](Definitions.md#connection-uri), 
-  * ... informs the [Individual](Definitions.md#individual) that he can control his [Personal Data](Definitions.md#personal-data) via Qiy
-  * and redirects him back to his [Qiy Application](Definitions.md#qiy-application).
-
-
-## 6.4 Connect with Relying Party
-
-* The [Individual](Definitions.md#individual) visits a website of a [Relying Party](Definitions.md#relying-party) using a laptop.
-* The website is a [Qiy Application](Definitions.md#qiy-application) and presents an option to sign on using Qiy.
-* The [Individual](Definitions.md#individual) chooses to use this option.
-* The [Relying Party](Definitions.md#relying-party) retreives a [Connect Token](Definitions.md#connect-token) from its [Qiy Node](Definitions.md#qiy-node),
-  * ... uses it in a [QR Code](Definitions.md#qr-code)
-  * ... persists the id of the [Connect Token](Definitions.md#connect-token),
-  * and presents it in a sig on page to the [Individual](Definitions.md#individual).
-* The [Individual](Definitions.md#individual) picks up his smartphone, 
-  * ... starts the previously installed [Qiy Application](Definitions.md#qiy-application),
-  * ... enters the passcode
-  * and scans the [QR Code](Definitions.md#qr-code).
-* The [Qiy Application](Definitions.md#qiy-application) converts the [QR Code](Definitions.md#qr-code),
-  * ... extracts the [Connect Token](Definitions.md#connect-token)
-  * and asks its [Qiy Node](Definitions.md#qiy-node) to create a [Connection](Definitions.md#connection) with it.
-* The [Qiy Node](Definitions.md#qiy-node) uses the [Connect Token](Definitions.md#connect-token) to ask the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create the [Connection](Definitions.md#connection). 
-* The [Qiy Trust Network](Definitions.md#qiy-trust-network) to creates the [Connection](Definitions.md#connection) with the [Relying Party](Definitions.md#relying-party) and
-  * ... provides the [Qiy Node](Definitions.md#qiy-node) of the [Qiy Application](Definitions.md#qiy-application) with:
-    * the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection)
-    * and the [Identity](Definitions.md#identity) of the [Relying Party](Definitions.md#relying-party);
-  * and provides the [Qiy Node](Definitions.md#qiy-node) of the [Relying Party](Definitions.md#relying-party) with:
-    * the [Connection Uri](Definitions.md#connection-uri) of the new [Connection](Definitions.md#connection)
-    * and the id of the [Connect Token](Definitions.md#connect-token) that was used to create it.
-* The [Qiy Application](Definitions.md#qiy-application) informs the [Individual](Definitions.md#individual) that he is connected with the [Relying Party](Definitions.md#relying-party)
-  * ... provides him with the option to view the contact details.
-  * and advises him to return to the website.
-
-
-## 6.5 Sign up
-
-* The [Relying Party](Definitions.md#relying-party) looks up the related sign on page using the id of the [Connect Token](Definitions.md#connect-token),
-  * ... removes the sign on page,
-  * ... creates a local account for the [Individual](Definitions.md#individual),
-  * ... persists the relation between the local account and the [Connection Uri](Definitions.md#connection-uri), 
-  * and informs the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on.
-
-
-## 6.6 Subscribe
+## 8.1 Subscribe
 
 * The [Relying Party](Definitions.md#relying-party) displays its [Service Catalogue](Definitions.md#service-catalogue).
 * The [Individual](Definitions.md#individual) browses the [Service Catalogue](Definitions.md#service-catalogue),
@@ -244,83 +255,83 @@ This chapter describes the scenario in full.
   * and subscribes to the [Service](Definitions.md#service).
 
 
-## 6.7 Consent
+## 8.2 Consent
 
 * The [Relying Party](Definitions.md#relying-party) asks the [Individual](Definitions.md#individual) [Consent](Definitions.md#consent) to use his [Personal Data](Definitions.md#personal-data).
 * The [Individual](Definitions.md#individual) grants the [Relying Party](Definitions.md#relying-party) [Consent](Definitions.md#consent) to use [Personal Data](Definitions.md#personal-data) that can be provided by the [Data Provider](Definitions.md#data-provider) for this [Service](Definitions.md#service).
 
 
-## 6.8 Register Consent
+## 8.3 Register Consent
 
 * The [Relying Party](Definitions.md#relying-party) asks its [Qiy Node](Definitions.md#qiy-node) to register the [Consent](Definitions.md#consent).
 * The [Qiy Node](Definitions.md#qiy-node) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to register the [Consent](Definitions.md#consent).
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) persists the [Consent](Definitions.md#consent)
 
 
-## 6.9 Notify Consent
+## 8.4 Notify Consent
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) notifies the [Qiy Node](Definitions.md#qiy-node) of the [Qiy Application](Definitions.md#qiy-application).
 * The [Qiy Node](Definitions.md#qiy-node) notifies the [Qiy Application](Definitions.md#qiy-application).
 * The [Qiy Application](Definitions.md#qiy-application) notifies the [Individual](Definitions.md#individual) of the [Consent](Definitions.md#consent).
 
 
-## 6.10 Propose Data Source
+## 8.5 Propose Data Source
 
 * The [Qiy Application](Definitions.md#qiy-application) proposes to use the [Data Provider](Definitions.md#data-provider) as data source for the [Consent](Definitions.md#consent).
 * The [Individual](Definitions.md#individual) accepts the proposal.
 * The [Qiy Application](Definitions.md#qiy-application) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to register the [Data Provider](Definitions.md#data-provider) as data source for the [Consent](Definitions.md#consent).
 
 
-## 6.11 Request Operation Specification
+## 8.6 Request Operation Specification
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) requests the [Data Provider](Definitions.md#data-provider) for a [Data Reference](Definitions.md#data-reference) (which can be used to acquire the data).
 * The [Data Provider](Definitions.md#data-provider) generates an [Operation Specification](Definitions.md#operation-specification) (which specifies a request that will get the data from the [Service Endpoint](Definitions.md#service-endpoint)),
   * and returns it to the [Qiy Trust Network](Definitions.md#qiy-trust-network). 
 
 
-## 6.12 Generate Data Reference
+## 8.7 Generate Data Reference
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) generates a [Data Reference](Definitions.md#data-reference).
 
 
-## 6.13 Register Operation Specification
+## 8.8 Register Operation Specification
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) registers the [Operation Specification](Definitions.md#operation-specification) under the [Data Reference](Definitions.md#data-reference).
 
 
-## 6.14 Send Data Reference
+## 8.9 Send Data Reference
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Data Reference](Definitions.md#data-reference) to the [Relying Party](Definitions.md#relying-party).
 
 
-## 6.15 Request Data
+## 8.10 Request Data
 
 * The [Relying Party](Definitions.md#relying-party) asks its [Qiy Node](Definitions.md#qiy-node) to resolve the [Data Reference](Definitions.md#data-reference).
 * The [Qiy Node](Definitions.md#qiy-node) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to resolve the [Data Reference](Definitions.md#data-reference).
 
 
-## 6.16 Lookup Operation
+## 8.11 Lookup Operation
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) looks up the related [Operation Specification](Definitions.md#operation-specification)
   * and constructs the operation
 
 
-## 6.17 Execute Operation
+## 8.12 Execute Operation
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) executes the operation, requesting the [Service Endpoint](Definitions.md#service-endpoint) for the data.
 * The [Service Endpoint](Definitions.md#service-endpoint) processes the request and returns the data
 
 
-## 6.18 Data
+## 8.13 Data
 
 * The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the data to the [Qiy Node](Definitions.md#qiy-node) of the [Relying Party](Definitions.md#relying-party).
 * The [Qiy Node](Definitions.md#qiy-node) returns the data to the [Relying Party](Definitions.md#relying-party).
 
 
-# 7 Diagrams
+# 9 Diagrams
 
 
-## 7.1 Data Provider - Setup
+## 9.1 Data Provider - Setup
 
 ![Data Provider - Setup](./images/Data_Provider_-_Setup_-_Functional_Specification.png)
 
@@ -347,7 +358,7 @@ DP-> QTN  : 13 Register Data Service
 ```
 
 
-## 7.2 Individual - Setup
+## 9.2 Individual - Setup
 
 ![Individual - Setup](./images/Individual_-_Setup_-_Functional_Specification.png)
 
@@ -366,7 +377,7 @@ App->AP : 5 Create Qiy Node
 ```
 
 
-## 7.3 Relying Party - Setup
+## 9.3 Relying Party - Setup
 
 ![Relying Party - Setup](./images/Relying_Party-_Setup_-_Functional_Specification.png)
 
@@ -392,7 +403,61 @@ RP-> QTN  : 12 Register Service
 ```
 
 
-## 7.4 Data Provider - Data Reuse
+## 9.4 Connect Scenario - Data Provider
+
+![Connect Scenario - Data Provider](./images/Connect_Scenario_-_Data_Provider_-_Functional_Specification.png)
+
+```
+title " Connect Scenario - Data Provider"
+
+participant Individual as User
+participant "Data Provider" as DP
+participant "Qiy Trust Network" as QTN
+
+User -> User	: 1 Open app on phone
+User -> User	: 2 Choose Data Provider
+User -> QTN	 	: 3 Get Connect Token
+User -> DP	 	: 4 Get connect page
+User -> User	: 5 View connect page in browser
+User -> DP	 	: 6 Sign on
+DP -> QTN       : 7 Connect
+QTN -> DP       : 8 Send Connection Uri
+DP-> DP         : 9 Persist Connection Uri
+QTN -> User     : 10 Send Data Provider Id
+User -> User	: 11 (App adds Data Provider)
+DP   -> User    : 12 Inform using webpage
+User -> User	: 13 View Data Provider info in app
+```
+
+
+## 9.5 Connect Scenario - Relying Party
+
+![Connect Scenario - Relying Party](./images/Connect_Scenario_-_Relying_Party_-_Functional_Specification.png)
+
+```
+title "Connect Scenario - Relying Party"
+
+participant Individual as User
+participant "Relying Party" as RP
+participant "Qiy Trust Network" as QTN
+
+User -> User    : 1 Open browser on laptop
+User -> RP      : 2 Visit website
+User -> RP      : 3 Get sign on page
+RP -> QTN       : 4 Get Connect Token
+RP -> RP        : 5 Generate QR Code
+RP -> User      : 6 Send sign on page
+User -> User    : 7 Scan QR Code using Qiy app on phone
+User -> QTN     : 8 Connect
+QTN -> User     : 9 Send Connection Uri and Relying Party Id
+User -> User    : 10 Confirm connection and return to laptop
+QTN -> RP       : 11 Send Connection Uri
+RP -> RP        : 12 Create account
+RP -> User      : 13 Welcome via web
+```
+
+
+## 9.6 Data Provider - Data Reuse
 
 ![Data Provider - Data Reuse](./images/Data_Provider_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -412,7 +477,7 @@ QTF -> DP: 17 Execute Operation
 ```
 
 
-## 7.5 Individual - Data Reuse
+## 9.7 Individual - Data Reuse
 
 ![Individual - Data Reuse](./images/Individual_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -421,21 +486,16 @@ title "Individual - Data Reuse"
 
 participant "Relying Party" as RP
 participant Individual as User
-participant "Data Provider" as DP
-participant "Qiy Trust Network" as QTF
+participant "Qiy Trust Network" as QTN
 
-User -> DP	 	: 1 Connect
-User -> DP	 	: 2 Sign on
-
-User -> RP	 	: 4 Connect
-User -> RP	 	: 6 Subscribe
-User -> RP	 	: 7 Consent
-QTF -> Individual : 9 Notify Consent
-QTF -> Individual : 10 Propose Data Source
+User -> RP	  : 1 Subscribe
+User -> RP	  : 2 Consent
+QTN -> Individual : 4 Notify Consent
+QTN -> Individual : 5 Propose Data Source
 ```
 
 
-## 7.6 Relying Party - Data Reuse
+## 9.8 Relying Party - Data Reuse
 
 ![Relying Party - Data Reuse](./images/Relying_Party_-_Data_Reuse_-_Functional_Specification.png)
 
@@ -459,8 +519,7 @@ QTF -> RP: 18 Send Data
 ```
 
 
-
-## 7.7 Data Reuse Scenario - All
+## 9.9 Data Reuse Scenario - All
 
 ![Data Reuse Scenario - All](./images/Data_Reuse_Scenario_-_All_-_Functional_Specification.png)
 
@@ -470,30 +529,22 @@ title "Data Reuse Scenario - All"
 participant "Relying Party" as RP
 participant Individual as User
 participant "Data Provider" as DP
-participant "Qiy Trust Network" as QTF
+participant "Qiy Trust Network" as QTN
 
-User -> DP	 	: 1 Connect
-User -> DP	 	: 2 Sign on
-DP-> DP         : 3 Persist Connection Id
+User -> RP	  : 1 Subscribe
+User -> RP	  : 2 Consent
+RP -> QTN	  : 3 Register Consent
+QTN -> Individual : 4 Notify Consent
+QTN -> Individual : 5 Propose Data Source
+QTN -> DP         : 6 Request Operation Specification
+QTN -> QTN        : 7 Generate Data Reference
+QTN -> QTN        : 8 Register Operation Specification
+QTN -> RP	  : 9 Send Data Reference
 
-User -> RP	 	: 4 Connect
-RP -> RP        : 5 Sign up
-User -> RP	 	: 6 Subscribe
-User -> RP	 	: 7 Consent
-RP -> QTF	 	: 8 Register Consent
-QTF -> Individual : 9 Notify Consent
-QTF -> Individual : 10 Propose Data Source
-QTF -> DP       : 11 Request Operation Specification
-QTF -> QTF       : 12 Generate Data Reference
-QTF -> QTF       : 13 Register Operation Specification
-QTF -> RP	 	: 14 Send Data Reference
-
-RP -> QTF: 15 Request Data
-QTF -> QTF: 16 Lookup Operation Specification
-QTF -> DP: 17 Execute Operation
-QTF -> RP: 18 Send Data
-
-
+RP -> QTN         : 10 Request Data
+QTN -> QTN        : 11 Lookup Operation Specification
+QTN -> DP         : 12 Execute Operation
+QTN -> RP         : 13 Send Data
 ```
 
 
