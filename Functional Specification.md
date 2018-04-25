@@ -10,7 +10,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to data exchange
 1. [Overview](#2-overview)
 1. [Data Provider Scenario](#3-data-provider-scenario)
 	1. [Setup](#31-setup)
-	1. [Connect with Data Provider](#32-connect-with-data-provider)
+	1. [Individual Connects](#32-individual-connects)
 	1. [Data Reuse](#33-data-reuse)
 1. [Scenario for Individual](#4-scenario-for-individual)
 	1. [Setup](#41-setup)
@@ -19,7 +19,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to data exchange
 	1. [Data Reuse](#44-data-reuse)
 1. [Relying Party Scenario](#5-relying-party-scenario)
 	1. [Setup](#51-setup)
-	1. [Connect with Relying Party](#52-connect-with-relying-party)
+	1. [Individual Connects](#52-individual-connects)
 	1. [Data Reuse](#53-data-reuse)
 1. [Connect with Data Provider](#6-connect-with-data-provider)
 1. [Connect with Relying Party](#7-connect-with-relying-party)
@@ -100,7 +100,7 @@ The flow is as follows:
 1. The [Data Provider](Definitions.md#data-provider) registers its [Data Service](Definitions.md#data-service) by publishing the [Data Service Description](Definitions.md#data-service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 
-## 3.2 Connect with Data Provider
+## 3.2 Individual Connects
 
 After the setup, the [Individual](Definitions.ms#individual) connects with the [Data Provider](Definitions.md#data-provider).
 The scenario for this is described in [6 Connect with Data Provider](#6-connect-with-data-provider).
@@ -182,7 +182,7 @@ The flow is as follows:
 1. The [Relying Party](Definitions.md#relying-party) registers its [Service](Definitions.md#service) by publishing the [Service Description](Definitions.md#service-description) in the [Service Library](Definitions.md#service-library) of the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 
-## 5.2 Connect with Relying Party
+## 5.2 Individual Connects
 
 After the setup, the [Individual](Definitions.ms#individual) visits the website of the [Relying Party](Definitions.md#relying-party) and connect via Qiy.
 This flow is described in detail in [7 Connect with Relying Party](#7-connect-with-relying-party).
