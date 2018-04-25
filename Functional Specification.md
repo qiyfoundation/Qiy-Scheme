@@ -211,12 +211,13 @@ This chapter describes the flow for the [Individual](Definitions.ms#individual) 
 5. The [Individual](Definitions.md#individual) views the connect page asking him to sign on.
 6. The [Individual](Definitions.md#individual) has an account with the [Data Provider](Definitions.md#data-provider) and succesfully signs on.
 7. The [Data Provider](Definitions.md#data-provider) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a Connection|Definitions.md#] with the [Connect Token](Definitions.md#connect-token).
-8. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and sends the [Connection Uri](Definitions.md#connection-uri) to the [Data Provider](Definitions.md#data-provider).
-9. The [Data Provider](Definitions.md#data-provider) persists the [Connection Uri](Definitions.md#connection-uri) in the local profile of the [Individual](Definitions.md#individual).
-10. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Data Provider Id](Definitions.md#data-provider-id) to the [Qiy Application](Definitions.md#qiy-application) of the [Individual](Definitions.md#individual).
-11. The [Qiy Application](Definitions.md#qiy-application) adds the [Data Provider](Definitions.md#data-provider) to the list of connected [Data Providers](Definitions.md#data-provider).
-12. The [Data Provider](Definitions.md#data-provider) uses the webpage to inform the [Individual](Definitions.md#individual) that they are connected via Qiy and that he can control his [Personal Data](Definitions.md#personal-data) via Qiy and redirects him back to the [Qiy Application](Definitions.md#qiy-application).
-13. The [Individual](Definitions.md#individual) can view details of the newly added [Data Provider](Definitions.md#data-provider) in the app.
+8. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and generates a [Persistent Id](Definitions.md#persistent-id) for the [Connection](Definitions.md#connection).
+9. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Connection Uri](Definitions.md#connection-uri) and the [Persistent Id](Definitions.md#persistent-id) to the [Data Provider](Definitions.md#data-provider).
+10. The [Data Provider](Definitions.md#data-provider) persists the [Persistent Id](Definitions.md#persistent-id) in the local profile of the [Individual](Definitions.md#individual).
+11. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Persistent Id](Definitions.md#persistent-id) and the [Data Provider Id](Definitions.md#data-provider-id) to the [Individual](Definitions.md#individual) which is captured by his [Qiy Application](Definitions.md#qiy-application).
+12. The [Qiy Application](Definitions.md#qiy-application) adds the [Data Provider](Definitions.md#data-provider) to the list of connected [Data Providers](Definitions.md#data-provider).
+13. The [Data Provider](Definitions.md#data-provider) uses the webpage to inform the [Individual](Definitions.md#individual) that they are connected via Qiy and that he can control his [Personal Data](Definitions.md#personal-data) via Qiy and redirects him back to the [Qiy Application](Definitions.md#qiy-application).
+14. The [Individual](Definitions.md#individual) can view details of the newly added [Data Provider](Definitions.md#data-provider) in the app.
 
 
 # 7 Connect with Relying Party
@@ -226,18 +227,20 @@ This chapter describes the flow for the [Individual](Definitions.ms#individual) 
 ![Connect Scenario - Relying Party](./images/Connect_Scenario_-_Relying_Party_-_Functional_Specification.png)
 
 1. The [Individual](Definitions.md#individual) gets his laptop and opens a webbrowser.
-1. The [Individual](Definitions.md#individual) visits the website of the [Relying Party](Definitions.md#relying-party). It presents an option to sign on using Qiy.
-1. The [Individual](Definitions.md#individual) chooses to use this option.
-1. The [Relying Party](Definitions.md#relying-party) retreives a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-1. The [Relying Party](Definitions.md#relying-party) uses it to generate a [QR Code](Definitions.md#qr-code) in a sign on page.
-1. The [Relying Party](Definitions.md#relying-party) sends the sig on page to the [Individual](Definitions.md#individual).
-1. The [Individual](Definitions.md#individual) picks up his smartphone, opens the previously installed [Qiy Application](Definitions.md#qiy-application) and scans the [QR Code](Definitions.md#qr-code).
-1. The [Qiy Application](Definitions.md#qiy-application) extracts the [Connect Token](Definitions.md#connect-token) and uses it to request the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection). 
-1. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and sends the [Connection Uri](Definitions.md#connection-uri) and the [Relying Party Id](Definitions.md#relying-party-id) to the [Qiy Application](Definitions.md#qiy-application) of the [Individual](Definitions.md#individual).
-1. The [Qiy Application](Definitions.md#qiy-application) asks the [Individual](Definitions.md#individual) to confirm the connection and to return to the website and the [Individual](Definitions.md#individual) complies.
-1. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Connection Uri](Definitions.md#connection-uri) to the [Relying Party](Definitions.md#relying-party).
-1. The [Relying Party](Definitions.md#relying-party) creates a local account for the [Individual](Definitions.md#individual).
-1. The [Relying Party](Definitions.md#relying-party) looks up the related sign on page and replaces it with a welcome page, informing the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on.
+2. The [Individual](Definitions.md#individual) visits the website of the [Relying Party](Definitions.md#relying-party). It presents an option to sign on using Qiy.
+3. The [Individual](Definitions.md#individual) chooses to use this option.
+4. The [Relying Party](Definitions.md#relying-party) retreives a [Connect Token](Definitions.md#connect-token) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+5. The [Relying Party](Definitions.md#relying-party) uses it to generate a [QR Code](Definitions.md#qr-code) in a sign on page.
+6. The [Relying Party](Definitions.md#relying-party) sends the sig on page to the [Individual](Definitions.md#individual).
+7. The [Individual](Definitions.md#individual) picks up his smartphone, opens the previously installed [Qiy Application](Definitions.md#qiy-application) and scans the [QR Code](Definitions.md#qr-code).
+8. The [Qiy Application](Definitions.md#qiy-application) extracts the [Connect Token](Definitions.md#connect-token) and uses it to request the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection). 
+9. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and generates a [Persistent Id](Definitions.md#persistent-id) for the [Connection](Definitions.md#connection).
+10. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Persistent Id](Definitions.md#persistent-id) and the [Relying Party Id](Definitions.md#relying-party-id) to the [Qiy Application](Definitions.md#qiy-application) of the [Individual](Definitions.md#individual).
+11. The [Qiy Application](Definitions.md#qiy-application) asks the [Individual](Definitions.md#individual) to confirm the connection and to return to the website and the [Individual](Definitions.md#individual) complies.
+12. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Persistent Id](Definitions.md#persistent-id) to the [Relying Party](Definitions.md#relying-party).
+13. The [Relying Party](Definitions.md#relying-party) creates a local account for the [Individual](Definitions.md#individual).
+13. The [Relying Party](Definitions.md#relying-party) persists the [Persistent Id](Definitions.md#persistent-id) in the local profile of the [Individual](Definitions.md#individual).
+14. The [Relying Party](Definitions.md#relying-party) looks up the related sign on page and replaces it with a welcome page, informing the [Individual](Definitions.md#individual) that he has a new anonymous account and that he is signed on via Qiy.
 
 
 # 8 Data Reuse
@@ -421,12 +424,13 @@ User -> DP	 	: 4 Get connect page
 User -> User	: 5 View connect page in browser
 User -> DP	 	: 6 Sign on
 DP -> QTN       : 7 Connect
-QTN -> DP       : 8 Send Connection Uri
-DP-> DP         : 9 Persist Connection Uri
-QTN -> User     : 10 Send Data Provider Id
-User -> User	: 11 (App adds Data Provider)
-DP   -> User    : 12 Inform using webpage
-User -> User	: 13 View Data Provider info in app
+QTN -> QTN      : 8 Generate Persistent Id
+QTN -> DP       : 9 Send Connection Uri and Persistent Id
+DP-> DP         : 10 Persist Persistent Id
+QTN -> User     : 11 Send Persistent Id and Data Provider Id
+User -> User	: 12 (App adds Data Provider)
+DP   -> User    : 13 Inform using webpage
+User -> User	: 14 View Data Provider info in app
 ```
 
 
@@ -449,11 +453,13 @@ RP -> RP        : 5 Generate QR Code
 RP -> User      : 6 Send sign on page
 User -> User    : 7 Scan QR Code using Qiy app on phone
 User -> QTN     : 8 Connect
-QTN -> User     : 9 Send Connection Uri and Relying Party Id
-User -> User    : 10 Confirm connection and return to laptop
-QTN -> RP       : 11 Send Connection Uri
-RP -> RP        : 12 Create account
-RP -> User      : 13 Welcome via web
+QTN -> QTN      : 9 Create Persistent Id
+QTN -> User     : 10 Send Persistent Id and Relying Party Id
+User -> User    : 11 Confirm connection and return to laptop
+QTN -> RP       : 12 Send Persistent Id
+RP -> RP        : 13 Create account
+RP -> RP        : 14 Persist Id
+RP -> User      : 15 Welcome via web
 ```
 
 

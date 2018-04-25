@@ -162,6 +162,9 @@ A [Business Object](#business-object) used by the [Service by Reference](#servic
 ### Operation Specification
 A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
 
+### Persistent Id
+An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for both related [Qiy Users](#qiy-user).
+
 ### Personal Data
 [Data](#data) relating to an [Individual](#individual). This can be the name, address, telephone number, age, health [Data](#data), account balance, but also personal preferences, etcetera. [Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared with [Relying Parties](#relying-party) by [Individuals](#individual).
 
