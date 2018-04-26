@@ -8,10 +8,7 @@ The Qiy Guide contains guidance for the different interest groups of the [Qiy Sc
 
 
 1. [General Public](#general-public)
-	1. ['What is the problem that Qiy fixes?'](#what-is-the-problem-that-qiy-fixes)
-	1. ['How can I use Qiy?'](#how-can-i-use-qiy)
 1. [CEOs](#ceos)
-	1. ['What brings Qiy to my organization?'](#what-brings-qiy-to-my-organization)
 1. [CIOs](#cios)
 	1. ['Where can my experts find the information?'](#where-can-my-experts-find-the-information)
 1. [Legal Experts](#legal-experts)
@@ -26,16 +23,11 @@ The Qiy Guide contains guidance for the different interest groups of the [Qiy Sc
 
 # General Public
 
-## 'What is the problem that Qiy fixes?'
-tbd
-
-## 'How can I use Qiy?'
-tbd
+Please refer to [the website of the Qiy Foundation](https://www.qiyfoundation.org/).
 
 # CEOs
 
-## 'What brings Qiy to my organization?'
-tbd
+Please refer to [the website of the Qiy Foundation](https://www.qiyfoundation.org/).
 
 # CIOs
 
