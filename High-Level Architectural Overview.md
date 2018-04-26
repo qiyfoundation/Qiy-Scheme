@@ -139,11 +139,16 @@ The document is aimed at people who know that Qiy puts people back in control of
 
 ## 1.2 Readers' Guidance
 
-* Privacy officers are advised to read chapter [3 Architectural Description](#3-architectural-description).
-* Security officers are advised to read chapter [3 Architectural Description](#3-architectural-description).
+* Data analysts are advised to read chapters [3 Architectural Description](#3-architectural-description), [4.6 Setup](#4.6-setup) and [7 The Service Layer](#7-the-service-layer).
+* Enterprise architects are advised to read chapter [3 Architectural Description](#3-architectural-description).
 * Information analysts are advised to read chapters [3 Architectural Description](#3-architectural-description), [4 The User Layer](#4-the-user-layer) and [5 The Application Layer](#5-the-application-layer).
-* Application developers are advised to read chapters [3 Architectural Description](#3-architectural-description), [4 The User Layer](#4-the-user-layer), [5 The Application Layer](#5-the-application-layer) and [6 The Qiy Node Layer](#6-the-qiy-node-layer).
-* Systems engineers are advised to read chapters [3 Architectural Description](#3-architectural-description), [8 The Transport Layer](#8-the-transport-layer) and [9 The Carrier Layer](#9-the-carrier-layer).
+* Legal experts are advised to read chapter [3 Architectural Description](#3-architectural-description).
+* Network engineers are advised to read chapters [3 Architectural Description](#3-architectural-description), [8 The Transport Layer](#8-the-transport-layer) and [9 The Carrier Layer](#9-the-carrier-layer).
+* Privacy experts are advised to read chapter [3 Architectural Description](#3-architectural-description).
+* Security officers are advised to read chapter [3 Architectural Description](#3-architectural-description).
+* Service managers are advised to read chapter [3 Architectural Description](#3-architectural-description) and [4.6 Setup](#4.6-setup).
+* Software engineers are advised to read chapters [3 Architectural Description](#3-architectural-description), [4 The User Layer](#4-the-user-layer), [5 The Application Layer](#5-the-application-layer) and [6 The Qiy Node Layer](#6-the-qiy-node-layer).
+* System engineers are advised to read chapters [3 Architectural Description](#3-architectural-description), [8 The Transport Layer](#8-the-transport-layer) and [9 The Carrier Layer](#9-the-carrier-layer).
 
 # 2 Overview
 
