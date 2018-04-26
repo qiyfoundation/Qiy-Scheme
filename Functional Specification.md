@@ -508,20 +508,16 @@ QTN -> Individual : 5 Propose Data Source
 ```
 title "Relying Party - Data Reuse"
 
-participant "Relying Party" as RP
-participant Individual as User
+participant "Relying Party"     as RP
+participant "Individual"        as User
 participant "Qiy Trust Network" as QTF
 
-User -> RP	 	: 4 Connect
-RP -> RP        : 5 Sign up
-User -> RP	 	: 6 Subscribe
-User -> RP	 	: 7 Consent
-RP -> QTF	 	: 8 Register Consent
-QTF -> RP	 	: 14 Send Data Reference
-
-RP -> QTF: 15 Request Data
-QTF -> RP: 18 Send Data
-
+User -> RP  : 1 Subscribe
+User -> RP  : 2 Consent
+RP   -> QTF : 3 Register Consent
+QTF  -> RP  : 9 Send Data Reference
+RP   -> QTF : 10 Request Data
+QTF  -> RP  : 13 Send Data
 ```
 
 
