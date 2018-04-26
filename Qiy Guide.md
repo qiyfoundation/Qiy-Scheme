@@ -2,7 +2,7 @@
 
 ## Abstract
 
-The Qiy Guide contains guidance for the different interest groups.
+The Qiy Guide contains guidance for the different interest groups of the [Qiy Scheme](Definitions.md#qiy-scheme).
 
 # Contents
 
@@ -45,35 +45,35 @@ Please refer to the [Qiy Guide](Qiy%20Guide.md), this document, in the [latest r
 
 # Legal Experts
 
-Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
 For development, please refer to [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3).
 
 
 # Security Experts
 
-Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
 
 
 # Privacy Experts
 
-Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
 
 
 # Enterprise Architects
 
-Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
 
 
 # Data Analysts
 
-Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
 For development, please refer to [Work Stream Alignment Vertical Standards](https://github.com/qiyfoundation/Qiy-Scheme/projects/5).
 
@@ -94,7 +94,7 @@ For development, please refer to [Work Stream Functionality and Technology](http
 
 # Software Engineers
 
-Please refer to the [Use Case Specifications](use-cases/UC00%20Use%20Cases%20Overview.md) and [Qiy Node Documentation](Definitions.md#qiy-node-documentation) of the [Qiy Node Implementation](Definitions.md#qiy-node-implementation) of your [Access Provider](Definitions.md#access-provider).
+Please refer to the [Use Case Specifications](Definitions.md#use-case-specifications) and the [Qiy Node Documentation](Definitions.md#qiy-node-documentation) of the [Qiy Node Implementation](Definitions.md#qiy-node-implementation) of your [Access Provider](Definitions.md#access-provider).
 
 For development, please refer to:
 * [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) 
@@ -103,7 +103,7 @@ For development, please refer to:
 
 # Access Providers
 
-Please refer to [Functional and Technical Overview](Functional%20and%20Technical%20Overview.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
 For development, please refer to:
 * [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3)
