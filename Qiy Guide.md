@@ -11,15 +11,17 @@ The Qiy Guide contains guidance for the different interest groups of the [Qiy Sc
 1. [CEOs](#ceos)
 1. [CIOs](#cios)
 	1. ['Where can my experts find the information?'](#where-can-my-experts-find-the-information)
-1. [Legal Experts](#legal-experts)
-1. [Security Experts](#security-experts)
-1. [Privacy Experts](#privacy-experts)
-1. [Enterprise Architects](#enterprise-architects)
-1. [Data Analysts](#data-analysts)
-1. [Information Analysts](#information-analysts)
-1. [System Engineers](#system-engineers)
-1. [Software Engineers](#software-engineers)
 1. [Access Providers](#access-providers)
+1. [Data Analysts](#data-analysts)
+1. [Enterprise Architects](#enterprise-architects)
+1. [Information Analysts](#information-analysts)
+1. [Legal Experts](#legal-experts)
+1. [Network Engineers](#network-engineers)
+1. [Privacy Experts](#privacy-experts)
+1. [Security Experts](#security-experts)
+1. [Service Managers](#service-managers)
+1. [Software Engineers](#software-engineers)
+1. [System Engineers](#system-engineers)
 
 # General Public
 
@@ -35,32 +37,13 @@ Please refer to [the website of the Qiy Foundation](https://www.qiyfoundation.or
 Please refer to the [Qiy Guide](Qiy%20Guide.md), this document, in the [latest release of the Qiy Scheme](https://github.com/qiyfoundation/Qiy-Scheme/releases).
 
 
-# Legal Experts
+# Access Providers
 
 Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
-For development, please refer to [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3).
-
-
-# Security Experts
-
-Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
-
-For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
-
-
-# Privacy Experts
-
-Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
-
-For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
-
-
-# Enterprise Architects
-
-Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
-
-For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+For development, please refer to:
+* [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3)
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2)
 
 
 # Data Analysts
@@ -70,6 +53,13 @@ Please refer to [High-Level Architectural Overview](High-Level%20Architectural%2
 For development, please refer to [Work Stream Alignment Vertical Standards](https://github.com/qiyfoundation/Qiy-Scheme/projects/5).
 
 
+# Enterprise Architects
+
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+
+For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+
+
 # Information Analysts
 
 Please refer to [Functional Specification](Functional%20Specification.md).
@@ -77,11 +67,43 @@ Please refer to [Functional Specification](Functional%20Specification.md).
 For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
 
 
-# System Engineers
+# Legal Experts
 
-Please refer to [Functional Specification](Functional%20Specification.md).
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
 
-For development, please refer to [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+For development, please refer to [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3).
+
+
+# Network Engineers
+
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+
+For development, please refer to:
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+
+
+# Privacy Experts
+
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+
+For development, please refer to:
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+
+
+# Security Experts
+
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+
+For development, please refer to:
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
+
+
+# Service Managers
+
+Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+
+For development, please refer to:
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2).
 
 
 # Software Engineers
@@ -93,11 +115,14 @@ For development, please refer to:
 * your [Access Provider](Definitions.md#access-provider)
 
 
-# Access Providers
+# System Engineers
 
-Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+Please refer to [Functional Specification](Functional%20Specification.md).
 
 For development, please refer to:
-* [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3)
-* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2)
+* [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) 
+* your [Access Provider](Definitions.md#access-provider)
+
+
+
 
