@@ -461,8 +461,14 @@ A [Business Object](#business-object) for information about all the [Services](#
 ### Service Provider
 A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Services](#service).
 
+### Service Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
+
 ### Service Source
 A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
+
+### Service Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
