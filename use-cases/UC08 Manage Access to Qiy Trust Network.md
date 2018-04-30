@@ -13,16 +13,20 @@ This document is the use case specification for use case [UC08 Manage Access to 
 	1. [](#1-)
 1. [Postconditions](#postconditions)
 1. [Extensions](#extensions)
-	1. [](#11-)
+	1. [Backup & Restore](#11-backup-&-restore)
 
 # Primary Actors
 
-* [Individual](../Definitions.md.md#individual)
-* ...
+* [Individual](../Definitions.md#individual)
+* [Qiy Application](../Definitions.md#qiy-application)
+* [Qiy Node](../Definitions.md#qiy-node)
+* [Qiy Trust Network](../Definitions.md#qiy-trust-network)
 
 # Preconditions
 
-1.
+1. The [Individual](../Definitions.md#individual) has exclusive access to one [Qiy Application](../Definitions.md#qiy-application).
+1. The [Individual](../Definitions.md#individual) has exclusive access to one [Qiy Node](../Definitions.md#qiy-node).
+1. The [Qiy Application](../Definitions.md#qiy-application) has exclusive access to the [Qiy Node](../Definitions.md#qiy-node).
 
 # Basic Flow
 
@@ -34,5 +38,5 @@ This document is the use case specification for use case [UC08 Manage Access to 
 
 # Extensions
 
-## 1.1
+## 1.1 Backup & Restore
 

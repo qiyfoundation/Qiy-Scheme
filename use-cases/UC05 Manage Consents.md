@@ -17,7 +17,7 @@ This document is the use case specification for use case [UC05 Manage Consents](
 
 # Primary Actors
 
-* [Individual](../Definitions.md.md#individual)
+* [Individual](../Definitions.md#individual)
 * ...
 
 # Preconditions

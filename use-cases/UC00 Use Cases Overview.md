@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document contains an overview of the [Use Cases](../Definitions.md.md#use-case) for [Individuals](../Definitions.md.md#individual), [Data Providers](../Definitions.md.md#data-provider) and [Relying Parties](../Definitions.md.md#relying-party).
+This document contains an overview of the [Use Cases](../Definitions.md#use-case) for [Individuals](../Definitions.md#individual), [Data Providers](../Definitions.md#data-provider) and [Relying Parties](../Definitions.md#relying-party).
 
 # Contents
 
@@ -10,7 +10,7 @@ This document contains an overview of the [Use Cases](../Definitions.md.md#use-c
 
 # 1 Overview
 
-The [Use Cases](../Definitions.md.md#use-case) are:
+The [Use Cases](../Definitions.md#use-case) are:
 * [UC01 Acquire Access to Qiy Trust Network](UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network.md)
 * [UC02 Connect with Qiy User](UC02%20Connect%20with%20Qiy%20User.md)
 * [UC03 Request Personal Data](UC03%20Request%20Personal%20Data.md)

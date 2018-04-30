@@ -17,7 +17,7 @@ This document is the use case specification for use case [UC04 Manage Personal D
 
 # Primary Actors
 
-* [Individual](../Definitions.md.md#individual)
+* [Individual](../Definitions.md#individual)
 * ...
 
 # Preconditions
