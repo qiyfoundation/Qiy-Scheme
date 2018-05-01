@@ -58,7 +58,7 @@ The [Individual](../Definitions.md#individual) can secure access to the Qiy App 
 ## 3. The Qiy App creates Qiy Node Credentials
 
 The Qiy Node Credentials consist of:
-* One [Qiy Node Id]: a [Uuid](../Definitions.md#uuid).
+* One [Qiy Node Id](../Definitions.md#qiy-node-id): a [Uuid](../Definitions.md#uuid).
 * One [RSA Private Key](../Definitions.md#rsa-private-key).
 
 ### Python

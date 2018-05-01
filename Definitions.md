@@ -347,6 +347,9 @@ The [Qiy Node Documentation](#qiy-node-documentation) consists of the [Qiy Node 
 ### Qiy Node Event
 A [Technology Event](#technology-event) of a [Qiy Node](#qiy-node).
 
+### Qiy Node Id
+An [Identifier](#identifier) which can be used to identify a [Qiy Node](#qiy-node) within the [Qiy Trust Network](#qiy-trust-network).
+
 ### Qiy Node Implementation
 An [Application](#application) which can be used to realize a [Qiy Node](#qiy-node).
 
