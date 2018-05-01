@@ -1,8 +1,8 @@
-# UC08 Manage Access to Qiy Trust Network
+# UC09 Manage Access to Qiy Trust Network
 
 # Abstract
 
-This document is the use case specification for use case [UC08 Manage Access to Qiy Trust Network](UC08%20Manage%20Access%20to%20Qiy%20Trust%20Network.md).
+This document is the use case specification for use case [UC09 Manage Access to Qiy Trust Network](UC09%20Manage%20Access%20to%20Qiy%20Trust%20Network.md).
 
 # Contents
 

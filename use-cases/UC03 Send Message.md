@@ -1,8 +1,8 @@
-# UC06 Manage Connections
+# UC03 Send Message
 
 # Abstract
 
-This document is the use case specification for use case [UC06 Manage Connections](UC06%20Manage%20Connections.md).
+This document is the use case specification for use case [UC03 Send Message](UC03%20Send%20Message.md).
 
 # Contents
 

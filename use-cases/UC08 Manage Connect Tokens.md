@@ -1,8 +1,8 @@
-# UC03 Request Personal Data
+# UC08 Manage Connect Tokens
 
 # Abstract
 
-This document is the use case specification for use case [UC03 Request Personal Data](UC03%20Request%20Personal%20Data.md).
+This document is the use case specification for use case [UC08 Manage Connect Tokens](UC08%20Manage%20Connect%20Tokens.md).
 
 # Contents
 

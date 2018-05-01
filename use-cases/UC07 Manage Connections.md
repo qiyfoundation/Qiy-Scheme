@@ -1,8 +1,8 @@
-# UC04 Manage Personal Data
+# UC07 Manage Connections
 
 # Abstract
 
-This document is the use case specification for use case [UC04 Manage Personal Data](UC04%20Manage%20Personal%20Data.md).
+This document is the use case specification for use case [UC07 Manage Connections](UC07%20Manage%20Connections.md).
 
 # Contents
 

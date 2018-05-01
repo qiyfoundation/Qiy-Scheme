@@ -1,8 +1,8 @@
-# UC05 Manage Consents
+# UC04 Request Personal Data
 
 # Abstract
 
-This document is the use case specification for use case [UC05 Manage Consents](UC05%20Manage%20Consents.md).
+This document is the use case specification for use case [UC04 Request Personal Data](UC04%20Request%20Personal%20Data.md).
 
 # Contents
 
