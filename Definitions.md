@@ -43,7 +43,7 @@ See [Binding Principles for Relying Parties and Data Providers](#binding-princip
 ### Binding Principles for Relying Parties and Data Providers
 The rules for [Entities](#entity) ([Relying Parties](#relying-party) and [Data Providers](#data-provider)) to follow in order to be allowed to participate in the [Qiy Scheme](#qiy-scheme).
 
-One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), see [Binding Principles for Relying Parties and Data Providers](Binding%20Principles%20for%20Relying%20Parties%20and%20Data%20Providers.md).
+One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), see [Binding Principles for Relying Parties and Data Providers](Binding%20Principles%20for%20Relying%20Parties%20and%20Data%20Providers%20within%20Qiy%20Trust%20Framework.md).
 
 ### Business Object
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
