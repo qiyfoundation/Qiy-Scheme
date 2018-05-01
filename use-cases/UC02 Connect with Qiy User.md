@@ -2,143 +2,187 @@
 
 # Abstract
 
-This document is the use case specification for use case [UC02 Connect with Qiy User](UC02%20Connect%20with%20Qiy%20User.md).
+This document describes how [Qiy Users](../Definitions.md#qiy-user) can connect via the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
 # Contents
 
 
 1. [Primary Actors](#primary-actors)
 1. [Preconditions](#preconditions)
-1. [Basic Flow](#basic-flow)
-	1. [Proposer requests Qiy Trust Network for a Connect Token](#1-proposer-requests-qiy-trust-network-for-a-connect-token)
-	1. [Proposer provides Accepter with Connect Token](#2-proposer-provides-accepter-with-connect-token)
-	1. [Accepter asks Qiy Trust Network to create a Connection using the Connect Token](#3-accepter-asks-qiy-trust-network-to-create-a-connection-using-the-connect-token)
+1. [Basic Flow: Individuals Connect](#basic-flow-individuals-connect)
+	1. [The Proposer requests the Qiy Trust Network for a Connect Token](#1-the-proposer-requests-the-qiy-trust-network-for-a-connect-token)
+	1. [The Proposer provides the Accepter with the Connect Token](#2-the-proposer-provides-the-accepter-with-the-connect-token)
+	1. [The Accepter requests the Qiy Trust Network to create a Connection using the Connect Token](#3-the-accepter-requests-the-qiy-trust-network-to-create-a-connection-using-the-connect-token)
+	1. [The Qiy Trust Network creates a Connection](#4-the-qiy-trust-network-creates-a-connection)
+	1. [The Qiy Trust Network sends the Proposer Connection Uri to the Proposer](#5-the-qiy-trust-network-sends-the-proposer-connection-uri-to-the-proposer)
+	1. [The Qiy Trust Network sends the Accepter Connection Uri to the Accepter](#6-the-qiy-trust-network-sends-the-accepter-connection-uri-to-the-accepter)
+	1. [The Qiy Trust Network generates a Persistent Id](#7-the-qiy-trust-network-generates-a-persistent-id)
+	1. [The Qiy Trust Network sends the Persistent Id to the Proposer](#8-the-qiy-trust-network-sends-the-persistent-id-to-the-proposer)
+	1. [The Qiy Trust Network sends the Persistent Id to the Accepter](#9-the-qiy-trust-network-sends-the-persistent-id-to-the-accepter)
 1. [Postconditions](#postconditions)
 1. [Extensions](#extensions)
-	1. [Proposer creates Connect Token](#11-proposer-creates-connect-token)
-	1. [Expiration](#12-expiration)
-	1. [Budget](#12-budget)
-	1. [Change Connect Token Properties](#13-change-connect-token-properties)
-	1. [Ways to provide the Connect Token](#2-ways-to-provide-the-connect-token)
-		1. [Connect using Connect Token in a website address](#connect-using-connect-token-in-a-website-address)
-		1. [Representing the Connect Token as a QR Code](#representing-the-connect-token-as-a-qr-code)
-		1. [Email](#email)
-		1. [Webpage with QR Code](#webpage-with-qr-code)
-		1. [Webpage with Connect-button](#webpage-with-connect-button)
-		1. [Connect by scanning a QR code](#connect-by-scanning-a-qr-code)
-		1. [Connect with a button click](#connect-with-a-button-click)
-		1. [Connect using print](#connect-using-print)
-		1. [Confirmation](#confirmation)
-	1. [Proposer creates Connect Token](#11-proposer-creates-connect-token)
+1. [Provide Connect Token as QR Code](#22-provide-connect-token-as-qr-code)
+1. [Service Provider Proposes](#81-service-provider-proposes)
+	1. [Reuse Connection](#811-reuse-connection)
+1. [Service Provider Accepts](#91-service-provider-accepts)
+1. [Diagram source code](#diagram-source-code)
+	1. [Individuals Connect](#individuals-connect)
+	1. [Service Provider Proposes](#service-provider-proposes)
+	1. [Service Provider Accepts](#service-provider-accepts)
 
 # Primary Actors
 
-* [Proposer](../Definitions.md#proposer): A [Qiy User](../Definitions.md#qiy-user) 
-* [Accepter](../Definitions.md#accepter): A [Qiy User](../Definitions.md#qiy-user)
+* [Proposer](../Definitions.md#proposer): An [Individual](../Definitions.md#individual)
+* [Accepter](../Definitions.md#accepter): An [Individual](../Definitions.md#individual)
 * [Qiy Trust Network](../Definitions.md#qiy-trust-network)
 
 # Preconditions
 
-1. [Proposer](../Definitions.md#proposer) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
-1. [Accepter](../Definitions.md#accepter) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+1. The [Proposer](../Definitions.md#proposer) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+1. The [Accepter](../Definitions.md#accepter) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
-# Basic Flow
+# Basic Flow: Individuals Connect
 
-## 1. Proposer requests Qiy Trust Network for a Connect Token
-## 2. Proposer provides Accepter with Connect Token
-## 3. Accepter asks Qiy Trust Network to create a Connection using the Connect Token
+![Individuals Connect](../images/Individuals_Connect_-_UC02.png)
+
+## 1. The Proposer requests the Qiy Trust Network for a Connect Token
+
+The [Proposer](../Definitions.md#proposer) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) for a [Connect Token](../Definitions.md#connect-token) using a [Connect Token Create Request](../Definitions.md#connect-token-create-request).
+
+Alternatively, the [Proposer](../Definitions.md#proposer) may generate a [Connect Token](../Definitions.md#connect-token) himself and register it with a [Connect Token Register Request](../Definitions.md#connect-token-register-request) and impose constraints on it at request time or change them later, see [UC08 Manage Connect Tokens](UC08%20Manage%20Connect%20Tokens.md).
+
+## 2. The Proposer provides the Accepter with the Connect Token
+
+The [Proposer](../Definitions.md#proposer) provides the [Accepter](../Definitions.md#accepter) with the [Connect Token](../Definitions.md#connect-token), for example as a [Json Object](../Definitions.md#json-object) in a query parameter of a website address.
+
+## 3. The Accepter requests the Qiy Trust Network to create a Connection using the Connect Token
+
+The [Accepter](../Definitions.md#accepter) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to create a [Connection](../Definitions.md#connection) using the [Connect Token](../Definitions.md#connect-token) in a [Connection Create Request](../Definitions.md#connection-create-request).
+
+## 4. The Qiy Trust Network creates a Connection
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) creates a [Connection](../Definitions.md#connection) between the [Individuals](../Definitions.md#individual) and generates two [Connection Uris](../Definitions.md#connection-uri): one for each of them.
+
+## 5. The Qiy Trust Network sends the Proposer Connection Uri to the Proposer
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Connection Uri](../Definitions.md#connection-uri) for the [Proposer](../Definitions.md#proposer) to the [Proposer](../Definitions.md#proposer) in a [Connection Created Event](../Definitions.md#connection-created-event).
+
+## 6. The Qiy Trust Network sends the Accepter Connection Uri to the Accepter
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) returns the [Connection Uri](../Definitions.md#connection-uri) for the [Accpter] to the [Accepter](../Definitions.md#accepter) in the response of the [Connection Create Request](../Definitions.md#connection-create-request).
+
+## 7. The Qiy Trust Network generates a Persistent Id
+
+## 8. The Qiy Trust Network sends the Persistent Id to the Proposer
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Persistent Id](../Definitions.md#persistent-id) to the [Proposer](../Definitions.md#proposer) in a [Persisent Id Event].
+
+## 9. The Qiy Trust Network sends the Persistent Id to the Accepter
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Persistent Id](../Definitions.md#persistent-id) to the [Accepter](../Definitions.md#accepter) in a [Persisent Id Event].
+
 
 # Postconditions
 
-1. [Proposer](../Definitions.md#proposer) and [Accepter](../Definitions.md#accepter) have a new [Connection](../Definitions.md#connection).
-1. [Proposer](../Definitions.md#proposer) has a new [Connect Token](../Definitions.md#connect-token).
-1. The [Connect Token](../Definitions.md#connect-token) can be used to create an unlimited number of [Connections](../Definitions.md#connection).
-1. The [Connect Token](../Definitions.md#connect-token) does not expire.
+1. The [Proposer](../Definitions.md#proposer) and the [Accepter](../Definitions.md#accepter) have a new [Connection](../Definitions.md#connection).
+
+The [Qiy Users](../Definitions.md#qiy-user) can use the [Connection](../Definitions.md#connection) to exchange [Qiy Node Messages](../Definitions.md#qiy-node-message) or [Personal Data](../Definitions.md#personal-data), see [UC03 Send Message](UC03%20Send%20Message.md) or [UC04 Request Personal Data](UC04%20Request%20Personal%20Data.md).
 
 # Extensions
 
-## 1.1 Proposer creates Connect Token
+# 2.2 Provide Connect Token as QR Code
 
-tbd
+Alternatively, a [Proposer](../Definitions.md#proposer) can provide the [Connect Token](../Definitions.md#connect-token) to the [Accepter](../Definitions.md#accepter) as a [QR Code](../Definitions.md#qr-code).
+This way, [Qiy Users](../Definitions.md#qiy-user) can connect over various media by scanning the [QR Code](../Definitions.md#qr-code).
 
-## 1.2 Expiration
+# 8.1 Service Provider Proposes
 
+When the [Proposer](../Definitions.md#proposer) is a [Service Provider](../Definitions.md#service-provider), the [Qiy Trust Framework] will send the [Accepter](../Definitions.md#accepter) his [Service Provider Id] in addition to the [Persistent Id](../Definitions.md#persistent-id) as pictured below:
 
-The [Proposer](../Definitions.md#proposer) can request for a Connect Token that will expire on a given date and time, see [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
-
-## 1.2 Budget
-
-The [Qiy User](../Definitions.md#qiy-user) can request for a Connect Token that can only be used to create a specific number of [Connections](../Definitions.md#connection), see [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
-
-## 1.3 Change Connect Token Properties
-
-The [Qiy User](../Definitions.md#qiy-user) can change the expiration and/or budget afterwards, see [UC07 Manage Connect Tokens](UC07%20Manage%20Connect%20Tokens.md).
+![Service Provider Proposes](../images/Service_Provider_Proposes_-_UC02.png)
 
 
-## 2. Ways to provide the Connect Token
-[Qiy Users](../Definitions.md#qiy-user) can use different media to connect as illustrated in this diagram:
+## 8.1.1 Reuse Connection
 
-![Media](./images/Connect.png)
-
- 
-### Connect using Connect Token in a website address
-[Qiy Users](../Definitions.md#qiy-user) can connect by transfering the [Connect Token](../Definitions.md#connect-token) as a query parameter in a website address:
- 
-![Connect using a token in a website address](../images/connect-using-a-token-in-a-website-address.png)
-
-### Representing the Connect Token as a QR Code
-
-The picture below shows a [Connect Proposal](../Definitions.md#connect-proposal) that is generated by an [Individual](../Definitions.md#individual) using a mobile app containing a QR Code.
-The [Individual](../Definitions.md#individual) can use this proposal to invite other [Individuals](../Definitions.md#individual) to connect.
-
-![An example of a Connect Proposal](../images/example--connect-proposal--qr-code-on-phone.PNG)
-
-### Email
-The picture below shows an example of a [Connect Proposal](../Definitions.md#connect-proposal) in an email:
-
-![An example of a Connect Proposal in an email](../images/example--connect-proposal--email.PNG)
-
-### Webpage with QR Code
-The picture below shows an example of a [Connect Proposal](../Definitions.md#connect-proposal) in a webpage which displays a QR code when viewed on a laptop, pc or tablet:
-
-![An example of a Connect Proposal in a webpage with QR code](../images/example--connect-proposal--webpage-laptop-pc-tablet.PNG)
-
-### Webpage with Connect-button
-The picture below shows an example of a [Connect Proposal](../Definitions.md#connect-proposal) in a webpage which displays a button when viewed on smartphone:
-
-![An example of a Connect Proposal in a webpage with button](../images/example--connect-proposal--webpage-phone.PNG)
-
-### Connect by scanning a QR code
-
-The picture below shows an example of scanning the QR code in a [Connect Proposal](../Definitions.md#connect-proposal) using a [Qiy Application](../Definitions.md#qiy-application):
-
-![An example of scanning a QR code](../images/example--connect-proposal--scan-qr-code.PNG)
-
-### Connect with a button click
-
-When an [Accepter](../Definitions.md#accepter) has viewed a webpage with a [Connect Proposal](../Definitions.md#connect-proposal) on his phone and clicked the button to accept it, he will be asked to confirm that he will be redirected to a [Qiy Application](../Definitions.md#qiy-application):
-
-![An example of confirming the redirect to a Qiy Application](../images/example--connect-proposal--after-the-button-click.PNG)
-
-### Connect using print
-
-[Qiy Users](../Definitions.md#qiy-user) can convert the [Token](../Definitions.md#token) to a QR Code and use various 'Print'-media to connect:
-
-![Present proposal containing a QR Code](../images/present-proposal-containing-a-qr-code.png)
+Based on the received [Service Provider Id], an [Individual](../Definitions.md#individual) can reuse a [Connection](../Definitions.md#connection) by including the [Persistent Id](../Definitions.md#persistent-id) of that [Connection](../Definitions.md#connection) in the [Connection Delete Request](../Definitions.md#connection-delete-request). The [Qiy Trust Network](../Definitions.md#qiy-trust-network) will delete the [Connection](../Definitions.md#connection) and will inform the [Service Provider](../Definitions.md#service-provider) to use the existing [Connection](../Definitions.md#connection) using a [Connection Deleted Event].
 
 
-The QR Code can be used as follows to create the [Connection](../Definitions.md#connection):
- 
-![Connect using a QR Code](../images/connect-using-a-qr-code.png)
- 
+# 9.1 Service Provider Accepts
 
-### Confirmation
+When the [Accepter](../Definitions.md#accepter) is a [Service Provider](../Definitions.md#service-provider), the [Qiy Trust Framework] will send the [Proposer](../Definitions.md#proposer) his [Service Provider Id] in addition to the [Persistent Id](../Definitions.md#persistent-id) as pictured below:
 
-The picture below shows an example of an [Qiy Application](../Definitions.md#qiy-application) verifying the acceptance of a [Connect Proposal](../Definitions.md#connect-proposal).
-The [Qiy Application](../Definitions.md#qiy-application) will create the [Connection](../Definitions.md#connection) when the [Accepter](../Definitions.md#accepter) has confirmed that he wants to connect with the [Proposer](../Definitions.md#proposer).
+![Service Provider Accepts](../images/Service_Provider_Accepts_-_UC02.png)
 
-![An example of confirming the acceptance a Connect Proposal](../images/example--connect-proposal--verify.PNG)
 
-## 1.1 Proposer creates Connect Token
+# Diagram source code
 
-Instead of acquiring a Connect Token from the Qiy Trust Network, the Proposer can also create a Connect Token himself, see [UC21 Qiy User Creates Connect Token](UC21%20Qiy%20User%20Creates%20Connect%20Token.md).
+## Individuals Connect
+
+![Individuals Connect](../images/Individuals_Connect_-_UC02.png)
+
+
+```
+title "Individuals Connect"
+
+participant "Proposer"          as P
+participant "Accepter"          as A
+participant "Qiy Trust Network" as QTN
+
+P   -> QTN : 1 Get Connect Token
+P   -> A   : 2 Provide Connect Token
+A   -> QTN : 3 Request Connection
+QTN -> QTN : 4 Create Connection
+QTN -> A   : 5 Send Accepter Connection Uri
+QTN -> P   : 6 Send Proposer Connection Uri
+QTN -> QTN : 7 Generate Persistent Id
+QTN -> A   : 8 Send Persistent Id
+QTN -> P   : 9 Send Persistent Id
+```
+
+## Service Provider Proposes
+
+![Service Provider Proposes](../images/Service_Provider_Proposes_-_UC02.png)
+
+```
+title "Service Provider Proposes"
+
+participant "Service Provider"  as SP
+participant "Accepter"          as A
+participant "Qiy Trust Network" as QTN
+
+SP  -> QTN : 1 Get Connect Token
+SP  -> A   : 2 Provide Connect Token
+A   -> QTN : 3 Request Connection
+QTN -> QTN : 4 Create Connection
+QTN -> A   : 5 Send Accepter Connection Uri
+QTN -> SP  : 6 Send Proposer Connection Uri
+QTN -> QTN : 7 Generate Persistent Id
+QTN -> A   : 8.1 Send Persistent Id and Service Provider Id
+QTN -> SP  : 9 Send Persistent Id
+```
+
+
+## Service Provider Accepts
+
+![Service Provider Accepts](../images/Service_Provider_Accepts_-_UC02.png)
+
+```
+title "Service Provider Accepts"
+
+participant "Proposer"          as P
+participant "Service Provider"  as SP
+participant "Qiy Trust Network" as QTN
+
+P   -> QTN : 1 Get Connect Token
+P   -> SP  : 2 Provide Connect Token
+SP  -> QTN : 3 Request Connection
+QTN -> QTN : 4 Create Connection
+QTN -> SP  : 5 Send Accepter Connection Uri
+QTN -> P   : 6 Send Proposer Connection Uri
+QTN -> QTN : 7 Generate Persistent Id
+QTN -> SP  : 8 Send Persistent Id
+QTN -> P   : 9.1 Send Persistent Id and Service Provider Id
+```
+
+
+

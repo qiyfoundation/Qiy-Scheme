@@ -231,6 +231,12 @@ A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), fo
 ### Information 
 [Data](#data) processed, organised, structured, or presented in a certain context, so that it is usable. Information provides context to [Data](#data).
 
+### Json
+Json is an open-standard format, see https://en.wikipedia.org/wiki/JSON
+
+### Json Object
+One of the basic data types of [Json](#json).
+
 ### Legal Entity
 See https://en.wikipedia.org/wiki/Entity#In_law.
 
@@ -298,7 +304,10 @@ A [Data](#data) link between two [Transporters](#transporter) which is used to e
 A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
 
 ### Persistent Id
-An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for both related [Qiy Users](#qiy-user).
+An [Identifier](#identifier) which can be used in addition to a [Connection Uri](#connection-uri) to identify a [Connection](#connection) and which has the same value for both related [Qiy Users](#qiy-user).
+
+### Persistent Id Event
+A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent Id](#persistent-id) of a new [Connection](#connection).
 
 ### Personal Data
 [Data](#data) relating to an [Individual](#individual). This can be the name, address, telephone number, age, health [Data](#data), account balance, but also personal preferences, etcetera. [Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared with [Relying Parties](#relying-party) by [Individuals](#individual).
