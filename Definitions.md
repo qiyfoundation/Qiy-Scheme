@@ -359,6 +359,9 @@ A message that is exchanged using a [Connection](#connection).
 ### Qiy Node Request
 A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
 
+### Qiy Node Create Request
+A [HTTP Request](#http-request) to create a [Qiy Node](#qiy-node).
+
 ### Qiy Node Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node).
 
@@ -421,6 +424,9 @@ A set of connected rights, obligations and behaviours as conceptualized in the [
 
 ### Route
 tbd
+
+### RSA Private Key
+An RSA private key, see https://en.wikipedia.org/wiki/RSA_(cryptosystem).
 
 ### Scheme Authority
 The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at a global level: 
