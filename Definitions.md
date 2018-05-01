@@ -485,6 +485,9 @@ A [Business Object](#business-object) for information about all the [Services](#
 ### Service Provider
 A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Services](#service).
 
+### Service Provider Id
+The [Identity](#identity) of the [Service Provider](#service-provider) as registered by the [Access Provider](#access-provider).
+
 ### Service Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
 

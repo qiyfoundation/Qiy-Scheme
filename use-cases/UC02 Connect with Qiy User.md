@@ -69,17 +69,17 @@ The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Connecti
 
 ## 6. The Qiy Trust Network sends the Accepter Connection Uri to the Accepter
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) returns the [Connection Uri](../Definitions.md#connection-uri) for the [Accpter] to the [Accepter](../Definitions.md#accepter) in the response of the [Connection Create Request](../Definitions.md#connection-create-request).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) returns the [Connection Uri](../Definitions.md#connection-uri) for the [Accepter](../Definitions.md#accepter) to the [Accepter](../Definitions.md#accepter) in the response of the [Connection Create Request](../Definitions.md#connection-create-request).
 
 ## 7. The Qiy Trust Network generates a Persistent Id
 
 ## 8. The Qiy Trust Network sends the Persistent Id to the Proposer
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Persistent Id](../Definitions.md#persistent-id) to the [Proposer](../Definitions.md#proposer) in a [Persisent Id Event].
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Persistent Id](../Definitions.md#persistent-id) to the [Proposer](../Definitions.md#proposer) in a [Persistent Id Event](../Definitions.md#persistent-id-event).
 
 ## 9. The Qiy Trust Network sends the Persistent Id to the Accepter
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Persistent Id](../Definitions.md#persistent-id) to the [Accepter](../Definitions.md#accepter) in a [Persisent Id Event].
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Persistent Id](../Definitions.md#persistent-id) to the [Accepter](../Definitions.md#accepter) in a [Persistent Id Event](../Definitions.md#persistent-id-event).
 
 
 # Postconditions
@@ -97,19 +97,19 @@ This way, [Qiy Users](../Definitions.md#qiy-user) can connect over various media
 
 # 8.1 Service Provider Proposes
 
-When the [Proposer](../Definitions.md#proposer) is a [Service Provider](../Definitions.md#service-provider), the [Qiy Trust Framework] will send the [Accepter](../Definitions.md#accepter) his [Service Provider Id] in addition to the [Persistent Id](../Definitions.md#persistent-id) as pictured below:
+When the [Proposer](../Definitions.md#proposer) is a [Service Provider](../Definitions.md#service-provider), the [Qiy Trust Network](../Definitions.md#qiy-trust-network) will send the [Accepter](../Definitions.md#accepter) his [Service Provider Id](../Definitions.md#service-provider-id) in addition to the [Persistent Id](../Definitions.md#persistent-id) as pictured below:
 
 ![Service Provider Proposes](../images/Service_Provider_Proposes_-_UC02.png)
 
 
 ## 8.1.1 Reuse Connection
 
-Based on the received [Service Provider Id], an [Individual](../Definitions.md#individual) can reuse a [Connection](../Definitions.md#connection) by including the [Persistent Id](../Definitions.md#persistent-id) of that [Connection](../Definitions.md#connection) in the [Connection Delete Request](../Definitions.md#connection-delete-request). The [Qiy Trust Network](../Definitions.md#qiy-trust-network) will delete the [Connection](../Definitions.md#connection) and will inform the [Service Provider](../Definitions.md#service-provider) to use the existing [Connection](../Definitions.md#connection) using a [Connection Deleted Event].
+Based on the received [Service Provider Id](../Definitions.md#service-provider-id), an [Individual](../Definitions.md#individual) can reuse a [Connection](../Definitions.md#connection) by including the [Persistent Id](../Definitions.md#persistent-id) of that [Connection](../Definitions.md#connection) in the [Connection Delete Request](../Definitions.md#connection-delete-request). The [Qiy Trust Network](../Definitions.md#qiy-trust-network) will delete the [Connection](../Definitions.md#connection) and will inform the [Service Provider](../Definitions.md#service-provider) to use the existing [Connection](../Definitions.md#connection) using a [Connection Deleted Event].
 
 
 # 9.1 Service Provider Accepts
 
-When the [Accepter](../Definitions.md#accepter) is a [Service Provider](../Definitions.md#service-provider), the [Qiy Trust Framework] will send the [Proposer](../Definitions.md#proposer) his [Service Provider Id] in addition to the [Persistent Id](../Definitions.md#persistent-id) as pictured below:
+When the [Accepter](../Definitions.md#accepter) is a [Service Provider](../Definitions.md#service-provider), the [Qiy Trust Network](../Definitions.md#qiy-trust-network) will send the [Proposer](../Definitions.md#proposer) his [Service Provider Id](../Definitions.md#service-provider-id) in addition to the [Persistent Id](../Definitions.md#persistent-id) as pictured below:
 
 ![Service Provider Accepts](../images/Service_Provider_Accepts_-_UC02.png)
 
