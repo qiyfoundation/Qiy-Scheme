@@ -25,9 +25,18 @@ This document describes how an [Individual](../Definitions.md#individual) and a 
 	1. [The Qiy Webapp persists the Qiy Node Credentials](#4-the-qiy-webapp-persists-the-qiy-node-credentials)
 	1. [The Qiy Webapp requests the Qiy Trust Network to create a Qiy Node](#5-the-qiy-webapp-requests-the-qiy-trust-network-to-create-a-qiy-node)
 1. [E2 Service Provider acquires access](#e2-service-provider-acquires-access)
+	1. [Preconditions](#preconditions)
+	1. [Flow](#flow)
+		1. [The Service Provider requests the Access Provider for a Qiy Node](#1-the-service-provider-requests-the-access-provider-for-a-qiy-node)
+		1. [The Access Provider creates Qiy Node Credentials](#2-the-access-provider-creates-qiy-node-credentials)
+		1. [The Access Provider requests the Qiy Trust Network to create a Qiy Node](#3-the-access-provider-requests-the-qiy-trust-network-to-create-a-qiy-node)
+		1. [The Access Provider sends the Qiy Node Credentials to the Service Provider](#4-the-access-provider-sends-the-qiy-node-credentials-to-the-service-provider)
+		1. [The Service Provider configures its Computing System with the Qiy Node Credentials](#5-the-service-provider-configures-its-computing-system-with-the-qiy-node-credentials)
+	1. [Postconditions](#postconditions)
 1. [Diagram Source Code](#diagram-source-code)
 	1. [Individual Acquires Access](#individual-acquires-access)
 	1. [Individual Acquires Access with Webapp](#individual-acquires-access-with-webapp)
+	1. [Service Provider Acquires Access](#service-provider-acquires-access)
 
 # Primary Actors
 
@@ -111,7 +120,39 @@ The flow for [Qiy Webapps](../Definitions.md#qiy-webapp) is the same as the basi
 
 This extension describes how a [Service Provider](../Definitions.md#service-provider) acquires access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
-tbd
+
+## Preconditions
+
+1. The [Service Provider](../Definitions.md#service-provider) wants access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+1. The [Service Provider](../Definitions.md#service-provider) has concluded an agreement with an [Access Provider](../Definitions.md#access-provider).
+
+
+## Flow
+
+![Service Provider Acquires Access](../images/Service_Provider_Acquires_Access_-_UC01.png)
+
+### 1. The Service Provider requests the Access Provider for a Qiy Node
+
+Please refer to the [Access Provider](../Definitions.md#access-provider) for more information.
+
+### 2. The Access Provider creates Qiy Node Credentials
+
+See also [3. The Qiy App creates Qiy Node Credentials](#3-the-qiy-app-creates-qiy-node-credentials).
+
+### 3. The Access Provider requests the Qiy Trust Network to create a Qiy Node
+
+See also [5. The Qiy App requests the Qiy Trust Network to create a Qiy Node](#5-the-qiy-app-requests-the-qiy-trust-network-to-create-a-qiy-node).
+
+### 4. The Access Provider sends the Qiy Node Credentials to the Service Provider
+
+Please refer to the [Access Provider](../Definitions.md#access-provider) for more information.
+
+### 5. The Service Provider configures its Computing System with the Qiy Node Credentials
+
+
+## Postconditions
+
+1. The [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credentials](../Definitions.md#qiy-node-credentials).
 
 # Diagram Source Code
 
@@ -145,4 +186,20 @@ User -> App  : 2 Secure Access
 App  -> App  : 3 Create Qiy Node Credentials
 App  -> App  : 4 Persist Qiy Node Credentials
 App  -> QTN  : 5 Create Qiy Node
+```
+
+## Service Provider Acquires Access
+
+```
+title "Service Provider Acquires Access"
+
+participant "Service Provider"  as SP
+participant "Access Provider"   as AP
+participant "Qiy Trust Network" as QTN
+
+SP ->  AP  : 1 Request Qiy Node
+AP ->  AP  : 2 Create Qiy Node Credentials
+AP ->  QTN : 3 Create Qiy Node
+AP ->  SP  : 4 Send Qiy Node Credentials
+SP ->  SP  : 5 Configure Computing System
 ```
