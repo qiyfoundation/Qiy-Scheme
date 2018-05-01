@@ -108,7 +108,7 @@ The [Qiy App](../Definitions.md#qiy-app) requests the [Qiy Trust Network](../Def
 
 The flow for [Qiy Webapps](../Definitions.md#qiy-webapp) is the same as the basic flow but for the first step:
 
-![Individual Acquires Access](../images/Individual_Acquires_Access_with_Webapp-_UC01.png)
+![Individual Acquires Access with Webapp](../images/Individual_Acquires_Access_with_Webapp-_UC01.png)
 
 ## 1. The Individual registers an account for the Qiy Webapp
 ## 2. The Individual secures access to the Qiy Webapp
