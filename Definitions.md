@@ -317,6 +317,9 @@ Synonymous with [Identifier](#identifier)
 ### Public Key Infrastructure
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
+### Qiy App
+A [Qiy Application](#qiy-application) that can be installed on a smart phone or similar device.
+
 ### Qiy Application
 An [Application](#application) that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-applications).
 
@@ -379,6 +382,9 @@ The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overa
 
 ### Qiy User
 A [Business Role](#business-role): an [Entity](#entity) that is using the [Qiy Trust Network](#qiy-trust-network).
+
+### Qiy Webapp
+A [Qiy Application](#qiy-application) that is accessible via a web browser.
 
 ### QR Code
 See https://en.wikipedia.org/wiki/QR_code.
