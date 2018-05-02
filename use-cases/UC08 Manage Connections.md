@@ -1,8 +1,8 @@
-# UC05 Manage Personal Data
+# UC08 Manage Connections
 
 # Abstract
 
-This document is the use case specification for use case [UC05 Manage Personal Data](UC05%20Manage%20Personal%20Data.md).
+This document is the use case specification for use case [UC08 Manage Connections](UC08%20Manage%20Connections.md).
 
 # Contents
 

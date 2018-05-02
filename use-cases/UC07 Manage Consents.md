@@ -1,8 +1,8 @@
-# UC06 Manage Consents
+# UC07 Manage Consents
 
 # Abstract
 
-This document is the use case specification for use case [UC06 Manage Consents](UC06%20Manage%20Consents.md).
+This document is the use case specification for use case [UC07 Manage Consents](UC07%20Manage%20Consents.md).
 
 # Contents
 

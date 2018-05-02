@@ -1,8 +1,8 @@
-# UC07 Manage Connections
+# UC09 Manage Connect Tokens
 
 # Abstract
 
-This document is the use case specification for use case [UC07 Manage Connections](UC07%20Manage%20Connections.md).
+This document is the use case specification for use case [UC09 Manage Connect Tokens](UC09%20Manage%20Connect%20Tokens.md).
 
 # Contents
 

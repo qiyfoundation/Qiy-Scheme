@@ -1,8 +1,8 @@
-# UC10 Manage Service Catalogue
+# UC11 Manage Service Catalogue
 
 # Abstract
 
-This document is the use case specification for use case [UC10 Manage Service Catalogue](UC10%20Manage%20Service%20Catalogue.md).
+This document is the use case specification for use case [UC11 Manage Service Catalogue](UC11%20Manage%20Service%20Catalogue.md).
 
 # Contents
 

@@ -1,8 +1,8 @@
-# UC08 Manage Connect Tokens
+# UC06 Manage Personal Data
 
 # Abstract
 
-This document is the use case specification for use case [UC08 Manage Connect Tokens](UC08%20Manage%20Connect%20Tokens.md).
+This document is the use case specification for use case [UC06 Manage Personal Data](UC06%20Manage%20Personal%20Data.md).
 
 # Contents
 
