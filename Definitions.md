@@ -160,7 +160,7 @@ A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data
 A description of [Data](#data) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
 ### Data Descriptor
-An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
+A [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
 
 ### Data Provider
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Trust Network](#qiy-trust-network) to other [Qiy Users](#qiy-user) on [Request](#request).
@@ -255,11 +255,20 @@ See https://en.wikipedia.org/wiki/Literal_(computer_programming).
 ### Local ID
 Synonymous with [Identifier](#identifier)
 
+### Message Description
+A [Data Description](#data-description) of a [Qiy Node Message](#qiy-node-message).
+
+### Message Descriptor
+This term is used in the following senses:
+* A [Uri](#uri) which identifies a [Message Description](#message-description).
+* A [Uri](#uri) which can be used to obtain a [Message Description](#message-description) from the [Service Library](#service-library).
+* An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message).
+
 ### Message Post Request
 A [Qiy Node Request](#qiy-node-request) that can be used to post a [Qiy Node Message](#qiy-node-message).
 
 ### Message Received Event
-A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node Message](#qiy-node-message) has been received.
+A [Qiy Node Event](#qiy-node-event) that notifies a [Receiver](#receiver) that he has received a new [Qiy Node Message](#qiy-node-message).
 
 ### Messages Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](#qiy-node).
@@ -302,6 +311,9 @@ A [Data](#data) link between two [Transporters](#transporter) which is used to e
 
 ### Path Create Request
 A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
+
+### Payload
+An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which contains the [Data](#data) that the [Sender](#sender) wants to transfer to the [Receiver](#receiver).
 
 ### Persistent Id
 An [Identifier](#identifier) which can be used in addition to a [Connection Uri](#connection-uri) to identify a [Connection](#connection) and which has the same value for both related [Qiy Users](#qiy-user).
@@ -366,7 +378,7 @@ An [Application](#application) which can be used to realize a [Qiy Node](#qiy-no
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
 ### Qiy Node Message
-A message that is exchanged using a [Connection](#connection).
+A message that is exchanged between a [Sender](#sender) and a [Receiver](#receiver) over a [Connection](#connection).
 
 ### Qiy Node Request
 A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
@@ -404,8 +416,14 @@ A [Qiy Application](#qiy-application) that is accessible via a web browser.
 ### QR Code
 See https://en.wikipedia.org/wiki/QR_code.
 
+### Receiver
+A [Business Role](#business-role) for a [Qiy User](#qiy-user) that receives a [Qiy Node Message](#qiy-node-message) from a [Sender](#sender).
+
 ### Reference
 A [Literal](#literal).
+
+### Reference Serial Number
+An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
 
 ### Regional Authority
 tbd
@@ -449,6 +467,12 @@ The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at 
 * Maintaining overall business continuity 
 * Compliance
 
+### Sender
+A [Business Role](#business-role) for a [Qiy User](#qiy-user) that sends a [Qiy Node Message](#qiy-node-message) to a [Receiver](#receiver).
+
+### Serial Number
+An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which identify the [Qiy Node Messages](#qiy-node-message) exchanged between one [Sender](#sender) and one [Receiver](#receiver). [Serial Numbers](#serial-number) for [Qiy Node Messages](#qiy-node-message) that are exchanged in the same direction are unique and increase over time.
+
 ### Service
 An 'information society service' as defined in the [GDPR](#gdpr).
 
@@ -462,7 +486,7 @@ A [Business Object](#business-object) for information about all the [Services](#
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
 ### Service Descriptor
-An [Uri](#uri) which can be used to identify and obtain a [Service Description](#service-description).
+A [Uri](#uri) which can be used to identify and obtain a [Service Description](#service-description).
 
 ### Service Discovery
 A [Business Process](#business-process) to find [Service Providers](#service-provider) for a given [Service](#service).
