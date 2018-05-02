@@ -25,7 +25,7 @@ This document describes how [Qiy Users](../Definitions.md#qiy-user) can exchange
 
 * [Sender](../Definitions.md#sender): a [Qiy User](../Definitions.md#qiy-user)
 * [Receiver](../Definitions.md#receiver): a [Qiy User](../Definitions.md#qiy-user)
-* [Qiy Trust Framework]
+* [Qiy Trust Network](../Definitions.md#qiy-trust-network)
 
 # Preconditions
 
