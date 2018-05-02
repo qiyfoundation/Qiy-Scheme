@@ -30,7 +30,7 @@ This document describes how a [Relying Party](../Definitions.md#relying-party) c
 # Preconditions
 
  Condition   | [Individual](../Definitions.md#individual) | [Data Provider](../Definitions.md#data-provider) | [Relying Party](../Definitions.md#relying-party) | [Consent](../Definitions.md#consent)
------------- | ------------ | --------------- | --------------- | ---------
+------------ |:------------:|:---------------:|:---------------:|:---------:
 The [Data Provider](../Definitions.md#data-provider) has [Personal Data](../Definitions.md#personal-data) of the [Individual](../Definitions.md#individual).                                             | X | X |   |  
 The [Individual](../Definitions.md#individual) has a [Connection](../Definitions.md#connection) with the [Data Provider](../Definitions.md#data-provider) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X | X |   |  
 The [Data Provider](../Definitions.md#data-provider) has a [Connection](../Definitions.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X | X |   |  
