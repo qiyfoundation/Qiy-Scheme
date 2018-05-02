@@ -31,18 +31,18 @@ This document describes how a [Relying Party](../Definitions.md#relying-party) c
 
  Condition   | [Individual](../Definitions.md#individual) | [Data Provider](../Definitions.md#data-provider) | [Relying Party](../Definitions.md#relying-party) | [Consent](../Definitions.md#consent)
 ------------ | ------------ | --------------- | --------------- | ---------
-1. The [Data Provider](../Definitions.md#data-provider) has [Personal Data](../Definitions.md#personal-data) of the [Individual](../Definitions.md#individual).                                             | X | X |   |  
-2. The [Individual](../Definitions.md#individual) has a [Connection](../Definitions.md#connection) with the [Data Provider](../Definitions.md#data-provider) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X | X |   |  
-3. The [Data Provider](../Definitions.md#data-provider) has a [Connection](../Definitions.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X | X |   |  
-4. The [Data Provider](../Definitions.md#data-provider) knows the (local) [Identity](../Definitions.md#identity) of the [Individual](../Definitions.md#individual).                                    | X | X |   |  
-5. The [Individual](../Definitions.md#individual) has a [Connection](../Definitions.md#connection) with the [Relying Party](../Definitions.md#relying-party) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X |   | X |  
-6. The [Relying Party](../Definitions.md#relying-party) has a [Connection](../Definitions.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X |   | X |  
-7. The [Relying Party](../Definitions.md#relying-party) knows the (local) [Identity](../Definitions.md#identity) of the [Individual](../Definitions.md#individual).                                    | X |   | X |  
-8. The [Relying Party](../Definitions.md#relying-party) has the [Individuals](../Definitions.md#individual) [Consent](../Definitions.md#consent) for use of his [Personal Data](../Definitions.md#personal-data).                      | X |   | X | X
-9. The [Individual](../Definitions.md#individual) has registered the [Data Provider](../Definitions.md#data-provider) as source for the [Personal Data](../Definitions.md#personal-data) for the [Consent](../Definitions.md#consent). | X | X |   | X
-1. The [Relying Party](../Definitions.md#relying-party) has a [Data Reference](../Definitions.md#data-reference) to acquire the [Personal Data](../Definitions.md#personal-data).                               |   |   | X |  
-1. The [Data Provider](../Definitions.md#data-provider) has permission to provide the [Data Service](../Definitions.md#data-service) via Qiy.                                |   | X |   |  
-2. The [Relying Party](../Definitions.md#relying-party) has permission to provide the [Service](../Definitions.md#service) via Qiy.                                     |   |   | X |  
+  1. The [Data Provider](../Definitions.md#data-provider) has [Personal Data](../Definitions.md#personal-data) of the [Individual](../Definitions.md#individual).                                             | X | X |   |  
+  2. The [Individual](../Definitions.md#individual) has a [Connection](../Definitions.md#connection) with the [Data Provider](../Definitions.md#data-provider) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X | X |   |  
+  3. The [Data Provider](../Definitions.md#data-provider) has a [Connection](../Definitions.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X | X |   |  
+  4. The [Data Provider](../Definitions.md#data-provider) knows the (local) [Identity](../Definitions.md#identity) of the [Individual](../Definitions.md#individual).                                    | X | X |   |  
+  5. The [Individual](../Definitions.md#individual) has a [Connection](../Definitions.md#connection) with the [Relying Party](../Definitions.md#relying-party) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X |   | X |  
+  6. The [Relying Party](../Definitions.md#relying-party) has a [Connection](../Definitions.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Definitions.md#persistent-id).              | X |   | X |  
+  7. The [Relying Party](../Definitions.md#relying-party) knows the (local) [Identity](../Definitions.md#identity) of the [Individual](../Definitions.md#individual).                                    | X |   | X |  
+  8. The [Relying Party](../Definitions.md#relying-party) has the [Individuals](../Definitions.md#individual) [Consent](../Definitions.md#consent) for use of his [Personal Data](../Definitions.md#personal-data).                      | X |   | X | X
+  9. The [Individual](../Definitions.md#individual) has registered the [Data Provider](../Definitions.md#data-provider) as source for the [Personal Data](../Definitions.md#personal-data) for the [Consent](../Definitions.md#consent). | X | X |   | X
+ 10. The [Relying Party](../Definitions.md#relying-party) has a [Data Reference](../Definitions.md#data-reference) to acquire the [Personal Data](../Definitions.md#personal-data).                               |   |   | X |  
+ 11. The [Data Provider](../Definitions.md#data-provider) has permission to provide the [Data Service](../Definitions.md#data-service) via Qiy.                                |   | X |   |  
+ 12. The [Relying Party](../Definitions.md#relying-party) has permission to provide the [Service](../Definitions.md#service) via Qiy.                                     |   |   | X |  
 
 # Basic Flow: Request Personal Data
 
