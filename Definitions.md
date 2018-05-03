@@ -108,6 +108,9 @@ A [Qiy Node Event](#qiy-node-event) that is generated when a [Connection](#conne
 ### Connection Delete Request
 A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection](#connection).
 
+### Connection Details Request
+A [Qiy Node Request](#qiy-node-request) that can be used to get the details of a [Connection](#connection).
+
 ### Connection Uri
 A [Uri](#uri) which is used to identify a [Connection](#connection).
 

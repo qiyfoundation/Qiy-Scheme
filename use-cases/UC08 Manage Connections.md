@@ -56,7 +56,7 @@ A [Qiy User](../Definitions.md#qiy-user) can list his [Connections](../Definitio
 
 ## E2 Get Connection Details
 
-A [Qiy User](../Definitions.md#qiy-user) can get the details of a [Connection](../Definitions.md#connection) using a [Connection Details Request].
+A [Qiy User](../Definitions.md#qiy-user) can get the details of a [Connection](../Definitions.md#connection) using a [Connection Details Request](../Definitions.md#connection-details-request).
 
 
 
