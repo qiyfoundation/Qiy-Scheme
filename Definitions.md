@@ -316,7 +316,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to command the executio
 A [Business Object](#business-object) used by the [Service by Reference](#service-by-reference)-pattern to execute an [Operation](#operation) by reference.
 
 ### Operation Reference Message
-A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference) over a [Connection](#connection).
+A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference).
 
 ### Operation Reference Request Message
 A [Qiy Node Message](#qiy-node-message) that can be used to [Request](#request) for [Operation References](#operation-reference).
@@ -346,6 +346,9 @@ A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent
 [Data](#data) relating to an [Individual](#individual). This can be the name, address, telephone number, age, health [Data](#data), account balance, but also personal preferences, etcetera. [Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared with [Relying Parties](#relying-party) by [Individuals](#individual).
 
 As defined in the [GDPR](#gdpr).
+
+### Portfolio Register Message
+A [Qiy Node Message](#qiy-node-message) which can be used to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
@@ -502,6 +505,12 @@ A pattern for consuming [Services](#service) indirectly using [References](#refe
 
 ### Service Catalogue
 A [Business Object](#business-object) for information about all the [Services](#service) that a [Service Provider](#service-provider) can provide.
+
+### Service Credentials
+[Credentials](#credential) for accessing a [Service Endpoint](#service-endpoint).
+
+### Service Credentials Request Message
+A [Qiy Node Message](#qiy-node-message) for requesting [Service Credentials](#service-credentials).
 
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
