@@ -33,7 +33,7 @@ This document describes how an [Individual](../Definitions.md#individual) can ma
 
 # Basic Flow: Individual withdraws Consent
 
-![Withdraw Consent](../images/Withdraw_Consent_-_UC06.png)
+![Withdraw Consent](../images/Withdraw_Consent_-_UC07.png)
 
 ## 1. The Individual informs the withdrawal of a Consent to the Qiy Trust Network
 
@@ -76,7 +76,7 @@ An [Individual](../Definitions.md#individual) can regrant a [Consent](../Definit
 
 ## Withdraw Consent
 
-![Withdraw Consent](../images/Withdraw_Consent_-_UC06.png)
+![Withdraw Consent](../images/Withdraw_Consent_-_UC07.png)
 
 ```
 title "Withdraw Consent"
