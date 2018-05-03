@@ -117,17 +117,38 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all
 ### Consent
 As defined in the [GDPR](#gdpr).
 
+### Consent Credentials
+Credentials which provide access to a [Consent Repository](#consent-repository), consisting of a [Consent Uri](#consent-uri) and a [Consent Access Token].
+
 ### Consent Data Descriptor
 [Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
 
-### Consent Denied Message
-A [Qiy Node Message](#qiy-node-message) which can be used to communicate the denial of a [Consent](#consent).
+### Consent Data Provider Credentials
+[Consent Credentials](#consent-credentials) for a [Data Provider](#data-provider).
 
-### Consent Granted Message
-A [Qiy Node Message](#qiy-node-message) which can be used to communicate the granting of a [Consent](#consent).
+### Consent Denied Request
+A [Qiy Node Request](#qiy-node-request) which can be used to communicate the denial of a [Consent](#consent).
 
-### Consent Request
-A [Qiy Node Request](#qiy-node-request) which can be used to [Request](#request) for a [Consent](#consent).
+### Consent Denied Event
+A [Qiy Node Event](#qiy-node-event) which can be used to communicate the denial of a [Consent](#consent).
+
+### Consent Details Request
+A [Qiy Node Request](#qiy-node-request) which can be used to acquire the details of a [Consent](#consent).
+
+### Consent Granted Request
+A [Qiy Node Request](#qiy-node-request) which can be used to communicate the granting of a [Consent](#consent).
+
+### Consent Granted Event
+A [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting of a [Consent](#consent).
+
+### Consent Individual Credentials
+[Consent Credentials](#consent-credentials) for an [Individual](#individual).
+
+### Consent Relying Party Credentials
+[Consent Credentials](#consent-credentials) for a [Relying Party](#relying-party).
+
+### Consent Repository
+A repository for a [Consent](#consent) which can only be accessed with the proper [Consent Credentials](#consent-credentials).
 
 ### Consent Request Message
 A [Qiy Node Message](#qiy-node-message) which can be used to [Request](#request) for a [Consent](#consent).
