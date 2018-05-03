@@ -117,6 +117,9 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all
 ### Consent
 As defined in the [GDPR](#gdpr).
 
+### Consent Audit Log
+An audit log of a [Consent](#consent) which is accessible via its [Consent Repository](#consent-repository).
+
 ### Consent Credentials
 Credentials which provide access to a [Consent Repository](#consent-repository), consisting of a [Consent Uri](#consent-uri) and a [Consent Access Token].
 
@@ -125,6 +128,9 @@ Credentials which provide access to a [Consent Repository](#consent-repository),
 
 ### Consent Data Provider Credentials
 [Consent Credentials](#consent-credentials) for a [Data Provider](#data-provider).
+
+### Consent Delete Request
+A [Qiy Node Request](#qiy-node-request) which can be used to delete a [Consent](#consent).
 
 ### Consent Denied Request
 A [Qiy Node Request](#qiy-node-request) which can be used to communicate the denial of a [Consent](#consent).
@@ -139,7 +145,7 @@ A [Qiy Node Request](#qiy-node-request) which can be used to acquire the details
 A [Qiy Node Request](#qiy-node-request) which can be used to communicate the granting of a [Consent](#consent).
 
 ### Consent Granted Event
-A [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting of a [Consent](#consent).
+A [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](#consent).
 
 ### Consent Individual Credentials
 [Consent Credentials](#consent-credentials) for an [Individual](#individual).
@@ -164,6 +170,12 @@ A [Service Descriptor](#service-descriptor) of a [Consent Service Description](#
 
 ### Consent Uri
 A [Uri](#uri) which is used to identify a [Consent](#consent).
+
+### Consent Withdrawn Request
+A [Qiy Node Request](#qiy-node-request) which can be used to communicate the withdrawal of a [Consent](#consent).
+
+### Consents Request
+A [Qiy Node Request](#qiy-node-request) which can be used by [Qiy Users](#qiy-user) to access their [Consents](#consent).
 
 ### Core Identifier
 Immutable and secret means, which uniquely identify a [Qiy Node](#qiy-node) registration.
