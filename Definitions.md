@@ -93,8 +93,23 @@ A [Literal](#literal) used to create a [Connection](#connection).
 ### Connect Token Create Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
 
+### Connect Token Delete Request
+A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connect Token](#connect-token).
+
+### Connect Token Details Request
+A [Qiy Node Request](#qiy-node-request) that can be used to get the details of a [Connect Token](#connect-token).
+
 ### Connect Token Register Request
 A [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
+
+### Connect Token Update Request
+A [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
+
+### Connect Token Uri
+A [Uri](#uri) which is used to identify a [Connect Token](#connect-token).
+
+### Connect Tokens Request
+A [Qiy Node Request](#qiy-node-request) that can be used to access [Connect Tokens](#connect-token).
 
 ### Connection
 A [Connection](#connection) between two [Qiy Nodes](#qiy-node).
