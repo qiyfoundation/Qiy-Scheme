@@ -1,4 +1,3 @@
-## Abstract
 # Definitions of the Qiy Scheme
 
 
