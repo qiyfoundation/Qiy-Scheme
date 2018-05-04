@@ -32,6 +32,7 @@ This document describe how [Qiy Users](../Definitions.md#qiy-user) and [Access P
 
 # Basic Flow: Qiy User deletes Qiy Node
 
+![Delete Qiy Node](../images/Delete_Qiy_Node_-_UC10.png)
 
 ## 1. The Qiy User requests the Qiy Trust Network to delete a Qiy Node
 
