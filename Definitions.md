@@ -416,6 +416,9 @@ A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) tha
 ### Qiy Node Credentials
 The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
 
+### Qiy Node Delete Request
+A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node](#qiy-node).
+
 ### Qiy Node Documentation
 The [Qiy Node Documentation](#qiy-node-documentation) consists of the [Qiy Node API](#qiy-node-api) and the [Qiy Node Protocol](#qiy-node-protocol).
 
