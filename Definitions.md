@@ -1,3 +1,4 @@
+## Abstract
 # Definitions of the Qiy Scheme
 
 
@@ -412,9 +413,6 @@ A [Service](#service), which its owner can provide to another [Identity](#identi
 
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
-
-### Route
-tbd
 
 ### Scheme Authority
 The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at a global level: 

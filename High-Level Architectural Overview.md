@@ -733,7 +733,7 @@ A [Transporter](Definitions.md#transporter) can only be instantiated by an [Acce
 
 ## 8.7 Deleting a Transporter
 A [Transporter](Definitions.md#transporter) can be deleted by its [Qiy Node](Definitions.md#qiy-node).
-In this case, the [Transporter](Definitions.md#transporter) will be deleted including any persisted [Data](Definitions.md#data) and [Routes](Definitions.md#route).
+In this case, the [Transporter](Definitions.md#transporter) will be deleted including any persisted [Data](Definitions.md#data) and [Paths](Definitions.md#path).
 
 ## 8.8 Path
 A [Path](Definitions.md#path) is a logical [Connection](Definitions.md#connection) between two [Transporters](Definitions.md#transporter) that can be used to exchange [Transport Messages](Definitions.md#transport-message).
