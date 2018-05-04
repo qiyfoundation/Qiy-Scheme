@@ -84,6 +84,12 @@ A [Node](#node) which hosts one or more [Carriers](#carrier).
 ### Carrier Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
 
+### Catalogue Register Request
+A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) with an [Access Provider](#access-provider) and include it in a [Service Catalogue](#service-catalogue).
+
+### Catalogue Unregister Request
+A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) with an [Access Provider](#access-provider) and remove it from a [Service Catalogue](#service-catalogue).
+
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
 
