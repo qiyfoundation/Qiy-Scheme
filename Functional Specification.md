@@ -50,7 +50,7 @@ From [Qiy Nodes](Definitions.md#qiy-node) to data exchange
 
 # 1 Introduction
 
-This document describes the basic Qiy Scheme scenarios as an introduction to the full functional description provided in the [Use Case specifications](Definitions.md#use-case).
+This document describes the basic Qiy Scheme scenarios as an introduction to the full functional description provided in the [Use Case](Definitions.md#use-case) specifications.
 
 
 ## 1.1 Purpose
@@ -210,7 +210,7 @@ This chapter describes the flow for the [Individual](Definitions.ms#individual) 
 4. The [Qiy Application](Definitions.md#qiy-application) incorporates the [Connect Token](Definitions.md#connect-token) in the webpage address of the [Data Provider](Definitions.md#data-provider) which is opened in a webbrowser.
 5. The [Individual](Definitions.md#individual) views the connect page asking him to sign on.
 6. The [Individual](Definitions.md#individual) has an account with the [Data Provider](Definitions.md#data-provider) and succesfully signs on.
-7. The [Data Provider](Definitions.md#data-provider) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a Connection|Definitions.md#] with the [Connect Token](Definitions.md#connect-token).
+7. The [Data Provider](Definitions.md#data-provider) asks the [Qiy Trust Network](Definitions.md#qiy-trust-network) to create a [Connection](Definitions.md#connection) with the [Connect Token](Definitions.md#connect-token).
 8. The [Qiy Trust Network](Definitions.md#qiy-trust-network) creates the [Connection](Definitions.md#connection) and generates a [Persistent Id](Definitions.md#persistent-id) for the [Connection](Definitions.md#connection).
 9. The [Qiy Trust Network](Definitions.md#qiy-trust-network) sends the [Connection Uri](Definitions.md#connection-uri) and the [Persistent Id](Definitions.md#persistent-id) to the [Data Provider](Definitions.md#data-provider).
 10. The [Data Provider](Definitions.md#data-provider) persists the [Persistent Id](Definitions.md#persistent-id) in the local profile of the [Individual](Definitions.md#individual).
