@@ -39,7 +39,10 @@ Please refer to the [Qiy Guide](Qiy%20Guide.md), this document, in the [latest r
 
 # Access Providers
 
-Please refer to [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md).
+Please refer to:
+* [the website of the Qiy Foundation](https://www.qiyfoundation.org/)
+* [High-Level Architectural Overview](High-Level%20Architectural%20Overview.md)
+
 
 For development, please refer to:
 * [Work Stream Governance, Rules & Regulations](https://github.com/qiyfoundation/Qiy-Scheme/projects/3)
