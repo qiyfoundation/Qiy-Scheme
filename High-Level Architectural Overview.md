@@ -139,6 +139,7 @@ The document is aimed at people who know that Qiy puts people back in control of
 
 ## 1.2 Readers' Guidance
 
+* [Access Providers](Definitions.md#access-provider) are advised to read chapter [3 Architectural Description](#3-architectural-description), sections [4.6.1 Setup](#461-setup) (for [Relying Parties](Definitions.md#relying-party)) [4.6.2 Setup](#462-setup) (for [Data Providers](Definitions.md#data-provider)) and the sections named 'Access Provider' in chapters [6 The Qiy Node Layer](#61-access-provider), [7 The Service Layer](#71-access-provider), [8 The Transport Layer](#81-access-provider) and [9 The Carrier Layer](#91-access-provider).
 * Data analysts are advised to read chapters [3 Architectural Description](#3-architectural-description), [4.6 Setup](#46-setup) and [7 The Service Layer](#7-the-service-layer).
 * Enterprise architects are advised to read chapter [3 Architectural Description](#3-architectural-description).
 * Information analysts are advised to read chapters [3 Architectural Description](#3-architectural-description), [4 The User Layer](#4-the-user-layer) and [5 The Application Layer](#5-the-application-layer).
@@ -733,7 +734,7 @@ A [Transporter](Definitions.md#transporter) can only be instantiated by an [Acce
 
 ## 8.7 Deleting a Transporter
 A [Transporter](Definitions.md#transporter) can be deleted by its [Qiy Node](Definitions.md#qiy-node).
-In this case, the [Transporter](Definitions.md#transporter) will be deleted including any persisted [Data](Definitions.md#data) and [Routes](Definitions.md#route).
+In this case, the [Transporter](Definitions.md#transporter) will be deleted including any persisted [Data](Definitions.md#data) and [Paths](Definitions.md#path).
 
 ## 8.8 Path
 A [Path](Definitions.md#path) is a logical [Connection](Definitions.md#connection) between two [Transporters](Definitions.md#transporter) that can be used to exchange [Transport Messages](Definitions.md#transport-message).

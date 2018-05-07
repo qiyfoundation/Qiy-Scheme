@@ -515,9 +515,6 @@ A [Service](#service), which its owner can provide to another [Identity](#identi
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
 
-### Route
-tbd
-
 ### RSA Private Key
 An RSA private key, see https://en.wikipedia.org/wiki/RSA_(cryptosystem).
 
