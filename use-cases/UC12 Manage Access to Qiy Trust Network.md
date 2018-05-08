@@ -17,6 +17,8 @@ This document describe how [Qiy Users](../Definitions.md#qiy-user) and [Access P
 	1. [E1 Application Management](#e1-application-management)
 	1. [E2 Qiy Node Management](#e2-qiy-node-management)
 	1. [E3 Service Provider Management](#e3-service-provider-management)
+		1. [E3.1 Register Service Provider](#e31-register-service-provider)
+		1. [E3.2 Unregister Service Provider](#e32-unregister-service-provider)
 1. [Diagram Source Code](#diagram-source-code)
 	1. [Delete Qiy Node](#delete-qiy-node)
 
@@ -60,7 +62,15 @@ tbd
 
 ## E3 Service Provider Management
 
-tbd
+This chapter describes how [Access Providers](../Definitions.md#access-provider) manage the access of [Service Providers](../Definitions.md#service-provider) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+
+### E3.1 Register Service Provider
+
+The [Access Provider](../Definitions.md#access-provider) can register a [Service Provider](../Definitions.md#service-provider) with a [Service Provider Register Request](../Definitions.md#service-provider-register-request).
+
+### E3.2 Unregister Service Provider
+
+The [Access Provider](../Definitions.md#access-provider) can unregister a [Service Provider](../Definitions.md#service-provider) with a [Service Provider Unregister Request](../Definitions.md#service-provider-unregister-request).
 
 
 # Diagram Source Code

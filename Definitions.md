@@ -590,6 +590,12 @@ The [Identity](#identity) of the [Service Provider](#service-provider) as regist
 ### Service Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
 
+### Service Provider Register Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Service Provider Unregister Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
 ### Service Source
 A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
 
