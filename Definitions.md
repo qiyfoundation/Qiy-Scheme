@@ -315,11 +315,17 @@ Synonymous with [Identifier](#identifier)
 ### Message Description
 A [Data Description](#data-description) of a [Qiy Node Message](#qiy-node-message).
 
+### Message Delete Request
+A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node Message](#qiy-node-message).
+
 ### Message Descriptor
 This term is used in the following senses:
 * A [Uri](#uri) which identifies a [Message Description](#message-description).
 * A [Uri](#uri) which can be used to obtain a [Message Description](#message-description) from the [Service Library](#service-library).
 * An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message).
+
+### Message Details Request
+A [Qiy Node Request](#qiy-node-request) that can be used to get the details of a [Qiy Node Message](#qiy-node-message).
 
 ### Message Post Request
 A [Qiy Node Request](#qiy-node-request) that can be used to post a [Qiy Node Message](#qiy-node-message).
