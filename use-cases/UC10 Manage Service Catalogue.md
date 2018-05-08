@@ -1,4 +1,4 @@
-# UC11 Manage Service Catalogue
+# UC10 Manage Service Catalogue
 
 
 # Abstract
@@ -35,7 +35,7 @@ This document describes how [Service Providers](../Definitions.md#service-provid
 
 The [Service Provider](../Definitions.md#service-provider) can register a [Service](../Definitions.md#service) using a [Catalogue Register Request](../Definitions.md#catalogue-register-request).
 
-![Register Service](../images/Register_Service_-_UC11.png)
+![Register Service](../images/Register_Service_-_UC10.png)
 
 
 # Postconditions
@@ -49,14 +49,14 @@ The [Service Provider](../Definitions.md#service-provider) can register a [Servi
 
 The [Service Provider](../Definitions.md#service-provider) can uregister a [Service](../Definitions.md#service) using a [Catalogue Unregister Request](../Definitions.md#catalogue-unregister-request).
 
-![Unregister Service](../images/Unregister_Service_-_UC11.png)
+![Unregister Service](../images/Unregister_Service_-_UC10.png)
 
 
 # Diagram Source Code
 
 ## Register Service
 
-![Register Service](../images/Register_Service_-_UC11.png)
+![Register Service](../images/Register_Service_-_UC10.png)
 
 ```
 title "Register Service"
@@ -70,7 +70,7 @@ QTF  ->  QTF  : 2 Register Service
 
 ## Unregister Service
 
-![Unregister Service](../images/Unregister_Service_-_UC11.png)
+![Unregister Service](../images/Unregister_Service_-_UC10.png)
 
 ```
 title "Unregister Service"

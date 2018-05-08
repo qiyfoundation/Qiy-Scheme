@@ -1,4 +1,4 @@
-# UC10 Manage Access to Qiy Trust Network
+# UC11 Manage Access to Qiy Trust Network
 
 # Abstract
 
@@ -32,7 +32,7 @@ This document describe how [Qiy Users](../Definitions.md#qiy-user) and [Access P
 
 # Basic Flow: Qiy User deletes Qiy Node
 
-![Delete Qiy Node](../images/Delete_Qiy_Node_-_UC10.png)
+![Delete Qiy Node](../images/Delete_Qiy_Node_-_UC11.png)
 
 ## 1. The Qiy User requests the Qiy Trust Network to delete a Qiy Node
 
@@ -67,7 +67,7 @@ tbd
 
 ## Delete Qiy Node
 
-![Delete Qiy Node](../images/Delete_Qiy_Node_-_UC10.png)
+![Delete Qiy Node](../images/Delete_Qiy_Node_-_UC11.png)
 
 ```
 title "Delete Qiy Node"
