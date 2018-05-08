@@ -145,7 +145,7 @@ As defined in the [GDPR](#gdpr).
 An audit log of a [Consent](#consent) which is accessible via its [Consent Repository](#consent-repository).
 
 ### Consent Credentials
-Credentials which provide access to a [Consent Repository](#consent-repository), consisting of a [Consent Uri](#consent-uri) and a [Consent Access Token].
+Credentials which provide access to a [Consent Repository](#consent-repository).
 
 ### Consent Data Descriptor
 [Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
@@ -256,7 +256,7 @@ The Expiration Date of the [Transition Phase](#transition-phase): 30 juni 2019, 
 A formation of a unity by multiple [Entities](#entity) in which some components are shared, while each retains control of its own affairs.
 
 ### Functional Specification
-One of the [Qiy Scheme](#qiy-scheme) documents, see [Functional Specification](Functional Specification.md).
+One of the [Qiy Scheme](#qiy-scheme) documents, see [Functional Specification](Functional%20Specification.md).
 
 ### GDPR
 See [General Data Protection Regulation](#general-data-protection-regulation).
