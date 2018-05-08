@@ -90,6 +90,9 @@ A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service
 ### Catalogue Unregister Request
 A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) with an [Access Provider](#access-provider) and remove it from a [Service Catalogue](#service-catalogue).
 
+### Communication Network
+As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090 
+
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
 
@@ -420,7 +423,7 @@ A foundation dedicated to putting people back in control of their [Personal Data
 A member of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation.org/membership/.
 
 ### Qiy Node
-A [Technology Service](#technology-service): a point of entry for a [Qiy User](#qiy-user) to connect to his personal or organisational [Data](#data) and allowing to manage and reuse [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
+A [Node](#node): a point of entry for a [Qiy User](#qiy-user) to connect to his personal or organisational [Data](#data) and allowing to manage and reuse [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
 A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
@@ -471,7 +474,7 @@ A set of [Qiy Scheme](#qiy-scheme) rules under which [Applications](#application
 A set of documents concerning governance, legal and technical aspects of the [Qiy Scheme](#qiy-scheme).
 
 ### Qiy Trust Network
-A [Technology Service](#technology-service) which is provided by [Access Providers](#access-provider) to [Qiy Users](#qiy-user) which enables people to access, manage and share [Personal Data](#personal-data) under the rules of the [Qiy Scheme](#qiy-scheme). 
+A [Communication Network](#communication-network) that connects [Qiy Nodes](#qiy-node) and that is provided by [Access Providers](#access-provider) to [Qiy Users](#qiy-user) under the rules of the [Qiy Scheme](#qiy-scheme). 
 
 ### Qiy Trust Principles
 The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Qiy Users](#qiy-user) must respect these principles.
