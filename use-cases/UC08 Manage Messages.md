@@ -36,7 +36,7 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 ## 1. The Qiy User requests the Qiy Trust Network to delete a Message
 
-The [Qiy User](../Definitions.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Qiy Node Message](../Definitions.md#qiy-node-message) by using its [Message Uri] in a [Message Delete Request](../Definitions.md#message-delete-request).
+The [Qiy User](../Definitions.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Qiy Node Message](../Definitions.md#qiy-node-message) using a [Message Delete Request](../Definitions.md#message-delete-request).
 
 ## 2. The Qiy Trust Network deletes the Message
 
