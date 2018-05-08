@@ -648,7 +648,9 @@ A relation between multiple [Entities](#entity), which is characterized by a mut
 See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 
 ### Use Case
-See https://en.wikipedia.org/wiki/Use_case.
+For the definion, see https://en.wikipedia.org/wiki/Use_case.
+
+For the [Use Cases](#use-case) of the [Qiy Scheme](#qiy-scheme), see [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
 
 ### User
 A [Business Role](#business-role) for [Entities](#entity).
