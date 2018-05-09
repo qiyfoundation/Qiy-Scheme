@@ -12,77 +12,77 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Purpose](#11-purpose)
 	1. [Readers' Guidance](#12-readers-guidance)
 	1. [Overview](#13-overview)
-1. [Requests](#3-requests)
-	1. [General](#31-general)
-		1. [Health Check](#311-health-check)
-		1. [Dynamic Path Endpoint Addresses](#312-dynamic-path-endpoint-addresses)
-		1. [Authentication](#313-authentication)
-			1. [Java](#3131-java)
-			1. [Python](#3132-python)
-	1. [Catalogue Requests](#32-catalogue-requests)
-		1. [Catalogue Register Request](#321-catalogue-register-request)
-		1. [Catalogue Unregister Request](#3211-catalogue-unregister-request)
-	1. [Connect Token Requests](#33-connect-token-requests)
-		1. [Connect Token Create Request](#331-connect-token-create-request)
-		1. [Connect Token Delete Request](#332-connect-token-delete-request)
-		1. [Connect Token Details Request](#333-connect-token-details-request)
-		1. [Connect Token Register Request](#334-connect-token-register-request)
-		1. [Connect Token Update Request](#335-connect-token-update-request)
-		1. [Connect Tokens Request](#336-connect-tokens-request)
-	1. [Connections Requests](#34-connections-requests)
-		1. [Connection Create Request](#341-connection-create-request)
-		1. [Connection Delete Request](#342-connection-delete-request)
-		1. [Connection Details Request](#343-connection-details-request)
-		1. [Connections Request](#344-connections-request)
-			1. [Example Connections Request](#3441-example-connections-request)
-	1. [Consent Requests](#35-consent-requests)
-		1. [Consent Delete Request](#351-consent-delete-request)
-		1. [Consent Denied Request](#352-consent-denied-request)
-		1. [Consent Details Request](#353-consent-details-request)
-		1. [Consent Granted Request](#354-consent-granted-request)
-		1. [Consent Withdrawn Request](#355-consent-withdrawn-request)
-		1. [Consents Request](#356-consents-request)
-	1. [Message Requests](#36-message-requests)
-		1. [Message Delete Request](#361-message-delete-request)
-		1. [Message Details Request](#362-message-details-request)
-		1. [Message Post Request](#363-message-post-request)
-		1. [Messages Request](#364-messages-request)
-	1. [Operation Requests](#37-operation-requests)
-		1. [Operation Execute Request](#371-operation-execute-request)
-		1. [Operation Register Request](#372-operation-register-request)
-	1. [Qiy Node Requests](#38-qiy-node-requests)
-		1. [Qiy Node Delete Request](#381-qiy-node-delete-request)
-		1. [Qiy Node Create Request](#382-qiy-node-create-request)
-	1. [Service Registration Requests](#39-service-registration-requests)
-		1. [Service Register Request](#391-service-register-request)
-		1. [Service Unregister Request](#392-service-unregister-request)
-	1. [Service Provider Registration Requests](#310-service-provider-registration-requests)
-		1. [Service Provider Register Request](#3103-service-provider-register-request)
-		1. [Service Provider Unregister Request](#3104-service-provider-unregister-request)
-	1. [Source Requests](#311-source-requests)
-		1. [Source Candidates Request](#3115-source-candidates-request)
-		1. [Source Register Request](#3116-source-register-request)
-1. [Events](#4-events)
-	1. [Connection Events](#41-connection-events)
-		1. [Connection Created Event](#411-connection-created-event)
-	1. [Consent Events](#42-consent-events)
-		1. [Consent Denied Event](#421-consent-denied-event)
-		1. [Consent Granted Event](#422-consent-granted-event)
-	1. [Message Events](#43-message-events)
-		1. [Message Received Event](#431-message-received-event)
-	1. [Persistent Id Events](#44-persistent-id-events)
-		1. [Persistent Id Event](#441-persistent-id-event)
-1. [Messages](#5-messages)
-1. [Consent Messages](#51-consent-messages)
-		1. [Consent Request Message](#511-consent-request-message)
-1. [Operation Messages](#52-operation-messages)
-		1. [Operation Reference Message](#521-operation-reference-message)
-		1. [Operation Reference Request Message](#521-operation-reference-request-message)
-1. [Service Credentials Messages](#53-service-credentials-messages)
-		1. [Service Credentials Request Message](#531-service-credentials-request-message)
-1. [Portfolio Messages](#54-portfolio-messages)
-		1. [Portfolio Register Message](#541-portfolio-register-message)
-1. [Index](#6-index)
+1. [Requests](#2-requests)
+	1. [General](#21-general)
+		1. [Health Check](#211-health-check)
+		1. [Dynamic Path Endpoint Addresses](#212-dynamic-path-endpoint-addresses)
+		1. [Authentication](#213-authentication)
+			1. [Java](#2131-java)
+			1. [Python](#2132-python)
+	1. [Catalogue Requests](#22-catalogue-requests)
+		1. [Catalogue Register Request](#221-catalogue-register-request)
+		1. [Catalogue Unregister Request](#222-catalogue-unregister-request)
+	1. [Connect Token Requests](#23-connect-token-requests)
+		1. [Connect Token Create Request](#231-connect-token-create-request)
+		1. [Connect Token Delete Request](#232-connect-token-delete-request)
+		1. [Connect Token Details Request](#233-connect-token-details-request)
+		1. [Connect Token Register Request](#234-connect-token-register-request)
+		1. [Connect Token Update Request](#235-connect-token-update-request)
+		1. [Connect Tokens Request](#236-connect-tokens-request)
+	1. [Connections Requests](#24-connections-requests)
+		1. [Connection Create Request](#241-connection-create-request)
+		1. [Connection Delete Request](#242-connection-delete-request)
+		1. [Connection Details Request](#243-connection-details-request)
+		1. [Connections Request](#244-connections-request)
+			1. [Example Connections Request](#2441-example-connections-request)
+	1. [Consent Requests](#25-consent-requests)
+		1. [Consent Delete Request](#251-consent-delete-request)
+		1. [Consent Denied Request](#252-consent-denied-request)
+		1. [Consent Details Request](#253-consent-details-request)
+		1. [Consent Granted Request](#254-consent-granted-request)
+		1. [Consent Withdrawn Request](#255-consent-withdrawn-request)
+		1. [Consents Request](#256-consents-request)
+	1. [Message Requests](#26-message-requests)
+		1. [Message Delete Request](#261-message-delete-request)
+		1. [Message Details Request](#262-message-details-request)
+		1. [Message Post Request](#263-message-post-request)
+		1. [Messages Request](#264-messages-request)
+	1. [Operation Requests](#27-operation-requests)
+		1. [Operation Execute Request](#271-operation-execute-request)
+		1. [Operation Register Request](#272-operation-register-request)
+	1. [Qiy Node Requests](#28-qiy-node-requests)
+		1. [Qiy Node Delete Request](#281-qiy-node-delete-request)
+		1. [Qiy Node Create Request](#282-qiy-node-create-request)
+	1. [Service Registration Requests](#29-service-registration-requests)
+		1. [Service Register Request](#291-service-register-request)
+		1. [Service Unregister Request](#292-service-unregister-request)
+	1. [Service Provider Registration Requests](#210-service-provider-registration-requests)
+		1. [Service Provider Register Request](#2101-service-provider-register-request)
+		1. [Service Provider Unregister Request](#2102-service-provider-unregister-request)
+	1. [Source Requests](#211-source-requests)
+		1. [Source Candidates Request](#2115-source-candidates-request)
+		1. [Source Register Request](#2116-source-register-request)
+1. [Events](#3-events)
+	1. [Connection Events](#31-connection-events)
+		1. [Connection Created Event](#311-connection-created-event)
+	1. [Consent Events](#32-consent-events)
+		1. [Consent Denied Event](#321-consent-denied-event)
+		1. [Consent Granted Event](#322-consent-granted-event)
+	1. [Message Events](#33-message-events)
+		1. [Message Received Event](#331-message-received-event)
+	1. [Persistent Id Events](#34-persistent-id-events)
+		1. [Persistent Id Event](#341-persistent-id-event)
+1. [Messages](#4-messages)
+	1. [Consent Messages](#41-consent-messages)
+		1. [Consent Request Message](#411-consent-request-message)
+	1. [Operation Messages](#42-operation-messages)
+		1. [Operation Reference Message](#421-operation-reference-message)
+		1. [Operation Reference Request Message](#422-operation-reference-request-message)
+	1. [Service Credentials Messages](#43-service-credentials-messages)
+		1. [Service Credentials Request Message](#431-service-credentials-request-message)
+	1. [Portfolio Messages](#44-portfolio-messages)
+		1. [Portfolio Register Message](#441-portfolio-register-message)
+1. [Index](#5-index)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Connect Token](#connect-token)
 	1. [Connect Token Create Request](#connect-token-create-request)
@@ -134,35 +134,35 @@ This document aims to be the entry point for information analysts and software e
 
 ## 1.3 Overview
 
-* Chapter [3 Requests](#3-requests) describes the [Qiy Node Requests](Definitions.md#qiy-node-request).
-* Chapter [4 Events](#4-events) describes the [Qiy Node Events](Definitions.md#qiy-node-event).
-* Chapter [5 Messages](#5-messages) describes the [Qiy Node Messages](Definitions.md#qiy-node-message).
-* Chapter [6 Index](#6-index) contains an index for the used terms.
+* Chapter [2 Requests](#2-requests) describes the [Qiy Node Requests](Definitions.md#qiy-node-request).
+* Chapter [3 Events](#3-events) describes the [Qiy Node Events](Definitions.md#qiy-node-event).
+* Chapter [4 Messages](#4-messages) describes the [Qiy Node Messages](Definitions.md#qiy-node-message).
+* Chapter [5 Index](#5-index) contains an index for the used terms.
 
 
-# 3 Requests
+# 2 Requests
 
 This chapter describes the [Qiy Node Requests](Definitions.md#qiy-node-request).
 
-## 3.1 General
+## 2.1 General
 
-### 3.1.1 Health Check
+### 2.1.1 Health Check
 
 The health of a Qiy Node can be checked with the following request:
 
 GET /admin/healthcheck
 
 
-### 3.1.2 Dynamic Path Endpoint Addresses
+### 2.1.2 Dynamic Path Endpoint Addresses
 
 The Qiy Node uses [Dynamic Path Endpoint Addresses](#dynamic-path-endpoint-addresses) for all but the /api path endpoint, which is strongly advised to be used at the start of every new day to obtain valid addresses and remain operational.
 
 
-### 3.1.3 Authentication
+### 2.1.3 Authentication
 
 Most requests must be authenticated using the [Authorization Header Parameter](#authorization-header-parameter) containing a signature over the Qiy Node Id, the current Unix time in ms using a Private Key which is unique for the Qiy Node.
 
-#### 3.1.3.1 Java
+#### 2.1.3.1 Java
 
 In Java, the value of the Authorization header parameter can be calculated as follows:
 ```
@@ -186,7 +186,7 @@ public String signatureHeaderForData(String uuid, byte[] data) {
 }
 ````
 
-#### 3.1.3.2 Python
+#### 2.1.3.2 Python
 
 In Python, the value of the Authorization header parameter can be calculated as follows:
 
@@ -211,50 +211,50 @@ def authHeader(uuid, nonce, Input):
 
 Information of the connections can be acquired using the [Connections Request](#connections-request).
 
-## 3.2 Catalogue Requests
+## 2.2 Catalogue Requests
 
-### 3.2.1 Catalogue Register Request
+### 2.2.1 Catalogue Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and include it in a [Service Catalogue](Definitions.md#service-catalogue).
 
-### 3.2.1.1 Catalogue Unregister Request
+### 2.2.2 Catalogue Unregister Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and remove it from a [Service Catalogue](Definitions.md#service-catalogue).
 
-## 3.3 Connect Token Requests
+## 2.3 Connect Token Requests
 
-### 3.3.1 Connect Token Create Request
+### 2.3.1 Connect Token Create Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a [Connect Token](Definitions.md#connect-token) from the [Qiy Node](Definitions.md#qiy-node).
 
-### 3.3.2 Connect Token Delete Request
+### 2.3.2 Connect Token Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connect Token](Definitions.md#connect-token).
 
-### 3.3.3 Connect Token Details Request
+### 2.3.3 Connect Token Details Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connect Token](Definitions.md#connect-token).
 
-### 3.3.4 Connect Token Register Request
+### 2.3.4 Connect Token Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to register a [Connect Token](Definitions.md#connect-token).
 
-### 3.3.5 Connect Token Update Request
+### 2.3.5 Connect Token Update Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to register a [Connect Token](Definitions.md#connect-token).
 
-### 3.3.6 Connect Tokens Request
+### 2.3.6 Connect Tokens Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to access [Connect Tokens](Definitions.md#connect-token).
 
 
-## 3.4 Connections Requests
+## 2.4 Connections Requests
 
-### 3.4.1 Connection Create Request
+### 2.4.1 Connection Create Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) with a [Connect Token](Definitions.md#connect-token).
 
-### 3.4.2 Connection Delete Request
+### 2.4.2 Connection Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connection](Definitions.md#connection).
 
-### 3.4.3 Connection Details Request
+### 2.4.3 Connection Details Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connection](Definitions.md#connection).
 
-### 3.4.4 Connections Request
+### 2.4.4 Connections Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Connections](Definitions.md#connection) of a [Qiy Node](Definitions.md#qiy-node).
 
-#### 3.4.4.1 Example Connections Request
+#### 2.4.4.1 Example Connections Request
 
 ```
 Request:
@@ -285,143 +285,144 @@ Content-Length: 215
 ```
 
 
-## 3.5 Consent Requests
+## 2.5 Consent Requests
 
-### 3.5.1 Consent Delete Request
+### 2.5.1 Consent Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to delete a [Consent](Definitions.md#consent).
 
-### 3.5.2 Consent Denied Request
+### 2.5.2 Consent Denied Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
 
-### 3.5.3 Consent Details Request
+### 2.5.3 Consent Details Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to acquire the details of a [Consent](Definitions.md#consent).
 
-### 3.5.4 Consent Granted Request
+### 2.5.4 Consent Granted Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the granting of a [Consent](Definitions.md#consent).
 
-### 3.5.5 Consent Withdrawn Request
+### 2.5.5 Consent Withdrawn Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the withdrawal of a [Consent](Definitions.md#consent).
 
-### 3.5.6 Consents Request
+### 2.5.6 Consents Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used by [Qiy Users](Definitions.md#qiy-user) to access their [Consents](Definitions.md#consent).
 
-## 3.6 Message Requests
+## 2.6 Message Requests
 
-### 3.6.1 Message Delete Request
+### 2.6.1 Message Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node Message](Definitions.md#qiy-node-message).
 
-### 3.6.2 Message Details Request
+### 2.6.2 Message Details Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Qiy Node Message](Definitions.md#qiy-node-message).
 
-### 3.6.3 Message Post Request
+### 2.6.3 Message Post Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](Definitions.md#qiy-node-message).
 
-### 3.6.4 Messages Request
+### 2.6.4 Messages Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](Definitions.md#qiy-node).
 
-## 3.7 Operation Requests
+## 2.7 Operation Requests
 
-### 3.7.1 Operation Execute Request
+### 2.7.1 Operation Execute Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
 
-### 3.7.2 Operation Register Request
+### 2.7.2 Operation Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registrating an [Operation Specification](Definitions.md#operation-specification).
 
-## 3.8 Qiy Node Requests
+## 2.8 Qiy Node Requests
 
-### 3.8.1 Qiy Node Delete Request
+### 2.8.1 Qiy Node Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node](Definitions.md#qiy-node).
 
-### 3.8.2 Qiy Node Create Request
+### 2.8.2 Qiy Node Create Request
 A [HTTP Request](Definitions.md#http-request) to create a [Qiy Node](Definitions.md#qiy-node).
 
-## 3.9 Service Registration Requests
+## 2.9 Service Registration Requests
 
-### 3.9.1 Service Register Request
+### 2.9.1 Service Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service).
 
-### 3.9.2 Service Unregister Request
+### 2.9.2 Service Unregister Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service](Definitions.md#service).
 
-## 3.10 Service Provider Registration Requests
+## 2.10 Service Provider Registration Requests
 
-### 3.10.3 Service Provider Register Request
+### 2.10.1 Service Provider Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 3.10.4 Service Provider Unregister Request
+### 2.10.2 Service Provider Unregister Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-## 3.11 Source Requests
+## 2.11 Source Requests
 
-### 3.11.5 Source Candidates Request
+### 2.11.5 Source Candidates Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to obtain candidate [Service Providers](Definitions.md#service-provider) for a [Service](Definitions.md#service).
 
-### 3.11.6 Source Register Request
+### 2.11.6 Source Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service Provider](Definitions.md#service-provider) as source for a [Service](Definitions.md#service).
 
 
 
-# 4 Events
+# 3 Events
 
 A Qiy Application can use the [Events Request](#events-request) to start listening to the [Events](#events) generated by its Qiy Node.
 The Events comply to the [Server-Sent Events Standard](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
 
-## 4.1 Connection Events
+## 3.1 Connection Events
 
-### 4.1.1 Connection Created Event
+### 3.1.1 Connection Created Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) that is generated when a [Connection](Definitions.md#connection) has been created.
 
-## 4.2 Consent Events
+## 3.2 Consent Events
 
-### 4.2.1 Consent Denied Event
+### 3.2.1 Consent Denied Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
 
-### 4.2.2 Consent Granted Event
+### 3.2.2 Consent Granted Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](Definitions.md#consent).
 
-## 4.3 Message Events
+## 3.3 Message Events
 
-### 4.3.1 Message Received Event
+### 3.3.1 Message Received Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](Definitions.md#qiy-node-message).
 
-## 4.4 Persistent Id Events
+## 3.4 Persistent Id Events
 
-### 4.4.1 Persistent Id Event
+### 3.4.1 Persistent Id Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](Definitions.md#connection).
 
 
 
 
-# 5 Messages
+# 4 Messages
 
 This chapter describes the [Qiy Node Messages](#qiy-node-messages).
 
-# 5.1 Consent Messages
+## 4.1 Consent Messages
 
-### 5.1.1 Consent Request Message
+### 4.1.1 Consent Request Message
+
 A [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
 
-# 5.2 Operation Messages
+## 4.2 Operation Messages
 
-### 5.2.1 Operation Reference Message
+### 4.2.1 Operation Reference Message
 A [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference).
 
-### 5.2.1 Operation Reference Request Message
+### 4.2.2 Operation Reference Request Message
 A [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
 
-# 5.3 Service Credentials Messages
+## 4.3 Service Credentials Messages
 
-### 5.3.1 Service Credentials Request Message
+### 4.3.1 Service Credentials Request Message
 A [Qiy Node Message](Definitions.md#qiy-node-message) for requesting [Service Credentials](Definitions.md#service-credentials).
 
-# 5.4 Portfolio Messages
+## 4.4 Portfolio Messages
 
-### 5.4.1 Portfolio Register Message
+### 4.4.1 Portfolio Register Message
 A [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to add a [Service Provider](Definitions.md#service-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
 
 
 
-# 6 Index
+# 5 Index
 
 ## Authorization Header Parameter
 
