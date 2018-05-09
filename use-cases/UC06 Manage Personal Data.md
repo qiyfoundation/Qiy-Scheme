@@ -16,15 +16,18 @@ This document describes how [Individuals](../Definitions.md#individual) and [Dat
 	1. [The Qiy Trust Network sends the Data Reference to the Relying Party](#4-the-qiy-trust-network-sends-the-data-reference-to-the-relying-party)
 1. [Postconditions](#postconditions)
 1. [Extensions](#extensions)
-1. [E1 Add Data Provider to Service Portfolio](#e1-add-data-provider-to-service-portfolio)
-	1. [Preconditions](#preconditions)
-	1. [Flow](#flow)
-		1. [The Individual requests the Qiy Trust Network to add a Data Provider to his Service Portfolio](#1-the-individual-requests-the-qiy-trust-network-to-add-a-data-provider-to-his-service-portfolio)
-		1. [The Qiy Trust Network requests the Data Provider for Service Credentials](#2-the-qiy-trust-network-requests-the-data-provider-for-service-credentials)
-		1. [The Data Provider generates the Service Credentials](#3-the-data-provider-generates-the-service-credentials)
-		1. [The Data Provider returns the Service Credentials to the Qiy Trust Network](#4-the-data-provider-returns-the-service-credentials-to-the-qiy-trust-network)
-		1. [The Qiy Trust Network updates the Service Portfolio](#5-the-qiy-trust-network-updates-the-service-portfolio)
-	1. [Postconditions](#postconditions)
+	1. [E1 Notify Consent](#e1-notify-consent)
+	1. [E2 Propose Data Source](#e2-propose-data-source)
+	1. [E3 Request Operation Specification](#e3-request-operation-specification)
+	1. [E4 Add Data Provider to Service Portfolio](#e4-add-data-provider-to-service-portfolio)
+		1. [Preconditions](#preconditions)
+		1. [Flow](#flow)
+			1. [The Individual requests the Qiy Trust Network to add a Data Provider to his Service Portfolio](#1-the-individual-requests-the-qiy-trust-network-to-add-a-data-provider-to-his-service-portfolio)
+			1. [The Qiy Trust Network requests the Data Provider for Service Credentials](#2-the-qiy-trust-network-requests-the-data-provider-for-service-credentials)
+			1. [The Data Provider generates the Service Credentials](#3-the-data-provider-generates-the-service-credentials)
+			1. [The Data Provider returns the Service Credentials to the Qiy Trust Network](#4-the-data-provider-returns-the-service-credentials-to-the-qiy-trust-network)
+			1. [The Qiy Trust Network updates the Service Portfolio](#5-the-qiy-trust-network-updates-the-service-portfolio)
+		1. [Postconditions](#postconditions)
 1. [Diagram Source Code](#diagram-source-code)
 	1. [Add Data Source](#add-data-source)
 	1. [Add Data Provider to Service Portfolio](#add-data-provider-to-service-portfolio)
@@ -75,41 +78,53 @@ The [Qiy Trust Network](../Definitions.md#qiy-trust-network) sends the [Data Ref
 
 # Extensions
 
-# E1 Add Data Provider to Service Portfolio
+## E1 Notify Consent
 
-## Preconditions
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) can notify the registration of a [Consent](../Definitions.md#consent) to an [Individual](../Definitions.md#individual) using a [Consent Notification Message](../Definitions.md#consent-notification-message).
+
+## E2 Propose Data Source
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) can propose [Data Sources](../Definitions.md#data-source) for a [Consent](../Definitions.md#consent) to an [Individual](../Definitions.md#individual) using a [Source Candidates Message](../Definitions.md#source-candidates-message).
+
+## E3 Request Operation Specification
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) can request for an [Operation Specification](../Definitions.md#operation-specification) of a [Data Source](../Definitions.md#data-source) using a [Operation Specification Request Message](../Definitions.md#operation-specification-request-message).
+
+## E4 Add Data Provider to Service Portfolio
+
+### Preconditions
 
 1. The [Individual](../Definitions.md#individual) has a [Connection](../Definitions.md#connection) with the [Data Provider](../Definitions.md#data-provider) and knows its [Persistent Id](../Definitions.md#persistent-id). 
 1. The [Data Provider](../Definitions.md#data-provider) has a [Connection](../Definitions.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Definitions.md#persistent-id).
 1. The [Data Provider](../Definitions.md#data-provider) knows the (local) [Identity](../Definitions.md#identity) of the [Individual](../Definitions.md#individual).
 1. The [Data Provider](../Definitions.md#data-provider) has permission to provide the [Personal Data](../Definitions.md#personal-data) via Qiy.
 
-## Flow
+### Flow
 
 ![Add Data Provider to Service Portfolio](../images/Add_Data_Provider_to_Service_Portfolio_-_UC06.png)
 
-### 1. The Individual requests the Qiy Trust Network to add a Data Provider to his Service Portfolio
+#### 1. The Individual requests the Qiy Trust Network to add a Data Provider to his Service Portfolio
 
 The [Individual](../Definitions.md#individual) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to add a [Data Provider](../Definitions.md#data-provider) to his [Service Portfolio](../Definitions.md#service-portfolio) by sending the [Data Provider](../Definitions.md#data-provider) a [Portfolio Register Message](../Definitions.md#portfolio-register-message).
 
-### 2. The Qiy Trust Network requests the Data Provider for Service Credentials
+#### 2. The Qiy Trust Network requests the Data Provider for Service Credentials
 
 The [Qiy Trust Network](../Definitions.md#qiy-trust-network) requests the [Data Provider](../Definitions.md#data-provider) for [Service Credentials](../Definitions.md#service-credentials) that will allow the [Individual](../Definitions.md#individual) to use the [Service Endpoint](../Definitions.md#service-endpoint) of the [Data Provider](../Definitions.md#data-provider) using a [Service Credentials Request Message](../Definitions.md#service-credentials-request-message).
 
-### 3. The Data Provider generates the Service Credentials
+#### 3. The Data Provider generates the Service Credentials
 
 The [Data Provider](../Definitions.md#data-provider) generates the [Service Credentials](../Definitions.md#service-credentials).
 
-### 4. The Data Provider returns the Service Credentials to the Qiy Trust Network
+#### 4. The Data Provider returns the Service Credentials to the Qiy Trust Network
 
 The [Data Provider](../Definitions.md#data-provider) returns the [Service Credentials](../Definitions.md#service-credentials) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) in the response of the [Service Credentials Request Message](../Definitions.md#service-credentials-request-message).
 
-### 5. The Qiy Trust Network updates the Service Portfolio
+#### 5. The Qiy Trust Network updates the Service Portfolio
 
 The [Qiy Trust Network](../Definitions.md#qiy-trust-network) updates the [Service Portfolio](../Definitions.md#service-portfolio) by adding the [Data Provider](../Definitions.md#data-provider) and persisting the [Service Credentials](../Definitions.md#service-credentials).
 
 
-## Postconditions
+### Postconditions
 
 1. The [Data Provider](../Definitions.md#data-provider) is registered as such in the [Service Portfolio](../Definitions.md#service-portfolio) of the [Individual](../Definitions.md#individual) with the [Service Credentials](../Definitions.md#service-credentials) to access to the [Individuals](../Definitions.md#individual) [Personal Data](../Definitions.md#personal-data) it keeps.
 
