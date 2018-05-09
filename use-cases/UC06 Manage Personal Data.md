@@ -10,7 +10,7 @@ This document describes how [Individuals](../Definitions.md#individual) and [Dat
 1. [Primary Actors](#primary-actors)
 1. [Preconditions](#preconditions)
 1. [Basic Flow: Individual adds Data Source](#basic-flow-individual-adds-data-source)
-	1. [The Individual requests the Qiy Trust Network to add a Data Provider as a Data Source](#1-the-individual-requests-the-qiy-trust-network-to-add-a-data-provider-as-a-data-source)
+	1. [The Individual requests the Qiy Trust Network to add a Data Source](#1-the-individual-requests-the-qiy-trust-network-to-add-a-data-source)
 	1. [The Qiy Trust Network generates a Data Reference](#2-the-qiy-trust-network-generates-a-data-reference)
 	1. [The Qiy Trust Network registers the Data Reference with the Consent](#3-the-qiy-trust-network-registers-the-data-reference-with-the-consent)
 	1. [The Qiy Trust Network sends the Data Reference to the Relying Party](#4-the-qiy-trust-network-sends-the-data-reference-to-the-relying-party)
@@ -45,14 +45,14 @@ This document describes how [Individuals](../Definitions.md#individual) and [Dat
 
 # Basic Flow: Individual adds Data Source
 
-The [Individual](../Definitions.md#individual) adds a [Data Source] for [Personal Data](../Definitions.md#personal-data) of a [Consent](../Definitions.md#consent).
+The [Individual](../Definitions.md#individual) adds a [Data Source](../Definitions.md#data-source) to a [Consent](../Definitions.md#consent).
 
 ![Add Data Source](../images/Add_Data_Source_-_UC06.png)
 
 
-## 1. The Individual requests the Qiy Trust Network to add a Data Provider as a Data Source
+## 1. The Individual requests the Qiy Trust Network to add a Data Source
 
-The [Individual](../Definitions.md#individual) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to add a [Data Provider](../Definitions.md#data-provider) as a [Data Source] for the [Consent](../Definitions.md#consent) using a [Source Register Request](../Definitions.md#source-register-request).
+The [Individual](../Definitions.md#individual) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to add a [Data Source](../Definitions.md#data-source) to a [Consent](../Definitions.md#consent) using a [Source Register Request](../Definitions.md#source-register-request).
 
 ## 2. The Qiy Trust Network generates a Data Reference
 
