@@ -47,7 +47,7 @@ This document describes how [Individuals](../Definitions.md#individual) and [Dat
 
 The [Individual](../Definitions.md#individual) adds a [Data Source] for [Personal Data](../Definitions.md#personal-data) of a [Consent](../Definitions.md#consent).
 
-![Add Data Source](../images/Add_Data_Source_-_UC06.png
+![Add Data Source](../images/Add_Data_Source_-_UC06.png)
 
 
 ## 1. The Individual requests the Qiy Trust Network to add a Data Provider as a Data Source
