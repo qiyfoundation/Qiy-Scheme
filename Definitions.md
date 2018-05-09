@@ -84,11 +84,17 @@ A [Node](#node) which hosts one or more [Carriers](#carrier).
 ### Carrier Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
 
+### Catalogue Detail Request
+A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
+
 ### Catalogue Register Request
 A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) with an [Access Provider](#access-provider) and include it in a [Service Catalogue](#service-catalogue).
 
 ### Catalogue Unregister Request
 A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) with an [Access Provider](#access-provider) and remove it from a [Service Catalogue](#service-catalogue).
+
+### Catalogues Request
+A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue).
 
 ### Communication Network
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090 
@@ -258,6 +264,9 @@ See https://en.wikipedia.org/wiki/Entity.
 ### Entitlement
 A usage right for a [Resource](#resource) owned by some other [Entity](#entity).
 
+### Events Request
+A [Qiy Node Request](#qiy-node-request) to handle [Qiy Node Events](#qiy-node-event).
+
 ### Expiration Date
 The Expiration Date of the [Transition Phase](#transition-phase): 30 juni 2019, or any earlier date as set unilaterally by the [Scheme Authority](#scheme-authority).
 
@@ -398,6 +407,9 @@ A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent
 
 As defined in the [GDPR](#gdpr).
 
+### Portfolio Details Request
+A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
+
 ### Portfolio Register Message
 A [Qiy Node Message](#qiy-node-message) which can be used to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
 
@@ -436,6 +448,9 @@ A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) tha
 
 ### Qiy Node Credentials
 The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
+
+### Qiy Node Create Request
+A [Qiy Node Request](#qiy-node-request) that can be used to create a [Qiy Node](#qiy-node).
 
 ### Qiy Node Delete Request
 A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node](#qiy-node).
@@ -603,7 +618,7 @@ A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider)
 A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
 
 ### Service Source
-A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
+A [Service](#service) of a [Service Provider](#service-provider) that can provide a specific [Service](#service).
 
 ### Service Unregister Request
 A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service).

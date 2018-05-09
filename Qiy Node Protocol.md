@@ -22,6 +22,8 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Catalogue Requests](#22-catalogue-requests)
 		1. [Catalogue Register Request](#221-catalogue-register-request)
 		1. [Catalogue Unregister Request](#222-catalogue-unregister-request)
+		1. [Catalogue Detail Request](#223-catalogue-detail-request)
+		1. [Catalogues Request](#224-catalogues-request)
 	1. [Connect Token Requests](#23-connect-token-requests)
 		1. [Connect Token Create Request](#231-connect-token-create-request)
 		1. [Connect Token Delete Request](#232-connect-token-delete-request)
@@ -52,18 +54,20 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Operation Requests](#28-operation-requests)
 		1. [Operation Execute Request](#281-operation-execute-request)
 		1. [Operation Register Request](#282-operation-register-request)
-	1. [Qiy Node Requests](#29-qiy-node-requests)
-		1. [Qiy Node Delete Request](#291-qiy-node-delete-request)
-		1. [Qiy Node Create Request](#292-qiy-node-create-request)
-	1. [Service Registration Requests](#210-service-registration-requests)
-		1. [Service Register Request](#2101-service-register-request)
-		1. [Service Unregister Request](#2102-service-unregister-request)
-	1. [Service Provider Registration Requests](#211-service-provider-registration-requests)
-		1. [Service Provider Register Request](#2111-service-provider-register-request)
-		1. [Service Provider Unregister Request](#2112-service-provider-unregister-request)
-	1. [Source Requests](#212-source-requests)
-		1. [Source Candidates Request](#2125-source-candidates-request)
-		1. [Source Register Request](#2126-source-register-request)
+	1. [Portfolio Requests](#29-portfolio-requests)
+		1. [Portfolio Details Request](#291-portfolio-details-request)
+	1. [Qiy Node Requests](#210-qiy-node-requests)
+		1. [Qiy Node Delete Request](#2101-qiy-node-delete-request)
+		1. [Qiy Node Create Request](#2102-qiy-node-create-request)
+	1. [Service Registration Requests](#211-service-registration-requests)
+		1. [Service Register Request](#2111-service-register-request)
+		1. [Service Unregister Request](#2112-service-unregister-request)
+	1. [Service Provider Registration Requests](#212-service-provider-registration-requests)
+		1. [Service Provider Register Request](#2121-service-provider-register-request)
+		1. [Service Provider Unregister Request](#2122-service-provider-unregister-request)
+	1. [Source Requests](#213-source-requests)
+		1. [Source Candidates Request](#2135-source-candidates-request)
+		1. [Source Register Request](#2136-source-register-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -216,10 +220,16 @@ Information of the connections can be acquired using the [Connections Request](#
 ## 2.2 Catalogue Requests
 
 ### 2.2.1 Catalogue Register Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and include it in a [Service Catalogue](Definitions.md#service-catalogue).
+The [Catalogue Register Request](Definitions.md#catalogue-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and include it in a [Service Catalogue](Definitions.md#service-catalogue).
 
 ### 2.2.2 Catalogue Unregister Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and remove it from a [Service Catalogue](Definitions.md#service-catalogue).
+
+### 2.2.3 Catalogue Detail Request
+The [Catalogue Detail Request](Definitions.md#catalogue-detail-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service Catalogue](Definitions.md#service-catalogue).
+
+### 2.2.4 Catalogues Request
+The [Catalogues Request](Definitions.md#catalogues-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to consult the [Service Catalogues](Definitions.md#service-catalogue) of [Service Providers](Definitions.md#service-provider).
 
 ## 2.3 Connect Token Requests
 
@@ -334,38 +344,42 @@ A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to comman
 ### 2.8.2 Operation Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registrating an [Operation Specification](Definitions.md#operation-specification).
 
-## 2.9 Qiy Node Requests
+## 2.9 Portfolio Requests
 
-### 2.9.1 Qiy Node Delete Request
+### 2.9.1 Portfolio Details Request
+A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
+
+## 2.10 Qiy Node Requests
+
+### 2.10.1 Qiy Node Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node](Definitions.md#qiy-node).
 
-### 2.9.2 Qiy Node Create Request
+### 2.10.2 Qiy Node Create Request
 A [HTTP Request](Definitions.md#http-request) to create a [Qiy Node](Definitions.md#qiy-node).
 
-## 2.10 Service Registration Requests
+## 2.11 Service Registration Requests
 
-### 2.10.1 Service Register Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service).
+### 2.11.1 Service Register Request
+The [Service Register Request](Definitions.md#service-register-request) can be used by a [Service Provider](Definitions.md#service-provider) to register a [Service](Definitions.md#service), e.g. to add a [Service](Definitions.md#service) to his [Service Catalogue](Definitions.md#service-catalogue).
 
-### 2.10.2 Service Unregister Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service](Definitions.md#service).
+### 2.11.2 Service Unregister Request
+The [Service Register Request](Definitions.md#service-register-request) can be used by a [Service Provider](Definitions.md#service-provider) to unregister a [Service](Definitions.md#service), e.g. to remove a [Service](Definitions.md#service) from his [Service Catalogue](Definitions.md#service-catalogue).
 
-## 2.11 Service Provider Registration Requests
+## 2.12 Service Provider Registration Requests
 
-### 2.11.1 Service Provider Register Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+### 2.12.1 Service Provider Register Request
+The [Service Provider Register Request](Definitions.md#service-provider-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 2.11.2 Service Provider Unregister Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+### 2.12.2 Service Provider Unregister Request
+The [Service Provider Unregister Request](Definitions.md#service-provider-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-## 2.12 Source Requests
+## 2.13 Source Requests
 
-### 2.12.5 Source Candidates Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) to obtain candidate [Service Providers](Definitions.md#service-provider) for a [Service](Definitions.md#service).
+### 2.13.5 Source Candidates Request
+The [Source Candidates Request](Definitions.md#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.6 Source Register Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service Provider](Definitions.md#service-provider) as source for a [Service](Definitions.md#service).
-
+### 2.13.6 Source Register Request
+The [Source Register Request](Definitions.md#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Data Source](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
 
 # 3 Events
