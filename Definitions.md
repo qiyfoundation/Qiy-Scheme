@@ -456,7 +456,7 @@ A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
 A [HTTP Request](#http-request) to create a [Qiy Node](#qiy-node).
 
 ### Qiy Node Protocol
-A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node).
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node), see [Qiy Node Protocol document](Qiy%20Node%20Protocol.md).
 
 ### Qiy Open Standard
 A set of open standards for Qiy, maintained by the [Work Stream Functionality & Technology](#work-stream-functionality--technology), see https://www.qiyfoundation.org/qiy-scheme/workstreams/.
