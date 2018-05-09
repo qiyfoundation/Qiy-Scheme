@@ -177,6 +177,9 @@ A [Qiy Node Event](#qiy-node-event) which can be used to communicate the grantin
 ### Consent Individual Credentials
 [Consent Credentials](#consent-credentials) for an [Individual](#individual).
 
+### Consent Notification Message
+A [Qiy Node Message](#qiy-node-message) which can be used to notify the registration of a [Consent](#consent).
+
 ### Consent Relying Party Credentials
 [Consent Credentials](#consent-credentials) for a [Relying Party](#relying-party).
 
@@ -371,6 +374,9 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation
 
 ### Operation Specification
 A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
+
+### Operation Specification Request Message
+A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
 
 ### Path
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
@@ -604,6 +610,9 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
+
+### Source Candidates Message
+A [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](#data-source) for a [Consent](#consent).
 
 ### Source Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) as source for a [Service](#service).
