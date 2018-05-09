@@ -29,7 +29,7 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Connect Token Register Request](#234-connect-token-register-request)
 		1. [Connect Token Update Request](#235-connect-token-update-request)
 		1. [Connect Tokens Request](#236-connect-tokens-request)
-	1. [Connections Requests](#24-connections-requests)
+	1. [Connection Requests](#24-connection-requests)
 		1. [Connection Create Request](#241-connection-create-request)
 		1. [Connection Delete Request](#242-connection-delete-request)
 		1. [Connection Details Request](#243-connection-details-request)
@@ -42,26 +42,28 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Consent Granted Request](#254-consent-granted-request)
 		1. [Consent Withdrawn Request](#255-consent-withdrawn-request)
 		1. [Consents Request](#256-consents-request)
-	1. [Message Requests](#26-message-requests)
-		1. [Message Delete Request](#261-message-delete-request)
-		1. [Message Details Request](#262-message-details-request)
-		1. [Message Post Request](#263-message-post-request)
-		1. [Messages Request](#264-messages-request)
-	1. [Operation Requests](#27-operation-requests)
-		1. [Operation Execute Request](#271-operation-execute-request)
-		1. [Operation Register Request](#272-operation-register-request)
-	1. [Qiy Node Requests](#28-qiy-node-requests)
-		1. [Qiy Node Delete Request](#281-qiy-node-delete-request)
-		1. [Qiy Node Create Request](#282-qiy-node-create-request)
-	1. [Service Registration Requests](#29-service-registration-requests)
-		1. [Service Register Request](#291-service-register-request)
-		1. [Service Unregister Request](#292-service-unregister-request)
-	1. [Service Provider Registration Requests](#210-service-provider-registration-requests)
-		1. [Service Provider Register Request](#2101-service-provider-register-request)
-		1. [Service Provider Unregister Request](#2102-service-provider-unregister-request)
-	1. [Source Requests](#211-source-requests)
-		1. [Source Candidates Request](#2115-source-candidates-request)
-		1. [Source Register Request](#2116-source-register-request)
+	1. [Event Requests](#26-event-requests)
+		1. [Events Request](#261-events-request)
+	1. [Message Requests](#27-message-requests)
+		1. [Message Delete Request](#271-message-delete-request)
+		1. [Message Details Request](#272-message-details-request)
+		1. [Message Post Request](#273-message-post-request)
+		1. [Messages Request](#274-messages-request)
+	1. [Operation Requests](#28-operation-requests)
+		1. [Operation Execute Request](#281-operation-execute-request)
+		1. [Operation Register Request](#282-operation-register-request)
+	1. [Qiy Node Requests](#29-qiy-node-requests)
+		1. [Qiy Node Delete Request](#291-qiy-node-delete-request)
+		1. [Qiy Node Create Request](#292-qiy-node-create-request)
+	1. [Service Registration Requests](#210-service-registration-requests)
+		1. [Service Register Request](#2101-service-register-request)
+		1. [Service Unregister Request](#2102-service-unregister-request)
+	1. [Service Provider Registration Requests](#211-service-provider-registration-requests)
+		1. [Service Provider Register Request](#2111-service-provider-register-request)
+		1. [Service Provider Unregister Request](#2112-service-provider-unregister-request)
+	1. [Source Requests](#212-source-requests)
+		1. [Source Candidates Request](#2125-source-candidates-request)
+		1. [Source Register Request](#2126-source-register-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -240,7 +242,7 @@ A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to regist
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to access [Connect Tokens](Definitions.md#connect-token).
 
 
-## 2.4 Connections Requests
+## 2.4 Connection Requests
 
 ### 2.4.1 Connection Create Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) with a [Connect Token](Definitions.md#connect-token).
@@ -305,58 +307,63 @@ A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to commu
 ### 2.5.6 Consents Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used by [Qiy Users](Definitions.md#qiy-user) to access their [Consents](Definitions.md#consent).
 
-## 2.6 Message Requests
+## 2.6 Event Requests
 
-### 2.6.1 Message Delete Request
+### 2.6.1 Events Request
+A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to handle [Qiy Node Events](Definitions.md#qiy-node-event).
+
+## 2.7 Message Requests
+
+### 2.7.1 Message Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node Message](Definitions.md#qiy-node-message).
 
-### 2.6.2 Message Details Request
+### 2.7.2 Message Details Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Qiy Node Message](Definitions.md#qiy-node-message).
 
-### 2.6.3 Message Post Request
+### 2.7.3 Message Post Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](Definitions.md#qiy-node-message).
 
-### 2.6.4 Messages Request
+### 2.7.4 Messages Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](Definitions.md#qiy-node).
 
-## 2.7 Operation Requests
+## 2.8 Operation Requests
 
-### 2.7.1 Operation Execute Request
+### 2.8.1 Operation Execute Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
 
-### 2.7.2 Operation Register Request
+### 2.8.2 Operation Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registrating an [Operation Specification](Definitions.md#operation-specification).
 
-## 2.8 Qiy Node Requests
+## 2.9 Qiy Node Requests
 
-### 2.8.1 Qiy Node Delete Request
+### 2.9.1 Qiy Node Delete Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node](Definitions.md#qiy-node).
 
-### 2.8.2 Qiy Node Create Request
+### 2.9.2 Qiy Node Create Request
 A [HTTP Request](Definitions.md#http-request) to create a [Qiy Node](Definitions.md#qiy-node).
 
-## 2.9 Service Registration Requests
+## 2.10 Service Registration Requests
 
-### 2.9.1 Service Register Request
+### 2.10.1 Service Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service).
 
-### 2.9.2 Service Unregister Request
+### 2.10.2 Service Unregister Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service](Definitions.md#service).
 
-## 2.10 Service Provider Registration Requests
+## 2.11 Service Provider Registration Requests
 
-### 2.10.1 Service Provider Register Request
+### 2.11.1 Service Provider Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 2.10.2 Service Provider Unregister Request
+### 2.11.2 Service Provider Unregister Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-## 2.11 Source Requests
+## 2.12 Source Requests
 
-### 2.11.5 Source Candidates Request
+### 2.12.5 Source Candidates Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to obtain candidate [Service Providers](Definitions.md#service-provider) for a [Service](Definitions.md#service).
 
-### 2.11.6 Source Register Request
+### 2.12.6 Source Register Request
 A [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service Provider](Definitions.md#service-provider) as source for a [Service](Definitions.md#service).
 
 
@@ -388,8 +395,6 @@ A [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Def
 
 ### 3.4.1 Persistent Id Event
 A [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](Definitions.md#connection).
-
-
 
 
 # 4 Messages
@@ -428,7 +433,7 @@ A [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to add a
 
 Specification | Reference
 ------------- | ---------
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.1.3 Authentication](#313-authentication)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.3 Authentication](#213-authentication)
 
 ## Connect Token
 
@@ -444,7 +449,7 @@ Specification | Reference
 [Definitions](Definitions.md)                       | [Connect Token Create Request](Definitions.md#connect-token-create-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [POST /ctCreateEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ctCreateEndpointPost)
 [Qiy Node API](Qiy%20Node%20API.json) | [GET /connectTokenUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectTokenUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connect Token Create Request](Definitions.md#connect-token-create-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3.1 Connect Token Create Request](#231-connect-token-create-request)
 
 ## Connect Token Register Request
 
@@ -452,7 +457,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connect Token Register Request](Definitions.md#connect-token-register-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [POST /ctCreateEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ctCreateEndpointPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connect Token Register Request](Definitions.md#connect-token-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3.4 Connect Token Register Request](#234-connect-token-register-request)
 
 ## Connection Create Request
 
@@ -460,7 +465,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connection Create Request](Definitions.md#connection-create-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [POST /scanEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#scanEndpointPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connection Create Request](Definitions.md#connection-create-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.1 Connection Create Request](#241-connection-create-request)
 
 ## Connection Details Request
 
@@ -468,7 +473,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connection Details Request](Definitions.md#connection-details-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [GET /connectionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectionUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connection Details Request](Definitions.md#connection-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.3 Connection Details Request](#243-connection-details-request)
 
 ## Connections Request
 
@@ -476,7 +481,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connections Request](Definitions.md#connections-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [GET /connectionsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectionsEndpointGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connections Request](Definitions.md#connections-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.4 Connections Request](#244-connections-request)
 
 ## Data Provider
 
@@ -501,21 +506,21 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json) | [Path Endpoint Addresses](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PathEndpointAddresses)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.1.2 Dynamic Path Endpoint Addresses](#312-dynamic-path-endpoint-addresses)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.2 Dynamic Path Endpoint Addresses](#212-dynamic-path-endpoint-addresses)
 
 ## Events
 
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json) | [Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#EventModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5 Events](#5-events)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3 Events](#3-events)
 
 ## Events Request
 
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json) | [GET /eventsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#eventsEndpointGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Events Request]
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.6 Events Request](#26-events-request)
 
 ## Message Post Request
 
