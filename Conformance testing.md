@@ -42,13 +42,13 @@ This chapter describes the Conformance tests for [Data Providers](Definitions.md
 
 ## 2.1 Operation Specification
 
-[Data Providers](Definitions.md#data-provider) must provide their [Access Provider](Definitions.md#access-provider) with a set of examples of an [Operation Specification](Definitions.md#operation-specification).
+[Data Providers](Definitions.md#data-provider) must provide their [Access Provider](Definitions.md#access-provider) with a set of examples of an [Operation Specification](Definitions.md#operation-specification) which complies to the format as specified in the [Qiy Node Protocol](Definitions.md#qiy-node-protocol).
 The test is passed if and when the [Access Provider](Definitions.md#access-provider) has confirmed that the set demonstrates conformance to the specification.
 
 
 ## 2.2 Provided Data
 
-[Data Providers](Definitions.md#data-provider) must provide their [Access Provider](Definitions.md#access-provider) with a set of examples of [Personal Data](Definitions.md#personal-data) it provides.
+[Data Providers](Definitions.md#data-provider) must provide their [Access Provider](Definitions.md#access-provider) with a set of examples of [Personal Data](Definitions.md#personal-data) it provides which complies to the [Data Description](Definitions.md#data-description) as registered in his [Service Portfolio](Definitions.md#service-portfolio).
 The test is passed if and when the [Access Provider](Definitions.md#access-provider) has confirmed that the set demonstrates conformance to the specification.
 
 
