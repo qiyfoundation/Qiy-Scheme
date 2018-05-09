@@ -48,7 +48,7 @@ The test is passed if and when the [Access Provider](Definitions.md#access-provi
 
 ## 2.2 Provided Data
 
-[Data Providers](Definitions.md#data-provider) must provide their [Access Provider](Definitions.md#access-provider) with a set of examples of [Personal Data](Definitions.md#personal-data) it provides which complies to the [Data Description](Definitions.md#data-description) as registered in his [Service Portfolio](Definitions.md#service-portfolio).
+[Data Providers](Definitions.md#data-provider) must provide their [Access Provider](Definitions.md#access-provider) with a set of examples of [Personal Data](Definitions.md#personal-data) it provides which complies to the [Data Description](Definitions.md#data-description) as registered in his [Service Catalogue](Definitions.md#service-catalogue).
 The test is passed if and when the [Access Provider](Definitions.md#access-provider) has confirmed that the set demonstrates conformance to the specification.
 
 
