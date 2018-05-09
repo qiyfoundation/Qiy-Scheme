@@ -248,7 +248,7 @@ Please refer to [UC02 Connect with Qiy User](./use-cases/UC02%20Connect%20with%2
 # 8 Data Reuse
 
 This chapter describes the data reuse flow.
-Please refer to [UC05 Request Consent](./use-cases/UC05%20Request%20Consent.md) and [UC04 Request Personal Data](./use-cases/UC04%20Request%20Personal%20Data.md) for more information on the interactions with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+Please refer to [UC05 Request Consent](./use-cases/UC05%20Request%20Consent.md), [UC06 Manage Personal Data](./use-cases/UC06%20Manage%20Personal%20Data.md) and [UC04 Request Personal Data](./use-cases/UC04%20Request%20Personal%20Data.md) for more information on the interactions with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
  
 ![Data Reuse Scenario - All](./images/Data_Reuse_Scenario_-_All_-_Functional_Specification.png)
 

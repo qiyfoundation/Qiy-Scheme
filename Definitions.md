@@ -237,6 +237,9 @@ A [Service](#service), namely the provisioning of [Data](#data).
 ### Data Service Description
 A [Service Description](#service-description) of a [Data Service](#data-service).
 
+### Data Source
+A [Data Service](#data-service) of a [Data Provider](#data-provider) that will be used to provide the [Personal Data](#personal-data) the use of which has been granted in a [Consent](#consent).
+
 ### Data Subject
 As defined in the [GDPR](#gdpr).
 
