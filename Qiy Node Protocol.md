@@ -15,10 +15,11 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 1. [Requests](#2-requests)
 	1. [General](#21-general)
 		1. [Health Check](#211-health-check)
-		1. [Dynamic Path Endpoint Addresses](#212-dynamic-path-endpoint-addresses)
-		1. [Authentication](#213-authentication)
-			1. [Java](#2131-java)
-			1. [Python](#2132-python)
+		1. [Versions](#212-versions)
+		1. [Dynamic Path Endpoint Addresses](#213-dynamic-path-endpoint-addresses)
+		1. [Authentication](#214-authentication)
+			1. [Java](#2141-java)
+			1. [Python](#2142-python)
 	1. [Catalogue Requests](#22-catalogue-requests)
 		1. [Catalogue Register Request](#221-catalogue-register-request)
 		1. [Catalogue Unregister Request](#222-catalogue-unregister-request)
@@ -159,16 +160,25 @@ The health of a Qiy Node can be checked with the following request:
 GET /admin/healthcheck
 
 
-### 2.1.2 Dynamic Path Endpoint Addresses
+### 2.1.2 Versions
+
+The supported [Qiy Node API](Definitions.md#qiy-node-api) version can be obtained with the call:
+
+[GET /api](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#apiGet)
+
+The returned version tag complies with Semantic Versioning 2.0.0, see [https://semver.org](https://semver.org).
+[Qiy Node Implementations](Definitions.md#qiy-node-implementation) are to support the two latest major versions, with the additional rule that a new major version will never be released within 6 months of its predecessor.
+
+### 2.1.3 Dynamic Path Endpoint Addresses
 
 The Qiy Node uses [Dynamic Path Endpoint Addresses](#dynamic-path-endpoint-addresses) for all but the /api path endpoint, which is strongly advised to be used at the start of every new day to obtain valid addresses and remain operational.
 
 
-### 2.1.3 Authentication
+### 2.1.4 Authentication
 
 Most requests must be authenticated using the [Authorization Header Parameter](#authorization-header-parameter) containing a signature over the Qiy Node Id, the current Unix time in ms using a Private Key which is unique for the Qiy Node.
 
-#### 2.1.3.1 Java
+#### 2.1.4.1 Java
 
 In Java, the value of the Authorization header parameter can be calculated as follows:
 ```
@@ -192,7 +202,7 @@ public String signatureHeaderForData(String uuid, byte[] data) {
 }
 ````
 
-#### 2.1.3.2 Python
+#### 2.1.4.2 Python
 
 In Python, the value of the Authorization header parameter can be calculated as follows:
 
@@ -447,7 +457,7 @@ A [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to add a
 
 Specification | Reference
 ------------- | ---------
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.3 Authentication](#213-authentication)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.4 Authentication](#214-authentication)
 
 ## Connect Token
 
@@ -520,7 +530,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json) | [Path Endpoint Addresses](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PathEndpointAddresses)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.2 Dynamic Path Endpoint Addresses](#212-dynamic-path-endpoint-addresses)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.3 Dynamic Path Endpoint Addresses](#213-dynamic-path-endpoint-addresses)
 
 ## Events
 
