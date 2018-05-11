@@ -88,13 +88,13 @@ A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which
 A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
 
 ### Catalogue Register Request
-A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) with an [Access Provider](#access-provider) and include it in a [Service Catalogue](#service-catalogue).
+A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and include it in [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
 ### Catalogue Unregister Request
-A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) with an [Access Provider](#access-provider) and remove it from a [Service Catalogue](#service-catalogue).
+A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
 ### Catalogues Request
-A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue).
+A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
 ### Communication Network
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090 
