@@ -241,7 +241,7 @@ An [Identifier](#identifier) which can be used to identify a [Data Provider](#da
 An [Operation Reference](#operation-reference) which can be used to consume a [Data Service](#data-service) by reference, namely to obtain [Personal Data](#personal-data) of an [Individual](#individual).
 
 ### Data Reference Request
-An [Operation Reference Request] for a [Data Reference](#data-reference).
+An [Operation Reference Request](#operation-reference-request) for a [Data Reference](#data-reference).
 
 ### Data Service
 A [Service](#service), namely the provisioning of [Data](#data).
@@ -378,11 +378,14 @@ A [Business Object](#business-object) used by the [Service by Reference](#servic
 ### Operation Reference Message
 A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference).
 
+### Operation Reference Request
+A [Request](#request) for an [Operation Reference](#operation-reference).
+
 ### Operation Reference Request Message
-A [Qiy Node Message](#qiy-node-message) that can be used to [Request](#request) for [Operation References](#operation-reference).
+A [Qiy Node Message](#qiy-node-message) that can be used to convey a [Operation Reference Request](#operation-reference-request).
 
 ### Operation Register Request
-A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registering an [Operation Specification](#operation-specification).
 
 ### Operation Specification
 A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).

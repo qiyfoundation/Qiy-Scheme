@@ -581,9 +581,9 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Reference Request]
+[Definitions](Definitions.md)                       | [Operation Reference Request](Definitions.md#operation-reference-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [Operation Reference Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationReferenceRequestMessageModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Reference Request]
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Reference Request](Definitions.md#operation-reference-request)
 
 ## Operation Reference Request Message
 
