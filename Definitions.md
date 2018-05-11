@@ -425,6 +425,12 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates cre
 ### Proposer Id
 The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
 
+### Provider Register Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Provider Unregister Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
 ### Pseudonym
 Synonymous with [Identifier](#identifier)
 
@@ -618,10 +624,10 @@ The [Identity](#identity) of the [Service Provider](#service-provider) as regist
 A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
 
 ### Service Provider Register Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+See [Provider Register Request](#provider-register-request).
 
 ### Service Provider Unregister Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+See [Provider Unregister Request](#provider-unregister-request).
 
 ### Service Source
 A [Service](#service) of a [Service Provider](#service-provider) that can provide a specific [Service](#service).
