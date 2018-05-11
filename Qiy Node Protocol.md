@@ -67,8 +67,10 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Service Provider Register Request](#2121-service-provider-register-request)
 		1. [Service Provider Unregister Request](#2122-service-provider-unregister-request)
 	1. [Source Requests](#213-source-requests)
-		1. [Source Candidates Request](#2135-source-candidates-request)
-		1. [Source Register Request](#2136-source-register-request)
+		1. [Source Candidates Request](#2131-source-candidates-request)
+		1. [Source Register Request](#2132-source-register-request)
+		1. [Source Unregister Request](#2133-source-unregister-request)
+		1. [Source Update Request](#2134-source-update-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -89,7 +91,24 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Service Credentials Request Message](#431-service-credentials-request-message)
 	1. [Portfolio Messages](#44-portfolio-messages)
 		1. [Portfolio Register Message](#441-portfolio-register-message)
-1. [Index](#5-index)
+1. [Models](#5-models)
+	1. [Connect Token](#51-connect-token)
+		1. [Connect Token Attributes](#511-connect-token-attributes)
+		1. [Connect Token Relations](#512-connect-token-relations)
+		1. [Connect Token Business Rules](#513-connect-token-business-rules)
+	1. [Connection](#52-connection)
+		1. [Connection Attributes](#521-connection-attributes)
+		1. [Connection Relations](#522-connection-relations)
+		1. [Connection Business Rules](#523-connection-business-rules)
+	1. [Consent](#53-consent)
+		1. [Consent Attributes](#531-consent-attributes)
+		1. [Consent Relations](#532-consent-relations)
+		1. [Consent Business Rules](#533-consent-business-rules)
+	1. [Message](#54-message)
+		1. [Message Attributes](#541-message-attributes)
+		1. [Message Relations](#542-message-relations)
+		1. [Message Business Rules](#513-message-business-rules)
+1. [Index](#6-index)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Connect Token](#connect-token)
 	1. [Connect Token Create Request](#connect-token-create-request)
@@ -144,7 +163,8 @@ This document aims to be the entry point for information analysts and software e
 * Chapter [2 Requests](#2-requests) describes the [Qiy Node Requests](Definitions.md#qiy-node-request).
 * Chapter [3 Events](#3-events) describes the [Qiy Node Events](Definitions.md#qiy-node-event).
 * Chapter [4 Messages](#4-messages) describes the [Qiy Node Messages](Definitions.md#qiy-node-message).
-* Chapter [5 Index](#5-index) contains an index for the used terms.
+* Chapter [5 Models](#5-models) describes the entities of the [Qiy Node Interface].
+* Chapter [6 Index](#6-index) contains an index for the used terms.
 
 
 # 2 Requests
@@ -230,51 +250,51 @@ Information of the connections can be acquired using the [Connections Request](#
 ## 2.2 Catalogue Requests
 
 ### 2.2.1 Catalogue Register Request
-The [Catalogue Register Request](Definitions.md#catalogue-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and include it in a [Service Catalogue](Definitions.md#service-catalogue).
+The [Catalogue Register Request](#catalogue-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
 
 ### 2.2.2 Catalogue Unregister Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) with an [Access Provider](Definitions.md#access-provider) and remove it from a [Service Catalogue](Definitions.md#service-catalogue).
+The [Catalogue Unregister Request](#catalogue-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
 
 ### 2.2.3 Catalogue Detail Request
-The [Catalogue Detail Request](Definitions.md#catalogue-detail-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service Catalogue](Definitions.md#service-catalogue).
+The [Catalogue Detail Request](#catalogue-detail-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service Catalogue](Definitions.md#service-catalogue).
 
 ### 2.2.4 Catalogues Request
-The [Catalogues Request](Definitions.md#catalogues-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to consult the [Service Catalogues](Definitions.md#service-catalogue) of [Service Providers](Definitions.md#service-provider).
+The [Catalogues Request](#catalogues-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to consult the [Service Catalogues](Definitions.md#service-catalogue) of [Service Providers](Definitions.md#service-provider).
 
 ## 2.3 Connect Token Requests
 
 ### 2.3.1 Connect Token Create Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a [Connect Token](Definitions.md#connect-token) from the [Qiy Node](Definitions.md#qiy-node).
+The [Connect Token Create Request](#connect-token-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a [Connect Token](Definitions.md#connect-token) from the [Qiy Node](Definitions.md#qiy-node).
 
 ### 2.3.2 Connect Token Delete Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connect Token](Definitions.md#connect-token).
+The [Connect Token Delete Request](#connect-token-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connect Token](Definitions.md#connect-token).
 
 ### 2.3.3 Connect Token Details Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connect Token](Definitions.md#connect-token).
+The [Connect Token Details Request](#connect-token-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connect Token](Definitions.md#connect-token).
 
 ### 2.3.4 Connect Token Register Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to register a [Connect Token](Definitions.md#connect-token).
+The [Connect Token Register Request](#connect-token-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to register a [Connect Token](Definitions.md#connect-token).
 
 ### 2.3.5 Connect Token Update Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to register a [Connect Token](Definitions.md#connect-token).
+The [Connect Token Update Request](#connect-token-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to register a [Connect Token](Definitions.md#connect-token).
 
 ### 2.3.6 Connect Tokens Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to access [Connect Tokens](Definitions.md#connect-token).
+The [Connect Tokens Request](#connect-tokens-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to access [Connect Tokens](Definitions.md#connect-token).
 
 
 ## 2.4 Connection Requests
 
 ### 2.4.1 Connection Create Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) with a [Connect Token](Definitions.md#connect-token).
+The [Connection Create Request](#connection-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) with a [Connect Token](Definitions.md#connect-token).
 
 ### 2.4.2 Connection Delete Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connection](Definitions.md#connection).
+The [Connection Delete Request](#connection-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connection](Definitions.md#connection).
 
 ### 2.4.3 Connection Details Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connection](Definitions.md#connection).
+The [Connection Details Request](#connection-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connection](Definitions.md#connection).
 
 ### 2.4.4 Connections Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Connections](Definitions.md#connection) of a [Qiy Node](Definitions.md#qiy-node).
+The [Connections Request](#connections-request) is a  [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Connections](Definitions.md#connection) of a [Qiy Node](Definitions.md#qiy-node).
 
 #### 2.4.4.1 Example Connections Request
 
@@ -310,115 +330,121 @@ Content-Length: 215
 ## 2.5 Consent Requests
 
 ### 2.5.1 Consent Delete Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to delete a [Consent](Definitions.md#consent).
+The [Consent Delete Request](#consent-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to delete a [Consent](Definitions.md#consent).
 
 ### 2.5.2 Consent Denied Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
+The [Consent Denied Request](#consent-denied-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
 
 ### 2.5.3 Consent Details Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to acquire the details of a [Consent](Definitions.md#consent).
+The [Consent Details Request](#consent-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to acquire the details of a [Consent](Definitions.md#consent).
 
 ### 2.5.4 Consent Granted Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the granting of a [Consent](Definitions.md#consent).
+The [Consent Granted Request](#consent-granted-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the granting of a [Consent](Definitions.md#consent).
 
 ### 2.5.5 Consent Withdrawn Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the withdrawal of a [Consent](Definitions.md#consent).
+The [Consent Withdrawn Request](#consent-withdrawn-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to communicate the withdrawal of a [Consent](Definitions.md#consent).
 
 ### 2.5.6 Consents Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) which can be used by [Qiy Users](Definitions.md#qiy-user) to access their [Consents](Definitions.md#consent).
+The [Consents Request](#consents-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to access [Consents](Definitions.md#consent).
 
 ## 2.6 Event Requests
 
 ### 2.6.1 Events Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to handle [Qiy Node Events](Definitions.md#qiy-node-event).
+The [Events Request](#events-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to handle [Qiy Node Events](Definitions.md#qiy-node-event).
 
 ## 2.7 Message Requests
 
 ### 2.7.1 Message Delete Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Delete Request](#message-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node Message](Definitions.md#qiy-node-message).
 
 ### 2.7.2 Message Details Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Details Request](#message-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Qiy Node Message](Definitions.md#qiy-node-message).
 
 ### 2.7.3 Message Post Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Post Request](#message-post-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](Definitions.md#qiy-node-message).
 
 ### 2.7.4 Messages Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](Definitions.md#qiy-node).
+The [Messages Request](#messages-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](Definitions.md#qiy-node).
 
 ## 2.8 Operation Requests
 
 ### 2.8.1 Operation Execute Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
+The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
 
 ### 2.8.2 Operation Register Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registrating an [Operation Specification](Definitions.md#operation-specification).
+The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registering an [Operation Specification](Definitions.md#operation-specification).
 
 ## 2.9 Portfolio Requests
 
 ### 2.9.1 Portfolio Details Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 2.10 Qiy Node Requests
 
 ### 2.10.1 Qiy Node Delete Request
-A [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node](Definitions.md#qiy-node).
+The [Qiy Node Delete Request](#qiy-node-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to delete a [Qiy Node](Definitions.md#qiy-node).
 
 ### 2.10.2 Qiy Node Create Request
-A [HTTP Request](Definitions.md#http-request) to create a [Qiy Node](Definitions.md#qiy-node).
+The [Qiy Node Create Request](#qiy-node-create-request) is a [HTTP Request](Definitions.md#http-request) to create a [Qiy Node](Definitions.md#qiy-node).
 
 ## 2.11 Service Registration Requests
 
 ### 2.11.1 Service Register Request
-The [Service Register Request](Definitions.md#service-register-request) can be used by a [Service Provider](Definitions.md#service-provider) to register a [Service](Definitions.md#service), e.g. to add a [Service](Definitions.md#service) to his [Service Catalogue](Definitions.md#service-catalogue).
+The [Service Register Request](#service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Service Providers](Definitions.md#service-provider) to register a [Service](Definitions.md#service), e.g. to add a [Service](Definitions.md#service) to his [Service Catalogue](Definitions.md#service-catalogue).
 
 ### 2.11.2 Service Unregister Request
-The [Service Register Request](Definitions.md#service-register-request) can be used by a [Service Provider](Definitions.md#service-provider) to unregister a [Service](Definitions.md#service), e.g. to remove a [Service](Definitions.md#service) from his [Service Catalogue](Definitions.md#service-catalogue).
+The [Service Register Request](#service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider), e.g. to remove a [Service](Definitions.md#service) from the [Service Catalogue](Definitions.md#service-catalogue) of a [Service Provider](Definitions.md#service-provider).
 
 ## 2.12 Service Provider Registration Requests
 
 ### 2.12.1 Service Provider Register Request
-The [Service Provider Register Request](Definitions.md#service-provider-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+The [Service Provider Register Request](#service-provider-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ### 2.12.2 Service Provider Unregister Request
-The [Service Provider Unregister Request](Definitions.md#service-provider-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+The [Service Provider Unregister Request](#service-provider-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ## 2.13 Source Requests
 
-### 2.13.5 Source Candidates Request
-The [Source Candidates Request](Definitions.md#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+### 2.13.1 Source Candidates Request
+The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.13.6 Source Register Request
-The [Source Register Request](Definitions.md#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Data Source](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+### 2.13.2 Source Register Request
+The [Source Register Request](#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+
+### 2.13.3 Source Unregister Request
+The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+
+### 2.13.4 Source Update Request
+The [Source Update Request](#source-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
 
 # 3 Events
 
-A Qiy Application can use the [Events Request](#events-request) to start listening to the [Events](#events) generated by its Qiy Node.
-The Events comply to the [Server-Sent Events Standard](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
+A [Qiy Application](Definitions.md#qiy-application) can use the [Events Request](#events-request) to start listening to the [Events](#events) generated by its [Qiy Node](Definitions.md#qiy-node).
+The Events comply to the Server-Sent Events Standard, see [https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
 
 ## 3.1 Connection Events
 
 ### 3.1.1 Connection Created Event
-A [Qiy Node Event](Definitions.md#qiy-node-event) that is generated when a [Connection](Definitions.md#connection) has been created.
+The [Connection Created Event](#connection-created-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that is generated when a [Connection](Definitions.md#connection) has been created.
 
 ## 3.2 Consent Events
 
 ### 3.2.1 Consent Denied Event
-A [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
+The [Consent Denied Event](#consent-denied-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
 
 ### 3.2.2 Consent Granted Event
-A [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](Definitions.md#consent).
+The [Consent Granted Event](#consent-granted-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](Definitions.md#consent).
 
 ## 3.3 Message Events
 
 ### 3.3.1 Message Received Event
-A [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Received Event](#message-received-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](Definitions.md#qiy-node-message).
 
 ## 3.4 Persistent Id Events
 
 ### 3.4.1 Persistent Id Event
-A [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](Definitions.md#connection).
+The [Persistent Id Event](#persistent-id-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](Definitions.md#connection).
 
 
 # 4 Messages
@@ -429,29 +455,89 @@ This chapter describes the [Qiy Node Messages](#qiy-node-messages).
 
 ### 4.1.1 Consent Request Message
 
-A [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
+The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
 
 ## 4.2 Operation Messages
 
 ### 4.2.1 Operation Reference Message
-A [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Message](#operation-reference-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference).
 
 ### 4.2.2 Operation Reference Request Message
-A [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
 
 ## 4.3 Service Credentials Messages
 
 ### 4.3.1 Service Credentials Request Message
-A [Qiy Node Message](Definitions.md#qiy-node-message) for requesting [Service Credentials](Definitions.md#service-credentials).
+The [Service Credentials Request Message](#service-credentials-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) for requesting [Service Credentials](Definitions.md#service-credentials).
 
 ## 4.4 Portfolio Messages
 
 ### 4.4.1 Portfolio Register Message
-A [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to add a [Service Provider](Definitions.md#service-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to add a [Service Provider](Definitions.md#service-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
 
 
+# 5 Models
 
-# 5 Index
+This chapters describes the entities of the [Qiy Node Interface].
+
+## 5.1 Connect Token
+
+### 5.1.1 Connect Token Attributes
+
+See [Connect Token Model](#connect-token-model).
+
+### 5.1.2 Connect Token Relations
+
+See [Connect Token Model](#connect-token-model).
+
+### 5.1.3 Connect Token Business Rules
+
+tbd
+
+## 5.2 Connection
+
+### 5.2.1 Connection Attributes
+
+See [Connection Model](#connection-model).
+
+### 5.2.2 Connection Relations
+
+See [Connection Model](#connection-model).
+
+### 5.2.3 Connection Business Rules
+
+tbd
+
+## 5.3 Consent
+
+### 5.3.1 Consent Attributes
+
+See [Consent Model](#consent-model).
+
+### 5.3.2 Consent Relations
+
+See [Consent Model](#consent-model).
+
+### 5.3.3 Consent Business Rules
+
+tbd
+
+## 5.4 Message
+
+### 5.4.1 Message Attributes
+
+See [Message Model](#message-model).
+
+### 5.4.2 Message Relations
+
+See [Message Model](#message-model).
+
+### 5.1.3 Message Business Rules
+
+tbd
+
+
+# 6 Index
 
 ## Authorization Header Parameter
 
