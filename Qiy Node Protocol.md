@@ -513,7 +513,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Data Reference Request]
+[Definitions](Definitions.md)                       | [Data Reference Request](Definitions.md#data-reference-request)
 
 ## Dynamic Path Endpoint Addresses
 

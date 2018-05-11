@@ -238,7 +238,10 @@ A [Business Role](#business-role), a specialisation of [Service Provider](#servi
 An [Identifier](#identifier) which can be used to identify a [Data Provider](#data-provider) within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Data Reference
-An [Operation Reference](#operation-reference) which can be used to obtain [Personal Data](#personal-data) of an [Individual](#individual).
+An [Operation Reference](#operation-reference) which can be used to consume a [Data Service](#data-service) by reference, namely to obtain [Personal Data](#personal-data) of an [Individual](#individual).
+
+### Data Reference Request
+An [Operation Reference Request] for a [Data Reference](#data-reference).
 
 ### Data Service
 A [Service](#service), namely the provisioning of [Data](#data).
