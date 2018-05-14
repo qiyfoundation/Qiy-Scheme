@@ -417,7 +417,7 @@ As defined in the [GDPR](#gdpr).
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
 
 ### Portfolio Register Message
-A [Qiy Node Message](#qiy-node-message) which can be used to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
+A [Qiy Node Message](#qiy-node-message) to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).

@@ -84,14 +84,20 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Persistent Id Event](#341-persistent-id-event)
 1. [Messages](#4-messages)
 	1. [Consent Messages](#41-consent-messages)
-		1. [Consent Request Message](#411-consent-request-message)
+		1. [Consent Notification Message](#411-consent-notification-message)
+		1. [Consent Request Message](#412-consent-request-message)
 	1. [Operation Messages](#42-operation-messages)
 		1. [Operation Reference Message](#421-operation-reference-message)
 		1. [Operation Reference Request Message](#422-operation-reference-request-message)
+		1. [Operation Specification Request Message](#423-operation-specification-request-message)
 	1. [Service Credentials Messages](#43-service-credentials-messages)
 		1. [Service Credentials Request Message](#431-service-credentials-request-message)
 	1. [Portfolio Messages](#44-portfolio-messages)
 		1. [Portfolio Register Message](#441-portfolio-register-message)
+	1. [Service Credentials Messages](#45-service-credentials-messages)
+		1. [Service Credentials Request Message](#451-service-credentials-request-message)
+	1. [Source Messages](#46-source-messages)
+		1. [Source Candidates Message](#461-source-candidates-message)
 1. [Models](#5-models)
 	1. [Connect Token](#51-connect-token)
 		1. [Connect Token Attributes](#511-connect-token-attributes)
@@ -491,7 +497,11 @@ This chapter describes the [Qiy Node Messages](#qiy-node-messages).
 
 ## 4.1 Consent Messages
 
-### 4.1.1 Consent Request Message
+### 4.1.1 Consent Notification Message
+
+The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to notify the registration of a [Consent](Definitions.md#consent).
+
+### 4.1.2 Consent Request Message
 
 The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
 
@@ -503,6 +513,9 @@ The [Operation Reference Message](#operation-reference-message) is a [Qiy Node M
 ### 4.2.2 Operation Reference Request Message
 The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
 
+### 4.2.3 Operation Specification Request Message
+The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to request for an [Operation Specification](Definitions.md#operation-specification).
+
 ## 4.3 Service Credentials Messages
 
 ### 4.3.1 Service Credentials Request Message
@@ -511,7 +524,17 @@ The [Service Credentials Request Message](#service-credentials-request-message) 
 ## 4.4 Portfolio Messages
 
 ### 4.4.1 Portfolio Register Message
-The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to add a [Service Provider](Definitions.md#service-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to add a [Service Provider](Definitions.md#service-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
+
+## 4.5 Service Credentials Messages
+
+### 4.5.1 Service Credentials Request Message
+The [Service Credentials Request Message](#service-credentials-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) for requesting [Service Credentials](Definitions.md#service-credentials).
+
+## 4.6 Source Messages
+
+### 4.6.1 Source Candidates Message
+The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to propose candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
 
 # 5 Models
