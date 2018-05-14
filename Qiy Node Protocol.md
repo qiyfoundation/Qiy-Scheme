@@ -99,22 +99,46 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Source Messages](#46-source-messages)
 		1. [Source Candidates Message](#461-source-candidates-message)
 1. [Models](#5-models)
-	1. [Connect Token](#51-connect-token)
-		1. [Connect Token Attributes](#511-connect-token-attributes)
-		1. [Connect Token Relations](#512-connect-token-relations)
-		1. [Connect Token Business Rules](#513-connect-token-business-rules)
-	1. [Connection](#52-connection)
-		1. [Connection Attributes](#521-connection-attributes)
-		1. [Connection Relations](#522-connection-relations)
-		1. [Connection Business Rules](#523-connection-business-rules)
-	1. [Consent](#53-consent)
-		1. [Consent Attributes](#531-consent-attributes)
-		1. [Consent Relations](#532-consent-relations)
-		1. [Consent Business Rules](#533-consent-business-rules)
-	1. [Message](#54-message)
-		1. [Message Attributes](#541-message-attributes)
-		1. [Message Relations](#542-message-relations)
-		1. [Message Business Rules](#513-message-business-rules)
+	1. [Catalogue](#51-catalogue)
+		1. [Catalogue Attributes](#511-catalogue-attributes)
+		1. [Catalogue Relations](#512-catalogue-relations)
+		1. [Catalogue Business Rules](#513-catalogue-business-rules)
+	1. [Connect Token](#52-connect-token)
+		1. [Connect Token Attributes](#521-connect-token-attributes)
+		1. [Connect Token Relations](#522-connect-token-relations)
+		1. [Connect Token Business Rules](#523-connect-token-business-rules)
+	1. [Connection](#53-connection)
+		1. [Connection Attributes](#531-connection-attributes)
+		1. [Connection Relations](#532-connection-relations)
+		1. [Connection Business Rules](#533-connection-business-rules)
+	1. [Consent](#54-consent)
+		1. [Consent Attributes](#541-consent-attributes)
+		1. [Consent Relations](#542-consent-relations)
+		1. [Consent Business Rules](#543-consent-business-rules)
+	1. [Event](#55-event)
+		1. [Event Attributes](#551-event-attributes)
+		1. [Event Relations](#552-event-relations)
+		1. [Event Business Rules](#553-event-business-rules)
+	1. [Message](#56-message)
+		1. [Message Attributes](#561-message-attributes)
+		1. [Message Relations](#562-message-relations)
+		1. [Message Business Rules](#563-message-business-rules)
+	1. [Operation Specification](#57-operation-specification)
+		1. [Operation Specification Attributes](#571-operation-specification-attributes)
+		1. [Operation Specification Relations](#572-operation-specification-relations)
+		1. [Operation Specification Business Rules](#573-operation-specification-business-rules)
+	1. [Portfolio](#58-portfolio)
+		1. [Portfolio Attributes](#581-portfolio-attributes)
+		1. [Portfolio Relations](#582-portfolio-relations)
+		1. [Portfolio Business Rules](#583-portfolio-business-rules)
+	1. [Qiy Node Credentials](#59-qiy-node-credentials)
+		1. [Qiy Node Credentials Attributes](#591-qiy-node-credentials-attributes)
+		1. [Qiy Node Credentials Relations](#592-qiy-node-credentials-relations)
+		1. [Qiy Node Credentials Business Rules](#593-qiy-node-credentials-business-rules)
+	1. [Service Description](#510-service-description)
+		1. [Service Description Attributes](#5101-service-description-attributes)
+		1. [Service Description Relations](#5102-service-description-relations)
+		1. [Service Description Business Rules](#5103-service-description-business-rules)
 1. [Index](#6-index)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
@@ -541,59 +565,143 @@ The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Messa
 
 This chapters describes the entities of the [Qiy Node Interface].
 
-## 5.1 Connect Token
+## 5.1 Catalogue
 
-### 5.1.1 Connect Token Attributes
+### 5.1.1 Catalogue Attributes
+
+See [Catalogue Model](#catalogue-model).
+
+### 5.1.2 Catalogue Relations
+
+See [Catalogue Model](#catalogue-model).
+
+### 5.1.3 Catalogue Business Rules
+
+tbd
+
+## 5.2 Connect Token
+
+### 5.2.1 Connect Token Attributes
 
 See [Connect Token Model](#connect-token-model).
 
-### 5.1.2 Connect Token Relations
+### 5.2.2 Connect Token Relations
 
 See [Connect Token Model](#connect-token-model).
 
-### 5.1.3 Connect Token Business Rules
+### 5.2.3 Connect Token Business Rules
 
 tbd
 
-## 5.2 Connection
+## 5.3 Connection
 
-### 5.2.1 Connection Attributes
+### 5.3.1 Connection Attributes
 
 See [Connection Model](#connection-model).
 
-### 5.2.2 Connection Relations
+### 5.3.2 Connection Relations
 
 See [Connection Model](#connection-model).
 
-### 5.2.3 Connection Business Rules
+### 5.3.3 Connection Business Rules
 
 tbd
 
-## 5.3 Consent
+## 5.4 Consent
 
-### 5.3.1 Consent Attributes
-
-See [Consent Model](#consent-model).
-
-### 5.3.2 Consent Relations
+### 5.4.1 Consent Attributes
 
 See [Consent Model](#consent-model).
 
-### 5.3.3 Consent Business Rules
+### 5.4.2 Consent Relations
+
+See [Consent Model](#consent-model).
+
+### 5.4.3 Consent Business Rules
 
 tbd
 
-## 5.4 Message
+## 5.5 Event
 
-### 5.4.1 Message Attributes
+### 5.5.1 Event Attributes
+
+See [Event Model](#event-model).
+
+### 5.5.2 Event Relations
+
+See [Event Model](#event-model).
+
+### 5.5.3 Event Business Rules
+
+tbd
+
+## 5.6 Message
+
+### 5.6.1 Message Attributes
 
 See [Message Model](#message-model).
 
-### 5.4.2 Message Relations
+### 5.6.2 Message Relations
 
 See [Message Model](#message-model).
 
-### 5.1.3 Message Business Rules
+### 5.6.3 Message Business Rules
+
+tbd
+
+## 5.7 Operation Specification
+
+### 5.7.1 Operation Specification Attributes
+
+See [Operation Specification Model](#operation-specification-model).
+
+### 5.7.2 Operation Specification Relations
+
+See [Operation Specification Model](#operation-specification-model).
+
+### 5.7.3 Operation Specification Business Rules
+
+tbd
+
+## 5.8 Portfolio
+
+### 5.8.1 Portfolio Attributes
+
+See [Portfolio Model](#portfolio-model).
+
+### 5.8.2 Portfolio Relations
+
+See [Portfolio Model](#portfolio-model).
+
+### 5.8.3 Portfolio Business Rules
+
+tbd
+
+## 5.9 Qiy Node Credentials
+
+### 5.9.1 Qiy Node Credentials Attributes
+
+See [Qiy Node Credentials Model](#qiy-node-credentials-model).
+
+### 5.9.2 Qiy Node Credentials Relations
+
+See [Qiy Node Credentials Model](#qiy-node-credentials-model).
+
+### 5.9.3 Qiy Node Credentials Business Rules
+
+tbd
+
+## 5.10 Service Description
+
+### 5.10.1 Service Description Attributes
+
+See [Service Description Model](#service-description-model).
+
+### 5.10.2 Service Description Relations
+
+See [Service Description Model](#service-description-model).
+
+### 5.10.3 Service Description Business Rules
 
 tbd
 
