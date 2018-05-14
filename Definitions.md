@@ -250,7 +250,7 @@ A [Service](#service), namely the provisioning of [Data](#data).
 A [Service Description](#service-description) of a [Data Service](#data-service).
 
 ### Data Source
-A [Data Service](#data-service) of a [Data Provider](#data-provider) that will be used to provide the [Personal Data](#personal-data) the use of which has been granted in a [Consent](#consent).
+A [Service Source](#service-source): a [Data Service](#data-service) that will be used to provide the [Personal Data](#personal-data) for a [Consent](#consent).
 
 ### Data Subject
 As defined in the [GDPR](#gdpr).
@@ -630,7 +630,7 @@ See [Provider Register Request](#provider-register-request).
 See [Provider Unregister Request](#provider-unregister-request).
 
 ### Service Source
-A [Service](#service) of a [Service Provider](#service-provider) that can provide a specific [Service](#service).
+A [Service](#service) of a [Service Provider](#service-provider) that provides the [Service](#service) required by another [Service](#service).
 
 ### Service Unregister Request
 A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) of a [Service Provider](#service-provider), e.g. to remove a [Service](#service) from the [Service Catalogue](#service-catalogue) of a [Service Provider](#service-provider).
@@ -642,7 +642,7 @@ A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](
 A [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](#data-source) for a [Consent](#consent).
 
 ### Source Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) as source for a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) as a [Service Source](#service-source).
 
 ### Technology Event
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096
