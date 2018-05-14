@@ -320,7 +320,7 @@ The [Connect Tokens Request](#connect-tokens-request) is a [Qiy Node Request](De
 ## 2.4 Connection Requests
 
 ### 2.4.1 Connection Create Request
-The [Connection Create Request](#connection-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) with a [Connect Token](Definitions.md#connect-token).
+The [Connection Create Request](#connection-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) using a [Connect Token](Definitions.md#connect-token).
 
 ### 2.4.2 Connection Delete Request
 The [Connection Delete Request](#connection-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connection](Definitions.md#connection).
@@ -431,12 +431,12 @@ The [Provider Unregister Request](#provider-unregister-request) is a [Qiy Node R
 The [Qiy Node Delete Request](#qiy-node-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to delete a [Qiy Node](Definitions.md#qiy-node).
 
 ### 2.11.2 Qiy Node Create Request
-The [Qiy Node Create Request](#qiy-node-create-request) is a [HTTP Request](Definitions.md#http-request) to create a [Qiy Node](Definitions.md#qiy-node).
+The [Qiy Node Create Request](#qiy-node-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to create a [Qiy Node](Definitions.md#qiy-node).
 
 ## 2.12 Service Registration Requests
 
 ### 2.12.1 Service Register Request
-The [Service Register Request](#service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Service Providers](Definitions.md#service-provider) to register a [Service](Definitions.md#service), e.g. to add a [Service](Definitions.md#service) to his [Service Catalogue](Definitions.md#service-catalogue).
+The [Service Register Request](#service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider), e.g. to add a [Service](Definitions.md#service) to the [Service Catalogue](Definitions.md#service-catalogue) of a [Service Provider](Definitions.md#service-provider).
 
 ### 2.12.2 Service Unregister Request
 The [Service Register Request](#service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider), e.g. to remove a [Service](Definitions.md#service) from the [Service Catalogue](Definitions.md#service-catalogue) of a [Service Provider](Definitions.md#service-provider).
@@ -595,7 +595,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Catalogue Details Request]
+[Definitions](Definitions.md)                       | [Catalogue Details Request](Definitions.md#catalogue-details-request)
 [Qiy Node API](Qiy%20Node%20API.json) | [GET /CatalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CatalogueUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.1 Catalogue Details Request](#221-catalogue-details-request)
 

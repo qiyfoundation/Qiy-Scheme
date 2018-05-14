@@ -84,7 +84,7 @@ A [Node](#node) which hosts one or more [Carriers](#carrier).
 ### Carrier Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
 
-### Catalogue Detail Request
+### Catalogue Details Request
 A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
 
 ### Catalogue Register Request
@@ -621,7 +621,7 @@ A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Servi
 The [Identity](#identity) of the [Service Provider](#service-provider) as registered by the [Access Provider](#access-provider).
 
 ### Service Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) of a [Service Provider](#service-provider), e.g. to add a [Service](#service) to the [Service Catalogue](#service-catalogue) of a [Service Provider](#service-provider).
 
 ### Service Provider Register Request
 See [Provider Register Request](#provider-register-request).
@@ -633,7 +633,7 @@ See [Provider Unregister Request](#provider-unregister-request).
 A [Service](#service) of a [Service Provider](#service-provider) that can provide a specific [Service](#service).
 
 ### Service Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) of a [Service Provider](#service-provider), e.g. to remove a [Service](#service) from the [Service Catalogue](#service-catalogue) of a [Service Provider](#service-provider).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
