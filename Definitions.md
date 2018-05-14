@@ -22,6 +22,9 @@ An organization which provides [Qiy Users](#qiy-user) access to the [Qiy Trust N
 ### Anonymous
 Not directly or indirectly traceable to a natural person.
 
+### API
+See [Application Programming Interface](#application-programming-interface).
+
 ### Application
 An [Application Service](#application-service) or software for such a service. 
 
@@ -30,6 +33,9 @@ A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create
 
 ### Application Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Application Programming Interface
+As described in https://en.wikipedia.org/wiki/Application_programming_interface.
 
 ### Application Service
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap09.html#_Toc489946075
@@ -456,7 +462,7 @@ A member of the [Qiy Foundation](#qiy-foundation), see https://www.qiyfoundation
 A [Node](#node): a point of entry for a [Qiy User](#qiy-user) to connect to his personal or organisational [Data](#data) and allowing to manage and reuse [Data](#data) via the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
-A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
+The [API](#api) of the [Qiy Node Interface](#qiy-node-interface) which is part of the [Qiy Open Standard](#qiy-open-standard).
 
 ### Qiy Node Credentials
 The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
@@ -478,6 +484,9 @@ An [Identifier](#identifier) which can be used to identify a [Qiy Node](#qiy-nod
 
 ### Qiy Node Implementation
 An [Application](#application) which can be used to realize a [Qiy Node](#qiy-node).
+
+### Qiy Node Interface
+The [Technology Interface](#technology-interface) of a [Qiy Node](#qiy-node).
 
 ### Qiy Node Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
@@ -643,6 +652,12 @@ A [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](#dat
 
 ### Source Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) as a [Service Source](#service-source).
+
+### Source Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) as a [Service Source](#service-source).
+
+### Source Update Request
+A [Qiy Node Request](#qiy-node-request) to update a [Service Source](#service-source).
 
 ### Technology Event
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096
