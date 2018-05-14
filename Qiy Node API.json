@@ -308,13 +308,6 @@
                     "maxItems": 1,
                     "minItems": 0,
                     "type": "string"
-                },
-                "scan": {
-                    "description": "Current address for the 'create connection'-endpoint (scanEndpoint). This property is only included when the request is authenticated.",
-                    "format": "url",
-                    "maxItems": 1,
-                    "minItems": 0,
-                    "type": "string"
                 }
             }
         },
@@ -1043,7 +1036,7 @@
                 ]
             }
         },
-        "/scanEndpoint": {
+        "/connectionsEndpoint": {
             "post": {
                 "summary": "Connection Create Request",
                 "consumes": [
