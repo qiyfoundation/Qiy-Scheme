@@ -268,7 +268,9 @@ The returned version tag complies with Semantic Versioning 2.0.0, see [https://s
 ### 2.1.3 Dynamic Path Endpoint Addresses
 
 The Qiy Node uses [Dynamic Path Endpoint Addresses](#dynamic-path-endpoint-addresses) for all but the /api path endpoint, which is strongly advised to be used at the start of every new day to obtain valid addresses and remain operational.
+To obtain the endpoint addresses, use:
 
+[GET /api](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#apiGet)
 
 ### 2.1.4 Authentication
 
@@ -733,7 +735,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Catalogue Details Request](Definitions.md#catalogue-details-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /CatalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CatalogueUrlGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /catalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.1 Catalogue Details Request](#221-catalogue-details-request)
 
 ## Catalogue Register Request
@@ -741,7 +743,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Catalogue Register Request](Definitions.md#catalogue-register-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /CataloguesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CataloguesEndpointPost)
+[Qiy Node API](Qiy%20Node%20API.json) | [POST /cataloguesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#cataloguesEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.2 Catalogue Register Request](#222-catalogue-register-request)
 
 ## Catalogue Unregister Request
@@ -749,7 +751,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Catalogue Unregister Request](Definitions.md#catalogue-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /CatalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CatalogueUrlDelete)
+[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /catalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.3 Catalogue Unregister Request](#223-catalogue-unregister-request)
 
 ## Catalogues Request
@@ -757,7 +759,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Catalogues Request](Definitions.md#catalogues-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /CataloguesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CataloguesEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /cataloguesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#cataloguesEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.4 Catalogues Request](#224-catalogues-request)
 
 ## Connect Token
@@ -773,8 +775,8 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connect Token Create Request](Definitions.md#connect-token-create-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /ConnectTokensEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectTokensEndpointPost)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConnectTokenUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectTokenUrlGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [POST /ctCreateEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ctCreateEndpointPost)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /connectTokenUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectTokenUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3.1 Connect Token Create Request](#231-connect-token-create-request)
 
 ## Connect Token Delete Request
@@ -798,7 +800,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connect Token Register Request](Definitions.md#connect-token-register-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /ConnectTokensEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectTokensEndpointPost)
+[Qiy Node API](Qiy%20Node%20API.json) | [POST /ctCreateEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ctCreateEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3.4 Connect Token Register Request](#234-connect-token-register-request)
 
 ## Connect Token Update Request
@@ -814,7 +816,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connect Tokens Request](Definitions.md#connect-tokens-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConnectTokensEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectTokensEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /ctListEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ctListEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3.6 Connect Tokens Request](#236-connect-tokens-request)
 
 ## Connection
@@ -830,7 +832,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connection Create Request](Definitions.md#connection-create-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /ConnectionsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectionsEndpointPost)
+[Qiy Node API](Qiy%20Node%20API.json) | [POST /connectionsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectionsEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.1 Connection Create Request](#241-connection-create-request)
 
 ## Connection Created Event
@@ -846,7 +848,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connection Delete Request](Definitions.md#connection-delete-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /ConnectionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectionUrlDelete)
+[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /connectionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectionUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.2 Connection Delete Request](#242-connection-delete-request)
 
 ## Connection Details Request
@@ -854,7 +856,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connection Details Request](Definitions.md#connection-details-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConnectionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectionUrlGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /connectionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectionUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.3 Connection Details Request](#243-connection-details-request)
 
 ## Connections Request
@@ -862,7 +864,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Connections Request](Definitions.md#connections-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConnectionsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConnectionsEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /connectionsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectionsEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4.4 Connections Request](#244-connections-request)
 
 ## Consent
@@ -878,7 +880,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Consent Delete Request](Definitions.md#consent-delete-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlDelete)
+[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.1 Consent Delete Request](#251-consent-delete-request)
 
 ## Consent Denied Event
@@ -894,7 +896,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Consent Denied Request](Definitions.md#consent-denied-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlPatch)
+[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.2 Consent Denied Request](#252-consent-denied-request)
 
 ## Consent Details Request
@@ -902,7 +904,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Consent Details Request](Definitions.md#consent-details-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.3 Consent Details Request](#253-consent-details-request)
 
 ## Consent Granted Event
@@ -918,7 +920,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Consent Granted Request](Definitions.md#consent-granted-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlPatch)
+[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.4 Consent Granted Request](#254-consent-granted-request)
 
 ## Consent Notification Message
@@ -942,7 +944,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Consent Withdrawn Request](Definitions.md#consent-withdrawn-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlPatch)
+[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.5 Consent Withdrawn Request](#255-consent-withdrawn-request)
 
 ## Consents Request
@@ -950,7 +952,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                       | [Consents Request](Definitions.md#consents-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConsentsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentsEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /consentsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentsEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.6 Consents Request](#256-consents-request)
 
 ## Data Provider
@@ -983,6 +985,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json) | [Path Endpoint Addresses](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PathEndpointAddresses)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /api](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#apiGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.3 Dynamic Path Endpoint Addresses](#213-dynamic-path-endpoint-addresses)
 
 ## Event
@@ -998,15 +1001,15 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /EventsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#EventsEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json) | [GET /eventsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#eventsEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.6.1 Events Request](#261-events-request)
 
 ## Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Qiy Node Message](Definitions.md#qiy-node-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageModel)
+[Definitions](Definitions.md)                 | [Qiy Node Message](Definitions.md#qiy-node-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4 Messages](#4-messages)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Message](#56-message)
 
@@ -1014,135 +1017,135 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Message Delete Request](Definitions.md#message-delete-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /MessageUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageUrlDelete)
+[Definitions](Definitions.md)                 | [Message Delete Request](Definitions.md#message-delete-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /messageUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#messageUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.1 Message Delete Request](#271-message-delete-request)
 
 ## Message Details Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Message Details Request](Definitions.md#message-details-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /MessageUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageUrlGet)
+[Definitions](Definitions.md)                 | [Message Details Request](Definitions.md#message-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /messageUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#messageUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.2 Message Details Request](#272-message-details-request)
 
 ## Message Post Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Message Post Request](Definitions.md#message-post-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /MailBoxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MailBoxUrlPost)
+[Definitions](Definitions.md)                 | [Message Post Request](Definitions.md#message-post-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /mailBoxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#mailBoxUrlPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.3 Message Post Request](#273-message-post-request)
 
 ## Message Received Event
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Message Received Event](Definitions.md#message-received-event)
-[Qiy Node API](Qiy%20Node%20API.json) | [Message Received Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageReceivedEventModel)
+[Definitions](Definitions.md)                 | [Message Received Event](Definitions.md#message-received-event)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Message Received Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageReceivedEventModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.3.1 Message Received Event](#331-message-received-event)
 
 ## Messages Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Messages Request](Definitions.md#messages-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /MailBoxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MailBoxUrlGet)
+[Definitions](Definitions.md)                 | [Messages Request](Definitions.md#messages-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /mailBoxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#mailBoxUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.4 Messages Request](#274-messages-request)
 
 ## Operation Execute Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Execute Request](Definitions.md#operation-execute-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /OperationEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationEndpointGet)
+[Definitions](Definitions.md)                 | [Operation Execute Request](Definitions.md#operation-execute-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /refEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#refEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.1 Operation Execute Request](#281-operation-execute-request)
 
 ## Operation Reference Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Reference Message](Definitions.md#operation-reference-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Operation Reference Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationReferenceMessageModel)
+[Definitions](Definitions.md)                 | [Operation Reference Message](Definitions.md#operation-reference-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Operation Reference Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationReferenceMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.2.1 Operation Reference Message](#421-operation-reference-message)
 
 ## Operation Reference Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Reference Request](Definitions.md#operation-reference-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlGet)
+[Definitions](Definitions.md)                 | [Operation Reference Request](Definitions.md#operation-reference-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.2 Operation Reference Request](#282-operation-reference-request)
 
 ## Operation Reference Request Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Reference Request Message](Definitions.md#operation-reference-request-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Operation Reference Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationReferenceRequestMessageModel)
+[Definitions](Definitions.md)                 | [Operation Reference Request Message](Definitions.md#operation-reference-request-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Operation Reference Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationReferenceRequestMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.2.2 Operation Reference Request Message](#422-operation-reference-request-message)
 
 ## Operation Register Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Register Request](Definitions.md#operation-register-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /OperationsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationsEndpointPost)
+[Definitions](Definitions.md)                 | [Operation Register Request](Definitions.md#operation-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /refsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#refsEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.3 Operation Register Request](#283-operation-register-request)
 
 ## Operation Specification
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Specification](Definitions.md#operation-specification)
-[Qiy Node API](Qiy%20Node%20API.json) | [Operation Specification Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationSpecificationModel)
+[Definitions](Definitions.md)                 | [Operation Specification](Definitions.md#operation-specification)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Operation Specification Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationSpecificationModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Operation Specification](#57-operation-specification)
 
 ## Operation Specification Request Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Operation Specification Request Message](Definitions.md#operation-specification-request-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Operation Specification Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationSpecificationRequestMessageModel)
+[Definitions](Definitions.md)                 | [Operation Specification Request Message](Definitions.md#operation-specification-request-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Operation Specification Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationSpecificationRequestMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.2.3 Operation Specification Request Message](#423-operation-specification-request-message)
 
 ## Persistent Id
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Persistent Id](Definitions.md#persistent-id)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [6.3.2 Accepter Events](#632-accepter-events)
+[Definitions](Definitions.md)                 | [Persistent Id](Definitions.md#persistent-id)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.4.1 Persistent Id Event](#341-persistent-id-event)
 
 ## Persistent Id Event
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Persistent Id Event](Definitions.md#persistent-id-event)
-[Qiy Node API](Qiy%20Node%20API.json) | [Persistent Id Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PersistentIdEventModel)
+[Definitions](Definitions.md)                 | [Persistent Id Event](Definitions.md#persistent-id-event)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Persistent Id Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PersistentIdEventModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.4.1 Persistent Id Event](#341-persistent-id-event)
 
 ## Portfolio
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Portfolio](Definitions.md#service-portfolio)
-[Qiy Node API](Qiy%20Node%20API.json) | [Portfolio Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioModel)
+[Definitions](Definitions.md)                   | [Service Portfolio](Definitions.md#service-portfolio)
+[Qiy Node API](Qiy%20Node%20API.json)           | [Portfolio Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocoyyl.md) | [5.8 Portfolio](#58-portfolio)
 
 ## Portfolio Details Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Portfolio Details Request](Definitions.md#portfolio-details-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /PortfolioEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioEndpointGet)
+[Definitions](Definitions.md)                 | [Portfolio Details Request](Definitions.md#portfolio-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /portfolioEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#portfolioEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.9.1 Portfolio Details Request](#291-portfolio-details-request)
 
 ## Portfolio Register Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Portfolio Register Message](Definitions.md#portfolio-register-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Portfolio Register Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioRegisterMessageModel)
+[Definitions](Definitions.md)                 | [Portfolio Register Message](Definitions.md#portfolio-register-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Portfolio Register Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioRegisterMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.3.1 Portfolio Register Message](#431-portfolio-register-message)
 
 ## Provider
@@ -1155,55 +1158,54 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Provider Register Request](Definitions.md#provider-register-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /LibraryEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#LibraryEndpointPost)
+[Definitions](Definitions.md)                 | [Provider Register Request](Definitions.md#provider-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /libraryEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.1 Provider Register Request](#2101-provider-register-request)
 
 ## Provider Unregister Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Provider Unregister Request](Definitions.md#provider-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /ProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ProviderUrlDelete)
+[Definitions](Definitions.md)                 | [Provider Unregister Request](Definitions.md#provider-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /providerUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#providerUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.2 Provider Unregister Request](#2102-provider-unregister-request)
 
 ## Qiy Node
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Qiy Node](Definitions.md#qiy-node)
-[Qiy Node Protocol](Qiy%20Node%20Protocoyyl.md) | [5.x Qiy Node](#5x-qiy-node)
+[Definitions](Definitions.md)                 | [Qiy Node](Definitions.md#qiy-node)
 
 ## Qiy Node Create Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Qiy Node Create Request](Definitions.md#qiy-node-create-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /QiyNodeEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#QiyNodeEndpointPost)
+[Definitions](Definitions.md)                 | [Qiy Node Create Request](Definitions.md#qiy-node-create-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /createEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#createEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.11.1 Qiy Node Create Request](#2111-qiy-node-create-request)
 
 ## Qiy Node Credentials
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Qiy Node Credentials](Definitions.md#qiy-node-credentials)
-[Qiy Node API](Qiy%20Node%20API.json) | [Qiy Node Credentials Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#QiyNodeCredentialsModel)
+[Definitions](Definitions.md)                 | [Qiy Node Credentials](Definitions.md#qiy-node-credentials)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credentials Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#QiyNodeCredentialsModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Qiy Node Credentials](#59-qiy-node-credentials)
 
 ## Qiy Node Delete Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Qiy Node Delete Request](Definitions.md#qiy-node-delete-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /QiyNodeEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#QiyNodeEndpointDelete)
+[Definitions](Definitions.md)                 | [Qiy Node Delete Request](Definitions.md#qiy-node-delete-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /deleteEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#deleteEndpointDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.11.2 Qiy Node Delete Request](#2112-qiy-node-delete-request)
 
 ## Qiy Node Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Qiy Node Message](Definitions.md#qiy-node-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageModel)
+[Definitions](Definitions.md)                 | [Qiy Node Message](Definitions.md#qiy-node-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy Node Message](Definitions.md#qiy-node-message)
 
 ## Qiy App
@@ -1222,118 +1224,118 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Relying Party](Definitions.md#relying-party)
+[Definitions](Definitions.md) | [Relying Party](Definitions.md#relying-party)
 
 ## Service
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service](Definitions.md#service)
+[Definitions](Definitions.md) | [Service](Definitions.md#service)
 
 ## Service Catalogue
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Catalogue](Definitions.md#service-catalogue)
+[Definitions](Definitions.md)                 | [Service Catalogue](Definitions.md#service-catalogue)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Catalogue](#catalogue)
 
 ## Service Credentials Request Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Credentials Request Message](Definitions.md#service-credentials-request-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Service Credentials Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceCredentialsRequestMessageModel)
+[Definitions](Definitions.md)                 | [Service Credentials Request Message](Definitions.md#service-credentials-request-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Service Credentials Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceCredentialsRequestMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.4.1 Service Credentials Request Message](#441-service-credentials-request-message)
 
 ## Service Description
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Description](Definitions.md#service-description)
-[Qiy Node API](Qiy%20Node%20API.json) | [Service Description Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceDescriptionModel)
+[Definitions](Definitions.md)                 | [Service Description](Definitions.md#service-description)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Service Description Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceDescriptionModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Service Description](#510-service-description)
 
 ## Service Endpoint
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Endpoint](Definitions.md#service-endpoint)
+[Definitions](Definitions.md) | [Service Endpoint](Definitions.md#service-endpoint)
 
 ## Service Portfolio
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Portfolio](Definitions.md#service-portfolio)
+[Definitions](Definitions.md)                 | [Service Portfolio](Definitions.md#service-portfolio)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Portfolio](#portfolio)
 
 ## Service Provider
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Provider](Definitions.md#service-provider)
+[Definitions](Definitions.md)                 | [Service Provider](Definitions.md#service-provider)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Provider](#provider)
 
 ## Service Register Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Register Request](Definitions.md#service-register-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /CatalogueEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CatalogueEndpointPost)
+[Definitions](Definitions.md)                 | [Service Register Request](Definitions.md#service-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /catalogueEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.1 Service Register Request](#2121-service-register-request)
 
 ## Service Unregister Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Service Unregister Request](Definitions.md#service-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /ServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceUrlDelete)
+[Definitions](Definitions.md)                 | [Service Unregister Request](Definitions.md#service-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#serviceUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.2 Service Unregister Request](#2122-service-unregister-request)
 
 ## Source
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Data Source](Definitions.md#data-source)
+[Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
 
 ## Source Candidates Message
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Source Candidates Message](Definitions.md#source-candidates-message)
-[Qiy Node API](Qiy%20Node%20API.json) | [Source Candidates Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#SourceCandidatesMessageModel)
+[Definitions](Definitions.md)                 | [Source Candidates Message](Definitions.md#source-candidates-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Source Candidates Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#SourceCandidatesMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.5.1 Source Candidates Message](#451-source-candidates-message)
 
 ## Source Candidates Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Source Candidates Request](Definitions.md#source-candidates-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [GET /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlGet)
+[Definitions](Definitions.md)                 | [Source Candidates Request](Definitions.md#source-candidates-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.13.1 Source Candidates Request](#2131-source-candidates-request)
 
 ## Source Register Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Source Register Request](Definitions.md#source-register-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [POST /ConsentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ConsentUrlPost)
+[Definitions](Definitions.md)                 | [Source Register Request](Definitions.md#source-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.13.2 Source Register Request](#2132-source-register-request)
 
 ## Source Unregister Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Source Unregister Request](Definitions.md#source-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [DELETE /SourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#SourceUrlDelete)
+[Definitions](Definitions.md)                 | [Source Unregister Request](Definitions.md#source-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.13.3 Source Unregister Request](#2133-source-unregister-request)
 
 ## Source Update Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Source Update Request](Definitions.md#source-update-request)
-[Qiy Node API](Qiy%20Node%20API.json) | [PATCH /SourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#SourceUrlPatch)
+[Definitions](Definitions.md)                 | [Source Update Request](Definitions.md#source-update-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.13.4 Source Update Request](#2134-source-update-request)
 
 
@@ -1341,13 +1343,13 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Transport Layer](Definitions.md#transport-layer)
+[Definitions](Definitions.md) | [Transport Layer](Definitions.md#transport-layer)
 
 ## Transport Protocol
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                       | [Transport Protocol](Definitions.md#transport-protocol)
+[Definitions](Definitions.md) | [Transport Protocol](Definitions.md#transport-protocol)
 
 
 

@@ -223,7 +223,7 @@
         },
         "EndpointAddressesModel": {
             "type": "object",
-            "description": "Current endpoint addresses.",
+            "description": "Current path endpoint addresses.",
             "properties": {
                 "create": {
                     "description": "Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated.",
@@ -232,8 +232,22 @@
                     "minItems": 0,
                     "type": "string"
                 },
+                "catalogues": {
+                    "description": "Current address for the 'catalogues'-endpoint (cataloguessEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
                 "connections": {
                     "description": "Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "consents": {
+                    "description": "Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
                     "maxItems": 1,
                     "minItems": 0,
@@ -253,8 +267,29 @@
                     "minItems": 0,
                     "type": "string"
                 },
+                "delete": {
+                    "description": "Current address for the 'delete'-endpoint (deleteEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
                 "events": {
                     "description": "Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "library": {
+                    "description": "Current address for the 'library'-endpoint (libraryEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "portfolio": {
+                    "description": "Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
                     "maxItems": 1,
                     "minItems": 0,
