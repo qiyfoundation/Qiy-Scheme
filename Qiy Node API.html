@@ -254,6 +254,7 @@ font-style: italic;
   <h4><a href="#Lifecycle">Lifecycle</a></h4>
   <ul>
   <li><a href="#createEndpointPost"><code><span class="http-method">post</span> /createEndpoint</code></a></li>
+  <li><a href="#credentialsRegisterUrlPost"><code><span class="http-method">post</span> /credentialsRegisterUrl</code></a></li>
   <li><a href="#deleteEndpointDelete"><code><span class="http-method">delete</span> /deleteEndpoint</code></a></li>
   </ul>
   <h4><a href="#Message">Message</a></h4>
@@ -294,6 +295,12 @@ font-style: italic;
   <li><a href="#catalogueUrlGet"><code><span class="http-method">get</span> /catalogueUrl</code></a></li>
   <li><a href="#cataloguesEndpointGet"><code><span class="http-method">get</span> /cataloguesEndpoint</code></a></li>
   <li><a href="#libraryServiceUrlGet"><code><span class="http-method">get</span> /libraryServiceUrl</code></a></li>
+  </ul>
+  <h4><a href="#ServiceCredentials">ServiceCredentials</a></h4>
+  <ul>
+  <li><a href="#serviceCredentialsUrlDelete"><code><span class="http-method">delete</span> /serviceCredentialsUrl</code></a></li>
+  <li><a href="#serviceCredentialsUrlGet"><code><span class="http-method">get</span> /serviceCredentialsUrl</code></a></li>
+  <li><a href="#serviceCredentialsUrlPatch"><code><span class="http-method">patch</span> /serviceCredentialsUrl</code></a></li>
   </ul>
   <h4><a href="#Source">Source</a></h4>
   <ul>
@@ -384,7 +391,7 @@ font-style: italic;
     <a class="up" href="#__Methods">Up</a>
     <pre class="get"><code class="huge"><span class="http-method">get</span> /connectTokenUrl</code></pre></div>
     <div class="method-summary">Get Connect Token Details (<span class="nickname">connectTokenUrlGet</span>)</div>
-    <div class="method-notes">Get Connect Token Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-create-request">Connect Token Create Request</a>.</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-details-request">Connect Token Details Request</a>.</div>
 
 
 
@@ -777,7 +784,7 @@ font-style: italic;
     <a class="up" href="#__Methods">Up</a>
     <pre class="patch"><code class="huge"><span class="http-method">patch</span> /connectTokenUrl</code></pre></div>
     <div class="method-summary">Update Connect Token Details (<span class="nickname">connectTokenUrlPatch</span>)</div>
-    <div class="method-notes">Update Connect Token Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-update-request">Connect Token Update Request</a>.</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-update-request">Connect Token Update Request</a>.</div>
 
 
     <h3 class="field-label">Consumes</h3>
@@ -1814,6 +1821,45 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
+  <div class="method"><a name="credentialsRegisterUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /credentialsRegisterUrl</code></pre></div>
+    <div class="method-summary">Register Service Credentials. (<span class="nickname">credentialsRegisterUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-register-request">Service Credentials Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">service-credentials <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Successful execution.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="deleteEndpointDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -2262,7 +2308,7 @@ font-style: italic;
     <a class="up" href="#__Methods">Up</a>
     <pre class="get"><code class="huge"><span class="http-method">get</span> /connectTokenUrl</code></pre></div>
     <div class="method-summary">Get Connect Token Details (<span class="nickname">connectTokenUrlGet</span>)</div>
-    <div class="method-notes">Get Connect Token Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-create-request">Connect Token Create Request</a>.</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-details-request">Connect Token Details Request</a>.</div>
 
 
 
@@ -2955,6 +3001,120 @@ font-style: italic;
         <a href="#LibraryServiceModel">LibraryServiceModel</a>
   </div> <!-- method -->
   <hr/>
+  <h1><a name="ServiceCredentials">ServiceCredentials</a></h1>
+  <div class="method"><a name="serviceCredentialsUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /serviceCredentialsUrl</code></pre></div>
+    <div class="method-summary">Delete Service Credentials. (<span class="nickname">serviceCredentialsUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-delete-request">Service Credentials Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="serviceCredentialsUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /serviceCredentialsUrl</code></pre></div>
+    <div class="method-summary">Get Service Credentials Details (<span class="nickname">serviceCredentialsUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-details-request">Service Credentials Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      ServiceCrendentialsModel
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#ServiceCrendentialsModel">ServiceCrendentialsModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="serviceCredentialsUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /serviceCredentialsUrl</code></pre></div>
+    <div class="method-summary">Update Service Credentials Details (<span class="nickname">serviceCredentialsUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-update-request">Service Credentials Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">service-credentials <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <h1><a name="Source">Source</a></h1>
   <div class="method"><a name="candidatesUrlGet"/>
     <div class="method-path">
@@ -3059,6 +3219,8 @@ font-style: italic;
     <pre class="example"><code>{
   "links" : {
     "candidates" : "http://example.com/aeiou",
+    "credentialsRegister" : "http://example.com/aeiou",
+    "serviceCredentials" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "dataProvider" : "http://example.com/aeiou",
     "consent" : "http://example.com/aeiou",
@@ -3519,7 +3681,7 @@ font-style: italic;
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
 <div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#SourceModel_links">SourceModel_links</a></span>  </div>
-<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the catalogue. </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the source. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3530,6 +3692,8 @@ font-style: italic;
 <div class="param">dataDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
 <div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
 <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
+<div class="param">credentialsRegister </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
+<div class="param">serviceCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
     </div>  <!-- field-items -->
   </div>

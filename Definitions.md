@@ -632,8 +632,20 @@ A [Business Object](#business-object) for information about all the [Services](#
 ### Service Credentials
 [Credentials](#credential) for accessing a [Service Endpoint](#service-endpoint).
 
+### Service Credentials Details Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of [Service Credentials](#service-credentials) for a [Data Source](#data-source) of a [Consent](#consent).
+
+### Service Credentials Register Request
+A [Qiy Node Request](#qiy-node-request) to register the [Service Credentials](#service-credentials) for a [Data Source](#data-source) of a [Consent](#consent).
+
 ### Service Credentials Request Message
 A [Qiy Node Message](#qiy-node-message) for requesting [Service Credentials](#service-credentials).
+
+### Service Credentials Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister the [Service Credentials](#service-credentials) of a [Data Source](#data-source) of a [Consent](#consent).
+
+### Service Credentials Update Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update the [Service Credentials](#service-credentials) of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
