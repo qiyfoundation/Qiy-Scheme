@@ -52,13 +52,18 @@
                 }
             ]
         },
+        "CandidatesModel": {
+            "description": "List of Source Candidates.",
+	    "items": {
+                "description": "Provider url of Data Provider that can provide the data.",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "CatalogueModel": {
             "description": "Catalogue details.",
             "properties": {
-                "state": {
-                    "description": "State of the catalogue.",
-                    "type": "string"
-                },
                 "activeFrom": {
                     "description": "Active from date time stamp.",
                     "type": "integer",
@@ -69,26 +74,51 @@
                     "type": "integer",
                     "format": "Unix time in ms, nullable"
                 },
+		"links": {
+                    "description": "Catalogue links.",
+                    "properties": {
+		        "provider": {
+		            "description": "Provider url",
+			    "format": "url",
+			    "typ": "string"
+		        },
+		        "self": {
+		            "description": "Catalogue url",
+			    "format": "url",
+			    "typ": "string"
+		        }
+		    },
+		    "required": [
+		        "self",
+		        "provider"
+		    ],
+		    "type": "object"
+		},
                 "services": {
-                    "description": "Provided services.",
+                    "description": "Services provided by the Service Provider.",
 	            "items": {
-                        "description": "Service Url of the provided service.",
+                        "description": "List of Catalogue Service urls.",
                         "format": "url",
                         "type": "string" 
                     },
                     "type": "array"
+                },
+                "state": {
+                    "description": "State of the catalogue.",
+                    "type": "string"
                 }
             },
             "required": [
-                "state",
                 "activeFrom",
                 "activeUntil",
-                "services"
+                "links",
+                "services",
+                "state"
             ],
             "type": "object"
         },
         "CataloguesModel": {
-            "description": "List of Catalogue Urls.",
+            "description": "List of Catalogues.",
 	    "items": {
                 "description": "Catalogue url",
                 "format": "url",
@@ -98,6 +128,54 @@
         },
         "CatalogueServiceModel": {
             "description": "Catalogue Service Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+		"links": {
+                    "description": "Catalogue Service links.",
+                    "properties": {
+                        "libraryService": {
+		            "description": "Library Service url.",
+			    "format": "url",
+			    "typ": "string"
+		        },
+		        "provider": {
+		            "description": "Provider url",
+			    "format": "url",
+			    "typ": "string"
+		        },
+                        "self": {
+		            "description": "Catalogue service url",
+			    "format": "url",
+			    "typ": "string"
+		        }
+		    },
+		    "required": [
+		        "libraryService",
+		        "provider",
+		        "self"
+		    ],
+		    "type": "object"
+		},
+                "state": {
+                    "description": "State of the service.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
             "type": "object"
         },
         "ConnectionsResponseModel": {
@@ -241,7 +319,7 @@
                     "type": "string"
                 },
                 "identifier": {
-                    "description": "This property is only used in responses and holds the Qiy Node id.",
+                    "description": "This property is only used in responses and holds the alias.",
                     "type": "string"
                 },
                 "tmpSecret": {
@@ -292,7 +370,7 @@
                     "type": "array"
 		},
                 "dataSources": {
-                    "description": "Source Urls of the Data Sources, only accessible for Individuals.",
+                    "description": "Source Urls of the Data Sources, only accessible for the Data Subject.",
 		    "items": {
                         "description": "Source Url of the Data Source",
                         "format": "url",
@@ -300,27 +378,35 @@
 		    },
                     "type": "array"
                 },
-                "self": {
-                    "description": "Consent Url.",
-                    "format": "url",
-                    "type": "string"
+		"links": {
+                    "type": "object",
+                    "properties": {
+                        "self": {
+                            "description": "Consent Url",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "subscribedService": {
+                            "description": "Catalogue Service Url of the subscribed Provider service.",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+		        "self",
+		        "subscribedService"
+                    ]
                 },
                 "state": {
                     "description": "State of the consent.",
-                    "type": "string"
-                },
-                "subscribedProviderService": {
-                    "description": "Catalogue Service Url of the Subscribed Provider service.",
-                    "format": "url",
                     "type": "string"
                 }
             },
             "required": [
                 "activeFrom",
                 "activeUntil",
-                "self",
-                "state",
-                "subscribedProviderService"
+                "links",
+                "state"
             ],
             "type": "object"
         },
@@ -706,6 +792,26 @@
         },
         "PortfolioModel": {
             "description": "Portfolio Model.",
+	    "properties": {
+                "subscribedServices": {
+                    "description": "Subscribed service.",
+		    "items": {
+                        "description": "Portfolio Service url of the subscribed service.",
+                        "format": "url",
+                        "type": "string"
+		    },
+                    "type": "array"
+                },
+                "dataProviders": {
+                    "description": "Connected Data Providers.",
+		    "items": {
+                        "description": "Portfolio Provider url of the connected data provider.",
+                        "format": "url",
+                        "type": "string"
+		    },
+                    "type": "array"
+                }
+	    },
             "type": "object"
         },
         "PortfolioServiceModel": {
@@ -812,12 +918,62 @@
         "SourceModel": {
             "description": "Source Model.",
             "properties": {
-		    "candidatesUrl": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+ 	        "links": {
+		    "properties": {
+		        "candidates": {
 			    "Description": "Source Candidates url",
 			    "format": "url",
 			    "type": "string"
-		    }
-	    },
+		        },
+		        "dataDescription": {
+			    "Description": "Catalogue Service url of the Data Service",
+			    "format": "url",
+			    "type": "string"
+		        },
+		        "dataProvider": {
+			    "Description": "Provider url of the Data Provider",
+			    "format": "url",
+			    "type": "string"
+		        },
+		        "consent": {
+			    "Description": "Consent url",
+			    "format": "url",
+			    "type": "string"
+		        },
+		        "self": {
+			    "Description": "Source url",
+			    "format": "url",
+			    "type": "string"
+		        }
+	            },
+		    "required": [
+	                "candidates",
+			"consent",
+			"self"
+		    ],
+		    "type": "object"
+                },
+		"state": {
+                    "description": "State of the catalogue.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
             "type": "object"
         }
     },
@@ -879,6 +1035,31 @@
                     "PathEndpointAddresses",
                     "Versions"
                 ]
+            }
+        },
+        "/candidatesUrl": {
+            "get": {
+                "summary": "Get Source Candidates",
+                "description": "See [Source Candidates Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-candidates-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CandidatesModel"
+                        }
+                    }
+                }
             }
         },
         "/cataloguesEndpoint": {

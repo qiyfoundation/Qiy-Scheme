@@ -127,26 +127,30 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Event Attributes](#551-event-attributes)
 		1. [Event Relations](#552-event-relations)
 		1. [Event Business Rules](#553-event-business-rules)
-	1. [Message](#56-message)
-		1. [Message Attributes](#561-message-attributes)
-		1. [Message Relations](#562-message-relations)
-		1. [Message Business Rules](#563-message-business-rules)
-	1. [Operation Specification](#57-operation-specification)
-		1. [Operation Specification Attributes](#571-operation-specification-attributes)
-		1. [Operation Specification Relations](#572-operation-specification-relations)
-		1. [Operation Specification Business Rules](#573-operation-specification-business-rules)
-	1. [Portfolio](#58-portfolio)
-		1. [Portfolio Attributes](#581-portfolio-attributes)
-		1. [Portfolio Relations](#582-portfolio-relations)
-		1. [Portfolio Business Rules](#583-portfolio-business-rules)
-	1. [Qiy Node Credentials](#59-qiy-node-credentials)
-		1. [Qiy Node Credentials Attributes](#591-qiy-node-credentials-attributes)
-		1. [Qiy Node Credentials Relations](#592-qiy-node-credentials-relations)
-		1. [Qiy Node Credentials Business Rules](#593-qiy-node-credentials-business-rules)
-	1. [Service Description](#510-service-description)
-		1. [Service Description Attributes](#5101-service-description-attributes)
-		1. [Service Description Relations](#5102-service-description-relations)
-		1. [Service Description Business Rules](#5103-service-description-business-rules)
+	1. [Library](#56-library)
+		1. [Library Attributes](#561-library-attributes)
+		1. [Library Relations](#562-library-relations)
+		1. [Library Business Rules](#563-library-business-rules)
+	1. [Message](#57-message)
+		1. [Message Attributes](#571-message-attributes)
+		1. [Message Relations](#572-message-relations)
+		1. [Message Business Rules](#573-message-business-rules)
+	1. [Operation Specification](#58-operation-specification)
+		1. [Operation Specification Attributes](#581-operation-specification-attributes)
+		1. [Operation Specification Relations](#582-operation-specification-relations)
+		1. [Operation Specification Business Rules](#583-operation-specification-business-rules)
+	1. [Portfolio](#59-portfolio)
+		1. [Portfolio Attributes](#591-portfolio-attributes)
+		1. [Portfolio Relations](#592-portfolio-relations)
+		1. [Portfolio Business Rules](#593-portfolio-business-rules)
+	1. [Qiy Node Credentials](#510-qiy-node-credentials)
+		1. [Qiy Node Credentials Attributes](#5101-qiy-node-credentials-attributes)
+		1. [Qiy Node Credentials Relations](#5102-qiy-node-credentials-relations)
+		1. [Qiy Node Credentials Business Rules](#5103-qiy-node-credentials-business-rules)
+	1. [Service Description](#511-service-description)
+		1. [Service Description Attributes](#5111-service-description-attributes)
+		1. [Service Description Relations](#5112-service-description-relations)
+		1. [Service Description Business Rules](#5113-service-description-business-rules)
 1. [Index](#6-index)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
@@ -186,6 +190,7 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Dynamic Path Endpoint Addresses](#dynamic-path-endpoint-addresses)
 	1. [Event](#event)
 	1. [Events Request](#events-request)
+	1. [Library](#library)
 	1. [Library Details Request](#library-details-request)
 	1. [Library Service Details Request](#library-service-details-request)
 	1. [Library Service Register Request](#library-service-register-request)
@@ -695,73 +700,87 @@ See [Event](#event) model.
 
 tbd
 
-## 5.6 Message
+## 5.6 Library
 
-### 5.6.1 Message Attributes
+### 5.6.1 Library Attributes
+
+See [Library](#library) model.
+
+### 5.6.2 Library Relations
+
+See [Library](#library) model.
+
+### 5.6.3 Library Business Rules
+
+tbd
+
+## 5.7 Message
+
+### 5.7.1 Message Attributes
 
 See [Message](#message) model.
 
-### 5.6.2 Message Relations
+### 5.7.2 Message Relations
 
 See [Message](#message) model.
 
-### 5.6.3 Message Business Rules
+### 5.7.3 Message Business Rules
 
 tbd
 
-## 5.7 Operation Specification
+## 5.8 Operation Specification
 
-### 5.7.1 Operation Specification Attributes
+### 5.8.1 Operation Specification Attributes
 
 See [Operation Specification](#operation-specification) model.
 
-### 5.7.2 Operation Specification Relations
+### 5.8.2 Operation Specification Relations
 
 See [Operation Specification](#operation-specification) model.
 
-### 5.7.3 Operation Specification Business Rules
+### 5.8.3 Operation Specification Business Rules
 
 tbd
 
-## 5.8 Portfolio
+## 5.9 Portfolio
 
-### 5.8.1 Portfolio Attributes
+### 5.9.1 Portfolio Attributes
 
 See [Portfolio](#portfolio) model.
 
-### 5.8.2 Portfolio Relations
+### 5.9.2 Portfolio Relations
 
 See [Portfolio](#portfolio) model.
 
-### 5.8.3 Portfolio Business Rules
+### 5.9.3 Portfolio Business Rules
 
 tbd
 
-## 5.9 Qiy Node Credentials
+## 5.10 Qiy Node Credentials
 
-### 5.9.1 Qiy Node Credentials Attributes
-
-See [Qiy Node Credentials](#qiy-node-credentials) model.
-
-### 5.9.2 Qiy Node Credentials Relations
+### 5.10.1 Qiy Node Credentials Attributes
 
 See [Qiy Node Credentials](#qiy-node-credentials) model.
 
-### 5.9.3 Qiy Node Credentials Business Rules
+### 5.10.2 Qiy Node Credentials Relations
+
+See [Qiy Node Credentials](#qiy-node-credentials) model.
+
+### 5.10.3 Qiy Node Credentials Business Rules
 
 tbd
 
-## 5.10 Service Description
+## 5.11 Service Description
 
-### 5.10.1 Service Description Attributes
-
-See [Service Description](#service-description) model.
-
-### 5.10.2 Service Description Relations
+### 5.11.1 Service Description Attributes
 
 See [Service Description](#service-description) model.
 
-### 5.10.3 Service Description Business Rules
+### 5.11.2 Service Description Relations
+
+See [Service Description](#service-description) model.
+
+### 5.11.3 Service Description Business Rules
 
 tbd
 
@@ -1064,6 +1083,14 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /eventsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#eventsEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.6.1 Events Request](#261-events-request)
 
+## Library
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Service Library](Definitions.md#service-library)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Library Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#LibraryModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
+
 ## Library Details Request
 
 Specification | Reference
@@ -1119,7 +1146,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Qiy Node Message](Definitions.md#qiy-node-message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4 Messages](#4-messages)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Message](#56-message)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Message](#57-message)
 
 ## Message Delete Request
 
@@ -1207,7 +1234,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Specification](Definitions.md#operation-specification)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Operation Specification Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#OperationSpecificationModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Operation Specification](#57-operation-specification)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Operation Specification](#58-operation-specification)
 
 ## Operation Specification Request Message
 
@@ -1238,7 +1265,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                   | [Service Portfolio](Definitions.md#service-portfolio)
 [Qiy Node API](Qiy%20Node%20API.json)           | [Portfolio Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocoyyl.md) | [5.8 Portfolio](#58-portfolio)
+[Qiy Node Protocol](Qiy%20Node%20Protocoyyl.md) | [5.9 Portfolio](#59-portfolio)
 
 ## Portfolio Details Request
 
@@ -1338,7 +1365,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Credentials](Definitions.md#qiy-node-credentials)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credentials Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#QiyNodeCredentialsModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Qiy Node Credentials](#59-qiy-node-credentials)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Qiy Node Credentials](#510-qiy-node-credentials)
 
 ## Qiy Node Delete Request
 
@@ -1401,7 +1428,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Description](Definitions.md#service-description)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Description Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceDescriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Service Description](#510-service-description)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Service Description](#511-service-description)
 
 ## Service Endpoint
 
