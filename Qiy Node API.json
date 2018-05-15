@@ -264,15 +264,8 @@
             "type": "object",
             "description": "Current path endpoint addresses.",
             "properties": {
-                "create": {
-                    "description": "Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated.",
-                    "format": "url",
-                    "maxItems": 1,
-                    "minItems": 0,
-                    "type": "string"
-                },
                 "catalogues": {
-                    "description": "Current address for the 'catalogues'-endpoint (cataloguessEndpoint). This property is only included when the request is authenticated.",
+                    "description": "Current address for the 'catalogues'-endpoint (cataloguesEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
                     "maxItems": 1,
                     "minItems": 0,
@@ -287,6 +280,13 @@
                 },
                 "consents": {
                     "description": "Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "create": {
+                    "description": "Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated.",
                     "format": "url",
                     "maxItems": 1,
                     "minItems": 0,
