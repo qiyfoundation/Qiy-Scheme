@@ -915,6 +915,55 @@
             },
             "uniqueItems": true
         },
+        "ServiceCredentialsModel": {
+            "description": "Service Credentials Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "credentials": {
+                    "description": "The actual credentials.",
+                    "type": "object"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "source": {
+                            "description": "Source url.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "self": {
+                            "description": "Service Credentials url",
+                            "type": "string",
+                            "format": "url"
+                        }
+                    },
+                    "required": [
+		        "source",
+		        "self"
+                    ]
+                },
+		"state": {
+                    "description": "State of the Service Credentials.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "state",
+                "activeFrom",
+                "activeUntil",
+                "links"
+            ],
+            "type": "object"
+        },
         "SourceModel": {
             "description": "Source Model.",
             "properties": {

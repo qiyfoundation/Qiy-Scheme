@@ -3372,6 +3372,8 @@ font-style: italic;
     <li><a href="#ReferenceModel"><code>ReferenceModel</code> - </a></li>
     <li><a href="#ReferenceResultModel"><code>ReferenceResultModel</code> - </a></li>
     <li><a href="#ReferencesResultModel"><code>ReferencesResultModel</code> - </a></li>
+    <li><a href="#ServiceCredentialsModel"><code>ServiceCredentialsModel</code> - </a></li>
+    <li><a href="#ServiceCredentialsModel_links"><code>ServiceCredentialsModel_links</code> - </a></li>
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#SourceModel_links"><code>SourceModel_links</code> - </a></li>
     <li><a href="#ApiLinksModel"><code>ApiLinksModel</code> - </a></li>
@@ -3672,6 +3674,25 @@ font-style: italic;
     <div class='model-description'>References result.</div>
     <div class="field-items">
       <div class="param">applicationProtocolUriPatternProperty (optional)</div><div class="param-desc"><span class="param-type"><a href="#ReferenceModel">array[ReferenceModel]</a></span> References with the application protocol uri specified by the name of the object property. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceCredentialsModel"><code>ServiceCredentialsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Service Credentials Model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">credentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> The actual credentials. </div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ServiceCredentialsModel_links">ServiceCredentialsModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the Service Credentials. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceCredentialsModel_links"><code>ServiceCredentialsModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">source </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source url. format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Credentials url format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
