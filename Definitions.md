@@ -93,10 +93,13 @@ A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which
 ### Catalogue Details Request
 A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
 
-### Catalogue Register Request
+### Catalogue Service Details Request
+A [Qiy Node Request](#qiy-node-request) to get details of a [Service](#service) that has been published in a [Service Catalogue](#service-catalogue).
+
+### Catalogue Service Register Request
 A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and include it in [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
-### Catalogue Unregister Request
+### Catalogue Service Unregister Request
 A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
 ### Catalogues Request
@@ -324,6 +327,24 @@ One of the basic data types of [Json](#json).
 ### Legal Entity
 See https://en.wikipedia.org/wiki/Entity#In_law.
 
+### Library Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Library](#service-library).
+
+### Library Service Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service](#service) in the [Service Library](#service-library).
+
+### Library Service Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
+
+### Library Service Unregister Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
+
+### Library Service Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Service](#service) in the [Service Library](#service-library).
+
+### Library Services Request
+A [Qiy Node Request](#qiy-node-request) to list the [Services](#service) that are registered in the [Service Library](#service-library).
+
 ### License
 [Regional Authorities](#regional-authority) and [Access Providers](#access-provider) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Parties can apply for a [License](#license) which requires paying a fee and complying with the [Qiy Scheme](#qiy-scheme)'s Rules & Regulations.
 
@@ -422,6 +443,12 @@ As defined in the [GDPR](#gdpr).
 ### Portfolio Details Request
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
 
+### Portfolio Service Details Request
+A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](#service) in a [Service Portfolio](#service-portfolio).
+
+### Portfolio Services Request
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Service](#service) in a [Service Portfolio](#service-portfolio).
+
 ### Portfolio Register Message
 A [Qiy Node Message](#qiy-node-message) to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
 
@@ -431,11 +458,20 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates cre
 ### Proposer Id
 The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
 
+### Provider Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
+
 ### Provider Register Request
 A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
 
 ### Provider Unregister Request
 A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Provider Update Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to update details of a [Service Provider](#service-provider).
+
+### Providers Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
 
 ### Pseudonym
 Synonymous with [Identifier](#identifier)
@@ -629,9 +665,6 @@ A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Servi
 ### Service Provider Id
 The [Identity](#identity) of the [Service Provider](#service-provider) as registered by the [Access Provider](#access-provider).
 
-### Service Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) of a [Service Provider](#service-provider), e.g. to add a [Service](#service) to the [Service Catalogue](#service-catalogue) of a [Service Provider](#service-provider).
-
 ### Service Provider Register Request
 See [Provider Register Request](#provider-register-request).
 
@@ -640,9 +673,6 @@ See [Provider Unregister Request](#provider-unregister-request).
 
 ### Service Source
 A [Service](#service) of a [Service Provider](#service-provider) that provides the [Service](#service) required by another [Service](#service).
-
-### Service Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) of a [Service Provider](#service-provider), e.g. to remove a [Service](#service) from the [Service Catalogue](#service-catalogue) of a [Service Provider](#service-provider).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).

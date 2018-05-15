@@ -52,6 +52,45 @@
                 }
             ]
         },
+        "CatalogueDetailsModel": {
+            "description": "Catalogue details.",
+            "properties": {
+                "state": {
+                    "description": "State of the catalogue.",
+                    "type": "string"
+                },
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "services": {
+                    "type": "object",
+                    "properties": {
+                        "serviceUrl": {
+                            "description": "Service Url of the provided service.",
+                            "type": "string",
+                            "format": "url"
+                        }
+                    },
+                    "required": [
+		        "serviceUrl"
+                    ]
+                }
+            },
+            "required": [
+                "state",
+                "activeFrom",
+                "activeUntil",
+                "services"
+            ],
+            "type": "object"
+        },
         "ConnectionsResponseModel": {
             "description": "Response of [Connections Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request).",
             "items": {
@@ -288,8 +327,22 @@
                     "minItems": 0,
                     "type": "string"
                 },
+                "libraryServices": {
+                    "description": "Current address for the 'libraryServices'-endpoint (libraryServicesEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
                 "portfolio": {
                     "description": "Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "portfolioServices": {
+                    "description": "Current address for the 'portfolioServices'-endpoint (portfolioServicesEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
                     "maxItems": 1,
                     "minItems": 0,
@@ -656,6 +709,31 @@
                 ]
             }
         },
+        "/catalogueUrl": {
+            "get": {
+                "summary": "Get Catalogue Details",
+                "description": "See [Catalogue Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Service"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CatalogueDetailsModel"
+                        }
+                    }
+                }
+            }
+        },
         "/connectionUrl": {
             "get": {
                 "summary": "Get Connection Details",
@@ -710,6 +788,44 @@
                         }
                     }
                 }
+            },
+            "post": {
+                "summary": "Connection Create Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Connection Create Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-create-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenModel"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/LocationAndLinkModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Connect",
+                    "Data Provider",
+                    "Relying Party"
+                ]
             }
         },
         "/connectTokenUrl": {
@@ -1033,46 +1149,6 @@
                 "tags": [
                     "Data",
                     "Data Provider"
-                ]
-            }
-        },
-        "/connectionsEndpoint": {
-            "post": {
-                "summary": "Connection Create Request",
-                "consumes": [
-                    "application/json"
-                ],
-                "description": "See [Connection Create Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-create-request).",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/authorizationParam"
-                    },
-                    {
-                        "name": "connect-token",
-                        "in": "body",
-                        "schema": {
-                            "$ref": "#/definitions/ConnectTokenModel"
-                        }
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "201": {
-                        "description": "201 Successful execution.",
-                        "schema": {
-                            "$ref": "#/definitions/LocationAndLinkModel"
-                        }
-                    },
-                    "400": {
-                        "description": "400,600 Unsuccessful execution."
-                    }
-                },
-                "tags": [
-                    "Connect",
-                    "Data Provider",
-                    "Relying Party"
                 ]
             }
         }
