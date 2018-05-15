@@ -680,6 +680,9 @@ A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](
 ### Source Candidates Message
 A [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](#data-source) for a [Consent](#consent).
 
+### Source Details Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of a [Data Source](#data-source) of a [Consent](#consent).
+
 ### Source Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) as a [Service Source](#service-source).
 

@@ -194,14 +194,36 @@ font-style: italic;
 
   <h3>Table of Contents </h3>
   <div class="method-summary"></div>
+  <h4><a href="#Catalogue">Catalogue</a></h4>
+  <ul>
+  <li><a href="#catalogueServiceUrlDelete"><code><span class="http-method">delete</span> /catalogueServiceUrl</code></a></li>
+  <li><a href="#cataloguesEndpointPost"><code><span class="http-method">post</span> /cataloguesEndpoint</code></a></li>
+  </ul>
   <h4><a href="#Connect">Connect</a></h4>
   <ul>
   <li><a href="#connectTokenUrlGet"><code><span class="http-method">get</span> /connectTokenUrl</code></a></li>
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#connectionsEndpointGet"><code><span class="http-method">get</span> /connectionsEndpoint</code></a></li>
   <li><a href="#connectionsEndpointPost"><code><span class="http-method">post</span> /connectionsEndpoint</code></a></li>
+  <li><a href="#consentUrlPatch"><code><span class="http-method">patch</span> /consentUrl</code></a></li>
+  <li><a href="#consentUrlPost"><code><span class="http-method">post</span> /consentUrl</code></a></li>
   <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
   <li><a href="#eventsEndpointGet"><code><span class="http-method">get</span> /eventsEndpoint</code></a></li>
+  </ul>
+  <h4><a href="#ConnectToken">ConnectToken</a></h4>
+  <ul>
+  <li><a href="#connectTokenUrlDelete"><code><span class="http-method">delete</span> /connectTokenUrl</code></a></li>
+  <li><a href="#connectTokenUrlPatch"><code><span class="http-method">patch</span> /connectTokenUrl</code></a></li>
+  </ul>
+  <h4><a href="#Connection">Connection</a></h4>
+  <ul>
+  <li><a href="#connectionUrlDelete"><code><span class="http-method">delete</span> /connectionUrl</code></a></li>
+  </ul>
+  <h4><a href="#Consent">Consent</a></h4>
+  <ul>
+  <li><a href="#consentUrlDelete"><code><span class="http-method">delete</span> /consentUrl</code></a></li>
+  <li><a href="#consentUrlGet"><code><span class="http-method">get</span> /consentUrl</code></a></li>
+  <li><a href="#consentsEndpointGet"><code><span class="http-method">get</span> /consentsEndpoint</code></a></li>
   </ul>
   <h4><a href="#Data">Data</a></h4>
   <ul>
@@ -218,20 +240,39 @@ font-style: italic;
   <li><a href="#mboxUrlPost"><code><span class="http-method">post</span> /mboxUrl</code></a></li>
   <li><a href="#refsEndpointPost"><code><span class="http-method">post</span> /refsEndpoint</code></a></li>
   </ul>
+  <h4><a href="#Library">Library</a></h4>
+  <ul>
+  <li><a href="#libraryEndpointGet"><code><span class="http-method">get</span> /libraryEndpoint</code></a></li>
+  <li><a href="#libraryEndpointPost"><code><span class="http-method">post</span> /libraryEndpoint</code></a></li>
+  <li><a href="#libraryServiceUrlDelete"><code><span class="http-method">delete</span> /libraryServiceUrl</code></a></li>
+  <li><a href="#libraryServicesEndpointGet"><code><span class="http-method">get</span> /libraryServicesEndpoint</code></a></li>
+  <li><a href="#providerUrlDelete"><code><span class="http-method">delete</span> /providerUrl</code></a></li>
+  <li><a href="#providerUrlGet"><code><span class="http-method">get</span> /providerUrl</code></a></li>
+  <li><a href="#providerUrlPatch"><code><span class="http-method">patch</span> /providerUrl</code></a></li>
+  <li><a href="#providersEndpointGet"><code><span class="http-method">get</span> /providersEndpoint</code></a></li>
+  </ul>
   <h4><a href="#Lifecycle">Lifecycle</a></h4>
   <ul>
   <li><a href="#createEndpointPost"><code><span class="http-method">post</span> /createEndpoint</code></a></li>
-  <li><a href="#ownersIdIdDelete"><code><span class="http-method">delete</span> /owners/id/{id}</code></a></li>
+  <li><a href="#deleteEndpointDelete"><code><span class="http-method">delete</span> /deleteEndpoint</code></a></li>
   </ul>
   <h4><a href="#Message">Message</a></h4>
   <ul>
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#mboxUrlGet"><code><span class="http-method">get</span> /mboxUrl</code></a></li>
   <li><a href="#mboxUrlPost"><code><span class="http-method">post</span> /mboxUrl</code></a></li>
+  <li><a href="#messageUrlDelete"><code><span class="http-method">delete</span> /messageUrl</code></a></li>
+  <li><a href="#messageUrlGet"><code><span class="http-method">get</span> /messageUrl</code></a></li>
   </ul>
   <h4><a href="#PathEndpointAddresses">PathEndpointAddresses</a></h4>
   <ul>
   <li><a href="#apiGet"><code><span class="http-method">get</span> /api</code></a></li>
+  </ul>
+  <h4><a href="#Portfolio">Portfolio</a></h4>
+  <ul>
+  <li><a href="#portfolioEndpointGet"><code><span class="http-method">get</span> /portfolioEndpoint</code></a></li>
+  <li><a href="#portfolioServiceUrlGet"><code><span class="http-method">get</span> /portfolioServiceUrl</code></a></li>
+  <li><a href="#portfolioServicesEndpointGet"><code><span class="http-method">get</span> /portfolioServicesEndpoint</code></a></li>
   </ul>
   <h4><a href="#RelyingParty">RelyingParty</a></h4>
   <ul>
@@ -239,6 +280,8 @@ font-style: italic;
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#connectionsEndpointGet"><code><span class="http-method">get</span> /connectionsEndpoint</code></a></li>
   <li><a href="#connectionsEndpointPost"><code><span class="http-method">post</span> /connectionsEndpoint</code></a></li>
+  <li><a href="#consentUrlPatch"><code><span class="http-method">patch</span> /consentUrl</code></a></li>
+  <li><a href="#consentUrlPost"><code><span class="http-method">post</span> /consentUrl</code></a></li>
   <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
   <li><a href="#eventsEndpointGet"><code><span class="http-method">get</span> /eventsEndpoint</code></a></li>
   <li><a href="#mboxUrlGet"><code><span class="http-method">get</span> /mboxUrl</code></a></li>
@@ -247,13 +290,93 @@ font-style: italic;
   </ul>
   <h4><a href="#Service">Service</a></h4>
   <ul>
+  <li><a href="#catalogueServiceUrlGet"><code><span class="http-method">get</span> /catalogueServiceUrl</code></a></li>
   <li><a href="#catalogueUrlGet"><code><span class="http-method">get</span> /catalogueUrl</code></a></li>
+  <li><a href="#cataloguesEndpointGet"><code><span class="http-method">get</span> /cataloguesEndpoint</code></a></li>
+  <li><a href="#libraryServiceUrlGet"><code><span class="http-method">get</span> /libraryServiceUrl</code></a></li>
+  </ul>
+  <h4><a href="#Source">Source</a></h4>
+  <ul>
+  <li><a href="#sourceUrlDelete"><code><span class="http-method">delete</span> /sourceUrl</code></a></li>
+  <li><a href="#sourceUrlGet"><code><span class="http-method">get</span> /sourceUrl</code></a></li>
+  <li><a href="#sourceUrlPatch"><code><span class="http-method">patch</span> /sourceUrl</code></a></li>
   </ul>
   <h4><a href="#Versions">Versions</a></h4>
   <ul>
   <li><a href="#apiGet"><code><span class="http-method">get</span> /api</code></a></li>
   </ul>
 
+  <h1><a name="Catalogue">Catalogue</a></h1>
+  <div class="method"><a name="catalogueServiceUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /catalogueServiceUrl</code></pre></div>
+    <div class="method-summary">Unregister Catalogue Service. (<span class="nickname">catalogueServiceUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-unregister-request">Catalogue Service Unregister Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="cataloguesEndpointPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /cataloguesEndpoint</code></pre></div>
+    <div class="method-summary">Register Catalogue Service. (<span class="nickname">cataloguesEndpointPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-register-request">Catalogue Service Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">catalogue-service-description <a href="#CatalogueServiceModel">CatalogueServiceModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Successful execution.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <h1><a name="Connect">Connect</a></h1>
   <div class="method"><a name="connectTokenUrlGet"/>
     <div class="method-path">
@@ -316,7 +439,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#ConnectionDetailsModel">ConnectionDetailsModel</a>
+      <a href="#ConnectionModel">ConnectionModel</a>
       
     </div>
 
@@ -345,7 +468,7 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#ConnectionDetailsModel">ConnectionDetailsModel</a>
+        <a href="#ConnectionModel">ConnectionModel</a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="connectionsEndpointGet"/>
@@ -456,6 +579,81 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
+  <div class="method"><a name="consentUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Update Consent details (<span class="nickname">consentUrlPatch</span>)</div>
+    <div class="method-notes">Update Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">consent-update <a href="#ConsentModel">ConsentModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Register Source (<span class="nickname">consentUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request">Source Register Request</a>.</div>
+
+
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">source-url  (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Catalogue Service url of the Data Source </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="ctCreateEndpointPost"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -536,6 +734,237 @@ font-style: italic;
     <h4 class="field-label">200</h4>
     200 Successful execution.
         <a href="#EventStreamModel">EventStreamModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="ConnectToken">ConnectToken</a></h1>
+  <div class="method"><a name="connectTokenUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /connectTokenUrl</code></pre></div>
+    <div class="method-summary">Delete connect token. (<span class="nickname">connectTokenUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-delete-request">Connect Token Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="connectTokenUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /connectTokenUrl</code></pre></div>
+    <div class="method-summary">Update Connect Token Details (<span class="nickname">connectTokenUrlPatch</span>)</div>
+    <div class="method-notes">Update Connect Token Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-update-request">Connect Token Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Connection">Connection</a></h1>
+  <div class="method"><a name="connectionUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /connectionUrl</code></pre></div>
+    <div class="method-summary">Delete connection. (<span class="nickname">connectionUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-delete-request">Connection Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Consent">Consent</a></h1>
+  <div class="method"><a name="consentUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Delete consent. (<span class="nickname">consentUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-delete-request">Consent Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Get Consent Details (<span class="nickname">consentUrlGet</span>)</div>
+    <div class="method-notes">Get Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request">Consent Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ConsentModel">ConsentModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "self" : "http://example.com/aeiou",
+  "consentedDataServices" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+  "state" : "state",
+  "subscribedProviderService" : "http://example.com/aeiou",
+  "dataSources" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#ConsentModel">ConsentModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentsEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /consentsEndpoint</code></pre></div>
+    <div class="method-summary">Get Consents (<span class="nickname">consentsEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consents-request">Consents Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ConsentsModel">ConsentsModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#ConsentsModel">ConsentsModel</a>
     <h4 class="field-label">400</h4>
     [400,600&gt; Unsuccessful execution.
         <a href="#"></a>
@@ -725,15 +1154,7 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "applicationProtocolUriPatternProperty" : [ {
-    "ref" : "ref",
-    "connection" : "http://example.com/aeiou",
-    "value" : "value"
-  }, {
-    "ref" : "ref",
-    "connection" : "http://example.com/aeiou",
-    "value" : "value"
-  } ]
+  "applicationProtocolUriPatternProperty" : [ { }, { } ]
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -768,7 +1189,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">operationSpecification <a href="#OperationSpecificationModel">OperationSpecificationModel</a> (required)</div>
+      <div class="param">operation-specification <a href="#OperationSpecificationModel">OperationSpecificationModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification">Operation Specification</a>. </div>
 
@@ -980,7 +1401,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">operationSpecification <a href="#OperationSpecificationModel">OperationSpecificationModel</a> (required)</div>
+      <div class="param">operation-specification <a href="#OperationSpecificationModel">OperationSpecificationModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification">Operation Specification</a>. </div>
 
@@ -1021,6 +1442,335 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
+  <h1><a name="Library">Library</a></h1>
+  <div class="method"><a name="libraryEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryEndpoint</code></pre></div>
+    <div class="method-summary">Get Library details (<span class="nickname">libraryEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-details-request">Library Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#LibraryModel">LibraryModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "services" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6,
+  "providers" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#LibraryModel">LibraryModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryEndpointPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryEndpoint</code></pre></div>
+    <div class="method-summary">Registration Request (<span class="nickname">libraryEndpointPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-register-request">Library Service Register Request</a> and <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-register-request">Provider Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">service <a href="#LibraryServiceModel">LibraryServiceModel</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+<div class="param">provider <a href="#ProviderModel">ProviderModel</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    201 Successful execution.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryServiceUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /libraryServiceUrl</code></pre></div>
+    <div class="method-summary">Unregister Library Service. (<span class="nickname">libraryServiceUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-unregister-request">Library Service Unregister Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryServicesEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryServicesEndpoint</code></pre></div>
+    <div class="method-summary">Get Library Services (<span class="nickname">libraryServicesEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-services-reqeust">Library Services Reqeust</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#LibraryServicesModel">LibraryServicesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#LibraryServicesModel">LibraryServicesModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="providerUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /providerUrl</code></pre></div>
+    <div class="method-summary">Delete Provider. (<span class="nickname">providerUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-delete-request">Provider Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="providerUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /providerUrl</code></pre></div>
+    <div class="method-summary">Get Provider Details (<span class="nickname">providerUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-details-request">Provider Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ProviderModel">ProviderModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#ProviderModel">ProviderModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="providerUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /providerUrl</code></pre></div>
+    <div class="method-summary">Update Provider details (<span class="nickname">providerUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-update-request">Provider Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">provider-update <a href="#ProviderModel">ProviderModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="providersEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /providersEndpoint</code></pre></div>
+    <div class="method-summary">Get Providers (<span class="nickname">providersEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#providers-request">Providers Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ProvidersModel">ProvidersModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#ProvidersModel">ProvidersModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <h1><a name="Lifecycle">Lifecycle</a></h1>
   <div class="method"><a name="createEndpointPost"/>
     <div class="method-path">
@@ -1038,7 +1788,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">Create request parameters <a href="#QiyNodeCreateRequestParametersModel">QiyNodeCreateRequestParametersModel</a> (required)</div>
+      <div class="param">create-request-parameters <a href="#QiyNodeCreateRequestParametersModel">QiyNodeCreateRequestParametersModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1061,19 +1811,13 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="ownersIdIdDelete"/>
+  <div class="method"><a name="deleteEndpointDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /owners/id/{id}</code></pre></div>
-    <div class="method-summary">Delete Qiy Node. (<span class="nickname">ownersIdIdDelete</span>)</div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /deleteEndpoint</code></pre></div>
+    <div class="method-summary">Delete Qiy Node. (<span class="nickname">deleteEndpointDelete</span>)</div>
     <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-delete-request">Qiy Node Delete Request</a>.</div>
 
-    <h3 class="field-label">Path parameters</h3>
-    <div class="field-items">
-      <div class="param">id (required)</div>
-
-      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; Qiy Node id. </div>
-    </div>  <!-- field-items -->
 
 
 
@@ -1118,7 +1862,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#ConnectionDetailsModel">ConnectionDetailsModel</a>
+      <a href="#ConnectionModel">ConnectionModel</a>
       
     </div>
 
@@ -1147,7 +1891,7 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#ConnectionDetailsModel">ConnectionDetailsModel</a>
+        <a href="#ConnectionModel">ConnectionModel</a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="mboxUrlGet"/>
@@ -1250,6 +1994,79 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
+  <div class="method"><a name="messageUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /messageUrl</code></pre></div>
+    <div class="method-summary">Delete message. (<span class="nickname">messageUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-delete-request">Message Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="messageUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /messageUrl</code></pre></div>
+    <div class="method-summary">Get Message Details (<span class="nickname">messageUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-details-request">Message Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#MailboxMessageModel">MailboxMessageModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#MailboxMessageModel">MailboxMessageModel</a>
+  </div> <!-- method -->
+  <hr/>
   <h1><a name="PathEndpointAddresses">PathEndpointAddresses</a></h1>
   <div class="method"><a name="apiGet"/>
     <div class="method-path">
@@ -1295,6 +2112,142 @@ font-style: italic;
     <h4 class="field-label">200</h4>
     Successfull response
         <a href="#ApiModel">ApiModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Portfolio">Portfolio</a></h1>
+  <div class="method"><a name="portfolioEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioEndpoint</code></pre></div>
+    <div class="method-summary">Get Portfolio details (<span class="nickname">portfolioEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-details-request">Portfolio Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#PortfolioModel">PortfolioModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200, Successful execution.
+        <a href="#PortfolioModel">PortfolioModel</a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="portfolioServiceUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioServiceUrl</code></pre></div>
+    <div class="method-summary">Get Portfolio Service details (<span class="nickname">portfolioServiceUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-service-details-request">Portfolio Service Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#PortfolioServiceModel">PortfolioServiceModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200, Successful execution.
+        <a href="#PortfolioServiceModel">PortfolioServiceModel</a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="portfolioServicesEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioServicesEndpoint</code></pre></div>
+    <div class="method-summary">Get Portfolio Servicels (<span class="nickname">portfolioServicesEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-services-request">Portfolio Services Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#PortfolioServicesModel">PortfolioServicesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200, Successful execution.
+        <a href="#PortfolioServicesModel">PortfolioServicesModel</a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
   </div> <!-- method -->
   <hr/>
   <h1><a name="RelyingParty">RelyingParty</a></h1>
@@ -1359,7 +2312,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#ConnectionDetailsModel">ConnectionDetailsModel</a>
+      <a href="#ConnectionModel">ConnectionModel</a>
       
     </div>
 
@@ -1388,7 +2341,7 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#ConnectionDetailsModel">ConnectionDetailsModel</a>
+        <a href="#ConnectionModel">ConnectionModel</a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="connectionsEndpointGet"/>
@@ -1496,6 +2449,81 @@ font-style: italic;
         <a href="#LocationAndLinkModel">LocationAndLinkModel</a>
     <h4 class="field-label">400</h4>
     400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Update Consent details (<span class="nickname">consentUrlPatch</span>)</div>
+    <div class="method-notes">Update Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">consent-update <a href="#ConsentModel">ConsentModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Register Source (<span class="nickname">consentUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request">Source Register Request</a>.</div>
+
+
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">source-url  (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Catalogue Service url of the Data Source </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
@@ -1722,15 +2750,7 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "applicationProtocolUriPatternProperty" : [ {
-    "ref" : "ref",
-    "connection" : "http://example.com/aeiou",
-    "value" : "value"
-  }, {
-    "ref" : "ref",
-    "connection" : "http://example.com/aeiou",
-    "value" : "value"
-  } ]
+  "applicationProtocolUriPatternProperty" : [ { }, { } ]
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -1750,6 +2770,48 @@ font-style: italic;
   </div> <!-- method -->
   <hr/>
   <h1><a name="Service">Service</a></h1>
+  <div class="method"><a name="catalogueServiceUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /catalogueServiceUrl</code></pre></div>
+    <div class="method-summary">Get Catalogue Service Details (<span class="nickname">catalogueServiceUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-details-request">Catalogue Service Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CatalogueServiceModel">CatalogueServiceModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#CatalogueServiceModel">CatalogueServiceModel</a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="catalogueUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -1769,7 +2831,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#CatalogueDetailsModel">CatalogueDetailsModel</a>
+      <a href="#CatalogueModel">CatalogueModel</a>
       
     </div>
 
@@ -1779,9 +2841,7 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "state" : "state",
-  "services" : {
-    "serviceUrl" : "http://example.com/aeiou"
-  },
+  "services" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "activeFrom" : 0,
   "activeUntil" : 6
 }</code></pre>
@@ -1796,7 +2856,207 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#CatalogueDetailsModel">CatalogueDetailsModel</a>
+        <a href="#CatalogueModel">CatalogueModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="cataloguesEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /cataloguesEndpoint</code></pre></div>
+    <div class="method-summary">Get Catalogues (<span class="nickname">cataloguesEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request">Catalogues Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CataloguesModel">CataloguesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#CataloguesModel">CataloguesModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryServiceUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryServiceUrl</code></pre></div>
+    <div class="method-summary">Get Library Service Details (<span class="nickname">libraryServiceUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-details-request">Library Service Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#LibraryServiceModel">LibraryServiceModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#LibraryServiceModel">LibraryServiceModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Source">Source</a></h1>
+  <div class="method"><a name="sourceUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /sourceUrl</code></pre></div>
+    <div class="method-summary">Delete Source. (<span class="nickname">sourceUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-delete-request">Source Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="sourceUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /sourceUrl</code></pre></div>
+    <div class="method-summary">Get Source Details (<span class="nickname">sourceUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-details-request">Source Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#SourceModel">SourceModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "candidatesUrl" : "http://example.com/aeiou"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#SourceModel">SourceModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="sourceUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /sourceUrl</code></pre></div>
+    <div class="method-summary">Update Source details (<span class="nickname">sourceUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-update-request">Source Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">source-update <a href="#SourceModel">SourceModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
   </div> <!-- method -->
   <hr/>
   <h1><a name="Versions">Versions</a></h1>
@@ -1853,28 +3113,39 @@ font-style: italic;
   <h3>Table of Contents</h3>
   <ol>
     <li><a href="#ApiModel"><code>ApiModel</code> - </a></li>
-    <li><a href="#CatalogueDetailsModel"><code>CatalogueDetailsModel</code> - </a></li>
-    <li><a href="#CatalogueDetailsModel_services"><code>CatalogueDetailsModel_services</code> - </a></li>
+    <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
+    <li><a href="#CatalogueServiceModel"><code>CatalogueServiceModel</code> - </a></li>
+    <li><a href="#CataloguesModel"><code>CataloguesModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel_actions"><code>ConnectTokenMetadataModel_actions</code> - </a></li>
     <li><a href="#ConnectTokenModel"><code>ConnectTokenModel</code> - </a></li>
-    <li><a href="#ConnectionDetailsModel"><code>ConnectionDetailsModel</code> - </a></li>
-    <li><a href="#ConnectionDetailsModel_links"><code>ConnectionDetailsModel_links</code> - </a></li>
+    <li><a href="#ConnectionModel"><code>ConnectionModel</code> - </a></li>
+    <li><a href="#ConnectionModel_links"><code>ConnectionModel_links</code> - </a></li>
     <li><a href="#ConnectionsResponseModel"><code>ConnectionsResponseModel</code> - </a></li>
     <li><a href="#ConnectionsResponseModel_inner"><code>ConnectionsResponseModel_inner</code> - </a></li>
+    <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
+    <li><a href="#ConsentsModel"><code>ConsentsModel</code> - </a></li>
     <li><a href="#EndpointAddressesModel"><code>EndpointAddressesModel</code> - </a></li>
     <li><a href="#EventModel"><code>EventModel</code> - </a></li>
+    <li><a href="#LibraryModel"><code>LibraryModel</code> - </a></li>
+    <li><a href="#LibraryServiceModel"><code>LibraryServiceModel</code> - </a></li>
+    <li><a href="#LibraryServicesModel"><code>LibraryServicesModel</code> - </a></li>
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
     <li><a href="#MailboxMessagesModel"><code>MailboxMessagesModel</code> - </a></li>
     <li><a href="#MessageModel"><code>MessageModel</code> - </a></li>
     <li><a href="#OperationReferenceRequestMessageModel_payload"><code>OperationReferenceRequestMessageModel_payload</code> - </a></li>
     <li><a href="#OperationSpecificationModel"><code>OperationSpecificationModel</code> - </a></li>
     <li><a href="#OperationSpecificationModel_headers"><code>OperationSpecificationModel_headers</code> - </a></li>
+    <li><a href="#PortfolioModel"><code>PortfolioModel</code> - </a></li>
+    <li><a href="#PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a></li>
+    <li><a href="#PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a></li>
+    <li><a href="#ProviderModel"><code>ProviderModel</code> - </a></li>
+    <li><a href="#ProvidersModel"><code>ProvidersModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
-    <li><a href="#ReferenceDetailsModel"><code>ReferenceDetailsModel</code> - </a></li>
     <li><a href="#ReferenceModel"><code>ReferenceModel</code> - </a></li>
     <li><a href="#ReferenceResultModel"><code>ReferenceResultModel</code> - </a></li>
     <li><a href="#ReferencesResultModel"><code>ReferencesResultModel</code> - </a></li>
+    <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#ApiLinksModel"><code>ApiLinksModel</code> - </a></li>
     <li><a href="#ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a></li>
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
@@ -1893,21 +3164,26 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="CatalogueDetailsModel"><code>CatalogueDetailsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <h3><a name="CatalogueModel"><code>CatalogueModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Catalogue details.</div>
     <div class="field-items">
       <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the catalogue. </div>
 <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#CatalogueDetailsModel_services">CatalogueDetailsModel_services</a></span>  </div>
+<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Provided services. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="CatalogueDetailsModel_services"><code>CatalogueDetailsModel_services</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    
+    <h3><a name="CatalogueServiceModel"><code>CatalogueServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Catalogue Service Model.</div>
     <div class="field-items">
-      <div class="param">serviceUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Url of the provided service. format: url</div>
-    </div>  <!-- field-items -->
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CataloguesModel"><code>CataloguesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Catalogue Urls.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -1937,17 +3213,17 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="ConnectionDetailsModel"><code>ConnectionDetailsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <h3><a name="ConnectionModel"><code>ConnectionModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Connection details.</div>
     <div class="field-items">
       <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the connection. </div>
 <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ConnectionDetailsModel_links">ConnectionDetailsModel_links</a></span>  </div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ConnectionModel_links">ConnectionModel_links</a></span>  </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="ConnectionDetailsModel_links"><code>ConnectionDetailsModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <h3><a name="ConnectionModel_links"><code>ConnectionModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
       <div class="param">mbox </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Messagebox Url. format: url</div>
@@ -1965,9 +3241,28 @@ font-style: italic;
     <h3><a name="ConnectionsResponseModel_inner"><code>ConnectionsResponseModel_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">result (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConnectionDetailsModel">array[ConnectionDetailsModel]</a></span>  </div>
+      <div class="param">result (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConnectionModel">array[ConnectionModel]</a></span>  </div>
 <div class="param">links (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span> tbd </div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentModel"><code>ConsentModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Consent model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">consentedDataServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Consented Data Services. format: url</div>
+<div class="param">dataSources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Source Urls of the Data Sources, only accessible for Individuals. format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url. format: url</div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the consent. </div>
+<div class="param">subscribedProviderService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service Url of the Subscribed Provider service. format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentsModel"><code>ConsentsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Consent Urls.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="EndpointAddressesModel"><code>EndpointAddressesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -1998,6 +3293,29 @@ font-style: italic;
 <div class="param">extraData </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Property for extra event data. </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="LibraryModel"><code>LibraryModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Library model</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Registered providers. format: url</div>
+<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Registered services, aka Library Services. format: url</div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the library. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="LibraryServiceModel"><code>LibraryServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Library Service Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="LibraryServicesModel"><code>LibraryServicesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Library Services.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -2051,21 +3369,41 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="PortfolioModel"><code>PortfolioModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Portfolio Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Portfolio Service Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Portfolio Services.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ProviderModel"><code>ProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Provider Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ProvidersModel"><code>ProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Service Providers.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
-      <div class="param">alias </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Use same value as id. </div>
-<div class="param">publicKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Public key to be used to authenticate future requests. </div>
+      <div class="param">publicKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Public key to be used to authenticate future requests. </div>
 <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node id. </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="ReferenceDetailsModel"><code>ReferenceDetailsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Reference details.</div>
-    <div class="field-items">
-      <div class="param">ref (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Resource reference. </div>
-<div class="param">value (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Return value of the resource, accessed immediately after the request. format: Base64-encoded</div>
-<div class="param">connection (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection uri. format: uri</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -2085,7 +3423,14 @@ font-style: italic;
     <h3><a name="ReferencesResultModel"><code>ReferencesResultModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>References result.</div>
     <div class="field-items">
-      <div class="param">applicationProtocolUriPatternProperty (optional)</div><div class="param-desc"><span class="param-type"><a href="#ReferenceDetailsModel">array[ReferenceDetailsModel]</a></span> References with the application protocol uri specified by the name of the object property. </div>
+      <div class="param">applicationProtocolUriPatternProperty (optional)</div><div class="param-desc"><span class="param-type"><a href="#ReferenceModel">array[ReferenceModel]</a></span> References with the application protocol uri specified by the name of the object property. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SourceModel"><code>SourceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Source Model.</div>
+    <div class="field-items">
+      <div class="param">candidatesUrl (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

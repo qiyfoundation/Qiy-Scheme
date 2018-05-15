@@ -52,7 +52,7 @@
                 }
             ]
         },
-        "CatalogueDetailsModel": {
+        "CatalogueModel": {
             "description": "Catalogue details.",
             "properties": {
                 "state": {
@@ -70,17 +70,13 @@
                     "format": "Unix time in ms, nullable"
                 },
                 "services": {
-                    "type": "object",
-                    "properties": {
-                        "serviceUrl": {
-                            "description": "Service Url of the provided service.",
-                            "type": "string",
-                            "format": "url"
-                        }
+                    "description": "Provided services.",
+	            "items": {
+                        "description": "Service Url of the provided service.",
+                        "format": "url",
+                        "type": "string" 
                     },
-                    "required": [
-		        "serviceUrl"
-                    ]
+                    "type": "array"
                 }
             },
             "required": [
@@ -91,6 +87,19 @@
             ],
             "type": "object"
         },
+        "CataloguesModel": {
+            "description": "List of Catalogue Urls.",
+	    "items": {
+                "description": "Catalogue url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
+        "CatalogueServiceModel": {
+            "description": "Catalogue Service Model.",
+            "type": "object"
+        },
         "ConnectionsResponseModel": {
             "description": "Response of [Connections Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request).",
             "items": {
@@ -98,7 +107,7 @@
                 "properties": {
                     "result": {
                         "items": {  
-                            "$ref": "#/definitions/ConnectionDetailsModel"
+                            "$ref": "#/definitions/ConnectionModel"
 			},
                         "type": "array"
                     },
@@ -113,7 +122,7 @@
             },
             "type": "array"
         },
-        "ConnectionDetailsModel": {
+        "ConnectionModel": {
             "description": "Connection details.",
             "properties": {
                 "state": {
@@ -260,6 +269,70 @@
 		}
             ]
         },
+        "ConsentModel": {
+            "description": "Consent model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "consentedDataServices": {
+                    "description": "Consented Data Services.",
+		    "items": {
+                        "description": "Library Service Url of the consented Data Service",
+                        "format": "url",
+                        "type": "string"
+		    },
+                    "type": "array"
+		},
+                "dataSources": {
+                    "description": "Source Urls of the Data Sources, only accessible for Individuals.",
+		    "items": {
+                        "description": "Source Url of the Data Source",
+                        "format": "url",
+                        "type": "string"
+		    },
+                    "type": "array"
+                },
+                "self": {
+                    "description": "Consent Url.",
+                    "format": "url",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the consent.",
+                    "type": "string"
+                },
+                "subscribedProviderService": {
+                    "description": "Catalogue Service Url of the Subscribed Provider service.",
+                    "format": "url",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "self",
+                "state",
+                "subscribedProviderService"
+            ],
+            "type": "object"
+        },
+        "ConsentsModel": {
+            "description": "List of Consent Urls.",
+	    "items": {
+                "description": "Consent url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "EndpointAddressesModel": {
             "type": "object",
             "description": "Current path endpoint addresses.",
@@ -403,6 +476,64 @@
                 "extraData",
                 "type"
             ]
+        },
+        "LibraryModel": {
+            "description": "Library model",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "providers": {
+                    "description": "Registered providers.",
+	            "items": {
+                        "description": "Provider Url of the registered Service Provider.",
+                        "format": "url",
+                        "type": "string" 
+                    },
+                    "type": "array"
+                },
+                "services": {
+                    "description": "Registered services, aka Library Services.",
+	            "items": {
+                        "description": "Service Url of the registered service.",
+                        "format": "url",
+                        "type": "string" 
+                    },
+                    "type": "array"
+                },
+                "state": {
+                    "description": "State of the library.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "providers",
+                "services",
+                "state"
+            ],
+            "type": "object"
+        },
+        "LibraryServiceModel": {
+            "description": "Library Service Model.",
+            "type": "object"
+        },
+        "LibraryServicesModel": {
+            "description": "List of Library Services.",
+	    "items": {
+                "description": "Library Service url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
         },
         "LocationAndLinkModel": {
             "description": "Location and link.",
@@ -573,15 +704,39 @@
                 }
             }
         },
+        "PortfolioModel": {
+            "description": "Portfolio Model.",
+            "type": "object"
+        },
+        "PortfolioServiceModel": {
+            "description": "Portfolio Service Model.",
+            "type": "object"
+        },
+        "PortfolioServicesModel": {
+            "description": "List of Portfolio Services.",
+	    "items": {
+                "description": "Portfolio Service url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
+        "ProviderModel": {
+            "description": "Provider Model.",
+            "type": "object"
+        },
+        "ProvidersModel": {
+            "description": "List of Service Providers.",
+	    "items": {
+                "description": "Provider url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "QiyNodeCreateRequestParametersModel": {
             "type": "object",
             "properties": {
-                "alias": {
-                    "description": "Use same value as id.",
-                    "type": "string",
-                    "minItems": 1,
-                    "maxItems": 1
-                },
                 "publicKey": {
                     "description": "Public key to be used to authenticate future requests.",
                     "type": "string",
@@ -596,12 +751,11 @@
                 }
             },
             "required": [
-                "alias",
                 "publicKey",
                 "id"
             ]
         },
-        "ReferenceDetailsModel": {
+        "ReferenceModel": {
             "description": "Reference details.",
             "type": "object",
             "properties": {
@@ -649,11 +803,22 @@
                     "description": "References with the application protocol uri specified by the name of the object property.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ReferenceDetailsModel"
+                        "$ref": "#/definitions/ReferenceModel"
                     }
                 }
             },
             "uniqueItems": true
+        },
+        "SourceModel": {
+            "description": "Source Model.",
+            "properties": {
+		    "candidatesUrl": {
+			    "Description": "Source Candidates url",
+			    "format": "url",
+			    "type": "string"
+		    }
+	    },
+            "type": "object"
         }
     },
     "parameters": {
@@ -716,6 +881,104 @@
                 ]
             }
         },
+        "/cataloguesEndpoint": {
+            "get": {
+                "summary": "Get Catalogues",
+                "description": "See [Catalogues Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Service"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CataloguesModel"
+                        }
+                    }
+                }
+            },
+	    "post": {
+                "summary": "Register Catalogue Service.",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Catalogue Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-register-request).",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "catalogue-service-description",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CatalogueServiceModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Catalogue"
+                ]
+            }
+        },
+        "/catalogueServiceUrl": {
+	    "delete": {
+                "summary": "Unregister Catalogue Service.",
+                "description": "See [Catalogue Service Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Catalogue Service Details",
+                "description": "See [Catalogue Service Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Service"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CatalogueServiceModel"
+                        }
+                    }
+                }
+            }
+        },
         "/catalogueUrl": {
             "get": {
                 "summary": "Get Catalogue Details",
@@ -735,14 +998,34 @@
                     "200": {
                         "description": "The status code of a success response will be 200.",
                         "schema": {
-                            "$ref": "#/definitions/CatalogueDetailsModel"
+                            "$ref": "#/definitions/CatalogueModel"
                         }
                     }
                 }
             }
         },
         "/connectionUrl": {
-            "get": {
+            "delete": {
+                "summary": "Delete connection.",
+                "description": "See [Connection Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Connection"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
                 "summary": "Get Connection Details",
                 "description": "See [Connection Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-details-request).",
                 "parameters": [
@@ -762,7 +1045,7 @@
                     "200": {
                         "description": "The status code of a success response will be 200.",
                         "schema": {
-                            "$ref": "#/definitions/ConnectionDetailsModel"
+                            "$ref": "#/definitions/ConnectionModel"
                         }
                     }
                 }
@@ -836,7 +1119,27 @@
             }
         },
         "/connectTokenUrl": {
-            "get": {
+            "delete": {
+                "summary": "Delete connect token.",
+                "description": "See [Connect Token Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Connect Token"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
                 "summary": "Get Connect Token Details",
                 "description": "Get Connect Token Details, see [Connect Token Create Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-create-request).",
                 "parameters": [
@@ -859,9 +1162,164 @@
                         }
                     }
                 }
+            },
+	    "patch": {
+                "summary": "Update Connect Token Details",
+                "description": "Update Connect Token Details, see [Connect Token Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connect Token"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
             }
         },
-        "/createEndpoint": {
+        "/consentsEndpoint": {
+            "get": {
+                "summary": "Get Consents",
+                "description": "See [Consents Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consents-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ConsentsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Consent"
+                ]
+            }
+        },
+        "/consentUrl": {
+            "delete": {
+                "summary": "Delete consent.",
+                "description": "See [Consent Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Consent"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
+                "summary": "Get Consent Details",
+                "description": "Get Consent Details, see [Consent Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Consent"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConsentModel"
+                        }
+                    }
+                }
+            },
+	    "patch": {
+                "summary": "Update Consent details",
+                "description": "Update Consent Details, see [Consent Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "consent-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConsentModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connect",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            },
+	    "post": {
+                "summary": "Register Source",
+                "description": "See [Source Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "description": "Catalogue Service url of the Data Source",
+                        "format": "url",
+                        "in": "body",
+                        "name": "source-url",
+                        "required": true,
+			"type": "string"
+                    }
+                ],
+                "tags": [
+                    "Connect",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+	"/createEndpoint": {
             "post": {
                 "summary": "Create Qiy Node.",
                 "consumes": [
@@ -871,7 +1329,7 @@
                 "parameters": [
                     {
                         "in": "body",
-                        "name": "Create request parameters",
+                        "name": "create-request-parameters",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/QiyNodeCreateRequestParametersModel"
@@ -929,6 +1387,28 @@
                 }
             }
         },
+        "/deleteEndpoint": {
+            "delete": {
+                "summary": "Delete Qiy Node.",
+                "description": "See [Qiy Node Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Lifecycle"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Once the local data has been deleted a response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            }
+        },
         "/eventsEndpoint": {
             "get": {
                 "summary": "Start listening to events",
@@ -957,6 +1437,141 @@
                     "Data",
                     "Data Provider",
                     "Relying Party"
+                ]
+            }
+        },
+        "/libraryEndpoint": {
+            "get": {
+                "summary": "Get Library details",
+                "description": "See [Library Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/LibraryModel"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Registration Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Library Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-register-request) and [Provider Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/LibraryServiceModel"
+                        }
+                    },
+                    {
+                        "name": "provider",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ProviderModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/libraryServiceUrl": {
+	    "delete": {
+                "summary": "Unregister Library Service.",
+                "description": "See [Library Service Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Library Service Details",
+                "description": "See [Library Service Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Service"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/LibraryServiceModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/libraryServicesEndpoint": {
+            "get": {
+                "summary": "Get Library Services",
+                "description": "See [Library Services Reqeust](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-services-reqeust).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/LibraryServicesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
                 ]
             }
         },
@@ -1027,31 +1642,305 @@
                 ]
             }
         },
-        "/owners/id/{id}": {
+        "/messageUrl": {
             "delete": {
-                "summary": "Delete Qiy Node.",
-                "description": "See [Qiy Node Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-delete-request).",
+                "summary": "Delete message.",
+                "description": "See [Message Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Message"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
+                "summary": "Get Message Details",
+                "description": "See [Message Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Message"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/MailboxMessageModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/portfolioEndpoint": {
+            "get": {
+                "summary": "Get Portfolio details",
+                "description": "See [Portfolio Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PortfolioModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Portfolio"
+                ]
+            }
+        },
+        "/portfolioServicesEndpoint": {
+            "get": {
+                "summary": "Get Portfolio Servicels",
+                "description": "See [Portfolio Services Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-services-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PortfolioServicesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Portfolio"
+                ]
+            }
+        },
+        "/portfolioServiceUrl": {
+            "get": {
+                "summary": "Get Portfolio Service details",
+                "description": "See [Portfolio Service Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-service-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PortfolioServiceModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Portfolio"
+                ]
+            }
+        },
+        "/providerUrl": {
+            "delete": {
+                "summary": "Delete Provider.",
+                "description": "See [Provider Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
+                "summary": "Get Provider Details",
+                "description": "See [Provider Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ProviderModel"
+                        }
+                    }
+                }
+            },
+	    "patch": {
+                "summary": "Update Provider details",
+                "description": "See [Provider Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
                     },
                     {
-                        "name": "id",
-                        "description": "Qiy Node id.",
-                        "in": "path",
+                        "in": "body",
+                        "name": "provider-update",
                         "required": true,
-                        "type": "string"
+                        "schema": {
+                            "$ref": "#/definitions/ProviderModel"
+                        }
                     }
                 ],
                 "tags": [
-                    "Lifecycle"
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/providersEndpoint": {
+            "get": {
+                "summary": "Get Providers",
+                "description": "See [Providers Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#providers-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ProvidersModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/sourceUrl": {
+            "delete": {
+                "summary": "Delete Source.",
+                "description": "See [Source Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Source"
                 ],
                 "responses": {
                     "204": {
-                        "description": "Once the local data has been deleted a response code 204 (NO CONTENT) will indicate a success."
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
                     },
                     "400": {
                         "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
+                "summary": "Get Source Details",
+                "description": "See [Source Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/SourceModel"
+                        }
+                    }
+                }
+            },
+	    "patch": {
+                "summary": "Update Source details",
+                "description": "See [Source Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "source-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SourceModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
                     }
                 }
             }
@@ -1127,7 +2016,7 @@
                         "$ref": "#/parameters/authorizationParam"
                     },
                     {
-                        "name": "operationSpecification",
+                        "name": "operation-specification",
                         "description": "See [Operation Specification](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification).",
                         "in": "body",
                         "required": true,

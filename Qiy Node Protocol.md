@@ -78,9 +78,10 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Qiy Node Delete Request](#2112-qiy-node-delete-request)
 	1. [Source Requests](#212-source-requests)
 		1. [Source Candidates Request](#2121-source-candidates-request)
-		1. [Source Register Request](#2122-source-register-request)
-		1. [Source Unregister Request](#2123-source-unregister-request)
-		1. [Source Update Request](#2124-source-update-request)
+		1. [Source Details Request](#2122-source-details-request)
+		1. [Source Register Request](#2123-source-register-request)
+		1. [Source Unregister Request](#2124-source-unregister-request)
+		1. [Source Update Request](#2125-source-update-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -235,6 +236,7 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Source](#source)
 	1. [Source Candidates Message](#source-candidates-message)
 	1. [Source Candidates Request](#source-candidates-request)
+	1. [Source Details Request](#source-details-request)
 	1. [Source Register Request](#source-register-request)
 	1. [Source Unregister Request](#source-unregister-request)
 	1. [Source Update Request](#source-update-request)
@@ -536,13 +538,16 @@ The [Qiy Node Delete Request](#qiy-node-delete-request) is a [Qiy Node Request](
 ### 2.12.1 Source Candidates Request
 The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.2 Source Register Request
+### 2.12.2 Source Details Request
+The [Source Details Request](#source-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+
+### 2.12.3 Source Register Request
 The [Source Register Request](#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.3 Source Unregister Request
+### 2.12.4 Source Unregister Request
 The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.4 Source Update Request
+### 2.12.5 Source Update Request
 The [Source Update Request](#source-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
 
@@ -806,7 +811,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Catalogue Service Unregister Request](Definitions.md#catalogue-service-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#serviceUrlDelete)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /catalogueServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueServiceUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.4 Catalogue Service Unregister Request](#224-catalogue-service-unregister-request)
 
 ## Catalogues Request
@@ -831,7 +836,6 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Connect Token Create Request](Definitions.md#connect-token-create-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /ctCreateEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ctCreateEndpointPost)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /connectTokenUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#connectTokenUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3.1 Connect Token Create Request](#231-connect-token-create-request)
 
 ## Connect Token Delete Request
@@ -1105,7 +1109,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Library Services Request](Definitions.md#library-services-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /libraryServicesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryServicesEndpointDelete)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /libraryServicesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryServicesEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.6 Library Services Request](#276-library-services-request)
 
 ## Message
@@ -1138,7 +1142,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Message Post Request](Definitions.md#message-post-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /mailBoxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#mailBoxUrlPost)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /mboxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#mboxUrlPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.3 Message Post Request](#283-message-post-request)
 
 ## Message Received Event
@@ -1154,7 +1158,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Messages Request](Definitions.md#messages-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /mailBoxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#mailBoxUrlGet)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /mboxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#mboxUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.4 Messages Request](#284-messages-request)
 
 ## Operation Execute Request
@@ -1439,8 +1443,16 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Candidates Request](Definitions.md#source-candidates-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlGet)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /candidatesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#candidatesUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.1 Source Candidates Request](#2121-source-candidates-request)
+
+## Source Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Source Details Request](Definitions.md#source-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#sourceUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.2 Source Details Request](#2122-source-details-request)
 
 ## Source Register Request
 
@@ -1448,7 +1460,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Register Request](Definitions.md#source-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#consentUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.2 Source Register Request](#2122-source-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.3 Source Register Request](#2123-source-register-request)
 
 ## Source Unregister Request
 
@@ -1456,7 +1468,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Unregister Request](Definitions.md#source-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#sourceUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.3 Source Unregister Request](#2123-source-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.4 Source Unregister Request](#2124-source-unregister-request)
 
 ## Source Update Request
 
@@ -1464,7 +1476,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Update Request](Definitions.md#source-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#sourceUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.4 Source Update Request](#2124-source-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.5 Source Update Request](#2125-source-update-request)
 
 
 ## Transport Layer
