@@ -216,6 +216,7 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Provider Register Request](#provider-register-request)
 	1. [Provider Unregister Request](#provider-unregister-request)
 	1. [Provider Update Request](#provider-update-request)
+	1. [Providers Request](#providers-request)
 	1. [Qiy Node](#qiy-node)
 	1. [Qiy Node Create Request](#qiy-node-create-request)
 	1. [Qiy Node Credentials](#qiy-node-credentials)
@@ -1089,7 +1090,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Library Service Unregister Request](Definitions.md#library-service-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /libraryServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryServiceUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.4 Library Service Register Request](#274-library-service-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.4 Library Service Unregister Request](#274-library-service-unregister-request)
 
 ## Library Service Update Request
 
@@ -1304,6 +1305,14 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Provider Update Request](Definitions.md#provider-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /providerUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#providerUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.10 Provider Update Request](#2710-provider-update-request)
+
+## Providers Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Providers Request](Definitions.md#providers-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /providersEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#providersEndpointGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.11 Providers Request](#2711-providers-request)
 
 ## Qiy Node
 

@@ -348,6 +348,13 @@
                     "minItems": 0,
                     "type": "string"
                 },
+                "providers": {
+                    "description": "Current address for the 'providers'-endpoint (providersEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
                 "ref": {
                     "description": "Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
