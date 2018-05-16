@@ -980,37 +980,37 @@
  	        "links": {
 		    "properties": {
 		        "candidates": {
-			    "Description": "Source Candidates url",
+			    "description": "Source Candidates url",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "dataDescription": {
-			    "Description": "Catalogue Service url of the Data Service",
+			    "description": "Catalogue Service url of the Data Service",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "dataProvider": {
-			    "Description": "Provider url of the Data Provider",
+			    "description": "Provider url of the Data Provider",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "consent": {
-			    "Description": "Consent url",
+			    "description": "Consent url",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "credentialsRegister": {
-			    "Description": "Credentials Register url",
+			    "description": "Credentials Register url",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "serviceCredentials": {
-			    "Description": "Service Credentials url",
+			    "description": "Service Credentials url",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "self": {
-			    "Description": "Source url",
+			    "description": "Source url",
 			    "format": "url",
 			    "type": "string"
 		        }

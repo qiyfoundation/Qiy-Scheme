@@ -663,7 +663,8 @@ See [Catalogue](#catalogue) model.
 ### 5.1.2 Catalogue Relations
 
 See also [Catalogue](#catalogue) model.
-* [Qiy Node](Definitions.md#qiy-node)
+* [Catalogue Service](#catalogue-service)
+* [Qiy Node](#qiy-node)
 
 ### 5.1.3 Catalogue Business Rules
 
