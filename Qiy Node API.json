@@ -142,6 +142,16 @@
 		"links": {
                     "description": "Catalogue Service links.",
                     "properties": {
+        	        "provider": {
+		            "description": "Provider url",
+			    "format": "url",
+			    "type": "string"
+		        },
+                        "self": {
+		            "description": "Catalogue Service url",
+			    "format": "url",
+			    "type": "string"
+		        },
                         "serviceDescriptor": {
 		            "description": "Service Descriptor.",
 			    "format": "url",
@@ -151,22 +161,13 @@
 		            "description": "Service type, defined using a Library Service url.",
 			    "format": "url",
 			    "type": "string"
-		        },
-		        "provider": {
-		            "description": "Provider url",
-			    "format": "url",
-			    "type": "string"
-		        },
-                        "self": {
-		            "description": "Catalogue Service url",
-			    "format": "url",
-			    "type": "string"
 		        }
 		    },
 		    "required": [
-		        "libraryService",
 		        "provider",
-		        "self"
+		        "self",
+			"serviceDescriptor",
+			"serviceType"
 		    ],
 		    "type": "object"
 		},
