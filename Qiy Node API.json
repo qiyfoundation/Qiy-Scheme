@@ -500,13 +500,6 @@
                     "minItems": 0,
                     "type": "string"
                 },
-                "providers": {
-                    "description": "Current address for the 'providers'-endpoint (providersEndpoint). This property is only included when the request is authenticated.",
-                    "format": "url",
-                    "maxItems": 1,
-                    "minItems": 0,
-                    "type": "string"
-                },
                 "ref": {
                     "description": "Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
@@ -573,12 +566,12 @@
                     "type": "object",
                     "properties": {
                         "providers": {
-                            "description": "Providers Url",
+                            "description": "Providers Url (providersUrl)",
                             "type": "string",
                             "format": "url"
                         },
                         "services": {
-                            "description": "Library Services url.",
+                            "description": "Library Services url (libraryServicesUrl).",
                             "format": "url",
                             "type": "string"
                         }
@@ -1133,7 +1126,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Service"
+                    "Library"
                 ],
                 "responses": {
                     "200": {
@@ -1143,34 +1136,6 @@
                         }
                     }
                 }
-            },
-	    "post": {
-                "summary": "Register Catalogue Service.",
-                "consumes": [
-                    "application/json"
-                ],
-                "description": "See [Catalogue Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-register-request).",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "catalogue-service-description",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/CatalogueServiceModel"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Successful execution."
-                    },
-                    "400": {
-                        "description": "400,600 Unsuccessful execution."
-                    }
-                },
-                "tags": [
-                    "Catalogue"
-                ]
             }
         },
         "/catalogueServiceUrl": {
@@ -1206,7 +1171,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Service"
+                    "Catalogue"
                 ],
                 "responses": {
                     "200": {
@@ -1231,7 +1196,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Service"
+                    "Catalogue"
                 ],
                 "responses": {
                     "200": {
@@ -1241,6 +1206,34 @@
                         }
                     }
                 }
+            },
+	    "post": {
+                "summary": "Register Catalogue Service.",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Catalogue Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-register-request).",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "catalogue-service-description",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CatalogueServiceModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Catalogue"
+                ]
             }
         },
         "/connectionUrl": {
@@ -1550,7 +1543,7 @@
                     }
                 ],
                 "tags": [
-                    "Consent"
+                    "Source"
                 ],
                 "responses": {
                     "200": {
@@ -1615,7 +1608,7 @@
                     }
                 },
                 "tags": [
-                    "Lifecycle"
+                    "Source"
                 ]
             }
         },
@@ -1763,7 +1756,7 @@
                 ]
             },
             "post": {
-                "summary": "Registration Request",
+                "summary": "Service Register Request",
                 "consumes": [
                     "application/json"
                 ],
@@ -1826,7 +1819,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Service"
+                    "Library"
                 ],
                 "responses": {
                     "200": {
@@ -2107,7 +2100,7 @@
                 }
             }
         },
-        "/providersEndpoint": {
+        "/providersUrl": {
             "get": {
                 "summary": "Get Providers",
                 "description": "See [Providers Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#providers-request).",
@@ -2175,7 +2168,7 @@
                     }
                 ],
                 "tags": [
-                    "Service Credentials"
+                    "Source"
                 ],
                 "responses": {
                     "204": {
@@ -2198,7 +2191,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Service Credentials"
+                    "Source"
                 ],
                 "responses": {
                     "200": {
@@ -2228,7 +2221,7 @@
                     }
                 ],
                 "tags": [
-                    "Service Credentials"
+                    "Source"
                 ],
                 "responses": {
                     "200": {

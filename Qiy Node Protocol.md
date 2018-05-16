@@ -862,7 +862,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Catalogue Service Register Request](Definitions.md#catalogue-service-register-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /cataloguesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#cataloguesEndpointPost)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /catalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueUrlPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.3 Catalogue Service Register Request](#223-catalogue-service-register-request)
 
 ## Catalogue Service Unregister Request
