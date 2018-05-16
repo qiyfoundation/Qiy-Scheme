@@ -243,7 +243,7 @@ font-style: italic;
   </ul>
   <h4><a href="#Library">Library</a></h4>
   <ul>
-  <li><a href="#cataloguesEndpointGet"><code><span class="http-method">get</span> /cataloguesEndpoint</code></a></li>
+  <li><a href="#cataloguesUrlGet"><code><span class="http-method">get</span> /cataloguesUrl</code></a></li>
   <li><a href="#libraryEndpointGet"><code><span class="http-method">get</span> /libraryEndpoint</code></a></li>
   <li><a href="#libraryServiceUrlDelete"><code><span class="http-method">delete</span> /libraryServiceUrl</code></a></li>
   <li><a href="#libraryServiceUrlGet"><code><span class="http-method">get</span> /libraryServiceUrl</code></a></li>
@@ -1513,11 +1513,11 @@ font-style: italic;
   </div> <!-- method -->
   <hr/>
   <h1><a name="Library">Library</a></h1>
-  <div class="method"><a name="cataloguesEndpointGet"/>
+  <div class="method"><a name="cataloguesUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /cataloguesEndpoint</code></pre></div>
-    <div class="method-summary">Get Catalogues (<span class="nickname">cataloguesEndpointGet</span>)</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /cataloguesUrl</code></pre></div>
+    <div class="method-summary">Get Catalogues (<span class="nickname">cataloguesUrlGet</span>)</div>
     <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request">Catalogues Request</a>.</div>
 
 
@@ -1584,6 +1584,7 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
+    "catalogues" : "http://example.com/aeiou",
     "services" : "http://example.com/aeiou",
     "providers" : "http://example.com/aeiou"
   },
@@ -3516,8 +3517,7 @@ font-style: italic;
     <h3><a name="EndpointAddressesModel"><code>EndpointAddressesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Current path endpoint addresses.</div>
     <div class="field-items">
-      <div class="param">catalogues (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'catalogues'-endpoint (cataloguesEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">connections (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated. format: url</div>
+      <div class="param">connections (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">create (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated. format: url</div>
 <div class="param">ctCreate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connect token create'-endpoint (ctCreateEndpoint). This property is only included when the request is authenticated. format: url</div>
@@ -3554,7 +3554,8 @@ font-style: italic;
     <h3><a name="LibraryModel_links"><code>LibraryModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Providers Url (providersUrl) format: url</div>
+      <div class="param">catalogues </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogues Url (cataloguesUrl) format: url</div>
+<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Providers Url (providersUrl) format: url</div>
 <div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Services url (libraryServicesUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
@@ -3733,8 +3734,7 @@ font-style: italic;
     <h3><a name="ApiLinksModel"><code>ApiLinksModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
-      <div class="param">catalogues (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'catalogues'-endpoint (cataloguesEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">connections (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated. format: url</div>
+      <div class="param">connections (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">create (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated. format: url</div>
 <div class="param">ctCreate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connect token create'-endpoint (ctCreateEndpoint). This property is only included when the request is authenticated. format: url</div>

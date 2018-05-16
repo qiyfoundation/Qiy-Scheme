@@ -423,13 +423,6 @@
             "type": "object",
             "description": "Current path endpoint addresses.",
             "properties": {
-                "catalogues": {
-                    "description": "Current address for the 'catalogues'-endpoint (cataloguesEndpoint). This property is only included when the request is authenticated.",
-                    "format": "url",
-                    "maxItems": 1,
-                    "minItems": 0,
-                    "type": "string"
-                },
                 "connections": {
                     "description": "Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
@@ -565,6 +558,11 @@
                 "links": {
                     "type": "object",
                     "properties": {
+                        "catalogues": {
+                            "description": "Catalogues Url (cataloguesUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
                         "providers": {
                             "description": "Providers Url (providersUrl)",
                             "type": "string",
@@ -577,6 +575,7 @@
                         }
                     },
                     "required": [
+		        "catalogues",
 		        "providers",
 		        "services"
                     ]
@@ -1113,7 +1112,7 @@
                 }
             }
         },
-        "/cataloguesEndpoint": {
+        "/cataloguesUrl": {
             "get": {
                 "summary": "Get Catalogues",
                 "description": "See [Catalogues Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request).",

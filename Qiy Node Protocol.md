@@ -878,7 +878,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Catalogues Request](Definitions.md#catalogues-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /cataloguesEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#cataloguesEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /cataloguesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#cataloguesUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.4 Catalogues Request](#224-catalogues-request)
 
 ## Connect Token
