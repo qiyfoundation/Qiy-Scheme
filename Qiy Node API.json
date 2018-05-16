@@ -596,8 +596,7 @@
             "required": [
                 "activeFrom",
                 "activeUntil",
-                "providers",
-                "services",
+                "links",
                 "state"
             ],
             "type": "object"
@@ -1737,6 +1736,32 @@
             }
         },
         "/libraryServicesUrl": {
+            "get": {
+                "summary": "Get Library Services",
+                "description": "See [Library Services Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-services-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/LibraryServicesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
             "post": {
                 "summary": "Registration Request",
                 "consumes": [
