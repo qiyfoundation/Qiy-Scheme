@@ -250,10 +250,10 @@ font-style: italic;
   <li><a href="#libraryProviderUrlPatch"><code><span class="http-method">patch</span> /libraryProviderUrl</code></a></li>
   <li><a href="#libraryProvidersUrlGet"><code><span class="http-method">get</span> /libraryProvidersUrl</code></a></li>
   <li><a href="#libraryProvidersUrlPost"><code><span class="http-method">post</span> /libraryProvidersUrl</code></a></li>
-  <li><a href="#libraryServiceUrlDelete"><code><span class="http-method">delete</span> /libraryServiceUrl</code></a></li>
-  <li><a href="#libraryServiceUrlGet"><code><span class="http-method">get</span> /libraryServiceUrl</code></a></li>
-  <li><a href="#libraryServicesUrlGet"><code><span class="http-method">get</span> /libraryServicesUrl</code></a></li>
-  <li><a href="#libraryServicesUrlPost"><code><span class="http-method">post</span> /libraryServicesUrl</code></a></li>
+  <li><a href="#serviceTypeUrlDelete"><code><span class="http-method">delete</span> /serviceTypeUrl</code></a></li>
+  <li><a href="#serviceTypeUrlGet"><code><span class="http-method">get</span> /serviceTypeUrl</code></a></li>
+  <li><a href="#serviceTypesUrlGet"><code><span class="http-method">get</span> /serviceTypesUrl</code></a></li>
+  <li><a href="#serviceTypesUrlPost"><code><span class="http-method">post</span> /serviceTypesUrl</code></a></li>
   </ul>
   <h4><a href="#Lifecycle">Lifecycle</a></h4>
   <ul>
@@ -932,7 +932,7 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "consentedDataServices" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+  "consentedDataSets" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "links" : {
     "subscribedService" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou"
@@ -1585,8 +1585,9 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
+    "dataTypes" : "http://example.com/aeiou",
+    "serviceTypes" : "http://example.com/aeiou",
     "catalogues" : "http://example.com/aeiou",
-    "services" : "http://example.com/aeiou",
     "providers" : "http://example.com/aeiou"
   },
   "state" : "state",
@@ -1808,12 +1809,12 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryServiceUrlDelete"/>
+  <div class="method"><a name="serviceTypeUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /libraryServiceUrl</code></pre></div>
-    <div class="method-summary">Unregister Library Service. (<span class="nickname">libraryServiceUrlDelete</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-unregister-request">Library Service Unregister Request</a>.</div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /serviceTypeUrl</code></pre></div>
+    <div class="method-summary">Unregister Service Type. (<span class="nickname">serviceTypeUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-type-unregister-request">Service Type Unregister Request</a>.</div>
 
 
 
@@ -1839,12 +1840,12 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryServiceUrlGet"/>
+  <div class="method"><a name="serviceTypeUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryServiceUrl</code></pre></div>
-    <div class="method-summary">Get Library Service Details (<span class="nickname">libraryServiceUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-details-request">Library Service Details Request</a>.</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /serviceTypeUrl</code></pre></div>
+    <div class="method-summary">Get Service Type Details (<span class="nickname">serviceTypeUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-type-details-request">Service Type Details Request</a>.</div>
 
 
 
@@ -1858,7 +1859,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#LibraryServiceModel">LibraryServiceModel</a>
+      <a href="#ServiceTypeModel">ServiceTypeModel</a>
       
     </div>
 
@@ -1878,15 +1879,15 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#LibraryServiceModel">LibraryServiceModel</a>
+        <a href="#ServiceTypeModel">ServiceTypeModel</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryServicesUrlGet"/>
+  <div class="method"><a name="serviceTypesUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryServicesUrl</code></pre></div>
-    <div class="method-summary">Get Library Services (<span class="nickname">libraryServicesUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-services-request">Library Services Request</a>.</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /serviceTypesUrl</code></pre></div>
+    <div class="method-summary">Get Service Types (<span class="nickname">serviceTypesUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-types-request">Service Types Request</a>.</div>
 
 
 
@@ -1900,7 +1901,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#LibraryServicesModel">LibraryServicesModel</a>
+      <a href="#ServiceTypesModel">ServiceTypesModel</a>
       
     </div>
 
@@ -1920,18 +1921,18 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     200 Successful execution.
-        <a href="#LibraryServicesModel">LibraryServicesModel</a>
+        <a href="#ServiceTypesModel">ServiceTypesModel</a>
     <h4 class="field-label">400</h4>
     [400,600&gt; Unsuccessful execution.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryServicesUrlPost"/>
+  <div class="method"><a name="serviceTypesUrlPost"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryServicesUrl</code></pre></div>
-    <div class="method-summary">Library Service Register Request (<span class="nickname">libraryServicesUrlPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-register-request">Library Service Register Request</a>.</div>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /serviceTypesUrl</code></pre></div>
+    <div class="method-summary">Service Type Register Request (<span class="nickname">serviceTypesUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-type-register-request">Service Type Register Request</a>.</div>
 
 
     <h3 class="field-label">Consumes</h3>
@@ -1942,7 +1943,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">service <a href="#LibraryServiceModel">LibraryServiceModel</a> (required)</div>
+      <div class="param">service <a href="#ServiceTypeModel">ServiceTypeModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3343,8 +3344,6 @@ font-style: italic;
     <li><a href="#LibraryModel_links"><code>LibraryModel_links</code> - </a></li>
     <li><a href="#LibraryProviderModel"><code>LibraryProviderModel</code> - </a></li>
     <li><a href="#LibraryProvidersModel"><code>LibraryProvidersModel</code> - </a></li>
-    <li><a href="#LibraryServiceModel"><code>LibraryServiceModel</code> - </a></li>
-    <li><a href="#LibraryServicesModel"><code>LibraryServicesModel</code> - </a></li>
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
     <li><a href="#MailboxMessagesModel"><code>MailboxMessagesModel</code> - </a></li>
     <li><a href="#MessageModel"><code>MessageModel</code> - </a></li>
@@ -3363,6 +3362,8 @@ font-style: italic;
     <li><a href="#ReferencesResultModel"><code>ReferencesResultModel</code> - </a></li>
     <li><a href="#ServiceCredentialsModel"><code>ServiceCredentialsModel</code> - </a></li>
     <li><a href="#ServiceCredentialsModel_links"><code>ServiceCredentialsModel_links</code> - </a></li>
+    <li><a href="#ServiceTypeModel"><code>ServiceTypeModel</code> - </a></li>
+    <li><a href="#ServiceTypesModel"><code>ServiceTypesModel</code> - </a></li>
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#SourceModel_links"><code>SourceModel_links</code> - </a></li>
     <li><a href="#SourceUrlModel"><code>SourceUrlModel</code> - </a></li>
@@ -3425,7 +3426,7 @@ font-style: italic;
       <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url format: url</div>
 <div class="param">serviceDescriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Descriptor. format: url</div>
-<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service type, defined using a Library Service url. format: url</div>
+<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service type, defined using a Service Type url. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3500,7 +3501,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">consentedDataServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Consented Data Services. format: url</div>
+<div class="param">consentedDataSets (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Consented Data Sets. format: url</div>
 <div class="param">dataSources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Source Urls of the Data Sources, only accessible for the Data Subject. format: url</div>
 <div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ConsentModel_links">ConsentModel_links</a></span>  </div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the consent. </div>
@@ -3561,8 +3562,9 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">catalogues </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogues Url (cataloguesUrl) format: url</div>
+<div class="param">dataTypes </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Types url (dataTypesUrl). format: url</div>
 <div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Providers url (libraryProvidersUrl) format: url</div>
-<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Services url (libraryServicesUrl). format: url</div>
+<div class="param">serviceTypes </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Types url (serviceTypesUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3574,18 +3576,6 @@ font-style: italic;
   <div class="model">
     <h3><a name="LibraryProvidersModel"><code>LibraryProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>List of Library Providers.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="LibraryServiceModel"><code>LibraryServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Library Service Model.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="LibraryServicesModel"><code>LibraryServicesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Library Services.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -3725,6 +3715,18 @@ font-style: italic;
       <div class="param">source </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source url. format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Credentials url format: url</div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceTypeModel"><code>ServiceTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Service Type Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceTypesModel"><code>ServiceTypesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Service Types.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="SourceModel"><code>SourceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>

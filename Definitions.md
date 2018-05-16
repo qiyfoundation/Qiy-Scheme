@@ -344,20 +344,6 @@ A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider)
 
 ### Library Providers Request
 A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
-### Library Service Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of a [Service](#service) in the [Service Library](#service-library).
-
-### Library Service Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
-
-### Library Service Unregister Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
-
-### Library Service Update Request
-A [Qiy Node Request](#qiy-node-request) to update the details of a [Service](#service) in the [Service Library](#service-library).
-
-### Library Services Request
-A [Qiy Node Request](#qiy-node-request) to list the [Services](#service) that are registered in the [Service Library](#service-library).
 
 ### License
 [Regional Authorities](#regional-authority) and [Access Providers](#access-provider) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Parties can apply for a [License](#license) which requires paying a fee and complying with the [Qiy Scheme](#qiy-scheme)'s Rules & Regulations.
@@ -684,6 +670,21 @@ See [Provider Unregister Request].
 
 ### Service Source
 A [Service](#service) of a [Service Provider](#service-provider) that provides the [Service](#service) required by another [Service](#service).
+
+### Service Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service](#service) in the [Service Library](#service-library).
+
+### Service Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
+
+### Service Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
+
+### Service Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Service](#service) in the [Service Library](#service-library).
+
+### Service Types Request
+A [Qiy Node Request](#qiy-node-request) to list the [Services](#service) that are registered in the [Service Library](#service-library).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
