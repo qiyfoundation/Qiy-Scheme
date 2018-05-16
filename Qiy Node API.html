@@ -205,8 +205,6 @@ font-style: italic;
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#connectionsEndpointGet"><code><span class="http-method">get</span> /connectionsEndpoint</code></a></li>
   <li><a href="#connectionsEndpointPost"><code><span class="http-method">post</span> /connectionsEndpoint</code></a></li>
-  <li><a href="#consentUrlPatch"><code><span class="http-method">patch</span> /consentUrl</code></a></li>
-  <li><a href="#consentUrlPost"><code><span class="http-method">post</span> /consentUrl</code></a></li>
   <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
   <li><a href="#eventsEndpointGet"><code><span class="http-method">get</span> /eventsEndpoint</code></a></li>
   </ul>
@@ -223,6 +221,8 @@ font-style: italic;
   <ul>
   <li><a href="#consentUrlDelete"><code><span class="http-method">delete</span> /consentUrl</code></a></li>
   <li><a href="#consentUrlGet"><code><span class="http-method">get</span> /consentUrl</code></a></li>
+  <li><a href="#consentUrlPatch"><code><span class="http-method">patch</span> /consentUrl</code></a></li>
+  <li><a href="#consentUrlPost"><code><span class="http-method">post</span> /consentUrl</code></a></li>
   <li><a href="#consentsEndpointGet"><code><span class="http-method">get</span> /consentsEndpoint</code></a></li>
   </ul>
   <h4><a href="#Data">Data</a></h4>
@@ -281,8 +281,6 @@ font-style: italic;
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#connectionsEndpointGet"><code><span class="http-method">get</span> /connectionsEndpoint</code></a></li>
   <li><a href="#connectionsEndpointPost"><code><span class="http-method">post</span> /connectionsEndpoint</code></a></li>
-  <li><a href="#consentUrlPatch"><code><span class="http-method">patch</span> /consentUrl</code></a></li>
-  <li><a href="#consentUrlPost"><code><span class="http-method">post</span> /consentUrl</code></a></li>
   <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
   <li><a href="#eventsEndpointGet"><code><span class="http-method">get</span> /eventsEndpoint</code></a></li>
   <li><a href="#mboxUrlGet"><code><span class="http-method">get</span> /mboxUrl</code></a></li>
@@ -587,81 +585,6 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="consentUrlPatch"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /consentUrl</code></pre></div>
-    <div class="method-summary">Update Consent details (<span class="nickname">consentUrlPatch</span>)</div>
-    <div class="method-notes">Update Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
-
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">consent-update <a href="#ConsentModel">ConsentModel</a> (required)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="consentUrlPost"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /consentUrl</code></pre></div>
-    <div class="method-summary">Register Source (<span class="nickname">consentUrlPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request">Source Register Request</a>.</div>
-
-
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">source-url  (required)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Catalogue Service url of the Data Source </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
   <div class="method"><a name="ctCreateEndpointPost"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -933,6 +856,86 @@ font-style: italic;
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
         <a href="#ConsentModel">ConsentModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Update Consent details (<span class="nickname">consentUrlPatch</span>)</div>
+    <div class="method-notes">Update Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">consent-update <a href="#ConsentModel">ConsentModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="consentUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /consentUrl</code></pre></div>
+    <div class="method-summary">Register Source (<span class="nickname">consentUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request">Source Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">source-url <a href="#SourceUrlModel">SourceUrlModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="consentsEndpointGet"/>
@@ -2504,81 +2507,6 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="consentUrlPatch"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /consentUrl</code></pre></div>
-    <div class="method-summary">Update Consent details (<span class="nickname">consentUrlPatch</span>)</div>
-    <div class="method-notes">Update Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
-
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">consent-update <a href="#ConsentModel">ConsentModel</a> (required)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="consentUrlPost"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /consentUrl</code></pre></div>
-    <div class="method-summary">Register Source (<span class="nickname">consentUrlPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request">Source Register Request</a>.</div>
-
-
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">source-url  (required)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Catalogue Service url of the Data Source </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
   <div class="method"><a name="ctCreateEndpointPost"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -2850,7 +2778,11 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "links" : "{}",
+  "links" : {
+    "libraryService" : "http://example.com/aeiou",
+    "provider" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou"
+  },
   "state" : "state",
   "activeFrom" : 0,
   "activeUntil" : 6
@@ -2897,7 +2829,10 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "links" : "{}",
+  "links" : {
+    "provider" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou"
+  },
   "services" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "state" : "state",
   "activeFrom" : 0,
@@ -3340,7 +3275,9 @@ font-style: italic;
     <li><a href="#ApiModel"><code>ApiModel</code> - </a></li>
     <li><a href="#CandidatesModel"><code>CandidatesModel</code> - </a></li>
     <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
+    <li><a href="#CatalogueModel_links"><code>CatalogueModel_links</code> - </a></li>
     <li><a href="#CatalogueServiceModel"><code>CatalogueServiceModel</code> - </a></li>
+    <li><a href="#CatalogueServiceModel_links"><code>CatalogueServiceModel_links</code> - </a></li>
     <li><a href="#CataloguesModel"><code>CataloguesModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel_actions"><code>ConnectTokenMetadataModel_actions</code> - </a></li>
@@ -3376,6 +3313,7 @@ font-style: italic;
     <li><a href="#ServiceCredentialsModel_links"><code>ServiceCredentialsModel_links</code> - </a></li>
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#SourceModel_links"><code>SourceModel_links</code> - </a></li>
+    <li><a href="#SourceUrlModel"><code>SourceUrlModel</code> - </a></li>
     <li><a href="#ApiLinksModel"><code>ApiLinksModel</code> - </a></li>
     <li><a href="#ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a></li>
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
@@ -3405,9 +3343,17 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> Catalogue links. </div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#CatalogueModel_links">CatalogueModel_links</a></span>  </div>
 <div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Services provided by the Service Provider. format: url</div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the catalogue. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CatalogueModel_links"><code>CatalogueModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Catalogue links.</div>
+    <div class="field-items">
+      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue url format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3416,8 +3362,17 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> Catalogue Service links. </div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#CatalogueServiceModel_links">CatalogueServiceModel_links</a></span>  </div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the service. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CatalogueServiceModel_links"><code>CatalogueServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Catalogue Service links.</div>
+    <div class="field-items">
+      <div class="param">libraryService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Service url. format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue service url format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3709,14 +3664,20 @@ font-style: italic;
     <h3><a name="SourceModel_links"><code>SourceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
-<div class="param">dataDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
-<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
-<div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
-<div class="param">credentialsRegister </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
-<div class="param">serviceCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
-<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: url</div>
+      <div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates url format: url</div>
+<div class="param">dataDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url of the Data Service format: url</div>
+<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url of the Data Provider format: url</div>
+<div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent url format: url</div>
+<div class="param">credentialsRegister </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Credentials Register url format: url</div>
+<div class="param">serviceCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Credentials url format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source url format: url</div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SourceUrlModel"><code>SourceUrlModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Source url</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ApiLinksModel"><code>ApiLinksModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>

@@ -1035,6 +1035,11 @@
                 "state"
             ],
             "type": "object"
+        },
+        "SourceUrlModel": {
+            "description": "Source url",
+            "format": "url",
+            "type": "string"
         }
     },
     "parameters": {
@@ -1524,8 +1529,7 @@
                     }
                 ],
                 "tags": [
-                    "Connect",
-                    "Relying Party"
+                    "Consent"
                 ],
                 "responses": {
                     "200": {
@@ -1536,22 +1540,24 @@
 	    "post": {
                 "summary": "Register Source",
                 "description": "See [Source Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request).",
+                "consumes": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
                     },
                     {
-                        "description": "Catalogue Service url of the Data Source",
-                        "format": "url",
                         "in": "body",
                         "name": "source-url",
                         "required": true,
-			"type": "string"
+                        "schema": {
+                            "$ref": "#/definitions/SourceUrlModel"
+                        }
                     }
                 ],
                 "tags": [
-                    "Connect",
-                    "Relying Party"
+                    "Consent"
                 ],
                 "responses": {
                     "200": {
