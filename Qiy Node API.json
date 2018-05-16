@@ -142,8 +142,13 @@
 		"links": {
                     "description": "Catalogue Service links.",
                     "properties": {
-                        "libraryService": {
-		            "description": "Library Service url.",
+                        "serviceDescriptor": {
+		            "description": "Service Descriptor.",
+			    "format": "url",
+			    "type": "string"
+		        },
+                        "serviceType": {
+		            "description": "Service type, defined using a Library Service url.",
 			    "format": "url",
 			    "type": "string"
 		        },
@@ -1326,6 +1331,7 @@
                     {
                         "name": "connect-token",
                         "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/ConnectTokenModel"
                         }
@@ -1410,6 +1416,7 @@
                     {
                         "name": "connect-token",
                         "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/ConnectTokenModel"
                         }
@@ -1758,7 +1765,7 @@
                 ]
             },
             "post": {
-                "summary": "Service Register Request",
+                "summary": "Library Service Register Request",
                 "consumes": [
                     "application/json"
                 ],
@@ -1770,6 +1777,7 @@
                     {
                         "name": "service",
                         "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/LibraryServiceModel"
                         }
@@ -1878,6 +1886,7 @@
                     {
                         "name": "message",
                         "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/MessageModel"
                         }
@@ -2142,6 +2151,7 @@
                     {
                         "name": "provider",
                         "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/LibraryProviderModel"
                         }
@@ -2217,6 +2227,7 @@
                     {
                         "name": "service-credentials",
                         "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/ServiceCredentialsModel"
                         }

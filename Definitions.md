@@ -330,6 +330,20 @@ See https://en.wikipedia.org/wiki/Entity#In_law.
 ### Library Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Library](#service-library).
 
+### Library Provider Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
+
+### Library Provider Register Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Library Provider Unregister Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Library Provider Update Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to update details of a [Service Provider](#service-provider).
+
+### Library Providers Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
 ### Library Service Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of a [Service](#service) in the [Service Library](#service-library).
 
@@ -457,21 +471,6 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates cre
 
 ### Proposer Id
 The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
-
-### Provider Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
-
-### Provider Register Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
-
-### Provider Unregister Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
-
-### Provider Update Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to update details of a [Service Provider](#service-provider).
-
-### Providers Request
-A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
 
 ### Pseudonym
 Synonymous with [Identifier](#identifier)
@@ -678,10 +677,10 @@ A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Servi
 The [Identity](#identity) of the [Service Provider](#service-provider) as registered by the [Access Provider](#access-provider).
 
 ### Service Provider Register Request
-See [Provider Register Request](#provider-register-request).
+See [Provider Register Request].
 
 ### Service Provider Unregister Request
-See [Provider Unregister Request](#provider-unregister-request).
+See [Provider Unregister Request].
 
 ### Service Source
 A [Service](#service) of a [Service Provider](#service-provider) that provides the [Service](#service) required by another [Service](#service).

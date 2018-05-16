@@ -368,8 +368,9 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
-    "libraryService" : "http://example.com/aeiou",
+    "serviceType" : "http://example.com/aeiou",
     "provider" : "http://example.com/aeiou",
+    "serviceDescriptor" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou"
   },
   "state" : "state",
@@ -638,7 +639,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (optional)</div>
+      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -815,7 +816,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (optional)</div>
+      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1317,7 +1318,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (optional)</div>
+      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1422,7 +1423,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">message <a href="#MessageModel">MessageModel</a> (optional)</div>
+      <div class="param">message <a href="#MessageModel">MessageModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1780,7 +1781,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">provider <a href="#LibraryProviderModel">LibraryProviderModel</a> (optional)</div>
+      <div class="param">provider <a href="#LibraryProviderModel">LibraryProviderModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1929,7 +1930,7 @@ font-style: italic;
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
     <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryServicesUrl</code></pre></div>
-    <div class="method-summary">Service Register Request (<span class="nickname">libraryServicesUrlPost</span>)</div>
+    <div class="method-summary">Library Service Register Request (<span class="nickname">libraryServicesUrlPost</span>)</div>
     <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-register-request">Library Service Register Request</a>.</div>
 
 
@@ -1941,7 +1942,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">service <a href="#LibraryServiceModel">LibraryServiceModel</a> (optional)</div>
+      <div class="param">service <a href="#LibraryServiceModel">LibraryServiceModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -2158,7 +2159,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">message <a href="#MessageModel">MessageModel</a> (optional)</div>
+      <div class="param">message <a href="#MessageModel">MessageModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -2610,7 +2611,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (optional)</div>
+      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3116,7 +3117,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">service-credentials <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a> (optional)</div>
+      <div class="param">service-credentials <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3421,7 +3422,8 @@ font-style: italic;
     <h3><a name="CatalogueServiceModel_links"><code>CatalogueServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Catalogue Service links.</div>
     <div class="field-items">
-      <div class="param">libraryService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Service url. format: url</div>
+      <div class="param">serviceDescriptor (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Descriptor. format: url</div>
+<div class="param">serviceType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service type, defined using a Library Service url. format: url</div>
 <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url format: url</div>
     </div>  <!-- field-items -->
