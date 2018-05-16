@@ -2188,7 +2188,7 @@
                     "200": {
                         "description": "The status code of a success response will be 200.",
                         "schema": {
-                            "$ref": "#/definitions/ServiceCrendentialsModel"
+                            "$ref": "#/definitions/ServiceCredentialsModel"
                         }
                     }
                 }
