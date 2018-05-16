@@ -245,15 +245,15 @@ font-style: italic;
   <ul>
   <li><a href="#cataloguesUrlGet"><code><span class="http-method">get</span> /cataloguesUrl</code></a></li>
   <li><a href="#libraryEndpointGet"><code><span class="http-method">get</span> /libraryEndpoint</code></a></li>
+  <li><a href="#libraryProviderUrlDelete"><code><span class="http-method">delete</span> /libraryProviderUrl</code></a></li>
+  <li><a href="#libraryProviderUrlGet"><code><span class="http-method">get</span> /libraryProviderUrl</code></a></li>
+  <li><a href="#libraryProviderUrlPatch"><code><span class="http-method">patch</span> /libraryProviderUrl</code></a></li>
+  <li><a href="#libraryProvidersUrlGet"><code><span class="http-method">get</span> /libraryProvidersUrl</code></a></li>
+  <li><a href="#libraryProvidersUrlPost"><code><span class="http-method">post</span> /libraryProvidersUrl</code></a></li>
   <li><a href="#libraryServiceUrlDelete"><code><span class="http-method">delete</span> /libraryServiceUrl</code></a></li>
   <li><a href="#libraryServiceUrlGet"><code><span class="http-method">get</span> /libraryServiceUrl</code></a></li>
   <li><a href="#libraryServicesUrlGet"><code><span class="http-method">get</span> /libraryServicesUrl</code></a></li>
   <li><a href="#libraryServicesUrlPost"><code><span class="http-method">post</span> /libraryServicesUrl</code></a></li>
-  <li><a href="#providerUrlDelete"><code><span class="http-method">delete</span> /providerUrl</code></a></li>
-  <li><a href="#providerUrlGet"><code><span class="http-method">get</span> /providerUrl</code></a></li>
-  <li><a href="#providerUrlPatch"><code><span class="http-method">patch</span> /providerUrl</code></a></li>
-  <li><a href="#providersUrlGet"><code><span class="http-method">get</span> /providersUrl</code></a></li>
-  <li><a href="#providersUrlPost"><code><span class="http-method">post</span> /providersUrl</code></a></li>
   </ul>
   <h4><a href="#Lifecycle">Lifecycle</a></h4>
   <ul>
@@ -276,7 +276,7 @@ font-style: italic;
   <ul>
   <li><a href="#portfolioEndpointGet"><code><span class="http-method">get</span> /portfolioEndpoint</code></a></li>
   <li><a href="#portfolioServiceUrlGet"><code><span class="http-method">get</span> /portfolioServiceUrl</code></a></li>
-  <li><a href="#portfolioServicesEndpointGet"><code><span class="http-method">get</span> /portfolioServicesEndpoint</code></a></li>
+  <li><a href="#portfolioServicesUrlGet"><code><span class="http-method">get</span> /portfolioServicesUrl</code></a></li>
   </ul>
   <h4><a href="#RelyingParty">RelyingParty</a></h4>
   <ul>
@@ -1606,6 +1606,207 @@ font-style: italic;
         <a href="#LibraryModel">LibraryModel</a>
   </div> <!-- method -->
   <hr/>
+  <div class="method"><a name="libraryProviderUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /libraryProviderUrl</code></pre></div>
+    <div class="method-summary">Delete Library Provider. (<span class="nickname">libraryProviderUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-delete-request">Library Provider Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryProviderUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryProviderUrl</code></pre></div>
+    <div class="method-summary">Get Library Provider Details (<span class="nickname">libraryProviderUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-details-request">Library Provider Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#LibraryProviderModel">LibraryProviderModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#LibraryProviderModel">LibraryProviderModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryProviderUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /libraryProviderUrl</code></pre></div>
+    <div class="method-summary">Update Library Provider details (<span class="nickname">libraryProviderUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-update-request">Library Provider Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">provider-update <a href="#LibraryProviderModel">LibraryProviderModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryProvidersUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryProvidersUrl</code></pre></div>
+    <div class="method-summary">Get Library Providers (<span class="nickname">libraryProvidersUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-providers-request">Library Providers Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#LibraryProvidersModel">LibraryProvidersModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#LibraryProvidersModel">LibraryProvidersModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryProvidersUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryProvidersUrl</code></pre></div>
+    <div class="method-summary">Library Provider Register Request (<span class="nickname">libraryProvidersUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-register-request">Library Provider Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">provider <a href="#LibraryProviderModel">LibraryProviderModel</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    201 Successful execution.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="libraryServiceUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -1741,207 +1942,6 @@ font-style: italic;
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
       <div class="param">service <a href="#LibraryServiceModel">LibraryServiceModel</a> (optional)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">201</h4>
-    201 Successful execution.
-        <a href="#"></a>
-    <h4 class="field-label">400</h4>
-    400,600 Unsuccessful execution.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="providerUrlDelete"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /providerUrl</code></pre></div>
-    <div class="method-summary">Delete Provider. (<span class="nickname">providerUrlDelete</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-delete-request">Provider Delete Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">204</h4>
-    A response code 204 (NO CONTENT) will indicate a success.
-        <a href="#"></a>
-    <h4 class="field-label">400</h4>
-    Failures will be indicated with response codes 400 to but-not-including 600.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="providerUrlGet"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /providerUrl</code></pre></div>
-    <div class="method-summary">Get Provider Details (<span class="nickname">providerUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-details-request">Provider Details Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#ProviderModel">ProviderModel</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#ProviderModel">ProviderModel</a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="providerUrlPatch"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /providerUrl</code></pre></div>
-    <div class="method-summary">Update Provider details (<span class="nickname">providerUrlPatch</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-update-request">Provider Update Request</a>.</div>
-
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">provider-update <a href="#ProviderModel">ProviderModel</a> (required)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="providersUrlGet"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /providersUrl</code></pre></div>
-    <div class="method-summary">Get Providers (<span class="nickname">providersUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#providers-request">Providers Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#ProvidersModel">ProvidersModel</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>""</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    200 Successful execution.
-        <a href="#ProvidersModel">ProvidersModel</a>
-    <h4 class="field-label">400</h4>
-    [400,600&gt; Unsuccessful execution.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="providersUrlPost"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /providersUrl</code></pre></div>
-    <div class="method-summary">Provider Register Request (<span class="nickname">providersUrlPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-register-request">Provider Register Request</a>.</div>
-
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">provider <a href="#ProviderModel">ProviderModel</a> (optional)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -2340,8 +2340,10 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "subscribedServices" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
-  "dataProviders" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
+  "links" : {
+    "services" : "http://example.com/aeiou",
+    "providers" : "http://example.com/aeiou"
+  }
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -2405,11 +2407,11 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="portfolioServicesEndpointGet"/>
+  <div class="method"><a name="portfolioServicesUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioServicesEndpoint</code></pre></div>
-    <div class="method-summary">Get Portfolio Servicels (<span class="nickname">portfolioServicesEndpointGet</span>)</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioServicesUrl</code></pre></div>
+    <div class="method-summary">Get Portfolio Servicels (<span class="nickname">portfolioServicesUrlGet</span>)</div>
     <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-services-request">Portfolio Services Request</a>.</div>
 
 
@@ -3338,6 +3340,8 @@ font-style: italic;
     <li><a href="#EventModel"><code>EventModel</code> - </a></li>
     <li><a href="#LibraryModel"><code>LibraryModel</code> - </a></li>
     <li><a href="#LibraryModel_links"><code>LibraryModel_links</code> - </a></li>
+    <li><a href="#LibraryProviderModel"><code>LibraryProviderModel</code> - </a></li>
+    <li><a href="#LibraryProvidersModel"><code>LibraryProvidersModel</code> - </a></li>
     <li><a href="#LibraryServiceModel"><code>LibraryServiceModel</code> - </a></li>
     <li><a href="#LibraryServicesModel"><code>LibraryServicesModel</code> - </a></li>
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
@@ -3347,10 +3351,11 @@ font-style: italic;
     <li><a href="#OperationSpecificationModel"><code>OperationSpecificationModel</code> - </a></li>
     <li><a href="#OperationSpecificationModel_headers"><code>OperationSpecificationModel_headers</code> - </a></li>
     <li><a href="#PortfolioModel"><code>PortfolioModel</code> - </a></li>
+    <li><a href="#PortfolioModel_links"><code>PortfolioModel_links</code> - </a></li>
+    <li><a href="#PortfolioProviderModel"><code>PortfolioProviderModel</code> - </a></li>
+    <li><a href="#PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a></li>
     <li><a href="#PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a></li>
     <li><a href="#PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a></li>
-    <li><a href="#ProviderModel"><code>ProviderModel</code> - </a></li>
-    <li><a href="#ProvidersModel"><code>ProvidersModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#ReferenceModel"><code>ReferenceModel</code> - </a></li>
     <li><a href="#ReferenceResultModel"><code>ReferenceResultModel</code> - </a></li>
@@ -3418,7 +3423,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">libraryService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Service url. format: url</div>
 <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
-<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue service url format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3526,7 +3531,6 @@ font-style: italic;
 <div class="param">events (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">library (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'library'-endpoint (libraryEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">portfolioServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolioServices'-endpoint (portfolioServicesEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">ref (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">refs (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'references'-endpoint (refsEndpoint). This property is only included when the request is authenticated. format: url</div>
     </div>  <!-- field-items -->
@@ -3555,9 +3559,21 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">catalogues </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogues Url (cataloguesUrl) format: url</div>
-<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Providers Url (providersUrl) format: url</div>
+<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Providers url (libraryProvidersUrl) format: url</div>
 <div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Services url (libraryServicesUrl). format: url</div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="LibraryProviderModel"><code>LibraryProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Library Provider Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="LibraryProvidersModel"><code>LibraryProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Library Providers.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="LibraryServiceModel"><code>LibraryServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -3626,9 +3642,28 @@ font-style: italic;
     <h3><a name="PortfolioModel"><code>PortfolioModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Portfolio Model.</div>
     <div class="field-items">
-      <div class="param">subscribedServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Subscribed service. format: url</div>
-<div class="param">dataProviders (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Connected Data Providers. format: url</div>
+      <div class="param">links (optional)</div><div class="param-desc"><span class="param-type"><a href="#PortfolioModel_links">PortfolioModel_links</a></span>  </div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PortfolioModel_links"><code>PortfolioModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">providers (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio (Data) Providers url (portfolioProvidersUrl) format: url</div>
+<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio Services url (portfolioServicesUrl). format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PortfolioProviderModel"><code>PortfolioProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Portfolio Provider Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Portfolio Providers.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -3639,18 +3674,6 @@ font-style: italic;
   <div class="model">
     <h3><a name="PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>List of Portfolio Services.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="ProviderModel"><code>ProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Provider Model.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="ProvidersModel"><code>ProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Service Providers.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -3717,7 +3740,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates url format: url</div>
 <div class="param">dataDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url of the Data Service format: url</div>
-<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url of the Data Provider format: url</div>
+<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Provider url of the Data Provider format: url</div>
 <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent url format: url</div>
 <div class="param">credentialsRegister </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Credentials Register url format: url</div>
 <div class="param">serviceCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Credentials url format: url</div>
@@ -3743,7 +3766,6 @@ font-style: italic;
 <div class="param">events (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">library (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'library'-endpoint (libraryEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">portfolioServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolioServices'-endpoint (portfolioServicesEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">ref (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">refs (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'references'-endpoint (refsEndpoint). This property is only included when the request is authenticated. format: url</div>
     </div>  <!-- field-items -->

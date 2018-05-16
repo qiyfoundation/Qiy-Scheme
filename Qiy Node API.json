@@ -55,7 +55,7 @@
         "CandidatesModel": {
             "description": "List of Source Candidates.",
 	    "items": {
-                "description": "Provider url of Data Provider that can provide the data.",
+                "description": "Library Provider url of Data Provider that can provide the data.",
                 "format": "url",
                 "type": "string"
 	    },
@@ -153,7 +153,7 @@
 			    "type": "string"
 		        },
                         "self": {
-		            "description": "Catalogue service url",
+		            "description": "Catalogue Service url",
 			    "format": "url",
 			    "type": "string"
 		        }
@@ -486,13 +486,6 @@
                     "minItems": 0,
                     "type": "string"
                 },
-                "portfolioServices": {
-                    "description": "Current address for the 'portfolioServices'-endpoint (portfolioServicesEndpoint). This property is only included when the request is authenticated.",
-                    "format": "url",
-                    "maxItems": 1,
-                    "minItems": 0,
-                    "type": "string"
-                },
                 "ref": {
                     "description": "Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated.",
                     "format": "url",
@@ -564,7 +557,7 @@
                             "format": "url"
                         },
                         "providers": {
-                            "description": "Providers Url (providersUrl)",
+                            "description": "Library Providers url (libraryProvidersUrl)",
                             "type": "string",
                             "format": "url"
                         },
@@ -592,6 +585,19 @@
                 "state"
             ],
             "type": "object"
+        },
+        "LibraryProviderModel": {
+            "description": "Library Provider Model.",
+            "type": "object"
+        },
+        "LibraryProvidersModel": {
+            "description": "List of Library Providers.",
+	    "items": {
+                "description": "Library Provider url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
         },
         "LibraryServiceModel": {
             "description": "Library Service Model.",
@@ -778,26 +784,36 @@
         "PortfolioModel": {
             "description": "Portfolio Model.",
 	    "properties": {
-                "subscribedServices": {
-                    "description": "Subscribed service.",
-		    "items": {
-                        "description": "Portfolio Service url of the subscribed service.",
-                        "format": "url",
-                        "type": "string"
-		    },
-                    "type": "array"
-                },
-                "dataProviders": {
-                    "description": "Connected Data Providers.",
-		    "items": {
-                        "description": "Portfolio Provider url of the connected data provider.",
-                        "format": "url",
-                        "type": "string"
-		    },
-                    "type": "array"
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "providers": {
+                            "description": "Portfolio (Data) Providers url (portfolioProvidersUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "services": {
+                            "description": "Portfolio Services url (portfolioServicesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    }
                 }
 	    },
             "type": "object"
+        },
+        "PortfolioProviderModel": {
+            "description": "Portfolio Provider Model.",
+            "type": "object"
+        },
+        "PortfolioProvidersModel": {
+            "description": "List of Portfolio Providers.",
+	    "items": {
+                "description": "Portfolio Provider url",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
         },
         "PortfolioServiceModel": {
             "description": "Portfolio Service Model.",
@@ -807,19 +823,6 @@
             "description": "List of Portfolio Services.",
 	    "items": {
                 "description": "Portfolio Service url",
-                "format": "url",
-                "type": "string"
-	    },
-            "type": "array"
-        },
-        "ProviderModel": {
-            "description": "Provider Model.",
-            "type": "object"
-        },
-        "ProvidersModel": {
-            "description": "List of Service Providers.",
-	    "items": {
-                "description": "Provider url",
                 "format": "url",
                 "type": "string"
 	    },
@@ -975,7 +978,7 @@
 			    "type": "string"
 		        },
 		        "dataProvider": {
-			    "description": "Provider url of the Data Provider",
+			    "description": "Library Provider url of the Data Provider",
 			    "format": "url",
 			    "type": "string"
 		        },
@@ -1970,7 +1973,7 @@
                 ]
             }
         },
-        "/portfolioServicesEndpoint": {
+        "/portfolioServicesUrl": {
             "get": {
                 "summary": "Get Portfolio Servicels",
                 "description": "See [Portfolio Services Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-services-request).",
@@ -2026,10 +2029,10 @@
                 ]
             }
         },
-        "/providerUrl": {
+        "/libraryProviderUrl": {
             "delete": {
-                "summary": "Delete Provider.",
-                "description": "See [Provider Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-delete-request).",
+                "summary": "Delete Library Provider.",
+                "description": "See [Library Provider Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-delete-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -2048,8 +2051,8 @@
                 }
             },
 	    "get": {
-                "summary": "Get Provider Details",
-                "description": "See [Provider Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-details-request).",
+                "summary": "Get Library Provider Details",
+                "description": "See [Library Provider Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-details-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -2065,14 +2068,14 @@
                     "200": {
                         "description": "The status code of a success response will be 200.",
                         "schema": {
-                            "$ref": "#/definitions/ProviderModel"
+                            "$ref": "#/definitions/LibraryProviderModel"
                         }
                     }
                 }
             },
 	    "patch": {
-                "summary": "Update Provider details",
-                "description": "See [Provider Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-update-request).",
+                "summary": "Update Library Provider details",
+                "description": "See [Library Provider Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-update-request).",
                 "consumes": [
                     "application/json"
                 ],
@@ -2085,7 +2088,7 @@
                         "name": "provider-update",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/ProviderModel"
+                            "$ref": "#/definitions/LibraryProviderModel"
                         }
                     }
                 ],
@@ -2099,10 +2102,10 @@
                 }
             }
         },
-        "/providersUrl": {
+        "/libraryProvidersUrl": {
             "get": {
-                "summary": "Get Providers",
-                "description": "See [Providers Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#providers-request).",
+                "summary": "Get Library Providers",
+                "description": "See [Library Providers Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-providers-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -2115,7 +2118,7 @@
                     "200": {
                         "description": "200 Successful execution.",
                         "schema": {
-                            "$ref": "#/definitions/ProvidersModel"
+                            "$ref": "#/definitions/LibraryProvidersModel"
                         }
                     },
                     "400": {
@@ -2127,11 +2130,11 @@
                 ]
             },
             "post": {
-                "summary": "Provider Register Request",
+                "summary": "Library Provider Register Request",
                 "consumes": [
                     "application/json"
                 ],
-                "description": "See [Provider Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-register-request).",
+                "description": "See [Library Provider Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-register-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -2140,7 +2143,7 @@
                         "name": "provider",
                         "in": "body",
                         "schema": {
-                            "$ref": "#/definitions/ProviderModel"
+                            "$ref": "#/definitions/LibraryProviderModel"
                         }
                     }
                 ],
