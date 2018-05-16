@@ -147,14 +147,18 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Portfolio Attributes](#591-portfolio-attributes)
 		1. [Portfolio Relations](#592-portfolio-relations)
 		1. [Portfolio Business Rules](#593-portfolio-business-rules)
-	1. [Qiy Node Credentials](#510-qiy-node-credentials)
-		1. [Qiy Node Credentials Attributes](#5101-qiy-node-credentials-attributes)
-		1. [Qiy Node Credentials Relations](#5102-qiy-node-credentials-relations)
-		1. [Qiy Node Credentials Business Rules](#5103-qiy-node-credentials-business-rules)
-	1. [Service Description](#511-service-description)
-		1. [Service Description Attributes](#5111-service-description-attributes)
-		1. [Service Description Relations](#5112-service-description-relations)
-		1. [Service Description Business Rules](#5113-service-description-business-rules)
+	1. [Qiy Node ](#510-qiy-node-)
+		1. [Qiy Node  Attributes](#5101-qiy-node--attributes)
+		1. [Qiy Node Relations](#5102-qiy-node-relations)
+		1. [Qiy Node Business Rules](#5103-qiy-node-business-rules)
+	1. [Qiy Node Credentials](#511-qiy-node-credentials)
+		1. [Qiy Node Credentials Attributes](#5111-qiy-node-credentials-attributes)
+		1. [Qiy Node Credentials Relations](#5112-qiy-node-credentials-relations)
+		1. [Qiy Node Credentials Business Rules](#5113-qiy-node-credentials-business-rules)
+	1. [Service Description](#512-service-description)
+		1. [Service Description Attributes](#5121-service-description-attributes)
+		1. [Service Description Relations](#5122-service-description-relations)
+		1. [Service Description Business Rules](#5123-service-description-business-rules)
 1. [Index](#6-index)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
@@ -658,7 +662,8 @@ See [Catalogue](#catalogue) model.
 
 ### 5.1.2 Catalogue Relations
 
-See [Catalogue](#catalogue) model.
+See also [Catalogue](#catalogue) model.
+* [Qiy Node](Definitions.md#qiy-node)
 
 ### 5.1.3 Catalogue Business Rules
 
@@ -776,31 +781,45 @@ See [Portfolio](#portfolio) model.
 
 tbd
 
-## 5.10 Qiy Node Credentials
+## 5.10 Qiy Node 
 
-### 5.10.1 Qiy Node Credentials Attributes
+### 5.10.1 Qiy Node  Attributes
 
-See [Qiy Node Credentials](#qiy-node-credentials) model.
+See [Qiy Node](#qiy-node) model.
 
-### 5.10.2 Qiy Node Credentials Relations
+### 5.10.2 Qiy Node Relations
 
-See [Qiy Node Credentials](#qiy-node-credentials) model.
+See [Qiy Node](#qiy-node) model.
 
-### 5.10.3 Qiy Node Credentials Business Rules
+### 5.10.3 Qiy Node Business Rules
 
 tbd
 
-## 5.11 Service Description
+## 5.11 Qiy Node Credentials
 
-### 5.11.1 Service Description Attributes
+### 5.11.1 Qiy Node Credentials Attributes
+
+See [Qiy Node Credentials](#qiy-node-credentials) model.
+
+### 5.11.2 Qiy Node Credentials Relations
+
+See [Qiy Node Credentials](#qiy-node-credentials) model.
+
+### 5.11.3 Qiy Node Credentials Business Rules
+
+tbd
+
+## 5.12 Service Description
+
+### 5.12.1 Service Description Attributes
 
 See [Service Description](#service-description) model.
 
-### 5.11.2 Service Description Relations
+### 5.12.2 Service Description Relations
 
 See [Service Description](#service-description) model.
 
-### 5.11.3 Service Description Business Rules
+### 5.12.3 Service Description Business Rules
 
 tbd
 
@@ -1370,6 +1389,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node](Definitions.md#qiy-node)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Qiy Node](#510-qiy-node)
 
 ## Qiy Node Create Request
 
@@ -1385,7 +1405,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Credentials](Definitions.md#qiy-node-credentials)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credentials Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#QiyNodeCredentialsModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Qiy Node Credentials](#510-qiy-node-credentials)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Qiy Node Credentials](#511-qiy-node-credentials)
 
 ## Qiy Node Delete Request
 
@@ -1480,7 +1500,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Description](Definitions.md#service-description)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Description Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#ServiceDescriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Service Description](#511-service-description)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.12 Service Description](#512-service-description)
 
 ## Service Endpoint
 

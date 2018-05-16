@@ -80,12 +80,12 @@
 		        "provider": {
 		            "description": "Provider url",
 			    "format": "url",
-			    "typ": "string"
+			    "type": "string"
 		        },
 		        "self": {
 		            "description": "Catalogue url",
 			    "format": "url",
-			    "typ": "string"
+			    "type": "string"
 		        }
 		    },
 		    "required": [
@@ -145,17 +145,17 @@
                         "libraryService": {
 		            "description": "Library Service url.",
 			    "format": "url",
-			    "typ": "string"
+			    "type": "string"
 		        },
 		        "provider": {
 		            "description": "Provider url",
 			    "format": "url",
-			    "typ": "string"
+			    "type": "string"
 		        },
                         "self": {
 		            "description": "Catalogue service url",
 			    "format": "url",
-			    "typ": "string"
+			    "type": "string"
 		        }
 		    },
 		    "required": [
