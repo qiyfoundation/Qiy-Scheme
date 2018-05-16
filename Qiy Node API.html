@@ -243,13 +243,14 @@ font-style: italic;
   <h4><a href="#Library">Library</a></h4>
   <ul>
   <li><a href="#libraryEndpointGet"><code><span class="http-method">get</span> /libraryEndpoint</code></a></li>
-  <li><a href="#libraryEndpointPost"><code><span class="http-method">post</span> /libraryEndpoint</code></a></li>
   <li><a href="#libraryServiceUrlDelete"><code><span class="http-method">delete</span> /libraryServiceUrl</code></a></li>
-  <li><a href="#libraryServicesEndpointGet"><code><span class="http-method">get</span> /libraryServicesEndpoint</code></a></li>
+  <li><a href="#libraryServicesUrlGet"><code><span class="http-method">get</span> /libraryServicesUrl</code></a></li>
+  <li><a href="#libraryServicesUrlPost"><code><span class="http-method">post</span> /libraryServicesUrl</code></a></li>
   <li><a href="#providerUrlDelete"><code><span class="http-method">delete</span> /providerUrl</code></a></li>
   <li><a href="#providerUrlGet"><code><span class="http-method">get</span> /providerUrl</code></a></li>
   <li><a href="#providerUrlPatch"><code><span class="http-method">patch</span> /providerUrl</code></a></li>
   <li><a href="#providersEndpointGet"><code><span class="http-method">get</span> /providersEndpoint</code></a></li>
+  <li><a href="#providersEndpointPost"><code><span class="http-method">post</span> /providersEndpoint</code></a></li>
   </ul>
   <h4><a href="#Lifecycle">Lifecycle</a></h4>
   <ul>
@@ -1484,11 +1485,13 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "services" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+  "links" : {
+    "services" : "http://example.com/aeiou",
+    "providers" : "http://example.com/aeiou"
+  },
   "state" : "state",
   "activeFrom" : 0,
-  "activeUntil" : 6,
-  "providers" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
+  "activeUntil" : 6
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -1504,11 +1507,87 @@ font-style: italic;
         <a href="#LibraryModel">LibraryModel</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryEndpointPost"/>
+  <div class="method"><a name="libraryServiceUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryEndpoint</code></pre></div>
-    <div class="method-summary">Registration Request (<span class="nickname">libraryEndpointPost</span>)</div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /libraryServiceUrl</code></pre></div>
+    <div class="method-summary">Unregister Library Service. (<span class="nickname">libraryServiceUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-unregister-request">Library Service Unregister Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryServicesUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryServicesUrl</code></pre></div>
+    <div class="method-summary">Get Library Services (<span class="nickname">libraryServicesUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-services-reqeust">Library Services Reqeust</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#LibraryServicesModel">LibraryServicesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#LibraryServicesModel">LibraryServicesModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="libraryServicesUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryServicesUrl</code></pre></div>
+    <div class="method-summary">Library Service Register Request (<span class="nickname">libraryServicesUrlPost</span>)</div>
     <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-register-request">Library Service Register Request</a> and <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-register-request">Provider Register Request</a>.</div>
 
 
@@ -1547,82 +1626,6 @@ font-style: italic;
         <a href="#"></a>
     <h4 class="field-label">400</h4>
     400,600 Unsuccessful execution.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="libraryServiceUrlDelete"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /libraryServiceUrl</code></pre></div>
-    <div class="method-summary">Unregister Library Service. (<span class="nickname">libraryServiceUrlDelete</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-service-unregister-request">Library Service Unregister Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">204</h4>
-    A response code 204 (NO CONTENT) will indicate a success.
-        <a href="#"></a>
-    <h4 class="field-label">400</h4>
-    Failures will be indicated with response codes 400 to but-not-including 600.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="libraryServicesEndpointGet"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryServicesEndpoint</code></pre></div>
-    <div class="method-summary">Get Library Services (<span class="nickname">libraryServicesEndpointGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-services-reqeust">Library Services Reqeust</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#LibraryServicesModel">LibraryServicesModel</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>""</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    200 Successful execution.
-        <a href="#LibraryServicesModel">LibraryServicesModel</a>
-    <h4 class="field-label">400</h4>
-    [400,600&gt; Unsuccessful execution.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
@@ -1781,6 +1784,49 @@ font-style: italic;
         <a href="#ProvidersModel">ProvidersModel</a>
     <h4 class="field-label">400</h4>
     [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="providersEndpointPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /providersEndpoint</code></pre></div>
+    <div class="method-summary">Provider Register Request (<span class="nickname">providersEndpointPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#provider-register-request">Provider Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">provider <a href="#ProviderModel">ProviderModel</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    201 Successful execution.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
@@ -3301,6 +3347,7 @@ font-style: italic;
     <li><a href="#EndpointAddressesModel"><code>EndpointAddressesModel</code> - </a></li>
     <li><a href="#EventModel"><code>EventModel</code> - </a></li>
     <li><a href="#LibraryModel"><code>LibraryModel</code> - </a></li>
+    <li><a href="#LibraryModel_links"><code>LibraryModel_links</code> - </a></li>
     <li><a href="#LibraryServiceModel"><code>LibraryServiceModel</code> - </a></li>
     <li><a href="#LibraryServicesModel"><code>LibraryServicesModel</code> - </a></li>
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
@@ -3489,7 +3536,6 @@ font-style: italic;
 <div class="param">delete (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'delete'-endpoint (deleteEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">events (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">library (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'library'-endpoint (libraryEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">libraryServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'libraryServices'-endpoint (libraryServicesEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">portfolioServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolioServices'-endpoint (portfolioServicesEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">providers (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'providers'-endpoint (providersEndpoint). This property is only included when the request is authenticated. format: url</div>
@@ -3512,9 +3558,16 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Registered providers. format: url</div>
-<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Registered services, aka Library Services. format: url</div>
+<div class="param">links (optional)</div><div class="param-desc"><span class="param-type"><a href="#LibraryModel_links">LibraryModel_links</a></span>  </div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the library. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="LibraryModel_links"><code>LibraryModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Providers Url format: url</div>
+<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Services url. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3701,7 +3754,6 @@ font-style: italic;
 <div class="param">delete (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'delete'-endpoint (deleteEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">events (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">library (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'library'-endpoint (libraryEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">libraryServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'libraryServices'-endpoint (libraryServicesEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">portfolioServices (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolioServices'-endpoint (portfolioServicesEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">providers (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'providers'-endpoint (providersEndpoint). This property is only included when the request is authenticated. format: url</div>
