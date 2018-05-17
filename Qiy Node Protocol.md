@@ -787,6 +787,9 @@ tbd
 
 ## 5.6 Library
 
+This section describes the [Service Library](Definitions.md#service-library) entity type.
+The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types] and [Service Types].
+
 ### 5.6.1 Library Attributes
 
 See [Library](#library) model.
@@ -794,9 +797,11 @@ See [Library](#library) model.
 ### 5.6.2 Library Relations
 
 See [Library](#library) model.
-A [Library](#library):jk
-* has zero or more of: [Service](Definitions.md#service) named [Service Type](#service-type).
-* has zero or more of: [Service Provider](Definitions.md#service-provider) named [Published Provider](#published-provider).
+A [Library](#library):
+* has zero or more of: registered [Service Catalogue](Definitions.md#service-catalogue), named [Catalogue](#catalogue).
+* has zero or more of: registered [Data Type](#data-type).
+* has zero or more of: [Service Type](#service-type).
+* has zero or more of: registered [Service Provider](Definitions.md#service-provider) named [Published Provider](#published-provider).
 
 ### 5.6.3 Library Business Rules
 
