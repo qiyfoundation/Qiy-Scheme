@@ -1260,7 +1260,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "tags": [
                     "Library"
@@ -1285,7 +1286,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "tags": [
                     "Catalogue"
@@ -1726,7 +1728,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "responses": {
                     "200": {
@@ -1805,7 +1808,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "tags": [
                     "Library"
@@ -1883,7 +1887,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+                    "text/html"
                 ],
                 "tags": [
                     "Library"
@@ -2069,7 +2074,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "tags": [
                     "Library"
@@ -2122,7 +2128,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+                    "text/html"
                 ],
                 "responses": {
                     "200": {
@@ -2181,7 +2188,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "responses": {
                     "200": {
@@ -2257,7 +2265,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "tags": [
                     "Catalogue"
@@ -2355,7 +2364,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "responses": {
                     "200": {
@@ -2434,7 +2444,8 @@
                     }
                 ],
                 "produces": [
-                    "application/json"
+                    "application/json",
+		    "text/html"
                 ],
                 "tags": [
                     "Library"
