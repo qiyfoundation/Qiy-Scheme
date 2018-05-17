@@ -1882,6 +1882,7 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
+    "providerDescription" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "services" : "http://example.com/aeiou"
   },
@@ -4003,8 +4004,9 @@ font-style: italic;
     <h3><a name="PublishedProviderModel_links"><code>PublishedProviderModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Published Provider links.</div>
     <div class="field-items">
-      <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url (publishedProviderUrl) format: url</div>
-<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Services url (publishedServicesUrl). format: url</div>
+      <div class="param">providerDescription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider description (serviceProviderUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url (publishedProviderUrl) format: url</div>
+<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Services url (publishedServicesUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4027,10 +4029,10 @@ font-style: italic;
     <h3><a name="PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Published Service links.</div>
     <div class="field-items">
-      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
-<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service url format: url</div>
-<div class="param">serviceDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Description url. format: url</div>
-<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type url. format: url</div>
+      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl) format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service (publishedServiceUrl) format: url</div>
+<div class="param">serviceDescription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Description (serviceDescriptionUrl). format: url</div>
+<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

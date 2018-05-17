@@ -767,6 +767,11 @@
 		"links": {
                     "description": "Published Provider links.",
                     "properties": {
+                        "providerDescription": {
+		            "description": "Service Provider description (serviceProviderUrl).",
+			    "format": "url",
+			    "type": "string"
+		        },
                         "self": {
 		            "description": "Published Provider url (publishedProviderUrl)",
 			    "format": "url",
@@ -779,10 +784,9 @@
 		        }
 		    },
 		    "required": [
-		        "provider",
+		        "providerDescription",
 		        "self",
-			"serviceDescriptor",
-			"serviceType"
+			"services"
 		    ],
 		    "type": "object"
 		},
@@ -825,22 +829,22 @@
                     "description": "Published Service links.",
                     "properties": {
         	        "provider": {
-		            "description": "Provider url",
+		            "description": "Service Provider (publishedProviderUrl)",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "self": {
-		            "description": "Published Service url",
+		            "description": "Published Service (publishedServiceUrl)",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "serviceDescription": {
-		            "description": "Service Description url.",
+		            "description": "Service Description (serviceDescriptionUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "serviceType": {
-		            "description": "Service Type url.",
+		            "description": "Service Type (serviceTypeUrl).",
 			    "format": "url",
 			    "type": "string"
 		        }
@@ -848,7 +852,7 @@
 		    "required": [
 		        "provider",
 		        "self",
-			"serviceDescriptor",
+			"serviceDescription",
 			"serviceType"
 		    ],
 		    "type": "object"
