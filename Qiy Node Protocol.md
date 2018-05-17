@@ -727,7 +727,10 @@ A [Catalogue](#catalogue):
 
 ### 5.1.3 Catalogue Business Rules
 
-tbd
+* Each registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)) has one [Catalogue](#catalogue).
+* The [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
+* The [Access Provider](Definitions.md#access-provider) of the [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
+* All [Qiy Users](Definitions.md#qiy-user) have read-access to any [Catalogue](#catalogue).
 
 ## 5.2 Connect Token
 
@@ -805,7 +808,10 @@ A [Library](#library):
 
 ### 5.6.3 Library Business Rules
 
-tbd
+* There is one and only one [Library](#library).
+* All [Qiy Users](Definitions.md#qiy-user) have read-access to the [Library](#library).
+* Only [Access Providers](Definitions.md#access-provider) have write-access to the [Library](#library).
+
 
 ## 5.7 Message
 

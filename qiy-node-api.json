@@ -767,6 +767,11 @@
 		"links": {
                     "description": "Published Provider links.",
                     "properties": {
+                        "accessProvider": {
+		            "description": "Access Provider (accessProviderUrl).",
+			    "format": "url",
+			    "type": "string"
+		        },
                         "providerDescription": {
 		            "description": "Service Provider description (serviceProviderUrl).",
 			    "format": "url",
@@ -784,6 +789,7 @@
 		        }
 		    },
 		    "required": [
+		        "accessProvider",
 		        "providerDescription",
 		        "self",
 			"services"
