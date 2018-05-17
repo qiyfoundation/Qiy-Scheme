@@ -434,14 +434,8 @@ As defined in the [GDPR](#gdpr).
 ### Portfolio Details Request
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
 
-### Portfolio Service Details Request
-A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](#service) in a [Service Portfolio](#service-portfolio).
-
-### Portfolio Services Request
-A [Qiy Node Request](#qiy-node-request) which can be used to list the [Service](#service) in a [Service Portfolio](#service-portfolio).
-
 ### Portfolio Register Message
-A [Qiy Node Message](#qiy-node-message) to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
+A [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](#data-provider) to a [Service Portfolio](#service-portfolio).
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
@@ -706,6 +700,21 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) as a
 
 ### Source Update Request
 A [Qiy Node Request](#qiy-node-request) to update a [Service Source](#service-source).
+
+### Subscription
+A [Business Object](#business-object) representing the agreement between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider) with regard to a [Service](#service).
+
+### Subscription Details Request
+A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](#service) in a [Service Portfolio](#service-portfolio).
+
+### Subscription Register Request
+A [Qiy Node Request](#qiy-node-request) which can be used to register a subscription to a [Service](#service).
+
+### Subscription Unregister Request
+A [Qiy Node Request](#qiy-node-request) which can be used to register a subscription to a [Service](#service).
+
+### Subscriptions Request
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Service](#service) in a [Service Portfolio](#service-portfolio).
 
 ### Technology Event
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096

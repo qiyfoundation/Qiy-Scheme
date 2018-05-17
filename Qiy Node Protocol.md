@@ -77,8 +77,10 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Operation Register Request](#293-operation-register-request)
 	1. [Portfolio Requests](#210-portfolio-requests)
 		1. [Portfolio Details Request](#2101-portfolio-details-request)
-		1. [Portfolio Service Details Request](#2102-portfolio-service-details-request)
-		1. [Portfolio Services Request](#2103-portfolio-services-request)
+		1. [Subscription Details Request](#2102-subscription-details-request)
+		1. [Subscription Register Request](#2103-subscription-register-request)
+		1. [Subscription Unregister Request](#2104-subscription-unregister-request)
+		1. [Subscriptions Request](#2105-subscriptions-request)
 	1. [Qiy Node Requests](#211-qiy-node-requests)
 		1. [Qiy Node Create Request](#2111-qiy-node-create-request)
 		1. [Qiy Node Delete Request](#2112-qiy-node-delete-request)
@@ -165,6 +167,10 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Service Description Attributes](#5121-service-description-attributes)
 		1. [Service Description Relations](#5122-service-description-relations)
 		1. [Service Description Business Rules](#5123-service-description-business-rules)
+	1. [Subscription](#513-subscription)
+		1. [Subscription Attributes](#5131-subscription-attributes)
+		1. [Subscription Relations](#5132-subscription-relations)
+		1. [Subscription Business Rules](#5133-subscription-business-rules)
 1. [Index](#6-index)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
@@ -232,9 +238,7 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Persistent Id Event](#persistent-id-event)
 	1. [Portfolio](#portfolio)
 	1. [Portfolio Details Request](#portfolio-details-request)
-	1. [Portfolio Service Details Request](#portfolio-service-details-request)
 	1. [Portfolio Register Message](#portfolio-register-message)
-	1. [Portfolio Services Request](#portfolio-services-request)
 	1. [Provider](#provider)
 	1. [Published Service](#published-service)
 	1. [Published Service Details Request](#published-service-details-request)
@@ -273,6 +277,12 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Source Register Request](#source-register-request)
 	1. [Source Unregister Request](#source-unregister-request)
 	1. [Source Update Request](#source-update-request)
+	1. [Subscription](#subscription)
+	1. [Subscription Details Request](#subscription-details-request)
+	1. [Subscription Register Request](#subscription-register-request)
+	1. [Subscription Register Request](#subscription-register-request)
+	1. [Subscription Unregister Request](#subscription-unregister-request)
+	1. [Subscriptions Request](#subscriptions-request)
 	1. [Transport Layer](#transport-layer)
 	1. [Transport Protocol](#transport-protocol)
 
@@ -570,11 +580,17 @@ The [Operation Register Request](#operation-register-request) is a [Qiy Node Req
 ### 2.10.1 Portfolio Details Request
 The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
 
-### 2.10.2 Portfolio Service Details Request
-The [Portfolio Service Details Request](#portfolio-service-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
+### 2.10.2 Subscription Details Request
+The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
 
-### 2.10.3 Portfolio Services Request
-The [Portfolio Services Request](#portfolio-services-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
+### 2.10.3 Subscription Register Request
+The [Subscription Register Request](#subscription-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
+
+### 2.10.4 Subscription Unregister Request
+The [Subscription Unregister Request](#subscription-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
+
+### 2.10.5 Subscriptions Request
+The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 2.11 Qiy Node Requests
 
@@ -671,7 +687,7 @@ The [Operation Specification Request Message](#operation-specification-request-m
 ## 4.3 Portfolio Messages
 
 ### 4.3.1 Portfolio Register Message
-The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to add a [Service Provider](Definitions.md#service-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to request to add a [Data Provider](Definitions.md#data-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 4.4 Service Credentials Messages
 
@@ -863,6 +879,20 @@ See [Service Description](#service-description) model.
 See [Service Description](#service-description) model.
 
 ### 5.12.3 Service Description Business Rules
+
+tbd
+
+## 5.13 Subscription
+
+### 5.13.1 Subscription Attributes
+
+See [Subscription](#subscription) model.
+
+### 5.13.2 Subscription Relations
+
+See [Subscription](#subscription) model.
+
+### 5.13.3 Subscription Business Rules
 
 tbd
 
@@ -1387,14 +1417,6 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /portfolioEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#portfolioEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.1 Portfolio Details Request](#2101-portfolio-details-request)
 
-## Portfolio Service Details Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Portfolio Service Details Request](Definitions.md#portfolio-service-details-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /portfolioServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#portfolioServiceUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.2 Portfolio Service Details Request](#2102-portfolio-service-details-request)
-
 ## Portfolio Register Message
 
 Specification | Reference
@@ -1402,14 +1424,6 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Portfolio Register Message](Definitions.md#portfolio-register-message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Portfolio Register Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PortfolioRegisterMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.3.1 Portfolio Register Message](#431-portfolio-register-message)
-
-## Portfolio Services Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Portfolio Services Request](Definitions.md#portfolio-services-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /portfolioServicesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#portfolioServicesUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.3 Portfolio Services Request](#2103-portfolio-services-request)
 
 ## Provider
 
@@ -1696,6 +1710,53 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#sourceUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.5 Source Update Request](#2125-source-update-request)
 
+## Subscription
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Subscription](Definitions.md#subscription)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Subscription Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#SubscriptionModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.13 Subscription](#513-subscription)
+
+## Subscription Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Subscription Details Request](Definitions.md#subscription-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /subscriptionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#subscriptionUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.2 Subscription Details Request](#2102-subscription-details-request)
+
+## Subscription Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Subscription Register Request](Definitions.md#subscription-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /subscriptionsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#subscriptionsUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.3 Subscription Register Message](#2103-subscription-register-message)
+
+## Subscription Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Subscription Register Request](Definitions.md#subscription-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /publishedServicesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedServicesUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.3 Subscription Register Request](#2103-subscription-register-request)
+
+## Subscription Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Subscription Unregister Request](Definitions.md#subscription-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /publishedServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedServiceUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.4 Subscription Unregister Request](#2104-subscription-unregister-request)
+
+## Subscriptions Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Subscriptions Request](Definitions.md#subscriptions-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /subscriptionsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#subscriptionsUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.5 Subscriptions Request](#2105-subscriptions-request)
 
 ## Transport Layer
 

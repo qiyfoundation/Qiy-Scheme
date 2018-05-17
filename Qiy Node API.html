@@ -280,8 +280,11 @@ font-style: italic;
   <h4><a href="#Portfolio">Portfolio</a></h4>
   <ul>
   <li><a href="#portfolioEndpointGet"><code><span class="http-method">get</span> /portfolioEndpoint</code></a></li>
-  <li><a href="#portfolioServiceUrlGet"><code><span class="http-method">get</span> /portfolioServiceUrl</code></a></li>
-  <li><a href="#portfolioServicesUrlGet"><code><span class="http-method">get</span> /portfolioServicesUrl</code></a></li>
+  <li><a href="#subscriptionUrlDelete"><code><span class="http-method">delete</span> /subscriptionUrl</code></a></li>
+  <li><a href="#subscriptionUrlGet"><code><span class="http-method">get</span> /subscriptionUrl</code></a></li>
+  <li><a href="#subscriptionUrlPatch"><code><span class="http-method">patch</span> /subscriptionUrl</code></a></li>
+  <li><a href="#subscriptionsUrlGet"><code><span class="http-method">get</span> /subscriptionsUrl</code></a></li>
+  <li><a href="#subscriptionsUrlPost"><code><span class="http-method">post</span> /subscriptionsUrl</code></a></li>
   </ul>
   <h4><a href="#RelyingParty">RelyingParty</a></h4>
   <ul>
@@ -427,7 +430,7 @@ font-style: italic;
     "serviceType" : "http://example.com/aeiou",
     "provider" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
-    "serviceDescriptor" : "http://example.com/aeiou"
+    "serviceDescription" : "http://example.com/aeiou"
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -984,8 +987,8 @@ font-style: italic;
     <pre class="example"><code>{
   "consentedDataSets" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "links" : {
-    "subscribedService" : "http://example.com/aeiou",
-    "self" : "http://example.com/aeiou"
+    "self" : "http://example.com/aeiou",
+    "subscription" : "http://example.com/aeiou"
   },
   "state" : "state",
   "dataSources" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
@@ -2575,12 +2578,43 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="portfolioServiceUrlGet"/>
+  <div class="method"><a name="subscriptionUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioServiceUrl</code></pre></div>
-    <div class="method-summary">Get Portfolio Service details (<span class="nickname">portfolioServiceUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-service-details-request">Portfolio Service Details Request</a>.</div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /subscriptionUrl</code></pre></div>
+    <div class="method-summary">Delete Subscription. (<span class="nickname">subscriptionUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-delete-request">Subscription Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="subscriptionUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /subscriptionUrl</code></pre></div>
+    <div class="method-summary">Get Subscription details (<span class="nickname">subscriptionUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-details-request">Subscription Details Request</a>.</div>
 
 
 
@@ -2594,7 +2628,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#PortfolioServiceModel">PortfolioServiceModel</a>
+      <a href="#SubscriptionModel">SubscriptionModel</a>
       
     </div>
 
@@ -2602,7 +2636,17 @@ font-style: italic;
 
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
+    <pre class="example"><code>{
+  "links" : {
+    "provider" : "http://example.com/aeiou",
+    "service" : "http://example.com/aeiou",
+    "consents" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -2614,18 +2658,58 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     200, Successful execution.
-        <a href="#PortfolioServiceModel">PortfolioServiceModel</a>
+        <a href="#SubscriptionModel">SubscriptionModel</a>
     <h4 class="field-label">400</h4>
     400,600 Unsuccessful execution.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="portfolioServicesUrlGet"/>
+  <div class="method"><a name="subscriptionUrlPatch"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioServicesUrl</code></pre></div>
-    <div class="method-summary">Get Portfolio Servicels (<span class="nickname">portfolioServicesUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-services-request">Portfolio Services Request</a>.</div>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /subscriptionUrl</code></pre></div>
+    <div class="method-summary">Update Subscription details (<span class="nickname">subscriptionUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-update-request">Subscription Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">source-update <a href="#SubscriptionModel">SubscriptionModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="subscriptionsUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /subscriptionsUrl</code></pre></div>
+    <div class="method-summary">Get Subscriptions (<span class="nickname">subscriptionsUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscriptions-request">Subscriptions Request</a>.</div>
 
 
 
@@ -2639,7 +2723,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#PortfolioServicesModel">PortfolioServicesModel</a>
+      <a href="#SubscriptionsModel">SubscriptionsModel</a>
       
     </div>
 
@@ -2659,7 +2743,50 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     200, Successful execution.
-        <a href="#PortfolioServicesModel">PortfolioServicesModel</a>
+        <a href="#SubscriptionsModel">SubscriptionsModel</a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="subscriptionsUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /subscriptionsUrl</code></pre></div>
+    <div class="method-summary">Subscription Register Request (<span class="nickname">subscriptionsUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-register-request">Subscription Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">service <a href="#SubscriptionModel">SubscriptionModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    201 Successful execution.
+        <a href="#"></a>
     <h4 class="field-label">400</h4>
     400,600 Unsuccessful execution.
         <a href="#"></a>
@@ -3566,8 +3693,6 @@ font-style: italic;
     <li><a href="#PortfolioModel_links"><code>PortfolioModel_links</code> - </a></li>
     <li><a href="#PortfolioProviderModel"><code>PortfolioProviderModel</code> - </a></li>
     <li><a href="#PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a></li>
-    <li><a href="#PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a></li>
-    <li><a href="#PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a></li>
     <li><a href="#PublishedServiceModel"><code>PublishedServiceModel</code> - </a></li>
     <li><a href="#PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a></li>
     <li><a href="#PublishedServicesModel"><code>PublishedServicesModel</code> - </a></li>
@@ -3582,6 +3707,9 @@ font-style: italic;
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#SourceModel_links"><code>SourceModel_links</code> - </a></li>
     <li><a href="#SourceUrlModel"><code>SourceUrlModel</code> - </a></li>
+    <li><a href="#SubscriptionModel"><code>SubscriptionModel</code> - </a></li>
+    <li><a href="#SubscriptionModel_links"><code>SubscriptionModel_links</code> - </a></li>
+    <li><a href="#SubscriptionsModel"><code>SubscriptionsModel</code> - </a></li>
     <li><a href="#ApiLinksModel"><code>ApiLinksModel</code> - </a></li>
     <li><a href="#ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a></li>
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
@@ -3707,7 +3835,7 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
-<div class="param">subscribedService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service Url of the subscribed Provider service. format: url</div>
+<div class="param">subscription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service Url of the subscribed Provider service. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3849,7 +3977,7 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">providers (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio (Data) Providers url (portfolioProvidersUrl) format: url</div>
-<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio Services url (portfolioServicesUrl). format: url</div>
+<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscriptions url (subscriptionsUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3861,18 +3989,6 @@ font-style: italic;
   <div class="model">
     <h3><a name="PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>List of Portfolio Providers.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Portfolio Service Model.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Portfolio Services.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -3892,8 +4008,8 @@ font-style: italic;
     <div class="field-items">
       <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service url format: url</div>
-<div class="param">serviceDescriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Descriptor. format: url</div>
-<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service type, defined using a Service Type url. format: url</div>
+<div class="param">serviceDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Description url. format: url</div>
+<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type url. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3988,6 +4104,32 @@ font-style: italic;
   <div class="model">
     <h3><a name="SourceUrlModel"><code>SourceUrlModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Source url</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SubscriptionModel"><code>SubscriptionModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Subscription Model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#SubscriptionModel_links">SubscriptionModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the service. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SubscriptionModel_links"><code>SubscriptionModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Subscription links.</div>
+    <div class="field-items">
+      <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents url (consentsUrl). format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Provider url (libraryProviderUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription url (subscriptionUrl) format: url</div>
+<div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service url (publishedServiceUrl). format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="SubscriptionsModel"><code>SubscriptionsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Subscriptions.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
