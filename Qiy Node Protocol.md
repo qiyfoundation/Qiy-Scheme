@@ -22,10 +22,11 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 			1. [Python](#2142-python)
 	1. [Catalogue Requests](#22-catalogue-requests)
 		1. [Catalogue Details Request](#221-catalogue-details-request)
-		1. [Catalogue Service Details Request](#222-catalogue-service-details-request)
-		1. [Catalogue Service Register Request](#223-catalogue-service-register-request)
-		1. [Catalogue Service Unregister Request](#224-catalogue-service-unregister-request)
-		1. [Catalogues Request](#225-catalogues-request)
+		1. [Catalogues Request](#222-catalogues-request)
+		1. [Published Service Details Request](#223-published-service-details-request)
+		1. [Published Service Register Request](#224-published-service-register-request)
+		1. [Published Service Unregister Request](#225-published-service-unregister-request)
+		1. [Published Services Request](#226-published-services-request)
 	1. [Connect Token Requests](#23-connect-token-requests)
 		1. [Connect Token Create Request](#231-connect-token-create-request)
 		1. [Connect Token Delete Request](#232-connect-token-delete-request)
@@ -168,10 +169,6 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
 	1. [Catalogue Details Request](#catalogue-details-request)
-	1. [Catalogue Service](#catalogue-service)
-	1. [Catalogue Service Details Request](#catalogue-service-details-request)
-	1. [Catalogue Service Register Request](#catalogue-service-register-request)
-	1. [Catalogue Service Unregister Request](#catalogue-service-unregister-request)
 	1. [Catalogues Request](#catalogues-request)
 	1. [Connect Token](#connect-token)
 	1. [Connect Token Create Request](#connect-token-create-request)
@@ -239,6 +236,11 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Portfolio Register Message](#portfolio-register-message)
 	1. [Portfolio Services Request](#portfolio-services-request)
 	1. [Provider](#provider)
+	1. [Published Service](#published-service)
+	1. [Published Service Details Request](#published-service-details-request)
+	1. [Published Service Register Request](#published-service-register-request)
+	1. [Published Service Unregister Request](#published-service-unregister-request)
+	1. [Published Services Request](#published-services-request)
 	1. [Qiy Node](#qiy-node)
 	1. [Qiy Node Create Request](#qiy-node-create-request)
 	1. [Qiy Node Credentials](#qiy-node-credentials)
@@ -382,17 +384,20 @@ Information of the connections can be acquired using the [Connections Request](#
 ### 2.2.1 Catalogue Details Request
 The [Catalogue Details Request](#catalogue-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service Catalogue](Definitions.md#service-catalogue).
 
-### 2.2.2 Catalogue Service Details Request
-The [Catalogue Service Details Request](#catalogue-service-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) that has been published in a [Service Catalogue](Definitions.md#service-catalogue).
-
-### 2.2.3 Catalogue Service Register Request
-The [Catalogue Service Register Request](#catalogue-service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
-
-### 2.2.4 Catalogue Service Unregister Request
-The [Catalogue Service Unregister Request](#catalogue-service-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
-
-### 2.2.5 Catalogues Request
+### 2.2.2 Catalogues Request
 The [Catalogues Request](#catalogues-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to consult the [Service Catalogues](Definitions.md#service-catalogue) of [Service Providers](Definitions.md#service-provider).
+
+### 2.2.3 Published Service Details Request
+The [Published Service Details Request](#published-service-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) that has been published in a [Service Catalogue](Definitions.md#service-catalogue).
+
+### 2.2.4 Published Service Register Request
+The [Published Service Register Request](#published-service-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
+
+### 2.2.5 Published Service Unregister Request
+The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
+
+### 2.2.6 Published Services Request
+The [Published Services Request](#published-services-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 2.3 Connect Token Requests
 
@@ -686,6 +691,7 @@ This chapters describes the entity types of the [Qiy Node Interface](Definitions
 ## 5.1 Catalogue
 
 This section describes the [Service Catalogue](Definitions.md#service-catalogue) model.
+A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](Definitions.md#service-provider) ([Library Provider](#library-provider)).
 
 ### 5.1.1 Catalogue Attributes
 
@@ -696,8 +702,8 @@ See [Catalogue](#catalogue) model.
 See also [Catalogue](#catalogue) model.
 A [Catalogue](#catalogue):
 * is part of: [Library](#library)
-* has zero or more of: [Service](Definitions.md#service) named: [Catalogue Service](#catalogue-service)
-* has one: [Service Provider](Definitions.md#service-provider) named: [Library Provider](#library-provider)
+* has zero or more of: [Published Service](#published-service)
+* has one: [Library Provider](#library-provider)
 
 ### 5.1.3 Catalogue Business Rules
 
@@ -885,44 +891,13 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /catalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.1 Catalogue Details Request](#221-catalogue-details-request)
 
-## Catalogue Service
-
-Specification | Reference
-------------- | ---------
-[Qiy Node API](Qiy%20Node%20API.json)         | [Catalogue Service Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#CatalogueServiceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.1 Catalogue](#51-catalogue)
-
-## Catalogue Service Details Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Catalogue Service Details Request](Definitions.md#catalogue-service-details-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /catalogueServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueServiceUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.2 Catalogue Service Details Request](#222-catalogue-service-details-request)
-
-## Catalogue Service Register Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Catalogue Service Register Request](Definitions.md#catalogue-service-register-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /catalogueUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.3 Catalogue Service Register Request](#223-catalogue-service-register-request)
-
-## Catalogue Service Unregister Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Catalogue Service Unregister Request](Definitions.md#catalogue-service-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /catalogueServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#catalogueServiceUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.4 Catalogue Service Unregister Request](#224-catalogue-service-unregister-request)
-
 ## Catalogues Request
 
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Catalogues Request](Definitions.md#catalogues-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /cataloguesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#cataloguesUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.4 Catalogues Request](#224-catalogues-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.2 Catalogues Request](#222-catalogues-request)
 
 ## Connect Token
 
@@ -1441,6 +1416,45 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md) | [Service Provider](Definitions.md#service-provider)
+
+## Published Service
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Published Service Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PublishedServiceModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.1 Catalogue](#51-catalogue)
+
+## Published Service Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Service Details Request](Definitions.md#published-service-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedServiceUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.3 Published Service Details Request](#223-published-service-details-request)
+
+## Published Service Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Service Register Request](Definitions.md#published-service-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /publishedServicesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedServicesUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.4 Published Service Register Request](#224-published-service-register-request)
+
+## Published Service Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Service Unregister Request](Definitions.md#published-service-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /publishedServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedServiceUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.5 Published Service Unregister Request](#225-published-service-unregister-request)
+
+## Published Services Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Services Request](Definitions.md#published-services-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedServiceUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2.6 Published Services Request](#226-published-services-request)
 
 ## Qiy Node
 

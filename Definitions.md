@@ -93,15 +93,6 @@ A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which
 ### Catalogue Details Request
 A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
 
-### Catalogue Service Details Request
-A [Qiy Node Request](#qiy-node-request) to get details of a [Service](#service) that has been published in a [Service Catalogue](#service-catalogue).
-
-### Catalogue Service Register Request
-A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and include it in [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
-
-### Catalogue Service Unregister Request
-A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
-
 ### Catalogues Request
 A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
@@ -463,6 +454,18 @@ Synonymous with [Identifier](#identifier)
 
 ### Public Key Infrastructure
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
+
+### Published Service Details Request
+A [Qiy Node Request](#qiy-node-request) to get details of a [Service](#service) that has been published in a [Service Catalogue](#service-catalogue).
+
+### Published Service Register Request
+A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and include it in [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
+
+### Published Service Unregister Request
+A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
+
+### Published Services Request
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Service](#service) in a [Service Portfolio](#service-portfolio).
 
 ### Qiy App
 A [Qiy Application](#qiy-application) that can be installed on a smart phone or similar device.

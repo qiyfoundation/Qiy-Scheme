@@ -196,10 +196,11 @@ font-style: italic;
   <div class="method-summary"></div>
   <h4><a href="#Catalogue">Catalogue</a></h4>
   <ul>
-  <li><a href="#catalogueServiceUrlDelete"><code><span class="http-method">delete</span> /catalogueServiceUrl</code></a></li>
-  <li><a href="#catalogueServiceUrlGet"><code><span class="http-method">get</span> /catalogueServiceUrl</code></a></li>
   <li><a href="#catalogueUrlGet"><code><span class="http-method">get</span> /catalogueUrl</code></a></li>
-  <li><a href="#catalogueUrlPost"><code><span class="http-method">post</span> /catalogueUrl</code></a></li>
+  <li><a href="#publishedServiceUrlDelete"><code><span class="http-method">delete</span> /publishedServiceUrl</code></a></li>
+  <li><a href="#publishedServiceUrlGet"><code><span class="http-method">get</span> /publishedServiceUrl</code></a></li>
+  <li><a href="#publishedServicesUrlGet"><code><span class="http-method">get</span> /publishedServicesUrl</code></a></li>
+  <li><a href="#publishedServicesUrlPost"><code><span class="http-method">post</span> /publishedServicesUrl</code></a></li>
   </ul>
   <h4><a href="#Connect">Connect</a></h4>
   <ul>
@@ -312,89 +313,6 @@ font-style: italic;
   </ul>
 
   <h1><a name="Catalogue">Catalogue</a></h1>
-  <div class="method"><a name="catalogueServiceUrlDelete"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /catalogueServiceUrl</code></pre></div>
-    <div class="method-summary">Unregister Catalogue Service. (<span class="nickname">catalogueServiceUrlDelete</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-unregister-request">Catalogue Service Unregister Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">204</h4>
-    A response code 204 (NO CONTENT) will indicate a success.
-        <a href="#"></a>
-    <h4 class="field-label">400</h4>
-    Failures will be indicated with response codes 400 to but-not-including 600.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <div class="method"><a name="catalogueServiceUrlGet"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /catalogueServiceUrl</code></pre></div>
-    <div class="method-summary">Get Catalogue Service Details (<span class="nickname">catalogueServiceUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-details-request">Catalogue Service Details Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#CatalogueServiceModel">CatalogueServiceModel</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{
-  "links" : {
-    "serviceType" : "http://example.com/aeiou",
-    "provider" : "http://example.com/aeiou",
-    "self" : "http://example.com/aeiou",
-    "serviceDescriptor" : "http://example.com/aeiou"
-  },
-  "state" : "state",
-  "activeFrom" : 0,
-  "activeUntil" : 6
-}</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#CatalogueServiceModel">CatalogueServiceModel</a>
-  </div> <!-- method -->
-  <hr/>
   <div class="method"><a name="catalogueUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -425,9 +343,9 @@ font-style: italic;
     <pre class="example"><code>{
   "links" : {
     "provider" : "http://example.com/aeiou",
-    "self" : "http://example.com/aeiou"
+    "self" : "http://example.com/aeiou",
+    "services" : "http://example.com/aeiou"
   },
-  "services" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "state" : "state",
   "activeFrom" : 0,
   "activeUntil" : 6
@@ -446,12 +364,140 @@ font-style: italic;
         <a href="#CatalogueModel">CatalogueModel</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="catalogueUrlPost"/>
+  <div class="method"><a name="publishedServiceUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /catalogueUrl</code></pre></div>
-    <div class="method-summary">Register Catalogue Service. (<span class="nickname">catalogueUrlPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-register-request">Catalogue Service Register Request</a>.</div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /publishedServiceUrl</code></pre></div>
+    <div class="method-summary">Unregister Published Service. (<span class="nickname">publishedServiceUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-unregister-request">Published Service Unregister Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="publishedServiceUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /publishedServiceUrl</code></pre></div>
+    <div class="method-summary">Get Published Service Details (<span class="nickname">publishedServiceUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-details-request">Published Service Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#PublishedServiceModel">PublishedServiceModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "links" : {
+    "serviceType" : "http://example.com/aeiou",
+    "provider" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou",
+    "serviceDescriptor" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#PublishedServiceModel">PublishedServiceModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="publishedServicesUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /publishedServicesUrl</code></pre></div>
+    <div class="method-summary">Get Published Services (<span class="nickname">publishedServicesUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-services-request">Published Services Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#PublishedServicesModel">PublishedServicesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200, Successful execution.
+        <a href="#PublishedServicesModel">PublishedServicesModel</a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="publishedServicesUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /publishedServicesUrl</code></pre></div>
+    <div class="method-summary">Register Published Service. (<span class="nickname">publishedServicesUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-register-request">Published Service Register Request</a>.</div>
 
 
     <h3 class="field-label">Consumes</h3>
@@ -462,7 +508,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">catalogue-service-description <a href="#CatalogueServiceModel">CatalogueServiceModel</a> (required)</div>
+      <div class="param">service-description <a href="#PublishedServiceModel">PublishedServiceModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3368,12 +3414,13 @@ font-style: italic;
     <pre class="example"><code>{
   "links" : {
     "candidates" : "http://example.com/aeiou",
+    "dataService" : "http://example.com/aeiou",
     "credentialsRegister" : "http://example.com/aeiou",
     "serviceCredentials" : "http://example.com/aeiou",
+    "dataType" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "dataProvider" : "http://example.com/aeiou",
-    "consent" : "http://example.com/aeiou",
-    "dataDescription" : "http://example.com/aeiou"
+    "consent" : "http://example.com/aeiou"
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -3490,8 +3537,6 @@ font-style: italic;
     <li><a href="#CandidatesModel"><code>CandidatesModel</code> - </a></li>
     <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
     <li><a href="#CatalogueModel_links"><code>CatalogueModel_links</code> - </a></li>
-    <li><a href="#CatalogueServiceModel"><code>CatalogueServiceModel</code> - </a></li>
-    <li><a href="#CatalogueServiceModel_links"><code>CatalogueServiceModel_links</code> - </a></li>
     <li><a href="#CataloguesModel"><code>CataloguesModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel_actions"><code>ConnectTokenMetadataModel_actions</code> - </a></li>
@@ -3523,6 +3568,9 @@ font-style: italic;
     <li><a href="#PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a></li>
     <li><a href="#PortfolioServiceModel"><code>PortfolioServiceModel</code> - </a></li>
     <li><a href="#PortfolioServicesModel"><code>PortfolioServicesModel</code> - </a></li>
+    <li><a href="#PublishedServiceModel"><code>PublishedServiceModel</code> - </a></li>
+    <li><a href="#PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a></li>
+    <li><a href="#PublishedServicesModel"><code>PublishedServicesModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#ReferenceModel"><code>ReferenceModel</code> - </a></li>
     <li><a href="#ReferenceResultModel"><code>ReferenceResultModel</code> - </a></li>
@@ -3564,7 +3612,6 @@ font-style: italic;
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
 <div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#CatalogueModel_links">CatalogueModel_links</a></span>  </div>
-<div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Services provided by the Service Provider. format: url</div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the catalogue. </div>
     </div>  <!-- field-items -->
   </div>
@@ -3572,28 +3619,9 @@ font-style: italic;
     <h3><a name="CatalogueModel_links"><code>CatalogueModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Catalogue links.</div>
     <div class="field-items">
-      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
+      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue url format: url</div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="CatalogueServiceModel"><code>CatalogueServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Catalogue Service Model.</div>
-    <div class="field-items">
-      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
-<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#CatalogueServiceModel_links">CatalogueServiceModel_links</a></span>  </div>
-<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the service. </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="CatalogueServiceModel_links"><code>CatalogueServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Catalogue Service links.</div>
-    <div class="field-items">
-      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
-<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url format: url</div>
-<div class="param">serviceDescriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Descriptor. format: url</div>
-<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service type, defined using a Service Type url. format: url</div>
+<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Services url (publishedServicesUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3679,7 +3707,7 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
-<div class="param">subscribedService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service Url of the subscribed Provider service. format: url</div>
+<div class="param">subscribedService </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service Url of the subscribed Provider service. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -3849,6 +3877,32 @@ font-style: italic;
           </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="PublishedServiceModel"><code>PublishedServiceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Published Service Model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#PublishedServiceModel_links">PublishedServiceModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the service. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Published Service links.</div>
+    <div class="field-items">
+      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Provider url format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service url format: url</div>
+<div class="param">serviceDescriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Descriptor. format: url</div>
+<div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service type, defined using a Service Type url. format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PublishedServicesModel"><code>PublishedServicesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Published Services.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
@@ -3922,8 +3976,9 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates url format: url</div>
-<div class="param">dataDescription (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogue Service url of the Data Service format: url</div>
-<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Provider url of the Data Provider format: url</div>
+<div class="param">dataType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type url of the consented data. format: url</div>
+<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Provider url of the Data Provider. format: url</div>
+<div class="param">dataService (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service url of the Data Service. format: url</div>
 <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent url format: url</div>
 <div class="param">credentialsRegister </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Credentials Register url format: url</div>
 <div class="param">serviceCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Credentials url format: url</div>

@@ -78,7 +78,7 @@
                     "description": "Catalogue links.",
                     "properties": {
 		        "provider": {
-		            "description": "Provider url",
+		            "description": "Published Provider url",
 			    "format": "url",
 			    "type": "string"
 		        },
@@ -86,7 +86,12 @@
 		            "description": "Catalogue url",
 			    "format": "url",
 			    "type": "string"
-		        }
+		        },
+                        "services": {
+                            "description": "Published Services url (publishedServicesUrl).",
+                            "format": "url",
+                            "type": "string" 
+                        }
 		    },
 		    "required": [
 		        "self",
@@ -94,15 +99,6 @@
 		    ],
 		    "type": "object"
 		},
-                "services": {
-                    "description": "Services provided by the Service Provider.",
-	            "items": {
-                        "description": "List of Catalogue Service urls.",
-                        "format": "url",
-                        "type": "string" 
-                    },
-                    "type": "array"
-                },
                 "state": {
                     "description": "State of the catalogue.",
                     "type": "string"
@@ -112,7 +108,6 @@
                 "activeFrom",
                 "activeUntil",
                 "links",
-                "services",
                 "state"
             ],
             "type": "object"
@@ -120,69 +115,11 @@
         "CataloguesModel": {
             "description": "List of Catalogues.",
 	    "items": {
-                "description": "Catalogue url",
+                "description": "Catalogue url (catalogueUrl)",
                 "format": "url",
                 "type": "string"
 	    },
             "type": "array"
-        },
-        "CatalogueServiceModel": {
-            "description": "Catalogue Service Model.",
-            "properties": {
-                "activeFrom": {
-                    "description": "Active from date time stamp.",
-                    "type": "integer",
-                    "format": "Unix time in ms"
-                },
-                "activeUntil": {
-                    "description": "Active until date time stamp.",
-                    "type": "integer",
-                    "format": "Unix time in ms, nullable"
-                },
-		"links": {
-                    "description": "Catalogue Service links.",
-                    "properties": {
-        	        "provider": {
-		            "description": "Provider url",
-			    "format": "url",
-			    "type": "string"
-		        },
-                        "self": {
-		            "description": "Catalogue Service url",
-			    "format": "url",
-			    "type": "string"
-		        },
-                        "serviceDescriptor": {
-		            "description": "Service Descriptor.",
-			    "format": "url",
-			    "type": "string"
-		        },
-                        "serviceType": {
-		            "description": "Service type, defined using a Service Type url.",
-			    "format": "url",
-			    "type": "string"
-		        }
-		    },
-		    "required": [
-		        "provider",
-		        "self",
-			"serviceDescriptor",
-			"serviceType"
-		    ],
-		    "type": "object"
-		},
-                "state": {
-                    "description": "State of the service.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "activeFrom",
-                "activeUntil",
-                "links",
-                "state"
-            ],
-            "type": "object"
         },
         "ConnectionsResponseModel": {
             "description": "Response of [Connections Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request).",
@@ -393,7 +330,7 @@
                             "format": "url"
                         },
                         "subscribedService": {
-                            "description": "Catalogue Service Url of the subscribed Provider service.",
+                            "description": "Published Service Url of the subscribed Provider service.",
                             "format": "url",
                             "type": "string"
                         }
@@ -840,6 +777,73 @@
 	    },
             "type": "array"
         },
+        "PublishedServiceModel": {
+            "description": "Published Service Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+		"links": {
+                    "description": "Published Service links.",
+                    "properties": {
+        	        "provider": {
+		            "description": "Provider url",
+			    "format": "url",
+			    "type": "string"
+		        },
+                        "self": {
+		            "description": "Published Service url",
+			    "format": "url",
+			    "type": "string"
+		        },
+                        "serviceDescriptor": {
+		            "description": "Service Descriptor.",
+			    "format": "url",
+			    "type": "string"
+		        },
+                        "serviceType": {
+		            "description": "Service type, defined using a Service Type url.",
+			    "format": "url",
+			    "type": "string"
+		        }
+		    },
+		    "required": [
+		        "provider",
+		        "self",
+			"serviceDescriptor",
+			"serviceType"
+		    ],
+		    "type": "object"
+		},
+                "state": {
+                    "description": "State of the service.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "PublishedServicesModel": {
+            "description": "List of Published Services.",
+	    "items": {
+                "description": "Publised Service url (publishedServiceUrl)",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "QiyNodeCreateRequestParametersModel": {
             "type": "object",
             "properties": {
@@ -997,13 +1001,18 @@
 			    "format": "url",
 			    "type": "string"
 		        },
-		        "dataDescription": {
-			    "description": "Catalogue Service url of the Data Service",
+		        "dataType": {
+			    "description": "Data Type url of the consented data.",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "dataProvider": {
-			    "description": "Library Provider url of the Data Provider",
+			    "description": "Library Provider url of the Data Provider.",
+			    "format": "url",
+			    "type": "string"
+		        },
+		        "dataService": {
+			    "description": "Published Service url of the Data Service.",
 			    "format": "url",
 			    "type": "string"
 		        },
@@ -1165,51 +1174,6 @@
                 }
             }
         },
-        "/catalogueServiceUrl": {
-	    "delete": {
-                "summary": "Unregister Catalogue Service.",
-                "description": "See [Catalogue Service Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-unregister-request).",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/authorizationParam"
-                    }
-                ],
-                "tags": [
-                    "Catalogue"
-                ],
-                "responses": {
-                    "204": {
-                        "description": "A response code 204 (NO CONTENT) will indicate a success."
-                    },
-                    "400": {
-                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
-                    }
-                }
-            },
-            "get": {
-                "summary": "Get Catalogue Service Details",
-                "description": "See [Catalogue Service Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-details-request).",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/authorizationParam"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Catalogue"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "The status code of a success response will be 200.",
-                        "schema": {
-                            "$ref": "#/definitions/CatalogueServiceModel"
-                        }
-                    }
-                }
-            }
-        },
         "/catalogueUrl": {
             "get": {
                 "summary": "Get Catalogue Details",
@@ -1233,34 +1197,6 @@
                         }
                     }
                 }
-            },
-	    "post": {
-                "summary": "Register Catalogue Service.",
-                "consumes": [
-                    "application/json"
-                ],
-                "description": "See [Catalogue Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-service-register-request).",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "catalogue-service-description",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/CatalogueServiceModel"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Successful execution."
-                    },
-                    "400": {
-                        "description": "400,600 Unsuccessful execution."
-                    }
-                },
-                "tags": [
-                    "Catalogue"
-                ]
             }
         },
         "/connectionUrl": {
@@ -2188,6 +2124,107 @@
                 "tags": [
                     "Library"
                 ]
+            }
+        },
+        "/publishedServicesUrl": {
+            "get": {
+                "summary": "Get Published Services",
+                "description": "See [Published Services Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-services-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PublishedServicesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Catalogue"
+                ]
+            },
+            "post": {
+                "summary": "Register Published Service.",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Published Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-register-request).",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "service-description",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PublishedServiceModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Catalogue"
+                ]
+            }
+        },
+        "/publishedServiceUrl": {
+	    "delete": {
+                "summary": "Unregister Published Service.",
+                "description": "See [Published Service Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Published Service Details",
+                "description": "See [Published Service Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/PublishedServiceModel"
+                        }
+                    }
+                }
             }
         },
         "/serviceCredentialsUrl": {

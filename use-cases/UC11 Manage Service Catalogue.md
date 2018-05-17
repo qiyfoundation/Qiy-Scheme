@@ -33,7 +33,7 @@ This document describes how [Service Providers](../Definitions.md#service-provid
 
 # Basic Flow: Service Provider registers a Service
 
-The [Service Provider](../Definitions.md#service-provider) can register a [Service](../Definitions.md#service) using a [Catalogue Service Register Request](../Definitions.md#catalogue-service-register-request).
+The [Service Provider](../Definitions.md#service-provider) can register a [Service](../Definitions.md#service) using a [Catalogue Service Register Request].
 
 ![Register Service](../images/Register_Service_-_UC11.png)
 
@@ -47,7 +47,7 @@ The [Service Provider](../Definitions.md#service-provider) can register a [Servi
 
 ## E1. The Service Provider unregisters a Service
 
-The [Service Provider](../Definitions.md#service-provider) can uregister a [Service](../Definitions.md#service) using a [Catalogue Service Unregister Request](../Definitions.md#catalogue-service-unregister-request).
+The [Service Provider](../Definitions.md#service-provider) can uregister a [Service](../Definitions.md#service) using a [Catalogue Service Unregister Request].
 
 ![Unregister Service](../images/Unregister_Service_-_UC11.png)
 
