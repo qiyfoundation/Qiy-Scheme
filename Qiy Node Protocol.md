@@ -56,11 +56,11 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 		1. [Data Type Update Request](#274-data-type-update-request)
 		1. [Data Types Request](#275-data-types-request)
 		1. [Library Details Request](#276-library-details-request)
-		1. [Library Provider Details Request](#277-library-provider-details-request)
-		1. [Library Provider Register Request](#278-library-provider-register-request)
-		1. [Library Provider Unregister Request](#279-library-provider-unregister-request)
-		1. [Library Provider Update Request](#2710-library-provider-update-request)
-		1. [Library Providers Request](#2711-library-providers-request)
+		1. [Published Provider Details Request](#277-published-provider-details-request)
+		1. [Published Provider Register Request](#278-published-provider-register-request)
+		1. [Published Provider Unregister Request](#279-published-provider-unregister-request)
+		1. [Published Provider Update Request](#2710-published-provider-update-request)
+		1. [Published Providers Request](#2711-published-providers-request)
 		1. [Service Type Details Request](#2712-service-type-details-request)
 		1. [Service Type Register Request](#2713-service-type-register-request)
 		1. [Service Type Unregister Request](#2714-service-type-unregister-request)
@@ -215,12 +215,6 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Events Request](#events-request)
 	1. [Library](#library)
 	1. [Library Details Request](#library-details-request)
-	1. [Library Provider](#library-provider)
-	1. [Library Provider Details Request](#library-provider-details-request)
-	1. [Library Provider Register Request](#library-provider-register-request)
-	1. [Library Provider Unregister Request](#library-provider-unregister-request)
-	1. [Library Provider Update Request](#library-provider-update-request)
-	1. [Library Providers Request](#library-providers-request)
 	1. [Message](#message)
 	1. [Message Delete Request](#message-delete-request)
 	1. [Message Details Request](#message-details-request)
@@ -240,6 +234,12 @@ The document refers for details to the [Qiy Node API](#qiy-node-api), which is a
 	1. [Portfolio Details Request](#portfolio-details-request)
 	1. [Portfolio Register Message](#portfolio-register-message)
 	1. [Provider](#provider)
+	1. [Published Provider](#published-provider)
+	1. [Published Provider Details Request](#published-provider-details-request)
+	1. [Published Provider Register Request](#published-provider-register-request)
+	1. [Published Provider Unregister Request](#published-provider-unregister-request)
+	1. [Published Provider Update Request](#published-provider-update-request)
+	1. [Published Providers Request](#published-providers-request)
 	1. [Published Service](#published-service)
 	1. [Published Service Details Request](#published-service-details-request)
 	1. [Published Service Register Request](#published-service-register-request)
@@ -520,20 +520,20 @@ The [Data Types Request](#data-types-request) is a [Qiy Node Request](Definition
 ### 2.7.6 Library Details Request
 The [Library Details Request](#library-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of the [Service Library](Definitions.md#service-library).
 
-### 2.7.7 Library Provider Details Request
-The [Library Provider Details Request](#library-provider-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
+### 2.7.7 Published Provider Details Request
+The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
 
-### 2.7.8 Library Provider Register Request
-The [Library Provider Register Request](#library-provider-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+### 2.7.8 Published Provider Register Request
+The [Published Provider Register Request](#published-provider-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 2.7.9 Library Provider Unregister Request
-The [Library Provider Unregister Request](#library-provider-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+### 2.7.9 Published Provider Unregister Request
+The [Published Provider Unregister Request](#published-provider-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 2.7.10 Library Provider Update Request
-The [Library Provider Update Request](#library-provider-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](Definitions.md#service-provider).
+### 2.7.10 Published Provider Update Request
+The [Published Provider Update Request](#published-provider-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](Definitions.md#service-provider).
 
-### 2.7.11 Library Providers Request
-The [Library Providers Request](#library-providers-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Service Providers](Definitions.md#service-provider).
+### 2.7.11 Published Providers Request
+The [Published Providers Request](#published-providers-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Service Providers](Definitions.md#service-provider).
 
 ### 2.7.12 Service Type Details Request
 The [Service Type Details Request](#service-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
@@ -707,7 +707,7 @@ This chapters describes the entity types of the [Qiy Node Interface](Definitions
 ## 5.1 Catalogue
 
 This section describes the [Service Catalogue](Definitions.md#service-catalogue) model.
-A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](Definitions.md#service-provider) ([Library Provider](#library-provider)).
+A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
 
 ### 5.1.1 Catalogue Attributes
 
@@ -719,7 +719,7 @@ See also [Catalogue](#catalogue) model.
 A [Catalogue](#catalogue):
 * is part of: [Library](#library)
 * has zero or more of: [Published Service](#published-service)
-* has one: [Library Provider](#library-provider)
+* has one: [Published Provider](#published-provider)
 
 ### 5.1.3 Catalogue Business Rules
 
@@ -792,7 +792,7 @@ See [Library](#library) model.
 See [Library](#library) model.
 A [Library](#library):jk
 * has zero or more of: [Service](Definitions.md#service) named [Service Type](#service-type).
-* has zero or more of: [Service Provider](Definitions.md#service-provider) named [Library Provider](#library-provider).
+* has zero or more of: [Service Provider](Definitions.md#service-provider) named [Published Provider](#published-provider).
 
 ### 5.6.3 Library Business Rules
 
@@ -1234,53 +1234,6 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /libraryEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.6 Library Details Request](#276-library-details-request)
 
-## Library Provider
-
-Specification | Reference
-------------- | ---------
-[Qiy Node API](Qiy%20Node%20API.json)         | [Library Provider Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#LibraryProviderModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
-
-## Library Provider Details Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Library Provider Details Request](Definitions.md#library-provider-details-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /libraryProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryProviderUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.7 Library Provider Details Request](#277-library-provider-details-request)
-
-## Library Provider Register Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Library Provider Register Request](Definitions.md#library-provider-register-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /libraryProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryProvidersUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.8 Library Provider Register Request](#278-library-provider-register-request)
-
-## Library Provider Unregister Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Library Provider Unregister Request](Definitions.md#library-provider-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /libraryProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryProviderUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.9 Library Provider Unregister Request](#279-library-provider-unregister-request)
-
-## Library Provider Update Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Library Provider Update Request](Definitions.md#library-provider-update-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /libraryProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryProviderUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.10 Library Provider Update Request](#2710-library-provider-update-request)
-
-## Library Providers Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Library Providers Request](Definitions.md#library-providers-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /libraryProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#libraryProvidersUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.11 Library Providers Request](#2711-library-providers-request)
-
 ## Message
 
 Specification | Reference
@@ -1430,6 +1383,53 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md) | [Service Provider](Definitions.md#service-provider)
+
+## Published Provider
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Published Provider Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#PublishedProviderModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
+
+## Published Provider Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Provider Details Request](Definitions.md#published-provider-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedProviderUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.7 Published Provider Details Request](#277-published-provider-details-request)
+
+## Published Provider Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Provider Register Request](Definitions.md#published-provider-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /publishedProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedProvidersUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.8 Published Provider Register Request](#278-published-provider-register-request)
+
+## Published Provider Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Provider Unregister Request](Definitions.md#published-provider-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedProviderUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.9 Published Provider Unregister Request](#279-published-provider-unregister-request)
+
+## Published Provider Update Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Provider Update Request](Definitions.md#published-provider-update-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedProviderUrlPatch)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.10 Published Provider Update Request](#2710-published-provider-update-request)
+
+## Published Providers Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Published Providers Request](Definitions.md#published-providers-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20API.html#publishedProvidersUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.11 Published Providers Request](#2711-published-providers-request)
 
 ## Published Service
 

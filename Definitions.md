@@ -321,21 +321,6 @@ See https://en.wikipedia.org/wiki/Entity#In_law.
 ### Library Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Library](#service-library).
 
-### Library Provider Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
-
-### Library Provider Register Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
-
-### Library Provider Unregister Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
-
-### Library Provider Update Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to update details of a [Service Provider](#service-provider).
-
-### Library Providers Request
-A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
-
 ### License
 [Regional Authorities](#regional-authority) and [Access Providers](#access-provider) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Parties can apply for a [License](#license) which requires paying a fee and complying with the [Qiy Scheme](#qiy-scheme)'s Rules & Regulations.
 
@@ -448,6 +433,21 @@ Synonymous with [Identifier](#identifier)
 
 ### Public Key Infrastructure
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
+
+### Published Provider Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
+
+### Published Provider Register Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Published Provider Unregister Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Published Provider Update Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to update details of a [Service Provider](#service-provider).
+
+### Published Providers Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
 
 ### Published Service Details Request
 A [Qiy Node Request](#qiy-node-request) to get details of a [Service](#service) that has been published in a [Service Catalogue](#service-catalogue).

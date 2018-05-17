@@ -250,11 +250,11 @@ font-style: italic;
   <li><a href="#dataTypesUrlGet"><code><span class="http-method">get</span> /dataTypesUrl</code></a></li>
   <li><a href="#dataTypesUrlPost"><code><span class="http-method">post</span> /dataTypesUrl</code></a></li>
   <li><a href="#libraryEndpointGet"><code><span class="http-method">get</span> /libraryEndpoint</code></a></li>
-  <li><a href="#libraryProviderUrlDelete"><code><span class="http-method">delete</span> /libraryProviderUrl</code></a></li>
-  <li><a href="#libraryProviderUrlGet"><code><span class="http-method">get</span> /libraryProviderUrl</code></a></li>
-  <li><a href="#libraryProviderUrlPatch"><code><span class="http-method">patch</span> /libraryProviderUrl</code></a></li>
-  <li><a href="#libraryProvidersUrlGet"><code><span class="http-method">get</span> /libraryProvidersUrl</code></a></li>
-  <li><a href="#libraryProvidersUrlPost"><code><span class="http-method">post</span> /libraryProvidersUrl</code></a></li>
+  <li><a href="#publishedProviderUrlDelete"><code><span class="http-method">delete</span> /publishedProviderUrl</code></a></li>
+  <li><a href="#publishedProviderUrlGet"><code><span class="http-method">get</span> /publishedProviderUrl</code></a></li>
+  <li><a href="#publishedProviderUrlPatch"><code><span class="http-method">patch</span> /publishedProviderUrl</code></a></li>
+  <li><a href="#publishedProvidersUrlGet"><code><span class="http-method">get</span> /publishedProvidersUrl</code></a></li>
+  <li><a href="#publishedProvidersUrlPost"><code><span class="http-method">post</span> /publishedProvidersUrl</code></a></li>
   <li><a href="#serviceTypeUrlDelete"><code><span class="http-method">delete</span> /serviceTypeUrl</code></a></li>
   <li><a href="#serviceTypeUrlGet"><code><span class="http-method">get</span> /serviceTypeUrl</code></a></li>
   <li><a href="#serviceTypesUrlGet"><code><span class="http-method">get</span> /serviceTypesUrl</code></a></li>
@@ -1822,12 +1822,12 @@ font-style: italic;
         <a href="#LibraryModel">LibraryModel</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryProviderUrlDelete"/>
+  <div class="method"><a name="publishedProviderUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /libraryProviderUrl</code></pre></div>
-    <div class="method-summary">Delete Library Provider. (<span class="nickname">libraryProviderUrlDelete</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-delete-request">Library Provider Delete Request</a>.</div>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /publishedProviderUrl</code></pre></div>
+    <div class="method-summary">Delete Published Provider. (<span class="nickname">publishedProviderUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-delete-request">Published Provider Delete Request</a>.</div>
 
 
 
@@ -1853,12 +1853,12 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryProviderUrlGet"/>
+  <div class="method"><a name="publishedProviderUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryProviderUrl</code></pre></div>
-    <div class="method-summary">Get Library Provider Details (<span class="nickname">libraryProviderUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-details-request">Library Provider Details Request</a>.</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /publishedProviderUrl</code></pre></div>
+    <div class="method-summary">Get Published Provider Details (<span class="nickname">publishedProviderUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-details-request">Published Provider Details Request</a>.</div>
 
 
 
@@ -1872,7 +1872,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#LibraryProviderModel">LibraryProviderModel</a>
+      <a href="#PublishedProviderModel">PublishedProviderModel</a>
       
     </div>
 
@@ -1880,7 +1880,15 @@ font-style: italic;
 
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
+    <pre class="example"><code>{
+  "links" : {
+    "self" : "http://example.com/aeiou",
+    "services" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -1892,15 +1900,15 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#LibraryProviderModel">LibraryProviderModel</a>
+        <a href="#PublishedProviderModel">PublishedProviderModel</a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryProviderUrlPatch"/>
+  <div class="method"><a name="publishedProviderUrlPatch"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /libraryProviderUrl</code></pre></div>
-    <div class="method-summary">Update Library Provider details (<span class="nickname">libraryProviderUrlPatch</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-update-request">Library Provider Update Request</a>.</div>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /publishedProviderUrl</code></pre></div>
+    <div class="method-summary">Update Published Provider details (<span class="nickname">publishedProviderUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-update-request">Published Provider Update Request</a>.</div>
 
 
     <h3 class="field-label">Consumes</h3>
@@ -1911,7 +1919,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">provider-update <a href="#LibraryProviderModel">LibraryProviderModel</a> (required)</div>
+      <div class="param">provider-update <a href="#PublishedProviderModel">PublishedProviderModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1935,12 +1943,12 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryProvidersUrlGet"/>
+  <div class="method"><a name="publishedProvidersUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /libraryProvidersUrl</code></pre></div>
-    <div class="method-summary">Get Library Providers (<span class="nickname">libraryProvidersUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-providers-request">Library Providers Request</a>.</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /publishedProvidersUrl</code></pre></div>
+    <div class="method-summary">Get Published Providers (<span class="nickname">publishedProvidersUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-providers-request">Published Providers Request</a>.</div>
 
 
 
@@ -1954,7 +1962,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#LibraryProvidersModel">LibraryProvidersModel</a>
+      <a href="#PublishedProvidersModel">PublishedProvidersModel</a>
       
     </div>
 
@@ -1974,18 +1982,18 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     200 Successful execution.
-        <a href="#LibraryProvidersModel">LibraryProvidersModel</a>
+        <a href="#PublishedProvidersModel">PublishedProvidersModel</a>
     <h4 class="field-label">400</h4>
     [400,600&gt; Unsuccessful execution.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="libraryProvidersUrlPost"/>
+  <div class="method"><a name="publishedProvidersUrlPost"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /libraryProvidersUrl</code></pre></div>
-    <div class="method-summary">Library Provider Register Request (<span class="nickname">libraryProvidersUrlPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-provider-register-request">Library Provider Register Request</a>.</div>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /publishedProvidersUrl</code></pre></div>
+    <div class="method-summary">Published Provider Register Request (<span class="nickname">publishedProvidersUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-register-request">Published Provider Register Request</a>.</div>
 
 
     <h3 class="field-label">Consumes</h3>
@@ -1996,7 +2004,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">provider <a href="#LibraryProviderModel">LibraryProviderModel</a> (required)</div>
+      <div class="param">provider <a href="#PublishedProviderModel">PublishedProviderModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3681,8 +3689,6 @@ font-style: italic;
     <li><a href="#EventModel"><code>EventModel</code> - </a></li>
     <li><a href="#LibraryModel"><code>LibraryModel</code> - </a></li>
     <li><a href="#LibraryModel_links"><code>LibraryModel_links</code> - </a></li>
-    <li><a href="#LibraryProviderModel"><code>LibraryProviderModel</code> - </a></li>
-    <li><a href="#LibraryProvidersModel"><code>LibraryProvidersModel</code> - </a></li>
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
     <li><a href="#MailboxMessagesModel"><code>MailboxMessagesModel</code> - </a></li>
     <li><a href="#MessageModel"><code>MessageModel</code> - </a></li>
@@ -3693,6 +3699,9 @@ font-style: italic;
     <li><a href="#PortfolioModel_links"><code>PortfolioModel_links</code> - </a></li>
     <li><a href="#PortfolioProviderModel"><code>PortfolioProviderModel</code> - </a></li>
     <li><a href="#PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a></li>
+    <li><a href="#PublishedProviderModel"><code>PublishedProviderModel</code> - </a></li>
+    <li><a href="#PublishedProviderModel_links"><code>PublishedProviderModel_links</code> - </a></li>
+    <li><a href="#PublishedProvidersModel"><code>PublishedProvidersModel</code> - </a></li>
     <li><a href="#PublishedServiceModel"><code>PublishedServiceModel</code> - </a></li>
     <li><a href="#PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a></li>
     <li><a href="#PublishedServicesModel"><code>PublishedServicesModel</code> - </a></li>
@@ -3898,21 +3907,9 @@ font-style: italic;
     <div class="field-items">
       <div class="param">catalogues </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogues Url (cataloguesUrl) format: url</div>
 <div class="param">dataTypes </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Types url (dataTypesUrl). format: url</div>
-<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Providers url (libraryProvidersUrl) format: url</div>
+<div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Providers url (publishedProvidersUrl) format: url</div>
 <div class="param">serviceTypes </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Types url (serviceTypesUrl). format: url</div>
     </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="LibraryProviderModel"><code>LibraryProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Library Provider Model.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="LibraryProvidersModel"><code>LibraryProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Library Providers.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -3989,6 +3986,30 @@ font-style: italic;
   <div class="model">
     <h3><a name="PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>List of Portfolio Providers.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PublishedProviderModel"><code>PublishedProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Published Provider Model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#PublishedProviderModel_links">PublishedProviderModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the service. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PublishedProviderModel_links"><code>PublishedProviderModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Published Provider links.</div>
+    <div class="field-items">
+      <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url (publishedProviderUrl) format: url</div>
+<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Services url (publishedServicesUrl). format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PublishedProvidersModel"><code>PublishedProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Published Providers.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -4093,7 +4114,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates url format: url</div>
 <div class="param">dataType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type url of the consented data. format: url</div>
-<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Provider url of the Data Provider. format: url</div>
+<div class="param">dataProvider (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url of the Data Provider. format: url</div>
 <div class="param">dataService (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service url of the Data Service. format: url</div>
 <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent url format: url</div>
 <div class="param">credentialsRegister </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Credentials Register url format: url</div>
@@ -4122,7 +4143,7 @@ font-style: italic;
     <div class='model-description'>Subscription links.</div>
     <div class="field-items">
       <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents url (consentsUrl). format: url</div>
-<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Library Provider url (libraryProviderUrl). format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url (publishedProviderUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription url (subscriptionUrl) format: url</div>
 <div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service url (publishedServiceUrl). format: url</div>
     </div>  <!-- field-items -->
