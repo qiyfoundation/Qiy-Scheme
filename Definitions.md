@@ -255,6 +255,9 @@ A [Service Source](#service-source): a [Data Service](#data-service) that will b
 ### Data Subject
 As defined in the [GDPR](#gdpr).
 
+### Data Type
+A type of [Data](#data).
+
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
 
@@ -667,6 +670,9 @@ See [Provider Unregister Request].
 
 ### Service Source
 A [Service](#service) of a [Service Provider](#service-provider) that provides the [Service](#service) required by another [Service](#service).
+
+### Service Type
+A type of [Service](#service).
 
 ### Service Type Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of a [Service](#service) in the [Service Library](#service-library).

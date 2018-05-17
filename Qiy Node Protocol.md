@@ -788,7 +788,7 @@ tbd
 ## 5.6 Library
 
 This section describes the [Service Library](Definitions.md#service-library) entity type.
-The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types] and [Service Types].
+The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type) and [Service Types](Definitions.md#service-type).
 
 ### 5.6.1 Library Attributes
 
