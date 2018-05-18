@@ -702,7 +702,7 @@
                     "maxItems": 1
                 },
                 "url": {
-                    "description": "Resource url",
+                    "description": "Resource url/Service Endpoint url",
                     "minItems": 1,
                     "maxItems": 1,
                     "type": "string",
@@ -896,7 +896,7 @@
             "type": "object",
             "properties": {
                 "ref": {
-                    "description": "Resource reference.",
+                    "description": "Data Reference/Operation Reference.",
                     "minItems": 1,
                     "maxItems": 1,
                     "type": "string"
@@ -945,8 +945,8 @@
             },
             "uniqueItems": true
         },
-        "ServiceCredentialsModel": {
-            "description": "Service Credentials Model.",
+        "ServiceCredentialModel": {
+            "description": "Service Credential Model.",
             "properties": {
                 "activeFrom": {
                     "description": "Active from date time stamp.",
@@ -966,12 +966,12 @@
                     "type": "object",
                     "properties": {
                         "source": {
-                            "description": "Source url.",
+                            "description": "Source (sourceUrl).",
                             "type": "string",
                             "format": "url"
                         },
                         "self": {
-                            "description": "Service Credentials url",
+                            "description": "Service Credential (serviceCredentialUrl)",
                             "type": "string",
                             "format": "url"
                         }
@@ -982,7 +982,7 @@
                     ]
                 },
 		"state": {
-                    "description": "State of the Service Credentials.",
+                    "description": "State of the Service Credential.",
                     "type": "string"
                 }
             },
@@ -1022,43 +1022,33 @@
                 },
  	        "links": {
 		    "properties": {
-		        "candidates": {
-			    "description": "Source Candidates url",
+        	        "account": {
+			    "description": "Account with Data Provider (accountUrl)",
 			    "format": "url",
 			    "type": "string"
 		        },
-		        "dataType": {
-			    "description": "Data Type url of the consented data.",
-			    "format": "url",
-			    "type": "string"
-		        },
-		        "dataProvider": {
-			    "description": "Published Provider url of the Data Provider.",
+        	        "candidates": {
+			    "description": "Source Candidates (candidatesUrl)",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "dataService": {
-			    "description": "Published Service url of the Data Service.",
+			    "description": "Data Service (publishedServiceUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "consent": {
-			    "description": "Consent url",
-			    "format": "url",
-			    "type": "string"
-		        },
-                        "credentialsRegister": {
-			    "description": "Credentials Register url",
+			    "description": "Consent (consentUrl)",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "serviceCredentials": {
-			    "description": "Service Credentials url",
+			    "description": "Service Credentials (serviceCredentialsUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "self": {
-			    "description": "Source url",
+			    "description": "Source (sourceUrl)",
 			    "format": "url",
 			    "type": "string"
 		        }
@@ -1066,7 +1056,7 @@
 		    "required": [
 	                "candidates",
 			"consent",
-			"credentialsRegister",
+			"serviceCredentials",
 			"self"
 		    ],
 		    "type": "object"
@@ -1743,10 +1733,37 @@
                 ]
             }
         },
-        "/credentialsRegisterUrl": {
+        "/serviceCredentialsUrl": {
+            "get": {
+                "summary": "Get Service Credentials",
+                "description": "See [Service Credentials Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+		    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/DataTypesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
             "post": {
-                "summary": "Register Service Credentials.",
-                "description": "See [Service Credentials Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-register-request).",
+                "summary": "Register Service Credential.",
+                "description": "See [Service Credential Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-register-request).",
                 "consumes": [
                     "application/json"
                 ],
@@ -2375,10 +2392,10 @@
                 }
             }
         },
-        "/serviceCredentialsUrl": {
+        "/serviceCredentialUrl": {
             "delete": {
-                "summary": "Delete Service Credentials.",
-                "description": "See [Service Credentials Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-delete-request).",
+                "summary": "Delete Service Credential.",
+                "description": "See [Service Credential Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-delete-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -2397,8 +2414,8 @@
                 }
             },
 	    "get": {
-                "summary": "Get Service Credentials Details",
-                "description": "See [Service Credentials Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-details-request).",
+                "summary": "Get Service Credential Details",
+                "description": "See [Service Credential Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-details-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -2420,8 +2437,8 @@
                 }
             },
 	    "patch": {
-                "summary": "Update Service Credentials Details",
-                "description": "See [Service Credentials Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-update-request).",
+                "summary": "Update Service Credential Details",
+                "description": "See [Service Credential Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-update-request).",
                 "consumes": [
                     "application/json"
                 ],

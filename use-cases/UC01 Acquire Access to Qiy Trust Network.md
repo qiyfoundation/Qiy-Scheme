@@ -152,7 +152,7 @@ Please refer to the [Access Provider](../Definitions.md#access-provider) for mor
 
 ## Postconditions
 
-1. The [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credentials](../Definitions.md#qiy-node-credentials).
+1. The [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credentials](../Definitions.md#qiy-node-credential).
 
 # Diagram Source Code
 

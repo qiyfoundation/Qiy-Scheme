@@ -171,14 +171,14 @@ As defined in the [GDPR](#gdpr).
 ### Consent Audit Log
 An audit log of a [Consent](#consent) which is accessible via its [Consent Repository](#consent-repository).
 
-### Consent Credentials
-Credentials which provide access to a [Consent Repository](#consent-repository).
+### Consent Credential
+Credential which provide access to a [Consent Repository](#consent-repository).
 
 ### Consent Data Descriptor
 [Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
 
-### Consent Data Provider Credentials
-[Consent Credentials](#consent-credentials) for a [Data Provider](#data-provider).
+### Consent Data Provider Credential
+[Consent Credential](#consent-credential) for a [Data Provider](#data-provider).
 
 ### Consent Delete Request
 A [Qiy Node Request](#qiy-node-request) which can be used to delete a [Consent](#consent).
@@ -198,17 +198,17 @@ A [Qiy Node Request](#qiy-node-request) which can be used to communicate the gra
 ### Consent Granted Event
 A [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](#consent).
 
-### Consent Individual Credentials
-[Consent Credentials](#consent-credentials) for an [Individual](#individual).
+### Consent Individual Credential
+[Consent Credential](#consent-credential) for an [Individual](#individual).
 
 ### Consent Notification Message
 A [Qiy Node Message](#qiy-node-message) which can be used to notify the registration of a [Consent](#consent).
 
-### Consent Relying Party Credentials
-[Consent Credentials](#consent-credentials) for a [Relying Party](#relying-party).
+### Consent Relying Party Credential
+[Consent Credential](#consent-credential) for a [Relying Party](#relying-party).
 
 ### Consent Repository
-A repository for a [Consent](#consent) which can only be accessed with the proper [Consent Credentials](#consent-credentials).
+A repository for a [Consent](#consent) which can only be accessed with the proper [Consent Credential](#consent-credential).
 
 ### Consent Request Message
 A [Qiy Node Message](#qiy-node-message) which can be used to [Request](#request) for a [Consent](#consent).
@@ -503,8 +503,8 @@ A [Node](#node): a point of entry for a [Qiy User](#qiy-user) to connect to his 
 ### Qiy Node API
 The [API](#api) of the [Qiy Node Interface](#qiy-node-interface) which is part of the [Qiy Open Standard](#qiy-open-standard).
 
-### Qiy Node Credentials
-The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
+### Qiy Node Credential
+The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node).
 
 ### Qiy Node Create Request
 A [Qiy Node Request](#qiy-node-request) that can be used to create a [Qiy Node](#qiy-node).
@@ -632,23 +632,23 @@ A pattern for consuming [Services](#service) indirectly using [References](#refe
 ### Service Catalogue
 A [Business Object](#business-object) for information about all the [Services](#service) that a [Service Provider](#service-provider) can provide.
 
-### Service Credentials
-[Credentials](#credential) for accessing a [Service Endpoint](#service-endpoint).
+### Service Credential
+[Credential](#credential) for accessing a [Service Endpoint](#service-endpoint).
 
-### Service Credentials Details Request
-A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of [Service Credentials](#service-credentials) for a [Data Source](#data-source) of a [Consent](#consent).
+### Service Credential Details Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
-### Service Credentials Register Request
-A [Qiy Node Request](#qiy-node-request) to register the [Service Credentials](#service-credentials) for a [Data Source](#data-source) of a [Consent](#consent).
+### Service Credential Register Request
+A [Qiy Node Request](#qiy-node-request) to register the [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
-### Service Credentials Request Message
-A [Qiy Node Message](#qiy-node-message) for requesting [Service Credentials](#service-credentials).
+### Service Credential Request Message
+A [Qiy Node Message](#qiy-node-message) for requesting [Service Credential](#service-credential).
 
-### Service Credentials Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister the [Service Credentials](#service-credentials) of a [Data Source](#data-source) of a [Consent](#consent).
+### Service Credential Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister the [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
-### Service Credentials Update Request
-A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update the [Service Credentials](#service-credentials) of a [Data Source](#data-source) of a [Consent](#consent).
+### Service Credential Update Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update the [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.

@@ -43,7 +43,7 @@ This document describes how [Individuals](../Definitions.md#individual) and [Dat
 # Preconditions
 
 1. The [Data Provider](../Definitions.md#data-provider) is registered as such in the [Service Portfolio](../Definitions.md#service-portfolio) of the [Individual](../Definitions.md#individual).
-1. The [Individual](../Definitions.md#individual) has unused [Consent Data Provider Credentials](../Definitions.md#consent-data-provider-credentials) of the [Consent](../Definitions.md#consent).
+1. The [Individual](../Definitions.md#individual) has unused [Consent Data Provider Credentials](../Definitions.md#consent-data-provider-credential) of the [Consent](../Definitions.md#consent).
 1. The [Data Provider](../Definitions.md#data-provider) can provide the consented [Personal Data](../Definitions.md#personal-data).
 
 # Basic Flow: Individual adds Data Source
@@ -109,24 +109,24 @@ The [Individual](../Definitions.md#individual) requests the [Qiy Trust Network](
 
 #### 2. The Qiy Trust Network requests the Data Provider for Service Credentials
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) requests the [Data Provider](../Definitions.md#data-provider) for [Service Credentials](../Definitions.md#service-credentials) that will allow the [Individual](../Definitions.md#individual) to use the [Service Endpoint](../Definitions.md#service-endpoint) of the [Data Provider](../Definitions.md#data-provider) using a [Service Credentials Request Message](../Definitions.md#service-credentials-request-message).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) requests the [Data Provider](../Definitions.md#data-provider) for [Service Credentials](../Definitions.md#service-credential) that will allow the [Individual](../Definitions.md#individual) to use the [Service Endpoint](../Definitions.md#service-endpoint) of the [Data Provider](../Definitions.md#data-provider) using a [Service Credentials Request Message].
 
 #### 3. The Data Provider generates the Service Credentials
 
-The [Data Provider](../Definitions.md#data-provider) generates the [Service Credentials](../Definitions.md#service-credentials).
+The [Data Provider](../Definitions.md#data-provider) generates the [Service Credentials](../Definitions.md#service-credential).
 
 #### 4. The Data Provider returns the Service Credentials to the Qiy Trust Network
 
-The [Data Provider](../Definitions.md#data-provider) returns the [Service Credentials](../Definitions.md#service-credentials) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) in the response of the [Service Credentials Request Message](../Definitions.md#service-credentials-request-message).
+The [Data Provider](../Definitions.md#data-provider) returns the [Service Credentials](../Definitions.md#service-credential) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) in the response of the [Service Credentials Request Message].
 
 #### 5. The Qiy Trust Network updates the Service Portfolio
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) updates the [Service Portfolio](../Definitions.md#service-portfolio) by adding the [Data Provider](../Definitions.md#data-provider) and persisting the [Service Credentials](../Definitions.md#service-credentials).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) updates the [Service Portfolio](../Definitions.md#service-portfolio) by adding the [Data Provider](../Definitions.md#data-provider) and persisting the [Service Credentials](../Definitions.md#service-credential).
 
 
 ### Postconditions
 
-1. The [Data Provider](../Definitions.md#data-provider) is registered as such in the [Service Portfolio](../Definitions.md#service-portfolio) of the [Individual](../Definitions.md#individual) with the [Service Credentials](../Definitions.md#service-credentials) to access to the [Individuals](../Definitions.md#individual) [Personal Data](../Definitions.md#personal-data) it keeps.
+1. The [Data Provider](../Definitions.md#data-provider) is registered as such in the [Service Portfolio](../Definitions.md#service-portfolio) of the [Individual](../Definitions.md#individual) with the [Service Credentials](../Definitions.md#service-credential) to access to the [Individuals](../Definitions.md#individual) [Personal Data](../Definitions.md#personal-data) it keeps.
 
 
 # Diagram Source Code

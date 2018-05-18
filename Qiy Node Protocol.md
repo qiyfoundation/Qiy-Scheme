@@ -99,10 +99,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Source Register Request](#2123-source-register-request)
 		1. [Source Unregister Request](#2124-source-unregister-request)
 		1. [Source Update Request](#2125-source-update-request)
-		1. [Service Credentials Details Request](#2126-service-credentials-details-request)
-		1. [Service Credentials Register Request](#2127-service-credentials-register-request)
-		1. [Service Credentials Unregister Request](#2128-service-credentials-unregister-request)
-		1. [Service Credentials Update Request](#2129-service-credentials-update-request)
+		1. [Service Credential Details Request](#2126-service-credential-details-request)
+		1. [Service Credential Register Request](#2127-service-credential-register-request)
+		1. [Service Credential Unregister Request](#2128-service-credential-unregister-request)
+		1. [Service Credential Update Request](#2129-service-credential-update-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -123,8 +123,8 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Operation Specification Request Message](#423-operation-specification-request-message)
 	1. [Portfolio Messages](#43-portfolio-messages)
 		1. [Portfolio Register Message](#431-portfolio-register-message)
-	1. [Service Credentials Messages](#44-service-credentials-messages)
-		1. [Service Credentials Request Message](#441-service-credentials-request-message)
+	1. [Service Credential Messages](#44-service-credential-messages)
+		1. [Service Credential Request Message](#441-service-credential-request-message)
 	1. [Source Messages](#45-source-messages)
 		1. [Source Candidates Message](#451-source-candidates-message)
 1. [Models](#5-models)
@@ -168,10 +168,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Qiy Node  Attributes](#5101-qiy-node--attributes)
 		1. [Qiy Node Relations](#5102-qiy-node-relations)
 		1. [Qiy Node Business Rules](#5103-qiy-node-business-rules)
-	1. [Qiy Node Credentials](#511-qiy-node-credentials)
-		1. [Qiy Node Credentials Attributes](#5111-qiy-node-credentials-attributes)
-		1. [Qiy Node Credentials Relations](#5112-qiy-node-credentials-relations)
-		1. [Qiy Node Credentials Business Rules](#5113-qiy-node-credentials-business-rules)
+	1. [Qiy Node Credential](#511-qiy-node-credential)
+		1. [Qiy Node Credential Attributes](#5111-qiy-node-credential-attributes)
+		1. [Qiy Node Credential Relations](#5112-qiy-node-credential-relations)
+		1. [Qiy Node Credential Business Rules](#5113-qiy-node-credential-business-rules)
 	1. [Service Description](#512-service-description)
 		1. [Service Description Attributes](#5121-service-description-attributes)
 		1. [Service Description Relations](#5122-service-description-relations)
@@ -262,7 +262,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Published Services Request](#published-services-request)
 	1. [Qiy Node](#qiy-node)
 	1. [Qiy Node Create Request](#qiy-node-create-request)
-	1. [Qiy Node Credentials](#qiy-node-credentials)
+	1. [Qiy Node Credential](#qiy-node-credential)
 	1. [Qiy Node Delete Request](#qiy-node-delete-request)
 	1. [Qiy Node Message](#qiy-node-message)
 	1. [Qiy App](#qiy-app)
@@ -270,11 +270,12 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Relying Party](#relying-party)
 	1. [Service](#service)
 	1. [Service Catalogue](#service-catalogue)
-	1. [Service Credentials Details Request](#service-credentials-details-request)
-	1. [Service Credentials Request Message](#service-credentials-request-message)
-	1. [Service Credentials Register Request](#service-credentials-register-request)
-	1. [Service Credentials Unregister Request](#service-credentials-unregister-request)
-	1. [Service Credentials Update Request](#service-credentials-update-request)
+	1. [Service Credential Details Request](#service-credential-details-request)
+	1. [Service Credential Request Message](#service-credential-request-message)
+	1. [Service Credential Register Request](#service-credential-register-request)
+	1. [Service Credential Unregister Request](#service-credential-unregister-request)
+	1. [Service Credential Update Request](#service-credential-update-request)
+	1. [Service Credentials Request](#service-credentials-request)
 	1. [Service Description](#service-description)
 	1. [Service Endpoint](#service-endpoint)
 	1. [Service Portfolio](#service-portfolio)
@@ -646,17 +647,17 @@ The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Reque
 ### 2.12.5 Source Update Request
 The [Source Update Request](#source-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.6 Service Credentials Details Request
-The [Service Credentials Details Request](#service-credentials-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of [Service Credentials](Definitions.md#service-credentials) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+### 2.12.6 Service Credential Details Request
+The [Service Credential Details Request](#service-credential-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.7 Service Credentials Register Request
-The [Service Credentials Register Request](#service-credentials-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register the [Service Credentials](Definitions.md#service-credentials) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+### 2.12.7 Service Credential Register Request
+The [Service Credential Register Request](#service-credential-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register the [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.8 Service Credentials Unregister Request
-The [Service Credentials Unregister Request](#service-credentials-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister the [Service Credentials](Definitions.md#service-credentials) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+### 2.12.8 Service Credential Unregister Request
+The [Service Credential Unregister Request](#service-credential-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister the [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.9 Service Credentials Update Request
-The [Service Credentials Update Request](#service-credentials-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update the [Service Credentials](Definitions.md#service-credentials) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+### 2.12.9 Service Credential Update Request
+The [Service Credential Update Request](#service-credential-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update the [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
 
 # 3 Events
@@ -718,10 +719,10 @@ The [Operation Specification Request Message](#operation-specification-request-m
 ### 4.3.1 Portfolio Register Message
 The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to request to add a [Data Provider](Definitions.md#data-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
 
-## 4.4 Service Credentials Messages
+## 4.4 Service Credential Messages
 
-### 4.4.1 Service Credentials Request Message
-The [Service Credentials Request Message](#service-credentials-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) for requesting [Service Credentials](Definitions.md#service-credentials).
+### 4.4.1 Service Credential Request Message
+The [Service Credential Request Message](#service-credential-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) for requesting a [Service Credential](Definitions.md#service-credential).
 
 ## 4.5 Source Messages
 
@@ -910,17 +911,17 @@ See [Qiy Node](#qiy-node) model.
 
 tbd
 
-## 5.11 Qiy Node Credentials
+## 5.11 Qiy Node Credential
 
-### 5.11.1 Qiy Node Credentials Attributes
+### 5.11.1 Qiy Node Credential Attributes
 
-See [Qiy Node Credentials](#qiy-node-credentials) model.
+See [Qiy Node Credential](#qiy-node-credential) model.
 
-### 5.11.2 Qiy Node Credentials Relations
+### 5.11.2 Qiy Node Credential Relations
 
-See [Qiy Node Credentials](#qiy-node-credentials) model.
+See [Qiy Node Credential](#qiy-node-credential) model.
 
-### 5.11.3 Qiy Node Credentials Business Rules
+### 5.11.3 Qiy Node Credential Business Rules
 
 tbd
 
@@ -1599,13 +1600,13 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /createEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#createEndpointPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.11.1 Qiy Node Create Request](#2111-qiy-node-create-request)
 
-## Qiy Node Credentials
+## Qiy Node Credential
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Qiy Node Credentials](Definitions.md#qiy-node-credentials)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credentials Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#QiyNodeCredentialsModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Qiy Node Credentials](#511-qiy-node-credentials)
+[Definitions](Definitions.md)                 | [Qiy Node Credential](Definitions.md#qiy-node-credential)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credential Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#QiyNodeCredentialModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Qiy Node Credential](#511-qiy-node-credential)
 
 ## Qiy Node Delete Request
 
@@ -1654,45 +1655,53 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Service Catalogue](Definitions.md#service-catalogue)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Catalogue](#catalogue)
 
-## Service Credentials Details Request
+## Service Credential Details Request
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Details Request](Definitions.md#service-credentials-details-request)
+[Definitions](Definitions.md)                 | [Service Credential Details Request](Definitions.md#service-credential-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.6 Service Credential Details Request](#2126-service-credential-details-request)
+
+## Service Credential Request Message
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Service Credential Request Message](Definitions.md#service-credential-request-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Service Credential Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceCredentialRequestMessageModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.4.1 Service Credential Request Message](#441-service-credential-request-message)
+
+## Service Credential Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Service Credential Register Request](Definitions.md#service-credential-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.7 Service Credential Register Request](#2127-service-credential-register-request)
+
+## Service Credential Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Service Credential Unregister Request](Definitions.md#service-credential-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.8 Service Credential Unregister Request](#2128-service-credential-unregister-request)
+
+## Service Credential Update Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Service Credential Update Request](Definitions.md#service-credential-update-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlPatch)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.9 Service Credential Update Request](#2129-service-credential-update-request)
+
+## Service Credentials Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Service Credentials Request]
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceCredentialsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialsUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.6 Service Credentials Details Request](#2126-service-credentials-details-request)
-
-## Service Credentials Request Message
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Request Message](Definitions.md#service-credentials-request-message)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Service Credentials Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceCredentialsRequestMessageModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.4.1 Service Credentials Request Message](#441-service-credentials-request-message)
-
-## Service Credentials Register Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Register Request](Definitions.md#service-credentials-register-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /credentialsRegisterUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#credentialsRegisterUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.7 Service Credentials Register Request](#2127-service-credentials-register-request)
-
-## Service Credentials Unregister Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Unregister Request](Definitions.md#service-credentials-unregister-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceCredentialsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialsUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.8 Service Credentials Unregister Request](#2128-service-credentials-unregister-request)
-
-## Service Credentials Update Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Update Request](Definitions.md#service-credentials-update-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceCredentialsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialsUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.9 Service Credentials Update Request](#2129-service-credentials-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Service Credentials Request](#2716-service-credentials-request)
 
 ## Service Description
 
@@ -1775,6 +1784,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Consent](#54-consent)
 
 ## Source Candidates Message
 
