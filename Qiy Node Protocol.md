@@ -196,6 +196,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Service Description Attributes](#5121-service-description-attributes)
 		1. [Service Description Relations](#5122-service-description-relations)
 		1. [Service Description Business Rules](#5123-service-description-business-rules)
+	1. [Source Model](#source-model)
+		1. [Source Attributes](#source-attributes)
+		1. [Source Relations](#source-relations)
+		1. [Source Business Rules](#source-business-rules)
 	1. [Subscription](#513-subscription)
 		1. [Subscription Attributes](#5131-subscription-attributes)
 		1. [Subscription Relations](#5132-subscription-relations)
@@ -1070,6 +1074,30 @@ See [Service Description](#service-description) model.
 ### 5.12.3 Service Description Business Rules
 
 tbd
+
+## Source Model
+
+This section describes the [Source](#source) entity type.
+
+A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](Definitions.md#consent).
+
+### Source Attributes
+
+See [Source](#source) model.
+
+### Source Relations
+
+See [Source](#source) model.
+A [Source](#source):
+* has zero or one [Account](#account).
+* has one [Consent](#consent).
+* has zero or one [Data Service](Definitions.md#data-service) ([Published Service](#published-service)).
+* has zero or more [Operations](#operation).
+* has zero or more [Service Credentials](#service-credential).
+
+### Source Business Rules
+
+* tbd
 
 ## 5.13 Subscription
 
