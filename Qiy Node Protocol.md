@@ -94,15 +94,20 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Qiy Node Create Request](#2111-qiy-node-create-request)
 		1. [Qiy Node Delete Request](#2112-qiy-node-delete-request)
 	1. [Source Requests](#212-source-requests)
-		1. [Source Candidates Request](#2121-source-candidates-request)
-		1. [Source Details Request](#2122-source-details-request)
-		1. [Source Register Request](#2123-source-register-request)
-		1. [Source Unregister Request](#2124-source-unregister-request)
-		1. [Source Update Request](#2125-source-update-request)
-		1. [Service Credential Details Request](#2126-service-credential-details-request)
-		1. [Service Credential Register Request](#2127-service-credential-register-request)
-		1. [Service Credential Unregister Request](#2128-service-credential-unregister-request)
-		1. [Service Credential Update Request](#2129-service-credential-update-request)
+		1. [Operation Details Request](#2121-operation-details-request)
+		1. [Operation Register Request](#2122-operation-register-request)
+		1. [Operation Unregister Request](#2123-operation-unregister-request)
+		1. [Operation Update Request](#2124-operation-update-request)
+		1. [Operations Request](#2125-operations-request)
+		1. [Source Candidates Request](#2126-source-candidates-request)
+		1. [Source Details Request](#2127-source-details-request)
+		1. [Source Register Request](#2128-source-register-request)
+		1. [Source Unregister Request](#2129-source-unregister-request)
+		1. [Source Update Request](#21210-source-update-request)
+		1. [Service Credential Details Request](#21211-service-credential-details-request)
+		1. [Service Credential Register Request](#21212-service-credential-register-request)
+		1. [Service Credential Unregister Request](#21213-service-credential-unregister-request)
+		1. [Service Credential Update Request](#21214-service-credential-update-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -236,13 +241,19 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Message Post Request](#message-post-request)
 	1. [Message Received Event](#message-received-event)
 	1. [Messages Request](#messages-request)
+	1. [Operation](#operation)
+	1. [Operation Details Request](#operation-details-request)
 	1. [Operation Execute Request](#operation-execute-request)
+	1. [Operation Reference](#operation-reference)
 	1. [Operation Reference Message](#operation-reference-message)
 	1. [Operation Reference Request](#operation-reference-request)
 	1. [Operation Reference Request Message](#operation-reference-request-message)
 	1. [Operation Register Request](#operation-register-request)
 	1. [Operation Specification](#operation-specification)
 	1. [Operation Specification Request Message](#operation-specification-request-message)
+	1. [Operation Unregister Request](#operation-unregister-request)
+	1. [Operation Update Request](#operation-update-request)
+	1. [Operations Request](#operations-request)
 	1. [Persistent Id](#persistent-id)
 	1. [Persistent Id Event](#persistent-id-event)
 	1. [Portfolio](#portfolio)
@@ -632,31 +643,46 @@ The [Qiy Node Delete Request](#qiy-node-delete-request) is a [Qiy Node Request](
 
 ## 2.12 Source Requests
 
-### 2.12.1 Source Candidates Request
+### 2.12.1 Operation Details Request
+The [Operation Details Request](#operation-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of an [Operation](Definitions.md#operation).
+
+### 2.12.2 Operation Register Request
+The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Operation](Definitions.md#operation).
+
+### 2.12.3 Operation Unregister Request
+The [Operation Unregister Request](#operation-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Operation](Definitions.md#operation).
+
+### 2.12.4 Operation Update Request
+The [Operation Update Request](#operation-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of an [Operation](Definitions.md#operation).
+
+### 2.12.5 Operations Request
+The [Operations Request](#operations-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Operations](Definitions.md#operation).
+
+### 2.12.6 Source Candidates Request
 The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.2 Source Details Request
+### 2.12.7 Source Details Request
 The [Source Details Request](#source-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.3 Source Register Request
+### 2.12.8 Source Register Request
 The [Source Register Request](#source-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.4 Source Unregister Request
+### 2.12.9 Source Unregister Request
 The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.5 Source Update Request
+### 2.12.10 Source Update Request
 The [Source Update Request](#source-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
-### 2.12.6 Service Credential Details Request
+### 2.12.11 Service Credential Details Request
 The [Service Credential Details Request](#service-credential-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.7 Service Credential Register Request
+### 2.12.12 Service Credential Register Request
 The [Service Credential Register Request](#service-credential-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register the [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.8 Service Credential Unregister Request
+### 2.12.13 Service Credential Unregister Request
 The [Service Credential Unregister Request](#service-credential-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister the [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
-### 2.12.9 Service Credential Update Request
+### 2.12.14 Service Credential Update Request
 The [Service Credential Update Request](#service-credential-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update the [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
 
@@ -862,6 +888,9 @@ tbd
 
 ## 5.8 Operation Specification
 
+This section describes the [Operation Specification](Definitions.md#operation-specification) entity type.
+The [Operation Specification](Definitions.md#operation-specification) specifies an [Operation](Definitions.md#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
+
 ### 5.8.1 Operation Specification Attributes
 
 See [Operation Specification](#operation-specification) model.
@@ -869,10 +898,13 @@ See [Operation Specification](#operation-specification) model.
 ### 5.8.2 Operation Specification Relations
 
 See [Operation Specification](#operation-specification) model.
+An [Operation Specification](Definitions.md#operation-specification):
+* is part of an [Operation](#operation).
 
 ### 5.8.3 Operation Specification Business Rules
 
-tbd
+* A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
+* A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 
 ## 5.9 Portfolio
 
@@ -1398,6 +1430,21 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /mboxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#mboxUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.4 Messages Request](#284-messages-request)
 
+## Operation
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Operation Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
+
+## Operation Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Operation Details Request](Definitions.md#operation-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /operationUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.1 Operation Details Request](#2121-operation-details-request)
+
 ## Operation Execute Request
 
 Specification | Reference
@@ -1405,6 +1452,14 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Operation Execute Request](Definitions.md#operation-execute-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /refEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#refEndpointGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.9.1 Operation Execute Request](#291-operation-execute-request)
+
+## Operation Reference
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                   | [Operation Reference](Definitions.md#operation-reference)
+[Qiy Node API](Qiy%20Node%20API.json)           | [Operation Reference Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationReferenceModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md)   | [5.8 Operation Specification](#58-operation-specification)
 
 ## Operation Reference Message
 
@@ -1435,8 +1490,8 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Register Request](Definitions.md#operation-register-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /refsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#refsEndpointPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.9.3 Operation Register Request](#293-operation-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /operationssUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationssUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.2 Operation Register Request](#2122-operation-register-request)
 
 ## Operation Specification
 
@@ -1453,6 +1508,30 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Operation Specification Request Message](Definitions.md#operation-specification-request-message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Operation Specification Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationSpecificationRequestMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.2.3 Operation Specification Request Message](#423-operation-specification-request-message)
+
+## Operation Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Operation Unregister Request](Definitions.md#operation-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /operationUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.3 Operation Unregister Request](#2123-operation-unregister-request)
+
+## Operation Update Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Operation Update Request](Definitions.md#operation-update-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /operationUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationUrlPatch)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.4 Operation Update Request](#2124-operation-update-request)
+
+## Operations Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Operations Request](Definitions.md#operations-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /operationsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationsUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.5 Operations Request](#2125-operations-request)
 
 ## Persistent Id
 
@@ -1661,7 +1740,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Credential Details Request](Definitions.md#service-credential-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.6 Service Credential Details Request](#2126-service-credential-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.11 Service Credential Details Request](#21211-service-credential-details-request)
 
 ## Service Credential Request Message
 
@@ -1677,7 +1756,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Credential Register Request](Definitions.md#service-credential-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.7 Service Credential Register Request](#2127-service-credential-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.12 Service Credential Register Request](#21212-service-credential-register-request)
 
 ## Service Credential Unregister Request
 
@@ -1685,7 +1764,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Credential Unregister Request](Definitions.md#service-credential-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.8 Service Credential Unregister Request](#2128-service-credential-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.13 Service Credential Unregister Request](#21213-service-credential-unregister-request)
 
 ## Service Credential Update Request
 
@@ -1693,7 +1772,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Credential Update Request](Definitions.md#service-credential-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceCredentialUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.9 Service Credential Update Request](#2129-service-credential-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.14 Service Credential Update Request](#21214-service-credential-update-request)
 
 ## Service Credentials Request
 
@@ -1800,7 +1879,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Candidates Request](Definitions.md#source-candidates-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /candidatesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#candidatesUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.1 Source Candidates Request](#2121-source-candidates-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.6 Source Candidates Request](#2126-source-candidates-request)
 
 ## Source Details Request
 
@@ -1808,7 +1887,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Details Request](Definitions.md#source-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#sourceUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.2 Source Details Request](#2122-source-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.7 Source Details Request](#2127-source-details-request)
 
 ## Source Register Request
 
@@ -1816,7 +1895,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Register Request](Definitions.md#source-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#consentUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.3 Source Register Request](#2123-source-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.8 Source Register Request](#2128-source-register-request)
 
 ## Source Unregister Request
 
@@ -1824,7 +1903,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Unregister Request](Definitions.md#source-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#sourceUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.4 Source Unregister Request](#2124-source-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.9 Source Unregister Request](#2129-source-unregister-request)
 
 ## Source Update Request
 
@@ -1832,7 +1911,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Source Update Request](Definitions.md#source-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /sourceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#sourceUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.5 Source Update Request](#2125-source-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.10 Source Update Request](#21210-source-update-request)
 
 ## Subscription
 

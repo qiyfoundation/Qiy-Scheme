@@ -624,6 +624,66 @@
                 "payload"
             ]
         },
+        "OperationModel": {
+            "description": "Operation Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "self": {
+                            "description": "Operation (operationUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "source": {
+                            "description": "Source (sourceUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+		        "self",
+		        "source"
+                    ]
+                },
+                "reference": {
+                    "$ref": "#/definitions/OperationReferenceModel"
+                },
+                "specification": {
+                    "$ref": "#/definitions/OperationSpecificationModel"
+                },
+                "state": {
+                    "description": "State of the library.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "OperationsModel": {
+            "description": "List of Operations.",
+	    "items": {
+                "description": "Operation (operationUrl)",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "OperationReferenceRequestMessageModel": {
             "allOf": [
                 {
@@ -654,8 +714,11 @@
                 }
             ]
         },
+        "OperationReferenceModel": {
+            "description": "See [Operation Reference](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-reference).",
+            "type": "string"
+	},
         "OperationSpecificationModel": {
-            "type": "object",
             "description": "See [Operation Specification](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification).",
             "properties": {
                 "body": {
@@ -708,7 +771,8 @@
                     "type": "string",
                     "format": "url"
                 }
-            }
+            },
+            "type": "object"
         },
         "PortfolioModel": {
             "description": "Portfolio Model.",
@@ -891,7 +955,7 @@
                 "id"
             ]
         },
-        "ReferenceModel": {
+        "ReferenceResultModel": {
             "description": "Reference details.",
             "type": "object",
             "properties": {
@@ -917,20 +981,6 @@
                 }
             }
         },
-        "ReferenceModel": {
-            "description": "Operation Reference",
-            "type": "string"
-        },
-        "ReferenceResultModel": {
-            "description": "Resolved Reference",
-            "type": "object",
-            "properties": {
-                "data": {
-                    "description": "Data",
-                    "type": "string"
-                }
-            }
-        },
         "ReferencesResultModel": {
             "description": "References result.",
             "type": "object",
@@ -939,7 +989,7 @@
                     "description": "References with the application protocol uri specified by the name of the object property.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ReferenceModel"
+                        "$ref": "#/definitions/ReferenceResultModel"
                     }
                 }
             },
@@ -1027,13 +1077,8 @@
 			    "format": "url",
 			    "type": "string"
 		        },
-        	        "candidates": {
+                        "candidates": {
 			    "description": "Source Candidates (candidatesUrl)",
-			    "format": "url",
-			    "type": "string"
-		        },
-		        "dataService": {
-			    "description": "Data Service (publishedServiceUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
@@ -1042,13 +1087,23 @@
 			    "format": "url",
 			    "type": "string"
 		        },
-		        "serviceCredentials": {
-			    "description": "Service Credentials (serviceCredentialsUrl).",
+        	        "dataService": {
+			    "description": "Data Service (publishedServiceUrl).",
+			    "format": "url",
+			    "type": "string"
+		        },
+        	        "operations": {
+			    "description": "Operations (operationsUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
 		        "self": {
 			    "description": "Source (sourceUrl)",
+			    "format": "url",
+			    "type": "string"
+		        },
+        	        "serviceCredentials": {
+			    "description": "Service Credentials (serviceCredentialsUrl).",
 			    "format": "url",
 			    "type": "string"
 		        }
@@ -2126,6 +2181,112 @@
                 }
             }
         },
+        "/operationsUrl": {
+            "get": {
+                "summary": "Get Operations",
+                "description": "See [Operations Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operations-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+		    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
+            "post": {
+                "summary": "Operation Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Operation Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OperationModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/operationUrl": {
+	    "delete": {
+                "summary": "Unregister Operation.",
+                "description": "See [Operation Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Operation Details",
+                "description": "See [Operation Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+		    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationModel"
+                        }
+                    }
+                }
+            }
+        },
         "/portfolioEndpoint": {
             "get": {
                 "summary": "Get Portfolio details",
@@ -2840,45 +3001,6 @@
                 "tags": [
                     "Data",
                     "Relying Party"
-                ]
-            },
-            "post": {
-                "summary": "Register Operation Specification",
-                "description": "See [Operation Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-register-request).",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/authorizationParam"
-                    },
-                    {
-                        "name": "operation-specification",
-                        "description": "See [Operation Specification](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification).",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/OperationSpecificationModel"
-                        }
-                    }
-                ],
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "200, Successful execution.",
-                        "schema": {
-                            "$ref": "#/definitions/ReferenceModel"
-                        }
-                    },
-                    "400": {
-                        "description": "400,600 Unsuccessful execution."
-                    }
-                },
-                "tags": [
-                    "Data",
-                    "Data Provider"
                 ]
             }
         }

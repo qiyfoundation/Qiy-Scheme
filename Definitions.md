@@ -393,6 +393,9 @@ A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
 ### Operation
 A 'sub-service' which can be used to consume a [Service](#service).
 
+### Operation Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of an [Operation](#operation).
+
 ### Operation Execute Request
 A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](#reference) using an [Operation Reference](#operation-reference).
 
@@ -409,13 +412,22 @@ A [Request](#request) for an [Operation Reference](#operation-reference).
 A [Qiy Node Message](#qiy-node-message) that can be used to convey a [Operation Reference Request](#operation-reference-request).
 
 ### Operation Register Request
-A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registering an [Operation Specification](#operation-specification).
+A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
 
 ### Operation Specification
 A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
 
 ### Operation Specification Request Message
 A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
+
+### Operation Unregister Request
+A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
+
+### Operation Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of an [Operation](#operation).
+
+### Operations Request
+A [Qiy Node Request](#qiy-node-request) to list [Operations](#operation).
 
 ### Path
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
