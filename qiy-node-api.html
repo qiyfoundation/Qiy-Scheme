@@ -2955,11 +2955,10 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
-    "provider" : "http://example.com/aeiou",
-    "portfolio" : "http://example.com/aeiou",
     "service" : "http://example.com/aeiou",
-    "consents" : "http://example.com/aeiou",
-    "self" : "http://example.com/aeiou"
+    "self" : "http://example.com/aeiou",
+    "consent" : "http://example.com/aeiou",
+    "account" : "http://example.com/aeiou"
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -4453,11 +4452,10 @@ font-style: italic;
     <h3><a name="SubscriptionModel_links"><code>SubscriptionModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Subscription links.</div>
     <div class="field-items">
-      <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents (consentsUrl). format: url</div>
-<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl). format: url</div>
+      <div class="param">consent (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent (consentUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription (subscriptionUrl) format: url</div>
 <div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service (publishedServiceUrl). format: url</div>
-<div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio (portfolioEndpoint) format: url</div>
+<div class="param">account (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Account (accountUrl) format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

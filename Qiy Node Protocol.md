@@ -951,15 +951,15 @@ See [Subscription](#subscription) model.
 
 See [Subscription](#subscription) model.
 A [Subscription](Definitions.md#subscription):
-* has one subscriber: a [Qiy User](Definitions.md#qiy-user).
-* has one provider: a [Published Provider].
-* has one [Published Service](#published-service).
-* has zero or more of: [Consent](#consent).
+* has one subscriber, a [Qiy User](Definitions.md#qiy-user).
+* has one [Service](Definitions.md#service) ([Published Service](#published-service)).
+* has zero or one [Account](#account).
+* has zero or one [Consent](#consent).
 
 ### 5.13.3 Subscription Business Rules
 
 * The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
-* The [Published Provider] has read-access to a [Subscription](Definitions.md#subscription).
+* The [Service Provider](Definitions.md#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
 
 
 # 6 Index

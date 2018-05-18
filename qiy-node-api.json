@@ -1105,13 +1105,8 @@
 		"links": {
                     "description": "Subscription links.",
                     "properties": {
-                        "consents": {
-		            "description": "Consents (consentsUrl).",
-			    "format": "url",
-			    "type": "string"
-		        },
-                        "provider": {
-		            "description": "Service Provider (publishedProviderUrl).",
+                        "consent": {
+		            "description": "Consent (consentUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
@@ -1125,14 +1120,13 @@
 			    "format": "url",
 			    "type": "string"
 		        },
-                        "portfolio": {
-		            "description": "Portfolio (portfolioEndpoint)",
+                        "account": {
+		            "description": "Account (accountUrl)",
 			    "format": "url",
 			    "type": "string"
 		        }
 		    },
 		    "required": [
-			"provider",
 		        "self",
 			"service"
 		    ],
