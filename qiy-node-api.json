@@ -734,7 +734,7 @@
                     "$ref": "#/definitions/OperationSpecificationModel"
                 },
                 "state": {
-                    "description": "State of the library.",
+                    "description": "State of the Operation.",
                     "type": "string"
                 }
             },

@@ -169,6 +169,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Message Attributes](#571-message-attributes)
 		1. [Message Relations](#572-message-relations)
 		1. [Message Business Rules](#573-message-business-rules)
+	1. [Operation Model](#operation-model)
+		1. [Operation Attributes](#operation-attributes)
+		1. [Operation Relations](#operation-relations)
+		1. [Operation Business Rules](#operation-business-rules)
 	1. [Operation Specification](#58-operation-specification)
 		1. [Operation Specification Attributes](#581-operation-specification-attributes)
 		1. [Operation Specification Relations](#582-operation-specification-relations)
@@ -817,8 +821,6 @@ A [Candidate](#candidate):
 
 * tbd
 
-
-
 ## 5.1 Catalogue
 
 This section describes the [Service Catalogue](Definitions.md#service-catalogue) model.
@@ -944,6 +946,28 @@ See [Message](#message) model.
 ### 5.7.3 Message Business Rules
 
 tbd
+
+## Operation Model
+
+This section describes the [Operation](#operation) entity type.
+
+An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](Definitions.md#consent) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
+
+### Operation Attributes
+
+See [Operation](#operation) model.
+
+### Operation Relations
+
+See [Operation](#operation) model.
+An [Operation](#operation):
+* has one [Source](#source).
+* has one [Operation Specification](#operation-specification).
+* has one [Operation Reference](#operation-reference).
+
+### Operation Business Rules
+
+* tbd
 
 ## 5.8 Operation Specification
 
@@ -1511,7 +1535,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation](Definitions.md#operation)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Operation Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Model](#operation-model)
 
 ## Operation Details Request
 
