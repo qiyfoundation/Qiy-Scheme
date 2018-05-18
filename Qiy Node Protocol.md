@@ -208,6 +208,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Account Update Request](#account-update-request)
 	1. [Accounts Request](#accounts-request)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
+	1. [Candidate](#candidate)
 	1. [Catalogue](#catalogue)
 	1. [Catalogue Details Request](#catalogue-details-request)
 	1. [Catalogues Request](#catalogues-request)
@@ -674,7 +675,7 @@ The [Operation Update Request](#operation-update-request) is a [Qiy Node Request
 The [Operations Request](#operations-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Operations](Definitions.md#operation).
 
 ### 2.12.6 Source Candidates Request
-The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain [Candidates](#candidate) for a [Consent](Definitions.md#consent).
 
 ### 2.12.7 Source Details Request
 The [Source Details Request](#source-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
@@ -1150,6 +1151,13 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.4 Authentication](#214-authentication)
+
+## Candidate
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Candidate Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#CandidateModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Candidate Model](#candidate-model)
 
 ## Catalogue
 
