@@ -137,6 +137,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Account Attributes](#account-attributes)
 		1. [Account Relations](#account-relations)
 		1. [Account Business Rules](#account-business-rules)
+	1. [Candidate Model](#candidate-model)
+		1. [Candidate Attributes](#candidate-attributes)
+		1. [Candidate Relations](#candidate-relations)
+		1. [Candidate Business Rules](#candidate-business-rules)
 	1. [Catalogue](#51-catalogue)
 		1. [Catalogue Attributes](#511-catalogue-attributes)
 		1. [Catalogue Relations](#512-catalogue-relations)
@@ -783,10 +787,33 @@ An [Account](#account):
 * has one [Qiy User](Definitions.md#qiy-user).
 * has one [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
 * has zero or more [Persistent Ids](#persistent-id).
+* is used for zero or more [Candidates](#candidate).
 * is used for zero or more [Sources](#source).
 * is used for zero or more [Subcriptions](#subscription).
 
 ### Account Business Rules
+
+* tbd
+
+## Candidate Model
+
+This section describes the [Candidate](#candidate) entity type.
+
+A [Candidate](#candidate) is a possible [Source](#source) to provide [Personal Data](Definitions.md#personal-data) for a [Consent](#consent).
+
+### Candidate Attributes
+
+See [Candidate](#candidate) model.
+
+### Candidate Relations
+
+See [Candidate](#candidate) model.
+A [Candidate](#candidate):
+* is related to one [Consent](#consent).
+* is related to one [Data Service](Definitions.md#data-service) ([Published Service](#published-service)).
+* is related to zero or one [Account](#account).
+
+### Candidate Business Rules
 
 * tbd
 

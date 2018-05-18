@@ -1130,6 +1130,7 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
+    "candidates" : "http://example.com/aeiou",
     "sources" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "subscription" : "http://example.com/aeiou"
@@ -4003,7 +4004,6 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
-    "candidates" : "http://example.com/aeiou",
     "dataService" : "http://example.com/aeiou",
     "operations" : "http://example.com/aeiou",
     "serviceCredentials" : "http://example.com/aeiou",
@@ -4126,6 +4126,7 @@ font-style: italic;
     <li><a href="#AccountModel_links"><code>AccountModel_links</code> - </a></li>
     <li><a href="#AccountsModel"><code>AccountsModel</code> - </a></li>
     <li><a href="#ApiModel"><code>ApiModel</code> - </a></li>
+    <li><a href="#CandidateModel"><code>CandidateModel</code> - </a></li>
     <li><a href="#CandidatesModel"><code>CandidatesModel</code> - </a></li>
     <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
     <li><a href="#CatalogueModel_links"><code>CatalogueModel_links</code> - </a></li>
@@ -4222,8 +4223,16 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="CandidateModel"><code>CandidateModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Candidate Model.</div>
+    <div class="field-items">
+      <div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Service (publishedServiceUrl). format: url</div>
+<div class="param">account (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Linked Account (accountUrl). format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="CandidatesModel"><code>CandidatesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Source Candidates.</div>
+    <div class='model-description'>Source Candidates.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -4326,7 +4335,8 @@ font-style: italic;
     <h3><a name="ConsentModel_links"><code>ConsentModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
+      <div class="param">candidates (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates (candidatesUrl) format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
 <div class="param">sources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Sources (sourcesUrl) format: url</div>
 <div class="param">subscription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription (subscriptionUrl). format: url</div>
     </div>  <!-- field-items -->
@@ -4627,7 +4637,6 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">account (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Account with Data Provider (accountUrl) format: url</div>
-<div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates (candidatesUrl) format: url</div>
 <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent (consentUrl) format: url</div>
 <div class="param">dataService (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Service (publishedServiceUrl). format: url</div>
 <div class="param">operations (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operations (operationsUrl). format: url</div>

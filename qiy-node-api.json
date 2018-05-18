@@ -114,12 +114,29 @@
                 }
             ]
         },
+        "CandidateModel": {
+            "description": "Candidate Model.",
+            "properties": {
+                "service": {
+                    "description": "Data Service (publishedServiceUrl).",
+                    "format": "url",
+                    "type": "string"
+                },
+                "account": {
+                    "description": "Linked Account (accountUrl).",
+                    "format": "url",
+                    "type": "string"
+                }
+	    },
+            "required": [
+                "service"
+	    ],
+            "type": "object"
+        },
         "CandidatesModel": {
-            "description": "List of Source Candidates.",
+            "description": "Source Candidates.",
             "items": {
-                "description": "Published Provider url of Data Provider that can provide the data.",
-                "format": "url",
-                "type": "string"
+                "$ref": "#/definitions/EndpointAddressesModel"
             },
             "type": "array"
         },
@@ -368,6 +385,11 @@
                 "links": {
                     "type": "object",
                     "properties": {
+                        "candidates": {
+                            "description": "Source Candidates (candidatesUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
                         "self": {
                             "description": "Consent Url",
                             "type": "string",
@@ -1136,11 +1158,6 @@
                     "properties": {
                         "account": {
                             "description": "Account with Data Provider (accountUrl)",
-                            "format": "url",
-                            "type": "string"
-                        },
-                        "candidates": {
-                            "description": "Source Candidates (candidatesUrl)",
                             "format": "url",
                             "type": "string"
                         },
