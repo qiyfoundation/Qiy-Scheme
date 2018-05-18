@@ -593,7 +593,7 @@ The [Messages Request](#messages-request) is a [Qiy Node Request](Definitions.md
 ## 2.9 Operation Requests
 
 ### 2.9.1 Operation Execute Request
-The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](Definitions.md#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
+The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
 
 ### 2.9.2 Operation Reference Request
 The [Operation Reference Request](#operation-reference-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
@@ -644,16 +644,16 @@ The [Qiy Node Delete Request](#qiy-node-delete-request) is a [Qiy Node Request](
 ## 2.12 Source Requests
 
 ### 2.12.1 Operation Details Request
-The [Operation Details Request](#operation-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of an [Operation](Definitions.md#operation).
+The [Operation Details Request](#operation-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of an [Operation](#operation).
 
 ### 2.12.2 Operation Register Request
-The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Operation](Definitions.md#operation).
+The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Operation](#operation).
 
 ### 2.12.3 Operation Unregister Request
-The [Operation Unregister Request](#operation-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Operation](Definitions.md#operation).
+The [Operation Unregister Request](#operation-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Operation](#operation).
 
 ### 2.12.4 Operation Update Request
-The [Operation Update Request](#operation-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of an [Operation](Definitions.md#operation).
+The [Operation Update Request](#operation-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of an [Operation](#operation).
 
 ### 2.12.5 Operations Request
 The [Operations Request](#operations-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Operations](Definitions.md#operation).
@@ -889,7 +889,7 @@ tbd
 ## 5.8 Operation Specification
 
 This section describes the [Operation Specification](Definitions.md#operation-specification) entity type.
-The [Operation Specification](Definitions.md#operation-specification) specifies an [Operation](Definitions.md#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
+The [Operation Specification](Definitions.md#operation-specification) specifies an [Operation](#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
 ### 5.8.1 Operation Specification Attributes
 
@@ -1434,6 +1434,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
+[Definitions](Definitions.md)                 | [Operation](Definitions.md#operation)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Operation Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
 
@@ -1863,7 +1864,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12 Source Requests](#212-source-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Consent](#54-consent)
 
 ## Source Candidates Message
