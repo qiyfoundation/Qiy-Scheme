@@ -2279,7 +2279,7 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#DataTypesModel">DataTypesModel</a>
+      <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a>
       
     </div>
 
@@ -2300,7 +2300,7 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     200 Successful execution.
-        <a href="#DataTypesModel">DataTypesModel</a>
+        <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a>
     <h4 class="field-label">400</h4>
     [400,600&gt; Unsuccessful execution.
         <a href="#"></a>
@@ -3823,15 +3823,24 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
+      <a href="#ServiceCredentialModel">ServiceCredentialModel</a>
       
-      ServiceCredentialsModel
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>""</code></pre>
+    <pre class="example"><code>{
+  "credentials" : "{}",
+  "links" : {
+    "self" : "http://example.com/aeiou",
+    "source" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -3843,7 +3852,7 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a>
+        <a href="#ServiceCredentialModel">ServiceCredentialModel</a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="serviceCredentialUrlPatch"/>
@@ -3862,7 +3871,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">service-credentials <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a> (required)</div>
+      <div class="param">service-credentials <a href="#ServiceCredentialModel">ServiceCredentialModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3902,7 +3911,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">service-credentials <a href="#ServiceCredentialsModel">ServiceCredentialsModel</a> (required)</div>
+      <div class="param">service-credentials <a href="#ServiceCredentialModel">ServiceCredentialModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -4150,6 +4159,7 @@ font-style: italic;
     <li><a href="#ReferencesResultModel"><code>ReferencesResultModel</code> - </a></li>
     <li><a href="#ServiceCredentialModel"><code>ServiceCredentialModel</code> - </a></li>
     <li><a href="#ServiceCredentialModel_links"><code>ServiceCredentialModel_links</code> - </a></li>
+    <li><a href="#ServiceCredentialsModel"><code>ServiceCredentialsModel</code> - </a></li>
     <li><a href="#ServiceTypeModel"><code>ServiceTypeModel</code> - </a></li>
     <li><a href="#ServiceTypesModel"><code>ServiceTypesModel</code> - </a></li>
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
@@ -4553,6 +4563,12 @@ font-style: italic;
       <div class="param">source </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source (sourceUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Credential (serviceCredentialUrl) format: url</div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceCredentialsModel"><code>ServiceCredentialsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Service Credentials.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ServiceTypeModel"><code>ServiceTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>

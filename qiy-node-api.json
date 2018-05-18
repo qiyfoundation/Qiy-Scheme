@@ -1044,6 +1044,15 @@
             ],
             "type": "object"
         },
+        "ServiceCredentialsModel": {
+            "description": "List of Service Credentials.",
+	    "items": {
+                "description": "Service Credential (serviceCredentialUrl)",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "ServiceTypeModel": {
             "description": "Service Type Model.",
             "type": "object"
@@ -1805,7 +1814,7 @@
                     "200": {
                         "description": "200 Successful execution.",
                         "schema": {
-                            "$ref": "#/definitions/DataTypesModel"
+                            "$ref": "#/definitions/ServiceCredentialsModel"
                         }
                     },
                     "400": {
@@ -1828,7 +1837,7 @@
                         "name": "service-credentials",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/ServiceCredentialsModel"
+                            "$ref": "#/definitions/ServiceCredentialModel"
                         }
                     }
                 ],
@@ -2592,7 +2601,7 @@
                     "200": {
                         "description": "The status code of a success response will be 200.",
                         "schema": {
-                            "$ref": "#/definitions/ServiceCredentialsModel"
+                            "$ref": "#/definitions/ServiceCredentialModel"
                         }
                     }
                 }
@@ -2612,7 +2621,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/ServiceCredentialsModel"
+                            "$ref": "#/definitions/ServiceCredentialModel"
                         }
                     }
                 ],
