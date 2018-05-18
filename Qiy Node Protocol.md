@@ -182,7 +182,6 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Subscription Business Rules](#5133-subscription-business-rules)
 1. [Index](#6-index)
 	1. [Account](#account)
-	1. [Account](#account)
 	1. [Account Details Request](#account-details-request)
 	1. [Account Register Request](#account-register-request)
 	1. [Account Unregister Request](#account-unregister-request)
@@ -788,6 +787,9 @@ tbd
 
 ## 5.4 Consent
 
+This section describes the [Consent](#consent) entity type.
+A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](Definitions.md#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](Definitions.md#data-source) for a [Subscription](Definitions.md#subscription).
+
 ### 5.4.1 Consent Attributes
 
 See [Consent](#consent) model.
@@ -795,10 +797,14 @@ See [Consent](#consent) model.
 ### 5.4.2 Consent Relations
 
 See [Consent](#consent) model.
+A [Consent](#consent):
+* has one: [Subscription](#subscription).
+* has zero or more of: [Data Source](Definitions.md#data-source) ([Source](#source)).
 
 ### 5.4.3 Consent Business Rules
 
-tbd
+* A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](Definitions.md#consent).
+* A [Service Provider](Definitions.md#service-provider) has read-access to a [Consent](Definitions.md#consent).
 
 ## 5.5 Event
 
@@ -964,14 +970,8 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Account](Definitions.md#account)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Portfolio](#59-portfolio)
-
-## Account
-
-Specification | Reference
-------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#AccountModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Portfolio](#59-portfolio)
 
 ## Account Details Request
 

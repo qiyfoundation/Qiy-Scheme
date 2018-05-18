@@ -1126,13 +1126,12 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "consentedDataSets" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "links" : {
+    "sources" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "subscription" : "http://example.com/aeiou"
   },
   "state" : "state",
-  "dataSources" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
   "activeFrom" : 0,
   "activeUntil" : 6
 }</code></pre>
@@ -4156,8 +4155,6 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">consentedDataSets (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Consented Data Sets. format: url</div>
-<div class="param">dataSources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Source Urls of the Data Sources, only accessible for the Data Subject. format: url</div>
 <div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ConsentModel_links">ConsentModel_links</a></span>  </div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the consent. </div>
     </div>  <!-- field-items -->
@@ -4167,7 +4164,8 @@ font-style: italic;
     
     <div class="field-items">
       <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
-<div class="param">subscription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service Url of the subscribed Provider service. format: url</div>
+<div class="param">sources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Sources (sourcesUrl) format: url</div>
+<div class="param">subscription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription (subscriptionUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

@@ -316,24 +316,6 @@
                     "type": "integer",
                     "format": "Unix time in ms, nullable"
                 },
-                "consentedDataSets": {
-                    "description": "Consented Data Sets.",
-		    "items": {
-                        "description": "Data Type url of the consented Data Set.",
-                        "format": "url",
-                        "type": "string"
-		    },
-                    "type": "array"
-		},
-                "dataSources": {
-                    "description": "Source Urls of the Data Sources, only accessible for the Data Subject.",
-		    "items": {
-                        "description": "Source Url of the Data Source",
-                        "format": "url",
-                        "type": "string"
-		    },
-                    "type": "array"
-                },
                 "links": {
                     "type": "object",
                     "properties": {
@@ -342,8 +324,13 @@
                             "type": "string",
                             "format": "url"
                         },
+                        "sources": {
+                            "description": "Sources (sourcesUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
                         "subscription": {
-                            "description": "Published Service Url of the subscribed Provider service.",
+                            "description": "Subscription (subscriptionUrl).",
                             "format": "url",
                             "type": "string"
                         }
