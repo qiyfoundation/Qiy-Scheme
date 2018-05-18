@@ -19,8 +19,23 @@ An organization which provides [Qiy Users](#qiy-user) access to the [Qiy Trust N
 ### Account
 A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider).
 
+### Account Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of an [Account](#account).
+
+### Account Register Request
+A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
+
+### Account Unregister Request
+A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
+
+### Account Update Request
+Ate Request|#] is a [Qiy Node Request](#qiy-node-request) to update the details of an [Account](#account).
+
 ### Accountability
 [Data Provider](#data-provider) and [Relying Party](#relying-party) are responsible for, and must be able to demonstrate compliance with the principles.
+
+### Accounts Request
+A [Qiy Node Request](#qiy-node-request) to list [Accounts](#account).
 
 ### Anonymous
 Not directly or indirectly traceable to a natural person.

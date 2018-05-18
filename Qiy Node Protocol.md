@@ -80,11 +80,16 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Operation Reference Request](#292-operation-reference-request)
 		1. [Operation Register Request](#293-operation-register-request)
 	1. [Portfolio Requests](#210-portfolio-requests)
-		1. [Portfolio Details Request](#2101-portfolio-details-request)
-		1. [Subscription Details Request](#2102-subscription-details-request)
-		1. [Subscription Register Request](#2103-subscription-register-request)
-		1. [Subscription Unregister Request](#2104-subscription-unregister-request)
-		1. [Subscriptions Request](#2105-subscriptions-request)
+		1. [Account Details Request](#2101-account-details-request)
+		1. [Account Register Request](#2102-account-register-request)
+		1. [Account Unregister Request](#2103-account-unregister-request)
+		1. [Account Update Request](#2104-account-update-request)
+		1. [Accounts Request](#2105-accounts-request)
+		1. [Portfolio Details Request](#2106-portfolio-details-request)
+		1. [Subscription Details Request](#2107-subscription-details-request)
+		1. [Subscription Register Request](#2108-subscription-register-request)
+		1. [Subscription Unregister Request](#2109-subscription-unregister-request)
+		1. [Subscriptions Request](#21010-subscriptions-request)
 	1. [Qiy Node Requests](#211-qiy-node-requests)
 		1. [Qiy Node Create Request](#2111-qiy-node-create-request)
 		1. [Qiy Node Delete Request](#2112-qiy-node-delete-request)
@@ -177,6 +182,12 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Subscription Business Rules](#5133-subscription-business-rules)
 1. [Index](#6-index)
 	1. [Account](#account)
+	1. [Account](#account)
+	1. [Account Details Request](#account-details-request)
+	1. [Account Register Request](#account-register-request)
+	1. [Account Unregister Request](#account-unregister-request)
+	1. [Account Update Request](#account-update-request)
+	1. [Accounts Request](#accounts-request)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
 	1. [Catalogue Details Request](#catalogue-details-request)
@@ -284,7 +295,6 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Source Update Request](#source-update-request)
 	1. [Subscription](#subscription)
 	1. [Subscription Details Request](#subscription-details-request)
-	1. [Subscription Register Request](#subscription-register-request)
 	1. [Subscription Register Request](#subscription-register-request)
 	1. [Subscription Unregister Request](#subscription-unregister-request)
 	1. [Subscriptions Request](#subscriptions-request)
@@ -582,19 +592,34 @@ The [Operation Register Request](#operation-register-request) is a [Qiy Node Req
 
 ## 2.10 Portfolio Requests
 
-### 2.10.1 Portfolio Details Request
+### 2.10.1 Account Details Request
+The [Account Details Request](#account-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of an [Account](Definitions.md#account).
+
+### 2.10.2 Account Register Request
+The [Account Register Request](#account-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Account](Definitions.md#account).
+
+### 2.10.3 Account Unregister Request
+The [Account Unregister Request](#account-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register an [Account](Definitions.md#account).
+
+### 2.10.4 Account Update Request
+The [Account Update Request](#account-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of an [Account](Definitions.md#account).
+
+### 2.10.5 Accounts Request
+The [Accounts Request](#accounts-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Accounts](Definitions.md#account).
+
+### 2.10.6 Portfolio Details Request
 The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
 
-### 2.10.2 Subscription Details Request
+### 2.10.7 Subscription Details Request
 The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
 
-### 2.10.3 Subscription Register Request
+### 2.10.8 Subscription Register Request
 The [Subscription Register Request](#subscription-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
 
-### 2.10.4 Subscription Unregister Request
+### 2.10.9 Subscription Unregister Request
 The [Subscription Unregister Request](#subscription-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
 
-### 2.10.5 Subscriptions Request
+### 2.10.10 Subscriptions Request
 The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 2.11 Qiy Node Requests
@@ -940,6 +965,53 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Account](Definitions.md#account)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Portfolio](#59-portfolio)
+
+## Account
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Account Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#AccountModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Library](#56-library)
+
+## Account Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Account Details Request](Definitions.md#account-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /accountUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#accountUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.1 Account Details Request](#2101-account-details-request)
+
+## Account Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Account Register Request](Definitions.md#account-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /accountsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#accountsUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.2 Account Register Request](#2102-account-register-request)
+
+## Account Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Account Unregister Request](Definitions.md#account-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /accountUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#accountUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.3 Account Unregister Request](#2103-account-unregister-request)
+
+## Account Update Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Account Update Request](Definitions.md#account-update-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /accountUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#accountUrlPatch)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.4 Account Update Request](#2104-account-update-request)
+
+## Accounts Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Accounts Request](Definitions.md#accounts-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /accountsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#accountsUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.5 Accounts Request](#2105-accounts-request)
 
 ## Authorization Header Parameter
 
@@ -1410,7 +1482,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Portfolio Details Request](Definitions.md#portfolio-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /portfolioEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#portfolioEndpointGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.1 Portfolio Details Request](#2101-portfolio-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.6 Portfolio Details Request](#2106-portfolio-details-request)
 
 ## Portfolio Register Message
 
@@ -1766,7 +1838,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscription Details Request](Definitions.md#subscription-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /subscriptionUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#subscriptionUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.2 Subscription Details Request](#2102-subscription-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.7 Subscription Details Request](#2107-subscription-details-request)
 
 ## Subscription Register Request
 
@@ -1774,15 +1846,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscription Register Request](Definitions.md#subscription-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /subscriptionsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#subscriptionsUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.3 Subscription Register Message](#2103-subscription-register-message)
-
-## Subscription Register Request
-
-Specification | Reference
-------------- | ---------
-[Definitions](Definitions.md)                 | [Subscription Register Request](Definitions.md#subscription-register-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [POST /publishedServicesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedServicesUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.3 Subscription Register Request](#2103-subscription-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.8 Subscription Register Message](#2108-subscription-register-message)
 
 ## Subscription Unregister Request
 
@@ -1790,7 +1854,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscription Unregister Request](Definitions.md#subscription-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /publishedServiceUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedServiceUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.4 Subscription Unregister Request](#2104-subscription-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.9 Subscription Unregister Request](#2109-subscription-unregister-request)
 
 ## Subscriptions Request
 
@@ -1798,7 +1862,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscriptions Request](Definitions.md#subscriptions-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /subscriptionsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#subscriptionsUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.5 Subscriptions Request](#2105-subscriptions-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.10.10 Subscriptions Request](#21010-subscriptions-request)
 
 ## Transport Layer
 
