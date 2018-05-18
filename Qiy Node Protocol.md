@@ -133,6 +133,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Source Messages](#45-source-messages)
 		1. [Source Candidates Message](#451-source-candidates-message)
 1. [Models](#5-models)
+	1. [Account Model](#account-model)
+		1. [Account Attributes](#account-attributes)
+		1. [Account Relations](#account-relations)
+		1. [Account Business Rules](#account-business-rules)
 	1. [Catalogue](#51-catalogue)
 		1. [Catalogue Attributes](#511-catalogue-attributes)
 		1. [Catalogue Relations](#512-catalogue-relations)
@@ -165,6 +169,9 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Operation Specification Attributes](#581-operation-specification-attributes)
 		1. [Operation Specification Relations](#582-operation-specification-relations)
 		1. [Operation Specification Business Rules](#583-operation-specification-business-rules)
+	1. [Persistent Id Model](#persistent-id-model)
+		1. [Persistent Id Relations](#persistent-id-relations)
+		1. [Persistent Id Business Rules](#persistent-id-business-rules)
 	1. [Portfolio](#59-portfolio)
 		1. [Portfolio Attributes](#591-portfolio-attributes)
 		1. [Portfolio Relations](#592-portfolio-relations)
@@ -760,6 +767,31 @@ The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Messa
 
 This chapters describes the entity types of the [Qiy Node Interface](Definitions.md#qiy-node-interface).
 
+## Account Model
+
+This section describes the [Account](#account) entity type.
+A [Qiy User](Definitions.md#qiy-user) can have linked [Accounts](#account) with any [Service Provider](Definitions.md#service-provider), but is initially used for linked accounts with [Data Providers](Definitions.md#data-provider).
+
+### Account Attributes
+
+See [Account](#account) model.
+
+### Account Relations
+
+See [Account](#account) model.
+An [Account](#account):
+* has one [Qiy User](Definitions.md#qiy-user).
+* has one [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
+* has zero or more [Persistent Ids](#persistent-id).
+* is used for zero or more [Sources](#source).
+* is used for zero or more [Subcriptions](#subscription).
+
+### Account Business Rules
+
+* tbd
+
+
+
 ## 5.1 Catalogue
 
 This section describes the [Service Catalogue](Definitions.md#service-catalogue) model.
@@ -906,6 +938,22 @@ An [Operation Specification](Definitions.md#operation-specification):
 * A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 * A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 
+## Persistent Id Model
+
+This section describes the [Persistent Id](#persistent-id).
+
+A [Persistent Id](#persistent-id) .
+
+### Persistent Id Relations
+
+See [Persistent Id](#persistent-id) model.
+A [Persistent Id](#persistent-id):
+* 
+
+### Persistent Id Business Rules
+
+* tbd
+
 ## 5.9 Portfolio
 
 This section describes the [Service Portfolio](Definitions.md#service-portfolio) entity type.
@@ -1004,7 +1052,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Account](Definitions.md#account)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#AccountModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Portfolio](#59-portfolio)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Account Model](#account-model)
 
 ## Account Details Request
 
@@ -1539,7 +1587,9 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Persistent Id](Definitions.md#persistent-id)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Persisent Id Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PersisentIdModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.4.1 Persistent Id Event](#341-persistent-id-event)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Persistent Id Model]
 
 ## Persistent Id Event
 
