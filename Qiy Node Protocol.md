@@ -1974,8 +1974,8 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SourceModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source Model](#source-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12 Source Requests](#212-source-requests)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
 
 ## Source Candidates Message
 
