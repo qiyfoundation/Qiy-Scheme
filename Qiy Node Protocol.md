@@ -1862,6 +1862,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Consent](#54-consent)
 
