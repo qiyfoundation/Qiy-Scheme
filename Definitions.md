@@ -16,6 +16,9 @@ The principle which authorizes the access of an [Individual](#individual) to his
 ### Access Provider
 An organization which provides [Qiy Users](#qiy-user) access to the [Qiy Trust Network](#qiy-trust-network).
 
+### Account
+A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider).
+
 ### Accountability
 [Data Provider](#data-provider) and [Relying Party](#relying-party) are responsible for, and must be able to demonstrate compliance with the principles.
 
@@ -708,19 +711,19 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) as a
 A [Qiy Node Request](#qiy-node-request) to update a [Service Source](#service-source).
 
 ### Subscription
-A [Business Object](#business-object) representing the agreement between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider) with regard to a [Service](#service).
+A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider) with regard to a [Service](#service).
 
 ### Subscription Details Request
-A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](#service) in a [Service Portfolio](#service-portfolio).
+A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Subscription](#subscription).
 
 ### Subscription Register Request
-A [Qiy Node Request](#qiy-node-request) which can be used to register a subscription to a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) which can be used to register a [Subscription](#subscription) to a [Service](#service).
 
 ### Subscription Unregister Request
-A [Qiy Node Request](#qiy-node-request) which can be used to register a subscription to a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Subscription](#subscription) to a [Service](#service).
 
 ### Subscriptions Request
-A [Qiy Node Request](#qiy-node-request) which can be used to list the [Service](#service) in a [Service Portfolio](#service-portfolio).
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscriptions](#subscription) in a [Service Portfolio](#service-portfolio).
 
 ### Technology Event
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096

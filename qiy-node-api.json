@@ -21,6 +21,19 @@
         "https"
     ],
     "definitions": {
+        "AccountModel": {
+            "description": "Account Model.",
+            "type": "object"
+        },
+        "AccountsModel": {
+            "description": "List of Accounts.",
+	    "items": {
+                "description": "Account (accountUrl)",
+                "format": "url",
+                "type": "string"
+	    },
+            "type": "array"
+        },
         "ApiModel": {
             "properties": {
                 "currentVersion": {
@@ -386,13 +399,6 @@
                     "minItems": 0,
                     "type": "string"
                 },
-                "consents": {
-                    "description": "Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated.",
-                    "format": "url",
-                    "maxItems": 1,
-                    "minItems": 0,
-                    "type": "string"
-                },
                 "create": {
                     "description": "Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated.",
                     "format": "url",
@@ -723,12 +729,17 @@
                 "links": {
                     "type": "object",
                     "properties": {
-                        "providers": {
-                            "description": "Portfolio (Data) Providers url (portfolioProvidersUrl)",
+                        "accounts": {
+                            "description": "Accounts (accountsUrl)",
                             "type": "string",
                             "format": "url"
                         },
-                        "services": {
+                        "consents": {
+                            "description": "Consents (consentsUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "subscriptions": {
                             "description": "Subscriptions url (subscriptionsUrl).",
                             "format": "url",
                             "type": "string"
@@ -737,19 +748,6 @@
                 }
 	    },
             "type": "object"
-        },
-        "PortfolioProviderModel": {
-            "description": "Portfolio Provider Model.",
-            "type": "object"
-        },
-        "PortfolioProvidersModel": {
-            "description": "List of Portfolio Providers.",
-	    "items": {
-                "description": "Portfolio Provider url",
-                "format": "url",
-                "type": "string"
-	    },
-            "type": "array"
         },
         "PublishedProviderModel": {
             "description": "Published Provider Model.",
@@ -1121,22 +1119,27 @@
                     "description": "Subscription links.",
                     "properties": {
                         "consents": {
-		            "description": "Consents url (consentsUrl).",
+		            "description": "Consents (consentsUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "provider": {
-		            "description": "Published Provider url (publishedProviderUrl).",
+		            "description": "Service Provider (publishedProviderUrl).",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "self": {
-		            "description": "Subscription url (subscriptionUrl)",
+		            "description": "Subscription (subscriptionUrl)",
 			    "format": "url",
 			    "type": "string"
 		        },
                         "service": {
-		            "description": "Service url (publishedServiceUrl).",
+		            "description": "Service (publishedServiceUrl).",
+			    "format": "url",
+			    "type": "string"
+		        },
+                        "portfolio": {
+		            "description": "Portfolio (portfolioEndpoint)",
 			    "format": "url",
 			    "type": "string"
 		        }
@@ -1205,6 +1208,109 @@
         }
     },
     "paths": {
+        "/accountsUrl": {
+            "get": {
+                "summary": "Get Accounts",
+                "description": "See [Accounts Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#accounts-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/AccountsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Account",
+                    "Portfolio"
+                ]
+            }
+        },
+        "/accountUrl": {
+            "delete": {
+                "summary": "Delete Account.",
+                "description": "See [Account Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Account",
+                    "Portfolio"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+	    "get": {
+                "summary": "Get Account Details",
+                "description": "See [Account Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Portfolio"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/AccountModel"
+                        }
+                    }
+                }
+            },
+	    "patch": {
+                "summary": "Update Account details",
+                "description": "See [Account Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "account-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Portfolio"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
         "/api": {
             "get": {
                 "summary": "API information",
@@ -1497,7 +1603,7 @@
                 }
             }
         },
-        "/consentsEndpoint": {
+        "/consentsUrl": {
             "get": {
                 "summary": "Get Consents",
                 "description": "See [Consents Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consents-request).",
@@ -1548,7 +1654,7 @@
             },
 	    "get": {
                 "summary": "Get Consent Details",
-                "description": "Get Consent Details, see [Consent Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request).",
+                "description": "See [Consent Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -1571,7 +1677,7 @@
             },
 	    "patch": {
                 "summary": "Update Consent details",
-                "description": "Update Consent Details, see [Consent Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request).",
+                "description": "See [Consent Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request).",
                 "consumes": [
                     "application/json"
                 ],
@@ -2046,6 +2152,7 @@
                     }
                 },
                 "tags": [
+                    "Account",
                     "Portfolio"
                 ]
             }

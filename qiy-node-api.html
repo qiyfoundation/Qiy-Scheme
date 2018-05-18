@@ -194,6 +194,12 @@ font-style: italic;
 
   <h3>Table of Contents </h3>
   <div class="method-summary"></div>
+  <h4><a href="#Account">Account</a></h4>
+  <ul>
+  <li><a href="#accountUrlDelete"><code><span class="http-method">delete</span> /accountUrl</code></a></li>
+  <li><a href="#accountsUrlGet"><code><span class="http-method">get</span> /accountsUrl</code></a></li>
+  <li><a href="#portfolioEndpointGet"><code><span class="http-method">get</span> /portfolioEndpoint</code></a></li>
+  </ul>
   <h4><a href="#Catalogue">Catalogue</a></h4>
   <ul>
   <li><a href="#catalogueUrlGet"><code><span class="http-method">get</span> /catalogueUrl</code></a></li>
@@ -225,7 +231,7 @@ font-style: italic;
   <li><a href="#consentUrlDelete"><code><span class="http-method">delete</span> /consentUrl</code></a></li>
   <li><a href="#consentUrlGet"><code><span class="http-method">get</span> /consentUrl</code></a></li>
   <li><a href="#consentUrlPatch"><code><span class="http-method">patch</span> /consentUrl</code></a></li>
-  <li><a href="#consentsEndpointGet"><code><span class="http-method">get</span> /consentsEndpoint</code></a></li>
+  <li><a href="#consentsUrlGet"><code><span class="http-method">get</span> /consentsUrl</code></a></li>
   </ul>
   <h4><a href="#Data">Data</a></h4>
   <ul>
@@ -279,6 +285,10 @@ font-style: italic;
   </ul>
   <h4><a href="#Portfolio">Portfolio</a></h4>
   <ul>
+  <li><a href="#accountUrlDelete"><code><span class="http-method">delete</span> /accountUrl</code></a></li>
+  <li><a href="#accountUrlGet"><code><span class="http-method">get</span> /accountUrl</code></a></li>
+  <li><a href="#accountUrlPatch"><code><span class="http-method">patch</span> /accountUrl</code></a></li>
+  <li><a href="#accountsUrlGet"><code><span class="http-method">get</span> /accountsUrl</code></a></li>
   <li><a href="#portfolioEndpointGet"><code><span class="http-method">get</span> /portfolioEndpoint</code></a></li>
   <li><a href="#subscriptionUrlDelete"><code><span class="http-method">delete</span> /subscriptionUrl</code></a></li>
   <li><a href="#subscriptionUrlGet"><code><span class="http-method">get</span> /subscriptionUrl</code></a></li>
@@ -315,6 +325,134 @@ font-style: italic;
   <li><a href="#apiGet"><code><span class="http-method">get</span> /api</code></a></li>
   </ul>
 
+  <h1><a name="Account">Account</a></h1>
+  <div class="method"><a name="accountUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /accountUrl</code></pre></div>
+    <div class="method-summary">Delete Account. (<span class="nickname">accountUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-delete-request">Account Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="accountsUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /accountsUrl</code></pre></div>
+    <div class="method-summary">Get Accounts (<span class="nickname">accountsUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#accounts-request">Accounts Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AccountsModel">AccountsModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#AccountsModel">AccountsModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="portfolioEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /portfolioEndpoint</code></pre></div>
+    <div class="method-summary">Get Portfolio details (<span class="nickname">portfolioEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-details-request">Portfolio Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#PortfolioModel">PortfolioModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "links" : {
+    "subscriptions" : "http://example.com/aeiou",
+    "consents" : "http://example.com/aeiou",
+    "accounts" : "http://example.com/aeiou"
+  }
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200, Successful execution.
+        <a href="#PortfolioModel">PortfolioModel</a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <h1><a name="Catalogue">Catalogue</a></h1>
   <div class="method"><a name="catalogueUrlGet"/>
     <div class="method-path">
@@ -965,7 +1103,7 @@ font-style: italic;
     <a class="up" href="#__Methods">Up</a>
     <pre class="get"><code class="huge"><span class="http-method">get</span> /consentUrl</code></pre></div>
     <div class="method-summary">Get Consent Details (<span class="nickname">consentUrlGet</span>)</div>
-    <div class="method-notes">Get Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request">Consent Details Request</a>.</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request">Consent Details Request</a>.</div>
 
 
 
@@ -1017,7 +1155,7 @@ font-style: italic;
     <a class="up" href="#__Methods">Up</a>
     <pre class="patch"><code class="huge"><span class="http-method">patch</span> /consentUrl</code></pre></div>
     <div class="method-summary">Update Consent details (<span class="nickname">consentUrlPatch</span>)</div>
-    <div class="method-notes">Update Consent Details, see <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request">Consent Update Request</a>.</div>
 
 
     <h3 class="field-label">Consumes</h3>
@@ -1052,11 +1190,11 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="consentsEndpointGet"/>
+  <div class="method"><a name="consentsUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /consentsEndpoint</code></pre></div>
-    <div class="method-summary">Get Consents (<span class="nickname">consentsEndpointGet</span>)</div>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /consentsUrl</code></pre></div>
+    <div class="method-summary">Get Consents (<span class="nickname">consentsUrlGet</span>)</div>
     <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consents-request">Consents Request</a>.</div>
 
 
@@ -2549,6 +2687,164 @@ font-style: italic;
   </div> <!-- method -->
   <hr/>
   <h1><a name="Portfolio">Portfolio</a></h1>
+  <div class="method"><a name="accountUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /accountUrl</code></pre></div>
+    <div class="method-summary">Delete Account. (<span class="nickname">accountUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-delete-request">Account Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="accountUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /accountUrl</code></pre></div>
+    <div class="method-summary">Get Account Details (<span class="nickname">accountUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-details-request">Account Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AccountModel">AccountModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#AccountModel">AccountModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="accountUrlPatch"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /accountUrl</code></pre></div>
+    <div class="method-summary">Update Account details (<span class="nickname">accountUrlPatch</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-update-request">Account Update Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">account-update <a href="#AccountModel">AccountModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="accountsUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /accountsUrl</code></pre></div>
+    <div class="method-summary">Get Accounts (<span class="nickname">accountsUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#accounts-request">Accounts Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AccountsModel">AccountsModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#AccountsModel">AccountsModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="portfolioEndpointGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -2578,8 +2874,9 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
-    "services" : "http://example.com/aeiou",
-    "providers" : "http://example.com/aeiou"
+    "subscriptions" : "http://example.com/aeiou",
+    "consents" : "http://example.com/aeiou",
+    "accounts" : "http://example.com/aeiou"
   }
 }</code></pre>
 
@@ -2660,6 +2957,7 @@ font-style: italic;
     <pre class="example"><code>{
   "links" : {
     "provider" : "http://example.com/aeiou",
+    "portfolio" : "http://example.com/aeiou",
     "service" : "http://example.com/aeiou",
     "consents" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou"
@@ -3681,6 +3979,8 @@ font-style: italic;
 
   <h3>Table of Contents</h3>
   <ol>
+    <li><a href="#AccountModel"><code>AccountModel</code> - </a></li>
+    <li><a href="#AccountsModel"><code>AccountsModel</code> - </a></li>
     <li><a href="#ApiModel"><code>ApiModel</code> - </a></li>
     <li><a href="#CandidatesModel"><code>CandidatesModel</code> - </a></li>
     <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
@@ -3710,8 +4010,6 @@ font-style: italic;
     <li><a href="#OperationSpecificationModel_headers"><code>OperationSpecificationModel_headers</code> - </a></li>
     <li><a href="#PortfolioModel"><code>PortfolioModel</code> - </a></li>
     <li><a href="#PortfolioModel_links"><code>PortfolioModel_links</code> - </a></li>
-    <li><a href="#PortfolioProviderModel"><code>PortfolioProviderModel</code> - </a></li>
-    <li><a href="#PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a></li>
     <li><a href="#PublishedProviderModel"><code>PublishedProviderModel</code> - </a></li>
     <li><a href="#PublishedProviderModel_links"><code>PublishedProviderModel_links</code> - </a></li>
     <li><a href="#PublishedProvidersModel"><code>PublishedProvidersModel</code> - </a></li>
@@ -3740,6 +4038,18 @@ font-style: italic;
     <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
   </ol>
 
+  <div class="model">
+    <h3><a name="AccountModel"><code>AccountModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Account Model.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="AccountsModel"><code>AccountsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Accounts.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
   <div class="model">
     <h3><a name="ApiModel"><code>ApiModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
@@ -3883,7 +4193,6 @@ font-style: italic;
     <div class='model-description'>Current path endpoint addresses.</div>
     <div class="field-items">
       <div class="param">connections (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">create (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated. format: url</div>
 <div class="param">ctCreate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connect token create'-endpoint (ctCreateEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">ctList (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connect token list'-endpoint (ctListEndpoint). This property is only included when the request is authenticated. format: url</div>
@@ -3986,21 +4295,10 @@ font-style: italic;
     <h3><a name="PortfolioModel_links"><code>PortfolioModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">providers (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio (Data) Providers url (portfolioProvidersUrl) format: url</div>
-<div class="param">services (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscriptions url (subscriptionsUrl). format: url</div>
+      <div class="param">accounts (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Accounts (accountsUrl) format: url</div>
+<div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents (consentsUrl) format: url</div>
+<div class="param">subscriptions (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscriptions url (subscriptionsUrl). format: url</div>
     </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="PortfolioProviderModel"><code>PortfolioProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Portfolio Provider Model.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="PortfolioProvidersModel"><code>PortfolioProvidersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Portfolio Providers.</div>
-    <div class="field-items">
-          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="PublishedProviderModel"><code>PublishedProviderModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -4157,10 +4455,11 @@ font-style: italic;
     <h3><a name="SubscriptionModel_links"><code>SubscriptionModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Subscription links.</div>
     <div class="field-items">
-      <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents url (consentsUrl). format: url</div>
-<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url (publishedProviderUrl). format: url</div>
-<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription url (subscriptionUrl) format: url</div>
-<div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service url (publishedServiceUrl). format: url</div>
+      <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents (consentsUrl). format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription (subscriptionUrl) format: url</div>
+<div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service (publishedServiceUrl). format: url</div>
+<div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Portfolio (portfolioEndpoint) format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4174,7 +4473,6 @@ font-style: italic;
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">connections (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated. format: url</div>
-<div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'consents'-endpoint (consentsEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">create (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated. format: url</div>
 <div class="param">ctCreate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connect token create'-endpoint (ctCreateEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">ctList (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'connect token list'-endpoint (ctListEndpoint). This property is only included when the request is authenticated. format: url</div>

@@ -176,6 +176,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Subscription Relations](#5132-subscription-relations)
 		1. [Subscription Business Rules](#5133-subscription-business-rules)
 1. [Index](#6-index)
+	1. [Account](#account)
 	1. [Authorization Header Parameter](#authorization-header-parameter)
 	1. [Catalogue](#catalogue)
 	1. [Catalogue Details Request](#catalogue-details-request)
@@ -411,7 +412,7 @@ The [Published Service Register Request](#published-service-register-request) is
 The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
 
 ### 2.2.6 Published Services Request
-The [Published Services Request](#published-services-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
+The [Published Services Request](#published-services-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Ctalogue].
 
 ## 2.3 Connect Token Requests
 
@@ -843,6 +844,9 @@ tbd
 
 ## 5.9 Portfolio
 
+This section describes the [Service Portfolio](Definitions.md#service-portfolio) entity type.
+The [Service Portfolio](Definitions.md#service-portfolio) of a [Qiy User](Definitions.md#qiy-user) is used to maintain information related to his [Subscriptions](Definitions.md#subscription), [Consents](Definitions.md#consent) and [Personal Data](Definitions.md#personal-data).
+
 ### 5.9.1 Portfolio Attributes
 
 See [Portfolio](#portfolio) model.
@@ -850,10 +854,16 @@ See [Portfolio](#portfolio) model.
 ### 5.9.2 Portfolio Relations
 
 See [Portfolio](#portfolio) model.
+A [Portfolio](#portfolio):
+* has one owner, a [Qiy User](Definitions.md#qiy-user).
+* has zero or more of: Linked data [Account](#account).
+* has zero or more of: [Consent](#consent).
+* has zero or more of: [Subscription](#subscription).
 
 ### 5.9.3 Portfolio Business Rules
 
-tbd
+* Each [Qiy User](Definitions.md#qiy-user) has one [Portfolio](#portfolio).
+* Only the [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Portfolio](#portfolio).
 
 ## 5.10 Qiy Node 
 
@@ -899,6 +909,9 @@ tbd
 
 ## 5.13 Subscription
 
+This section describes the [Subscription](Definitions.md#subscription) entity type.
+A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](Definitions.md#service-provider).
+
 ### 5.13.1 Subscription Attributes
 
 See [Subscription](#subscription) model.
@@ -906,13 +919,27 @@ See [Subscription](#subscription) model.
 ### 5.13.2 Subscription Relations
 
 See [Subscription](#subscription) model.
+A [Subscription](Definitions.md#subscription):
+* has one subscriber: a [Qiy User](Definitions.md#qiy-user).
+* has one provider: a [Published Provider].
+* has one [Published Service](#published-service).
+* has zero or more of: [Consent](#consent).
 
 ### 5.13.3 Subscription Business Rules
 
-tbd
+* The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
+* The [Published Provider] has read-access to a [Subscription](Definitions.md#subscription).
 
 
 # 6 Index
+
+## Account
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Account](Definitions.md#account)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Portfolio](#59-portfolio)
 
 ## Authorization Header Parameter
 
@@ -1133,7 +1160,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Consents Request](Definitions.md#consents-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [GET /consentsEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#consentsEndpointGet)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /consentsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#consentsUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.6 Consents Request](#256-consents-request)
 
 ## Data Provider
