@@ -1587,9 +1587,9 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Persistent Id](Definitions.md#persistent-id)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Persisent Id Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PersisentIdModel)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Persistent Id Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PersistentIdModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.4.1 Persistent Id Event](#341-persistent-id-event)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Persistent Id Model]
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Persistent Id Model](#persistent-id-model)
 
 ## Persistent Id Event
 

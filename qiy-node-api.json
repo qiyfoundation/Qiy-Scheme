@@ -35,7 +35,7 @@
                     "format": "Unix time in ms, nullable"
                 },
                 "links": {
-                    "description": "Catalogue links.",
+                    "description": "Account links.",
                     "properties": {
                         "provider": {
                             "description": "Service Provider (publishedProviderUrl).",
