@@ -662,6 +662,9 @@ A [Qiy Node Request](#qiy-node-request) to unregister the [Service Credential](#
 ### Service Credential Update Request
 A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update the [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
+### Service Credentials Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Credentials](#service-credential).
+
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
