@@ -584,19 +584,19 @@ The [Data Types Request](#data-types-request) is a [Qiy Node Request](Definition
 The [Library Details Request](#library-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of the [Service Library](Definitions.md#service-library).
 
 ### 2.7.7 Message Type Details Request
-The [Message Type Details Request](#message-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+The [Message Type Details Request](#message-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Message Type](#message-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.8 Message Type Register Request
-The [Message Type Register Request](#message-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+The [Message Type Register Request](#message-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Message Type](#message-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.9 Message Type Unregister Request
-The [Message Type Unregister Request](#message-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+The [Message Type Unregister Request](#message-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Message Type](#message-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.10 Message Type Update Request
-The [Message Type Update Request](#message-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+The [Message Type Update Request](#message-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Message Type](#message-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.11 Message Types Request
-The [Message Types Request](#message-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Message Types](Definitions.md#message-type) that are registered in the [Service Library](Definitions.md#service-library).
+The [Message Types Request](#message-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Message Types](#message-type) that are registered in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.12 Published Provider Details Request
 The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
@@ -956,7 +956,7 @@ See [Event](#event) model.
 ## 5.8 Library Model
 
 This section describes the [Service Library](Definitions.md#service-library) entity type.
-The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type), [Message Types](Definitions.md#message-type) and [Service Types](Definitions.md#service-type).
+The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type), [Message Types](#message-type) and [Service Types](Definitions.md#service-type).
 
 ### 5.8.1 Library Attributes
 
@@ -1009,8 +1009,8 @@ In addition:
 
 ## 5.10 Message Type Model
 
-This section describes the [Message Type](Definitions.md#message-type) entity type.
-The [Message Type](Definitions.md#message-type) is used to describe [Qiy Node Messages](#qiy-node-message) using [Message Descriptors](#message-descriptor).
+This section describes the [Message Type](#message-type) entity type.
+The [Message Type](#message-type) is used to describe [Qiy Node Messages](#qiy-node-message) using [Message Descriptors](#message-descriptor).
 
 ### 5.10.1 Message Type Attributes
 
@@ -1660,6 +1660,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Message Type](Definitions.md#message-type)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Library](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Library)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message Type Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#MessageTypeModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Message Type Model](#510-message-type-model)
 

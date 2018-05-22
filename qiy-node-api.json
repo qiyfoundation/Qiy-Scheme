@@ -2091,7 +2091,7 @@
                     }
                 },
                 "tags": [
-                    "Library"
+                    "Source"
                 ]
             },
             "post": {
@@ -2590,7 +2590,7 @@
                     }
                 },
                 "tags": [
-                    "Library"
+                    "Source"
                 ]
             },
             "post": {
@@ -2621,7 +2621,7 @@
                     }
                 },
                 "tags": [
-                    "Library"
+                    "Source"
                 ]
             }
         },
@@ -2635,7 +2635,7 @@
                     }
                 ],
                 "tags": [
-                    "Library"
+                    "Source"
                 ],
                 "responses": {
                     "204": {
@@ -2659,7 +2659,7 @@
                     "text/html"
                 ],
                 "tags": [
-                    "Library"
+                    "Source"
                 ],
                 "responses": {
                     "200": {
