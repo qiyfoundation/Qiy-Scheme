@@ -496,13 +496,13 @@ The [Connect Tokens Request](#connect-tokens-request) is a [Qiy Node Request](De
 ## 2.4 Connection Requests
 
 ### 2.4.1 Connection Create Request
-The [Connection Create Request](#connection-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](Definitions.md#connection) using a [Connect Token](Definitions.md#connect-token).
+The [Connection Create Request](#connection-create-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to create a [Connection](#connection) using a [Connect Token](Definitions.md#connect-token).
 
 ### 2.4.2 Connection Delete Request
-The [Connection Delete Request](#connection-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connection](Definitions.md#connection).
+The [Connection Delete Request](#connection-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Connection](#connection).
 
 ### 2.4.3 Connection Details Request
-The [Connection Details Request](#connection-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connection](Definitions.md#connection).
+The [Connection Details Request](#connection-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connection](#connection).
 
 ### 2.4.4 Connections Request
 The [Connections Request](#connections-request) is a  [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Connections](Definitions.md#connection) of a [Qiy Node](Definitions.md#qiy-node).
@@ -749,7 +749,7 @@ The Events comply to the Server-Sent Events Standard, see [https://developer.moz
 ## 3.1 Connection Events
 
 ### 3.1.1 Connection Created Event
-The [Connection Created Event](#connection-created-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that is generated when a [Connection](Definitions.md#connection) has been created.
+The [Connection Created Event](#connection-created-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that is generated when a [Connection](#connection) has been created.
 
 ## 3.2 Consent Events
 
@@ -767,7 +767,7 @@ The [Message Received Event](#message-received-event) is a [Qiy Node Event](Defi
 ## 3.4 Persistent Id Events
 
 ### 3.4.1 Persistent Id Event
-The [Persistent Id Event](#persistent-id-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](Definitions.md#connection).
+The [Persistent Id Event](#persistent-id-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](#connection).
 
 
 # 4 Messages
@@ -1272,7 +1272,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Catalogue](Definitions.md#service-catalogue)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Catalogue Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#CatalogueModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.3 Catalogue](#53-catalogue)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.3 Catalogue Model](#53-catalogue-model)
 
 ## Catalogue Details Request
 
@@ -1296,7 +1296,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Connect Token](Definitions.md#connect-token)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connect Token Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectTokenModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Connect Token](#54-connect-token)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Connect Token Model](#54-connect-token-model)
 
 ## Connect Token Create Request
 
@@ -1351,8 +1351,10 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Connection](Definitions.md#connection)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Connect](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Connect)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connection Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.5 Connection](#55-connection)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4 Connection Requests](#24-connection-requests)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.5 Connection Model](#55-connection-model)
 
 ## Connection Create Request
 
@@ -1400,7 +1402,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Consent](Definitions.md#consent)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Consent Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Consent](#56-consent)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Consent Model](#56-consent-model)
 
 ## Consent Delete Request
 
@@ -1513,7 +1515,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Data Type Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#DataTypeModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library](#58-library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library Model](#58-library-model)
 
 ## Data Type Details Request
 
@@ -1570,7 +1572,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Qiy Node Event](Definitions.md#qiy-node-event)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#EventModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3 Events](#3-events)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Event](#57-event)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Event Model](#57-event-model)
 
 ## Events Request
 
@@ -1585,7 +1587,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Library](Definitions.md#service-library)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Library Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#LibraryModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library](#58-library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library Model](#58-library-model)
 
 ## Library Details Request
 
@@ -1603,7 +1605,7 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8 Message Requests](#28-message-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4 Messages](#4-messages)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Message](#59-message)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Message Model](#59-message-model)
 
 ## Message Delete Request
 
@@ -1856,7 +1858,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Published Provider Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PublishedProviderModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library](#58-library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library Model](#58-library-model)
 
 ## Published Provider Details Request
 
@@ -1903,7 +1905,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Published Service Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PublishedServiceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.3 Catalogue](#53-catalogue)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.3 Catalogue Model](#53-catalogue-model)
 
 ## Published Service Details Request
 
@@ -2087,7 +2089,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Type Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceTypeModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library](#58-library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library Model](#58-library-model)
 
 ## Service Type Details Request
 

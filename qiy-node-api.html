@@ -211,6 +211,7 @@ font-style: italic;
   <h4><a href="#Connect">Connect</a></h4>
   <ul>
   <li><a href="#connectTokenUrlGet"><code><span class="http-method">get</span> /connectTokenUrl</code></a></li>
+  <li><a href="#connectionUrlDelete"><code><span class="http-method">delete</span> /connectionUrl</code></a></li>
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#connectionsEndpointGet"><code><span class="http-method">get</span> /connectionsEndpoint</code></a></li>
   <li><a href="#connectionsEndpointPost"><code><span class="http-method">post</span> /connectionsEndpoint</code></a></li>
@@ -221,10 +222,6 @@ font-style: italic;
   <ul>
   <li><a href="#connectTokenUrlDelete"><code><span class="http-method">delete</span> /connectTokenUrl</code></a></li>
   <li><a href="#connectTokenUrlPatch"><code><span class="http-method">patch</span> /connectTokenUrl</code></a></li>
-  </ul>
-  <h4><a href="#Connection">Connection</a></h4>
-  <ul>
-  <li><a href="#connectionUrlDelete"><code><span class="http-method">delete</span> /connectionUrl</code></a></li>
   </ul>
   <h4><a href="#Consent">Consent</a></h4>
   <ul>
@@ -725,6 +722,37 @@ font-style: italic;
         <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
   </div> <!-- method -->
   <hr/>
+  <div class="method"><a name="connectionUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /connectionUrl</code></pre></div>
+    <div class="method-summary">Delete connection. (<span class="nickname">connectionUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-delete-request">Connection Delete Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="connectionUrlGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -1038,38 +1066,6 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
-  <h1><a name="Connection">Connection</a></h1>
-  <div class="method"><a name="connectionUrlDelete"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /connectionUrl</code></pre></div>
-    <div class="method-summary">Delete connection. (<span class="nickname">connectionUrlDelete</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-delete-request">Connection Delete Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">204</h4>
-    A response code 204 (NO CONTENT) will indicate a success.
-        <a href="#"></a>
-    <h4 class="field-label">400</h4>
-    Failures will be indicated with response codes 400 to but-not-including 600.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>

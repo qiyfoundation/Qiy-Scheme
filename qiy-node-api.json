@@ -1728,7 +1728,7 @@
                     }
                 ],
                 "tags": [
-                    "Connection"
+                    "Connect"
                 ],
                 "responses": {
                     "204": {
