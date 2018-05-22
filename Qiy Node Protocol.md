@@ -365,7 +365,7 @@ This document aims to be the entry point for information analysts and software e
 
 * Chapter [2 Requests](#2-requests) describes the [Qiy Node Requests](Definitions.md#qiy-node-request).
 * Chapter [3 Events](#3-events) describes the [Qiy Node Events](Definitions.md#qiy-node-event).
-* Chapter [4 Messages](#4-messages) describes the [Qiy Node Messages](Definitions.md#qiy-node-message).
+* Chapter [4 Messages](#4-messages) describes the [Qiy Node Messages](#qiy-node-message).
 * Chapter [5 Models](#5-models) describes the entities of the [Qiy Node Interface](Definitions.md#qiy-node-interface).
 * Chapter [6 Index](#6-index) contains an index for the used terms.
 
@@ -505,7 +505,7 @@ The [Connection Delete Request](#connection-delete-request) is a [Qiy Node Reque
 The [Connection Details Request](#connection-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Connection](#connection).
 
 ### 2.4.4 Connections Request
-The [Connections Request](#connections-request) is a  [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Connections](Definitions.md#connection) of a [Qiy Node](Definitions.md#qiy-node).
+The [Connections Request](#connections-request) is a  [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the [Connections](#connection) of a [Qiy Node](Definitions.md#qiy-node).
 
 #### 2.4.4.1 Example Connections Request
 
@@ -631,13 +631,13 @@ The [Service Types Request](#service-types-request) is a [Qiy Node Request](Defi
 ## 2.8 Message Requests
 
 ### 2.8.1 Message Delete Request
-The [Message Delete Request](#message-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Delete Request](#message-delete-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to delete a [Qiy Node Message](#qiy-node-message).
 
 ### 2.8.2 Message Details Request
-The [Message Details Request](#message-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Details Request](#message-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to get the details of a [Qiy Node Message](#qiy-node-message).
 
 ### 2.8.3 Message Post Request
-The [Message Post Request](#message-post-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Post Request](#message-post-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to post a [Qiy Node Message](#qiy-node-message).
 
 ### 2.8.4 Messages Request
 The [Messages Request](#messages-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](Definitions.md#qiy-node).
@@ -762,7 +762,7 @@ The [Consent Granted Event](#consent-granted-event) is a [Qiy Node Event](Defini
 ## 3.3 Message Events
 
 ### 3.3.1 Message Received Event
-The [Message Received Event](#message-received-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](Definitions.md#qiy-node-message).
+The [Message Received Event](#message-received-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](#qiy-node-message).
 
 ## 3.4 Persistent Id Events
 
@@ -778,37 +778,37 @@ This chapter describes the [Qiy Node Messages](#message).
 
 ### 4.1.1 Consent Notification Message
 
-The [Consent Notification Message](#consent-notification-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to notify the registration of a [Consent](Definitions.md#consent).
+The [Consent Notification Message](#consent-notification-message) is a [Qiy Node Message](#qiy-node-message) which can be used to notify the registration of a [Consent](Definitions.md#consent).
 
 ### 4.1.2 Consent Request Message
 
-The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
+The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
 
 ## 4.2 Operation Messages
 
 ### 4.2.1 Operation Reference Message
-The [Operation Reference Message](#operation-reference-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Message](#operation-reference-message) is a [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference).
 
 ### 4.2.2 Operation Reference Request Message
-The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
 
 ### 4.2.3 Operation Specification Request Message
-The [Operation Specification Request Message](#operation-specification-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to request for an [Operation Specification](Definitions.md#operation-specification).
+The [Operation Specification Request Message](#operation-specification-request-message) is a [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](Definitions.md#operation-specification).
 
 ## 4.3 Portfolio Messages
 
 ### 4.3.1 Portfolio Register Message
-The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to request to add a [Data Provider](Definitions.md#data-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](Definitions.md#data-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 4.4 Service Credential Messages
 
 ### 4.4.1 Service Credential Request Message
-The [Service Credential Request Message](#service-credential-request-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) for requesting a [Service Credential](Definitions.md#service-credential).
+The [Service Credential Request Message](#service-credential-request-message) is a [Qiy Node Message](#qiy-node-message) for requesting a [Service Credential](Definitions.md#service-credential).
 
 ## 4.5 Source Messages
 
 ### 4.5.1 Source Candidates Message
-The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Message](Definitions.md#qiy-node-message) to propose candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
 
 # 5 Models
@@ -1010,7 +1010,7 @@ In addition:
 ## 5.10 Message Type Model
 
 This section describes the [Message Type](Definitions.md#message-type) entity type.
-The [Message Type](Definitions.md#message-type) is used to describe [Qiy Node Messages](Definitions.md#qiy-node-message) using [Message Descriptors](#message-descriptor).
+The [Message Type](Definitions.md#message-type) is used to describe [Qiy Node Messages](#qiy-node-message) using [Message Descriptors](#message-descriptor).
 
 ### 5.10.1 Message Type Attributes
 
@@ -1602,6 +1602,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Message](Definitions.md#qiy-node-message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Message](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8 Message Requests](#28-message-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4 Messages](#4-messages)
