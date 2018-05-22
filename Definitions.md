@@ -384,6 +384,21 @@ A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all
 ### Message Type
 A type of [Qiy Node Message](#qiy-node-message).
 
+### Message Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Types Request
+A [Qiy Node Request](#qiy-node-request) to list [Message Types](#message-type) that are registered in the [Service Library](#service-library).
+
 ### Node
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946084
 

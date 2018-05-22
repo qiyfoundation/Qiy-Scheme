@@ -60,16 +60,21 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Data Type Update Request](#274-data-type-update-request)
 		1. [Data Types Request](#275-data-types-request)
 		1. [Library Details Request](#276-library-details-request)
-		1. [Published Provider Details Request](#277-published-provider-details-request)
-		1. [Published Provider Register Request](#278-published-provider-register-request)
-		1. [Published Provider Unregister Request](#279-published-provider-unregister-request)
-		1. [Published Provider Update Request](#2710-published-provider-update-request)
-		1. [Published Providers Request](#2711-published-providers-request)
-		1. [Service Type Details Request](#2712-service-type-details-request)
-		1. [Service Type Register Request](#2713-service-type-register-request)
-		1. [Service Type Unregister Request](#2714-service-type-unregister-request)
-		1. [Service Type Update Request](#2715-service-type-update-request)
-		1. [Service Types Request](#2716-service-types-request)
+		1. [Message Type Details Request](#277-message-type-details-request)
+		1. [Message Type Register Request](#278-message-type-register-request)
+		1. [Message Type Unregister Request](#279-message-type-unregister-request)
+		1. [Message Type Update Request](#2710-message-type-update-request)
+		1. [Message Types Request](#2711-message-types-request)
+		1. [Published Provider Details Request](#2712-published-provider-details-request)
+		1. [Published Provider Register Request](#2713-published-provider-register-request)
+		1. [Published Provider Unregister Request](#2714-published-provider-unregister-request)
+		1. [Published Provider Update Request](#2715-published-provider-update-request)
+		1. [Published Providers Request](#2716-published-providers-request)
+		1. [Service Type Details Request](#2717-service-type-details-request)
+		1. [Service Type Register Request](#2718-service-type-register-request)
+		1. [Service Type Unregister Request](#2719-service-type-unregister-request)
+		1. [Service Type Update Request](#2720-service-type-update-request)
+		1. [Service Types Request](#2721-service-types-request)
 	1. [Message Requests](#28-message-requests)
 		1. [Message Delete Request](#281-message-delete-request)
 		1. [Message Details Request](#282-message-details-request)
@@ -108,6 +113,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Service Credential Register Request](#21212-service-credential-register-request)
 		1. [Service Credential Unregister Request](#21213-service-credential-unregister-request)
 		1. [Service Credential Update Request](#21214-service-credential-update-request)
+		1. [Service Credentials Request](#21215-service-credentials-request)
 1. [Events](#3-events)
 	1. [Connection Events](#31-connection-events)
 		1. [Connection Created Event](#311-connection-created-event)
@@ -169,41 +175,45 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Message Attributes](#591-message-attributes)
 		1. [Message Relations](#592-message-relations)
 		1. [Message Business Rules](#593-message-business-rules)
-	1. [Operation Model](#510-operation-model)
-		1. [Operation Attributes](#5101-operation-attributes)
-		1. [Operation Relations](#5102-operation-relations)
-		1. [Operation Business Rules](#5103-operation-business-rules)
-	1. [Operation Specification](#511-operation-specification)
-		1. [Operation Specification Attributes](#5111-operation-specification-attributes)
-		1. [Operation Specification Relations](#5112-operation-specification-relations)
-		1. [Operation Specification Business Rules](#5113-operation-specification-business-rules)
-	1. [Persistent Id Model](#512-persistent-id-model)
-		1. [Persistent Id Relations](#5121-persistent-id-relations)
-		1. [Persistent Id Business Rules](#5122-persistent-id-business-rules)
-	1. [Portfolio](#513-portfolio)
-		1. [Portfolio Attributes](#5131-portfolio-attributes)
-		1. [Portfolio Relations](#5132-portfolio-relations)
-		1. [Portfolio Business Rules](#5133-portfolio-business-rules)
-	1. [Qiy Node ](#514-qiy-node-)
-		1. [Qiy Node  Attributes](#5141-qiy-node--attributes)
-		1. [Qiy Node Relations](#5142-qiy-node-relations)
-		1. [Qiy Node Business Rules](#5143-qiy-node-business-rules)
-	1. [Qiy Node Credential](#515-qiy-node-credential)
-		1. [Qiy Node Credential Attributes](#5151-qiy-node-credential-attributes)
-		1. [Qiy Node Credential Relations](#5152-qiy-node-credential-relations)
-		1. [Qiy Node Credential Business Rules](#5153-qiy-node-credential-business-rules)
-	1. [Service Description](#516-service-description)
-		1. [Service Description Attributes](#5161-service-description-attributes)
-		1. [Service Description Relations](#5162-service-description-relations)
-		1. [Service Description Business Rules](#5163-service-description-business-rules)
-	1. [Source Model](#517-source-model)
-		1. [Source Attributes](#5171-source-attributes)
-		1. [Source Relations](#5172-source-relations)
-		1. [Source Business Rules](#5173-source-business-rules)
-	1. [Subscription](#518-subscription)
-		1. [Subscription Attributes](#5181-subscription-attributes)
-		1. [Subscription Relations](#5182-subscription-relations)
-		1. [Subscription Business Rules](#5183-subscription-business-rules)
+	1. [Message Type](#510-message-type)
+		1. [Message Type Attributes](#5101-message-type-attributes)
+		1. [Message Type Relations](#5102-message-type-relations)
+		1. [Message Type Business Rules](#5103-message-type-business-rules)
+	1. [Operation Model](#511-operation-model)
+		1. [Operation Attributes](#5111-operation-attributes)
+		1. [Operation Relations](#5112-operation-relations)
+		1. [Operation Business Rules](#5113-operation-business-rules)
+	1. [Operation Specification](#512-operation-specification)
+		1. [Operation Specification Attributes](#5121-operation-specification-attributes)
+		1. [Operation Specification Relations](#5122-operation-specification-relations)
+		1. [Operation Specification Business Rules](#5123-operation-specification-business-rules)
+	1. [Persistent Id Model](#513-persistent-id-model)
+		1. [Persistent Id Relations](#5131-persistent-id-relations)
+		1. [Persistent Id Business Rules](#5132-persistent-id-business-rules)
+	1. [Portfolio](#514-portfolio)
+		1. [Portfolio Attributes](#5141-portfolio-attributes)
+		1. [Portfolio Relations](#5142-portfolio-relations)
+		1. [Portfolio Business Rules](#5143-portfolio-business-rules)
+	1. [Qiy Node ](#515-qiy-node-)
+		1. [Qiy Node  Attributes](#5151-qiy-node--attributes)
+		1. [Qiy Node Relations](#5152-qiy-node-relations)
+		1. [Qiy Node Business Rules](#5153-qiy-node-business-rules)
+	1. [Qiy Node Credential](#516-qiy-node-credential)
+		1. [Qiy Node Credential Attributes](#5161-qiy-node-credential-attributes)
+		1. [Qiy Node Credential Relations](#5162-qiy-node-credential-relations)
+		1. [Qiy Node Credential Business Rules](#5163-qiy-node-credential-business-rules)
+	1. [Service Description](#517-service-description)
+		1. [Service Description Attributes](#5171-service-description-attributes)
+		1. [Service Description Relations](#5172-service-description-relations)
+		1. [Service Description Business Rules](#5173-service-description-business-rules)
+	1. [Source Model](#518-source-model)
+		1. [Source Attributes](#5181-source-attributes)
+		1. [Source Relations](#5182-source-relations)
+		1. [Source Business Rules](#5183-source-business-rules)
+	1. [Subscription](#519-subscription)
+		1. [Subscription Attributes](#5191-subscription-attributes)
+		1. [Subscription Relations](#5192-subscription-relations)
+		1. [Subscription Business Rules](#5193-subscription-business-rules)
 1. [Index](#6-index)
 	1. [Account](#account)
 	1. [Account Details Request](#account-details-request)
@@ -261,6 +271,13 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Message Post Request](#message-post-request)
 	1. [Message Received Event](#message-received-event)
 	1. [Messages Request](#messages-request)
+	1. [Message Descriptor](#message-descriptor)
+	1. [Message Type](#message-type)
+	1. [Message Type Details Request](#message-type-details-request)
+	1. [Message Type Register Request](#message-type-register-request)
+	1. [Message Type Unregister Request](#message-type-unregister-request)
+	1. [Message Type Update Request](#message-type-update-request)
+	1. [Message Types Request](#message-types-request)
 	1. [Operation](#operation)
 	1. [Operation Details Request](#operation-details-request)
 	1. [Operation Execute Request](#operation-execute-request)
@@ -453,7 +470,7 @@ The [Published Service Register Request](#published-service-register-request) is
 The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
 
 ### 2.2.6 Published Services Request
-The [Published Services Request](#published-services-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Ctalogue].
+The [Published Services Request](#published-services-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Services](Definitions.md#service) in a [Catalogue](#catalogue).
 
 ## 2.3 Connect Token Requests
 
@@ -549,52 +566,67 @@ The [Events Request](#events-request) is a [Qiy Node Request](Definitions.md#qiy
 ## 2.7 Library Requests
 
 ### 2.7.1 Data Type Details Request
-The [Data Type Details Request](#data-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+The [Data Type Details Request](#data-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Data Type](Definitions.md#data-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.2 Data Type Register Request
-The [Data Type Register Request](#data-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+The [Data Type Register Request](#data-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Data Type](Definitions.md#data-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.3 Data Type Unregister Request
-The [Data Type Unregister Request](#data-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+The [Data Type Unregister Request](#data-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Data Type](Definitions.md#data-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.4 Data Type Update Request
-The [Data Type Update Request](#data-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+The [Data Type Update Request](#data-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Data Type](Definitions.md#data-type) in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.5 Data Types Request
-The [Data Types Request](#data-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list the [Services](Definitions.md#service) that are registered in the [Service Library](Definitions.md#service-library).
+The [Data Types Request](#data-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list the [Data Types](Definitions.md#data-type) that are registered in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.6 Library Details Request
 The [Library Details Request](#library-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of the [Service Library](Definitions.md#service-library).
 
-### 2.7.7 Published Provider Details Request
+### 2.7.7 Message Type Details Request
+The [Message Type Details Request](#message-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.8 Message Type Register Request
+The [Message Type Register Request](#message-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.9 Message Type Unregister Request
+The [Message Type Unregister Request](#message-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.10 Message Type Update Request
+The [Message Type Update Request](#message-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Message Type](Definitions.md#message-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.11 Message Types Request
+The [Message Types Request](#message-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Message Types](Definitions.md#message-type) that are registered in the [Service Library](Definitions.md#service-library).
+
+### 2.7.12 Published Provider Details Request
 The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
 
-### 2.7.8 Published Provider Register Request
+### 2.7.13 Published Provider Register Request
 The [Published Provider Register Request](#published-provider-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 2.7.9 Published Provider Unregister Request
+### 2.7.14 Published Provider Unregister Request
 The [Published Provider Unregister Request](#published-provider-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
-### 2.7.10 Published Provider Update Request
+### 2.7.15 Published Provider Update Request
 The [Published Provider Update Request](#published-provider-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](Definitions.md#service-provider).
 
-### 2.7.11 Published Providers Request
+### 2.7.16 Published Providers Request
 The [Published Providers Request](#published-providers-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Service Providers](Definitions.md#service-provider).
 
-### 2.7.12 Service Type Details Request
-The [Service Type Details Request](#service-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+### 2.7.17 Service Type Details Request
+The [Service Type Details Request](#service-type-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to get the details of a [Service Type](Definitions.md#service-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.13 Service Type Register Request
-The [Service Type Register Request](#service-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+### 2.7.18 Service Type Register Request
+The [Service Type Register Request](#service-type-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service Type](Definitions.md#service-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.14 Service Type Unregister Request
-The [Service Type Unregister Request](#service-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+### 2.7.19 Service Type Unregister Request
+The [Service Type Unregister Request](#service-type-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service Type](Definitions.md#service-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.15 Service Type Update Request
-The [Service Type Update Request](#service-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Service](Definitions.md#service) in the [Service Library](Definitions.md#service-library).
+### 2.7.20 Service Type Update Request
+The [Service Type Update Request](#service-type-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update the details of a [Service Type](Definitions.md#service-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.16 Service Types Request
-The [Service Types Request](#service-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list the [Services](Definitions.md#service) that are registered in the [Service Library](Definitions.md#service-library).
+### 2.7.21 Service Types Request
+The [Service Types Request](#service-types-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list the [Service Types](Definitions.md#service-type) that are registered in the [Service Library](Definitions.md#service-library).
 
 ## 2.8 Message Requests
 
@@ -642,16 +674,16 @@ The [Accounts Request](#accounts-request) is a [Qiy Node Request](Definitions.md
 The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
 
 ### 2.10.7 Subscription Details Request
-The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
+The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to get the details of a [Subscription](Definitions.md#subscription) in a [Service Portfolio](Definitions.md#service-portfolio).
 
 ### 2.10.8 Subscription Register Request
 The [Subscription Register Request](#subscription-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
 
 ### 2.10.9 Subscription Unregister Request
-The [Subscription Unregister Request](#subscription-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
+The [Subscription Unregister Request](#subscription-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to unregister a subscription to a [Service](Definitions.md#service).
 
 ### 2.10.10 Subscriptions Request
-The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Service](Definitions.md#service) in a [Service Portfolio](Definitions.md#service-portfolio).
+The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) which can be used to list the [Subscription](Definitions.md#subscription) in a [Service Portfolio](Definitions.md#service-portfolio).
 
 ## 2.11 Qiy Node Requests
 
@@ -694,16 +726,19 @@ The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Reque
 The [Source Update Request](#source-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to update [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
 
 ### 2.12.11 Service Credential Details Request
-The [Service Credential Details Request](#service-credential-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Details Request](#service-credential-details-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
 ### 2.12.12 Service Credential Register Request
-The [Service Credential Register Request](#service-credential-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register the [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Register Request](#service-credential-register-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to register a [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
 ### 2.12.13 Service Credential Unregister Request
-The [Service Credential Unregister Request](#service-credential-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister the [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Unregister Request](#service-credential-unregister-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to unregister a [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
 ### 2.12.14 Service Credential Update Request
-The [Service Credential Update Request](#service-credential-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update the [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Update Request](#service-credential-update-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update a [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+
+### 2.12.15 Service Credentials Request
+The [Service Credentials Request](#service-credentials-request) is a [Qiy Node Request](Definitions.md#qiy-node-request) to list [Service Credentials](Definitions.md#service-credential).
 
 
 # 3 Events
@@ -917,7 +952,7 @@ tbd
 ## 5.8 Library
 
 This section describes the [Service Library](Definitions.md#service-library) entity type.
-The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type) and [Service Types](Definitions.md#service-type).
+The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type), [Message Types](Definitions.md#message-type) and [Service Types](Definitions.md#service-type).
 
 ### 5.8.1 Library Attributes
 
@@ -929,6 +964,7 @@ See [Library](#library) model.
 A [Library](#library):
 * has zero or more of: registered [Service Catalogue](Definitions.md#service-catalogue), named [Catalogue](#catalogue).
 * has zero or more of: registered [Data Type](#data-type).
+* has zero or more of: registered [Message Type](#message-type).
 * has zero or more of: [Service Type](#service-type).
 * has zero or more of: registered [Service Provider](Definitions.md#service-provider) named [Published Provider](#published-provider).
 
@@ -953,17 +989,37 @@ See [Message](#message) model.
 
 tbd
 
-## 5.10 Operation Model
+## 5.10 Message Type
+
+This section describes the [Message Type](Definitions.md#message-type) entity type.
+The [Message Type](Definitions.md#message-type) is used to describe [Qiy Node Messages](Definitions.md#qiy-node-message) using [Message Descriptors](#message-descriptor).
+
+### 5.10.1 Message Type Attributes
+
+See [Message Type](#message-type) model.
+
+### 5.10.2 Message Type Relations
+
+See [Message Type](#message-type) model.
+A [Message Type](#message-type):
+* is part of the [Library](#library).
+* is used by a [Message](#message).
+
+### 5.10.3 Message Type Business Rules
+
+* A [Message](#message) must be described using a [Message Type](#message-type).
+
+## 5.11 Operation Model
 
 This section describes the [Operation](#operation) entity type.
 
 An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](Definitions.md#consent) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
-### 5.10.1 Operation Attributes
+### 5.11.1 Operation Attributes
 
 See [Operation](#operation) model.
 
-### 5.10.2 Operation Relations
+### 5.11.2 Operation Relations
 
 See [Operation](#operation) model.
 An [Operation](#operation):
@@ -971,56 +1027,56 @@ An [Operation](#operation):
 * has one [Operation Specification](#operation-specification).
 * has one [Operation Reference](#operation-reference).
 
-### 5.10.3 Operation Business Rules
+### 5.11.3 Operation Business Rules
 
 * tbd
 
-## 5.11 Operation Specification
+## 5.12 Operation Specification
 
 This section describes the [Operation Specification](Definitions.md#operation-specification) entity type.
 The [Operation Specification](Definitions.md#operation-specification) specifies an [Operation](#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
-### 5.11.1 Operation Specification Attributes
+### 5.12.1 Operation Specification Attributes
 
 See [Operation Specification](#operation-specification) model.
 
-### 5.11.2 Operation Specification Relations
+### 5.12.2 Operation Specification Relations
 
 See [Operation Specification](#operation-specification) model.
 An [Operation Specification](Definitions.md#operation-specification):
 * is part of an [Operation](#operation).
 
-### 5.11.3 Operation Specification Business Rules
+### 5.12.3 Operation Specification Business Rules
 
 * A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 * A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 
-## 5.12 Persistent Id Model
+## 5.13 Persistent Id Model
 
 This section describes the [Persistent Id](#persistent-id).
 
 A [Persistent Id](#persistent-id) .
 
-### 5.12.1 Persistent Id Relations
+### 5.13.1 Persistent Id Relations
 
 See [Persistent Id](#persistent-id) model.
 A [Persistent Id](#persistent-id):
 * 
 
-### 5.12.2 Persistent Id Business Rules
+### 5.13.2 Persistent Id Business Rules
 
 * tbd
 
-## 5.13 Portfolio
+## 5.14 Portfolio
 
 This section describes the [Service Portfolio](Definitions.md#service-portfolio) entity type.
 The [Service Portfolio](Definitions.md#service-portfolio) of a [Qiy User](Definitions.md#qiy-user) is used to maintain information related to his [Subscriptions](Definitions.md#subscription), [Consents](Definitions.md#consent) and [Personal Data](Definitions.md#personal-data).
 
-### 5.13.1 Portfolio Attributes
+### 5.14.1 Portfolio Attributes
 
 See [Portfolio](#portfolio) model.
 
-### 5.13.2 Portfolio Relations
+### 5.14.2 Portfolio Relations
 
 See [Portfolio](#portfolio) model.
 A [Portfolio](#portfolio):
@@ -1029,64 +1085,64 @@ A [Portfolio](#portfolio):
 * has zero or more [Consents](#consent).
 * has zero or more [Subscriptions](#subscription).
 
-### 5.13.3 Portfolio Business Rules
+### 5.14.3 Portfolio Business Rules
 
 * Each [Qiy User](Definitions.md#qiy-user) has one [Portfolio](#portfolio).
 * Only the [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Portfolio](#portfolio).
 
-## 5.14 Qiy Node 
+## 5.15 Qiy Node 
 
-### 5.14.1 Qiy Node  Attributes
-
-See [Qiy Node](#qiy-node) model.
-
-### 5.14.2 Qiy Node Relations
+### 5.15.1 Qiy Node  Attributes
 
 See [Qiy Node](#qiy-node) model.
 
-### 5.14.3 Qiy Node Business Rules
+### 5.15.2 Qiy Node Relations
+
+See [Qiy Node](#qiy-node) model.
+
+### 5.15.3 Qiy Node Business Rules
 
 tbd
 
-## 5.15 Qiy Node Credential
+## 5.16 Qiy Node Credential
 
-### 5.15.1 Qiy Node Credential Attributes
+### 5.16.1 Qiy Node Credential Attributes
 
 See [Qiy Node Credential](#qiy-node-credential) model.
 
-### 5.15.2 Qiy Node Credential Relations
+### 5.16.2 Qiy Node Credential Relations
 
 See [Qiy Node Credential](#qiy-node-credential) model.
 
-### 5.15.3 Qiy Node Credential Business Rules
+### 5.16.3 Qiy Node Credential Business Rules
 
 tbd
 
-## 5.16 Service Description
+## 5.17 Service Description
 
-### 5.16.1 Service Description Attributes
-
-See [Service Description](#service-description) model.
-
-### 5.16.2 Service Description Relations
+### 5.17.1 Service Description Attributes
 
 See [Service Description](#service-description) model.
 
-### 5.16.3 Service Description Business Rules
+### 5.17.2 Service Description Relations
+
+See [Service Description](#service-description) model.
+
+### 5.17.3 Service Description Business Rules
 
 tbd
 
-## 5.17 Source Model
+## 5.18 Source Model
 
 This section describes the [Source](#source) entity type.
 
 A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](Definitions.md#consent).
 
-### 5.17.1 Source Attributes
+### 5.18.1 Source Attributes
 
 See [Source](#source) model.
 
-### 5.17.2 Source Relations
+### 5.18.2 Source Relations
 
 See [Source](#source) model.
 A [Source](#source):
@@ -1096,20 +1152,20 @@ A [Source](#source):
 * has zero or more [Operations](#operation).
 * has zero or more [Service Credentials](#service-credential).
 
-### 5.17.3 Source Business Rules
+### 5.18.3 Source Business Rules
 
 * tbd
 
-## 5.18 Subscription
+## 5.19 Subscription
 
 This section describes the [Subscription](Definitions.md#subscription) entity type.
 A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](Definitions.md#service-provider).
 
-### 5.18.1 Subscription Attributes
+### 5.19.1 Subscription Attributes
 
 See [Subscription](#subscription) model.
 
-### 5.18.2 Subscription Relations
+### 5.19.2 Subscription Relations
 
 See [Subscription](#subscription) model.
 A [Subscription](Definitions.md#subscription):
@@ -1118,7 +1174,7 @@ A [Subscription](Definitions.md#subscription):
 * has zero or one [Account](#account).
 * has zero or one [Consent](#consent).
 
-### 5.18.3 Subscription Business Rules
+### 5.19.3 Subscription Business Rules
 
 * The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
 * The [Service Provider](Definitions.md#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
@@ -1566,13 +1622,68 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /mboxUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#mboxUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8.4 Messages Request](#284-messages-request)
 
+## Message Descriptor
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Descriptor](Definitions.md#message-descriptor)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Message Type](#510-message-type)
+
+## Message Type
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Type](Definitions.md#message-type)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Message Type Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#MessageTypeModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Message Type](#510-message-type)
+
+## Message Type Details Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Type Details Request](Definitions.md#message-type-details-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /messageTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#messageTypeUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.7 Message Type Details Request](#277-message-type-details-request)
+
+## Message Type Register Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Type Register Request](Definitions.md#message-type-register-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [POST /messageTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#messageTypesUrlPost)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.8 Message Type Register Request](#278-message-type-register-request)
+
+## Message Type Unregister Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Type Unregister Request](Definitions.md#message-type-unregister-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /messageTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#messageTypeUrlDelete)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.9 Message Type Unregister Request](#279-message-type-unregister-request)
+
+## Message Type Update Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Type Update Request](Definitions.md#message-type-update-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /messageTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#messageTypeUrlPatch)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.10 Message Type Update Request](#2710-message-type-update-request)
+
+## Message Types Request
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Message Types Request](Definitions.md#message-types-request)
+[Qiy Node API](Qiy%20Node%20API.json)         | [GET /messageTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#messageTypesUrlGet)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.11 Message Types Request](#2711-message-types-request)
+
 ## Operation
 
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation](Definitions.md#operation)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Operation Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.10 Operation Model](#510-operation-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Operation Model](#511-operation-model)
 
 ## Operation Details Request
 
@@ -1596,7 +1707,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                   | [Operation Reference](Definitions.md#operation-reference)
 [Qiy Node API](Qiy%20Node%20API.json)           | [Operation Reference Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationReferenceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md)   | [5.11 Operation Specification](#511-operation-specification)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md)   | [5.12 Operation Specification](#512-operation-specification)
 
 ## Operation Reference Message
 
@@ -1636,7 +1747,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Specification](Definitions.md#operation-specification)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Operation Specification Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#OperationSpecificationModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.11 Operation Specification](#511-operation-specification)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.12 Operation Specification](#512-operation-specification)
 
 ## Operation Specification Request Message
 
@@ -1677,7 +1788,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Persistent Id](Definitions.md#persistent-id)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Persistent Id Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PersistentIdModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.4.1 Persistent Id Event](#341-persistent-id-event)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.12 Persistent Id Model](#512-persistent-id-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.13 Persistent Id Model](#513-persistent-id-model)
 
 ## Persistent Id Event
 
@@ -1693,7 +1804,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                   | [Service Portfolio](Definitions.md#service-portfolio)
 [Qiy Node API](Qiy%20Node%20API.json)           | [Portfolio Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PortfolioModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocoyyl.md) | [5.13 Portfolio](#513-portfolio)
+[Qiy Node Protocol](Qiy%20Node%20Protocoyyl.md) | [5.14 Portfolio](#514-portfolio)
 
 ## Portfolio Details Request
 
@@ -1730,7 +1841,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Details Request](Definitions.md#published-provider-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProviderUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.7 Published Provider Details Request](#277-published-provider-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.12 Published Provider Details Request](#2712-published-provider-details-request)
 
 ## Published Provider Register Request
 
@@ -1738,7 +1849,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Register Request](Definitions.md#published-provider-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /publishedProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProvidersUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.8 Published Provider Register Request](#278-published-provider-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.13 Published Provider Register Request](#2713-published-provider-register-request)
 
 ## Published Provider Unregister Request
 
@@ -1746,7 +1857,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Unregister Request](Definitions.md#published-provider-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProviderUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.9 Published Provider Unregister Request](#279-published-provider-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.14 Published Provider Unregister Request](#2714-published-provider-unregister-request)
 
 ## Published Provider Update Request
 
@@ -1754,7 +1865,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Update Request](Definitions.md#published-provider-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProviderUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.10 Published Provider Update Request](#2710-published-provider-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.15 Published Provider Update Request](#2715-published-provider-update-request)
 
 ## Published Providers Request
 
@@ -1762,7 +1873,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Providers Request](Definitions.md#published-providers-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProvidersUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.11 Published Providers Request](#2711-published-providers-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Published Providers Request](#2716-published-providers-request)
 
 ## Published Service
 
@@ -1808,7 +1919,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node](Definitions.md#qiy-node)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.14 Qiy Node](#514-qiy-node)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.15 Qiy Node](#515-qiy-node)
 
 ## Qiy Node Create Request
 
@@ -1824,7 +1935,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Credential](Definitions.md#qiy-node-credential)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credential Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#QiyNodeCredentialModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.15 Qiy Node Credential](#515-qiy-node-credential)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.16 Qiy Node Credential](#516-qiy-node-credential)
 
 ## Qiy Node Delete Request
 
@@ -1917,9 +2028,9 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Request]
+[Definitions](Definitions.md)                 | [Service Credentials Request](Definitions.md#service-credentials-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceCredentialsUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceCredentialsUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Service Credentials Request](#2716-service-credentials-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12.15 Service Credentials Request](#21215-service-credentials-request)
 
 ## Service Description
 
@@ -1927,7 +2038,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Description](Definitions.md#service-description)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Description Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceDescriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.16 Service Description](#516-service-description)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.17 Service Description](#517-service-description)
 
 ## Service Endpoint
 
@@ -1962,7 +2073,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Details Request](Definitions.md#service-type-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.12 Service Type Details Request](#2712-service-type-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.17 Service Type Details Request](#2717-service-type-details-request)
 
 ## Service Type Register Request
 
@@ -1970,7 +2081,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Register Request](Definitions.md#service-type-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /serviceTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypesUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.13 Service Type Register Request](#2713-service-type-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.18 Service Type Register Request](#2718-service-type-register-request)
 
 ## Service Type Unregister Request
 
@@ -1978,7 +2089,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Unregister Request](Definitions.md#service-type-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.14 Service Type Unregister Request](#2714-service-type-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.19 Service Type Unregister Request](#2719-service-type-unregister-request)
 
 ## Service Type Update Request
 
@@ -1986,7 +2097,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Update Request](Definitions.md#service-type-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.15 Service Type Update Request](#2715-service-type-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.20 Service Type Update Request](#2720-service-type-update-request)
 
 ## Service Types Request
 
@@ -1994,7 +2105,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Types Request](Definitions.md#service-types-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypesUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Service Types Request](#2716-service-types-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.21 Service Types Request](#2721-service-types-request)
 
 ## Source
 
@@ -2003,7 +2114,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SourceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.17 Source Model](#517-source-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Source Model](#518-source-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12 Source Requests](#212-source-requests)
 
 ## Source Candidates Message
@@ -2060,7 +2171,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscription](Definitions.md#subscription)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Subscription Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SubscriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Subscription](#518-subscription)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.19 Subscription](#519-subscription)
 
 ## Subscription Details Request
 

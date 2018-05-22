@@ -254,6 +254,10 @@ font-style: italic;
   <li><a href="#dataTypesUrlGet"><code><span class="http-method">get</span> /dataTypesUrl</code></a></li>
   <li><a href="#dataTypesUrlPost"><code><span class="http-method">post</span> /dataTypesUrl</code></a></li>
   <li><a href="#libraryEndpointGet"><code><span class="http-method">get</span> /libraryEndpoint</code></a></li>
+  <li><a href="#messageTypeUrlDelete"><code><span class="http-method">delete</span> /messageTypeUrl</code></a></li>
+  <li><a href="#messageTypeUrlGet"><code><span class="http-method">get</span> /messageTypeUrl</code></a></li>
+  <li><a href="#messageTypesUrlGet"><code><span class="http-method">get</span> /messageTypesUrl</code></a></li>
+  <li><a href="#messageTypesUrlPost"><code><span class="http-method">post</span> /messageTypesUrl</code></a></li>
   <li><a href="#operationUrlDelete"><code><span class="http-method">delete</span> /operationUrl</code></a></li>
   <li><a href="#operationUrlGet"><code><span class="http-method">get</span> /operationUrl</code></a></li>
   <li><a href="#operationsUrlGet"><code><span class="http-method">get</span> /operationsUrl</code></a></li>
@@ -1708,7 +1712,16 @@ font-style: italic;
 
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
+    <pre class="example"><code>{
+  "links" : {
+    "provider" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou",
+    "descriptor" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -1845,6 +1858,7 @@ font-style: italic;
     "dataTypes" : "http://example.com/aeiou",
     "serviceTypes" : "http://example.com/aeiou",
     "catalogues" : "http://example.com/aeiou",
+    "messageTypes" : "http://example.com/aeiou",
     "providers" : "http://example.com/aeiou"
   },
   "state" : "state",
@@ -1864,6 +1878,178 @@ font-style: italic;
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
         <a href="#LibraryModel">LibraryModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="messageTypeUrlDelete"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /messageTypeUrl</code></pre></div>
+    <div class="method-summary">Unregister Message Type. (<span class="nickname">messageTypeUrlDelete</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-type-unregister-request">Message Type Unregister Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">204</h4>
+    A response code 204 (NO CONTENT) will indicate a success.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    Failures will be indicated with response codes 400 to but-not-including 600.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="messageTypeUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /messageTypeUrl</code></pre></div>
+    <div class="method-summary">Get Message Type Details (<span class="nickname">messageTypeUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-type-details-request">Message Type Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#MessageTypeModel">MessageTypeModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "links" : {
+    "provider" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou",
+    "descriptor" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+      <li><code>text/html</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#MessageTypeModel">MessageTypeModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="messageTypesUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /messageTypesUrl</code></pre></div>
+    <div class="method-summary">Get Message Types (<span class="nickname">messageTypesUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-types-request">Message Types Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#MessageTypesModel">MessageTypesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+      <li><code>text/html</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    200 Successful execution.
+        <a href="#MessageTypesModel">MessageTypesModel</a>
+    <h4 class="field-label">400</h4>
+    [400,600&gt; Unsuccessful execution.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="messageTypesUrlPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /messageTypesUrl</code></pre></div>
+    <div class="method-summary">Message Type Register Request (<span class="nickname">messageTypesUrlPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-type-register-request">Message Type Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">service <a href="#MessageTypeModel">MessageTypeModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    201 Successful execution.
+        <a href="#"></a>
+    <h4 class="field-label">400</h4>
+    400,600 Unsuccessful execution.
+        <a href="#"></a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="operationUrlDelete"/>
@@ -2365,7 +2551,16 @@ font-style: italic;
 
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{ }</code></pre>
+    <pre class="example"><code>{
+  "links" : {
+    "provider" : "http://example.com/aeiou",
+    "self" : "http://example.com/aeiou",
+    "descriptor" : "http://example.com/aeiou"
+  },
+  "state" : "state",
+  "activeFrom" : 0,
+  "activeUntil" : 6
+}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -4142,6 +4337,7 @@ font-style: italic;
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
     <li><a href="#ConsentsModel"><code>ConsentsModel</code> - </a></li>
     <li><a href="#DataTypeModel"><code>DataTypeModel</code> - </a></li>
+    <li><a href="#DataTypeModel_links"><code>DataTypeModel_links</code> - </a></li>
     <li><a href="#DataTypesModel"><code>DataTypesModel</code> - </a></li>
     <li><a href="#EndpointAddressesModel"><code>EndpointAddressesModel</code> - </a></li>
     <li><a href="#EventModel"><code>EventModel</code> - </a></li>
@@ -4150,6 +4346,9 @@ font-style: italic;
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
     <li><a href="#MailboxMessagesModel"><code>MailboxMessagesModel</code> - </a></li>
     <li><a href="#MessageModel"><code>MessageModel</code> - </a></li>
+    <li><a href="#MessageTypeModel"><code>MessageTypeModel</code> - </a></li>
+    <li><a href="#MessageTypeModel_links"><code>MessageTypeModel_links</code> - </a></li>
+    <li><a href="#MessageTypesModel"><code>MessageTypesModel</code> - </a></li>
     <li><a href="#OperationModel"><code>OperationModel</code> - </a></li>
     <li><a href="#OperationModel_links"><code>OperationModel_links</code> - </a></li>
     <li><a href="#OperationReferenceModel"><code>OperationReferenceModel</code> - </a></li>
@@ -4174,6 +4373,7 @@ font-style: italic;
     <li><a href="#ServiceCredentialModel_links"><code>ServiceCredentialModel_links</code> - </a></li>
     <li><a href="#ServiceCredentialsModel"><code>ServiceCredentialsModel</code> - </a></li>
     <li><a href="#ServiceTypeModel"><code>ServiceTypeModel</code> - </a></li>
+    <li><a href="#ServiceTypeModel_links"><code>ServiceTypeModel_links</code> - </a></li>
     <li><a href="#ServiceTypesModel"><code>ServiceTypesModel</code> - </a></li>
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#SourceModel_links"><code>SourceModel_links</code> - </a></li>
@@ -4354,7 +4554,20 @@ font-style: italic;
     <h3><a name="DataTypeModel"><code>DataTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Data Type Model.</div>
     <div class="field-items">
-          </div>  <!-- field-items -->
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#DataTypeModel_links">DataTypeModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the Data Type. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="DataTypeModel_links"><code>DataTypeModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Data Type links.</div>
+    <div class="field-items">
+      <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type Descriptor. format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type (dataTypeUrl) format: url</div>
+    </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="DataTypesModel"><code>DataTypesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -4403,6 +4616,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">catalogues </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Catalogues Url (cataloguesUrl) format: url</div>
 <div class="param">dataTypes </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Types url (dataTypesUrl). format: url</div>
+<div class="param">messageTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Types url (messageTypesUrl). format: url</div>
 <div class="param">providers </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Providers url (publishedProvidersUrl) format: url</div>
 <div class="param">serviceTypes </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Types url (serviceTypesUrl). format: url</div>
     </div>  <!-- field-items -->
@@ -4430,6 +4644,31 @@ font-style: italic;
 <div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
 <div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> The Base64-encoded payload of the message. </div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="MessageTypeModel"><code>MessageTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Message Type Model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#MessageTypeModel_links">MessageTypeModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the Message Type. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="MessageTypeModel_links"><code>MessageTypeModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Message Type links.</div>
+    <div class="field-items">
+      <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type Descriptor. format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="MessageTypesModel"><code>MessageTypesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Message Types.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="OperationModel"><code>OperationModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -4623,7 +4862,20 @@ font-style: italic;
     <h3><a name="ServiceTypeModel"><code>ServiceTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Service Type Model.</div>
     <div class="field-items">
-          </div>  <!-- field-items -->
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ServiceTypeModel_links">ServiceTypeModel_links</a></span>  </div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the Service Type. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceTypeModel_links"><code>ServiceTypeModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Service Type links.</div>
+    <div class="field-items">
+      <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type Descriptor. format: url</div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl) format: url</div>
+    </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ServiceTypesModel"><code>ServiceTypesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
