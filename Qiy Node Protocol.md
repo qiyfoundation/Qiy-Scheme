@@ -278,6 +278,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Message Type Unregister Request](#message-type-unregister-request)
 	1. [Message Type Update Request](#message-type-update-request)
 	1. [Message Types Request](#message-types-request)
+	1. [Model](#model)
 	1. [Operation](#operation)
 	1. [Operation Details Request](#operation-details-request)
 	1. [Operation Execute Request](#operation-execute-request)
@@ -822,11 +823,11 @@ A [Qiy User](Definitions.md#qiy-user) can have linked [Accounts](#account) with 
 
 ### 5.1.1 Account Attributes
 
-See [Account](#account) model.
+See [Account](#account) [model](#model).
 
 ### 5.1.2 Account Relations
 
-See [Account](#account) model.
+See [Account](#account) [model](#model).
 An [Account](#account):
 * has one [Qiy User](Definitions.md#qiy-user).
 * has one [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
@@ -837,7 +838,7 @@ An [Account](#account):
 
 ### 5.1.3 Account Business Rules
 
-See [Account](#account) model.
+See [Account](#account) [model](#model).
 
 ## 5.2 Candidate Model
 
@@ -847,11 +848,11 @@ A [Candidate](#candidate) is a possible [Source](#source) to provide [Personal D
 
 ### 5.2.1 Candidate Attributes
 
-See [Candidate](#candidate) model.
+See [Candidate](#candidate) [model](#model).
 
 ### 5.2.2 Candidate Relations
 
-See [Candidate](#candidate) model.
+See [Candidate](#candidate) [model](#model).
 A [Candidate](#candidate):
 * is related to one [Consent](#consent).
 * is related to one [Data Service](Definitions.md#data-service) ([Published Service](#published-service)).
@@ -859,20 +860,20 @@ A [Candidate](#candidate):
 
 ### 5.2.3 Candidate Business Rules
 
-See [Candidate](#candidate) model.
+See [Candidate](#candidate) [model](#model).
 
 ## 5.3 Catalogue Model
 
-This section describes the [Service Catalogue](Definitions.md#service-catalogue) model.
+This section describes the [Service Catalogue](Definitions.md#service-catalogue) [model](#model).
 A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
 
 ### 5.3.1 Catalogue Attributes
 
-See [Catalogue](#catalogue) model.
+See [Catalogue](#catalogue) [model](#model).
 
 ### 5.3.2 Catalogue Relations
 
-See also [Catalogue](#catalogue) model.
+See also [Catalogue](#catalogue) [model](#model).
 A [Catalogue](#catalogue):
 * is part of: [Library](#library)
 * has zero or more of: [Published Service](#published-service)
@@ -880,7 +881,7 @@ A [Catalogue](#catalogue):
 
 ### 5.3.3 Catalogue Business Rules
 
-See [Catalogue](#catalogue) model.
+See [Catalogue](#catalogue) [model](#model).
 In addition:
 * Each registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)) has one [Catalogue](#catalogue).
 * The [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
@@ -891,29 +892,29 @@ In addition:
 
 ### 5.4.1 Connect Token Attributes
 
-See [Connect Token](#connect-token) model.
+See [Connect Token](#connect-token) [model](#model).
 
 ### 5.4.2 Connect Token Relations
 
-See [Connect Token](#connect-token) model.
+See [Connect Token](#connect-token) [model](#model).
 
 ### 5.4.3 Connect Token Business Rules
 
-See [Connect Token](#connect-token) model.
+See [Connect Token](#connect-token) [model](#model).
 
 ## 5.5 Connection Model
 
 ### 5.5.1 Connection Attributes
 
-See [Connection](#connection) model.
+See [Connection](#connection) [model](#model).
 
 ### 5.5.2 Connection Relations
 
-See [Connection](#connection) model.
+See [Connection](#connection) [model](#model).
 
 ### 5.5.3 Connection Business Rules
 
-See [Connection](#connection) model.
+See [Connection](#connection) [model](#model).
 
 ## 5.6 Consent Model
 
@@ -922,11 +923,11 @@ A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](Definitio
 
 ### 5.6.1 Consent Attributes
 
-See [Consent](#consent) model.
+See [Consent](#consent) [model](#model).
 
 ### 5.6.2 Consent Relations
 
-See [Consent](#consent) model.
+See [Consent](#consent) [model](#model).
 A [Consent](#consent):
 * is part of one: [Portfolio](#portfolio).
 * has one: [Subscription](#subscription).
@@ -934,7 +935,7 @@ A [Consent](#consent):
 
 ### 5.6.3 Consent Business Rules
 
-See [Consent](#consent) model.
+See [Consent](#consent) [model](#model).
 In addition:
 * A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](Definitions.md#consent).
 * A [Service Provider](Definitions.md#service-provider) has read-access to a [Consent](Definitions.md#consent).
@@ -943,15 +944,15 @@ In addition:
 
 ### 5.7.1 Event Attributes
 
-See [Event](#event) model.
+See [Event](#event) [model](#model).
 
 ### 5.7.2 Event Relations
 
-See [Event](#event) model.
+See [Event](#event) [model](#model).
 
 ### 5.7.3 Event Business Rules
 
-See [Event](#event) model.
+See [Event](#event) [model](#model).
 
 ## 5.8 Library Model
 
@@ -960,11 +961,11 @@ The [Service Library](Definitions.md#service-library) discloses data about all r
 
 ### 5.8.1 Library Attributes
 
-See [Library](#library) model.
+See [Library](#library) [model](#model).
 
 ### 5.8.2 Library Relations
 
-See [Library](#library) model.
+See [Library](#library) [model](#model).
 A [Library](#library):
 * has zero or more of: registered [Service Catalogue](Definitions.md#service-catalogue), named [Catalogue](#catalogue).
 * has zero or more of: registered [Data Type](#data-type).
@@ -974,7 +975,7 @@ A [Library](#library):
 
 ### 5.8.3 Library Business Rules
 
-See [Library](#library) model.
+See [Library](#library) [model](#model).
 In addition:
 * There is one and only one [Library](#library).
 * All [Qiy Users](Definitions.md#qiy-user) have read-access to the [Library](#library).
@@ -988,11 +989,11 @@ The [Message](#message) is used to exchange messages between [Qiy Users](Definit
 
 ### 5.9.1 Message Attributes
 
-See [Message](#message) model.
+See [Message](#message) [model](#model).
 
 ### 5.9.2 Message Relations
 
-See [Message](#message) model.
+See [Message](#message) [model](#model).
 A [Message](#message):
 * is described by a [Message Type](#message-type).
 * has one sender (a [Qiy User](Definitions.md#qiy-user)).
@@ -1001,7 +1002,7 @@ A [Message](#message):
 
 ### 5.9.3 Message Business Rules
 
-See [Message](#message) model.
+See [Message](#message) [model](#model).
 In addition:
 * A [Message](#message) can only be exchanged over an active [Connection](#connection).
 * A [Message](#message) is persisted as part of the [Connection](#connection).
@@ -1014,18 +1015,18 @@ The [Message Type](#message-type) is used to describe [Qiy Node Messages](#qiy-n
 
 ### 5.10.1 Message Type Attributes
 
-See [Message Type](#message-type) model.
+See [Message Type](#message-type) [model](#model).
 
 ### 5.10.2 Message Type Relations
 
-See [Message Type](#message-type) model.
+See [Message Type](#message-type) [model](#model).
 A [Message Type](#message-type):
 * is part of the [Library](#library).
 * is used by a [Message](#message).
 
 ### 5.10.3 Message Type Business Rules
 
-See [Message](#message) model.
+See [Message](#message) [model](#model).
 
 ## 5.11 Operation Model
 
@@ -1035,11 +1036,11 @@ An [Operation](#operation) is a command which can be used to acquire [Personal D
 
 ### 5.11.1 Operation Attributes
 
-See [Operation](#operation) model.
+See [Operation](#operation) [model](#model).
 
 ### 5.11.2 Operation Relations
 
-See [Operation](#operation) model.
+See [Operation](#operation) [model](#model).
 An [Operation](#operation):
 * has one [Source](#source).
 * has one [Operation Specification](#operation-specification).
@@ -1047,7 +1048,7 @@ An [Operation](#operation):
 
 ### 5.11.3 Operation Business Rules
 
-See [Operation](#operation) model.
+See [Operation](#operation) [model](#model).
 
 ## 5.12 Operation Specification Model
 
@@ -1056,17 +1057,17 @@ The [Operation Specification](Definitions.md#operation-specification) specifies 
 
 ### 5.12.1 Operation Specification Attributes
 
-See [Operation Specification](#operation-specification) model.
+See [Operation Specification](#operation-specification) [model](#model).
 
 ### 5.12.2 Operation Specification Relations
 
-See [Operation Specification](#operation-specification) model.
+See [Operation Specification](#operation-specification) [model](#model).
 An [Operation Specification](Definitions.md#operation-specification):
 * is part of an [Operation](#operation).
 
 ### 5.12.3 Operation Specification Business Rules
 
-See [Operation Specification](#operation-specification) model.
+See [Operation Specification](#operation-specification) [model](#model).
 In addition:
 * A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 * A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
@@ -1079,11 +1080,11 @@ A [Persistent Id](#persistent-id) .
 
 ### 5.13.1 Persistent Id Relations
 
-See [Persistent Id](#persistent-id) model.
+See [Persistent Id](#persistent-id) [model](#model).
 
 ### 5.13.2 Persistent Id Business Rules
 
-See [Persistent Id](#persistent-id) model.
+See [Persistent Id](#persistent-id) [model](#model).
 
 ## 5.14 Portfolio Model
 
@@ -1092,11 +1093,11 @@ The [Service Portfolio](Definitions.md#service-portfolio) of a [Qiy User](Defini
 
 ### 5.14.1 Portfolio Attributes
 
-See [Portfolio](#portfolio) model.
+See [Portfolio](#portfolio) [model](#model).
 
 ### 5.14.2 Portfolio Relations
 
-See [Portfolio](#portfolio) model.
+See [Portfolio](#portfolio) [model](#model).
 A [Portfolio](#portfolio):
 * has one owner, a [Qiy User](Definitions.md#qiy-user).
 * has zero or more linked data [Accounts](#account).
@@ -1105,7 +1106,7 @@ A [Portfolio](#portfolio):
 
 ### 5.14.3 Portfolio Business Rules
 
-See [Portfolio](#portfolio) model.
+See [Portfolio](#portfolio) [model](#model).
 In addition:
 * Each [Qiy User](Definitions.md#qiy-user) has one [Portfolio](#portfolio).
 * Only the [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Portfolio](#portfolio).
@@ -1114,43 +1115,43 @@ In addition:
 
 ### 5.15.1 Qiy Node  Attributes
 
-See [Qiy Node](#qiy-node) model.
+See [Qiy Node](#qiy-node) [model](#model).
 
 ### 5.15.2 Qiy Node Relations
 
-See [Qiy Node](#qiy-node) model.
+See [Qiy Node](#qiy-node) [model](#model).
 
 ### 5.15.3 Qiy Node Business Rules
 
-See [Qiy Node](#qiy-node) model.
+See [Qiy Node](#qiy-node) [model](#model).
 
 ## 5.16 Qiy Node Credential Model
 
 ### 5.16.1 Qiy Node Credential Attributes
 
-See [Qiy Node Credential](#qiy-node-credential) model.
+See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
 ### 5.16.2 Qiy Node Credential Relations
 
-See [Qiy Node Credential](#qiy-node-credential) model.
+See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
 ### 5.16.3 Qiy Node Credential Business Rules
 
-See [Qiy Node Credential](#qiy-node-credential) model.
+See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
 ## 5.17 Service Description Model
 
 ### 5.17.1 Service Description Attributes
 
-See [Service Description](#service-description) model.
+See [Service Description](#service-description) [model](#model).
 
 ### 5.17.2 Service Description Relations
 
-See [Service Description](#service-description) model.
+See [Service Description](#service-description) [model](#model).
 
 ### 5.17.3 Service Description Business Rules
 
-See [Service Description](#service-description) model.
+See [Service Description](#service-description) [model](#model).
 
 ## 5.18 Source Model
 
@@ -1160,11 +1161,11 @@ A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal
 
 ### 5.18.1 Source Attributes
 
-See [Source](#source) model.
+See [Source](#source) [model](#model).
 
 ### 5.18.2 Source Relations
 
-See [Source](#source) model.
+See [Source](#source) [model](#model).
 A [Source](#source):
 * has zero or one [Account](#account).
 * has one [Consent](#consent).
@@ -1174,7 +1175,7 @@ A [Source](#source):
 
 ### 5.18.3 Source Business Rules
 
-See [Source](#source) model.
+See [Source](#source) [model](#model).
 
 ## 5.19 Subscription Model
 
@@ -1183,11 +1184,11 @@ A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#su
 
 ### 5.19.1 Subscription Attributes
 
-See [Subscription](#subscription) model.
+See [Subscription](#subscription) [model](#model).
 
 ### 5.19.2 Subscription Relations
 
-See [Subscription](#subscription) model.
+See [Subscription](#subscription) [model](#model).
 A [Subscription](Definitions.md#subscription):
 * has one subscriber, a [Qiy User](Definitions.md#qiy-user).
 * has one [Service](Definitions.md#service) ([Published Service](#published-service)).
@@ -1196,7 +1197,7 @@ A [Subscription](Definitions.md#subscription):
 
 ### 5.19.3 Subscription Business Rules
 
-See [Subscription](#subscription) model.
+See [Subscription](#subscription) [model](#model).
 In addition:
 * The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
 * The [Service Provider](Definitions.md#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
@@ -1703,6 +1704,13 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Message Types Request](Definitions.md#message-types-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /messageTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#messageTypesUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.11 Message Types Request](#2711-message-types-request)
+
+## Model
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Models](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#__ModelsModels)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5 Models](#5-models)
 
 ## Operation
 
