@@ -47,7 +47,7 @@ This document describes how [Qiy Users](../Definitions.md#qiy-user) can connect 
 
 ## 1. The Proposer requests the Qiy Trust Network for a Connect Token
 
-The [Proposer](../Definitions.md#proposer) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) for a [Connect Token](../Definitions.md#connect-token) using a [Connect Token Create Request](../Qiy%20Node%20Protocol.md#connect-token-create-request).
+The [Proposer](../Definitions.md#proposer) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) for a [Connect Token](../Qiy%20Node%20Protocol.md#connect-token) using a [Connect Token Create Request](../Qiy%20Node%20Protocol.md#connect-token-create-request).
 
 Alternatively, the [Proposer](../Definitions.md#proposer) may generate a [Connect Token](../Definitions.md#connect-token) himself and register it with a [Connect Token Register Request](../Qiy%20Node%20Protocol.md#connect-token-register-request) and impose constraints on it at request time or change them later, see [UC08 Manage Connect Tokens](UC08%20Manage%20Connect%20Tokens.md).
 
