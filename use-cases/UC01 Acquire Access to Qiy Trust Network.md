@@ -94,7 +94,7 @@ with open(pem_filename, "wb") as f:
 ## 4. The Qiy App persists the Qiy Node Credentials
 ## 5. The Qiy App requests the Qiy Trust Network to create a Qiy Node
 
-The [Qiy App](../Definitions.md#qiy-app) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to create a [Qiy Node](../Definitions.md#qiy-node) using a [Qiy Node Create Request](../Definitions.md#qiy-node-create-request).
+The [Qiy App](../Definitions.md#qiy-app) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to create a [Qiy Node](../Definitions.md#qiy-node) using a [Qiy Node Create Request](../Qiy%20Node%20Protocol.md#qiy-node-create-request).
 
 
 # Postconditions
