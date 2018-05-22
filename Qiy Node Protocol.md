@@ -837,7 +837,7 @@ An [Account](#account):
 
 ### 5.1.3 Account Business Rules
 
-* tbd
+See [Account](#account) model.
 
 ## 5.2 Candidate Model
 
@@ -859,7 +859,7 @@ A [Candidate](#candidate):
 
 ### 5.2.3 Candidate Business Rules
 
-* tbd
+See [Candidate](#candidate) model.
 
 ## 5.3 Catalogue
 
@@ -880,6 +880,8 @@ A [Catalogue](#catalogue):
 
 ### 5.3.3 Catalogue Business Rules
 
+See [Catalogue](#catalogue) model.
+In addition:
 * Each registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)) has one [Catalogue](#catalogue).
 * The [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
 * The [Access Provider](Definitions.md#access-provider) of the [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
@@ -897,7 +899,7 @@ See [Connect Token](#connect-token) model.
 
 ### 5.4.3 Connect Token Business Rules
 
-tbd
+See [Connect Token](#connect-token) model.
 
 ## 5.5 Connection
 
@@ -911,7 +913,7 @@ See [Connection](#connection) model.
 
 ### 5.5.3 Connection Business Rules
 
-tbd
+See [Connection](#connection) model.
 
 ## 5.6 Consent
 
@@ -932,6 +934,8 @@ A [Consent](#consent):
 
 ### 5.6.3 Consent Business Rules
 
+See [Consent](#consent) model.
+In addition:
 * A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](Definitions.md#consent).
 * A [Service Provider](Definitions.md#service-provider) has read-access to a [Consent](Definitions.md#consent).
 
@@ -947,7 +951,7 @@ See [Event](#event) model.
 
 ### 5.7.3 Event Business Rules
 
-tbd
+See [Event](#event) model.
 
 ## 5.8 Library
 
@@ -970,12 +974,17 @@ A [Library](#library):
 
 ### 5.8.3 Library Business Rules
 
+See [Library](#library) model.
+In addition:
 * There is one and only one [Library](#library).
 * All [Qiy Users](Definitions.md#qiy-user) have read-access to the [Library](#library).
 * Only [Access Providers](Definitions.md#access-provider) have write-access to the [Library](#library).
 
 
 ## 5.9 Message
+
+This section describes the [Message](#message) entity type.
+The [Message](#message) is used to exchange messages between [Qiy Users](Definitions.md#qiy-user).
 
 ### 5.9.1 Message Attributes
 
@@ -984,10 +993,19 @@ See [Message](#message) model.
 ### 5.9.2 Message Relations
 
 See [Message](#message) model.
+A [Message](#message):
+* is described by a [Message Type](#message-type).
+* has one sender (a [Qiy User](Definitions.md#qiy-user)).
+* has one receiver (a [Qiy User](Definitions.md#qiy-user)).
+* uses one [Connection](#connection).
 
 ### 5.9.3 Message Business Rules
 
-tbd
+See [Message](#message) model.
+In addition:
+* A [Message](#message) can only be exchanged over an active [Connection](#connection).
+* A [Message](#message) is persisted as part of the [Connection](#connection).
+* A [Message](#message) expires with the [Connection](#connection).
 
 ## 5.10 Message Type
 
@@ -1007,7 +1025,7 @@ A [Message Type](#message-type):
 
 ### 5.10.3 Message Type Business Rules
 
-* A [Message](#message) must be described using a [Message Type](#message-type).
+See [Message](#message) model.
 
 ## 5.11 Operation Model
 
@@ -1029,7 +1047,7 @@ An [Operation](#operation):
 
 ### 5.11.3 Operation Business Rules
 
-* tbd
+See [Operation](#operation) model.
 
 ## 5.12 Operation Specification
 
@@ -1048,6 +1066,8 @@ An [Operation Specification](Definitions.md#operation-specification):
 
 ### 5.12.3 Operation Specification Business Rules
 
+See [Operation Specification](#operation-specification) model.
+In addition:
 * A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 * A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
 
@@ -1060,12 +1080,10 @@ A [Persistent Id](#persistent-id) .
 ### 5.13.1 Persistent Id Relations
 
 See [Persistent Id](#persistent-id) model.
-A [Persistent Id](#persistent-id):
-* 
 
 ### 5.13.2 Persistent Id Business Rules
 
-* tbd
+See [Persistent Id](#persistent-id) model.
 
 ## 5.14 Portfolio
 
@@ -1087,6 +1105,8 @@ A [Portfolio](#portfolio):
 
 ### 5.14.3 Portfolio Business Rules
 
+See [Portfolio](#portfolio) model.
+In addition:
 * Each [Qiy User](Definitions.md#qiy-user) has one [Portfolio](#portfolio).
 * Only the [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Portfolio](#portfolio).
 
@@ -1102,7 +1122,7 @@ See [Qiy Node](#qiy-node) model.
 
 ### 5.15.3 Qiy Node Business Rules
 
-tbd
+See [Qiy Node](#qiy-node) model.
 
 ## 5.16 Qiy Node Credential
 
@@ -1116,7 +1136,7 @@ See [Qiy Node Credential](#qiy-node-credential) model.
 
 ### 5.16.3 Qiy Node Credential Business Rules
 
-tbd
+See [Qiy Node Credential](#qiy-node-credential) model.
 
 ## 5.17 Service Description
 
@@ -1130,7 +1150,7 @@ See [Service Description](#service-description) model.
 
 ### 5.17.3 Service Description Business Rules
 
-tbd
+See [Service Description](#service-description) model.
 
 ## 5.18 Source Model
 
@@ -1154,7 +1174,7 @@ A [Source](#source):
 
 ### 5.18.3 Source Business Rules
 
-* tbd
+See [Source](#source) model.
 
 ## 5.19 Subscription
 
@@ -1176,6 +1196,8 @@ A [Subscription](Definitions.md#subscription):
 
 ### 5.19.3 Subscription Business Rules
 
+See [Subscription](#subscription) model.
+In addition:
 * The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
 * The [Service Provider](Definitions.md#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
 
