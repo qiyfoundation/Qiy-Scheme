@@ -1011,23 +1011,13 @@
         },
         "QiyNodeCreateRequestParametersModel": {
             "type": "object",
-            "properties": {
-                "publicKey": {
-                    "description": "Public key to be used to authenticate future requests.",
-                    "type": "string",
-                    "minItems": 1,
-                    "maxItems": 1
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QiyNodeId"
                 },
-                "id": {
-                    "description": "Qiy Node id.",
-                    "type": "string",
-                    "minItems": 1,
-                    "maxItems": 1
+                {
+                    "$ref": "#/definitions/QiyNodePublicKey"
                 }
-            },
-            "required": [
-                "publicKey",
-                "id"
             ]
         },
         "QiyNodeCredentialModel": {
@@ -1039,15 +1029,14 @@
                     "type": "object",
                     "properties": {
                         "privateKey": {
-                            "description": "RSA private key.",
+                            "description": "Qiy Node RSA private key.",
                             "type": "string",
                             "minItems": 1,
                             "maxItems": 1
                         }
                     },
                     "required": [
-                        "publicKey",
-                        "id"
+                        "privateKey"
                     ]
 		}
             ]
@@ -1064,6 +1053,20 @@
             },
             "required": [
                 "id"
+            ]
+        },
+        "QiyNodePublicKey": {
+            "type": "object",
+            "properties": {
+                "publicKey": {
+                    "description": "Qiy Node RSA public key.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                }
+            },
+            "required": [
+                "publicKey"
             ]
         },
         "ReferenceResultModel": {

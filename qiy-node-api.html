@@ -4166,8 +4166,8 @@ font-style: italic;
     <li><a href="#PublishedServiceModel"><code>PublishedServiceModel</code> - </a></li>
     <li><a href="#PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a></li>
     <li><a href="#PublishedServicesModel"><code>PublishedServicesModel</code> - </a></li>
-    <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeId"><code>QiyNodeId</code> - </a></li>
+    <li><a href="#QiyNodePublicKey"><code>QiyNodePublicKey</code> - </a></li>
     <li><a href="#ReferenceResultModel"><code>ReferenceResultModel</code> - </a></li>
     <li><a href="#ReferencesResultModel"><code>ReferencesResultModel</code> - </a></li>
     <li><a href="#ServiceCredentialModel"><code>ServiceCredentialModel</code> - </a></li>
@@ -4187,6 +4187,7 @@ font-style: italic;
     <li><a href="#EventStreamModel"><code>EventStreamModel</code> - </a></li>
     <li><a href="#MailboxMessageModel"><code>MailboxMessageModel</code> - </a></li>
     <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
+    <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
   </ol>
 
@@ -4564,18 +4565,17 @@ font-style: italic;
           </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
-    <div class="field-items">
-      <div class="param">publicKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Public key to be used to authenticate future requests. </div>
-<div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node id. </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
     <h3><a name="QiyNodeId"><code>QiyNodeId</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="QiyNodePublicKey"><code>QiyNodePublicKey</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">publicKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node RSA public key. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4757,11 +4757,19 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
+<div class="param">publicKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node RSA public key. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
-<div class="param">privateKey (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> RSA private key. </div>
+<div class="param">privateKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node RSA private key. </div>
     </div>  <!-- field-items -->
   </div>
   </body>
