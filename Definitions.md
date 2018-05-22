@@ -381,6 +381,9 @@ A [Qiy Node Event](#qiy-node-event) that notifies a [Receiver](#receiver) that h
 ### Messages Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](#qiy-node).
 
+### Message Type
+A type of [Qiy Node Message](#qiy-node-message).
+
 ### Node
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946084
 
@@ -492,7 +495,7 @@ A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service
 A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
 ### Published Services Request
-A [Qiy Node Request](#qiy-node-request) which can be used to list the [Service](#service) in a [Service Portfolio](#service-portfolio).
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Services](#service) in a [Service Catalogue](#service-catalogue).
 
 ### Qiy App
 A [Qiy Application](#qiy-application) that can be installed on a smart phone or similar device.
@@ -651,16 +654,16 @@ A [Business Object](#business-object) for information about all the [Services](#
 A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Credential Register Request
-A [Qiy Node Request](#qiy-node-request) to register the [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
+A [Qiy Node Request](#qiy-node-request) to register a [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Credential Request Message
-A [Qiy Node Message](#qiy-node-message) for requesting [Service Credential](#service-credential).
+A [Qiy Node Message](#qiy-node-message) for requesting a [Service Credential](#service-credential).
 
 ### Service Credential Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister the [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Credential Update Request
-A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update the [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update a [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Credentials Request
 A [Qiy Node Request](#qiy-node-request) to list [Service Credentials](#service-credential).
@@ -702,25 +705,25 @@ See [Provider Register Request].
 See [Provider Unregister Request].
 
 ### Service Source
-A [Service](#service) of a [Service Provider](#service-provider) that provides the [Service](#service) required by another [Service](#service).
+A [Service](#service) of a [Service Provider](#service-provider) that provides input services required by another [Service](#service).
 
 ### Service Type
 A type of [Service](#service).
 
 ### Service Type Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of a [Service](#service) in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Type](#service-type) in the [Service Library](#service-library).
 
 ### Service Type Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to register a [Service Type](#service-type) in the [Service Library](#service-library).
 
 ### Service Type Unregister Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service Type](#service-type) in the [Service Library](#service-library).
 
 ### Service Type Update Request
-A [Qiy Node Request](#qiy-node-request) to update the details of a [Service](#service) in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Service Type](#service-type) in the [Service Library](#service-library).
 
 ### Service Types Request
-A [Qiy Node Request](#qiy-node-request) to list the [Services](#service) that are registered in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to list [Service Types](#service-type) that are registered in the [Service Library](#service-library).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
