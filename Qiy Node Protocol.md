@@ -145,10 +145,10 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Catalogue Attributes](#531-catalogue-attributes)
 		1. [Catalogue Relations](#532-catalogue-relations)
 		1. [Catalogue Business Rules](#533-catalogue-business-rules)
-	1. [Connect Token](#56-connect-token)
-		1. [Connect Token Attributes](#561-connect-token-attributes)
-		1. [Connect Token Relations](#562-connect-token-relations)
-		1. [Connect Token Business Rules](#563-connect-token-business-rules)
+	1. [Connect Token](#54-connect-token)
+		1. [Connect Token Attributes](#541-connect-token-attributes)
+		1. [Connect Token Relations](#542-connect-token-relations)
+		1. [Connect Token Business Rules](#543-connect-token-business-rules)
 	1. [Connection](#55-connection)
 		1. [Connection Attributes](#551-connection-attributes)
 		1. [Connection Relations](#552-connection-relations)
@@ -850,17 +850,17 @@ A [Catalogue](#catalogue):
 * The [Access Provider](Definitions.md#access-provider) of the [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
 * All [Qiy Users](Definitions.md#qiy-user) have read-access to any [Catalogue](#catalogue).
 
-## 5.6 Connect Token
+## 5.4 Connect Token
 
-### 5.6.1 Connect Token Attributes
-
-See [Connect Token](#connect-token) model.
-
-### 5.6.2 Connect Token Relations
+### 5.4.1 Connect Token Attributes
 
 See [Connect Token](#connect-token) model.
 
-### 5.6.3 Connect Token Business Rules
+### 5.4.2 Connect Token Relations
+
+See [Connect Token](#connect-token) model.
+
+### 5.4.3 Connect Token Business Rules
 
 tbd
 
@@ -1218,7 +1218,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Connect Token](Definitions.md#connect-token)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connect Token Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectTokenModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Connect Token](#56-connect-token)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Connect Token](#54-connect-token)
 
 ## Connect Token Create Request
 
