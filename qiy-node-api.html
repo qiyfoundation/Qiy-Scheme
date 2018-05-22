@@ -4167,6 +4167,7 @@ font-style: italic;
     <li><a href="#PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a></li>
     <li><a href="#PublishedServicesModel"><code>PublishedServicesModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
+    <li><a href="#QiyNodeId"><code>QiyNodeId</code> - </a></li>
     <li><a href="#ReferenceResultModel"><code>ReferenceResultModel</code> - </a></li>
     <li><a href="#ReferencesResultModel"><code>ReferencesResultModel</code> - </a></li>
     <li><a href="#ServiceCredentialModel"><code>ServiceCredentialModel</code> - </a></li>
@@ -4186,6 +4187,7 @@ font-style: italic;
     <li><a href="#EventStreamModel"><code>EventStreamModel</code> - </a></li>
     <li><a href="#MailboxMessageModel"><code>MailboxMessageModel</code> - </a></li>
     <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
+    <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
   </ol>
 
   <div class="model">
@@ -4570,6 +4572,13 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="QiyNodeId"><code>QiyNodeId</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="ReferenceResultModel"><code>ReferenceResultModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Reference details.</div>
     <div class="field-items">
@@ -4745,6 +4754,14 @@ font-style: italic;
 <div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable (NB: See [OpenAPI 2.0 does not support nullable fields](https://github.com/swagger-api/swagger-node/issues/399) and [OpenAPI 3.0 'nullable'-attribute](https://swagger.io/docs/specification/data-models/data-types/#nullable).)</div>
 <div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
 <div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#OperationReferenceRequestMessageModel_payload">OperationReferenceRequestMessageModel_payload</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
+<div class="param">privateKey (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> RSA private key. </div>
     </div>  <!-- field-items -->
   </div>
   </body>

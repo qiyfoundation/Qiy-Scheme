@@ -1030,6 +1030,42 @@
                 "id"
             ]
         },
+        "QiyNodeCredentialModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QiyNodeId"
+                },
+	        {
+                    "type": "object",
+                    "properties": {
+                        "privateKey": {
+                            "description": "RSA private key.",
+                            "type": "string",
+                            "minItems": 1,
+                            "maxItems": 1
+                        }
+                    },
+                    "required": [
+                        "publicKey",
+                        "id"
+                    ]
+		}
+            ]
+        },
+        "QiyNodeId": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "Qiy Node Id.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
         "ReferenceResultModel": {
             "description": "Reference details.",
             "type": "object",
