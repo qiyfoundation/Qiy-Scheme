@@ -136,7 +136,7 @@
         "CandidatesModel": {
             "description": "Source Candidates.",
             "items": {
-                "$ref": "#/definitions/EndpointAddressesModel"
+                "$ref": "#/definitions/CandidateModel"
             },
             "type": "array"
         },
@@ -1188,9 +1188,7 @@
                         }
                     },
                     "required": [
-                        "candidates",
                         "consent",
-                        "serviceCredentials",
                         "self"
                     ],
                     "type": "object"
