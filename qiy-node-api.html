@@ -781,6 +781,7 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
+  "persistentId" : "persistentId",
   "links" : {
     "references" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
@@ -825,7 +826,7 @@ font-style: italic;
 
       <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit results to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connections</a> that have been active since the time stamp 'since'. format: Unix time in ms</div><div class="param">persistentId (optional)</div>
 
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit result to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connection</a> with a <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id">Persistent Id</a> equaling 'persistentId'. format: [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).</div>
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit result to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connection</a> with a <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id">Persistent Id</a> equaling 'persistentId'. format: See Persistent Id Model</div>
     </div>  <!-- field-items -->
 
 
@@ -2535,6 +2536,7 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
+  "persistentId" : "persistentId",
   "links" : {
     "references" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
@@ -3282,6 +3284,7 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
+  "persistentId" : "persistentId",
   "links" : {
     "references" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
@@ -3326,7 +3329,7 @@ font-style: italic;
 
       <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit results to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connections</a> that have been active since the time stamp 'since'. format: Unix time in ms</div><div class="param">persistentId (optional)</div>
 
-      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit result to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connection</a> with a <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id">Persistent Id</a> equaling 'persistentId'. format: [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).</div>
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit result to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connection</a> with a <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id">Persistent Id</a> equaling 'persistentId'. format: See Persistent Id Model</div>
     </div>  <!-- field-items -->
 
 
@@ -4495,24 +4498,25 @@ font-style: italic;
     <h3><a name="ConnectionModel"><code>ConnectionModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Connection details.</div>
     <div class="field-items">
-      <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the connection. </div>
-<div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
 <div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ConnectionModel_links">ConnectionModel_links</a></span>  </div>
+<div class="param">persistentId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id">Persistent Id</a> of the <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connection</a>. format: See Persistent Id Model</div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection">Connection</a>. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ConnectionModel_links"><code>ConnectionModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">mbox </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Messagebox Url. format: url</div>
-<div class="param">references </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> References Url. format: url</div>
-<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url format: url</div>
+      <div class="param">mbox </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Messagebox (mboxUrl). format: url</div>
+<div class="param">references </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> References Url (referencesUrl). format: url</div>
+<div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection (connectionUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ConnectionsResponseModel"><code>ConnectionsResponseModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Response of <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request">Connections Request</a>.</div>
+    <div class='model-description'>Response of Connections Request.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>

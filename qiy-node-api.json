@@ -201,7 +201,7 @@
             "type": "array"
         },
         "ConnectionsResponseModel": {
-            "description": "Response of [Connections Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request).",
+            "description": "Response of Connections Request.",
             "items": {
                 "type": "object",
                 "properties": {
@@ -225,10 +225,6 @@
         "ConnectionModel": {
             "description": "Connection details.",
             "properties": {
-                "state": {
-                    "description": "State of the connection.",
-                    "type": "string"
-                },
                 "activeFrom": {
                     "description": "Active from date time stamp.",
                     "type": "integer",
@@ -243,17 +239,17 @@
                     "type": "object",
                     "properties": {
                         "mbox": {
-                            "description": "Messagebox Url.",
+                            "description": "Messagebox (mboxUrl).",
                             "type": "string",
                             "format": "url"
                         },
                         "references": {
-                            "description": "References Url.",
+                            "description": "References Url (referencesUrl).",
                             "type": "string",
                             "format": "url"
                         },
                         "self": {
-                            "description": "Connection Url",
+                            "description": "Connection (connectionUrl).",
                             "type": "string",
                             "format": "url"
                         }
@@ -263,13 +259,23 @@
                         "references",
                         "self"
                     ]
+                },
+                "persistentId": {
+                    "description": "[Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id) of the [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection).",
+                    "format": "See Persistent Id Model",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection).",
+                    "type": "string"
                 }
             },
             "required": [
-                "state",
                 "activeFrom",
                 "activeUntil",
-                "links"
+                "links",
+                "persistentId",
+                "state"
             ],
             "type": "object"
         },
@@ -961,6 +967,7 @@
         },
         "PersistentIdModel": {
             "description": "See [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).",
+            "format": "ascii string with length 24",
             "type": "string"
         },
         "PortfolioModel": {
@@ -1785,7 +1792,7 @@
                         "name": "persistentId",
                         "in": "query",
                         "description": "Limit result to [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection) with a [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id) equaling 'persistentId'.",
-                        "format": "[Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).",
+                        "format": "See Persistent Id Model",
                         "required": false,
                         "type": "string"
                     }
