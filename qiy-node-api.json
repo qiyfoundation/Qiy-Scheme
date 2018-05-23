@@ -754,6 +754,23 @@
                 "payload"
             ]
         },
+        "MessageReceivedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Message Received Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-received-event).",
+                    "properties": {
+	    	        "extraData": {
+                            "format": "null"
+                        },
+                        "type": {
+                            "format": "MESSAGE_RECEIVED"
+                        }
+                    },
+		    "type": "object"
+                }
+            ]
+        },
         "MessageTypeModel": {
             "description": "Message Type Model.",
             "properties": {
