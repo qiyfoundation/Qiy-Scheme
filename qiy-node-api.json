@@ -732,7 +732,7 @@
                     "minItems": 1,
                     "maxItems": 1,
                     "type": "integer",
-                    "format": "nullable (NB: See [OpenAPI 2.0 does not support nullable fields](https://github.com/swagger-api/swagger-node/issues/399) and [OpenAPI 3.0 'nullable'-attribute](https://swagger.io/docs/specification/data-models/data-types/#nullable).)"
+                    "format": "nullable"
                 },
                 "text": {
                     "description": "Subject",
