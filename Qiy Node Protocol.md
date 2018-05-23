@@ -1009,6 +1009,7 @@ In addition:
 * A [Message](#message) can only be exchanged over an active [Connection](#connection).
 * A [Message](#message) is persisted as part of the [Connection](#connection).
 * A [Message](#message) expires with the [Connection](#connection).
+* A [Message](#message) is to follow the rules of its [Message Type](#message-type).
 
 ## 5.10 Message Type Model
 

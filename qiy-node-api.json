@@ -720,8 +720,8 @@
             "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
             "type": "object",
             "properties": {
-                "protocol": {
-                    "description": "Application protocol",
+                "type": {
+                    "description": "Message Type (messageTypeUrl)",
                     "minItems": 1,
                     "maxItems": 1,
                     "type": "string"
@@ -748,7 +748,7 @@
                 }
             },
             "required": [
-                "protocol",
+                "type",
                 "refSerialNr",
                 "text",
                 "payload"
