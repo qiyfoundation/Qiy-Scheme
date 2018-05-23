@@ -4358,6 +4358,7 @@ font-style: italic;
     <li><a href="#OperationSpecificationModel"><code>OperationSpecificationModel</code> - </a></li>
     <li><a href="#OperationSpecificationModel_headers"><code>OperationSpecificationModel_headers</code> - </a></li>
     <li><a href="#OperationsModel"><code>OperationsModel</code> - </a></li>
+    <li><a href="#PersistentIdEventModel_extraData"><code>PersistentIdEventModel_extraData</code> - </a></li>
     <li><a href="#PersistentIdModel"><code>PersistentIdModel</code> - </a></li>
     <li><a href="#PortfolioModel"><code>PortfolioModel</code> - </a></li>
     <li><a href="#PortfolioModel_links"><code>PortfolioModel_links</code> - </a></li>
@@ -4603,7 +4604,6 @@ font-style: italic;
     <div class='model-description'>Event Model.</div>
     <div class="field-items">
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
-<div class="param">extraData </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Property for extra event data. </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
     </div>  <!-- field-items -->
   </div>
@@ -4725,6 +4725,14 @@ font-style: italic;
     <div class='model-description'>List of Operations.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PersistentIdEventModel_extraData"><code>PersistentIdEventModel_extraData</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>extra data: Persistent Ids and Service Provider Identity.</div>
+    <div class="field-items">
+      <div class="param">persistentIds (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Persistent Ids format: See Persistent Id Model.</div>
+<div class="param">providerId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider identity (publishedProviderUrl). format: url</div>
+    </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="PersistentIdModel"><code>PersistentIdModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -4989,8 +4997,8 @@ font-style: italic;
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
-<div class="param">extraData </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Property for extra event data. </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
+<div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span>  </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4998,7 +5006,6 @@ font-style: italic;
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
-<div class="param">extraData </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Property for extra event data. </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
     </div>  <!-- field-items -->
   </div>
@@ -5019,8 +5026,8 @@ font-style: italic;
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
-<div class="param">extraData </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Property for extra event data. </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
+<div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span>  </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -5028,8 +5035,8 @@ font-style: italic;
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
-<div class="param">extraData </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Property for extra event data. </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
+<div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#PersistentIdEventModel_extraData">PersistentIdEventModel_extraData</a></span>  </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

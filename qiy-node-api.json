@@ -207,7 +207,8 @@
                     "description": "See [Connection Created Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-created-event).",
                     "properties": {
 	    	        "extraData": {
-                            "format": "null"
+                            "format": "null",
+			    "type": "object"
                         },
                         "type": {
                             "format": "CONNECTION_CREATED_EVENT"
@@ -612,8 +613,7 @@
                     "format": "url"
                 },
                 "extraData": {
-                    "description": "Property for extra event data.",
-                    "type": "string"
+                    "description": "Property for extra event data."
                 },
                 "type": {
                     "description": "Event type name.",
@@ -741,8 +741,28 @@
                     "description": "See [Persistent Id Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id-event).",
                     "properties": {
 	    	        "extraData": {
-                            "description": "[Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id)",
-                            "format": "See Persistent Id Model."
+                            "description": "extra data: Persistent Ids and Service Provider Identity.",
+			    "properties": {
+                                "persistentIds": {
+                                    "description": "Persistent Ids",
+                                    "items": {
+                                        "description": "Persistent Id",
+                                        "format": "See Persistent Id Model.",
+                                        "type": "string"
+				    },
+                                    "type": "array"
+				},
+                                "providerId": {
+                                    "description": "Service Provider identity (publishedProviderUrl).",
+                                    "format": "url",
+                                    "type": "string"
+				}
+                            },
+			    "required": [
+				"providerId",
+			        "persistentId"
+		            ],
+			    "type": "object"
                         },
                         "type": {
                             "format": "PERSISTENT_ID_EVENT"
@@ -797,7 +817,8 @@
                     "description": "See [Message Received Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-received-event).",
                     "properties": {
 	    	        "extraData": {
-                            "format": "null"
+                            "format": "null",
+                            "type": "object"
                         },
                         "type": {
                             "format": "MESSAGE_RECEIVED"
