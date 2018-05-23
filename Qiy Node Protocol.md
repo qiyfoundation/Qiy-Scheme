@@ -1006,6 +1006,8 @@ The [Message](#message) is used to exchange messages between [Qiy Users](Definit
 
 See [Message](#message) [model](#model).
 
+NB: This attribute is nullable which has been modelled here using the format property, see also [OpenAPI 2.0 does not support nullable fields](https://github.com/swagger-api/swagger-node/issues/399) and [OpenAPI 3.0 'nullable'-attribute](https://swagger.io/docs/specification/data-models/data-types/#nullable).
+
 ### 5.9.1.2 Serial Number
 
 See [Message](#message) [model](#model).
