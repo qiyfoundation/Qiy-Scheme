@@ -2006,7 +2006,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Request](Definitions.md#qiy-node-request)
-[Qiy Node API](Qiy%20Node%20API.json)         | [__Models](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#__Models)
+[Qiy Node API](Qiy%20Node%20API.json)         | [__Methods](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#__Methods)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Request](#request)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2 Requests](#2-requests)
 
