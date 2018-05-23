@@ -313,6 +313,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Qiy Node Create Request](#qiy-node-create-request)
 	1. [Qiy Node Credential](#qiy-node-credential)
 	1. [Qiy Node Delete Request](#qiy-node-delete-request)
+	1. [Qiy Node Event](#qiy-node-event)
 	1. [Qiy Node Message](#qiy-node-message)
 	1. [Qiy App](#qiy-app)
 	1. [Qiy Node](#qiy-node)
@@ -367,7 +368,7 @@ This document aims to be the entry point for information analysts and software e
 ## 1.3 Overview
 
 * Chapter [2 Requests](#2-requests) describes the [Qiy Node Requests](#qiy-node-request).
-* Chapter [3 Events](#3-events) describes the [Qiy Node Events](Definitions.md#qiy-node-event).
+* Chapter [3 Events](#3-events) describes the [Qiy Node Events](#qiy-node-event).
 * Chapter [4 Messages](#4-messages) describes the [Qiy Node Messages](#qiy-node-message).
 * Chapter [5 Models](#5-models) describes the entities of the [Qiy Node Interface](Definitions.md#qiy-node-interface).
 * Chapter [6 Index](#6-index) contains an index for the used terms.
@@ -564,7 +565,7 @@ The [Consents Request](#consents-request) is a [Qiy Node Request](#qiy-node-requ
 ## 2.6 Event Requests
 
 ### 2.6.1 Events Request
-The [Events Request](#events-request) is a [Qiy Node Request](#qiy-node-request) that can be used to handle [Qiy Node Events](Definitions.md#qiy-node-event).
+The [Events Request](#events-request) is a [Qiy Node Request](#qiy-node-request) that can be used to handle [Qiy Node Events](#qiy-node-event).
 
 ## 2.7 Library Requests
 
@@ -752,25 +753,25 @@ The Events comply to the Server-Sent Events Standard, see [https://developer.moz
 ## 3.1 Connection Events
 
 ### 3.1.1 Connection Created Event
-The [Connection Created Event](#connection-created-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that is generated when a [Connection](#connection) has been created.
+The [Connection Created Event](#connection-created-event) is a [Qiy Node Event](#qiy-node-event) that is generated when a [Connection](#connection) has been created.
 
 ## 3.2 Consent Events
 
 ### 3.2.1 Consent Denied Event
-The [Consent Denied Event](#consent-denied-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
+The [Consent Denied Event](#consent-denied-event) is a [Qiy Node Event](#qiy-node-event) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
 
 ### 3.2.2 Consent Granted Event
-The [Consent Granted Event](#consent-granted-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](Definitions.md#consent).
+The [Consent Granted Event](#consent-granted-event) is a [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](Definitions.md#consent).
 
 ## 3.3 Message Events
 
 ### 3.3.1 Message Received Event
-The [Message Received Event](#message-received-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](#qiy-node-message).
+The [Message Received Event](#message-received-event) is a [Qiy Node Event](#qiy-node-event) that notifies a [Receiver](Definitions.md#receiver) that he has received a new [Qiy Node Message](#qiy-node-message).
 
 ## 3.4 Persistent Id Events
 
 ### 3.4.1 Persistent Id Event
-The [Persistent Id Event](#persistent-id-event) is a [Qiy Node Event](Definitions.md#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](#connection).
+The [Persistent Id Event](#persistent-id-event) is a [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent Id](Definitions.md#persistent-id) of a new [Connection](#connection).
 
 
 # 4 Messages
@@ -1982,6 +1983,16 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Qiy Node Delete Request](Definitions.md#qiy-node-delete-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /deleteEndpoint](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#deleteEndpointDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.11.2 Qiy Node Delete Request](#2112-qiy-node-delete-request)
+
+## Qiy Node Event
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Qiy Node Event](Definitions.md#qiy-node-event)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#EventModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Event](#event)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3 Events](#3-events)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Event Model](#57-event-model)
 
 ## Qiy Node Message
 
