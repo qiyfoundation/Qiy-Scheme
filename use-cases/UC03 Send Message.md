@@ -59,7 +59,7 @@ The [Qiy Trust Network](../Definitions.md#qiy-trust-network) notifies the receip
 
 ## 5. The Receiver fetches the Qiy Node Message from the Qiy Trust Network
 
-The [Receiver](../Definitions.md#receiver) fetches the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) from the [Qiy Trust Network](../Definitions.md#qiy-trust-network) with a [Messages Request](../Qiy%20Node%20Protocol.md#messages-request) after retreiving the required [Mailox Url](../Qiy%20Node%20Protocol.md#mailox-url) of the [Connection](../Qiy%20Node%20Protocol.md#connection) using a [Connection Details Request](../Qiy%20Node%20Protocol.md#connection-details-request).
+The [Receiver](../Definitions.md#receiver) fetches the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) from the [Qiy Trust Network](../Definitions.md#qiy-trust-network) with a [Messages Request](../Qiy%20Node%20Protocol.md#messages-request) after retreiving the required [Mailbox Url](../Qiy%20Node%20Protocol.md#mailbox-url) of the [Connection](../Qiy%20Node%20Protocol.md#connection) using a [Connection Details Request](../Qiy%20Node%20Protocol.md#connection-details-request).
 
 
 # Postconditions
