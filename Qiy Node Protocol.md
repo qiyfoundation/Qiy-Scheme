@@ -157,6 +157,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Connect Token Business Rules](#543-connect-token-business-rules)
 	1. [Connection Model](#55-connection-model)
 		1. [Connection Attributes](#551-connection-attributes)
+			1. [Mailbox Url](#5511-mailbox-url)
 		1. [Connection Relations](#552-connection-relations)
 		1. [Connection Business Rules](#553-connection-business-rules)
 	1. [Consent Model](#56-consent-model)
@@ -173,6 +174,8 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Library Business Rules](#583-library-business-rules)
 	1. [Message Model](#59-message-model)
 		1. [Message Attributes](#591-message-attributes)
+		1. [Reference Serial Number](#5911-reference-serial-number)
+		1. [Serial Number](#5912-serial-number)
 		1. [Message Relations](#592-message-relations)
 		1. [Message Business Rules](#593-message-business-rules)
 	1. [Message Type Model](#510-message-type-model)
@@ -266,6 +269,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Library](#library)
 	1. [Library Details Request](#library-details-request)
 	1. [Message](#message)
+	1. [Mailbox Url](#mailbox-url)
 	1. [Message Delete Request](#message-delete-request)
 	1. [Message Details Request](#message-details-request)
 	1. [Message Post Request](#message-post-request)
@@ -320,6 +324,8 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Qiy Node Request](#qiy-node-request)
 	1. [Relying Party](#relying-party)
 	1. [Request](#request)
+	1. [Reference Serial Number](#reference-serial-number)
+	1. [Serial Number](#serial-number)
 	1. [Service](#service)
 	1. [Service Catalogue](#service-catalogue)
 	1. [Service Credential Details Request](#service-credential-details-request)
@@ -911,6 +917,10 @@ See [Connect Token](#connect-token) [model](#model).
 
 See [Connection](#connection) [model](#model).
 
+#### 5.5.1.1 Mailbox Url
+
+See [Connection](#connection) [model](#model).
+
 ### 5.5.2 Connection Relations
 
 See [Connection](#connection) [model](#model).
@@ -991,6 +1001,12 @@ This section describes the [Message](#message) entity type.
 The [Message](#message) is used to exchange messages between [Qiy Users](Definitions.md#qiy-user).
 
 ### 5.9.1 Message Attributes
+
+### 5.9.1.1 Reference Serial Number
+
+See [Message](#message) [model](#model).
+
+### 5.9.1.2 Serial Number
 
 See [Message](#message) [model](#model).
 
@@ -1616,6 +1632,12 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4 Messages](#4-messages)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Message Model](#59-message-model)
 
+## Mailbox Url
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.5.1.1 Mailbox Url](#5511-mailbox-url)
+
 ## Message Delete Request
 
 Specification | Reference
@@ -2035,6 +2057,18 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Qiy Node Request](Definitions.md#qiy-node-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [__Methods](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#__Methods)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2 Requests](#2-requests)
+
+## Reference Serial Number
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9.1.1 Reference Serial Number](#5911-reference-serial-number)
+
+## Serial Number
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9.1.2 Serial Number](#5912-serial-number)
 
 ## Service
 

@@ -331,7 +331,7 @@
                         "messages": {
                             "description": "Messages",
                             "items": {
-                                "$ref": "#/definitions/MessageModel"
+                                "$ref": "#/definitions/PostMessageModel"
                             },
                             "type": "array"
                         }
@@ -685,13 +685,13 @@
                 }
             }
         },
-        "MailboxMessageModel": {
+        "MessageModel": {
             "allOf": [
                 {
-                    "$ref": "#/definitions/MessageModel"
+                    "$ref": "#/definitions/PostMessageModel"
                 },
                 {
-                    "type": "object",
+                    "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
                     "properties": {
                         "inbound": {
                             "type": "boolean",
@@ -705,19 +705,20 @@
                     "required": [
                         "inbound",
                         "serialNr"
-                    ]
+                    ],
+                    "type": "object"
                 }
             ]
         },
-        "MailboxMessagesModel": {
+        "MessagesModel": {
             "description": "Qiy Node Mailbox messages.",
             "items": {
-                "$ref": "#/definitions/MailboxMessageModel"
+                "$ref": "#/definitions/MessageModel"
             },
             "type": "array"
         },
-        "MessageModel": {
-            "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
+        "PostMessageModel": {
+            "description": "See [Message Post Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-post-request).",
             "type": "object",
             "properties": {
                 "type": {
@@ -2402,7 +2403,7 @@
                     "201": {
                         "description": "201, Successful execution.",
                         "schema": {
-                            "$ref": "#/definitions/MailboxMessagesModel"
+                            "$ref": "#/definitions/MessagesModel"
                         }
                     },
                     "400": {
@@ -2430,7 +2431,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/MessageModel"
+                            "$ref": "#/definitions/PostMessageModel"
                         }
                     }
                 ],
@@ -2490,7 +2491,7 @@
                     "200": {
                         "description": "The status code of a success response will be 200.",
                         "schema": {
-                            "$ref": "#/definitions/MailboxMessageModel"
+                            "$ref": "#/definitions/MessageModel"
                         }
                     }
                 }

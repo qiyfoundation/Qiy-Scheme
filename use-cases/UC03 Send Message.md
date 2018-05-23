@@ -59,7 +59,7 @@ The [Qiy Trust Network](../Definitions.md#qiy-trust-network) notifies the receip
 
 ## 5. The Receiver fetches the Qiy Node Message from the Qiy Trust Network
 
-The [Receiver](../Definitions.md#receiver) fetches the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) from the [Qiy Trust Network](../Definitions.md#qiy-trust-network) using the [Connection Uri](../Definitions.md#connection-uri) in a [Messages Request](../Qiy%20Node%20Protocol.md#messages-request).
+The [Receiver](../Definitions.md#receiver) fetches the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) from the [Qiy Trust Network](../Definitions.md#qiy-trust-network) with a [Messages Request](../Qiy%20Node%20Protocol.md#messages-request) after retreiving the required [Mailox Url](../Qiy%20Node%20Protocol.md#mailox-url) of the [Connection](../Qiy%20Node%20Protocol.md#connection) using a [Connection Details Request](../Qiy%20Node%20Protocol.md#connection-details-request).
 
 
 # Postconditions
@@ -70,7 +70,7 @@ The [Receiver](../Definitions.md#receiver) fetches the [Qiy Node Message](../Qiy
 
 # 2.1 Sender sends a reply message
 
-The [Sender](../Definitions.md#sender) can send a reply message by referencing the [Serial Number](../Definitions.md#serial-number) of the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) that he replies to in the [Reference Serial Number](../Definitions.md#reference-serial-number). 
+The [Sender](../Definitions.md#sender) can send a reply message by referencing the [Serial Number](../Qiy%20Node%20Protocol.md#serial-number) of the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) that he replies to in the [Reference Serial Number](../Qiy%20Node%20Protocol.md#reference-serial-number). 
 
 
 # Diagram Source Code
