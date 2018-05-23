@@ -655,13 +655,13 @@ The [Messages Request](#messages-request) is a [Qiy Node Request](#qiy-node-requ
 ## 2.9 Operation Requests
 
 ### 2.9.1 Operation Execute Request
-The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](Definitions.md#operation-reference).
+The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](#operation-reference).
 
 ### 2.9.2 Operation Reference Request
-The [Operation Reference Request](#operation-reference-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Operation Reference Request](#operation-reference-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
 
 ### 2.9.3 Operation Register Request
-The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](Definitions.md#operation-reference) by registering an [Operation Specification](Definitions.md#operation-specification).
+The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registering an [Operation Specification](#operation-specification).
 
 ## 2.10 Portfolio Requests
 
@@ -681,10 +681,10 @@ The [Account Update Request](#account-update-request) is a [Qiy Node Request](#q
 The [Accounts Request](#accounts-request) is a [Qiy Node Request](#qiy-node-request) to list [Accounts](Definitions.md#account).
 
 ### 2.10.6 Portfolio Details Request
-The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](#service-portfolio).
 
 ### 2.10.7 Subscription Details Request
-The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Subscription](Definitions.md#subscription) in a [Service Portfolio](Definitions.md#service-portfolio).
+The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Subscription](Definitions.md#subscription) in a [Service Portfolio](#service-portfolio).
 
 ### 2.10.8 Subscription Register Request
 The [Subscription Register Request](#subscription-register-request) is a [Qiy Node Request](#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
@@ -693,7 +693,7 @@ The [Subscription Register Request](#subscription-register-request) is a [Qiy No
 The [Subscription Unregister Request](#subscription-unregister-request) is a [Qiy Node Request](#qiy-node-request) which can be used to unregister a subscription to a [Service](Definitions.md#service).
 
 ### 2.10.10 Subscriptions Request
-The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscription](Definitions.md#subscription) in a [Service Portfolio](Definitions.md#service-portfolio).
+The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscription](Definitions.md#subscription) in a [Service Portfolio](#service-portfolio).
 
 ## 2.11 Qiy Node Requests
 
@@ -797,18 +797,18 @@ The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](
 ## 4.2 Operation Messages
 
 ### 4.2.1 Operation Reference Message
-The [Operation Reference Message](#operation-reference-message) is a [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Message](#operation-reference-message) is a [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference).
 
 ### 4.2.2 Operation Reference Request Message
-The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](Definitions.md#operation-reference).
+The [Operation Reference Request Message](#operation-reference-request-message) is a [Qiy Node Message](#qiy-node-message) that can be used to [Request](Definitions.md#request) for [Operation References](#operation-reference).
 
 ### 4.2.3 Operation Specification Request Message
-The [Operation Specification Request Message](#operation-specification-request-message) is a [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](Definitions.md#operation-specification).
+The [Operation Specification Request Message](#operation-specification-request-message) is a [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
 
 ## 4.3 Portfolio Messages
 
 ### 4.3.1 Portfolio Register Message
-The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](Definitions.md#data-provider) to a [Service Portfolio](Definitions.md#service-portfolio).
+The [Portfolio Register Message](#portfolio-register-message) is a [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](Definitions.md#data-provider) to a [Service Portfolio](#service-portfolio).
 
 ## 4.4 Service Credential Messages
 
@@ -1048,13 +1048,13 @@ A [Message Type](#message-type):
 
 ### 5.10.3 Message Type Business Rules
 
-See [Message](#message) [model](#model).
+See [Message Type](#message-type) [model](#model).
 
 ## 5.11 Operation Model
 
 This section describes the [Operation](#operation) entity type.
 
-An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](Definitions.md#consent) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
+An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](Definitions.md#consent) from the [Service Endpoint](#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
 ### 5.11.1 Operation Attributes
 
@@ -1074,8 +1074,8 @@ See [Operation](#operation) [model](#model).
 
 ## 5.12 Operation Specification Model
 
-This section describes the [Operation Specification](Definitions.md#operation-specification) entity type.
-The [Operation Specification](Definitions.md#operation-specification) specifies an [Operation](#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](Definitions.md#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
+This section describes the [Operation Specification](#operation-specification) entity type.
+The [Operation Specification](#operation-specification) specifies an [Operation](#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
 ### 5.12.1 Operation Specification Attributes
 
@@ -1084,21 +1084,19 @@ See [Operation Specification](#operation-specification) [model](#model).
 ### 5.12.2 Operation Specification Relations
 
 See [Operation Specification](#operation-specification) [model](#model).
-An [Operation Specification](Definitions.md#operation-specification):
+An [Operation Specification](#operation-specification):
 * is part of an [Operation](#operation).
 
 ### 5.12.3 Operation Specification Business Rules
 
 See [Operation Specification](#operation-specification) [model](#model).
 In addition:
-* A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
-* A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](Definitions.md#operation-specification).
+* A [Data Subject](Definitions.md#data-subject) ([Qiy User](Definitions.md#qiy-user)) has read-access and write-access to an [Operation Specification](#operation-specification).
+* A [Data Provider](Definitions.md#data-provider) has read-access and write-access to an [Operation Specification](#operation-specification).
 
 ## 5.13 Persistent Id Model
 
 This section describes the [Persistent Id](#persistent-id).
-
-A [Persistent Id](#persistent-id) .
 
 ### 5.13.1 Persistent Id Relations
 
@@ -1110,8 +1108,8 @@ See [Persistent Id](#persistent-id) [model](#model).
 
 ## 5.14 Portfolio Model
 
-This section describes the [Service Portfolio](Definitions.md#service-portfolio) entity type.
-The [Service Portfolio](Definitions.md#service-portfolio) of a [Qiy User](Definitions.md#qiy-user) is used to maintain information related to his [Subscriptions](Definitions.md#subscription), [Consents](Definitions.md#consent) and [Personal Data](Definitions.md#personal-data).
+This section describes the [Service Portfolio](#service-portfolio) entity type.
+The [Service Portfolio](#service-portfolio) of a [Qiy User](Definitions.md#qiy-user) is used to maintain information related to his [Subscriptions](#subscription), [Consents](#consent) and [Personal Data](Definitions.md#personal-data).
 
 ### 5.14.1 Portfolio Attributes
 
@@ -1179,7 +1177,7 @@ See [Service Description](#service-description) [model](#model).
 
 This section describes the [Source](#source) entity type.
 
-A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](Definitions.md#consent).
+A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent#](Definitions.md#consent).
 
 ### 5.18.1 Source Attributes
 
