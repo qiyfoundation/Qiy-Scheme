@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document describes the [Qiy Node Protocol](#qiy-node-protocol): the lifecycle, requests, events and messages of the [Qiy Node](Definitions.md#qiy-node) and their realization.
+This document describes the [Qiy Node Protocol](#qiy-node-protocol): the lifecycle, [requests](#request), [events](#event), [models](#model) and [messages](#message) of the [Qiy Node](Definitions.md#qiy-node) and their realization.
 The document refers for details to the [Qiy Node API](#qiy-node-api), which is available in [Open API Specification](https://swagger.io/specification/)-format.
 
 The api can be viewed with the online editor at [https://editor2.swagger.io/#!/](https://editor2.swagger.io/#!/). Either import the .json file or use 'File'->'Import url...' with:
@@ -1359,6 +1359,7 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connect](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Connect)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connection Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectionModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4 Connection Requests](#24-connection-requests)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.1 Connection Events](#31-connection-events)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.5 Connection Model](#55-connection-model)
 
 ## Connection Create Request
@@ -1407,6 +1408,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Consent](Definitions.md#consent)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Consent Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.2 Consent Events](#32-consent-events)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Consent Model](#56-consent-model)
 
 ## Consent Delete Request
@@ -1610,6 +1612,7 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8 Message Requests](#28-message-requests)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.3 Message Events](#33-message-events)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4 Messages](#4-messages)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.9 Message Model](#59-message-model)
 
@@ -1989,10 +1992,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Event](Definitions.md#qiy-node-event)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Event Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#EventModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Event](#event)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3 Events](#3-events)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.7 Event Model](#57-event-model)
 
 ## Qiy Node Message
 
