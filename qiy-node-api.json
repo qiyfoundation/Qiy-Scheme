@@ -1479,14 +1479,6 @@
         }
     },
     "parameters": {
-        "activeSinceParam": {
-            "name": "Active Since",
-            "in": "query",
-            "description": "Limit results to Connections that have been active since time stamp 'Active Since'.",
-            "required": false,
-            "type": "integer",
-            "format": "Unix time in ms"
-        },
 	"authorizationParam": {
             "name": "Authorization",
             "in": "header",
@@ -1508,13 +1500,6 @@
             "in": "query",
             "description": "id parameter.",
             "required": true,
-            "type": "string"
-        },
-        "persistentIdParam": {
-            "name": "Persistent Id",
-            "in": "query",
-            "description": "Limit result to [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection) with the provided [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).",
-            "required": false,
             "type": "string"
         },
         "sinceParam": {
@@ -1786,13 +1771,23 @@
                 "description": "See [Connections Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request).",
                 "parameters": [
                     {
-                        "$ref": "#/parameters/activeSinceParam"
+                        "name": "since",
+                        "in": "query",
+                        "description": "Limit results to [Connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection) that have been active since the time stamp 'since'.",
+                        "format": "Unix time in ms",
+                        "required": false,
+                        "type": "integer"
                     },
                     {
                         "$ref": "#/parameters/authorizationParam"
                     },
                     {
-                        "$ref": "#/parameters/persistentIdParam"
+                        "name": "persistentId",
+                        "in": "query",
+                        "description": "Limit result to [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection) with a [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id) equaling 'persistentId'.",
+                        "format": "[Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "produces": [
