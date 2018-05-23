@@ -200,6 +200,23 @@
             },
             "type": "array"
         },
+        "ConnectionCreatedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Connection Created Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-created-event).",
+                    "properties": {
+	    	        "extraData": {
+                            "format": "null"
+                        },
+                        "type": {
+                            "format": "CONNECTION_CREATED_EVENT"
+                        }
+                    },
+		    "type": "object"
+                }
+            ]
+        },
         "ConnectionsResponseModel": {
             "description": "Response of Connections Request.",
             "items": {
@@ -716,6 +733,24 @@
                 "$ref": "#/definitions/MessageModel"
             },
             "type": "array"
+        },
+        "PersistentIdEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Persistent Id Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id-event).",
+                    "properties": {
+	    	        "extraData": {
+                            "description": "[Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id)",
+                            "format": "See Persistent Id Model."
+                        },
+                        "type": {
+                            "format": "PERSISTENT_ID_EVENT"
+                        }
+                    },
+		    "type": "object"
+                }
+            ]
         },
         "PostMessageModel": {
             "description": "See [Message Post Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-post-request).",
