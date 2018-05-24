@@ -578,7 +578,13 @@ font-style: italic;
     "provider" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "serviceDescription" : "http://example.com/aeiou",
-    "operationTypes" : ""
+    "operationTypes" : [ {
+      "operationType" : "http://example.com/aeiou",
+      "operationApi" : "http://example.com/aeiou"
+    }, {
+      "operationType" : "http://example.com/aeiou",
+      "operationApi" : "http://example.com/aeiou"
+    } ]
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -4556,6 +4562,7 @@ font-style: italic;
     <li><a href="#PublishedProvidersModel"><code>PublishedProvidersModel</code> - </a></li>
     <li><a href="#PublishedServiceModel"><code>PublishedServiceModel</code> - </a></li>
     <li><a href="#PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a></li>
+    <li><a href="#PublishedServiceModel_links_operationTypes"><code>PublishedServiceModel_links_operationTypes</code> - </a></li>
     <li><a href="#PublishedServicesModel"><code>PublishedServicesModel</code> - </a></li>
     <li><a href="#QiyNodeId"><code>QiyNodeId</code> - </a></li>
     <li><a href="#QiyNodePublicKey"><code>QiyNodePublicKey</code> - </a></li>
@@ -5029,11 +5036,19 @@ font-style: italic;
     <h3><a name="PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Published Service links.</div>
     <div class="field-items">
-      <div class="param">operationTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#">array[null]</a></span> Operation Type APIs. </div>
+      <div class="param">operationTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#PublishedServiceModel_links_operationTypes">array[PublishedServiceModel_links_operationTypes]</a></span> Operation Type APIs. </div>
 <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl) format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service (publishedServiceUrl) format: url</div>
 <div class="param">serviceDescription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Description (serviceDescriptionUrl). format: url</div>
 <div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl). format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PublishedServiceModel_links_operationTypes"><code>PublishedServiceModel_links_operationTypes</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Operation Type API.</div>
+    <div class="field-items">
+      <div class="param">operationType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type (operationTypeUrl) format: url</div>
+<div class="param">operationApi (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Link to the API for the Operation as provided by the Service Provider. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

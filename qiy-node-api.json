@@ -1216,16 +1216,20 @@
                         "operationTypes": {
                             "description": "Operation Type APIs.",
 			    "items": {
-			        "operationType": {
-                                    "description": "Operation Type (operationTypeUrl)",
-                                    "format": "url",
-                                    "type": "string"
+                                "description": "Operation Type API.",
+				"properties": {
+			            "operationType": {
+                                        "description": "Operation Type (operationTypeUrl)",
+                                        "format": "url",
+                                        "type": "string"
+				    },
+			            "operationApi": {
+                                        "description": "Link to the API for the Operation as provided by the Service Provider.",
+                                        "format": "url",
+                                        "type": "string"
+			            }
 				},
-			        "operationApi": {
-                                    "description": "Link to the API for the Operation as provided by the Service Provider.",
-                                    "format": "url",
-                                    "type": "string"
-			        }
+				"type": "object"
 			    },
                             "type": "array"
                         },
