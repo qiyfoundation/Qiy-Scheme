@@ -562,22 +562,22 @@ Content-Length: 215
 ## 2.5 Consent Requests
 
 ### 2.5.1 Consent Delete Request
-The [Consent Delete Request](#consent-delete-request) is a [Qiy Node Request](#qiy-node-request) which can be used to delete a [Consent](Definitions.md#consent).
+The [Consent Delete Request](#consent-delete-request) is a [Qiy Node Request](#qiy-node-request) which can be used to delete a [Consent](#consent).
 
 ### 2.5.2 Consent Denied Request
-The [Consent Denied Request](#consent-denied-request) is a [Qiy Node Request](#qiy-node-request) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
+The [Consent Denied Request](#consent-denied-request) is a [Qiy Node Request](#qiy-node-request) which can be used to communicate the denial of a [Consent](#consent).
 
 ### 2.5.3 Consent Details Request
-The [Consent Details Request](#consent-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to acquire the details of a [Consent](Definitions.md#consent).
+The [Consent Details Request](#consent-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to acquire the details of a [Consent](#consent).
 
 ### 2.5.4 Consent Granted Request
-The [Consent Granted Request](#consent-granted-request) is a [Qiy Node Request](#qiy-node-request) which can be used to communicate the granting of a [Consent](Definitions.md#consent).
+The [Consent Granted Request](#consent-granted-request) is a [Qiy Node Request](#qiy-node-request) which can be used to communicate the granting of a [Consent](#consent).
 
 ### 2.5.5 Consent Withdrawn Request
-The [Consent Withdrawn Request](#consent-withdrawn-request) is a [Qiy Node Request](#qiy-node-request) which can be used to communicate the withdrawal of a [Consent](Definitions.md#consent).
+The [Consent Withdrawn Request](#consent-withdrawn-request) is a [Qiy Node Request](#qiy-node-request) which can be used to communicate the withdrawal of a [Consent](#consent).
 
 ### 2.5.6 Consents Request
-The [Consents Request](#consents-request) is a [Qiy Node Request](#qiy-node-request) which can be used to access [Consents](Definitions.md#consent).
+The [Consents Request](#consents-request) is a [Qiy Node Request](#qiy-node-request) which can be used to access [Consents](#consent).
 
 ## 2.6 Event Requests
 
@@ -684,7 +684,7 @@ The [Messages Request](#messages-request) is a [Qiy Node Request](#qiy-node-requ
 The [Operation Execute Request](#operation-execute-request) is a [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](Definitions.md#reference) using an [Operation Reference](#operation-reference).
 
 ### 2.9.2 Operation Reference Request
-The [Operation Reference Request](#operation-reference-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Operation Reference Request](#operation-reference-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) for a [Data Source](#data-source) of a [Consent](#consent).
 
 ### 2.9.3 Operation Register Request
 The [Operation Register Request](#operation-register-request) is a [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registering an [Operation Specification](#operation-specification).
@@ -747,31 +747,31 @@ The [Operation Update Request](#operation-update-request) is a [Qiy Node Request
 The [Operations Request](#operations-request) is a [Qiy Node Request](#qiy-node-request) to list [Operations](Definitions.md#operation).
 
 ### 2.12.6 Source Candidates Request
-The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain [Candidates](#candidate) for a [Consent](Definitions.md#consent).
+The [Source Candidates Request](#source-candidates-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain [Candidates](#candidate) for a [Consent](#consent).
 
 ### 2.12.7 Source Details Request
-The [Source Details Request](#source-details-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Source Details Request](#source-details-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### 2.12.8 Source Register Request
-The [Source Register Request](#source-register-request) is a [Qiy Node Request](#qiy-node-request) to register [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+The [Source Register Request](#source-register-request) is a [Qiy Node Request](#qiy-node-request) to register [Data Sources](#data-source) for a [Consent](#consent).
 
 ### 2.12.9 Source Unregister Request
-The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+The [Source Unregister Request](#source-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister [Data Sources](#data-source) for a [Consent](#consent).
 
 ### 2.12.10 Source Update Request
-The [Source Update Request](#source-update-request) is a [Qiy Node Request](#qiy-node-request) to update [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+The [Source Update Request](#source-update-request) is a [Qiy Node Request](#qiy-node-request) to update [Data Sources](#data-source) for a [Consent](#consent).
 
 ### 2.12.11 Service Credential Details Request
-The [Service Credential Details Request](#service-credential-details-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Details Request](#service-credential-details-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to obtain details of a [Service Credential](Definitions.md#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
 ### 2.12.12 Service Credential Register Request
-The [Service Credential Register Request](#service-credential-register-request) is a [Qiy Node Request](#qiy-node-request) to register a [Service Credential](Definitions.md#service-credential) for a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Register Request](#service-credential-register-request) is a [Qiy Node Request](#qiy-node-request) to register a [Service Credential](Definitions.md#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
 ### 2.12.13 Service Credential Unregister Request
-The [Service Credential Unregister Request](#service-credential-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister a [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Unregister Request](#service-credential-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister a [Service Credential](Definitions.md#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### 2.12.14 Service Credential Update Request
-The [Service Credential Update Request](#service-credential-update-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update a [Service Credential](Definitions.md#service-credential) of a [Data Source](Definitions.md#data-source) of a [Consent](Definitions.md#consent).
+The [Service Credential Update Request](#service-credential-update-request) is a [Qiy Node Request](#qiy-node-request) for [Qiy Users](Definitions.md#qiy-user) to update a [Service Credential](Definitions.md#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
 
 ### 2.12.15 Service Credentials Request
 The [Service Credentials Request](#service-credentials-request) is a [Qiy Node Request](#qiy-node-request) to list [Service Credentials](Definitions.md#service-credential).
@@ -790,10 +790,10 @@ The [Connection Created Event](#connection-created-event) is a [Qiy Node Event](
 ## 3.2 Consent Events
 
 ### 3.2.1 Consent Denied Event
-The [Consent Denied Event](#consent-denied-event) is a [Qiy Node Event](#qiy-node-event) which can be used to communicate the denial of a [Consent](Definitions.md#consent).
+The [Consent Denied Event](#consent-denied-event) is a [Qiy Node Event](#qiy-node-event) which can be used to communicate the denial of a [Consent](#consent).
 
 ### 3.2.2 Consent Granted Event
-The [Consent Granted Event](#consent-granted-event) is a [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](Definitions.md#consent).
+The [Consent Granted Event](#consent-granted-event) is a [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](#consent).
 
 ## 3.3 Message Events
 
@@ -814,11 +814,11 @@ This chapter describes the [Qiy Node Messages](#message).
 
 ### 4.1.1 Consent Notification Message
 
-The [Consent Notification Message](#consent-notification-message) is a [Qiy Node Message](#qiy-node-message) which can be used to notify the registration of a [Consent](Definitions.md#consent).
+The [Consent Notification Message](#consent-notification-message) is a [Qiy Node Message](#qiy-node-message) which can be used to notify the registration of a [Consent](#consent).
 
 ### 4.1.2 Consent Request Message
 
-The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](Definitions.md#consent).
+The [Consent Request Message](#consent-request-message) is a [Qiy Node Message](#qiy-node-message) which can be used to [Request](Definitions.md#request) for a [Consent](#consent).
 
 ## 4.2 Operation Messages
 
@@ -844,7 +844,7 @@ The [Service Credential Request Message](#service-credential-request-message) is
 ## 4.5 Source Messages
 
 ### 4.5.1 Source Candidates Message
-The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](Definitions.md#data-source) for a [Consent](Definitions.md#consent).
+The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](#data-source) for a [Consent](#consent).
 
 
 # 5 Models
@@ -958,7 +958,7 @@ See [Connection](#connection) [model](#model).
 ## 5.6 Consent Model
 
 This section describes the [Consent](#consent) entity type.
-A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](Definitions.md#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](Definitions.md#data-source) for a [Subscription](Definitions.md#subscription).
+A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](Definitions.md#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](#data-source) for a [Subscription](#subscription).
 
 ### 5.6.1 Consent Attributes
 
@@ -970,14 +970,14 @@ See [Consent](#consent) [model](#model).
 A [Consent](#consent):
 * is part of one: [Portfolio](#portfolio).
 * has one: [Subscription](#subscription).
-* has zero or more of: [Data Source](Definitions.md#data-source) ([Source](#source)).
+* has zero or more of: [Data Source](#data-source) ([Source](#source)).
 
 ### 5.6.3 Consent Business Rules
 
 See [Consent](#consent) [model](#model).
 In addition:
-* A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](Definitions.md#consent).
-* A [Service Provider](Definitions.md#service-provider) has read-access to a [Consent](Definitions.md#consent).
+* A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](#consent).
+* A [Service Provider](Definitions.md#service-provider) has read-access to a [Consent](#consent).
 
 ## 5.7 Event Model
 
@@ -1080,7 +1080,7 @@ See [Message Type](#message-type) [model](#model).
 
 This section describes the [Operation](#operation) entity type.
 
-An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](Definitions.md#consent) from the [Service Endpoint](#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
+An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](#consent) from the [Service Endpoint](#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
 ### 5.11.1 Operation Attributes
 
@@ -1556,7 +1556,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
+[Definitions](Definitions.md)                 | [Data Source](#data-source)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
 
 ## Data Type
@@ -2283,7 +2283,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Source](Definitions.md#data-source)
+[Definitions](Definitions.md)                 | [Data Source](#data-source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SourceModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Source Model](#518-source-model)
