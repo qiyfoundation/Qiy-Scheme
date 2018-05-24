@@ -759,8 +759,8 @@
 				}
                             },
 			    "required": [
-				"providerId",
-			        "persistentId"
+			        "persistentIds",
+				"providerId"
 		            ],
 			    "type": "object"
                         },
