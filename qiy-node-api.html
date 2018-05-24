@@ -577,7 +577,8 @@ font-style: italic;
     "serviceType" : "http://example.com/aeiou",
     "provider" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
-    "serviceDescription" : "http://example.com/aeiou"
+    "serviceDescription" : "http://example.com/aeiou",
+    "operationTypes" : ""
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -3891,7 +3892,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">source-url <a href="#SourceUrlModel">SourceUrlModel</a> (required)</div>
+      <div class="param">data-service-url <a href="#DataServiceUrlModel">DataServiceUrlModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -3904,15 +3905,29 @@ font-style: italic;
 
 
 
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#SourceUrlModel">SourceUrlModel</a>
+      
+    </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
 
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{ }</code></pre>
 
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
 
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
-        <a href="#"></a>
+        <a href="#SourceUrlModel">SourceUrlModel</a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="operationUrlDelete"/>
@@ -4501,6 +4516,7 @@ font-style: italic;
     <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
     <li><a href="#ConsentsModel"><code>ConsentsModel</code> - </a></li>
+    <li><a href="#DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a></li>
     <li><a href="#DataTypeModel"><code>DataTypeModel</code> - </a></li>
     <li><a href="#DataTypeModel_links"><code>DataTypeModel_links</code> - </a></li>
     <li><a href="#DataTypesModel"><code>DataTypesModel</code> - </a></li>
@@ -4721,6 +4737,12 @@ font-style: italic;
   <div class="model">
     <h3><a name="ConsentsModel"><code>ConsentsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>List of Consent Urls.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Data Descriptor of the Data Service that will serve as the source for the Personal Data (publishedServiceUrl).</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -4999,7 +5021,8 @@ font-style: italic;
     <h3><a name="PublishedServiceModel_links"><code>PublishedServiceModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Published Service links.</div>
     <div class="field-items">
-      <div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl) format: url</div>
+      <div class="param">operationTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#">array[null]</a></span> Operation Type APIs. </div>
+<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl) format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Service (publishedServiceUrl) format: url</div>
 <div class="param">serviceDescription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Description (serviceDescriptionUrl). format: url</div>
 <div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl). format: url</div>
@@ -5125,7 +5148,7 @@ font-style: italic;
   </div>
   <div class="model">
     <h3><a name="SourceUrlModel"><code>SourceUrlModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Data Descriptor of the Data Service that will serve as the source for the Personal Data (publishedServiceUrl).</div>
+    <div class='model-description'>Data Source for the Personal Data (sourceUrl).</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>

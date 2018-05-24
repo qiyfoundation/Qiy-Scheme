@@ -457,6 +457,11 @@
             },
             "type": "array"
         },
+        "DataServiceUrlModel": {
+            "description": "Data Descriptor of the Data Service that will serve as the source for the Personal Data (publishedServiceUrl).",
+            "format": "url",
+            "type": "string"
+        },
         "DataTypeModel": {
             "description": "Data Type Model.",
             "properties": {
@@ -1224,6 +1229,22 @@
                 "links": {
                     "description": "Published Service links.",
                     "properties": {
+                        "operationTypes": {
+                            "description": "Operation Type APIs.",
+			    "items": {
+			        "operationType": {
+                                    "description": "Operation Type (operationTypeUrl)",
+                                    "format": "url",
+                                    "type": "string"
+				},
+			        "operationApi": {
+                                    "description": "Link to the API for the Operation as provided by the Service Provider.",
+                                    "format": "url",
+                                    "type": "string"
+			        }
+			    },
+                            "type": "array"
+                        },
                         "provider": {
                             "description": "Service Provider (publishedProviderUrl)",
                             "format": "url",
@@ -1596,7 +1617,7 @@
             "type": "object"
         },
         "SourceUrlModel": {
-            "description": "Data Descriptor of the Data Service that will serve as the source for the Personal Data (publishedServiceUrl).",
+            "description": "Data Source for the Personal Data (sourceUrl).",
             "format": "url",
             "type": "string"
         },
@@ -2225,19 +2246,25 @@
                     },
                     {
                         "in": "body",
-                        "name": "source-url",
+                        "name": "data-service-url",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/SourceUrlModel"
+                            "$ref": "#/definitions/DataServiceUrlModel"
                         }
                     }
+                ],
+                "produces": [
+                    "application/json"
                 ],
                 "tags": [
                     "Source"
                 ],
                 "responses": {
                     "200": {
-                        "description": "The status code of a success response will be 200."
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/SourceUrlModel"
+                        }
                     }
                 }
             }
