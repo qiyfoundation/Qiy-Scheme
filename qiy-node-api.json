@@ -1060,6 +1060,16 @@
                             "format": "url",
                             "type": "string"
                         },
+                        "consumeType": {
+                            "description": "Consumes Data Type (dataTypeUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "responseType": {
+                            "description": "Response Data Type (dataTypeUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
                         "serviceType": {
                             "description": "Service Type (serviceTypeUrl).",
                             "format": "url",
@@ -1446,12 +1456,35 @@
                 "links": {
                     "description": "Service Type links.",
                     "properties": {
+                        "consumes": {
+                            "description": "Data Types that the service consumes.",
+			    "items": {
+                                "description": "Consumes Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+			    },
+                            "type": "array"
+                        },
                         "descriptor": {
                             "description": "Service Type Descriptor.",
                             "format": "url",
                             "type": "string"
                         },
-                        "provider": {
+                        "operations": {
+                            "description": "Operation Types (operationTypesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "responses": {
+                            "description": "Response Data Types.",
+			    "items": {
+                                "description": "Response Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+			    },
+                            "type": "array"
+                        },
+                        "registeredBy": {
                             "description": "Access Provider (publishedProviderUrl).",
                             "format": "url",
                             "type": "string"
@@ -1464,8 +1497,9 @@
                     },
                     "required": [
                         "descriptor",
+                        "registeredBy",
                         "self",
-                        "provider"
+                        "operations"
                     ],
                     "type": "object"
                 },

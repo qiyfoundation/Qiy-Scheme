@@ -2106,8 +2106,10 @@ font-style: italic;
     <pre class="example"><code>{
   "links" : {
     "serviceType" : "http://example.com/aeiou",
+    "responseType" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
-    "descriptor" : "http://example.com/aeiou"
+    "descriptor" : "http://example.com/aeiou",
+    "consumeType" : "http://example.com/aeiou"
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -2490,9 +2492,12 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
-    "provider" : "http://example.com/aeiou",
+    "operations" : "http://example.com/aeiou",
+    "registeredBy" : "http://example.com/aeiou",
+    "responses" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
     "self" : "http://example.com/aeiou",
-    "descriptor" : "http://example.com/aeiou"
+    "descriptor" : "http://example.com/aeiou",
+    "consumes" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -4895,6 +4900,8 @@ font-style: italic;
     <div class='model-description'>Operation Type links.</div>
     <div class="field-items">
       <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type Descriptor. format: url</div>
+<div class="param">consumeType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consumes Data Type (dataTypeUrl). format: url</div>
+<div class="param">responseType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Response Data Type (dataTypeUrl). format: url</div>
 <div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type (operationTypeUrl) format: url</div>
     </div>  <!-- field-items -->
@@ -5079,8 +5086,11 @@ font-style: italic;
     <h3><a name="ServiceTypeModel_links"><code>ServiceTypeModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Service Type links.</div>
     <div class="field-items">
-      <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type Descriptor. format: url</div>
-<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
+      <div class="param">consumes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Data Types that the service consumes. format: url</div>
+<div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type Descriptor. format: url</div>
+<div class="param">operations </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Types (operationTypesUrl). format: url</div>
+<div class="param">responses (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Response Data Types. format: url</div>
+<div class="param">registeredBy </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl) format: url</div>
     </div>  <!-- field-items -->
   </div>
