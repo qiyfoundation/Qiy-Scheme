@@ -29,7 +29,7 @@ A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
 A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
 
 ### Account Update Request
-Ate Request|#] is a [Qiy Node Request](#qiy-node-request) to update the details of an [Account](#account).
+A [Qiy Node Request](#qiy-node-request) to update the details of an [Account](#account).
 
 ### Accountability
 [Data Provider](#data-provider) and [Relying Party](#relying-party) are responsible for, and must be able to demonstrate compliance with the principles.
@@ -276,6 +276,21 @@ As defined in the [GDPR](#gdpr).
 ### Data Type
 A type of [Data](#data).
 
+### Data Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Types Request
+A [Qiy Node Request](#qiy-node-request) to list the [Data Types](#data-type) that are registered in the [Service Library](#service-library).
+
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
 
@@ -437,6 +452,21 @@ A specification of a [HTTP Request](#http-request) for the execution of an [Oper
 
 ### Operation Specification Request Message
 A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
+
+### Operation Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Types Request
+A [Qiy Node Request](#qiy-node-request) to list the [Operation Types] that are registered in the [Service Library](#service-library).
 
 ### Operation Unregister Request
 A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).

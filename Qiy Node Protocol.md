@@ -1570,7 +1570,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Type Details Request]
+[Definitions](Definitions.md)                 | [Data Type Details Request](Definitions.md#data-type-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /dataTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#dataTypeUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.1 Data Type Details Request](#271-data-type-details-request)
 
@@ -1578,7 +1578,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Type Register Request]
+[Definitions](Definitions.md)                 | [Data Type Register Request](Definitions.md#data-type-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /dataTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#dataTypesUrlPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.2 Data Type Register Request](#272-data-type-register-request)
 
@@ -1586,7 +1586,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Type Unregister Request]
+[Definitions](Definitions.md)                 | [Data Type Unregister Request](Definitions.md#data-type-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /dataTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#dataTypeUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.3 Data Type Unregister Request](#273-data-type-unregister-request)
 
@@ -1594,7 +1594,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Type Update Request]
+[Definitions](Definitions.md)                 | [Data Type Update Request](Definitions.md#data-type-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /dataTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#dataTypeUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.4 Data Type Update Request](#274-data-type-update-request)
 
@@ -1602,7 +1602,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Data Types Request]
+[Definitions](Definitions.md)                 | [Data Types Request](Definitions.md#data-types-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /dataTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#dataTypesUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.5 Data Types Request](#275-data-types-request)
 
@@ -1858,7 +1858,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Operation Type Details Request]
+[Definitions](Definitions.md)                 | [Operation Type Details Request](Definitions.md#operation-type-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /operationTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationTypeUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.12 Operation Type Details Request](#2712-operation-type-details-request)
 
@@ -1866,7 +1866,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Operation Type Register Request]
+[Definitions](Definitions.md)                 | [Operation Type Register Request](Definitions.md#operation-type-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /operationTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationTypesUrlPost)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.13 Operation Type Register Request](#2713-operation-type-register-request)
 
@@ -1874,7 +1874,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Operation Type Unregister Request]
+[Definitions](Definitions.md)                 | [Operation Type Unregister Request](Definitions.md#operation-type-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /operationTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationTypeUrlDelete)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.14 Operation Type Unregister Request](#2714-operation-type-unregister-request)
 
@@ -1882,7 +1882,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Operation Type Update Request]
+[Definitions](Definitions.md)                 | [Operation Type Update Request](Definitions.md#operation-type-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlPatch)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.15 Operation Type Update Request](#2715-operation-type-update-request)
 
@@ -1890,7 +1890,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Operation Types Request]
+[Definitions](Definitions.md)                 | [Operation Types Request](Definitions.md#operation-types-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypesUrlGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Operation Types Request](#2716-operation-types-request)
 
