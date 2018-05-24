@@ -1240,6 +1240,7 @@ A [Subscription](Definitions.md#subscription):
 * has one [Service](Definitions.md#service) ([Published Service](#published-service)).
 * has zero or one [Account](#account).
 * has zero or one [Consent](#consent).
+* has one [Persistent Id](#persistent-id).
 
 ### 5.19.3 Subscription Business Rules
 
