@@ -349,7 +349,7 @@
                         "messages": {
                             "description": "Messages",
                             "items": {
-                                "$ref": "#/definitions/PostMessageModel"
+                                "$ref": "#/definitions/MessageModel"
                             },
                             "type": "array"
                         }
@@ -708,29 +708,51 @@
             }
         },
         "MessageModel": {
-            "allOf": [
-                {
-                    "$ref": "#/definitions/PostMessageModel"
-                },
-                {
-                    "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
-                    "properties": {
-                        "inbound": {
-                            "type": "boolean",
-                            "description": "Whether the received message is inbound or outbound."
-                        },
-                        "serialNr": {
-                            "type": "integer",
-                            "description": "Serial number of the message."
-                        }
-                    },
-                    "required": [
-                        "inbound",
-                        "serialNr"
-                    ],
+            "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
+            "properties": {
+                "inbound": {
+                    "type": "boolean",
+                    "readOnly": true,
+                    "description": "Whether the received message is inbound or outbound."
+		},
+                "payload": {
+                    "description": "The Base64-encoded payload of the message.",
+                    "format": "Base64-encoded",
+                    "maxItems": 1,
+                    "minItems": 1,
                     "type": "object"
+                },
+                "refSerialNr": {
+                    "description": "Reference serial number",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "integer",
+                    "format": "nullable"
+                },
+                "serialNr": {
+                    "type": "integer",
+                    "description": "Serial number of the message."
+                },
+                "text": {
+                    "description": "Subject",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Message Type (messageTypeUrl)",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
                 }
-            ]
+            },
+            "required": [
+                "payload",
+                "refSerialNr",
+                "text",
+                "type"
+            ],
+            "type": "object"
         },
         "MessagesModel": {
             "description": "Qiy Node Mailbox messages.",
@@ -775,44 +797,6 @@
                     },
 		    "type": "object"
                 }
-            ]
-        },
-        "PostMessageModel": {
-            "description": "See [Message Post Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-post-request).",
-            "type": "object",
-            "properties": {
-                "type": {
-                    "description": "Message Type (messageTypeUrl)",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "type": "string"
-                },
-                "refSerialNr": {
-                    "description": "Reference serial number",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "type": "integer",
-                    "format": "nullable"
-                },
-                "text": {
-                    "description": "Subject",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "type": "string"
-                },
-                "payload": {
-                    "description": "The Base64-encoded payload of the message.",
-                    "format": "Base64-encoded",
-                    "maxItems": 1,
-                    "minItems": 1,
-                    "type": "object"
-                }
-            },
-            "required": [
-                "type",
-                "refSerialNr",
-                "text",
-                "payload"
             ]
         },
         "MessageReceivedEventModel": {
@@ -2626,7 +2610,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/PostMessageModel"
+                            "$ref": "#/definitions/MessageModel"
                         }
                     }
                 ],

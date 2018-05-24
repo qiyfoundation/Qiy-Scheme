@@ -1571,7 +1571,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">message <a href="#PostMessageModel">PostMessageModel</a> (required)</div>
+      <div class="param">message <a href="#MessageModel">MessageModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -2799,7 +2799,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">message <a href="#PostMessageModel">PostMessageModel</a> (required)</div>
+      <div class="param">message <a href="#MessageModel">MessageModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -2890,7 +2890,14 @@ font-style: italic;
 
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>""</code></pre>
+    <pre class="example"><code>{
+  "refSerialNr" : 0,
+  "serialNr" : 6,
+  "inbound" : true,
+  "payload" : "{}",
+  "text" : "text",
+  "type" : "type"
+}</code></pre>
 
     <h3 class="field-label">Produces</h3>
     This API call produces the following media types according to the <span class="header">Accept</span> request header;
@@ -4525,6 +4532,7 @@ font-style: italic;
     <li><a href="#LibraryModel"><code>LibraryModel</code> - </a></li>
     <li><a href="#LibraryModel_links"><code>LibraryModel_links</code> - </a></li>
     <li><a href="#LocationAndLinkModel"><code>LocationAndLinkModel</code> - </a></li>
+    <li><a href="#MessageModel"><code>MessageModel</code> - </a></li>
     <li><a href="#MessageTypeModel"><code>MessageTypeModel</code> - </a></li>
     <li><a href="#MessageTypeModel_links"><code>MessageTypeModel_links</code> - </a></li>
     <li><a href="#MessageTypesModel"><code>MessageTypesModel</code> - </a></li>
@@ -4543,7 +4551,6 @@ font-style: italic;
     <li><a href="#PersistentIdModel"><code>PersistentIdModel</code> - </a></li>
     <li><a href="#PortfolioModel"><code>PortfolioModel</code> - </a></li>
     <li><a href="#PortfolioModel_links"><code>PortfolioModel_links</code> - </a></li>
-    <li><a href="#PostMessageModel"><code>PostMessageModel</code> - </a></li>
     <li><a href="#PublishedProviderModel"><code>PublishedProviderModel</code> - </a></li>
     <li><a href="#PublishedProviderModel_links"><code>PublishedProviderModel_links</code> - </a></li>
     <li><a href="#PublishedProvidersModel"><code>PublishedProvidersModel</code> - </a></li>
@@ -4572,12 +4579,11 @@ font-style: italic;
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
     <li><a href="#ConnectionCreatedEventModel"><code>ConnectionCreatedEventModel</code> - </a></li>
     <li><a href="#EventStreamModel"><code>EventStreamModel</code> - </a></li>
-    <li><a href="#MessageModel"><code>MessageModel</code> - </a></li>
     <li><a href="#MessageReceivedEventModel"><code>MessageReceivedEventModel</code> - </a></li>
+    <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
     <li><a href="#PersistentIdEventModel"><code>PersistentIdEventModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
-    <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
   </ol>
 
   <div class="model">
@@ -4668,7 +4674,7 @@ font-style: italic;
     <h3><a name="ConnectTokenMetadataModel_actions"><code>ConnectTokenMetadataModel_actions</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Instructions to be executed immediately after connecting.</div>
     <div class="field-items">
-      <div class="param">messages (optional)</div><div class="param-desc"><span class="param-type"><a href="#PostMessageModel">array[PostMessageModel]</a></span> Messages </div>
+      <div class="param">messages (optional)</div><div class="param-desc"><span class="param-type"><a href="#MessageModel">array[MessageModel]</a></span> Messages </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4825,6 +4831,18 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="MessageModel"><code>MessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message">Qiy Node Message</a>.</div>
+    <div class="field-items">
+      <div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> The Base64-encoded payload of the message. </div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="MessageTypeModel"><code>MessageTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Message Type Model.</div>
     <div class="field-items">
@@ -4969,16 +4987,6 @@ font-style: italic;
       <div class="param">accounts (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Accounts (accountsUrl) format: url</div>
 <div class="param">consents (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consents (consentsUrl) format: url</div>
 <div class="param">subscriptions (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscriptions (subscriptionsUrl). format: url</div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="PostMessageModel"><code>PostMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-post-request">Message Post Request</a>.</div>
-    <div class="field-items">
-      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) </div>
-<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
-<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
-<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> The Base64-encoded payload of the message. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -5237,24 +5245,25 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="MessageModel"><code>MessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
-    <div class="field-items">
-      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) </div>
-<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
-<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
-<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> The Base64-encoded payload of the message. </div>
-<div class="param">inbound </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
-<div class="param">serialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
     <h3><a name="MessageReceivedEventModel"><code>MessageReceivedEventModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
 <div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#OperationReferenceRequestMessageModel_payload">OperationReferenceRequestMessageModel_payload</a></span>  </div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) </div>
+<div class="param">protocol (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-descriptor">Data Descriptor</a> to identify the requested data. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -5280,19 +5289,6 @@ font-style: italic;
     <div class="field-items">
       <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
 <div class="param">privateKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node RSA private key. </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
-    <div class="field-items">
-      <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) </div>
-<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
-<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
-<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#OperationReferenceRequestMessageModel_payload">OperationReferenceRequestMessageModel_payload</a></span>  </div>
-<div class="param">inbound </div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
-<div class="param">serialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
-<div class="param">protocol (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-descriptor">Data Descriptor</a> to identify the requested data. format: url</div>
     </div>  <!-- field-items -->
   </div>
   </body>
