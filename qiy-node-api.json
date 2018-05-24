@@ -513,12 +513,60 @@
                 "links": {
                     "description": "Data Type links.",
                     "properties": {
+                        "consumedBy": {
+                            "description": "Service Types and Service Providers that consume data of this type.",
+			    "properties": {
+			        "serviceTypes": {
+                                    "description": "Service Types that consume data of this type.",
+				    "items": {
+                                        "description": "Service Type that consumes data of this type (serviceTypeUrl).",
+					"format": "url",
+                                        "type": "string"
+				    },
+                                    "type": "array"
+				},
+			        "serviceProviders": {
+                                    "description": "Service Providers that consume data of this type.",
+				    "items": {
+                                        "description": "Service Provider that consumes data of this type (publishedProviderUrl).",
+					"format": "url",
+                                        "type": "string"
+				    },
+                                    "type": "array"
+				}
+			    },
+                            "type": "object"
+                        },
                         "descriptor": {
                             "description": "Data Type Descriptor.",
                             "format": "url",
                             "type": "string"
                         },
-                        "provider": {
+                        "producedBy": {
+                            "description": "Service Types and Service Providers that produce data of this type.",
+			    "properties": {
+			        "serviceTypes": {
+                                    "description": "Service Types that produce data of this type.",
+				    "items": {
+                                        "description": "Service Type that produces data of this type (serviceTypeUrl).",
+					"format": "url",
+                                        "type": "string"
+				    },
+                                    "type": "array"
+				},
+			        "serviceProviders": {
+                                    "description": "Service Providers that produce data of this type.",
+				    "items": {
+                                        "description": "Service Provider that produces data of this type (publishedProviderUrl).",
+					"format": "url",
+                                        "type": "string"
+				    },
+                                    "type": "array"
+				}
+			    },
+                            "type": "object"
+                        },
+                        "registeredBy": {
                             "description": "Access Provider (publishedProviderUrl).",
                             "format": "url",
                             "type": "string"
@@ -531,8 +579,8 @@
                     },
                     "required": [
                         "descriptor",
-                        "self",
-                        "provider"
+                        "registeredBy",
+                        "self"
                     ],
                     "type": "object"
                 },
@@ -1108,6 +1156,35 @@
             },
             "type": "object"
         },
+        "OperationSpecificationRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+			    "properties": {
+				"operationType": {
+                                    "description": "Operation Type (operationTypeUrl)",
+                                    "format": "url",
+				    "type": "string"
+				}
+			    },
+			    "required": [
+			        "operationType"
+			    ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification-request-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "OperationTypeModel": {
             "description": "Operation Type Model.",
             "properties": {
@@ -1129,12 +1206,12 @@
                             "format": "url",
                             "type": "string"
                         },
-                        "consumeType": {
+                        "consumes": {
                             "description": "Consumes Data Type (dataTypeUrl).",
                             "format": "url",
                             "type": "string"
                         },
-                        "responseType": {
+                        "response": {
                             "description": "Response Data Type (dataTypeUrl).",
                             "format": "url",
                             "type": "string"
@@ -1231,8 +1308,26 @@
                             "format": "url",
                             "type": "string"
                         },
+                        "consumes": {
+                            "description": "Data Types that the Service Provider consumes.",
+			    "items": {
+                                "description": "Consumes Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+			    },
+                            "type": "array"
+                        },
+                        "produces": {
+                            "description": "Data Types that the Service Provider consumes.",
+			    "items": {
+                                "description": "Produces Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+			    },
+                            "type": "array"
+                        },
                         "providerDescription": {
-                            "description": "Service Provider description (serviceProviderUrl).",
+                            "description": "External documentation about the Service Provider.",
                             "format": "url",
                             "type": "string"
                         },
@@ -1298,17 +1393,21 @@
 			    "items": {
                                 "description": "Operation Type API.",
 				"properties": {
+			            "operationApi": {
+                                        "description": "Link to the API for the Operation as provided by the Service Provider (operationApiUrl).",
+                                        "format": "url",
+                                        "type": "string"
+			            },
 			            "operationType": {
                                         "description": "Operation Type (operationTypeUrl)",
                                         "format": "url",
                                         "type": "string"
-				    },
-			            "operationApi": {
-                                        "description": "Link to the API for the Operation as provided by the Service Provider.",
-                                        "format": "url",
-                                        "type": "string"
-			            }
+				    }
 				},
+				"required": [
+				    "operationApi",
+				    "operationType"
+				],
 				"type": "object"
 			    },
                             "type": "array"
@@ -1569,10 +1668,10 @@
                             "format": "url",
                             "type": "string"
                         },
-                        "responses": {
-                            "description": "Response Data Types.",
+                        "produces": {
+                            "description": "Data Types that the service produces.",
 			    "items": {
-                                "description": "Response Data Type (dataTypeUrl).",
+                                "description": "Produces Data Type (dataTypeUrl).",
                                 "format": "url",
                                 "type": "string"
 			    },

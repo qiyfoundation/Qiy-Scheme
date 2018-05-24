@@ -1714,9 +1714,17 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
-    "provider" : "http://example.com/aeiou",
+    "registeredBy" : "http://example.com/aeiou",
+    "consumedBy" : {
+      "serviceTypes" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+      "serviceProviders" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
+    },
     "self" : "http://example.com/aeiou",
-    "descriptor" : "http://example.com/aeiou"
+    "descriptor" : "http://example.com/aeiou",
+    "producedBy" : {
+      "serviceTypes" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+      "serviceProviders" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
+    }
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -2113,10 +2121,10 @@ font-style: italic;
     <pre class="example"><code>{
   "links" : {
     "serviceType" : "http://example.com/aeiou",
-    "responseType" : "http://example.com/aeiou",
+    "response" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
     "descriptor" : "http://example.com/aeiou",
-    "consumeType" : "http://example.com/aeiou"
+    "consumes" : "http://example.com/aeiou"
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -2286,10 +2294,12 @@ font-style: italic;
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
   "links" : {
+    "produces" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
     "accessProvider" : "http://example.com/aeiou",
     "providerDescription" : "http://example.com/aeiou",
     "self" : "http://example.com/aeiou",
-    "services" : "http://example.com/aeiou"
+    "services" : "http://example.com/aeiou",
+    "consumes" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
   },
   "state" : "state",
   "activeFrom" : 0,
@@ -2501,7 +2511,7 @@ font-style: italic;
   "links" : {
     "operations" : "http://example.com/aeiou",
     "registeredBy" : "http://example.com/aeiou",
-    "responses" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
+    "produces" : [ "http://example.com/aeiou", "http://example.com/aeiou" ],
     "self" : "http://example.com/aeiou",
     "descriptor" : "http://example.com/aeiou",
     "consumes" : [ "http://example.com/aeiou", "http://example.com/aeiou" ]
@@ -4534,6 +4544,8 @@ font-style: italic;
     <li><a href="#DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a></li>
     <li><a href="#DataTypeModel"><code>DataTypeModel</code> - </a></li>
     <li><a href="#DataTypeModel_links"><code>DataTypeModel_links</code> - </a></li>
+    <li><a href="#DataTypeModel_links_consumedBy"><code>DataTypeModel_links_consumedBy</code> - </a></li>
+    <li><a href="#DataTypeModel_links_producedBy"><code>DataTypeModel_links_producedBy</code> - </a></li>
     <li><a href="#DataTypesModel"><code>DataTypesModel</code> - </a></li>
     <li><a href="#EndpointAddressesModel"><code>EndpointAddressesModel</code> - </a></li>
     <li><a href="#EventModel"><code>EventModel</code> - </a></li>
@@ -4552,6 +4564,7 @@ font-style: italic;
     <li><a href="#OperationReferenceRequestMessageModel_payload"><code>OperationReferenceRequestMessageModel_payload</code> - </a></li>
     <li><a href="#OperationSpecificationModel"><code>OperationSpecificationModel</code> - </a></li>
     <li><a href="#OperationSpecificationModel_headers"><code>OperationSpecificationModel_headers</code> - </a></li>
+    <li><a href="#OperationSpecificationRequestMessageModel_payload"><code>OperationSpecificationRequestMessageModel_payload</code> - </a></li>
     <li><a href="#OperationTypeModel"><code>OperationTypeModel</code> - </a></li>
     <li><a href="#OperationTypeModel_links"><code>OperationTypeModel_links</code> - </a></li>
     <li><a href="#OperationTypesModel"><code>OperationTypesModel</code> - </a></li>
@@ -4594,6 +4607,7 @@ font-style: italic;
     <li><a href="#MessageReceivedEventModel"><code>MessageReceivedEventModel</code> - </a></li>
     <li><a href="#OperationReferenceMessageModel"><code>OperationReferenceMessageModel</code> - </a></li>
     <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
+    <li><a href="#OperationSpecificationRequestMessageModel"><code>OperationSpecificationRequestMessageModel</code> - </a></li>
     <li><a href="#PersistentIdEventModel"><code>PersistentIdEventModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
@@ -4788,9 +4802,27 @@ font-style: italic;
     <h3><a name="DataTypeModel_links"><code>DataTypeModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Data Type links.</div>
     <div class="field-items">
-      <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type Descriptor. format: url</div>
-<div class="param">provider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
+      <div class="param">consumedBy (optional)</div><div class="param-desc"><span class="param-type"><a href="#DataTypeModel_links_consumedBy">DataTypeModel_links_consumedBy</a></span>  </div>
+<div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type Descriptor. format: url</div>
+<div class="param">producedBy (optional)</div><div class="param-desc"><span class="param-type"><a href="#DataTypeModel_links_producedBy">DataTypeModel_links_producedBy</a></span>  </div>
+<div class="param">registeredBy </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Data Type (dataTypeUrl) format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="DataTypeModel_links_consumedBy"><code>DataTypeModel_links_consumedBy</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Service Types and Service Providers that consume data of this type.</div>
+    <div class="field-items">
+      <div class="param">serviceTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Service Types that consume data of this type. format: url</div>
+<div class="param">serviceProviders (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Service Providers that consume data of this type. format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="DataTypeModel_links_producedBy"><code>DataTypeModel_links_producedBy</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Service Types and Service Providers that produce data of this type.</div>
+    <div class="field-items">
+      <div class="param">serviceTypes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Service Types that produce data of this type. format: url</div>
+<div class="param">serviceProviders (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Service Providers that produce data of this type. format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4959,6 +4991,13 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="OperationSpecificationRequestMessageModel_payload"><code>OperationSpecificationRequestMessageModel_payload</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">operationType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type (operationTypeUrl) format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="OperationTypeModel"><code>OperationTypeModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Operation Type Model.</div>
     <div class="field-items">
@@ -4973,8 +5012,8 @@ font-style: italic;
     <div class='model-description'>Operation Type links.</div>
     <div class="field-items">
       <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type Descriptor. format: url</div>
-<div class="param">consumeType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consumes Data Type (dataTypeUrl). format: url</div>
-<div class="param">responseType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Response Data Type (dataTypeUrl). format: url</div>
+<div class="param">consumes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consumes Data Type (dataTypeUrl). format: url</div>
+<div class="param">response (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Response Data Type (dataTypeUrl). format: url</div>
 <div class="param">serviceType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type (operationTypeUrl) format: url</div>
     </div>  <!-- field-items -->
@@ -5036,7 +5075,9 @@ font-style: italic;
     <div class='model-description'>Published Provider links.</div>
     <div class="field-items">
       <div class="param">accessProvider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (accessProviderUrl). format: url</div>
-<div class="param">providerDescription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider description (serviceProviderUrl). format: url</div>
+<div class="param">consumes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Data Types that the Service Provider consumes. format: url</div>
+<div class="param">produces (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Data Types that the Service Provider consumes. format: url</div>
+<div class="param">providerDescription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> External documentation about the Service Provider. format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Provider url (publishedProviderUrl) format: url</div>
 <div class="param">services </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Published Services url (publishedServicesUrl). format: url</div>
     </div>  <!-- field-items -->
@@ -5072,8 +5113,8 @@ font-style: italic;
     <h3><a name="PublishedServiceModel_links_operationTypes"><code>PublishedServiceModel_links_operationTypes</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Operation Type API.</div>
     <div class="field-items">
-      <div class="param">operationType (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type (operationTypeUrl) format: url</div>
-<div class="param">operationApi (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Link to the API for the Operation as provided by the Service Provider. format: url</div>
+      <div class="param">operationApi </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Link to the API for the Operation as provided by the Service Provider (operationApiUrl). format: url</div>
+<div class="param">operationType </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Type (operationTypeUrl) format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -5161,7 +5202,7 @@ font-style: italic;
       <div class="param">consumes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Data Types that the service consumes. format: url</div>
 <div class="param">descriptor </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type Descriptor. format: url</div>
 <div class="param">operations </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Operation Types (operationTypesUrl). format: url</div>
-<div class="param">responses (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Response Data Types. format: url</div>
+<div class="param">produces (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Data Types that the service produces. format: url</div>
 <div class="param">registeredBy </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Access Provider (publishedProviderUrl). format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Type (serviceTypeUrl) format: url</div>
     </div>  <!-- field-items -->
@@ -5339,6 +5380,19 @@ font-style: italic;
 <div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Message Type (messageTypeUrl) </div>
 <div class="param">protocol (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-descriptor">Data Descriptor</a> to identify the requested data. format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="OperationSpecificationRequestMessageModel"><code>OperationSpecificationRequestMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
+<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#OperationSpecificationRequestMessageModel_payload">OperationSpecificationRequestMessageModel_payload</a></span>  </div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification-request-message'</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
