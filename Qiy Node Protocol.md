@@ -1203,7 +1203,7 @@ See [Service Description](#service-description) [model](#model).
 
 This section describes the [Source](#source) entity type.
 
-A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent#](Definitions.md#consent).
+A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](#consent).
 
 ### 5.18.1 Source Attributes
 
