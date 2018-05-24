@@ -710,10 +710,16 @@
         "MessageModel": {
             "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
             "properties": {
-                "inbound": {
-                    "type": "boolean",
+                "created": {
+                   "description": "Message creation time.",
+                   "format": "Unix time in ms",
+                   "readOnly": true,
+                   "type": "integer"
+                },
+		"inbound": {
+                    "description": "Whether the received message is inbound or outbound.",
                     "readOnly": true,
-                    "description": "Whether the received message is inbound or outbound."
+                    "type": "boolean"
 		},
                 "payload": {
                     "description": "The Base64-encoded payload of the message.",
@@ -937,6 +943,40 @@
                 "type": "string"
             },
             "type": "array"
+        },
+        "OperationReferenceMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+			    "properties": {
+				"consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+				    "type": "string"
+				},
+				"operationReference": {
+                                    "$ref": "#/definitions/OperationReferenceModel"
+				},
+				"serviceProvider": {
+                                    "description": "Service Provider (publishedProviderUrl)",
+                                    "format": "url",
+				    "type": "string"
+				}
+			    },
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-reference-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
         },
         "OperationReferenceRequestMessageModel": {
             "allOf": [
