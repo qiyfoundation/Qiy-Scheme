@@ -65,21 +65,21 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Message Type Unregister Request](#279-message-type-unregister-request)
 		1. [Message Type Update Request](#2710-message-type-update-request)
 		1. [Message Types Request](#2711-message-types-request)
-		1. [Published Provider Details Request](#2712-published-provider-details-request)
-		1. [Published Provider Register Request](#2713-published-provider-register-request)
-		1. [Published Provider Unregister Request](#2714-published-provider-unregister-request)
-		1. [Published Provider Update Request](#2715-published-provider-update-request)
-		1. [Published Providers Request](#2716-published-providers-request)
-		1. [Service Type Details Request](#2717-service-type-details-request)
-		1. [Service Type Register Request](#2718-service-type-register-request)
-		1. [Service Type Unregister Request](#2719-service-type-unregister-request)
-		1. [Service Type Update Request](#2720-service-type-update-request)
-		1. [Service Types Request](#2721-service-types-request)
-		1. [Operation Type Details Request](#2722-operation-type-details-request)
-		1. [Operation Type Register Request](#2723-operation-type-register-request)
-		1. [Operation Type Unregister Request](#2724-operation-type-unregister-request)
-		1. [Operation Type Update Request](#2725-operation-type-update-request)
-		1. [Operation Types Request](#2726-operation-types-request)
+		1. [Operation Type Details Request](#2712-operation-type-details-request)
+		1. [Operation Type Register Request](#2713-operation-type-register-request)
+		1. [Operation Type Unregister Request](#2714-operation-type-unregister-request)
+		1. [Operation Type Update Request](#2715-operation-type-update-request)
+		1. [Operation Types Request](#2716-operation-types-request)
+		1. [Published Provider Details Request](#2717-published-provider-details-request)
+		1. [Published Provider Register Request](#2718-published-provider-register-request)
+		1. [Published Provider Unregister Request](#2719-published-provider-unregister-request)
+		1. [Published Provider Update Request](#2720-published-provider-update-request)
+		1. [Published Providers Request](#2721-published-providers-request)
+		1. [Service Type Details Request](#2722-service-type-details-request)
+		1. [Service Type Register Request](#2723-service-type-register-request)
+		1. [Service Type Unregister Request](#2724-service-type-unregister-request)
+		1. [Service Type Update Request](#2725-service-type-update-request)
+		1. [Service Types Request](#2726-service-types-request)
 	1. [Message Requests](#28-message-requests)
 		1. [Message Delete Request](#281-message-delete-request)
 		1. [Message Details Request](#282-message-details-request)
@@ -619,50 +619,50 @@ The [Message Type Update Request](#message-type-update-request) is a [Qiy Node R
 ### 2.7.11 Message Types Request
 The [Message Types Request](#message-types-request) is a [Qiy Node Request](#qiy-node-request) to list [Message Types](#message-type) that are registered in the [Service Library](Definitions.md#service-library).
 
-### 2.7.12 Published Provider Details Request
-The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
-
-### 2.7.13 Published Provider Register Request
-The [Published Provider Register Request](#published-provider-register-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-
-### 2.7.14 Published Provider Unregister Request
-The [Published Provider Unregister Request](#published-provider-unregister-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-
-### 2.7.15 Published Provider Update Request
-The [Published Provider Update Request](#published-provider-update-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](Definitions.md#service-provider).
-
-### 2.7.16 Published Providers Request
-The [Published Providers Request](#published-providers-request) is a [Qiy Node Request](#qiy-node-request) to list [Service Providers](Definitions.md#service-provider).
-
-### 2.7.17 Service Type Details Request
-The [Service Type Details Request](#service-type-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
-
-### 2.7.18 Service Type Register Request
-The [Service Type Register Request](#service-type-register-request) is a [Qiy Node Request](#qiy-node-request) to register a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
-
-### 2.7.19 Service Type Unregister Request
-The [Service Type Unregister Request](#service-type-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
-
-### 2.7.20 Service Type Update Request
-The [Service Type Update Request](#service-type-update-request) is a [Qiy Node Request](#qiy-node-request) to update the details of a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
-
-### 2.7.21 Service Types Request
-The [Service Types Request](#service-types-request) is a [Qiy Node Request](#qiy-node-request) to list the [Service Types](Definitions.md#service-type) that are registered in the [Service Library](Definitions.md#service-library).
-
-### 2.7.22 Operation Type Details Request
+### 2.7.12 Operation Type Details Request
 The [Operation Type Details Request](#operation-type-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Operation Type](#operation-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.23 Operation Type Register Request
+### 2.7.13 Operation Type Register Request
 The [Operation Type Register Request](#operation-type-register-request) is a [Qiy Node Request](#qiy-node-request) to register a [Operation Type](#operation-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.24 Operation Type Unregister Request
+### 2.7.14 Operation Type Unregister Request
 The [Operation Type Unregister Request](#operation-type-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type](#operation-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.25 Operation Type Update Request
+### 2.7.15 Operation Type Update Request
 The [Operation Type Update Request](#operation-type-update-request) is a [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type](#operation-type) in the [Service Library](Definitions.md#service-library).
 
-### 2.7.26 Operation Types Request
+### 2.7.16 Operation Types Request
 The [Operation Types Request](#operation-types-request) is a [Qiy Node Request](#qiy-node-request) to list the [Operation Types](#operation-type) that are registered in the [Service Library](Definitions.md#service-library).
+
+### 2.7.17 Published Provider Details Request
+The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
+
+### 2.7.18 Published Provider Register Request
+The [Published Provider Register Request](#published-provider-register-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+
+### 2.7.19 Published Provider Unregister Request
+The [Published Provider Unregister Request](#published-provider-unregister-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+
+### 2.7.20 Published Provider Update Request
+The [Published Provider Update Request](#published-provider-update-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](Definitions.md#service-provider).
+
+### 2.7.21 Published Providers Request
+The [Published Providers Request](#published-providers-request) is a [Qiy Node Request](#qiy-node-request) to list [Service Providers](Definitions.md#service-provider).
+
+### 2.7.22 Service Type Details Request
+The [Service Type Details Request](#service-type-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.23 Service Type Register Request
+The [Service Type Register Request](#service-type-register-request) is a [Qiy Node Request](#qiy-node-request) to register a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.24 Service Type Unregister Request
+The [Service Type Unregister Request](#service-type-unregister-request) is a [Qiy Node Request](#qiy-node-request) to unregister a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.25 Service Type Update Request
+The [Service Type Update Request](#service-type-update-request) is a [Qiy Node Request](#qiy-node-request) to update the details of a [Service Type](#service-type) in the [Service Library](Definitions.md#service-library).
+
+### 2.7.26 Service Types Request
+The [Service Types Request](#service-types-request) is a [Qiy Node Request](#qiy-node-request) to list the [Service Types](Definitions.md#service-type) that are registered in the [Service Library](Definitions.md#service-library).
 
 ## 2.8 Message Requests
 
@@ -1091,8 +1091,8 @@ See [Operation](#operation) [model](#model).
 See [Operation](#operation) [model](#model).
 An [Operation](#operation):
 * has one [Source](#source).
-* has one [Operation Specification](#operation-specification).
 * has one [Operation Reference](#operation-reference).
+* has one [Operation Specification](#operation-specification).
 
 ### 5.11.3 Operation Business Rules
 
@@ -1860,7 +1860,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Type Details Request]
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /operationTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationTypeUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.22 Operation Type Details Request](#2722-operation-type-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.12 Operation Type Details Request](#2712-operation-type-details-request)
 
 ## Operation Type Register Request
 
@@ -1868,7 +1868,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Type Register Request]
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /operationTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationTypesUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.23 Operation Type Register Request](#2723-operation-type-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.13 Operation Type Register Request](#2713-operation-type-register-request)
 
 ## Operation Type Unregister Request
 
@@ -1876,7 +1876,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Type Unregister Request]
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /operationTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#operationTypeUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.24 Operation Type Unregister Request](#2724-operation-type-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.14 Operation Type Unregister Request](#2714-operation-type-unregister-request)
 
 ## Operation Type Update Request
 
@@ -1884,7 +1884,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Type Update Request]
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.25 Operation Type Update Request](#2725-operation-type-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.15 Operation Type Update Request](#2715-operation-type-update-request)
 
 ## Operation Types Request
 
@@ -1892,7 +1892,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Operation Types Request]
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypesUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.26 Operation Types Request](#2726-operation-types-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Operation Types Request](#2716-operation-types-request)
 
 ## Operation Unregister Request
 
@@ -1978,7 +1978,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Details Request](Definitions.md#published-provider-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProviderUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.12 Published Provider Details Request](#2712-published-provider-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.17 Published Provider Details Request](#2717-published-provider-details-request)
 
 ## Published Provider Register Request
 
@@ -1986,7 +1986,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Register Request](Definitions.md#published-provider-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /publishedProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProvidersUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.13 Published Provider Register Request](#2713-published-provider-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.18 Published Provider Register Request](#2718-published-provider-register-request)
 
 ## Published Provider Unregister Request
 
@@ -1994,7 +1994,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Unregister Request](Definitions.md#published-provider-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProviderUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.14 Published Provider Unregister Request](#2714-published-provider-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.19 Published Provider Unregister Request](#2719-published-provider-unregister-request)
 
 ## Published Provider Update Request
 
@@ -2002,7 +2002,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Provider Update Request](Definitions.md#published-provider-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /publishedProviderUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProviderUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.15 Published Provider Update Request](#2715-published-provider-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.20 Published Provider Update Request](#2720-published-provider-update-request)
 
 ## Published Providers Request
 
@@ -2010,7 +2010,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Published Providers Request](Definitions.md#published-providers-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /publishedProvidersUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#publishedProvidersUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.16 Published Providers Request](#2716-published-providers-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.21 Published Providers Request](#2721-published-providers-request)
 
 ## Published Service
 
@@ -2245,7 +2245,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Details Request](Definitions.md#service-type-details-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.17 Service Type Details Request](#2717-service-type-details-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.22 Service Type Details Request](#2722-service-type-details-request)
 
 ## Service Type Register Request
 
@@ -2253,7 +2253,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Register Request](Definitions.md#service-type-register-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [POST /serviceTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypesUrlPost)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.18 Service Type Register Request](#2718-service-type-register-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.23 Service Type Register Request](#2723-service-type-register-request)
 
 ## Service Type Unregister Request
 
@@ -2261,7 +2261,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Unregister Request](Definitions.md#service-type-unregister-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [DELETE /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlDelete)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.19 Service Type Unregister Request](#2719-service-type-unregister-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.24 Service Type Unregister Request](#2724-service-type-unregister-request)
 
 ## Service Type Update Request
 
@@ -2269,7 +2269,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Type Update Request](Definitions.md#service-type-update-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /serviceTypeUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypeUrlPatch)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.20 Service Type Update Request](#2720-service-type-update-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.25 Service Type Update Request](#2725-service-type-update-request)
 
 ## Service Types Request
 
@@ -2277,7 +2277,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Types Request](Definitions.md#service-types-request)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /serviceTypesUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#serviceTypesUrlGet)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.21 Service Types Request](#2721-service-types-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.7.26 Service Types Request](#2726-service-types-request)
 
 ## Source
 
