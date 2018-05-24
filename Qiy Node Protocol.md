@@ -1091,8 +1091,8 @@ See [Operation](#operation) [model](#model).
 See [Operation](#operation) [model](#model).
 An [Operation](#operation):
 * has one [Source](#source).
-* has one [Operation Reference](#operation-reference).
-* has one [Operation Specification](#operation-specification).
+* has zero or one [Operation Reference](#operation-reference).
+* has zero or one [Operation Specification](#operation-specification).
 
 ### 5.11.3 Operation Business Rules
 
