@@ -448,6 +448,41 @@
             ],
             "type": "object"
         },
+        "ConsentNotificationMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+			    "properties": {
+				"consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+				    "type": "string"
+				},
+				"serviceProvider": {
+                                    "description": "Service Provider (publishedProviderUrl)",
+                                    "format": "url",
+				    "type": "string"
+				}
+			    },
+			    "required": [
+			        "consent",
+			        "serviceProvider"
+			    ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-notification-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "ConsentsModel": {
             "description": "List of Consent Urls.",
             "items": {
