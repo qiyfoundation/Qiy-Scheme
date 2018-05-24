@@ -1337,8 +1337,14 @@
         },
         "ReferenceResultModel": {
             "description": "Result of the Operation Execute Request.",
-            "type": "object",
             "properties": {
+                "connection": {
+                    "description": "Connection (connectionUrl).",
+                    "format": "uri",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
                 "ref": {
                     "description": "Data Reference/Operation Reference.",
                     "minItems": 1,
@@ -1351,15 +1357,14 @@
                     "minItems": 1,
                     "maxItems": 1,
                     "type": "string"
-                },
-                "connection": {
-                    "description": "Connection (connectionUrl).",
-                    "format": "uri",
-                    "minItems": 1,
-                    "maxItems": 1,
-                    "type": "string"
                 }
-            }
+            },
+	    "required": [
+                        "connection",
+                        "ref",
+                        "value"
+                    ],
+            "type": "object"
         },
         "ReferencesResultModel": {
             "description": "References result.",
