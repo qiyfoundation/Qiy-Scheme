@@ -1619,6 +1619,39 @@
             },
             "type": "array"
         },
+        "SourceCandidatesMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+			    "properties": {
+				"consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+				    "type": "string"
+				},
+				"candidates": {
+                                    "$ref": "#/definitions/CandidatesModel"
+				}
+			    },
+			    "required": [
+			        "consent",
+			        "candidates"
+			    ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-candidates-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "SourceModel": {
             "description": "Source Model.",
             "properties": {
