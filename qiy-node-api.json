@@ -967,6 +967,11 @@
 				    "type": "string"
 				}
 			    },
+			    "required": [
+			        "consent",
+			        "operationReference",
+			        "serviceProvider"
+			    ],
                             "type": "object"
                         },
                         "type": {
