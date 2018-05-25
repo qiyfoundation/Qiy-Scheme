@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document describes how an [Individual](../Definitions.md#individual) and a [Service Provider](../Definitions.md#service-provider) acquire access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+This document describes how an [Individual](../Definitions.md#individual) and a [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) acquire access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
 # Contents
 
@@ -118,13 +118,14 @@ The flow for [Qiy Webapps](../Definitions.md#qiy-webapp) is the same as the basi
 
 # E2 Service Provider acquires access
 
-This extension describes how a [Service Provider](../Definitions.md#service-provider) acquires access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+This extension describes how a [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) acquires access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
 
 ## Preconditions
 
-1. The [Service Provider](../Definitions.md#service-provider) wants access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
-1. The [Service Provider](../Definitions.md#service-provider) has concluded an agreement with an [Access Provider](../Definitions.md#access-provider).
+1. The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) wants access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+1. The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) has concluded an agreement with an [Access Provider](../Definitions.md#access-provider).
+1. The [Access Provider](../Definitions.md#access-provider) has registered the [Service Provider](ref#service-provider) in the [Service Library](ref#service-library).
 
 
 ## Flow
@@ -152,7 +153,7 @@ Please refer to the [Access Provider](../Definitions.md#access-provider) for mor
 
 ## Postconditions
 
-1. The [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credential](../Qiy%20Node%20Protocol.md#qiy-node-credential).
+1. The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credential](../Qiy%20Node%20Protocol.md#qiy-node-credential).
 
 # Diagram Source Code
 
