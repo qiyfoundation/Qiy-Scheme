@@ -12,26 +12,26 @@ This document describes how an [Individual](../Definitions.md#individual) and a 
 1. [Basic Flow: Individual acquires access using a Qiy App](#basic-flow-individual-acquires-access-using-a-qiy-app)
 	1. [The Individual installs a new Qiy App](#1-the-individual-installs-a-new-qiy-app)
 	1. [The Individual secures access to the Qiy App](#2-the-individual-secures-access-to-the-qiy-app)
-	1. [The Qiy App creates Qiy Node Credentials](#3-the-qiy-app-creates-qiy-node-credentials)
+	1. [The Qiy App creates Qiy Node Credential](#3-the-qiy-app-creates-qiy-node-credential)
 		1. [Python](#python)
-	1. [The Qiy App persists the Qiy Node Credentials](#4-the-qiy-app-persists-the-qiy-node-credentials)
+	1. [The Qiy App persists the Qiy Node Credential](#4-the-qiy-app-persists-the-qiy-node-credential)
 	1. [The Qiy App requests the Qiy Trust Network to create a Qiy Node](#5-the-qiy-app-requests-the-qiy-trust-network-to-create-a-qiy-node)
 1. [Postconditions](#postconditions)
 1. [Extensions](#extensions)
 1. [E1.1 Individual acquires access using a Qiy Webapp](#e11-individual-acquires-access-using-a-qiy-webapp)
 	1. [The Individual registers an account for the Qiy Webapp](#1-the-individual-registers-an-account-for-the-qiy-webapp)
 	1. [The Individual secures access to the Qiy Webapp](#2-the-individual-secures-access-to-the-qiy-webapp)
-	1. [The Qiy Webapp creates Qiy Node Credentials](#3-the-qiy-webapp-creates-qiy-node-credentials)
-	1. [The Qiy Webapp persists the Qiy Node Credentials](#4-the-qiy-webapp-persists-the-qiy-node-credentials)
+	1. [The Qiy Webapp creates Qiy Node Credential](#3-the-qiy-webapp-creates-qiy-node-credential)
+	1. [The Qiy Webapp persists the Qiy Node Credential](#4-the-qiy-webapp-persists-the-qiy-node-credential)
 	1. [The Qiy Webapp requests the Qiy Trust Network to create a Qiy Node](#5-the-qiy-webapp-requests-the-qiy-trust-network-to-create-a-qiy-node)
 1. [E2 Service Provider acquires access](#e2-service-provider-acquires-access)
 	1. [Preconditions](#preconditions)
 	1. [Flow](#flow)
 		1. [The Service Provider requests the Access Provider for a Qiy Node](#1-the-service-provider-requests-the-access-provider-for-a-qiy-node)
-		1. [The Access Provider creates Qiy Node Credentials](#2-the-access-provider-creates-qiy-node-credentials)
+		1. [The Access Provider creates Qiy Node Credential](#2-the-access-provider-creates-qiy-node-credential)
 		1. [The Access Provider requests the Qiy Trust Network to create a Qiy Node](#3-the-access-provider-requests-the-qiy-trust-network-to-create-a-qiy-node)
-		1. [The Access Provider sends the Qiy Node Credentials to the Service Provider](#4-the-access-provider-sends-the-qiy-node-credentials-to-the-service-provider)
-		1. [The Service Provider configures its Computing System with the Qiy Node Credentials](#5-the-service-provider-configures-its-computing-system-with-the-qiy-node-credentials)
+		1. [The Access Provider sends the Qiy Node Credential to the Service Provider](#4-the-access-provider-sends-the-qiy-node-credential-to-the-service-provider)
+		1. [The Service Provider configures its Computing System with the Qiy Node Credential](#5-the-service-provider-configures-its-computing-system-with-the-qiy-node-credential)
 	1. [Postconditions](#postconditions)
 1. [Diagram Source Code](#diagram-source-code)
 	1. [Individual Acquires Access](#individual-acquires-access)
@@ -62,9 +62,9 @@ The [Individual](../Definitions.md#individual) can secure access to the Qiy App 
 1. The [Individual](../Definitions.md#individual) can secure access using a fingerprint for the device that the [Qiy App](../Definitions.md#qiy-app) is installed on.
 
 
-## 3. The Qiy App creates Qiy Node Credentials
+## 3. The Qiy App creates Qiy Node Credential
 
-The Qiy Node Credentials consist of:
+The [Qiy Node Credential](../Qiy%20Node%20Protocol.md#qiy-node-credential) consist of:
 * One [Qiy Node Id](../Definitions.md#qiy-node-id): a [Uuid](../Definitions.md#uuid).
 * One [RSA Private Key](../Definitions.md#rsa-private-key).
 
@@ -91,7 +91,7 @@ with open(pem_filename, "wb") as f:
         )
 ```
 
-## 4. The Qiy App persists the Qiy Node Credentials
+## 4. The Qiy App persists the Qiy Node Credential
 ## 5. The Qiy App requests the Qiy Trust Network to create a Qiy Node
 
 The [Qiy App](../Definitions.md#qiy-app) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to create a [Qiy Node](../Definitions.md#qiy-node) using a [Qiy Node Create Request](../Qiy%20Node%20Protocol.md#qiy-node-create-request).
@@ -112,8 +112,8 @@ The flow for [Qiy Webapps](../Definitions.md#qiy-webapp) is the same as the basi
 
 ## 1. The Individual registers an account for the Qiy Webapp
 ## 2. The Individual secures access to the Qiy Webapp
-## 3. The Qiy Webapp creates Qiy Node Credentials
-## 4. The Qiy Webapp persists the Qiy Node Credentials
+## 3. The Qiy Webapp creates Qiy Node Credential
+## 4. The Qiy Webapp persists the Qiy Node Credential
 ## 5. The Qiy Webapp requests the Qiy Trust Network to create a Qiy Node
 
 # E2 Service Provider acquires access
@@ -135,24 +135,24 @@ This extension describes how a [Service Provider](../Definitions.md#service-prov
 
 Please refer to the [Access Provider](../Definitions.md#access-provider) for more information.
 
-### 2. The Access Provider creates Qiy Node Credentials
+### 2. The Access Provider creates Qiy Node Credential
 
-See also [3. The Qiy App creates Qiy Node Credentials](#3-the-qiy-app-creates-qiy-node-credentials).
+See also [3. The Qiy App creates Qiy Node Credential](#3-the-qiy-app-creates-qiy-node-credential).
 
 ### 3. The Access Provider requests the Qiy Trust Network to create a Qiy Node
 
 See also [5. The Qiy App requests the Qiy Trust Network to create a Qiy Node](#5-the-qiy-app-requests-the-qiy-trust-network-to-create-a-qiy-node).
 
-### 4. The Access Provider sends the Qiy Node Credentials to the Service Provider
+### 4. The Access Provider sends the Qiy Node Credential to the Service Provider
 
 Please refer to the [Access Provider](../Definitions.md#access-provider) for more information.
 
-### 5. The Service Provider configures its Computing System with the Qiy Node Credentials
+### 5. The Service Provider configures its Computing System with the Qiy Node Credential
 
 
 ## Postconditions
 
-1. The [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credentials](../Definitions.md#qiy-node-credential).
+1. The [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) by means of [Qiy Node Credential](../Qiy%20Node%20Protocol.md#qiy-node-credential).
 
 # Diagram Source Code
 
@@ -167,8 +167,8 @@ participant "Qiy Trust Network" as QTN
 
 User -> App  : 1 Install
 User -> App  : 2 Secure Access
-App  -> App  : 3 Create Qiy Node Credentials
-App  -> App  : 4 Persist Qiy Node Credentials
+App  -> App  : 3 Create Qiy Node Credential
+App  -> App  : 4 Persist Qiy Node Credential
 App  -> QTN  : 5 Create Qiy Node
 ```
 
@@ -183,8 +183,8 @@ participant "Qiy Trust Network" as QTN
 
 User -> App  : 1 Register
 User -> App  : 2 Secure Access
-App  -> App  : 3 Create Qiy Node Credentials
-App  -> App  : 4 Persist Qiy Node Credentials
+App  -> App  : 3 Create Qiy Node Credential
+App  -> App  : 4 Persist Qiy Node Credential
 App  -> QTN  : 5 Create Qiy Node
 ```
 
@@ -198,8 +198,8 @@ participant "Access Provider"   as AP
 participant "Qiy Trust Network" as QTN
 
 SP ->  AP  : 1 Request Qiy Node
-AP ->  AP  : 2 Create Qiy Node Credentials
+AP ->  AP  : 2 Create Qiy Node Credential
 AP ->  QTN : 3 Create Qiy Node
-AP ->  SP  : 4 Send Qiy Node Credentials
+AP ->  SP  : 4 Send Qiy Node Credential
 SP ->  SP  : 5 Configure Computing System
 ```
