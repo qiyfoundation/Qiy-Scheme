@@ -1422,7 +1422,6 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4 Connection Requests](#24-connection-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.1 Connection Events](#31-connection-events)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.5 Connection Model](#55-connection-model)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connection](#connection)
 
 ## Connection Create Request
 
