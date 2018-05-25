@@ -485,10 +485,10 @@ The [Catalogues Request](#catalogues-request) is a [Qiy Node Request](#qiy-node-
 The [Published Service Details Request](#published-service-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) that has been published in a [Service Catalogue](Definitions.md#service-catalogue).
 
 ### 2.2.4 Published Service Register Request
-The [Published Service Register Request](#published-service-register-request) is a [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
+The [Published Service Register Request](#published-service-register-request) is a [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](#service-provider).
 
 ### 2.2.5 Published Service Unregister Request
-The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](Definitions.md#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](Definitions.md#service-provider).
+The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](#service-provider).
 
 ### 2.2.6 Published Services Request
 The [Published Services Request](#published-services-request) is a [Qiy Node Request](#qiy-node-request) which can be used to list the [Services](Definitions.md#service) in a [Catalogue](#catalogue).
@@ -635,16 +635,16 @@ The [Operation Type Update Request](#operation-type-update-request) is a [Qiy No
 The [Operation Types Request](#operation-types-request) is a [Qiy Node Request](#qiy-node-request) to list the [Operation Types](#operation-type) that are registered in the [Service Library](Definitions.md#service-library).
 
 ### 2.7.17 Published Provider Details Request
-The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](Definitions.md#service-provider).
+The [Published Provider Details Request](#published-provider-details-request) is a [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
 
 ### 2.7.18 Published Provider Register Request
-The [Published Provider Register Request](#published-provider-register-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](Definitions.md#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+The [Published Provider Register Request](#published-provider-register-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ### 2.7.19 Published Provider Unregister Request
-The [Published Provider Unregister Request](#published-provider-unregister-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](Definitions.md#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+The [Published Provider Unregister Request](#published-provider-unregister-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to unregister a [Service Provider](#service-provider) from the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 
 ### 2.7.20 Published Provider Update Request
-The [Published Provider Update Request](#published-provider-update-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](Definitions.md#service-provider).
+The [Published Provider Update Request](#published-provider-update-request) is a [Qiy Node Request](#qiy-node-request) for [Access Providers](Definitions.md#access-provider) to update details of a [Service Provider](#service-provider).
 
 ### 2.7.21 Published Providers Request
 The [Published Providers Request](#published-providers-request) is a [Qiy Node Request](#qiy-node-request) to list [Service Providers](Definitions.md#service-provider).
@@ -854,7 +854,7 @@ This chapters describes the entity types of the [Qiy Node Interface](Definitions
 ## 5.1 Account Model
 
 This section describes the [Account](#account) entity type.
-A [Qiy User](Definitions.md#qiy-user) can have linked [Accounts](#account) with any [Service Provider](Definitions.md#service-provider), but is initially used for linked accounts with [Data Providers](Definitions.md#data-provider).
+A [Qiy User](Definitions.md#qiy-user) can have linked [Accounts](#account) with any [Service Provider](#service-provider), but is initially used for linked accounts with [Data Providers](Definitions.md#data-provider).
 
 ### 5.1.1 Account Attributes
 
@@ -865,7 +865,7 @@ See [Account](#account) [model](#model).
 See [Account](#account) [model](#model).
 An [Account](#account):
 * has one [Qiy User](Definitions.md#qiy-user).
-* has one [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
+* has one [Service Provider](#service-provider) ([Published Provider](#published-provider)).
 * has zero or more [Persistent Ids](#persistent-id).
 * is used for zero or more [Candidates](#candidate).
 * is used for zero or more [Sources](#source).
@@ -900,7 +900,7 @@ See [Candidate](#candidate) [model](#model).
 ## 5.3 Catalogue Model
 
 This section describes the [Service Catalogue](Definitions.md#service-catalogue) [model](#model).
-A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)).
+A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](#service-provider) ([Published Provider](#published-provider)).
 
 ### 5.3.1 Catalogue Attributes
 
@@ -918,9 +918,9 @@ A [Catalogue](#catalogue):
 
 See [Catalogue](#catalogue) [model](#model).
 In addition:
-* Each registered [Service Provider](Definitions.md#service-provider) ([Published Provider](#published-provider)) has one [Catalogue](#catalogue).
-* The [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
-* The [Access Provider](Definitions.md#access-provider) of the [Service Provider](Definitions.md#service-provider) has write-access to the [Catalogue](#catalogue).
+* Each registered [Service Provider](#service-provider) ([Published Provider](#published-provider)) has one [Catalogue](#catalogue).
+* The [Service Provider](#service-provider) has write-access to the [Catalogue](#catalogue).
+* The [Access Provider](Definitions.md#access-provider) of the [Service Provider](#service-provider) has write-access to the [Catalogue](#catalogue).
 * All [Qiy Users](Definitions.md#qiy-user) have read-access to any [Catalogue](#catalogue).
 
 ## 5.4 Connect Token Model
@@ -958,7 +958,7 @@ See [Connection](#connection) [model](#model).
 ## 5.6 Consent Model
 
 This section describes the [Consent](#consent) entity type.
-A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](Definitions.md#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](#data-source) for a [Subscription](#subscription).
+A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](#data-source) for a [Subscription](#subscription).
 
 ### 5.6.1 Consent Attributes
 
@@ -977,7 +977,7 @@ A [Consent](#consent):
 See [Consent](#consent) [model](#model).
 In addition:
 * A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](#consent).
-* A [Service Provider](Definitions.md#service-provider) has read-access to a [Consent](#consent).
+* A [Service Provider](#service-provider) has read-access to a [Consent](#consent).
 
 ## 5.7 Event Model
 
@@ -1010,7 +1010,7 @@ A [Library](#library):
 * has zero or more of: registered [Data Type](#data-type).
 * has zero or more of: registered [Message Type](#message-type).
 * has zero or more of: [Service Type](#service-type).
-* has zero or more of: registered [Service Provider](Definitions.md#service-provider) named [Published Provider](#published-provider).
+* has zero or more of: registered [Service Provider](#service-provider) named [Published Provider](#published-provider).
 
 ### 5.8.3 Library Business Rules
 
@@ -1226,7 +1226,7 @@ See [Source](#source) [model](#model).
 ## 5.19 Subscription Model
 
 This section describes the [Subscription](Definitions.md#subscription) entity type.
-A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](Definitions.md#service-provider).
+A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](#service-provider).
 
 ### 5.19.1 Subscription Attributes
 
@@ -1247,7 +1247,7 @@ A [Subscription](Definitions.md#subscription):
 See [Subscription](#subscription) [model](#model).
 In addition:
 * The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
-* The [Service Provider](Definitions.md#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
+* The [Service Provider](#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
 
 
 # 6 Index
@@ -1965,6 +1965,12 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md) | [Service Provider](Definitions.md#service-provider)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Catalogue](#catalogue)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Library](#library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Account](#account)
 
 ## Published Provider
 
