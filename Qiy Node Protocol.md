@@ -214,14 +214,18 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Service Description Attributes](#5171-service-description-attributes)
 		1. [Service Description Relations](#5172-service-description-relations)
 		1. [Service Description Business Rules](#5173-service-description-business-rules)
-	1. [Source Model](#518-source-model)
-		1. [Source Attributes](#5181-source-attributes)
-		1. [Source Relations](#5182-source-relations)
-		1. [Source Business Rules](#5183-source-business-rules)
-	1. [Subscription Model](#519-subscription-model)
-		1. [Subscription Attributes](#5191-subscription-attributes)
-		1. [Subscription Relations](#5192-subscription-relations)
-		1. [Subscription Business Rules](#5193-subscription-business-rules)
+	1. [Service Type Model](#518-service-type-model)
+		1. [Service Type Attributes](#5181-service-type-attributes)
+		1. [Service Type Relations](#5182-service-type-relations)
+		1. [Service Type Business Rules](#5183-service-type-business-rules)
+	1. [Source Model](#519-source-model)
+		1. [Source Attributes](#5191-source-attributes)
+		1. [Source Relations](#5192-source-relations)
+		1. [Source Business Rules](#5193-source-business-rules)
+	1. [Subscription Model](#520-subscription-model)
+		1. [Subscription Attributes](#5201-subscription-attributes)
+		1. [Subscription Relations](#5202-subscription-relations)
+		1. [Subscription Business Rules](#5203-subscription-business-rules)
 1. [Index](#6-index)
 	1. [Account](#account)
 	1. [Account Details Request](#account-details-request)
@@ -1216,17 +1220,37 @@ See [Service Description](#service-description) [model](#model).
 
 See [Service Description](#service-description) [model](#model).
 
-## 5.18 Source Model
+## 5.18 Service Type Model
+
+This section describes the [Service Type](#service-type) [Entity Type](#entity-type).
+A [Service Type](#service-type) is used to describe the type of a [Service](#service).
+
+### 5.18.1 Service Type Attributes
+
+See [Service Type](#service-type) [model](#model).
+
+### 5.18.2 Service Type Relations
+
+See [Service Type](#service-type) [model](#model).
+A [Service Type](#service-type):
+* is part of the [Library](#library).
+* is used by zero or more [Service Descriptions](#service-description).
+
+### 5.18.3 Service Type Business Rules
+
+See [Service Type](#service-type) [model](#model).
+
+## 5.19 Source Model
 
 This section describes the [Source](#source) [Entity Type](#entity-type).
 
 A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](#consent).
 
-### 5.18.1 Source Attributes
+### 5.19.1 Source Attributes
 
 See [Source](#source) [model](#model).
 
-### 5.18.2 Source Relations
+### 5.19.2 Source Relations
 
 See [Source](#source) [model](#model).
 A [Source](#source):
@@ -1236,20 +1260,20 @@ A [Source](#source):
 * has zero or more [Operations](#operation).
 * has zero or more [Service Credentials](#service-credential).
 
-### 5.18.3 Source Business Rules
+### 5.19.3 Source Business Rules
 
 See [Source](#source) [model](#model).
 
-## 5.19 Subscription Model
+## 5.20 Subscription Model
 
 This section describes the [Subscription](#subscription) [Entity Type](#entity-type).
 A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](#service-provider).
 
-### 5.19.1 Subscription Attributes
+### 5.20.1 Subscription Attributes
 
 See [Subscription](#subscription) [model](#model).
 
-### 5.19.2 Subscription Relations
+### 5.20.2 Subscription Relations
 
 See [Subscription](#subscription) [model](#model).
 A [Subscription](#subscription):
@@ -1259,7 +1283,7 @@ A [Subscription](#subscription):
 * has zero or one [Consent](#consent).
 * has one [Persistent Id](#persistent-id).
 
-### 5.19.3 Subscription Business Rules
+### 5.20.3 Subscription Business Rules
 
 See [Subscription](#subscription) [model](#model).
 In addition:
@@ -2476,8 +2500,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Type Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceTypeModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library Model](#58-library-model)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Service Type Model](#518-service-type-model)
 
 ## Service Type Details Request
 
@@ -2531,7 +2554,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Data Source](#data-source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SourceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Source Model](#518-source-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.19 Source Model](#519-source-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12 Source Requests](#212-source-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Candidate](#candidate)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
@@ -2579,7 +2602,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscription](#subscription)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Subscription Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SubscriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.19 Subscription Model](#519-subscription-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.20 Subscription Model](#520-subscription-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
 
 ## Subscription Details Request
