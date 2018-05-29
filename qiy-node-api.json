@@ -3241,8 +3241,8 @@
         },
         "/publishedProviderUrl": {
             "delete": {
-                "summary": "Delete Published Provider.",
-                "description": "See [Published Provider Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-delete-request).",
+                "summary": "Unregister Published Provider.",
+                "description": "See [Published Provider Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-unregister-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -3478,8 +3478,8 @@
         },
         "/serviceCredentialUrl": {
             "delete": {
-                "summary": "Delete Service Credential.",
-                "description": "See [Service Credential Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-delete-request).",
+                "summary": "Unregister Service Credential.",
+                "description": "See [Service Credential Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-unregister-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -3657,8 +3657,8 @@
         },
         "/sourceUrl": {
             "delete": {
-                "summary": "Delete Source.",
-                "description": "See [Source Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-delete-request).",
+                "summary": "Unregister Source.",
+                "description": "See [Source Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-unregister-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
@@ -3789,8 +3789,8 @@
         },
         "/subscriptionUrl": {
             "delete": {
-                "summary": "Delete Subscription.",
-                "description": "See [Subscription Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-delete-request).",
+                "summary": "Unregister Subscription.",
+                "description": "See [Subscription Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-unregister-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
