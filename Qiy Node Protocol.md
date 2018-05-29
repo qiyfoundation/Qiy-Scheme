@@ -2243,7 +2243,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Published Service Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PublishedServiceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.15 Published Service](#515-published-service)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.15 Published Service Model](#515-published-service-model)
 
 ## Published Service Details Request
 
