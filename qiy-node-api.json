@@ -1957,8 +1957,8 @@
         },
         "/accountUrl": {
             "delete": {
-                "summary": "Delete Account.",
-                "description": "See [Account Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-delete-request).",
+                "summary": "Unregister Account.",
+                "description": "See [Account Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-unregister-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
