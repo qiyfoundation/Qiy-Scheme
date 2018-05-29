@@ -1011,7 +1011,7 @@ See [Event](#event) [model](#model).
 ## 5.8 Library Model
 
 This section describes the [Library](#library) [Entity Type](#entity-type).
-The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type), [Message Types](#message-type) and [Service Types](#service-type).
+The [Library](#library) discloses data about all registered [Service Providers](#service-provider) ([Published Provider](#published-provider)), [Catalogues](#catalogues), [Data Types](#data-type), [Message Types](#message-type) and [Service Types](#service-type).
 
 ### 5.8.1 Library Attributes
 
@@ -1021,11 +1021,11 @@ See [Library](#library) [model](#model).
 
 See [Library](#library) [model](#model).
 A [Library](#library):
-* has zero or more of: registered [Service Catalogue](Definitions.md#service-catalogue), named [Catalogue](#catalogue).
-* has zero or more of: registered [Data Type](#data-type).
-* has zero or more of: registered [Message Type](#message-type).
-* has zero or more of: [Service Type](#service-type).
-* has zero or more of: registered [Service Provider](#service-provider) named [Published Provider](#published-provider).
+* has zero or more [Catalogues](#catalogue).
+* has zero or more [Data Types](#data-type).
+* has zero or more [Message Types](#message-type).
+* has zero or more [Service Types](#service-type).
+* has zero or more [Published Providers](#published-provider).
 
 ### 5.8.3 Library Business Rules
 
@@ -2478,7 +2478,6 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Provider](Definitions.md#service-provider)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Provider](#provider)
 
 ## Service Source
