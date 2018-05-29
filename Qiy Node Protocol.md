@@ -202,34 +202,38 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Portfolio Attributes](#5141-portfolio-attributes)
 		1. [Portfolio Relations](#5142-portfolio-relations)
 		1. [Portfolio Business Rules](#5143-portfolio-business-rules)
-	1. [Published Service Model](#515-published-service-model)
-		1. [Published Service Attributes](#5151-published-service-attributes)
-		1. [Published Service Relations](#5152-published-service-relations)
-		1. [Published Service Business Rules](#5153-published-service-business-rules)
-	1. [Qiy Node Model](#516-qiy-node-model)
-		1. [Qiy Node  Attributes](#5161-qiy-node--attributes)
-		1. [Qiy Node Relations](#5162-qiy-node-relations)
-		1. [Qiy Node Business Rules](#5163-qiy-node-business-rules)
-	1. [Qiy Node Credential Model](#517-qiy-node-credential-model)
-		1. [Qiy Node Credential Attributes](#5171-qiy-node-credential-attributes)
-		1. [Qiy Node Credential Relations](#5172-qiy-node-credential-relations)
-		1. [Qiy Node Credential Business Rules](#5173-qiy-node-credential-business-rules)
-	1. [Service Description Model](#518-service-description-model)
-		1. [Service Description Attributes](#5181-service-description-attributes)
-		1. [Service Description Relations](#5182-service-description-relations)
-		1. [Service Description Business Rules](#5183-service-description-business-rules)
-	1. [Service Type Model](#519-service-type-model)
-		1. [Service Type Attributes](#5191-service-type-attributes)
-		1. [Service Type Relations](#5192-service-type-relations)
-		1. [Service Type Business Rules](#5193-service-type-business-rules)
-	1. [Source Model](#520-source-model)
-		1. [Source Attributes](#5201-source-attributes)
-		1. [Source Relations](#5202-source-relations)
-		1. [Source Business Rules](#5203-source-business-rules)
-	1. [Subscription Model](#521-subscription-model)
-		1. [Subscription Attributes](#5211-subscription-attributes)
-		1. [Subscription Relations](#5212-subscription-relations)
-		1. [Subscription Business Rules](#5213-subscription-business-rules)
+	1. [Published Provider Model](#515-published-provider-model)
+		1. [Published Provider Attributes](#5151-published-provider-attributes)
+		1. [Published Provider Relations](#5152-published-provider-relations)
+		1. [Published Provider Business Rules](#5153-published-provider-business-rules)
+	1. [Published Service Model](#516-published-service-model)
+		1. [Published Service Attributes](#5161-published-service-attributes)
+		1. [Published Service Relations](#5162-published-service-relations)
+		1. [Published Service Business Rules](#5163-published-service-business-rules)
+	1. [Qiy Node Model](#517-qiy-node-model)
+		1. [Qiy Node  Attributes](#5171-qiy-node--attributes)
+		1. [Qiy Node Relations](#5172-qiy-node-relations)
+		1. [Qiy Node Business Rules](#5173-qiy-node-business-rules)
+	1. [Qiy Node Credential Model](#518-qiy-node-credential-model)
+		1. [Qiy Node Credential Attributes](#5181-qiy-node-credential-attributes)
+		1. [Qiy Node Credential Relations](#5182-qiy-node-credential-relations)
+		1. [Qiy Node Credential Business Rules](#5183-qiy-node-credential-business-rules)
+	1. [Service Description Model](#519-service-description-model)
+		1. [Service Description Attributes](#5191-service-description-attributes)
+		1. [Service Description Relations](#5192-service-description-relations)
+		1. [Service Description Business Rules](#5193-service-description-business-rules)
+	1. [Service Type Model](#520-service-type-model)
+		1. [Service Type Attributes](#5201-service-type-attributes)
+		1. [Service Type Relations](#5202-service-type-relations)
+		1. [Service Type Business Rules](#5203-service-type-business-rules)
+	1. [Source Model](#521-source-model)
+		1. [Source Attributes](#5211-source-attributes)
+		1. [Source Relations](#5212-source-relations)
+		1. [Source Business Rules](#5213-source-business-rules)
+	1. [Subscription Model](#522-subscription-model)
+		1. [Subscription Attributes](#5221-subscription-attributes)
+		1. [Subscription Relations](#5222-subscription-relations)
+		1. [Subscription Business Rules](#5223-subscription-business-rules)
 1. [Index](#6-index)
 	1. [Account](#account)
 	1. [Account Details Request](#account-details-request)
@@ -1176,16 +1180,40 @@ In addition:
 * Each [Qiy User](Definitions.md#qiy-user) has one [Portfolio](#portfolio).
 * Only the [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Portfolio](#portfolio).
 
-## 5.15 Published Service Model
+## 5.15 Published Provider Model
+
+This section describes the [Published Provider](#published-provider) [Entity Type](#entity-type).
+A [Published Provider](#published-provider) is a [Service Provider](#service-provider) that can provide [Services](#service) via Qiy.
+
+### 5.15.1 Published Provider Attributes
+
+See [Published Provider](#published-provider) [model](#model).
+
+### 5.15.2 Published Provider Relations
+
+See [Published Provider](#published-provider) [model](#model).
+A [Published Provider](#published-provider):
+* relates to one [Library](#library).
+* relates to one [Access Provider](#access-provider).
+* relates to one [Service Provider](#service-provider).
+* relates to one [Catalogue](#catalogue).
+* consumes data of zero or more [Data Types](#data-types).
+* produces data of zero or more [Data Types](#data-types).
+
+### 5.15.3 Published Provider Business Rules
+
+See [Published Provider](#published-provider) [model](#model).
+
+## 5.16 Published Service Model
 
 This section describes the [Published Service](#published-service) [Entity Type](#entity-type).
 A [Published Service](#published-service) is used to describe a [Service](#service) that a [Published Provider](#published-provider) can provide via Qiy.
 
-### 5.15.1 Published Service Attributes
+### 5.16.1 Published Service Attributes
 
 See [Published Service](#published-service) [model](#model).
 
-### 5.15.2 Published Service Relations
+### 5.16.2 Published Service Relations
 
 See [Published Service](#published-service) [model](#model).
 A [Published Service](#published-service):
@@ -1194,91 +1222,90 @@ A [Published Service](#published-service):
 * has one [Service Descriptor](#service-descriptor).
 * has one [Service Type](#service-type).
 * has one or more [Operation Types](#operation-type).
- 
 
-### 5.15.3 Published Service Business Rules
+### 5.16.3 Published Service Business Rules
 
 See [Published Service](#published-service) [model](#model).
 
-## 5.16 Qiy Node Model
+## 5.17 Qiy Node Model
 
 This section describes the [Qiy Node](#qiy-node) [Entity Type](#entity-type).
 
-### 5.16.1 Qiy Node  Attributes
+### 5.17.1 Qiy Node  Attributes
 
 See [Qiy Node](#qiy-node) [model](#model).
 
-### 5.16.2 Qiy Node Relations
+### 5.17.2 Qiy Node Relations
 
 See [Qiy Node](#qiy-node) [model](#model).
 
-### 5.16.3 Qiy Node Business Rules
+### 5.17.3 Qiy Node Business Rules
 
 See [Qiy Node](#qiy-node) [model](#model).
 
-## 5.17 Qiy Node Credential Model
+## 5.18 Qiy Node Credential Model
 
 This section describes the [Qiy Node Credential](#qiy-node-credential) [Entity Type](#entity-type).
 
-### 5.17.1 Qiy Node Credential Attributes
+### 5.18.1 Qiy Node Credential Attributes
 
 See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
-### 5.17.2 Qiy Node Credential Relations
+### 5.18.2 Qiy Node Credential Relations
 
 See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
-### 5.17.3 Qiy Node Credential Business Rules
+### 5.18.3 Qiy Node Credential Business Rules
 
 See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
-## 5.18 Service Description Model
+## 5.19 Service Description Model
 
 This section describes the [Service Description](#service-description) [Entity Type](#entity-type).
 
-### 5.18.1 Service Description Attributes
+### 5.19.1 Service Description Attributes
 
 See [Service Description](#service-description) [model](#model).
 
-### 5.18.2 Service Description Relations
+### 5.19.2 Service Description Relations
 
 See [Service Description](#service-description) [model](#model).
 
-### 5.18.3 Service Description Business Rules
+### 5.19.3 Service Description Business Rules
 
 See [Service Description](#service-description) [model](#model).
 
-## 5.19 Service Type Model
+## 5.20 Service Type Model
 
 This section describes the [Service Type](#service-type) [Entity Type](#entity-type).
 A [Service Type](#service-type) is used to describe the type of a [Service](#service).
 
-### 5.19.1 Service Type Attributes
+### 5.20.1 Service Type Attributes
 
 See [Service Type](#service-type) [model](#model).
 
-### 5.19.2 Service Type Relations
+### 5.20.2 Service Type Relations
 
 See [Service Type](#service-type) [model](#model).
 A [Service Type](#service-type):
 * is part of the [Library](#library).
 * is used by zero or more [Service Descriptions](#service-description).
 
-### 5.19.3 Service Type Business Rules
+### 5.20.3 Service Type Business Rules
 
 See [Service Type](#service-type) [model](#model).
 
-## 5.20 Source Model
+## 5.21 Source Model
 
 This section describes the [Source](#source) [Entity Type](#entity-type).
 
 A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](#consent).
 
-### 5.20.1 Source Attributes
+### 5.21.1 Source Attributes
 
 See [Source](#source) [model](#model).
 
-### 5.20.2 Source Relations
+### 5.21.2 Source Relations
 
 See [Source](#source) [model](#model).
 A [Source](#source):
@@ -1288,20 +1315,20 @@ A [Source](#source):
 * has zero or more [Operations](#operation).
 * has zero or more [Service Credentials](#service-credential).
 
-### 5.20.3 Source Business Rules
+### 5.21.3 Source Business Rules
 
 See [Source](#source) [model](#model).
 
-## 5.21 Subscription Model
+## 5.22 Subscription Model
 
 This section describes the [Subscription](#subscription) [Entity Type](#entity-type).
 A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](#service-provider).
 
-### 5.21.1 Subscription Attributes
+### 5.22.1 Subscription Attributes
 
 See [Subscription](#subscription) [model](#model).
 
-### 5.21.2 Subscription Relations
+### 5.22.2 Subscription Relations
 
 See [Subscription](#subscription) [model](#model).
 A [Subscription](#subscription):
@@ -1311,7 +1338,7 @@ A [Subscription](#subscription):
 * has zero or one [Consent](#consent).
 * has one [Persistent Id](#persistent-id).
 
-### 5.21.3 Subscription Business Rules
+### 5.22.3 Subscription Business Rules
 
 See [Subscription](#subscription) [model](#model).
 In addition:
@@ -2190,8 +2217,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Published Provider Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PublishedProviderModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.8 Library Model](#58-library-model)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Provider](#provider)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.15 Published Provider Model](#515-published-provider-model)
 
 ## Published Provider Details Request
 
@@ -2243,7 +2269,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Published Service Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PublishedServiceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.15 Published Service Model](#515-published-service-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.16 Published Service Model](#516-published-service-model)
 
 ## Published Service Details Request
 
@@ -2296,7 +2322,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node](Definitions.md#qiy-node)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.16 Qiy Node Model](#516-qiy-node-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.17 Qiy Node Model](#517-qiy-node-model)
 
 ## Qiy Node API
 
@@ -2319,7 +2345,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Credential](Definitions.md#qiy-node-credential)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Qiy Node Credential Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#QiyNodeCredentialModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.17 Qiy Node Credential Model](#517-qiy-node-credential-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Qiy Node Credential Model](#518-qiy-node-credential-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy Node](#qiy-node)
 
 ## Qiy Node Delete Request
@@ -2482,7 +2508,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Service Description](Definitions.md#service-description)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Description Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceDescriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.18 Service Description Model](#518-service-description-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.19 Service Description Model](#519-service-description-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
 
 ## Service Endpoint
@@ -2526,7 +2552,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Type Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceTypeModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.19 Service Type Model](#519-service-type-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.20 Service Type Model](#520-service-type-model)
 
 ## Service Type Details Request
 
@@ -2580,7 +2606,7 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Data Source](#data-source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Source)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Source Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SourceModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.20 Source Model](#520-source-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.21 Source Model](#521-source-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.12 Source Requests](#212-source-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Candidate](#candidate)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
@@ -2628,7 +2654,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Subscription](#subscription)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Subscription Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SubscriptionModel)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.21 Subscription Model](#521-subscription-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.22 Subscription Model](#522-subscription-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
 
 ## Subscription Details Request
