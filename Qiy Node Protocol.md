@@ -235,6 +235,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 		1. [Subscription Relations](#5222-subscription-relations)
 		1. [Subscription Business Rules](#5223-subscription-business-rules)
 1. [Index](#6-index)
+	1. [Access Provider](#access-provider)
 	1. [Account](#account)
 	1. [Account Details Request](#account-details-request)
 	1. [Account Register Request](#account-register-request)
@@ -1347,6 +1348,12 @@ In addition:
 
 
 # 6 Index
+
+## Access Provider
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Access Provider](Definitions.md#access-provider)
 
 ## Account
 
