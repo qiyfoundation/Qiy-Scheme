@@ -270,6 +270,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Data Type Update Request](#data-type-update-request)
 	1. [Data Types Request](#data-types-request)
 	1. [Dynamic Path Endpoint Addresses](#dynamic-path-endpoint-addresses)
+	1. [Entity Type](#entity-type)
 	1. [Event](#event)
 	1. [Events Request](#events-request)
 	1. [Library](#library)
@@ -714,7 +715,7 @@ The [Accounts Request](#accounts-request) is a [Qiy Node Request](#qiy-node-requ
 The [Portfolio Details Request](#portfolio-details-request) is a [Qiy Node Request](#qiy-node-request) that can be used by a [Qiy User](Definitions.md#qiy-user) to get the details of his [Service Portfolio](#service-portfolio).
 
 ### 2.10.7 Subscription Details Request
-The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Subscription](Definitions.md#subscription) in a [Service Portfolio](#service-portfolio).
+The [Subscription Details Request](#subscription-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Subscription](#subscription) in a [Service Portfolio](#service-portfolio).
 
 ### 2.10.8 Subscription Register Request
 The [Subscription Register Request](#subscription-register-request) is a [Qiy Node Request](#qiy-node-request) which can be used to register a subscription to a [Service](Definitions.md#service).
@@ -723,7 +724,7 @@ The [Subscription Register Request](#subscription-register-request) is a [Qiy No
 The [Subscription Unregister Request](#subscription-unregister-request) is a [Qiy Node Request](#qiy-node-request) which can be used to unregister a subscription to a [Service](Definitions.md#service).
 
 ### 2.10.10 Subscriptions Request
-The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscription](Definitions.md#subscription) in a [Service Portfolio](#service-portfolio).
+The [Subscriptions Request](#subscriptions-request) is a [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscription](#subscription) in a [Service Portfolio](#service-portfolio).
 
 ## 2.11 Qiy Node Requests
 
@@ -853,11 +854,11 @@ The [Source Candidates Message](#source-candidates-message) is a [Qiy Node Messa
 
 # 5 Models
 
-This chapters describes the entity types of the [Qiy Node Interface](Definitions.md#qiy-node-interface).
+This chapters describes the [Entity Types](#entity-type) of the [Qiy Node Interface](Definitions.md#qiy-node-interface).
 
 ## 5.1 Account Model
 
-This section describes the [Account](#account) entity type.
+This section describes the [Account](#account) [Entity Type](#entity-type).
 A [Qiy User](Definitions.md#qiy-user) can have linked [Accounts](#account) with any [Service Provider](#service-provider), but is initially used for linked accounts with [Data Providers](Definitions.md#data-provider).
 
 ### 5.1.1 Account Attributes
@@ -881,7 +882,7 @@ See [Account](#account) [model](#model).
 
 ## 5.2 Candidate Model
 
-This section describes the [Candidate](#candidate) entity type.
+This section describes the [Candidate](#candidate) [Entity Type](#entity-type).
 
 A [Candidate](#candidate) is a possible [Source](#source) to provide [Personal Data](Definitions.md#personal-data) for a [Consent](#consent).
 
@@ -903,7 +904,7 @@ See [Candidate](#candidate) [model](#model).
 
 ## 5.3 Catalogue Model
 
-This section describes the [Service Catalogue](Definitions.md#service-catalogue) [model](#model).
+This section describes the [Catalogue](#catalogue) [Entity Type](#entity-type).
 A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](#service-provider) ([Published Provider](#published-provider)).
 
 ### 5.3.1 Catalogue Attributes
@@ -929,6 +930,8 @@ In addition:
 
 ## 5.4 Connect Token Model
 
+This section describes the [Connect Token](#connect-token) [Entity Type](#entity-type).
+
 ### 5.4.1 Connect Token Attributes
 
 See [Connect Token](#connect-token) [model](#model).
@@ -942,6 +945,8 @@ See [Connect Token](#connect-token) [model](#model).
 See [Connect Token](#connect-token) [model](#model).
 
 ## 5.5 Connection Model
+
+This section describes the [Connection](#connection) [Entity Type](#entity-type).
 
 ### 5.5.1 Connection Attributes
 
@@ -961,7 +966,7 @@ See [Connection](#connection) [model](#model).
 
 ## 5.6 Consent Model
 
-This section describes the [Consent](#consent) entity type.
+This section describes the [Consent](#consent) [Entity Type](#entity-type).
 A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](#data-source) for a [Subscription](#subscription).
 
 ### 5.6.1 Consent Attributes
@@ -985,6 +990,8 @@ In addition:
 
 ## 5.7 Event Model
 
+This section describes the [Event](#event) [Entity Type](#entity-type).
+
 ### 5.7.1 Event Attributes
 
 See [Event](#event) [model](#model).
@@ -999,7 +1006,7 @@ See [Event](#event) [model](#model).
 
 ## 5.8 Library Model
 
-This section describes the [Service Library](Definitions.md#service-library) entity type.
+This section describes the [Library](#library) [Entity Type](#entity-type).
 The [Service Library](Definitions.md#service-library) discloses data about all registered [Service Providers](Definitions.md#service-provider), [Data Types](Definitions.md#data-type), [Message Types](#message-type) and [Service Types](#service-type).
 
 ### 5.8.1 Library Attributes
@@ -1027,7 +1034,7 @@ In addition:
 
 ## 5.9 Message Model
 
-This section describes the [Message](#message) entity type.
+This section describes the [Message](#message) [Entity Type](#entity-type).
 The [Message](#message) is used to exchange messages between [Qiy Users](Definitions.md#qiy-user).
 
 ### 5.9.1 Message Attributes
@@ -1062,7 +1069,7 @@ In addition:
 
 ## 5.10 Message Type Model
 
-This section describes the [Message Type](#message-type) entity type.
+This section describes the [Message Type](#message-type) [Entity Type](#entity-type).
 The [Message Type](#message-type) is used to describe [Qiy Node Messages](#qiy-node-message) using [Message Descriptors](#message-descriptor).
 
 ### 5.10.1 Message Type Attributes
@@ -1082,7 +1089,7 @@ See [Message Type](#message-type) [model](#model).
 
 ## 5.11 Operation Model
 
-This section describes the [Operation](#operation) entity type.
+This section describes the [Operation](#operation) [Entity Type](#entity-type).
 
 An [Operation](#operation) is a command which can be used to acquire [Personal Data](Definitions.md#personal-data) for a [Consent](#consent) from the [Service Endpoint](#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
@@ -1104,7 +1111,7 @@ See [Operation](#operation) [model](#model).
 
 ## 5.12 Operation Specification Model
 
-This section describes the [Operation Specification](#operation-specification) entity type.
+This section describes the [Operation Specification](#operation-specification) [Entity Type](#entity-type).
 The [Operation Specification](#operation-specification) specifies an [Operation](#operation) that can be used to acquire [Personal Data](Definitions.md#personal-data) from the [Service Endpoint](#service-endpoint) of a [Data Provider](Definitions.md#data-provider).
 
 ### 5.12.1 Operation Specification Attributes
@@ -1126,7 +1133,7 @@ In addition:
 
 ## 5.13 Persistent Id Model
 
-This section describes the [Persistent Id](#persistent-id).
+This section describes the [Persistent Id](#persistent-id) [Entity Type](#entity-type).
 
 ### 5.13.1 Persistent Id Relations
 
@@ -1138,7 +1145,7 @@ See [Persistent Id](#persistent-id) [model](#model).
 
 ## 5.14 Portfolio Model
 
-This section describes the [Service Portfolio](#service-portfolio) entity type.
+This section describes the [Service Portfolio](#service-portfolio) [Entity Type](#entity-type).
 The [Service Portfolio](#service-portfolio) of a [Qiy User](Definitions.md#qiy-user) is used to maintain information related to his [Subscriptions](#subscription), [Consents](#consent) and [Personal Data](Definitions.md#personal-data).
 
 ### 5.14.1 Portfolio Attributes
@@ -1163,6 +1170,8 @@ In addition:
 
 ## 5.15 Qiy Node Model
 
+This section describes the [Qiy Node](#qiy-node) [Entity Type](#entity-type).
+
 ### 5.15.1 Qiy Node  Attributes
 
 See [Qiy Node](#qiy-node) [model](#model).
@@ -1176,6 +1185,8 @@ See [Qiy Node](#qiy-node) [model](#model).
 See [Qiy Node](#qiy-node) [model](#model).
 
 ## 5.16 Qiy Node Credential Model
+
+This section describes the [Qiy Node Credential](#qiy-node-credential) [Entity Type](#entity-type).
 
 ### 5.16.1 Qiy Node Credential Attributes
 
@@ -1191,6 +1202,8 @@ See [Qiy Node Credential](#qiy-node-credential) [model](#model).
 
 ## 5.17 Service Description Model
 
+This section describes the [Service Description](#service-description) [Entity Type](#entity-type).
+
 ### 5.17.1 Service Description Attributes
 
 See [Service Description](#service-description) [model](#model).
@@ -1205,7 +1218,7 @@ See [Service Description](#service-description) [model](#model).
 
 ## 5.18 Source Model
 
-This section describes the [Source](#source) entity type.
+This section describes the [Source](#source) [Entity Type](#entity-type).
 
 A [Source](#source) is an origin for the [Personal Data](Definitions.md#personal-data) in a [Consent](#consent).
 
@@ -1229,7 +1242,7 @@ See [Source](#source) [model](#model).
 
 ## 5.19 Subscription Model
 
-This section describes the [Subscription](Definitions.md#subscription) entity type.
+This section describes the [Subscription](#subscription) [Entity Type](#entity-type).
 A [Qiy User](Definitions.md#qiy-user) can have [Subscriptions](Definitions.md#subscription) to any [Service](Definitions.md#service) of any [Service Provider](#service-provider).
 
 ### 5.19.1 Subscription Attributes
@@ -1239,7 +1252,7 @@ See [Subscription](#subscription) [model](#model).
 ### 5.19.2 Subscription Relations
 
 See [Subscription](#subscription) [model](#model).
-A [Subscription](Definitions.md#subscription):
+A [Subscription](#subscription):
 * has one subscriber, a [Qiy User](Definitions.md#qiy-user).
 * has one [Service](Definitions.md#service) ([Published Service](#published-service)).
 * has zero or one [Account](#account).
@@ -1250,8 +1263,8 @@ A [Subscription](Definitions.md#subscription):
 
 See [Subscription](#subscription) [model](#model).
 In addition:
-* The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](Definitions.md#subscription).
-* The [Service Provider](#service-provider) has read-access to a [Subscription](Definitions.md#subscription).
+* The [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Subscription](#subscription).
+* The [Service Provider](#service-provider) has read-access to a [Subscription](#subscription).
 
 
 # 6 Index
@@ -1662,6 +1675,48 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [Path Endpoint Addresses](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PathEndpointAddresses)
 [Qiy Node API](Qiy%20Node%20API.json)         | [GET /api](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#apiGet)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.1.3 Dynamic Path Endpoint Addresses](#213-dynamic-path-endpoint-addresses)
+
+## Entity Type
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Entity](Definitions.md#entity)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5 Models](#5-models)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Account](#account)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Candidate](#candidate)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Catalogue](#catalogue)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connect Token](#connect-token)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Connection](#connection)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Data Reference](#data-reference)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Data Type](#data-type)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Dynamic Path Endpoint Addresses](#dynamic-path-endpoint-addresses)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Event](#event)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Library](#library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Message](#message)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Message Descriptor](#message-descriptor)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Message Type](#message-type)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation](#operation)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Reference](#operation-reference)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Type](#operation-type)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Specification](#operation-specification)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Persistent Id](#persistent-id)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Portfolio](#portfolio)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Provider](#provider)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Published Provider](#published-provider)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Published Service](#published-service)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy App](#qiy-app)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy Node](#qiy-node)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy Node API](#qiy-node-api)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy Node Credential](#qiy-node-credential)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Request](#request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Credential](#service-credential)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Description](#service-description)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Endpoint](#service-endpoint)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Type](#service-type)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Source](#source)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Subscription](#subscription)
 
 ## Event
 
@@ -2268,13 +2323,13 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation](#operation)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Published Service](#published-service)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Catalogue](#service-catalogue)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Catalogue](#catalogue)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Credential](#service-credential)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Description](#service-description)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Endpoint](#service-endpoint)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Library](#service-library)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Provider](#service-provider)
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Reference](#service-reference)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Library](#library)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Provider](#provider)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Operation Reference](#operation-reference)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Source](#service-source)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service Type](#service-type)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Subscription](#subscription)
@@ -2521,7 +2576,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Subscription](Definitions.md#subscription)
+[Definitions](Definitions.md)                 | [Subscription](#subscription)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Subscription Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#SubscriptionModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.19 Subscription Model](#519-subscription-model)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
