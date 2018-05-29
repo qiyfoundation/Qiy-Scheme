@@ -3862,8 +3862,8 @@ font-style: italic;
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
     <pre class="get"><code class="huge"><span class="http-method">get</span> /candidatesUrl</code></pre></div>
-    <div class="method-summary">Get Source Candidates (<span class="nickname">candidatesUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-candidates-request">Source Candidates Request</a>.</div>
+    <div class="method-summary">Get Candidates (<span class="nickname">candidatesUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#candidates-request">Candidates Request</a>.</div>
 
 
 
@@ -4526,6 +4526,7 @@ font-style: italic;
     <li><a href="#AccountsModel"><code>AccountsModel</code> - </a></li>
     <li><a href="#ApiModel"><code>ApiModel</code> - </a></li>
     <li><a href="#CandidateModel"><code>CandidateModel</code> - </a></li>
+    <li><a href="#CandidatesMessageModel_payload"><code>CandidatesMessageModel_payload</code> - </a></li>
     <li><a href="#CandidatesModel"><code>CandidatesModel</code> - </a></li>
     <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
     <li><a href="#CatalogueModel_links"><code>CatalogueModel_links</code> - </a></li>
@@ -4591,7 +4592,6 @@ font-style: italic;
     <li><a href="#ServiceTypeModel"><code>ServiceTypeModel</code> - </a></li>
     <li><a href="#ServiceTypeModel_links"><code>ServiceTypeModel_links</code> - </a></li>
     <li><a href="#ServiceTypesModel"><code>ServiceTypesModel</code> - </a></li>
-    <li><a href="#SourceCandidatesMessageModel_payload"><code>SourceCandidatesMessageModel_payload</code> - </a></li>
     <li><a href="#SourceModel"><code>SourceModel</code> - </a></li>
     <li><a href="#SourceModel_links"><code>SourceModel_links</code> - </a></li>
     <li><a href="#SourceUrlModel"><code>SourceUrlModel</code> - </a></li>
@@ -4599,6 +4599,7 @@ font-style: italic;
     <li><a href="#SubscriptionModel_links"><code>SubscriptionModel_links</code> - </a></li>
     <li><a href="#SubscriptionsModel"><code>SubscriptionsModel</code> - </a></li>
     <li><a href="#ApiLinksModel"><code>ApiLinksModel</code> - </a></li>
+    <li><a href="#CandidatesMessageModel"><code>CandidatesMessageModel</code> - </a></li>
     <li><a href="#ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a></li>
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
     <li><a href="#ConnectionCreatedEventModel"><code>ConnectionCreatedEventModel</code> - </a></li>
@@ -4611,7 +4612,6 @@ font-style: italic;
     <li><a href="#PersistentIdEventModel"><code>PersistentIdEventModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
-    <li><a href="#SourceCandidatesMessageModel"><code>SourceCandidatesMessageModel</code> - </a></li>
   </ol>
 
   <div class="model">
@@ -4657,8 +4657,16 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="CandidatesMessageModel_payload"><code>CandidatesMessageModel_payload</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent (consentUrl) format: url</div>
+<div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#CandidatesModel">CandidatesModel</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="CandidatesModel"><code>CandidatesModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Source Candidates.</div>
+    <div class='model-description'>Candidates.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -4762,7 +4770,7 @@ font-style: italic;
     <h3><a name="ConsentModel_links"><code>ConsentModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">candidates (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Source Candidates (candidatesUrl) format: url</div>
+      <div class="param">candidates (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Candidates (candidatesUrl) format: url</div>
 <div class="param">self </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
 <div class="param">sources (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Sources (sourcesUrl) format: url</div>
 <div class="param">subscription </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subscription (subscriptionUrl). format: url</div>
@@ -5214,14 +5222,6 @@ font-style: italic;
           </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="SourceCandidatesMessageModel_payload"><code>SourceCandidatesMessageModel_payload</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    
-    <div class="field-items">
-      <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent (consentUrl) format: url</div>
-<div class="param">candidates </div><div class="param-desc"><span class="param-type"><a href="#CandidatesModel">CandidatesModel</a></span>  </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
     <h3><a name="SourceModel"><code>SourceModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Source Model.</div>
     <div class="field-items">
@@ -5290,6 +5290,19 @@ font-style: italic;
 <div class="param">portfolio (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">ref (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated. format: url</div>
 <div class="param">refs (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Current address for the 'references'-endpoint (refsEndpoint). This property is only included when the request is authenticated. format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CandidatesMessageModel"><code>CandidatesMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
+<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#CandidatesMessageModel_payload">CandidatesMessageModel_payload</a></span>  </div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#candidates-message'</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -5418,19 +5431,6 @@ font-style: italic;
     <div class="field-items">
       <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
 <div class="param">privateKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node RSA private key. </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="SourceCandidatesMessageModel"><code>SourceCandidatesMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
-    <div class="field-items">
-      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
-<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
-<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#SourceCandidatesMessageModel_payload">SourceCandidatesMessageModel_payload</a></span>  </div>
-<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
-<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
-<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
-<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-candidates-message'</div>
     </div>  <!-- field-items -->
   </div>
   </body>

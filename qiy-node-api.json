@@ -133,8 +133,41 @@
 	    ],
             "type": "object"
         },
+        "CandidatesMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+			    "properties": {
+				"consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+				    "type": "string"
+				},
+				"candidates": {
+                                    "$ref": "#/definitions/CandidatesModel"
+				}
+			    },
+			    "required": [
+			        "consent",
+			        "candidates"
+			    ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#candidates-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "CandidatesModel": {
-            "description": "Source Candidates.",
+            "description": "Candidates.",
             "items": {
                 "$ref": "#/definitions/CandidateModel"
             },
@@ -410,7 +443,7 @@
                     "type": "object",
                     "properties": {
                         "candidates": {
-                            "description": "Source Candidates (candidatesUrl)",
+                            "description": "Candidates (candidatesUrl)",
                             "format": "url",
                             "type": "string"
                         },
@@ -1718,39 +1751,6 @@
             },
             "type": "array"
         },
-        "SourceCandidatesMessageModel": {
-            "allOf": [
-                {
-                    "$ref": "#/definitions/MessageModel"
-                },
-                {
-                    "properties": {
-                        "payload": {
-			    "properties": {
-				"consent": {
-                                    "description": "Consent (consentUrl)",
-                                    "format": "url",
-				    "type": "string"
-				},
-				"candidates": {
-                                    "$ref": "#/definitions/CandidatesModel"
-				}
-			    },
-			    "required": [
-			        "consent",
-			        "candidates"
-			    ],
-                            "type": "object"
-                        },
-                        "type": {
-                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-candidates-message'",
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                }
-            ]
-        },
         "SourceModel": {
             "description": "Source Model.",
             "properties": {
@@ -2057,8 +2057,8 @@
         },
         "/candidatesUrl": {
             "get": {
-                "summary": "Get Source Candidates",
-                "description": "See [Source Candidates Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-candidates-request).",
+                "summary": "Get Candidates",
+                "description": "See [Candidates Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#candidates-request).",
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
