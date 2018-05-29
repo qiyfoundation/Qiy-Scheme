@@ -1261,7 +1261,7 @@ In addition:
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Account](Definitions.md#account)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account) requests
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#AccountModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.1 Account Model](#51-account-model)
 
