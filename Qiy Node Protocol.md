@@ -909,7 +909,7 @@ See [Candidate](#candidate) [model](#model).
 ## 5.3 Catalogue Model
 
 This section describes the [Catalogue](#catalogue) [Entity Type](#entity-type).
-A [Service Catalogue](#service-catalogue) ([Catalogue](#catalogue)) contains the [Services](Definitions.md#service) ([Published Services](#published-service)) that are provided by a registered [Service Provider](#service-provider) ([Published Provider](#published-provider)).
+A [Catalogue](#catalogue) contains the [Service Descriptions](#service-description) ([Published Services](#published-service)) of the [Services](#service) that a [Published Provider](#published-provider) can provide via Qiy.
 
 ### 5.3.1 Catalogue Attributes
 
@@ -920,8 +920,8 @@ See [Catalogue](#catalogue) [model](#model).
 See also [Catalogue](#catalogue) [model](#model).
 A [Catalogue](#catalogue):
 * is part of: [Library](#library)
-* has zero or more of: [Published Service](#published-service)
-* has one: [Published Provider](#published-provider)
+* has zero or more [Published Services](#published-service)
+* has one [Published Provider](#published-provider)
 
 ### 5.3.3 Catalogue Business Rules
 
