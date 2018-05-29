@@ -1198,8 +1198,8 @@ A [Published Provider](#published-provider):
 * relates to one [Access Provider](#access-provider).
 * relates to one [Service Provider](#service-provider).
 * relates to one [Catalogue](#catalogue).
-* consumes data of zero or more [Data Types](#data-types).
-* produces data of zero or more [Data Types](#data-types).
+* consumes data of zero or more [Data Types](#data-type).
+* produces data of zero or more [Data Types](#data-type).
 
 ### 5.15.3 Published Provider Business Rules
 
