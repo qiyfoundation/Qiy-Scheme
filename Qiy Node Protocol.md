@@ -263,13 +263,17 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Connection Details Request](#connection-details-request)
 	1. [Connections Request](#connections-request)
 	1. [Consent](#consent)
+	1. [Consent Credential](#consent-credential)
+	1. [Consent Data Provider Credential](#consent-data-provider-credential)
 	1. [Consent Delete Request](#consent-delete-request)
 	1. [Consent Denied Event](#consent-denied-event)
 	1. [Consent Denied Request](#consent-denied-request)
 	1. [Consent Details Request](#consent-details-request)
 	1. [Consent Granted Event](#consent-granted-event)
 	1. [Consent Granted Request](#consent-granted-request)
+	1. [Consent Individual Credential](#consent-individual-credential)
 	1. [Consent Notification Message](#consent-notification-message)
+	1. [Consent Relying Party Credential](#consent-relying-party-credential)
 	1. [Consent Request Message](#consent-request-message)
 	1. [Consent Withdrawn Request](#consent-withdrawn-request)
 	1. [Consents Request](#consents-request)
@@ -1599,6 +1603,20 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.1 Consent Messages](#41-consent-messages)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Consent Model](#56-consent-model)
 
+## Consent Credential
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Consent Credential](Definitions.md#consent-credential)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Consent Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
+
+## Consent Data Provider Credential
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
+
 ## Consent Delete Request
 
 Specification | Reference
@@ -1653,6 +1671,12 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.4 Consent Granted Request](#254-consent-granted-request)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
 
+## Consent Individual Credential
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
+
 ## Consent Notification Message
 
 Specification | Reference
@@ -1661,6 +1685,12 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [Consent Notification Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentNotificationMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.1.1 Consent Notification Message](#411-consent-notification-message)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
+
+## Consent Relying Party Credential
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
 
 ## Consent Request Message
 
