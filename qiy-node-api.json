@@ -481,6 +481,51 @@
             ],
             "type": "object"
         },
+        "ConsentCredentialModel": {
+            "description": "Consent Credential Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "consent": {
+                            "description": "Consent Url",
+                            "type": "string",
+                            "format": "url"
+                        }
+                    },
+                    "required": [
+                        "self",
+                        "subscription"
+                    ]
+                },
+                "token": {
+                    "description": "Access token.",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the credential.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
         "ConsentNotificationMessageModel": {
             "allOf": [
                 {
@@ -525,6 +570,10 @@
                     "properties": {
                         "payload": {
 			    "properties": {
+				"credential": {
+                                    "description": "Consent Individual Credential.",
+                                    "$ref": "#/definitions/ConsentCredentialModel"
+				},
 				"data": {
                                     "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
                                     "format": "url",

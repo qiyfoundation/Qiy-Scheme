@@ -4538,6 +4538,8 @@ font-style: italic;
     <li><a href="#ConnectionModel_links"><code>ConnectionModel_links</code> - </a></li>
     <li><a href="#ConnectionsResponseModel"><code>ConnectionsResponseModel</code> - </a></li>
     <li><a href="#ConnectionsResponseModel_inner"><code>ConnectionsResponseModel_inner</code> - </a></li>
+    <li><a href="#ConsentCredentialModel"><code>ConsentCredentialModel</code> - </a></li>
+    <li><a href="#ConsentCredentialModel_links"><code>ConsentCredentialModel_links</code> - </a></li>
     <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel_payload"><code>ConsentNotificationMessageModel_payload</code> - </a></li>
@@ -4759,6 +4761,24 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="ConsentCredentialModel"><code>ConsentCredentialModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Consent Credential Model.</div>
+    <div class="field-items">
+      <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
+<div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
+<div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialModel_links">ConsentCredentialModel_links</a></span>  </div>
+<div class="param">token (optional)</div><div class="param-desc"><span class="param-type"><a href="#UUID">UUID</a></span> Access token. format: uuid</div>
+<div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the credential. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentCredentialModel_links"><code>ConsentCredentialModel_links</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">consent (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="ConsentModel"><code>ConsentModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Consent model.</div>
     <div class="field-items">
@@ -4790,7 +4810,8 @@ font-style: italic;
     <h3><a name="ConsentRequestMessageModel_payload"><code>ConsentRequestMessageModel_payload</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     
     <div class="field-items">
-      <div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Personal Data that the Service Provider requests Consent for (dataTypeUrl). format: url</div>
+      <div class="param">credential (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialModel">ConsentCredentialModel</a></span> Consent Individual Credential. </div>
+<div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Personal Data that the Service Provider requests Consent for (dataTypeUrl). format: url</div>
 <div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
