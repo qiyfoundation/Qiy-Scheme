@@ -4541,6 +4541,7 @@ font-style: italic;
     <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel_payload"><code>ConsentNotificationMessageModel_payload</code> - </a></li>
+    <li><a href="#ConsentRequestMessageModel_payload"><code>ConsentRequestMessageModel_payload</code> - </a></li>
     <li><a href="#ConsentsModel"><code>ConsentsModel</code> - </a></li>
     <li><a href="#DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a></li>
     <li><a href="#DataTypeModel"><code>DataTypeModel</code> - </a></li>
@@ -4604,6 +4605,7 @@ font-style: italic;
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
     <li><a href="#ConnectionCreatedEventModel"><code>ConnectionCreatedEventModel</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel"><code>ConsentNotificationMessageModel</code> - </a></li>
+    <li><a href="#ConsentRequestMessageModel"><code>ConsentRequestMessageModel</code> - </a></li>
     <li><a href="#EventStreamModel"><code>EventStreamModel</code> - </a></li>
     <li><a href="#MessageReceivedEventModel"><code>MessageReceivedEventModel</code> - </a></li>
     <li><a href="#OperationReferenceMessageModel"><code>OperationReferenceMessageModel</code> - </a></li>
@@ -4782,6 +4784,14 @@ font-style: italic;
     <div class="field-items">
       <div class="param">consent </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent (consentUrl) format: url</div>
 <div class="param">serviceProvider </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Service Provider (publishedProviderUrl) format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentRequestMessageModel_payload"><code>ConsentRequestMessageModel_payload</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">data </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Personal Data that the Service Provider requests Consent for (dataTypeUrl). format: url</div>
+<div class="param">service </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl). format: url</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -5349,6 +5359,19 @@ font-style: italic;
 <div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
 <div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-notification-message'</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentRequestMessageModel"><code>ConsentRequestMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
+<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#ConsentRequestMessageModel_payload">ConsentRequestMessageModel_payload</a></span>  </div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-request-message'</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

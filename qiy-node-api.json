@@ -516,6 +516,41 @@
                 }
             ]
         },
+        "ConsentRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+			    "properties": {
+				"data": {
+                                    "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
+                                    "format": "url",
+				    "type": "string"
+				},
+				"service": {
+                                    "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
+                                    "format": "url",
+				    "type": "string"
+				}
+			    },
+			    "required": [
+			        "data",
+			        "service"
+			    ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-request-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "ConsentsModel": {
             "description": "List of Consent Urls.",
             "items": {
