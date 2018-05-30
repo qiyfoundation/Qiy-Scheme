@@ -47,19 +47,19 @@ The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) requests [Consent
 
 ## 2. The Qiy Trust Network creates a Consent Repository
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) creates a [Consent Repository](../Qiy%20Node%20Protocol.md#consent-repository) and [Consent Credentials](../Qiy%20Node%20Protocol.md#consent-credentials) for the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party), the [Individual](../Definitions.md#individual) and a [Data Provider](../Qiy%20Node%20Protocol.md#data-provider).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) creates a [Consent Repository](../Qiy%20Node%20Protocol.md#consent-repository) and [Consent Credentials](../Qiy%20Node%20Protocol.md#consent-credential) for the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party), the [Individual](../Definitions.md#individual) and a [Data Provider](../Qiy%20Node%20Protocol.md#data-provider).
 
 ## 3. The Qiy Trust Network returns the Consent Relying Party Credentials to the Relying Party
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) returns the [Consent Relying Party Credentials](../Qiy%20Node%20Protocol.md#consent-relying-party-credentials) to the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) returns the [Consent Relying Party Credential](../Qiy%20Node%20Protocol.md#consent-relying-party-credential) to the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party).
 
 ## 4. The Qiy Trust Network sends a Consent Request Message to the Individual
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) forwards the [Consent Request Message](../Qiy%20Node%20Protocol.md#consent-request-message) with the [Consent Individual Credentials](../Qiy%20Node%20Protocol.md#consent-individual-credentials) to the [Individual](../Definitions.md#individual).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) forwards the [Consent Request Message](../Qiy%20Node%20Protocol.md#consent-request-message) with the [Consent Individual Credential](../Qiy%20Node%20Protocol.md#consent-individual-credential) to the [Individual](../Definitions.md#individual).
 
 ## 5. The Individual gets the Consent details from the Qiy Trust Network
 
-The [Individual](../Definitions.md#individual) uses the [Consent Individual Credentials](../Qiy%20Node%20Protocol.md#consent-individual-credentials) in a [Consent Details Request](../Qiy%20Node%20Protocol.md#consent-details-request) to get the details of the requested Consent from the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+The [Individual](../Definitions.md#individual) uses the [Consent Individual Credential](../Qiy%20Node%20Protocol.md#consent-individual-credential) in a [Consent Details Request](../Qiy%20Node%20Protocol.md#consent-details-request) to get the details of the requested Consent from the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
 ## 6. The Individual grants Consent
 
@@ -94,7 +94,7 @@ participant "Individual"        as User
 
 RP   ->  QTF  : 1 Request Consent
 QTF  ->  QTF  : 2 Create Consent Repository
-QTF  ->  RP   : 3 Return Consent Credentials
+QTF  ->  RP   : 3 Return Consent Credential
 QTF  ->  User : 4 Request Consent
 User ->  QTF  : 5 Get Consent Details
 User ->  QTF  : 6 Grant Consent
