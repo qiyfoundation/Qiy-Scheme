@@ -1594,7 +1594,9 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Consent](Definitions.md#consent)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Consent Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5 Consent Requests](#25-consent-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.2 Consent Events](#32-consent-events)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.1 Consent Messages](#41-consent-messages)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Consent Model](#56-consent-model)
 
 ## Consent Delete Request
