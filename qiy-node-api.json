@@ -570,6 +570,11 @@
                     "properties": {
                         "payload": {
 			    "properties": {
+				"consent": {
+                                    "description": "Consent Url (consentUrl).",
+                                    "format": "url",
+				    "type": "string"
+				},
 				"credential": {
                                     "description": "Consent Individual Credential.",
                                     "$ref": "#/definitions/ConsentCredentialModel"
