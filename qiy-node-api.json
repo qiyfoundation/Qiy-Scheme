@@ -442,14 +442,19 @@
                 "auditLog": {
                     "description": "Audit log.",
 		    "items": {
-                        "description": "Audit log entry.",
+                        "description": "Audit log entry with Service Provider confirmations.",
 			"properties": {
-		            "time": {
+		            "changeRecorded": {
+                                "description": "Timestamp of the moment that the change was added to the audit log.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+			    },
+		            "changeTime": {
                                 "description": "Time of status change.",
                                 "format": "Unix time in ms",
                                 "type": "integer"
 			    },
-		            "status": {
+		            "statusChange": {
                                 "description": "Status change.",
 				"properties": {
 				    "new": {
@@ -463,14 +468,25 @@
 				},
 				"type": "object"
 			    },
-		            "signature": {
-                                "description": "Confirmation signature by the Service Provider over the consentId, the new status and the time of the change.",
+		            "confirmationRecorded": {
+                                "description": "Timestamp of the moment that the confirmation was registered in this audit log entry.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+			    },
+		            "confirmationSignature": {
+                                "description": "Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime.",
                                 "type": "string"
+			    },
+		            "confirmationTime": {
+                                "description": "Time of confirmation.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
 			    }
 		        },
 			"required": [
-			    "time",
-			    "change"
+			    "changeTime",
+			    "changeRecorded",
+			    "statusChange"
 		        ],
                         "type": "object"
 		    },

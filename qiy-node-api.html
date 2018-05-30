@@ -1143,24 +1143,30 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "consentRequestTime" : 5,
+  "consentRequestTime" : 7,
   "persistentId" : { },
   "consentRequestSignature" : "http://example.com/aeiou",
   "consentId" : "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
   "auditLog" : [ {
-    "signature" : "signature",
-    "time" : 1,
-    "status" : {
+    "changeTime" : 5,
+    "confirmationSignature" : "confirmationSignature",
+    "confirmationRecorded" : 5,
+    "statusChange" : {
       "new" : "new",
       "old" : "old"
-    }
+    },
+    "changeRecorded" : 1,
+    "confirmationTime" : 2
   }, {
-    "signature" : "signature",
-    "time" : 1,
-    "status" : {
+    "changeTime" : 5,
+    "confirmationSignature" : "confirmationSignature",
+    "confirmationRecorded" : 5,
+    "statusChange" : {
       "new" : "new",
       "old" : "old"
-    }
+    },
+    "changeRecorded" : 1,
+    "confirmationTime" : 2
   } ],
   "dataTypeUrl" : "http://example.com/aeiou",
   "links" : {
@@ -4564,7 +4570,7 @@ font-style: italic;
     <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
     <li><a href="#ConsentModel_auditLog"><code>ConsentModel_auditLog</code> - </a></li>
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
-    <li><a href="#ConsentModel_status"><code>ConsentModel_status</code> - </a></li>
+    <li><a href="#ConsentModel_statusChange"><code>ConsentModel_statusChange</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel_payload"><code>ConsentNotificationMessageModel_payload</code> - </a></li>
     <li><a href="#ConsentRequestMessageModel_payload"><code>ConsentRequestMessageModel_payload</code> - </a></li>
     <li><a href="#ConsentsModel"><code>ConsentsModel</code> - </a></li>
@@ -4820,11 +4826,14 @@ font-style: italic;
   </div>
   <div class="model">
     <h3><a name="ConsentModel_auditLog"><code>ConsentModel_auditLog</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Audit log entry.</div>
+    <div class='model-description'>Audit log entry with Service Provider confirmations.</div>
     <div class="field-items">
-      <div class="param">time </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Time of status change. format: Unix time in ms</div>
-<div class="param">status (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentModel_status">ConsentModel_status</a></span>  </div>
-<div class="param">signature (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Confirmation signature by the Service Provider over the consentId, the new status and the time of the change. </div>
+      <div class="param">changeRecorded </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Timestamp of the moment that the change was added to the audit log. format: Unix time in ms</div>
+<div class="param">changeTime </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Time of status change. format: Unix time in ms</div>
+<div class="param">statusChange </div><div class="param-desc"><span class="param-type"><a href="#ConsentModel_statusChange">ConsentModel_statusChange</a></span>  </div>
+<div class="param">confirmationRecorded (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Timestamp of the moment that the confirmation was registered in this audit log entry. format: Unix time in ms</div>
+<div class="param">confirmationSignature (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime. </div>
+<div class="param">confirmationTime (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Time of confirmation. format: Unix time in ms</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4838,7 +4847,7 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="ConsentModel_status"><code>ConsentModel_status</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <h3><a name="ConsentModel_statusChange"><code>ConsentModel_statusChange</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Status change.</div>
     <div class="field-items">
       <div class="param">new (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> New status. </div>
