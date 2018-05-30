@@ -439,6 +439,64 @@
                     "type": "integer",
                     "format": "Unix time in ms, nullable"
                 },
+                "auditLog": {
+                    "description": "Audit log.",
+		    "items": {
+                        "description": "Audit log entry.",
+			"properties": {
+		            "time": {
+                                "description": "Time of status change.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+			    },
+		            "status": {
+                                "description": "Status change.",
+				"properties": {
+				    "new": {
+                                        "description": "New status.",
+                                        "type": "string"
+			            },
+				    "old": {
+                                        "description": "Old status.",
+                                        "type": "string"
+				    }
+				},
+				"type": "object"
+			    },
+		            "signature": {
+                                "description": "Confirmation signature by the Service Provider over the consentId, the new status and the time of the change.",
+                                "type": "string"
+			    }
+		        },
+			"required": [
+			    "time",
+			    "change"
+		        ],
+                        "type": "object"
+		    },
+                    "type": "array"
+                },
+		"consentId": {
+                    "description": "Consent Id.",
+                    "format": "uuid",
+		    "type": "string"
+		},
+		"consentRequestSignature": {
+                    "description": "Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId.",
+                    "format": "url",
+		    "type": "string"
+		},
+                "consentRequestTime": {
+                    "description": "Consent request time.",
+                    "format": "Unix time in ms",
+                    "readOnly": true,
+                    "type": "integer"
+                },
+		"dataTypeUrl": {
+                    "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
+                    "format": "url",
+		    "type": "string"
+		},
                 "links": {
                     "type": "object",
                     "properties": {
@@ -468,6 +526,15 @@
                         "subscription"
                     ]
                 },
+		"persistentId": {
+                    "description": "Persistent Id of the connection between the Relying Party and the Individual.",
+                    "$ref": "#/definitions/PersistentIdModel"
+		},
+		"publishedServiceUrl": {
+                    "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
+                    "format": "url",
+		    "type": "string"
+		},
                 "state": {
                     "description": "State of the consent.",
                     "type": "string"
@@ -476,7 +543,13 @@
             "required": [
                 "activeFrom",
                 "activeUntil",
+                "consentId",
+                "consentRequestTime",
+                "consentRequestSignature",
+                "dataTypeUrl",
                 "links",
+                "persistentId",
+                "publishedServiceUrl",
                 "state"
             ],
             "type": "object"
@@ -570,29 +643,53 @@
                     "properties": {
                         "payload": {
 			    "properties": {
-				"consent": {
+				"consentUrl": {
                                     "description": "Consent Url (consentUrl).",
                                     "format": "url",
 				    "type": "string"
 				},
+				"consentId": {
+                                    "description": "Consent Id.",
+                                    "format": "uuid",
+				    "type": "string"
+				},
+       				"consentRequestSignature": {
+                                    "description": "Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId.",
+                                    "format": "url",
+				    "type": "string"
+				},
+                                "consentRequestTime": {
+                                   "description": "Consent request time.",
+                                   "format": "Unix time in ms",
+                                   "readOnly": true,
+                                   "type": "integer"
+                                },
 				"credential": {
                                     "description": "Consent Individual Credential.",
                                     "$ref": "#/definitions/ConsentCredentialModel"
 				},
-				"data": {
+				"dataTypeUrl": {
                                     "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
                                     "format": "url",
 				    "type": "string"
 				},
-				"service": {
+				"persistentId": {
+                                    "description": "Persistent Id of the connection between the Relying Party and the Individual.",
+                                    "$ref": "#/definitions/PersistentIdModel"
+				},
+				"publishedServiceUrl": {
                                     "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
                                     "format": "url",
 				    "type": "string"
 				}
 			    },
 			    "required": [
-			        "data",
-			        "service"
+			        "consentId",
+			        "consentRequestSignature",
+			        "consentRequestTime",
+			        "dataTypeUrl",
+			        "persistentId",
+			        "publishedServiceUrl"
 			    ],
                             "type": "object"
                         },
