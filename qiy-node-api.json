@@ -453,6 +453,10 @@
                                 "type": "string"
                             }
                         },
+                        "required": [
+                            "new",
+                            "old"
+                        ],
                         "type": "object"
                     },
                     "confirmation": {
