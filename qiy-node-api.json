@@ -524,7 +524,6 @@
             "required": [
                 "activeFrom",
                 "activeUntil",
-                "links",
                 "state",
                 "token"
             ],
