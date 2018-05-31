@@ -263,8 +263,8 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Connection Details Request](#connection-details-request)
 	1. [Connections Request](#connections-request)
 	1. [Consent](#consent)
+	1. [Consent Audit Credential](#consent-audit-credential)
 	1. [Consent Credential](#consent-credential)
-	1. [Consent Data Provider Credential](#consent-data-provider-credential)
 	1. [Consent Delete Request](#consent-delete-request)
 	1. [Consent Denied Event](#consent-denied-event)
 	1. [Consent Denied Request](#consent-denied-request)
@@ -1002,9 +1002,10 @@ A [Consent](#consent):
 
 See [Consent](#consent) [model](#model).
 In addition:
-* A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](#consent).
-* A [Service Provider](#service-provider) has read-access to a [Consent](#consent).
 * An [Access Provider](#access-provider) has write- and read-access to a [Consent](#consent).
+* A [Qiy User](Definitions.md#qiy-user) can read and update a [Consent](#consent) with a [Consent Individual Credential](#consent-individual-credential).
+* A [Service Provider](#service-provider) can read a [Consent](#consent) with a [Consent Service Provider Credential](#consent-service-provider-credential).
+* Audits are facilitated with a [Consent Audit Credential](#consent-audit-credential), which provides read-access to a [Consent](#consent).
 
 ## 5.7 Event Model
 
@@ -1604,6 +1605,12 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.1 Consent Messages](#41-consent-messages)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.6 Consent Model](#56-consent-model)
 
+## Consent Audit Credential
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
+
 ## Consent Credential
 
 Specification | Reference
@@ -1611,12 +1618,6 @@ Specification | Reference
 [Definitions](Definitions.md)                 | [Consent Credential](Definitions.md#consent-credential)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Consent Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
-
-## Consent Data Provider Credential
-
-Specification | Reference
-------------- | ---------
-[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
 
 ## Consent Delete Request
 
