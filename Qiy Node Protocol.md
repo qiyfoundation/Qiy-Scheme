@@ -1004,6 +1004,7 @@ See [Consent](#consent) [model](#model).
 In addition:
 * A [Qiy User](Definitions.md#qiy-user) has read-access and write-access to a [Consent](#consent).
 * A [Service Provider](#service-provider) has read-access to a [Consent](#consent).
+* An [Access Provider](#access-provider) has write- and read-access to a [Consent](#consent).
 
 ## 5.7 Event Model
 
