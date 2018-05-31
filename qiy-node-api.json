@@ -426,6 +426,11 @@
                 }
             ]
         },
+        "ConsentAccessTokenModel": {
+            "description": "Consent access token.",
+            "format": "uuid",
+            "type": "string"
+        },
         "ConsentAuditLogModel": {
             "description": "Audit log.",
             "items": {
@@ -509,8 +514,7 @@
                 },
                 "token": {
                     "description": "Access token.",
-                    "format": "uuid",
-                    "type": "string"
+                    "$ref": "#/definitions/ConsentAccessTokenModel"
                 },
                 "state": {
                     "description": "State of the credential.",
@@ -749,11 +753,20 @@
             ]
         },
         "ConsentsModel": {
-            "description": "List of Consent Urls.",
+            "description": "List of Consents.",
             "items": {
-                "description": "Consent url",
-                "format": "url",
-                "type": "string"
+                "description": "Consent Urls and access tokens.",
+		"properties": {
+		    "consentUrl": {
+                        "description": "Consent Url.",
+                        "format": "url",
+                        "type": "string"
+	            },
+		    "accessToken": {
+                        "$ref": "#/definitions/ConsentAccessTokenModel"
+	            }
+	        },
+                "type": "object"
             },
             "type": "array"
         },
@@ -2621,6 +2634,14 @@
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/ConsentAccessTokenModel"
+                        }
                     }
                 ],
                 "produces": [
@@ -2649,6 +2670,14 @@
                         "$ref": "#/parameters/authorizationParam"
                     },
                     {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/ConsentAccessTokenModel"
+                        }
+                    },
+                    {
                         "in": "body",
                         "name": "consent-update",
                         "required": true,
@@ -2675,6 +2704,14 @@
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConsentAccessTokenModel"
+                        }
                     },
                     {
                         "in": "body",

@@ -4550,6 +4550,7 @@ font-style: italic;
     <li><a href="#ConnectionModel_links"><code>ConnectionModel_links</code> - </a></li>
     <li><a href="#ConnectionsResponseModel"><code>ConnectionsResponseModel</code> - </a></li>
     <li><a href="#ConnectionsResponseModel_inner"><code>ConnectionsResponseModel_inner</code> - </a></li>
+    <li><a href="#ConsentAccessTokenModel"><code>ConsentAccessTokenModel</code> - </a></li>
     <li><a href="#ConsentAuditLogModel"><code>ConsentAuditLogModel</code> - </a></li>
     <li><a href="#ConsentAuditLogModel_inner"><code>ConsentAuditLogModel_inner</code> - </a></li>
     <li><a href="#ConsentAuditLogModel_inner_confirmation"><code>ConsentAuditLogModel_inner_confirmation</code> - </a></li>
@@ -4562,6 +4563,7 @@ font-style: italic;
     <li><a href="#ConsentNotificationMessageModel_payload"><code>ConsentNotificationMessageModel_payload</code> - </a></li>
     <li><a href="#ConsentRequestMessageModel_payload"><code>ConsentRequestMessageModel_payload</code> - </a></li>
     <li><a href="#ConsentsModel"><code>ConsentsModel</code> - </a></li>
+    <li><a href="#ConsentsModel_inner"><code>ConsentsModel_inner</code> - </a></li>
     <li><a href="#DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a></li>
     <li><a href="#DataTypeModel"><code>DataTypeModel</code> - </a></li>
     <li><a href="#DataTypeModel_links"><code>DataTypeModel_links</code> - </a></li>
@@ -4778,6 +4780,12 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="ConsentAccessTokenModel"><code>ConsentAccessTokenModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Consent access token.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="ConsentAuditLogModel"><code>ConsentAuditLogModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Audit log.</div>
     <div class="field-items">
@@ -4816,7 +4824,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">token </div><div class="param-desc"><span class="param-type"><a href="#UUID">UUID</a></span> Access token. format: uuid</div>
+<div class="param">token </div><div class="param-desc"><span class="param-type"><a href="#ConsentAccessTokenModel">ConsentAccessTokenModel</a></span> Access token. </div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the credential. </div>
     </div>  <!-- field-items -->
   </div>
@@ -4887,9 +4895,17 @@ font-style: italic;
   </div>
   <div class="model">
     <h3><a name="ConsentsModel"><code>ConsentsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Consent Urls.</div>
+    <div class='model-description'>List of Consents.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentsModel_inner"><code>ConsentsModel_inner</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Consent Urls and access tokens.</div>
+    <div class="field-items">
+      <div class="param">consentUrl (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Url. format: url</div>
+<div class="param">accessToken (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentAccessTokenModel">ConsentAccessTokenModel</a></span>  </div>
+    </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
