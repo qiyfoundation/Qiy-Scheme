@@ -445,7 +445,7 @@
                         "description": "Audit log entry with Service Provider confirmations.",
 			"properties": {
 		            "changeRecorded": {
-                                "description": "Timestamp of the moment that the change was added to the audit log.",
+                                "description": "Creation time of the audit log entry.",
                                 "format": "Unix time in ms",
                                 "type": "integer"
 			    },
@@ -468,19 +468,30 @@
 				},
 				"type": "object"
 			    },
-		            "confirmationRecorded": {
-                                "description": "Timestamp of the moment that the confirmation was registered in this audit log entry.",
-                                "format": "Unix time in ms",
-                                "type": "integer"
-			    },
-		            "confirmationSignature": {
-                                "description": "Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime.",
-                                "type": "string"
-			    },
-		            "confirmationTime": {
-                                "description": "Time of confirmation.",
-                                "format": "Unix time in ms",
-                                "type": "integer"
+		            "confirmation": {
+                                "description": "Service Provider confirmation data.",
+				"properties": {
+		                    "confirmationRecorded": {
+                                        "description": "Record time of the confirmation in this audit log entry.",
+                                        "format": "Unix time in ms",
+                                        "type": "integer"
+			            },
+		                    "confirmationSignature": {
+                                        "description": "Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime.",
+                                        "type": "string"
+			            },
+		                    "confirmationTime": {
+                                        "description": "Time of confirmation.",
+                                        "format": "Unix time in ms",
+                                        "type": "integer"
+			            }
+				},
+				"required": [
+				    "confirmationRecorded",
+				    "confirmationSignature",
+				    "confirmationTime"
+				],
+				"type": "object"
 			    }
 		        },
 			"required": [
