@@ -521,7 +521,8 @@
                 "activeFrom",
                 "activeUntil",
                 "links",
-                "state"
+                "state",
+                "token"
             ],
             "type": "object"
         },

@@ -1616,7 +1616,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Consent Credential](Definitions.md#consent-credential)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Consent Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentModel)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Consent Credential Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentCredentialModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
 
 ## Consent Delete Request
