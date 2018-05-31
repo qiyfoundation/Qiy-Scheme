@@ -984,7 +984,7 @@ See [Connection](#connection) [model](#model).
 ## 5.6 Consent Model
 
 This section describes the [Consent](#consent) [Entity Type](#entity-type).
-A [Qiy User](Definitions.md#qiy-user) can consent a [Service Provider](#service-provider) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](#data-source) for a [Subscription](#subscription).
+A [Qiy User](Definitions.md#qiy-user) can consent a [Relying Party](#relying-party) the use of his [Personal Data](Definitions.md#personal-data) from different [Data Sources](#data-source) for a [Subscription](#subscription).
 
 ### 5.6.1 Consent Attributes
 
@@ -1004,7 +1004,7 @@ See [Consent](#consent) [model](#model).
 In addition:
 * An [Access Provider](#access-provider) has write- and read-access to a [Consent](#consent).
 * A [Qiy User](Definitions.md#qiy-user) can read and update a [Consent](#consent) with a [Consent Individual Credential](#consent-individual-credential).
-* A [Service Provider](#service-provider) can read a [Consent](#consent) with a [Consent Service Provider Credential](#consent-service-provider-credential).
+* A [Relying Party](#relying-party) can read a [Consent](#consent) with a [Consent Relying Party Credential](#consent-relying-party-credential).
 * Audits are facilitated with a [Consent Audit Credential](#consent-audit-credential), which provides read-access to a [Consent](#consent).
 
 ## 5.7 Event Model

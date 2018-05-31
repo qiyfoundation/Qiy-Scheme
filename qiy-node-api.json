@@ -127,10 +127,10 @@
                     "format": "url",
                     "type": "string"
                 }
-	    },
+            },
             "required": [
                 "service"
-	    ],
+            ],
             "type": "object"
         },
         "CandidatesMessageModel": {
@@ -141,20 +141,20 @@
                 {
                     "properties": {
                         "payload": {
-			    "properties": {
-				"consent": {
+                            "properties": {
+                                "consent": {
                                     "description": "Consent (consentUrl)",
                                     "format": "url",
-				    "type": "string"
-				},
-				"candidates": {
+                                    "type": "string"
+                                },
+                                "candidates": {
                                     "$ref": "#/definitions/CandidatesModel"
-				}
-			    },
-			    "required": [
-			        "consent",
-			        "candidates"
-			    ],
+                                }
+                            },
+                            "required": [
+                                "consent",
+                                "candidates"
+                            ],
                             "type": "object"
                         },
                         "type": {
@@ -239,15 +239,15 @@
                 { 
                     "description": "See [Connection Created Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-created-event).",
                     "properties": {
-	    	        "extraData": {
+                            "extraData": {
                             "format": "null",
-			    "type": "object"
+                            "type": "object"
                         },
                         "type": {
                             "format": "CONNECTION_CREATED_EVENT"
                         }
                     },
-		    "type": "object"
+                    "type": "object"
                 }
             ]
         },
@@ -426,6 +426,108 @@
                 }
             ]
         },
+        "ConsentAuditLogModel": {
+            "description": "Audit log.",
+            "items": {
+                "description": "Audit log entry with Service Provider confirmations.",
+                "properties": {
+                    "changeRecorded": {
+                        "description": "Creation time of the audit log entry.",
+                        "format": "Unix time in ms",
+                        "type": "integer"
+                    },
+                    "changeTime": {
+                        "description": "Time of status change.",
+                        "format": "Unix time in ms",
+                        "type": "integer"
+                    },
+                    "statusChange": {
+                        "description": "Status change.",
+                        "properties": {
+                            "new": {
+                                "description": "New status.",
+                                "type": "string"
+                            },
+                            "old": {
+                                "description": "Old status.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "confirmation": {
+                        "description": "Service Provider confirmation data.",
+                        "properties": {
+                            "confirmationRecorded": {
+                                "description": "Record time of the confirmation in this audit log entry.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+                            },
+                            "confirmationSignature": {
+                                "description": "Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime.",
+                                "type": "string"
+                            },
+                            "confirmationTime": {
+                                "description": "Time of confirmation.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                           "confirmationRecorded",
+                           "confirmationSignature",
+                           "confirmationTime"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "changeTime",
+                    "changeRecorded",
+                    "statusChange"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "ConsentCredentialModel": {
+            "description": "Consent Credential Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "token": {
+                    "description": "Access token.",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the credential.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "ConsentCredentialsModel": {
+            "description": "List of Consent Credentials.",
+            "items": {
+                "$ref": "#/definitions/ConsentCredentialModel"
+            },
+            "type": "array"
+        },
         "ConsentModel": {
             "description": "Consent model.",
             "properties": {
@@ -440,90 +542,47 @@
                     "format": "Unix time in ms, nullable"
                 },
                 "auditLog": {
-                    "description": "Audit log.",
-		    "items": {
-                        "description": "Audit log entry with Service Provider confirmations.",
-			"properties": {
-		            "changeRecorded": {
-                                "description": "Creation time of the audit log entry.",
-                                "format": "Unix time in ms",
-                                "type": "integer"
-			    },
-		            "changeTime": {
-                                "description": "Time of status change.",
-                                "format": "Unix time in ms",
-                                "type": "integer"
-			    },
-		            "statusChange": {
-                                "description": "Status change.",
-				"properties": {
-				    "new": {
-                                        "description": "New status.",
-                                        "type": "string"
-			            },
-				    "old": {
-                                        "description": "Old status.",
-                                        "type": "string"
-				    }
-				},
-				"type": "object"
-			    },
-		            "confirmation": {
-                                "description": "Service Provider confirmation data.",
-				"properties": {
-		                    "confirmationRecorded": {
-                                        "description": "Record time of the confirmation in this audit log entry.",
-                                        "format": "Unix time in ms",
-                                        "type": "integer"
-			            },
-		                    "confirmationSignature": {
-                                        "description": "Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime.",
-                                        "type": "string"
-			            },
-		                    "confirmationTime": {
-                                        "description": "Time of confirmation.",
-                                        "format": "Unix time in ms",
-                                        "type": "integer"
-			            }
-				},
-				"required": [
-				    "confirmationRecorded",
-				    "confirmationSignature",
-				    "confirmationTime"
-				],
-				"type": "object"
-			    }
-		        },
-			"required": [
-			    "changeTime",
-			    "changeRecorded",
-			    "statusChange"
-		        ],
-                        "type": "object"
-		    },
-                    "type": "array"
+                    "$ref": "#/definitions/ConsentAuditLogModel"
                 },
-		"consentId": {
+                "consentId": {
                     "description": "Consent Id.",
                     "format": "uuid",
-		    "type": "string"
-		},
-		"consentRequestSignature": {
+                    "type": "string"
+                },
+                "consentRequestSignature": {
                     "description": "Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId.",
                     "format": "url",
-		    "type": "string"
-		},
+                    "type": "string"
+                },
                 "consentRequestTime": {
                     "description": "Consent request time.",
                     "format": "Unix time in ms",
                     "readOnly": true,
                     "type": "integer"
                 },
-		"dataTypeUrl": {
+                "credentials": {
+                        "description": "Consent Credentials.",
+                        "properties": {
+                            "auditCredentials": {
+                                "description": "Consent Audit Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsModel"
+                            },
+                            "individualCredentials": {
+                                "description": "Consent Individual Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsModel"
+                            },
+                            "relyingPartyCredentials": {
+                                "description": "Consent Relying Party Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsModel"
+                            }
+                        },
+                        "type": "object"
+                },
+                "dataTypeUrl": {
                     "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
                     "format": "url",
-		    "type": "string"
-		},
+                    "type": "string"
+                },
                 "links": {
                     "type": "object",
                     "properties": {
@@ -553,15 +612,15 @@
                         "subscription"
                     ]
                 },
-		"persistentId": {
+                "persistentId": {
                     "description": "Persistent Id of the connection between the Relying Party and the Individual.",
                     "$ref": "#/definitions/PersistentIdModel"
-		},
-		"publishedServiceUrl": {
+                },
+                "publishedServiceUrl": {
                     "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
                     "format": "url",
-		    "type": "string"
-		},
+                    "type": "string"
+                },
                 "state": {
                     "description": "State of the consent.",
                     "type": "string"
@@ -581,51 +640,6 @@
             ],
             "type": "object"
         },
-        "ConsentCredentialModel": {
-            "description": "Consent Credential Model.",
-            "properties": {
-                "activeFrom": {
-                    "description": "Active from date time stamp.",
-                    "type": "integer",
-                    "format": "Unix time in ms"
-                },
-                "activeUntil": {
-                    "description": "Active until date time stamp.",
-                    "type": "integer",
-                    "format": "Unix time in ms, nullable"
-                },
-                "links": {
-                    "type": "object",
-                    "properties": {
-                        "consent": {
-                            "description": "Consent Url",
-                            "type": "string",
-                            "format": "url"
-                        }
-                    },
-                    "required": [
-                        "self",
-                        "subscription"
-                    ]
-                },
-                "token": {
-                    "description": "Access token.",
-                    "format": "uuid",
-                    "type": "string"
-                },
-                "state": {
-                    "description": "State of the credential.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "activeFrom",
-                "activeUntil",
-                "links",
-                "state"
-            ],
-            "type": "object"
-        },
         "ConsentNotificationMessageModel": {
             "allOf": [
                 {
@@ -634,22 +648,22 @@
                 {
                     "properties": {
                         "payload": {
-			    "properties": {
-				"consent": {
+                            "properties": {
+                                "consent": {
                                     "description": "Consent (consentUrl)",
                                     "format": "url",
-				    "type": "string"
-				},
-				"serviceProvider": {
+                                    "type": "string"
+                                },
+                                "serviceProvider": {
                                     "description": "Service Provider (publishedProviderUrl)",
                                     "format": "url",
-				    "type": "string"
-				}
-			    },
-			    "required": [
-			        "consent",
-			        "serviceProvider"
-			    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consent",
+                                "serviceProvider"
+                            ],
                             "type": "object"
                         },
                         "type": {
@@ -669,55 +683,55 @@
                 {
                     "properties": {
                         "payload": {
-			    "properties": {
-				"consentUrl": {
+                            "properties": {
+                                "consentUrl": {
                                     "description": "Consent Url (consentUrl).",
                                     "format": "url",
-				    "type": "string"
-				},
-				"consentId": {
+                                    "type": "string"
+                                },
+                                "consentId": {
                                     "description": "Consent Id.",
                                     "format": "uuid",
-				    "type": "string"
-				},
-       				"consentRequestSignature": {
+                                    "type": "string"
+                                },
+                                       "consentRequestSignature": {
                                     "description": "Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId.",
                                     "format": "url",
-				    "type": "string"
-				},
+                                    "type": "string"
+                                },
                                 "consentRequestTime": {
                                    "description": "Consent request time.",
                                    "format": "Unix time in ms",
                                    "readOnly": true,
                                    "type": "integer"
                                 },
-				"credential": {
+                                "credential": {
                                     "description": "Consent Individual Credential.",
                                     "$ref": "#/definitions/ConsentCredentialModel"
-				},
-				"dataTypeUrl": {
+                                },
+                                "dataTypeUrl": {
                                     "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
                                     "format": "url",
-				    "type": "string"
-				},
-				"persistentId": {
+                                    "type": "string"
+                                },
+                                "persistentId": {
                                     "description": "Persistent Id of the connection between the Relying Party and the Individual.",
                                     "$ref": "#/definitions/PersistentIdModel"
-				},
-				"publishedServiceUrl": {
+                                },
+                                "publishedServiceUrl": {
                                     "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
                                     "format": "url",
-				    "type": "string"
-				}
-			    },
-			    "required": [
-			        "consentId",
-			        "consentRequestSignature",
-			        "consentRequestTime",
-			        "dataTypeUrl",
-			        "persistentId",
-			        "publishedServiceUrl"
-			    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consentId",
+                                "consentRequestSignature",
+                                "consentRequestTime",
+                                "dataTypeUrl",
+                                "persistentId",
+                                "publishedServiceUrl"
+                            ],
                             "type": "object"
                         },
                         "type": {
@@ -761,26 +775,26 @@
                     "properties": {
                         "consumedBy": {
                             "description": "Service Types and Service Providers that consume data of this type.",
-			    "properties": {
-			        "serviceTypes": {
+                            "properties": {
+                                "serviceTypes": {
                                     "description": "Service Types that consume data of this type.",
-				    "items": {
+                                    "items": {
                                         "description": "Service Type that consumes data of this type (serviceTypeUrl).",
-					"format": "url",
+                                        "format": "url",
                                         "type": "string"
-				    },
+                                    },
                                     "type": "array"
-				},
-			        "serviceProviders": {
+                                },
+                                "serviceProviders": {
                                     "description": "Service Providers that consume data of this type.",
-				    "items": {
+                                    "items": {
                                         "description": "Service Provider that consumes data of this type (publishedProviderUrl).",
-					"format": "url",
+                                        "format": "url",
                                         "type": "string"
-				    },
+                                    },
                                     "type": "array"
-				}
-			    },
+                                }
+                            },
                             "type": "object"
                         },
                         "descriptor": {
@@ -790,26 +804,26 @@
                         },
                         "producedBy": {
                             "description": "Service Types and Service Providers that produce data of this type.",
-			    "properties": {
-			        "serviceTypes": {
+                            "properties": {
+                                "serviceTypes": {
                                     "description": "Service Types that produce data of this type.",
-				    "items": {
+                                    "items": {
                                         "description": "Service Type that produces data of this type (serviceTypeUrl).",
-					"format": "url",
+                                        "format": "url",
                                         "type": "string"
-				    },
+                                    },
                                     "type": "array"
-				},
-			        "serviceProviders": {
+                                },
+                                "serviceProviders": {
                                     "description": "Service Providers that produce data of this type.",
-				    "items": {
+                                    "items": {
                                         "description": "Service Provider that produces data of this type (publishedProviderUrl).",
-					"format": "url",
+                                        "format": "url",
                                         "type": "string"
-				    },
+                                    },
                                     "type": "array"
-				}
-			    },
+                                }
+                            },
                             "type": "object"
                         },
                         "registeredBy": {
@@ -1045,11 +1059,11 @@
                    "readOnly": true,
                    "type": "integer"
                 },
-		"inbound": {
+                "inbound": {
                     "description": "Whether the received message is inbound or outbound.",
                     "readOnly": true,
                     "type": "boolean"
-		},
+                },
                 "payload": {
                     "description": "The Base64-encoded payload of the message.",
                     "format": "Base64-encoded",
@@ -1102,35 +1116,35 @@
                 { 
                     "description": "See [Persistent Id Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id-event).",
                     "properties": {
-	    	        "extraData": {
+                            "extraData": {
                             "description": "extra data: Persistent Ids and Service Provider Identity.",
-			    "properties": {
+                            "properties": {
                                 "persistentIds": {
                                     "description": "Persistent Ids",
                                     "items": {
                                         "description": "Persistent Id",
                                         "format": "See Persistent Id Model.",
                                         "type": "string"
-				    },
+                                    },
                                     "type": "array"
-				},
+                                },
                                 "providerId": {
                                     "description": "Service Provider identity (publishedProviderUrl).",
                                     "format": "url",
                                     "type": "string"
-				}
+                                }
                             },
-			    "required": [
-			        "persistentIds",
-				"providerId"
-		            ],
-			    "type": "object"
+                            "required": [
+                                "persistentIds",
+                                "providerId"
+                            ],
+                            "type": "object"
                         },
                         "type": {
                             "format": "PERSISTENT_ID_EVENT"
                         }
                     },
-		    "type": "object"
+                    "type": "object"
                 }
             ]
         },
@@ -1140,7 +1154,7 @@
                 { 
                     "description": "See [Message Received Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-received-event).",
                     "properties": {
-	    	        "extraData": {
+                            "extraData": {
                             "format": "null",
                             "type": "object"
                         },
@@ -1148,7 +1162,7 @@
                             "format": "MESSAGE_RECEIVED"
                         }
                     },
-		    "type": "object"
+                    "type": "object"
                 }
             ]
         },
@@ -1281,26 +1295,26 @@
                 {
                     "properties": {
                         "payload": {
-			    "properties": {
-				"consent": {
+                            "properties": {
+                                "consent": {
                                     "description": "Consent (consentUrl)",
                                     "format": "url",
-				    "type": "string"
-				},
-				"operationReference": {
+                                    "type": "string"
+                                },
+                                "operationReference": {
                                     "$ref": "#/definitions/OperationReferenceModel"
-				},
-				"serviceProvider": {
+                                },
+                                "serviceProvider": {
                                     "description": "Service Provider (publishedProviderUrl)",
                                     "format": "url",
-				    "type": "string"
-				}
-			    },
-			    "required": [
-			        "consent",
-			        "operationReference",
-			        "serviceProvider"
-			    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consent",
+                                "operationReference",
+                                "serviceProvider"
+                            ],
                             "type": "object"
                         },
                         "type": {
@@ -1410,16 +1424,16 @@
                 {
                     "properties": {
                         "payload": {
-			    "properties": {
-				"operationType": {
+                            "properties": {
+                                "operationType": {
                                     "description": "Operation Type (operationTypeUrl)",
                                     "format": "url",
-				    "type": "string"
-				}
-			    },
-			    "required": [
-			        "operationType"
-			    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "operationType"
+                            ],
                             "type": "object"
                         },
                         "type": {
@@ -1556,20 +1570,20 @@
                         },
                         "consumes": {
                             "description": "Data Types that the Service Provider consumes.",
-			    "items": {
+                            "items": {
                                 "description": "Consumes Data Type (dataTypeUrl).",
                                 "format": "url",
                                 "type": "string"
-			    },
+                            },
                             "type": "array"
                         },
                         "produces": {
                             "description": "Data Types that the Service Provider consumes.",
-			    "items": {
+                            "items": {
                                 "description": "Produces Data Type (dataTypeUrl).",
                                 "format": "url",
                                 "type": "string"
-			    },
+                            },
                             "type": "array"
                         },
                         "providerDescription": {
@@ -1636,26 +1650,26 @@
                     "properties": {
                         "operationTypes": {
                             "description": "Operation Type APIs.",
-			    "items": {
+                            "items": {
                                 "description": "Operation Type API.",
-				"properties": {
-			            "operationApi": {
+                                "properties": {
+                                    "operationApi": {
                                         "description": "Link to the API for the Operation as provided by the Service Provider (operationApiUrl).",
                                         "format": "url",
                                         "type": "string"
-			            },
-			            "operationType": {
+                                    },
+                                    "operationType": {
                                         "description": "Operation Type (operationTypeUrl)",
                                         "format": "url",
                                         "type": "string"
-				    }
-				},
-				"required": [
-				    "operationApi",
-				    "operationType"
-				],
-				"type": "object"
-			    },
+                                    }
+                                },
+                                "required": [
+                                    "operationApi",
+                                    "operationType"
+                                ],
+                                "type": "object"
+                            },
                             "type": "array"
                         },
                         "provider": {
@@ -1725,7 +1739,7 @@
                 {
                     "$ref": "#/definitions/QiyNodeId"
                 },
-	        {
+                {
                     "type": "object",
                     "properties": {
                         "privateKey": {
@@ -1738,7 +1752,7 @@
                     "required": [
                         "privateKey"
                     ]
-		}
+                }
             ]
         },
         "QiyNodeId": {
@@ -1793,7 +1807,7 @@
                     "type": "string"
                 }
             },
-	    "required": [
+            "required": [
                         "connection",
                         "ref",
                         "value"
@@ -1808,16 +1822,16 @@
                     "operationType": {
                         "description": "Operation Type (operationTypeUrl).",
                         "type": "string"
-		    },
+                    },
                     "results": {
                         "items": {
                             "$ref": "#/definitions/ReferenceResultModel"
                         },
-			"type": "array"
+                        "type": "array"
                     }
                 },
                 "type": "object"
-	    },
+            },
             "type": "array",
             "uniqueItems": true
         },
@@ -1897,11 +1911,11 @@
                     "properties": {
                         "consumes": {
                             "description": "Data Types that the service consumes.",
-			    "items": {
+                            "items": {
                                 "description": "Consumes Data Type (dataTypeUrl).",
                                 "format": "url",
                                 "type": "string"
-			    },
+                            },
                             "type": "array"
                         },
                         "descriptor": {
@@ -1916,11 +1930,11 @@
                         },
                         "produces": {
                             "description": "Data Types that the service produces.",
-			    "items": {
+                            "items": {
                                 "description": "Produces Data Type (dataTypeUrl).",
                                 "format": "url",
                                 "type": "string"
-			    },
+                            },
                             "type": "array"
                         },
                         "registeredBy": {
@@ -2106,7 +2120,7 @@
         }
     },
     "parameters": {
-	"authorizationParam": {
+        "authorizationParam": {
             "name": "Authorization",
             "in": "header",
             "description": "See [Authorization Header Parameter](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#authorization-header-parameter).",
