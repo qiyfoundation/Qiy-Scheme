@@ -2642,9 +2642,7 @@
                         "name": "consent-access-token",
                         "in": "header",
                         "required": false,
-                        "schema": {
-                            "$ref": "#/definitions/ConsentAccessTokenModel"
-                        }
+			"type": "string"
                     }
                 ],
                 "produces": [
@@ -2676,9 +2674,7 @@
                         "name": "consent-access-token",
                         "in": "header",
                         "required": false,
-                        "schema": {
-                            "$ref": "#/definitions/ConsentAccessTokenModel"
-                        }
+                        "type": "string"
                     },
                     {
                         "in": "body",
@@ -2712,9 +2708,7 @@
                         "name": "consent-access-token",
                         "in": "header",
                         "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/ConsentAccessTokenModel"
-                        }
+			"type": "string"
                     },
                     {
                         "in": "body",
