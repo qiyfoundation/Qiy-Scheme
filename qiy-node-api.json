@@ -752,10 +752,9 @@
                 }
             ]
         },
-        "ConsentsModel": {
-            "description": "List of Consents.",
+        "ConsentUrlsAndConsentAccessTokensModel": {
+            "description": "List of Consent Urls and Consent Access Tokens.",
             "items": {
-                "description": "Consent Urls and access tokens.",
 		"properties": {
 		    "consentUrl": {
                         "description": "Consent Url.",
@@ -766,6 +765,10 @@
                         "$ref": "#/definitions/ConsentAccessTokenModel"
 	            }
 	        },
+		"required": [
+		    "consentUrl",
+		    "accessToken"
+	        ],
                 "type": "object"
             },
             "type": "array"
@@ -2595,7 +2598,7 @@
                     "200": {
                         "description": "200 Successful execution.",
                         "schema": {
-                            "$ref": "#/definitions/ConsentsModel"
+                            "$ref": "#/definitions/ConsentUrlsAndConsentAccessTokensModel"
                         }
                     },
                     "400": {
