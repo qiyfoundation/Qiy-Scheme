@@ -274,6 +274,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Consent Individual Credential](#consent-individual-credential)
 	1. [Consent Notification Message](#consent-notification-message)
 	1. [Consent Relying Party Credential](#consent-relying-party-credential)
+	1. [Consent Repository](#consent-repository)
 	1. [Consent Request Message](#consent-request-message)
 	1. [Consent Withdrawn Request](#consent-withdrawn-request)
 	1. [Consents Request](#consents-request)
@@ -1693,6 +1694,13 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
+
+## Consent Repository
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md)                 | [Consent Repository](Definitions.md#consent-repository)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
 
 ## Consent Request Message
 
