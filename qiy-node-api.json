@@ -751,6 +751,16 @@
                 }
             ]
         },
+        "ConsentUpdateModel": {
+            "description": "Consent update model.",
+            "properties": {
+                "state": {
+                    "description": "New state of the consent.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
         "ConsentUrlsAndConsentAccessTokensModel": {
             "description": "List of Consent Urls and Consent Access Tokens.",
             "items": {
@@ -2680,7 +2690,7 @@
                         "name": "consent-update",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/ConsentModel"
+                            "$ref": "#/definitions/ConsentUpdateModel"
                         }
                     }
                 ],

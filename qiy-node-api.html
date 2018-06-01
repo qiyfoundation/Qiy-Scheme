@@ -1195,7 +1195,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">consent-update <a href="#ConsentModel">ConsentModel</a> (required)</div>
+      <div class="param">consent-update <a href="#ConsentUpdateModel">ConsentUpdateModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -4562,6 +4562,7 @@ font-style: italic;
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel_payload"><code>ConsentNotificationMessageModel_payload</code> - </a></li>
     <li><a href="#ConsentRequestMessageModel_payload"><code>ConsentRequestMessageModel_payload</code> - </a></li>
+    <li><a href="#ConsentUpdateModel"><code>ConsentUpdateModel</code> - </a></li>
     <li><a href="#ConsentUrlsAndConsentAccessTokensModel"><code>ConsentUrlsAndConsentAccessTokensModel</code> - </a></li>
     <li><a href="#ConsentUrlsAndConsentAccessTokensModel_inner"><code>ConsentUrlsAndConsentAccessTokensModel_inner</code> - </a></li>
     <li><a href="#DataServiceUrlModel"><code>DataServiceUrlModel</code> - </a></li>
@@ -4891,6 +4892,13 @@ font-style: italic;
 <div class="param">dataTypeUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Personal Data that the Service Provider requests Consent for (dataTypeUrl). format: url</div>
 <div class="param">persistentId </div><div class="param-desc"><span class="param-type"><a href="#PersistentIdModel">PersistentIdModel</a></span> Persistent Id of the connection between the Relying Party and the Individual. </div>
 <div class="param">publishedServiceUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl). format: url</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentUpdateModel"><code>ConsentUpdateModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>Consent update model.</div>
+    <div class="field-items">
+      <div class="param">state (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> New state of the consent. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
