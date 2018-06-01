@@ -701,8 +701,11 @@ A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain det
 ### Service Credential Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
-### Service Credential Request Message
-A [Qiy Node Message](#qiy-node-message) for requesting a [Service Credential](#service-credential).
+### Service Credentials Request Message
+A [Qiy Node Message](#qiy-node-message) for requesting [Service Credentials](#service-credential).
+
+### Service Credentials Response Message
+A [Qiy Node Message](#qiy-node-message) for providing [Service Credentials](#service-credential).
 
 ### Service Credential Unregister Request
 A [Qiy Node Request](#qiy-node-request) to unregister a [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).

@@ -2515,7 +2515,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Request Message]
+[Definitions](Definitions.md)                 | [Service Credentials Request Message](Definitions.md#service-credentials-request-message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Credentials Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceCredentialsRequestMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.4.1 Service Credentials Request Message](#441-service-credentials-request-message)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
@@ -2525,7 +2525,7 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
-[Definitions](Definitions.md)                 | [Service Credentials Response Message]
+[Definitions](Definitions.md)                 | [Service Credentials Response Message](Definitions.md#service-credentials-response-message)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Service Credentials Response Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ServiceCredentialsResponseMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.4.2 Service Credentials Response Message](#442-service-credentials-response-message)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
