@@ -752,6 +752,7 @@
             ]
         },
         "ConsentStateEnum": {
+            "description": "Consent State.",
             "enum": [
 	        "deleted",
 		"granted",
@@ -764,7 +765,6 @@
             "description": "Consent update model.",
             "properties": {
                 "state": {
-                    "description": "New state of the consent.",
                     "$ref": "#/definitions/ConsentStateEnum"
                 }
             },
