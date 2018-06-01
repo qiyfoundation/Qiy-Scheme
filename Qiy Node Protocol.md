@@ -265,6 +265,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Connections Request](#connections-request)
 	1. [Consent](#consent)
 	1. [Consent Audit Credential](#consent-audit-credential)
+	1. [Consent Audit Log](#consent-audit-log)
 	1. [Consent Credential](#consent-credential)
 	1. [Consent Data Provider Credential](#consent-data-provider-credential)
 	1. [Consent Delete Request](#consent-delete-request)
@@ -278,6 +279,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Consent Relying Party Credential](#consent-relying-party-credential)
 	1. [Consent Repository](#consent-repository)
 	1. [Consent Request Message](#consent-request-message)
+	1. [Consent Update Request](#consent-update-request)
 	1. [Consent Withdrawn Request](#consent-withdrawn-request)
 	1. [Consents Request](#consents-request)
 	1. [Data Provider](#data-provider)
@@ -1619,6 +1621,12 @@ Specification | Reference
 ------------- | ---------
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent Credential](#consent-credential)
 
+## Consent Audit Log
+
+Specification | Reference
+------------- | ---------
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
+
 ## Consent Credential
 
 Specification | Reference
@@ -1722,6 +1730,15 @@ Specification | Reference
 [Definitions](Definitions.md)                       | [Consent Request Message](Definitions.md#consent-request-message)
 [Qiy Node API](Qiy%20Node%20API.json) | [Consent Request Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConsentRequestMessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [4.1.2 Consent Request Message](#412-consent-request-message)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
+
+## Consent Update Request
+
+Specification | Reference
+------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [PATCH /consentUrl](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#consentUrlPatch)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.4 Consent Granted Request](#254-consent-granted-request)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.5.5 Consent Withdrawn Request](#255-consent-withdrawn-request)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Consent](#consent)
 
 ## Consent Withdrawn Request
