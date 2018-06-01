@@ -557,6 +557,9 @@
                             "type": "object"
                         }
                     },
+		    "required": [
+                        "extraData"
+		    ],
                     "type": "object"
                 }
             ]
