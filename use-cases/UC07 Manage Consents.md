@@ -64,7 +64,7 @@ An [Individual](../Definitions.md#individual) can delete a [Consent](../Qiy%20No
 
 ## E3 List Consents
 
-[Relying Parties](../Qiy%20Node%20Protocol.md#relying-parties) and [Individuals](../Definitions.md#individual) can list their [Consents](../Qiy%20Node%20Protocol.md#consents) using a [Consents Request](../Qiy%20Node%20Protocol.md#consents-request).
+[Access Providers](../Definitions.md#access-provider), auditors, [Relying Parties](../Qiy%20Node%20Protocol.md#relying-parties), [Data Providers](#data-provider) and [Individuals](../Definitions.md#individual) can list their [Consents](../Qiy%20Node%20Protocol.md#consents) using a [Consents Request](../Qiy%20Node%20Protocol.md#consents-request).
 
 
 ## E4 Regrant Consent
