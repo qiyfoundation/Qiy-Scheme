@@ -117,7 +117,7 @@ The [Data Provider](../Definitions.md#data-provider) generates the [Service Cred
 
 #### 4. The Data Provider returns the Service Credentials to the Qiy Trust Network
 
-The [Data Provider](../Definitions.md#data-provider) returns the [Service Credentials](../Qiy%20Node%20Protocol.md#service-credential) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) in the response of the [Service Credentials Request Message](../Qiy%20Node%20Protocol.md#service-credentials-request-message).
+The [Data Provider](../Definitions.md#data-provider) returns the [Service Credentials](../Qiy%20Node%20Protocol.md#service-credential) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) in a [Service Credentials Response Message](../Qiy%20Node%20Protocol.md#service-credentials-response-message).
 
 #### 5. The Qiy Trust Network updates the Service Portfolio
 

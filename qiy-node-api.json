@@ -1936,9 +1936,10 @@
                     "type": "integer",
                     "format": "Unix time in ms, nullable"
                 },
-                "credentials": {
-                    "description": "The actual credentials.",
-                    "type": "object"
+                "accessToken": {
+                    "description": "Service Endpoint Access Token.",
+                    "format": "uuid",
+                    "type": "string"
                 },
                 "links": {
                     "type": "object",
@@ -1980,6 +1981,50 @@
                 "type": "string"
             },
             "type": "array"
+        },
+        "ServiceCredentialsRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "description": "Payload with list of Source Urls.",
+			    "items": {
+			        "description": "Source Url (sourceUrl).",
+			        "format": "url",
+			        "type": "string"
+			    },
+                            "type": "array"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-request-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ServiceCredentialsResponseMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "$ref": "#/definitions/ServiceCredentialsModel"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-response-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
         },
         "ServiceTypeModel": {
             "description": "Service Type Model.",

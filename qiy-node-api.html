@@ -4207,12 +4207,12 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "credentials" : "{}",
   "links" : {
     "self" : "http://example.com/aeiou",
     "source" : "http://example.com/aeiou"
   },
   "state" : "state",
+  "accessToken" : "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
   "activeFrom" : 0,
   "activeUntil" : 6
 }</code></pre>
@@ -4640,6 +4640,8 @@ font-style: italic;
     <li><a href="#PortfolioRegisterMessageModel"><code>PortfolioRegisterMessageModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
+    <li><a href="#ServiceCredentialsRequestMessageModel"><code>ServiceCredentialsRequestMessageModel</code> - </a></li>
+    <li><a href="#ServiceCredentialsResponseMessageModel"><code>ServiceCredentialsResponseMessageModel</code> - </a></li>
   </ol>
 
   <div class="model">
@@ -5316,7 +5318,7 @@ font-style: italic;
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
-<div class="param">credentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> The actual credentials. </div>
+<div class="param">accessToken (optional)</div><div class="param-desc"><span class="param-type"><a href="#UUID">UUID</a></span> Service Endpoint Access Token. format: uuid</div>
 <div class="param">links </div><div class="param-desc"><span class="param-type"><a href="#ServiceCredentialModel_links">ServiceCredentialModel_links</a></span>  </div>
 <div class="param">state </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the Service Credential. </div>
     </div>  <!-- field-items -->
@@ -5608,6 +5610,32 @@ font-style: italic;
     <div class="field-items">
       <div class="param">id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node Id. </div>
 <div class="param">privateKey </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Qiy Node RSA private key. </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceCredentialsRequestMessageModel"><code>ServiceCredentialsRequestMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
+<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Payload with list of Source Urls. format: url</div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-request-message'</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ServiceCredentialsResponseMessageModel"><code>ServiceCredentialsResponseMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
+<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#ServiceCredentialsModel">ServiceCredentialsModel</a></span>  </div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-response-message'</div>
     </div>  <!-- field-items -->
   </div>
   </body>
