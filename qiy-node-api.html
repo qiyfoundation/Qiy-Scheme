@@ -4637,6 +4637,7 @@ font-style: italic;
     <li><a href="#OperationReferenceRequestMessageModel"><code>OperationReferenceRequestMessageModel</code> - </a></li>
     <li><a href="#OperationSpecificationRequestMessageModel"><code>OperationSpecificationRequestMessageModel</code> - </a></li>
     <li><a href="#PersistentIdEventModel"><code>PersistentIdEventModel</code> - </a></li>
+    <li><a href="#PortfolioRegisterMessageModel"><code>PortfolioRegisterMessageModel</code> - </a></li>
     <li><a href="#QiyNodeCreateRequestParametersModel"><code>QiyNodeCreateRequestParametersModel</code> - </a></li>
     <li><a href="#QiyNodeCredentialModel"><code>QiyNodeCredentialModel</code> - </a></li>
   </ol>
@@ -5578,6 +5579,19 @@ font-style: italic;
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
 <div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#PersistentIdEventModel_extraData">PersistentIdEventModel_extraData</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="PortfolioRegisterMessageModel"><code>PortfolioRegisterMessageModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">created (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Message creation time. format: Unix time in ms</div>
+<div class="param">inbound (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Whether the received message is inbound or outbound. </div>
+<div class="param">payload </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Empty payload. format: null</div>
+<div class="param">refSerialNr </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Reference serial number format: nullable</div>
+<div class="param">serialNr (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Serial number of the message. </div>
+<div class="param">text </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Subject </div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  format: 'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-register-message'</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

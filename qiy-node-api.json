@@ -1614,6 +1614,27 @@
             },
             "type": "object"
         },
+        "PortfolioRegisterMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "description": "Empty payload.",
+                            "format": "null",
+                            "type": "string"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-register-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "PublishedProviderModel": {
             "description": "Published Provider Model.",
             "properties": {
