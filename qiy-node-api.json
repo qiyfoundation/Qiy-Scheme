@@ -751,12 +751,21 @@
                 }
             ]
         },
+        "ConsentStateEnum": {
+            "enum": [
+	        "deleted",
+		"granted",
+		"markedForDeletion",
+		"new",
+		"withdrawn"
+            ]
+        },
         "ConsentUpdateModel": {
             "description": "Consent update model.",
             "properties": {
                 "state": {
                     "description": "New state of the consent.",
-                    "type": "string"
+                    "$ref": "#/definitions/ConsentStateEnum"
                 }
             },
             "type": "object"
