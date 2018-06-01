@@ -1151,6 +1151,7 @@ font-style: italic;
   "credentials" : {
     "individualCredentials" : "",
     "relyingPartyCredentials" : "",
+    "dataProviderCredentials" : "",
     "auditCredentials" : ""
   },
   "dataTypeUrl" : "http://example.com/aeiou",
@@ -4556,7 +4557,8 @@ font-style: italic;
     <li><a href="#ConsentAuditLogModel_inner_confirmation"><code>ConsentAuditLogModel_inner_confirmation</code> - </a></li>
     <li><a href="#ConsentAuditLogModel_inner_statusChange"><code>ConsentAuditLogModel_inner_statusChange</code> - </a></li>
     <li><a href="#ConsentCredentialModel"><code>ConsentCredentialModel</code> - </a></li>
-    <li><a href="#ConsentCredentialsModel"><code>ConsentCredentialsModel</code> - </a></li>
+    <li><a href="#ConsentCredentialType"><code>ConsentCredentialType</code> - </a></li>
+    <li><a href="#ConsentCredentialsType"><code>ConsentCredentialsType</code> - </a></li>
     <li><a href="#ConsentGrantedEventModel_extraData"><code>ConsentGrantedEventModel_extraData</code> - </a></li>
     <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
     <li><a href="#ConsentModel_credentials"><code>ConsentModel_credentials</code> - </a></li>
@@ -4827,7 +4829,13 @@ font-style: italic;
   </div>
   <div class="model">
     <h3><a name="ConsentCredentialModel"><code>ConsentCredentialModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Consent Credential Model.</div>
+    <div class='model-description'></div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentCredentialType"><code>ConsentCredentialType</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
     <div class="field-items">
       <div class="param">activeFrom </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active from date time stamp. format: Unix time in ms</div>
 <div class="param">activeUntil </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Active until date time stamp. format: Unix time in ms, nullable</div>
@@ -4836,8 +4844,8 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="ConsentCredentialsModel"><code>ConsentCredentialsModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>List of Consent Credentials.</div>
+    <h3><a name="ConsentCredentialsType"><code>ConsentCredentialsType</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
     <div class="field-items">
           </div>  <!-- field-items -->
   </div>
@@ -4870,9 +4878,10 @@ font-style: italic;
     <h3><a name="ConsentModel_credentials"><code>ConsentModel_credentials</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Consent Credentials.</div>
     <div class="field-items">
-      <div class="param">auditCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsModel">ConsentCredentialsModel</a></span> Consent Audit Credentials. </div>
-<div class="param">individualCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsModel">ConsentCredentialsModel</a></span> Consent Individual Credentials. </div>
-<div class="param">relyingPartyCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsModel">ConsentCredentialsModel</a></span> Consent Relying Party Credentials. </div>
+      <div class="param">auditCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsType">ConsentCredentialsType</a></span> Consent Audit Credentials. </div>
+<div class="param">dataProviderCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsType">ConsentCredentialsType</a></span> Consent Data Provider Credentials. </div>
+<div class="param">individualCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsType">ConsentCredentialsType</a></span> Consent Individual Credentials. </div>
+<div class="param">relyingPartyCredentials (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialsType">ConsentCredentialsType</a></span> Consent Relying Party Credentials. </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
@@ -4901,7 +4910,7 @@ font-style: italic;
 <div class="param">consentId </div><div class="param-desc"><span class="param-type"><a href="#UUID">UUID</a></span> Consent Id. format: uuid</div>
 <div class="param">consentRequestSignature </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId. format: url</div>
 <div class="param">consentRequestTime </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Consent request time. format: Unix time in ms</div>
-<div class="param">credential (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialModel">ConsentCredentialModel</a></span> Consent Individual Credential. </div>
+<div class="param">credential (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentCredentialType">ConsentCredentialType</a></span> Consent Individual Credential. </div>
 <div class="param">dataTypeUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Personal Data that the Service Provider requests Consent for (dataTypeUrl). format: url</div>
 <div class="param">persistentId </div><div class="param-desc"><span class="param-type"><a href="#PersistentIdModel">PersistentIdModel</a></span> Persistent Id of the connection between the Relying Party and the Individual. </div>
 <div class="param">publishedServiceUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl). format: url</div>

@@ -500,7 +500,16 @@
             "type": "array"
         },
         "ConsentCredentialModel": {
-            "description": "Consent Credential Model.",
+            "description": "Consent Credential.",
+            "$ref": "#/definitions/ConsentCredentialType"
+        },
+        "ConsentCredentialsType": {
+            "items": {
+                "$ref": "#/definitions/ConsentCredentialModel"
+            },
+            "type": "array"
+        },
+        "ConsentCredentialType": {
             "properties": {
                 "activeFrom": {
                     "description": "Active from date time stamp.",
@@ -528,13 +537,6 @@
                 "token"
             ],
             "type": "object"
-        },
-        "ConsentCredentialsModel": {
-            "description": "List of Consent Credentials.",
-            "items": {
-                "$ref": "#/definitions/ConsentCredentialModel"
-            },
-            "type": "array"
         },
         "ConsentGrantedEventModel": {
             "allOf": [
@@ -601,15 +603,19 @@
                         "properties": {
                             "auditCredentials": {
                                 "description": "Consent Audit Credentials.",
-                                "$ref": "#/definitions/ConsentCredentialsModel"
+                                "$ref": "#/definitions/ConsentCredentialsType"
+                            },
+                            "dataProviderCredentials": {
+                                "description": "Consent Data Provider Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsType"
                             },
                             "individualCredentials": {
                                 "description": "Consent Individual Credentials.",
-                                "$ref": "#/definitions/ConsentCredentialsModel"
+                                "$ref": "#/definitions/ConsentCredentialsType"
                             },
                             "relyingPartyCredentials": {
                                 "description": "Consent Relying Party Credentials.",
-                                "$ref": "#/definitions/ConsentCredentialsModel"
+                                "$ref": "#/definitions/ConsentCredentialsType"
                             }
                         },
                         "type": "object"
@@ -743,7 +749,7 @@
                                 },
                                 "credential": {
                                     "description": "Consent Individual Credential.",
-                                    "$ref": "#/definitions/ConsentCredentialModel"
+                                    "$ref": "#/definitions/ConsentCredentialType"
                                 },
                                 "dataTypeUrl": {
                                     "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
