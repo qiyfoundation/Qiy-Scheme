@@ -521,13 +521,18 @@
                     "type": "integer",
                     "format": "Unix time in ms, nullable"
                 },
-                "token": {
-                    "description": "Access token.",
-                    "$ref": "#/definitions/ConsentAccessTokenModel"
+                "publishedProviderUrl": {
+                    "description": "The publishedProviderUrl of the Service Provider that will use the credential.",
+                    "format": "url",
+                    "type": "string"
                 },
                 "state": {
                     "description": "State of the credential.",
                     "type": "string"
+                },
+                "token": {
+                    "description": "Access token.",
+                    "$ref": "#/definitions/ConsentAccessTokenModel"
                 }
             },
             "required": [
