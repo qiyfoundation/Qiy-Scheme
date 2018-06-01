@@ -541,7 +541,7 @@
         "ConsentGrantedEventModel": {
             "allOf": [
                 {   "$ref": "#/definitions/EventModel"
-		},
+                },
                 { 
                     "description": "See [Consent Granted Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-granted-event).",
                     "properties": {
@@ -559,9 +559,9 @@
                             "type": "object"
                         }
                     },
-		    "required": [
+                    "required": [
                         "extraData"
-		    ],
+                    ],
                     "type": "object"
                 }
             ]
@@ -788,11 +788,11 @@
         "ConsentStateEnum": {
             "description": "Consent State.",
             "enum": [
-	        "deleted",
-		"granted",
-		"markedForDeletion",
-		"new",
-		"withdrawn"
+                "deleted",
+                "granted",
+                "markedForDeletion",
+                "new",
+                "withdrawn"
             ]
         },
         "ConsentUpdateModel": {
@@ -807,20 +807,20 @@
         "ConsentUrlsAndConsentAccessTokensModel": {
             "description": "List of Consent Urls and Consent Access Tokens.",
             "items": {
-		"properties": {
-		    "consentUrl": {
+                "properties": {
+                    "consentUrl": {
                         "description": "Consent Url.",
                         "format": "url",
                         "type": "string"
-	            },
-		    "accessToken": {
+                    },
+                    "accessToken": {
                         "$ref": "#/definitions/ConsentAccessTokenModel"
-	            }
-	        },
-		"required": [
-		    "consentUrl",
-		    "accessToken"
-	        ],
+                    }
+                },
+                "required": [
+                    "consentUrl",
+                    "accessToken"
+                ],
                 "type": "object"
             },
             "type": "array"
@@ -1997,11 +1997,11 @@
                     "properties": {
                         "payload": {
                             "description": "Payload with list of Source Urls.",
-			    "items": {
-			        "description": "Source Url (sourceUrl).",
-			        "format": "url",
-			        "type": "string"
-			    },
+                            "items": {
+                                "description": "Source Url (sourceUrl).",
+                                "format": "url",
+                                "type": "string"
+                            },
                             "type": "array"
                         },
                         "type": {
@@ -2760,7 +2760,7 @@
                         "name": "consent-access-token",
                         "in": "header",
                         "required": false,
-			"type": "string"
+                        "type": "string"
                     }
                 ],
                 "produces": [
@@ -2826,7 +2826,7 @@
                         "name": "consent-access-token",
                         "in": "header",
                         "required": true,
-			"type": "string"
+                        "type": "string"
                     },
                     {
                         "in": "body",
