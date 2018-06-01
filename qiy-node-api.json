@@ -536,6 +536,31 @@
             },
             "type": "array"
         },
+        "ConsentGrantedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel"
+		},
+                { 
+                    "description": "See [Consent Granted Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-granted-event).",
+                    "properties": {
+                        "extraData": {
+                            "description": "extra data: Consent Id.",
+                            "properties": {
+                                "consentId": {
+                                    "description": "Consent Id.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consentId"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
         "ConsentModel": {
             "description": "Consent model.",
             "properties": {

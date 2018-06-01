@@ -4557,6 +4557,7 @@ font-style: italic;
     <li><a href="#ConsentAuditLogModel_inner_statusChange"><code>ConsentAuditLogModel_inner_statusChange</code> - </a></li>
     <li><a href="#ConsentCredentialModel"><code>ConsentCredentialModel</code> - </a></li>
     <li><a href="#ConsentCredentialsModel"><code>ConsentCredentialsModel</code> - </a></li>
+    <li><a href="#ConsentGrantedEventModel_extraData"><code>ConsentGrantedEventModel_extraData</code> - </a></li>
     <li><a href="#ConsentModel"><code>ConsentModel</code> - </a></li>
     <li><a href="#ConsentModel_credentials"><code>ConsentModel_credentials</code> - </a></li>
     <li><a href="#ConsentModel_links"><code>ConsentModel_links</code> - </a></li>
@@ -4627,6 +4628,7 @@ font-style: italic;
     <li><a href="#ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a></li>
     <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
     <li><a href="#ConnectionCreatedEventModel"><code>ConnectionCreatedEventModel</code> - </a></li>
+    <li><a href="#ConsentGrantedEventModel"><code>ConsentGrantedEventModel</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel"><code>ConsentNotificationMessageModel</code> - </a></li>
     <li><a href="#ConsentRequestMessageModel"><code>ConsentRequestMessageModel</code> - </a></li>
     <li><a href="#EventStreamModel"><code>EventStreamModel</code> - </a></li>
@@ -4835,6 +4837,13 @@ font-style: italic;
     <div class='model-description'>List of Consent Credentials.</div>
     <div class="field-items">
           </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentGrantedEventModel_extraData"><code>ConsentGrantedEventModel_extraData</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>extra data: Consent Id.</div>
+    <div class="field-items">
+      <div class="param">consentId </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Consent Id. </div>
+    </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ConsentModel"><code>ConsentModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -5468,6 +5477,15 @@ font-style: italic;
       <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
 <div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
 <div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConsentGrantedEventModel"><code>ConsentGrantedEventModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">connectionUrl </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connection Url. format: url</div>
+<div class="param">type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Event type name. </div>
+<div class="param">extraData (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConsentGrantedEventModel_extraData">ConsentGrantedEventModel_extraData</a></span>  </div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">
