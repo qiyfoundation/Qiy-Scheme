@@ -2740,6 +2740,12 @@
                 "parameters": [
                     {
                         "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
