@@ -505,19 +505,19 @@ Information of the connections can be acquired using the [Connections Request](#
 ## 2.2 Catalogue Requests
 
 ### 2.2.1 Catalogue Details Request
-The [Catalogue Details Request](#catalogue-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Catalogue](Definitions.md#service-catalogue).
+The [Catalogue Details Request](#catalogue-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Catalogue](#service-catalogue).
 
 ### 2.2.2 Catalogues Request
-The [Catalogues Request](#catalogues-request) is a [Qiy Node Request](#qiy-node-request) which can be used to consult the [Service Catalogues](Definitions.md#service-catalogue) of [Service Providers](Definitions.md#service-provider).
+The [Catalogues Request](#catalogues-request) is a [Qiy Node Request](#qiy-node-request) which can be used to consult the [Service Catalogues](#service-catalogue) of [Service Providers](Definitions.md#service-provider).
 
 ### 2.2.3 Published Service Details Request
-The [Published Service Details Request](#published-service-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) that has been published in a [Service Catalogue](Definitions.md#service-catalogue).
+The [Published Service Details Request](#published-service-details-request) is a [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service](Definitions.md#service) that has been published in a [Service Catalogue](#service-catalogue).
 
 ### 2.2.4 Published Service Register Request
-The [Published Service Register Request](#published-service-register-request) is a [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](#service-provider).
+The [Published Service Register Request](#published-service-register-request) is a [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](Definitions.md#service) of a [Service Provider](#service-provider) with an [Access Provider](Definitions.md#access-provider) and include it in [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
 ### 2.2.5 Published Service Unregister Request
-The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](Definitions.md#service-catalogue) of the [Service Provider](#service-provider).
+The [Published Service Unregister Request](#published-service-unregister-request) is a [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](Definitions.md#service) of a [Service Provider](#service-provider) with an [Access Provider](Definitions.md#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
 
 ### 2.2.6 Published Services Request
 The [Published Services Request](#published-services-request) is a [Qiy Node Request](#qiy-node-request) which can be used to list the [Services](Definitions.md#service) in a [Catalogue](#catalogue).
