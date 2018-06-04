@@ -1493,7 +1493,7 @@ Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Connect Token](Definitions.md#connect-token)
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connect Token Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectTokenModel)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Connect](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Connect) Requests
+[Qiy Node API](Qiy%20Node%20API.json)         | [Connect Token](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectToken) Requests
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.3 Connect Token Requests](#23-connect-token-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.4 Connect Token Model](#54-connect-token-model)
 
