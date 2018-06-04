@@ -841,7 +841,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
+      <div class="param">connect-token <a href="#ConnectTokenJsonModel">ConnectTokenJsonModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -981,8 +981,8 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
       
+      ConnectTokenDataModel
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
@@ -1020,7 +1020,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
+      <div class="param">connect-token <a href="#ConnectTokenMetadataModel">ConnectTokenMetadataModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -1534,7 +1534,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
+      <div class="param">connect-token <a href="#ConnectTokenJsonModel">ConnectTokenJsonModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -2969,11 +2969,11 @@ font-style: italic;
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-  "refSerialNr" : 6,
-  "serialNr" : 1,
+  "refSerialNr" : 5,
+  "serialNr" : 5,
   "inbound" : true,
   "payload" : "{}",
-  "created" : 0,
+  "created" : 1,
   "text" : "text",
   "type" : "type"
 }</code></pre>
@@ -3492,8 +3492,8 @@ font-style: italic;
 
     <h3 class="field-label">Return type</h3>
     <div class="return-type">
-      <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
       
+      ConnectTokenDataModel
     </div>
 
     <!--Todo: process Response Object and its headers, schema, examples -->
@@ -3633,7 +3633,7 @@ font-style: italic;
 
     <h3 class="field-label">Request body</h3>
     <div class="field-items">
-      <div class="param">connect-token <a href="#ConnectTokenModel">ConnectTokenModel</a> (required)</div>
+      <div class="param">connect-token <a href="#ConnectTokenJsonModel">ConnectTokenJsonModel</a> (required)</div>
 
       <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
 
@@ -4593,9 +4593,10 @@ font-style: italic;
     <li><a href="#CatalogueModel"><code>CatalogueModel</code> - </a></li>
     <li><a href="#CatalogueModel_links"><code>CatalogueModel_links</code> - </a></li>
     <li><a href="#CataloguesModel"><code>CataloguesModel</code> - </a></li>
+    <li><a href="#ConnectTokenJsonModel"><code>ConnectTokenJsonModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel_actions"><code>ConnectTokenMetadataModel_actions</code> - </a></li>
-    <li><a href="#ConnectTokenModel"><code>ConnectTokenModel</code> - </a></li>
+    <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
     <li><a href="#ConnectTokensModel"><code>ConnectTokensModel</code> - </a></li>
     <li><a href="#ConnectionModel"><code>ConnectionModel</code> - </a></li>
     <li><a href="#ConnectionModel_links"><code>ConnectionModel_links</code> - </a></li>
@@ -4677,8 +4678,7 @@ font-style: italic;
     <li><a href="#SubscriptionsModel"><code>SubscriptionsModel</code> - </a></li>
     <li><a href="#ApiLinksModel"><code>ApiLinksModel</code> - </a></li>
     <li><a href="#CandidatesMessageModel"><code>CandidatesMessageModel</code> - </a></li>
-    <li><a href="#ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a></li>
-    <li><a href="#ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a></li>
+    <li><a href="#ConnectTokenModel"><code>ConnectTokenModel</code> - </a></li>
     <li><a href="#ConnectionCreatedEventModel"><code>ConnectionCreatedEventModel</code> - </a></li>
     <li><a href="#ConsentGrantedEventModel"><code>ConsentGrantedEventModel</code> - </a></li>
     <li><a href="#ConsentNotificationMessageModel"><code>ConsentNotificationMessageModel</code> - </a></li>
@@ -4778,6 +4778,15 @@ font-style: italic;
           </div>  <!-- field-items -->
   </div>
   <div class="model">
+    <h3><a name="ConnectTokenJsonModel"><code>ConnectTokenJsonModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token">Connect Token</a>.</div>
+    <div class="field-items">
+      <div class="param">target </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#transport-connect-token">Transport Connect Token</a>. </div>
+<div class="param">identifier (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This property is only used in responses and holds the alias. </div>
+<div class="param">tmpSecret </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Base64-encoded temporary secret. format: Base64-encoded</div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
     <h3><a name="ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'></div>
     <div class="field-items">
@@ -4796,13 +4805,10 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="ConnectTokenModel"><code>ConnectTokenModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token">Connect Token</a>.</div>
+    <h3><a name="ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
     <div class="field-items">
-      <div class="param">target </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#transport-connect-token">Transport Connect Token</a>. </div>
-<div class="param">identifier (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This property is only used in responses and holds the alias. </div>
-<div class="param">tmpSecret </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Base64-encoded temporary secret. format: Base64-encoded</div>
-    </div>  <!-- field-items -->
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ConnectTokensModel"><code>ConnectTokensModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
@@ -5516,7 +5522,7 @@ font-style: italic;
     </div>  <!-- field-items -->
   </div>
   <div class="model">
-    <h3><a name="ConnectTokenDataModel"><code>ConnectTokenDataModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <h3><a name="ConnectTokenModel"><code>ConnectTokenModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Connect Token details</div>
     <div class="field-items">
       <div class="param">expires (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Expiration date time. format: Unix time in ms</div>
@@ -5524,19 +5530,9 @@ font-style: italic;
 <div class="param">note (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Note </div>
 <div class="param">useBudget (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Maximum number of use times </div>
 <div class="param">actions (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConnectTokenMetadataModel_actions">ConnectTokenMetadataModel_actions</a></span>  </div>
-<div class="param">json (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConnectTokenModel">ConnectTokenModel</a></span>  </div>
-    </div>  <!-- field-items -->
-  </div>
-  <div class="model">
-    <h3><a name="ConnectTokenRequestParametersModel"><code>ConnectTokenRequestParametersModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'></div>
-    <div class="field-items">
-      <div class="param">expires (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Expiration date time. format: Unix time in ms</div>
-<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Connect Token name </div>
-<div class="param">note (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Note </div>
-<div class="param">useBudget (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Maximum number of use times </div>
-<div class="param">actions (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConnectTokenMetadataModel_actions">ConnectTokenMetadataModel_actions</a></span>  </div>
-<div class="param">json (optional)</div><div class="param-desc"><span class="param-type"><a href="#ConnectTokenModel">ConnectTokenModel</a></span>  </div>
+<div class="param">target </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#transport-connect-token">Transport Connect Token</a>. </div>
+<div class="param">identifier (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This property is only used in responses and holds the alias. </div>
+<div class="param">tmpSecret </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Base64-encoded temporary secret. format: Base64-encoded</div>
     </div>  <!-- field-items -->
   </div>
   <div class="model">

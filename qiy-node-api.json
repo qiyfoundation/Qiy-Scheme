@@ -330,18 +330,36 @@
             ],
             "type": "object"
         },
-        "ConnectTokenDataModel": {
+        "ConnectTokenJsonModel": {
+            "description": "See [Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token).",
+            "properties": {
+                "target": {
+                    "description": "The [Transport Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#transport-connect-token).",
+                    "type": "string"
+                },
+                "identifier": {
+                    "description": "This property is only used in responses and holds the alias.",
+                    "type": "string"
+                },
+                "tmpSecret": {
+                    "type": "string",
+                    "description": "Base64-encoded temporary secret.",
+                    "format": "Base64-encoded"
+                }
+            },
+            "required": [
+                "target",
+                "tmpSecret"
+            ],
+            "type": "object"
+        },
+        "ConnectTokenModel": {
             "allOf": [
                 {
                     "$ref": "#/definitions/ConnectTokenMetadataModel"
                 },
                 {
-                    "type": "object",
-                    "properties": {
-                        "json": {
-                            "$ref": "#/definitions/ConnectTokenModel"
-                        }
-                    }
+                    "$ref": "#/definitions/ConnectTokenJsonModel"
                 }
             ],
             "description": "Connect Token details",
@@ -390,41 +408,8 @@
                 }
             }
         },
-        "ConnectTokenModel": {
-            "description": "See [Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token).",
-            "properties": {
-                "target": {
-                    "description": "The [Transport Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#transport-connect-token).",
-                    "type": "string"
-                },
-                "identifier": {
-                    "description": "This property is only used in responses and holds the alias.",
-                    "type": "string"
-                },
-                "tmpSecret": {
-                    "type": "string",
-                    "description": "Base64-encoded temporary secret.",
-                    "format": "Base64-encoded"
-                }
-            },
-            "required": [
-                "target",
-                "tmpSecret"
-            ],
-            "type": "object"
-        },
         "ConnectTokenRequestParametersModel": {
-            "allOf": [
-                { "$ref": "#/definitions/ConnectTokenMetadataModel" },
-                {
-                    "type": "object",
-                    "properties": {
-                        "json": {
-                            "$ref": "#/definitions/ConnectTokenModel" 
-                        }
-                    }
-                }
-            ]
+	            "$ref": "#/definitions/ConnectTokenModel"
         },
         "ConnectTokensModel": {
             "description": "List of Connect Token Urls.",
@@ -2615,7 +2600,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/ConnectTokenModel"
+                            "$ref": "#/definitions/ConnectTokenJsonModel"
                         }
                     }
                 ],
@@ -2700,7 +2685,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/ConnectTokenModel"
+                            "$ref": "#/definitions/ConnectTokenMetadataModel"
                         }
                     }
                 ],
