@@ -222,6 +222,7 @@ font-style: italic;
   <li><a href="#connectTokenUrlGet"><code><span class="http-method">get</span> /connectTokenUrl</code></a></li>
   <li><a href="#connectTokenUrlPatch"><code><span class="http-method">patch</span> /connectTokenUrl</code></a></li>
   <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
+  <li><a href="#ctListEndpointGet"><code><span class="http-method">get</span> /ctListEndpoint</code></a></li>
   </ul>
   <h4><a href="#Consent">Consent</a></h4>
   <ul>
@@ -1081,6 +1082,54 @@ font-style: italic;
     <h4 class="field-label">201</h4>
     The status code of a success response will be 201 Created.
         <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="ctListEndpointGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /ctListEndpoint</code></pre></div>
+    <div class="method-summary">Get Connect Tokens (<span class="nickname">ctListEndpointGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-tokens-request">Connection Tokens Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">since (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; Limit results to <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token">Connect Tokens</a> that have been active since the time stamp 'since'. format: Unix time in ms</div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      ConnectTokensResponseModel
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#ConnectTokensResponseModel">ConnectTokensResponseModel</a>
   </div> <!-- method -->
   <hr/>
   <h1><a name="Consent">Consent</a></h1>
@@ -4547,6 +4596,7 @@ font-style: italic;
     <li><a href="#ConnectTokenMetadataModel"><code>ConnectTokenMetadataModel</code> - </a></li>
     <li><a href="#ConnectTokenMetadataModel_actions"><code>ConnectTokenMetadataModel_actions</code> - </a></li>
     <li><a href="#ConnectTokenModel"><code>ConnectTokenModel</code> - </a></li>
+    <li><a href="#ConnectTokensModel"><code>ConnectTokensModel</code> - </a></li>
     <li><a href="#ConnectionModel"><code>ConnectionModel</code> - </a></li>
     <li><a href="#ConnectionModel_links"><code>ConnectionModel_links</code> - </a></li>
     <li><a href="#ConnectionsResponseModel"><code>ConnectionsResponseModel</code> - </a></li>
@@ -4753,6 +4803,12 @@ font-style: italic;
 <div class="param">identifier (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> This property is only used in responses and holds the alias. </div>
 <div class="param">tmpSecret </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Base64-encoded temporary secret. format: Base64-encoded</div>
     </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ConnectTokensModel"><code>ConnectTokensModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'>List of Connect Token Urls.</div>
+    <div class="field-items">
+          </div>  <!-- field-items -->
   </div>
   <div class="model">
     <h3><a name="ConnectionModel"><code>ConnectionModel</code> - </a> <a class="up" href="#__Models">Up</a></h3>

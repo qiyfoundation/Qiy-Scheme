@@ -426,6 +426,15 @@
                 }
             ]
         },
+        "ConnectTokensModel": {
+            "description": "List of Connect Token Urls.",
+            "items": {
+                "description": "Connect Token url (connectTokenUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
         "ConsentAccessTokenModel": {
             "description": "Consent access token.",
             "format": "uuid",
@@ -2894,6 +2903,39 @@
                 ]
             }
         },
+        "/ctListEndpoint": {
+            "get": {
+                "summary": "Get Connect Tokens",
+                "description": "See [Connection Tokens Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-tokens-request).",
+                "parameters": [
+                    {
+                        "name": "since",
+                        "in": "query",
+                        "description": "Limit results to [Connect Tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token) that have been active since the time stamp 'since'.",
+                        "format": "Unix time in ms",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect Token"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokensResponseModel"
+                        }
+                    }
+                }
+            }
+	},
         "/serviceCredentialsUrl": {
             "get": {
                 "summary": "Get Service Credentials",
