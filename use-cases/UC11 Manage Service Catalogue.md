@@ -33,7 +33,7 @@ This document describes how [Service Providers](../Qiy%20Node%20Protocol.md#serv
 
 # Basic Flow: Service Provider registers a Service
 
-The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can register a [Service](../Qiy%20Node%20Protocol.md#service) using a [Catalogue Service Register Request](../Qiy%20Node%20Protocol.md#catalogue-service-register-request).
+The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can register a [Service](../Qiy%20Node%20Protocol.md#service) using a [Published Service Register Request](../Qiy%20Node%20Protocol.md#published-service-register-request).
 
 ![Register Service](../images/Register_Service_-_UC11.png)
 
@@ -47,7 +47,7 @@ The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can registe
 
 ## E1. The Service Provider unregisters a Service
 
-The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can unregister a [Servicen](../Definitions.md#service) using a [Catalogue Service Unregister Request](../Qiy%20Node%20Protocol.md#catalogue-service-unregister-request).
+The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can unregister a [Service](../Qiy%20Node%20Protocol.md#service) using a [Published Service Unregister Request](../Qiy%20Node%20Protocol.md#published-service-unregister-request).
 
 ![Unregister Service](../images/Unregister_Service_-_UC11.png)
 
