@@ -203,6 +203,7 @@ font-style: italic;
   <h4><a href="#Catalogue">Catalogue</a></h4>
   <ul>
   <li><a href="#catalogueUrlGet"><code><span class="http-method">get</span> /catalogueUrl</code></a></li>
+  <li><a href="#cataloguesUrlGet"><code><span class="http-method">get</span> /cataloguesUrl</code></a></li>
   <li><a href="#publishedServiceUrlDelete"><code><span class="http-method">delete</span> /publishedServiceUrl</code></a></li>
   <li><a href="#publishedServiceUrlGet"><code><span class="http-method">get</span> /publishedServiceUrl</code></a></li>
   <li><a href="#publishedServicesUrlGet"><code><span class="http-method">get</span> /publishedServicesUrl</code></a></li>
@@ -246,7 +247,6 @@ font-style: italic;
   </ul>
   <h4><a href="#Library">Library</a></h4>
   <ul>
-  <li><a href="#cataloguesUrlGet"><code><span class="http-method">get</span> /cataloguesUrl</code></a></li>
   <li><a href="#dataTypeUrlDelete"><code><span class="http-method">delete</span> /dataTypeUrl</code></a></li>
   <li><a href="#dataTypeUrlGet"><code><span class="http-method">get</span> /dataTypeUrl</code></a></li>
   <li><a href="#dataTypesUrlGet"><code><span class="http-method">get</span> /dataTypesUrl</code></a></li>
@@ -513,6 +513,49 @@ font-style: italic;
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
         <a href="#CatalogueModel">CatalogueModel</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="cataloguesUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /cataloguesUrl</code></pre></div>
+    <div class="method-summary">Get Catalogues (<span class="nickname">cataloguesUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request">Catalogues Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#CataloguesModel">CataloguesModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+      <li><code>text/html</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#CataloguesModel">CataloguesModel</a>
   </div> <!-- method -->
   <hr/>
   <div class="method"><a name="publishedServiceUrlDelete"/>
@@ -1673,49 +1716,6 @@ font-style: italic;
   </div> <!-- method -->
   <hr/>
   <h1><a name="Library">Library</a></h1>
-  <div class="method"><a name="cataloguesUrlGet"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /cataloguesUrl</code></pre></div>
-    <div class="method-summary">Get Catalogues (<span class="nickname">cataloguesUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request">Catalogues Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#CataloguesModel">CataloguesModel</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>""</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-      <li><code>text/html</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#CataloguesModel">CataloguesModel</a>
-  </div> <!-- method -->
-  <hr/>
   <div class="method"><a name="dataTypeUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
