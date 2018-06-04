@@ -1554,7 +1554,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Connection](Definitions.md#connection)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Connect](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Connect)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Connect](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Connect) Requests
 [Qiy Node API](Qiy%20Node%20API.json)         | [Connection Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#ConnectionModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.4 Connection Requests](#24-connection-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.1 Connection Events](#31-connection-events)
