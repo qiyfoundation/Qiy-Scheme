@@ -1469,6 +1469,7 @@ Specification | Reference
 [Qiy Node API](Qiy%20Node%20API.json)         | [Catalogue Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#CatalogueModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2 Catalogue Requests](#22-catalogue-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.3 Catalogue Model](#53-catalogue-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Published Service](#published-service)
 
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Service](#service)
 
@@ -2353,8 +2354,11 @@ Specification | Reference
 
 Specification | Reference
 ------------- | ---------
+[Qiy Node API](Qiy%20Node%20API.json)         | [Catalogue](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Catalogue) Requests
 [Qiy Node API](Qiy%20Node%20API.json)         | [Published Service Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#PublishedServiceModel)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.2 Catalogue Requests
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.16 Published Service Model](#516-published-service-model)
+[Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Catalogue]
 
 ## Published Service Details Request
 
