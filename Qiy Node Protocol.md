@@ -359,6 +359,7 @@ https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/topic/qiy-node-interf
 	1. [Qiy Node Event](#qiy-node-event)
 	1. [Qiy Node Message](#qiy-node-message)
 	1. [Qiy Node Request](#qiy-node-request)
+	1. [Qiy User](#qiy-user)
 	1. [Relying Party](#relying-party)
 	1. [Request](#request)
 	1. [Reference Serial Number](#reference-serial-number)
@@ -2461,6 +2462,12 @@ Specification | Reference
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Request](#request)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2 Requests](#2-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [Qiy Node](#qiy-node)
+
+## Qiy User
+
+Specification | Reference
+------------- | ---------
+[Definitions](Definitions.md) | [Qiy User](Definitions.md#qiy-user)
 
 ## Relying Party
 
