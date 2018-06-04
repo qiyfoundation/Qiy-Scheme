@@ -210,18 +210,18 @@ font-style: italic;
   </ul>
   <h4><a href="#Connect">Connect</a></h4>
   <ul>
-  <li><a href="#connectTokenUrlGet"><code><span class="http-method">get</span> /connectTokenUrl</code></a></li>
   <li><a href="#connectionUrlDelete"><code><span class="http-method">delete</span> /connectionUrl</code></a></li>
   <li><a href="#connectionUrlGet"><code><span class="http-method">get</span> /connectionUrl</code></a></li>
   <li><a href="#connectionsEndpointGet"><code><span class="http-method">get</span> /connectionsEndpoint</code></a></li>
   <li><a href="#connectionsEndpointPost"><code><span class="http-method">post</span> /connectionsEndpoint</code></a></li>
-  <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
   <li><a href="#eventsEndpointGet"><code><span class="http-method">get</span> /eventsEndpoint</code></a></li>
   </ul>
   <h4><a href="#ConnectToken">ConnectToken</a></h4>
   <ul>
   <li><a href="#connectTokenUrlDelete"><code><span class="http-method">delete</span> /connectTokenUrl</code></a></li>
+  <li><a href="#connectTokenUrlGet"><code><span class="http-method">get</span> /connectTokenUrl</code></a></li>
   <li><a href="#connectTokenUrlPatch"><code><span class="http-method">patch</span> /connectTokenUrl</code></a></li>
+  <li><a href="#ctCreateEndpointPost"><code><span class="http-method">post</span> /ctCreateEndpoint</code></a></li>
   </ul>
   <h4><a href="#Consent">Consent</a></h4>
   <ul>
@@ -691,48 +691,6 @@ font-style: italic;
   </div> <!-- method -->
   <hr/>
   <h1><a name="Connect">Connect</a></h1>
-  <div class="method"><a name="connectTokenUrlGet"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="get"><code class="huge"><span class="http-method">get</span> /connectTokenUrl</code></pre></div>
-    <div class="method-summary">Get Connect Token Details (<span class="nickname">connectTokenUrlGet</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-details-request">Connect Token Details Request</a>.</div>
-
-
-
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>""</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">200</h4>
-    The status code of a success response will be 200.
-        <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
-  </div> <!-- method -->
-  <hr/>
   <div class="method"><a name="connectionUrlDelete"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -926,46 +884,6 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
-  <div class="method"><a name="ctCreateEndpointPost"/>
-    <div class="method-path">
-    <a class="up" href="#__Methods">Up</a>
-    <pre class="post"><code class="huge"><span class="http-method">post</span> /ctCreateEndpoint</code></pre></div>
-    <div class="method-summary">Create or Register Connect Token (<span class="nickname">ctCreateEndpointPost</span>)</div>
-    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-create-request">Connect Token Create Request</a> or <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-register-request">Connect Token Register Request</a>.</div>
-
-
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
-
-    <h3 class="field-label">Request body</h3>
-    <div class="field-items">
-      <div class="param">connect-token-request-details <a href="#ConnectTokenRequestParametersModel">ConnectTokenRequestParametersModel</a> (required)</div>
-
-      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Connect Token request parameters </div>
-
-    </div>  <!-- field-items -->
-
-    <h3 class="field-label">Request headers</h3>
-    <div class="field-items">
-      
-    </div>  <!-- field-items -->
-
-
-
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-
-
-    <h3 class="field-label">Responses</h3>
-    <h4 class="field-label">201</h4>
-    The status code of a success response will be 201 Created.
-        <a href="#"></a>
-  </div> <!-- method -->
-  <hr/>
   <div class="method"><a name="eventsEndpointGet"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -1043,6 +961,48 @@ font-style: italic;
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
+  <div class="method"><a name="connectTokenUrlGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /connectTokenUrl</code></pre></div>
+    <div class="method-summary">Get Connect Token Details (<span class="nickname">connectTokenUrlGet</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-details-request">Connect Token Details Request</a>.</div>
+
+
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>""</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="heaader">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    The status code of a success response will be 200.
+        <a href="#ConnectTokenDataModel">ConnectTokenDataModel</a>
+  </div> <!-- method -->
+  <hr/>
   <div class="method"><a name="connectTokenUrlPatch"/>
     <div class="method-path">
     <a class="up" href="#__Methods">Up</a>
@@ -1080,6 +1040,46 @@ font-style: italic;
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
     The status code of a success response will be 200.
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="ctCreateEndpointPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /ctCreateEndpoint</code></pre></div>
+    <div class="method-summary">Create or Register Connect Token (<span class="nickname">ctCreateEndpointPost</span>)</div>
+    <div class="method-notes">See <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-create-request">Connect Token Create Request</a> or <a href="https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-register-request">Connect Token Register Request</a>.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="heaader">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">connect-token-request-details <a href="#ConnectTokenRequestParametersModel">ConnectTokenRequestParametersModel</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Connect Token request parameters </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      
+    </div>  <!-- field-items -->
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    The status code of a success response will be 201 Created.
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>

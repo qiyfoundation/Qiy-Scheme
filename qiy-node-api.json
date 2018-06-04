@@ -2664,7 +2664,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "Connect",
+                    "Connect Token",
                     "Relying Party"
                 ],
                 "responses": {
@@ -2973,7 +2973,7 @@
                     }
                 ],
                 "tags": [
-                    "Connect",
+                    "Connect Token",
                     "Relying Party"
                 ],
                 "responses": {
