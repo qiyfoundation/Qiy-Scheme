@@ -1376,7 +1376,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Account](Definitions.md#account)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account) requests
+[Qiy Node API](Qiy%20Node%20API.json)         | [Account](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Account) Requests
 [Qiy Node API](Qiy%20Node%20API.json)         | [Account Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#AccountModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [5.1 Account Model](#51-account-model)
 
@@ -1936,7 +1936,7 @@ Specification | Reference
 Specification | Reference
 ------------- | ---------
 [Definitions](Definitions.md)                 | [Qiy Node Message](Definitions.md#qiy-node-message)
-[Qiy Node API](Qiy%20Node%20API.json)         | [Message](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Message)
+[Qiy Node API](Qiy%20Node%20API.json)         | [Message](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#Message) Requests
 [Qiy Node API](Qiy%20Node%20API.json)         | [Message Model](http://htmlpreview.github.io/?https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/qiy-node-api.html#MessageModel)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [2.8 Message Requests](#28-message-requests)
 [Qiy Node Protocol](Qiy%20Node%20Protocol.md) | [3.3 Message Events](#33-message-events)
