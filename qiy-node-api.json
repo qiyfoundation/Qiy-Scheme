@@ -359,7 +359,13 @@
                     "$ref": "#/definitions/ConnectTokenMetadataModel"
                 },
                 {
-                    "$ref": "#/definitions/ConnectTokenJsonModel"
+		    "description": "Connect Token Json.",
+		    "properties": {
+		        "json": {
+                            "$ref": "#/definitions/ConnectTokenJsonModel"
+			}
+		    },
+		    "type": "object"
                 }
             ],
             "description": "Connect Token details",
