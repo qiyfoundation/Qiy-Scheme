@@ -882,6 +882,9 @@ The [Candidates Message](#candidates-message) is a [Qiy Node Message](#qiy-node-
 # 5 Models
 
 This chapters describes the [Entity Types](#entity-type) of the [Qiy Node Interface](Definitions.md#qiy-node-interface).
+The most important ones and their relations are displayed below:
+
+![Entity Types - Qiy Node Interface](./images/Entity_Types_-_Qiy_Node_Interface.jpg)
 
 ## 5.1 Account Model
 
