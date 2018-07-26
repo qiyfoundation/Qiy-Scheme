@@ -3,8 +3,6 @@
 ## Abstract
 The Qiy Scheme defines a framework for individual users, companies and governmental organisations to safely control and exchange personal data. This document describes the process the Qiy Scheme.
 
-# Content
-
 # 1 Qiy Scheme
 This document describes the process of further development of the Qiy Scheme. The Qiy Scheme is a global system for the exchange of personal data under the control of the individual. It consists of technical protocols, regulations and a governance model. The Qiy Scheme is an open standard and a set of technical, operational and business rules and agreements which fosters interoperability between the interconnected persons, organisations, products, services and devices, which enables the exchange of data between Data Providers, Individuals and Relying Parties under the control of the Individual. The Qiy Scheme regulates issues such as, functionality, security, reliability levels, access criteria, communication, liabilities and availability.
 
