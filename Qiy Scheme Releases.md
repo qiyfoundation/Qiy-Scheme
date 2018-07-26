@@ -26,4 +26,4 @@ The governance model of the Qiy Scheme is based on a separation of powers and on
 The license agreement between the Qiy Foundation and Access Providers shall contain an obligation for Access Providers to ensure that their clients are aware of this and that their clients agree to respect this rule and shall act accordingly.
 
 ## 3.3 Technical protocols
-Amendments to the technical protocols that relate to security need to be implemented immediately.
+Amendments to the technical protocols that relate to security shall be announced as such and need to be implemented immediately.
