@@ -17,14 +17,15 @@ Signing this CLA is for your protection as a Contributor as well as for the prot
 In the process of developing the Qiy Scheme, Parties may exchange confidential information. If that is the case, it is important that they agree upon mutual confidentiality and non-disclosure of such information. Therefore, Contributors may be asked to sign a separate Mutual Confidentiality and Non-Disclosure Agreement, which will then become an integral part of this CLA.
 
 # CLA
-Employer (Company/Organization)
-Registration No.
-Official Address
-Mailing Address
-Name of Contributor
-Position/Function
-Telephone No.
-E-mail
+|         |            |
+| ------------- |-------------|
+| Employer      |  |
+| Registration No.    |       |
+| Official Address |     |
+| Mailing Address |     |
+| Bame of Contributor |     |
+| Telephone No.|     |
+| E-mail |     |
 
 By signing this Contributor License Agreement (hereinafter: CLA) you accept the below terms and conditions and you agree that these shall apply to your past, present and future Contributions to the Qiy Scheme. In return, the Qiy Foundation shall not use your Contributions in a way that is contrary to the public interest or inconsistent with the non-profit status and bylaws of the Qiy Foundation, which were in effect at the time of the Contribution. Except for the license granted hereby to the Qiy Foundation, you retain all rights, titles, and interests in and to your Contributions.
 
@@ -132,8 +133,11 @@ I hereby declare that,
 * If deemed necessary by the Qiy Foundation, my organisation accepts to enter into a separate Mutual Confidentiality and Non-Disclosure Agreement with the Qiy Foundation.
 
 I hereby acknowledge that our organisation will fully respect the consequences as outlined in the Contributor License Agreement.
-Signed in [PLACE], on [DATE], by
-[ORGANISATION]
-[NAME], [FUNCTION]
-[SIGNATURE]
+Signed in 
+|         |            |   |
+| ------------- |------------| -----|-----|
+| Place      |  |  Date|
+| Organisation      |       |    |
+| Name|       |  Position/Function  ||
 
+Signature
