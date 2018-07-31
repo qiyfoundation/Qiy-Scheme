@@ -135,9 +135,9 @@ I hereby declare that,
 I hereby acknowledge that our organisation will fully respect the consequences as outlined in the Contributor License Agreement.
 Signed in 
 |         |            |   | |
-| ------------- |-------------|-----|----|
-| Place      |  |  Date| |
+|-------------|-------------|-----|----|
+| Place      |  |Date| |
 | Organisation      |       |    | |
-| Name|       |  Position/Function  | |
+| Name|       |Position/Function  | |
 
 Signature
