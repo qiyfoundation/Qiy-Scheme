@@ -6,7 +6,7 @@ The Qiy Foundation is the custodian of the Qiy Scheme.
 The different elements, which constitute the Qiy Scheme, are jointly developed by Contributors under the supervision of the Qiy Foundation.
 
 # Transfer of ownership and control
-It is essential to clarify the ownership and control over and the use of intellectual property rights (hereinafter ñ 'IPR') and other forms of ownership or control in regard to Contributions by any person participating in the development of the Qiy Scheme (hereinafter - 'Contributor'). For this reason, each Contributor must sign a Contributor License Agreement (hereinafter ñ 'CLA'). The terms of this CLA are based upon and implement the Qiy Foundation's IPR Policy Rules and Guidelines.
+It is essential to clarify the ownership and control over and the use of intellectual property rights (hereinafter ‚Äì 'IPR') and other forms of ownership or control in regard to Contributions by any person participating in the development of the Qiy Scheme (hereinafter - 'Contributor'). For this reason, each Contributor must sign a Contributor License Agreement (hereinafter ‚Äì 'CLA'). The terms of this CLA are based upon and implement the Qiy Foundation's IPR Policy Rules and Guidelines.
 
 This CLA sets forth the terms under which a Contributor agrees to participate in the above development processes. 
 Each Contributor grants a non-exclusive license to the Qiy Foundation as specified in this CLA, in respect of any Contribution, which may qualify as an original work under copyright law. The collective rights in the work, which is created by or on the basis of Contributions submitted by Contributors, will be vested exclusively in the Qiy Foundation. In return, the Qiy Foundation shall grant Contributors the necessary rights that they may need in order to use the works to which they contributed, for their own commercial or non-commercial purposes. However, their use of those rights must not conflict with or modify the development process which takes place under this CLA. Except for the limited definitions specifically referenced herein, this CLA sets forth the Contributor's entire licensing obligations and supersedes all prior negotiations, agreements, understandings, and obligations with respect thereto.
@@ -17,15 +17,15 @@ Signing this CLA is for your protection as a Contributor as well as for the prot
 In the process of developing the Qiy Scheme, Parties may exchange confidential information. If that is the case, it is important that they agree upon mutual confidentiality and non-disclosure of such information. Therefore, Contributors may be asked to sign a separate Mutual Confidentiality and Non-Disclosure Agreement, which will then become an integral part of this CLA.
 
 # CLA
-Employer (Company/Organization)
-Registration No.
+Employer (Company/Organization)
+Registration No.
 Official Address
-Mailing Address
-Name of Contributor
-Position/Function
+Mailing Address
+Name of Contributor
+Position/Function
 Telephone No.
-E-mail
-
+E-mail
+
 By signing this Contributor License Agreement (hereinafter: CLA) you accept the below terms and conditions and you agree that these shall apply to your past, present and future Contributions to the Qiy Scheme. In return, the Qiy Foundation shall not use your Contributions in a way that is contrary to the public interest or inconsistent with the non-profit status and bylaws of the Qiy Foundation, which were in effect at the time of the Contribution. Except for the license granted hereby to the Qiy Foundation, you retain all rights, titles, and interests in and to your Contributions.
 
 # 1. GRANT OF LICENSE
@@ -42,7 +42,7 @@ By signing this Contributor License Agreement (hereinafter: CLA) you accept the 
 2.2	I hereby represent and warrant that I have the necessary intellectual property rights and any other ownership rights, and am therefore legally entitled to license my Contributions to a Specification under Article 1 to the Qiy Foundation. 
 
 2.3	Other than as expressly provided in Article 2.2: 
-1. Source code contributed for inclusion in a Specification is provided ìAS ISî with no warranties, express or implied, including but not limited to, the warranties of merchantability, fitness for a particular purpose and non-infringement of intellectual property rights and 
+1. Source code contributed for inclusion in a Specification is provided ‚ÄúAS IS‚Äù with no warranties, express or implied, including but not limited to, the warranties of merchantability, fitness for a particular purpose and non-infringement of intellectual property rights and 
 1. I shall not be held liable in any event for any damages whatsoever (including, without limitation, damages for loss of profits, business interruption, loss of information, or any other pecuniary loss) arising out of or related to the use of or inability to use the source code, which I contributed to a Specification.
 1. With respect to the copyright licenses set out in Article 1, no patent license is granted by implication, estoppel or otherwise. 
 
@@ -92,7 +92,7 @@ If to Qiy Foundation:
 legal-affairs@qiyfoundation.org
 
 If to Contributor:
-[Ö]
+[‚Ä¶]
 
 9.2. Any notice required by this Agreement shall be deemed to have been properly given when delivered in person, when sent by electronic mail with receipt of confirmation of delivery, or when scheduled for delivery by internationally recognized courier service. Copies of such notices shall be made to the designated attorney, if any.
 
@@ -113,14 +113,14 @@ I agree that I will notify the Qiy Foundation of any facts or circumstances of w
 Signed: __________________________________ Date: ________________
 
 
-# Annex to Qiy Foundation ñContributor License Agreement
+# Annex to Qiy Foundation ‚ÄìContributor License Agreement
 (for individuals with an employment relationship)
 
 Employer's Declaration
 
 I hereby declare that,
 1. I can officially represent my organisation and am authorized to issue and sign this Declaration;
-1. There is an employment relationship between our organisation and [Ö] (hereinafter referred to as 'Contributor');
+1. There is an employment relationship between our organisation and [‚Ä¶] (hereinafter referred to as 'Contributor');
 1. Contributor, as an employee of our organisation, has been granted permission to sign a Contributor License Agreement with the Qiy Foundation;
 1. Our organisation is familiar with the nature and contents of the above Contributor License Agreement;
 1. In respect of those rights created by Contributor which will by law be vested in my organisation, my organisation hereby grants to the Qiy Foundation a1.1	Subject to the terms and conditions of this CLA, I hereby grant to the Qiy Foundation an irrevocable, non-exclusive, worldwide, royalty-free, sub-licensable (except as otherwise stated in this section) license to communicate and/or make available to the public, reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute my Contributions to the development of the Qiy Scheme and to create derivative works (including translations, adaptations, alterations).
