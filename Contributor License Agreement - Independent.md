@@ -17,8 +17,9 @@ Signing this CLA is for your protection as a Contributor as well as for the prot
 In the process of developing the Qiy Scheme, Parties may exchange confidential information. If that is the case, it is important that they agree upon mutual confidentiality and non-disclosure of such information. Therefore, Contributors may be asked to sign a separate Mutual Confidentiality and Non-Disclosure Agreement, which will then become an integral part of this CLA.
 
 # CLA
+|               |               |
 | ------------- |-------------  | 
-| FullnName     |               |
+| Full Name     |               |
 | Address       |               |
 | Telephone No. |               |
 | Email         |               |
