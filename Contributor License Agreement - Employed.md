@@ -125,15 +125,17 @@ I hereby declare that,
 1. Contributor, as an employee of our organisation, has been granted permission to sign a Contributor License Agreement with the Qiy Foundation;
 1. Our organisation is familiar with the nature and contents of the above Contributor License Agreement;
 1. In respect of those rights created by Contributor which will by law be vested in my organisation, my organisation hereby grants to the Qiy Foundation a1.1	Subject to the terms and conditions of this CLA, I hereby grant to the Qiy Foundation an irrevocable, non-exclusive, worldwide, royalty-free, sub-licensable (except as otherwise stated in this section) license to communicate and/or make available to the public, reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute my Contributions to the development of the Qiy Scheme and to create derivative works (including translations, adaptations, alterations).
-* In respect of Contributions in the form of source code for inclusion in a Specification that forms part of the Qiy Scheme, my organisation hereby grants, without monetary compensation or any restriction other than as set out in this declaration, an irrevocable, non-exclusive, worldwide, royalty-free, sub-licensable license to prepare derivative works of (including translations, adaptations, alterations) the contributed source code and to reproduce, display, distribute and execute the contributed source code and derivative works for the following limited purposes:
+1. In respect of Contributions in the form of source code for inclusion in a Specification that forms part of the Qiy Scheme, my organisation hereby grants, without monetary compensation or any restriction other than as set out in this declaration, an irrevocable, non-exclusive, worldwide, royalty-free, sub-licensable license to prepare derivative works of (including translations, adaptations, alterations) the contributed source code and to reproduce, display, distribute and execute the contributed source code and derivative works for the following limited purposes:
 1. To the Qiy Foundation and Contributors to evaluate the source code and any derivative works thereof for determining whether to support the inclusion of the source code in a Specification;
 1. To the Qiy Foundation to communicate and/or make the source code in a Specification available to the public; and
 1. To any Access Provider, Data Provider, Relying Party ot other User to use the source code and any derivative works thereof for inclusion in their implementation of the Qiy Scheme;.
-* My organisation shall respect the Mutual Confidentiality and Non-Disclosure Agreement which the Contributor may be asked to sign with the Qiy Foundation in the process of developing the Qiy Scheme;
-* If deemed necessary by the Qiy Foundation, my organisation accepts to enter into a separate Mutual Confidentiality and Non-Disclosure Agreement with the Qiy Foundation.
+1. My organisation shall respect the Mutual Confidentiality and Non-Disclosure Agreement which the Contributor may be asked to sign with the Qiy Foundation in the process of developing the Qiy Scheme;
+1. If deemed necessary by the Qiy Foundation, my organisation accepts to enter into a separate Mutual Confidentiality and Non-Disclosure Agreement with the Qiy Foundation.
 
 I hereby acknowledge that our organisation will fully respect the consequences as outlined in the Contributor License Agreement.
+
 Signed in 
+
 |         |            |   | |
 |-------------|-------------|-----|----|
 | Place      |  |Date| |
