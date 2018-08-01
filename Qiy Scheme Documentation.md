@@ -13,7 +13,7 @@ The Qiy Scheme forms the basis of the Qiy Trust Network: the technical infrastru
 The Qiy Scheme is managed by the Qiy Foundation, which fulfills the role of Scheme Authority. The Qiy Foundation is a not-for-profit organisation with a governance model that makes it independent from market forces and political influence. The organisation is funded by annual contributions from Member organisations. The Qiy Foundation works closely together with national and international parties in the public and private sectors to enrich and maintain the Qiy Scheme. 
 
 # 4 Development process
-The development process starts at the level of Work Streams. Everyone is free to contribute their suggestions to the Work Streams.The process ends by an instruction of the Supervisory Authority to merge new elements with the existing version of the Qiy Scheme.
+The development process starts at the level of Work Streams. Everyone is free to contribute their suggestions to the Work Streams.The process ends by an instruction of the Executive Board to merge new elements with the existing version of the Qiy Scheme.
 
 ## 4.1 Parties fulfilling a role in the process
 
@@ -25,7 +25,7 @@ Work Streams provide a forum for discussion and have as their main tasks the pre
 
 It is the responsibility of the Executive Board of the Qiy Foundation to create or dissolve a Work Stream and to approve its Terms of Reference.
 
-A Work Stream prepares drafts concerning the management, further development and maintenance of the Qiy Scheme for consideration by the Supervisory Authority.
+A Work Stream prepares drafts concerning the management, further development and maintenance of the Qiy Scheme for consideration by the Executive Board.
 
 A Work Stream may establish working groups, if required. When this is the case, the Work Stream shall decide on the rules for the working group, within the scope of the Qiy Foundation’s Rules & Regulations and the Work Stream Procedures.
 
@@ -40,22 +40,22 @@ The Work Stream Procedures adopted by the Executive Board of the Qiy Foundation 
 ### Review Board
 It is the task of the Review Board to review the work of the different Work Streams and to seek the advice of both the User Voice and the Council of Regional Authorities. Where necessary, the Review Board will ask the Work Stream to reconsider their proposals in the light of the advice received. The procedural rules for the adoption of Work Stream pull requests apply.
 
-Members of the Review Board are nominated by the Executive Board of the Qiy Foundation, but selected and appointed by the Supervisory Authority. The Rules on the Selection and Appointment of members of the Review Board apply.
+Members of the Review Board are nominated by the Executive Board of the Qiy Foundation, but selected and appointed by the Executive Board. The Rules on the Selection and Appointment of members of the Review Board apply.
 
 ### User Voice
-The User Voice is an advisory panel of the Qiy Foundation. Its members represent the interests of the different user groups of the Qiy Scheme. Its role is to advise the Supervisory Authority on proposals made by Work Streams.
+The User Voice is an advisory panel of the Qiy Foundation. Its members represent the interests of the different user groups of the Qiy Scheme. Its role is to advise the Executive Board on proposals made by Work Streams.
 
 The Rules on the Selection and Appointment of members of the User Voice apply.
 
 ### Council of Regional Authorities
-The Council of Regional Authorities consists of representatives of the Regional Authorities. Its members represent the interests of the Regional Authorities. Its role is to advise the Supervisory Authority on proposals made by Work Streams.
+The Council of Regional Authorities consists of representatives of the Regional Authorities. Its members represent the interests of the Regional Authorities. Its role is to advise the Executive Board on proposals made by Work Streams.
 
 The Rules on the Selection and Appointment of members of the Council of Regional Authorities apply.
 
-### Supervisory Authority
-The Supervisory Authority is responsible for the management, further development and maintenance of the Qiy Scheme. Once it has accepted a new deliverable for the Qiy Scheme, it shall instruct the Review Board to merge the deliverable with the existing version of the Qiy Scheme. It will also assign a version number to each new deliverable.
+### Executive Board
+The Executive Board is responsible for the management, further development and maintenance of the Qiy Scheme. Once it has accepted a new deliverable for the Qiy Scheme, it shall instruct the Review Board to merge the deliverable with the existing version of the Qiy Scheme. It will also assign a version number to each new deliverable.
 
-The Rules on the Selection and Appointment of members of the Supervisory Authority apply.
+The Rules on the Selection and Appointment of members of the Executive Board apply.
 
 
 ## 4.2 Process
@@ -64,7 +64,18 @@ The Rules on the Selection and Appointment of members of the Supervisory Authori
 
 Contributors can create pull requests at any time. All pull requests will be reviewed by the Work Stream that is most relevant to the pull request in question. The Chairperson of a Work Streams will decide which of the pull requests is relevant to their work.
 
-The deliberations in a Work Stream result in a review request made to the Review Board. The Review Board will consider the review requests made by the different Work Streams in conjunction with each other. It will also verify whether all pull requests made by Contributors have been reviewed by the relevant Work Streams. The next step is that the Review Board initiates a review in conjunction with the User Voice and the Council of Regional Authorities. If necessary the Review Board can request changes to the pull request. If no changes are requested the Review Board will request the Supervisory Authority for approval. Once approved, the Review Board will merge the pull request.
+The deliberations in a Work Stream result in a review request made to the Review Board. The Review Board will consider the review requests made by the different Work Streams in conjunction with each other. It will also verify whether all pull requests made by Contributors have been reviewed by the relevant Work Streams. The next step is that the Review Board initiates a review in conjunction with the User Voice and the Council of Regional Authorities. If necessary the Review Board can request changes to the pull request. If no changes are requested the Review Board will request the Executive Board for approval. Once approved, the Review Board will merge the pull request.
 
 
+# Annex Diagram source code
+```
+title Qiy Scheme Documentation
 
+Contributor -> Work Stream: Pull request
+Work Stream -> Work Stream: Review
+Work Stream -> Review Board: 
+note over Review Board, User Voice, Council: Review
+Review Board -> Executive Board:
+Executive Board -> Review Board:
+Review Board -> Review Board: Merge
+```
