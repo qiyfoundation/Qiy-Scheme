@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage his [Connect Tokens](../Definitions.md#connect-token).
+This document describes how a [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can manage his [Connect Tokens](../Qiy%20Node%20Protocol.md#connect-token).
 
 # Contents
 
@@ -22,13 +22,13 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 # Primary Actors
 
-* [Qiy User](../Definitions.md#qiy-user)
+* [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user)
 * [Qiy Trust Network](../Definitions.md#qiy-trust-network)
 
 
 # Preconditions
 
-1.  The [Qiy User](../Definitions.md#qiy-user) has a [Connect Token](../Definitions.md#connect-token).
+1.  The [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) has a [Connect Token](../Qiy%20Node%20Protocol.md#connect-token).
 
 
 # Basic Flow: Delete Connect Token
@@ -38,16 +38,16 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 ## 1. The Qiy User requests the Qiy Trust Network to delete a Connect Token
 
-The [Qiy User](../Definitions.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Connect Token](../Definitions.md#connect-token) by using its [Connect Token Uri](../Definitions.md#connect-token-uri) in a [Connect Token Delete Request](../Definitions.md#connect-token-delete-request).
+The [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Connect Token](../Qiy%20Node%20Protocol.md#connect-token) using a [Connect Token Delete Request](../Qiy%20Node%20Protocol.md#connect-token-delete-request).
 
 ## 2. The Qiy Trust Network deletes the Connect Token
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Connect Token](../Definitions.md#connect-token).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Connect Token](../Qiy%20Node%20Protocol.md#connect-token).
 
 
 # Postconditions
 
-1. The [Connect Token](../Definitions.md#connect-token) does not exist anymore.
+1. The [Connect Token](../Qiy%20Node%20Protocol.md#connect-token) does not exist anymore.
 
 
 # Extensions
@@ -55,17 +55,17 @@ The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Connec
 
 ## E1 List Connect Tokens
 
-A [Qiy User](../Definitions.md#qiy-user) can list his [Connect Tokens](../Definitions.md#connect-token) using a [Connect Tokens Request](../Definitions.md#connect-tokens-request).
+A [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can list his [Connect Tokens](../Qiy%20Node%20Protocol.md#connect-token) using a [Connect Tokens Request](../Qiy%20Node%20Protocol.md#connect-tokens-request).
 
 
 ## E2 Get Connect Token Details
 
-A [Qiy User](../Definitions.md#qiy-user) can get the details of a [Connect Token](../Definitions.md#connect-token) using a [Connect Token Details Request](../Definitions.md#connect-token-details-request).
+A [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can get the details of a [Connect Token](../Qiy%20Node%20Protocol.md#connect-token) using a [Connect Token Details Request](../Qiy%20Node%20Protocol.md#connect-token-details-request).
 
 
 ## E3 Update Connect Token
 
-A [Qiy User](../Definitions.md#qiy-user) can change [Attributes](../Definitions.md#attribute) of a [Connect Token](../Definitions.md#connect-token) using a [Connect Token Update Request](../Definitions.md#connect-token-update-request).
+A [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can change [Attributes](../Definitions.md#attribute) of a [Connect Token](../Qiy%20Node%20Protocol.md#connect-token) using a [Connect Token Update Request](../Qiy%20Node%20Protocol.md#connect-token-update-request).
 
 
 # Diagram Source Code

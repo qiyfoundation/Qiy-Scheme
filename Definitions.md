@@ -16,11 +16,32 @@ The principle which authorizes the access of an [Individual](#individual) to his
 ### Access Provider
 An organisation which provides [Qiy Users](#qiy-user) access to the [Qiy Trust Network](#qiy-trust-network).
 
+### Account
+A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider).
+
+### Account Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of an [Account](#account).
+
+### Account Register Request
+A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
+
+### Account Unregister Request
+A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
+
+### Account Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of an [Account](#account).
+
 ### Accountability
 [Service Providers](#service-provider) are responsible for, and must be able to demonstrate compliance with the [Qiy Trust Principles](#qiy-trust-principles).
 
+### Accounts Request
+A [Qiy Node Request](#qiy-node-request) to list [Accounts](#account).
+
 ### Anonymous
 Not directly or indirectly traceable to a natural person.
+
+### API
+See [Application Programming Interface](#application-programming-interface).
 
 ### Application
 An [Application Service](#application-service) or software for such a service. 
@@ -30,6 +51,9 @@ A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create
 
 ### Application Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Application Programming Interface
+As described in https://en.wikipedia.org/wiki/Application_programming_interface.
 
 ### Application Service
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap09.html#_Toc489946075
@@ -73,11 +97,11 @@ A [Node](#node) which hosts one or more [Carriers](#carrier).
 ### Carrier Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
 
-### Catalogue Register Request
-A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) with an [Access Provider](#access-provider) and include it in a [Service Catalogue](#service-catalogue).
+### Catalogue Details Request
+A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
 
-### Catalogue Unregister Request
-A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) with an [Access Provider](#access-provider) and remove it from a [Service Catalogue](#service-catalogue).
+### Catalogues Request
+A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
 ### Communication Network
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090 
@@ -136,15 +160,15 @@ Any freely given, specific, informed and unambiguous indication of the data subj
 ### Consent Audit Log
 An audit log of a [Consent](#consent) which is accessible via its [Consent Repository](#consent-repository).
 
-### Consent Credentials
-Credentials which provide access to a [Consent Repository](#consent-repository).
+### Consent Credential
+Credential which provide access to a [Consent Repository](#consent-repository).
 
 
 ### Consent Data Descriptor
 [Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
 
-### Consent Data Provider Credentials
-[Consent Credentials](#consent-credentials) for a [Data Provider](#data-provider).
+### Consent Data Provider Credential
+[Consent Credential](#consent-credential) for a [Data Provider](#data-provider).
 
 ### Consent Delete Request
 A [Qiy Node Request](#qiy-node-request) which can be used to delete a [Consent](#consent).
@@ -170,17 +194,17 @@ A [Qiy Node Request](#qiy-node-request) which can be used to communicate the gra
 ### Consent Granted Event
 A [Qiy Node Event](#qiy-node-event) which can be used to communicate the granting or regranting of a [Consent](#consent).
 
-### Consent Individual Credentials
-[Consent Credentials](#consent-credentials) for an [Individual](#individual).
+### Consent Individual Credential
+[Consent Credential](#consent-credential) for an [Individual](#individual).
 
 ### Consent Notification Message
 A [Qiy Node Message](#qiy-node-message) which can be used to notify the registration of a [Consent](#consent).
 
-### Consent Relying Party Credentials
-[Consent Credentials](#consent-credentials) for a [Relying Party](#relying-party).
+### Consent Relying Party Credential
+[Consent Credential](#consent-credential) for a [Relying Party](#relying-party).
 
 ### Consent Repository
-A repository for a [Consent](#consent) which can only be accessed with the proper [Consent Credentials](#consent-credentials).
+A repository for a [Consent](#consent) which can only be accessed with the proper [Consent Credential](#consent-credential).
 
 ### Consent Request
 A [Qiy Node Request](#qiy-node-request) which can be used to [Request](#request) for a [Consent](#consent).
@@ -231,7 +255,10 @@ A [Business Role](#business-role), a specialisation of [Service Provider](#servi
 An [Identifier](#identifier) which can be used to identify a [Data Provider](#data-provider) within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Data Reference
-An [Operation Reference](#operation-reference) which can be used to obtain [Personal Data](#personal-data) of an [Individual](#individual).
+An [Operation Reference](#operation-reference) which can be used to consume a [Data Service](#data-service) by reference, namely to obtain [Personal Data](#personal-data) of an [Individual](#individual).
+
+### Data Reference Request
+An [Operation Reference Request](#operation-reference-request) for a [Data Reference](#data-reference).
 
 ### Data Service
 A [Service](#service), namely the provisioning of [Data](#data).
@@ -240,10 +267,28 @@ A [Service](#service), namely the provisioning of [Data](#data).
 A [Service Description](#service-description) of a [Data Service](#data-service).
 
 ### Data Source
-A [Data Service](#data-service) of a [Data Provider](#data-provider) that will be used to provide the [Personal Data](#personal-data) the use of which has been granted in a [Consent](#consent).
+A [Service Source](#service-source): a [Data Service](#data-service) that will be used to provide the [Personal Data](#personal-data) for a [Consent](#consent).
 
 ### Data Subject
 As defined in the [GDPR](#gdpr).
+
+### Data Type
+A type of [Data](#data).
+
+### Data Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Data Type](#data-type) in the [Service Library](#service-library).
+
+### Data Types Request
+A [Qiy Node Request](#qiy-node-request) to list the [Data Types](#data-type) that are registered in the [Service Library](#service-library).
 
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
@@ -264,6 +309,9 @@ A usage right for a [Resource](#resource) owned by some other [Entity](#entity).
 
 ### Escrow Agreement
 A legal document which defines the arrangement by which an [Entity](#entity) deposits an asset with an [Escrow Agent](#escrow-agent), who, in turn, makes a delivery to another [Entity](#entity) if and when the specified conditions of the contract are met.
+
+### Events Request
+A [Qiy Node Request](#qiy-node-request) to handle [Qiy Node Events](#qiy-node-event).
 
 ### Expiration Date
 The Expiration Date of the [Transition Phase](#transition-phase): 30 juni 2019, or any earlier date as set unilaterally by the [Scheme Authority](#scheme-authority).
@@ -305,6 +353,9 @@ An organisation that is capable of bearing legal rights and obligations, such as
 ### Legitimate Purpose
 A legal ground for the processing of [Personal Data](#personal-data).
 
+### Library Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Library](#service-library).
+
 ### License
 [Access Providers](#access-provider) require a [License](#license) to operate on the basis of the [Qiy Scheme](#qiy-scheme). Parties can apply for a [License](#license) which requires paying a fee and complying with the [Qiy Scheme](#qiy-scheme).
 
@@ -344,6 +395,24 @@ A [Qiy Node Event](#qiy-node-event) that notifies a [Receiver](#receiver) that h
 ### Messages Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](#qiy-node).
 
+### Message Type
+A type of [Qiy Node Message](#qiy-node-message).
+
+### Message Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Message Type](#message-type) in the [Service Library](#service-library).
+
+### Message Types Request
+A [Qiy Node Request](#qiy-node-request) to list [Message Types](#message-type) that are registered in the [Service Library](#service-library).
+
 ### Node
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946084
 
@@ -359,6 +428,9 @@ A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
 ### Operation
 A 'sub-service' which can be used to consume a [Service](#service).
 
+### Operation Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of an [Operation](#operation).
+
 ### Operation Execute Request
 A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](#reference) using an [Operation Reference](#operation-reference).
 
@@ -368,17 +440,44 @@ A [Business Object](#business-object) used by the [Service by Reference](#servic
 ### Operation Reference Message
 A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference).
 
+### Operation Reference Request
+A [Request](#request) for an [Operation Reference](#operation-reference).
+
 ### Operation Reference Request Message
-A [Qiy Node Message](#qiy-node-message) that can be used to [Request](#request) for [Operation References](#operation-reference).
+A [Qiy Node Message](#qiy-node-message) that can be used to convey a [Operation Reference Request](#operation-reference-request).
 
 ### Operation Register Request
-A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
+A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
 
 ### Operation Specification
 A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
 
 ### Operation Specification Request Message
 A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
+
+### Operation Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type] in the [Service Library](#service-library).
+
+### Operation Types Request
+A [Qiy Node Request](#qiy-node-request) to list the [Operation Types] that are registered in the [Service Library](#service-library).
+
+### Operation Unregister Request
+A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
+
+### Operation Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of an [Operation](#operation).
+
+### Operations Request
+A [Qiy Node Request](#qiy-node-request) to list [Operations](#operation).
 
 ### Path
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
@@ -400,8 +499,11 @@ A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent
 
 As defined in the [GDPR](#gdpr).
 
+### Portfolio Details Request
+A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
+
 ### Portfolio Register Message
-A [Qiy Node Message](#qiy-node-message) which can be used to add a [Service Provider](#service-provider) to a [Service Portfolio](#service-portfolio).
+A [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](#data-provider) to a [Service Portfolio](#service-portfolio).
 
 ### Pseudo ID
 An [Anonymous](#anoymous) [Attribute](#attribute) relating to an [Individual](#individual) which can either be persistent or transient.
@@ -417,6 +519,33 @@ Synonymous with [Identifier](#identifier) and [Local ID](#local-id).
 
 ### Public Key Infrastructure
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
+
+### Published Provider Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
+
+### Published Provider Register Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Published Provider Unregister Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Published Provider Update Request
+A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to update details of a [Service Provider](#service-provider).
+
+### Published Providers Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Providers](#service-provider).
+
+### Published Service Details Request
+A [Qiy Node Request](#qiy-node-request) to get details of a [Service](#service) that has been published in a [Service Catalogue](#service-catalogue).
+
+### Published Service Register Request
+A [Qiy Node Request](#qiy-node-request) which can be used to register a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and include it in [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
+
+### Published Service Unregister Request
+A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Service](#service) of a [Service Provider](#service-provider) with an [Access Provider](#access-provider) and remove it from the [Service Catalogue](#service-catalogue) of the [Service Provider](#service-provider).
+
+### Published Services Request
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Services](#service) in a [Service Catalogue](#service-catalogue).
 
 ### Qiy App
 A [Qiy Application](#qiy-application) that can be installed on a smart phone or similar device.
@@ -437,10 +566,13 @@ An organization underwriting the vision and the mission of the [Qiy Foundation](
 A [Technology Service](#technology-service) that functions as a point of entry for a [Qiy User](#qiy-user) to the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
-A [Technology Interface](#technology-interface) of the [Qiy Node](#qiy-node) that is part of the [Qiy Open Standard](#qiy-open-standard).
+The [API](#api) of the [Qiy Node Interface](#qiy-node-interface) which is part of the [Qiy Open Standard](#qiy-open-standard).
 
-### Qiy Node Credentials
-The set of [Credentials](#credential) that can be used to access a [Qiy Node](#qiy-node).
+### Qiy Node Credential
+The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node).
+
+### Qiy Node Create Request
+A [Qiy Node Request](#qiy-node-request) that can be used to create a [Qiy Node](#qiy-node).
 
 ### Qiy Node Delete Request
 A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node](#qiy-node).
@@ -456,6 +588,9 @@ An [Identifier](#identifier) which can be used to identify a [Qiy Node](#qiy-nod
 
 ### Qiy Node Implementation
 An [Application](#application) which can be used to realize a [Qiy Node](#qiy-node).
+
+### Qiy Node Interface
+The [Technology Interface](#technology-interface) of a [Qiy Node](#qiy-node).
 
 ### Qiy Node Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
@@ -562,11 +697,29 @@ A pattern for consuming [Services](#service) indirectly using [References](#refe
 ### Service Catalogue
 A [Business Object](#business-object) for information about all the [Services](#service) that a [Service Provider](#service-provider) can provide.
 
-### Service Credentials
-[Credentials](#credential) for accessing a [Service Endpoint](#service-endpoint).
+### Service Credential
+[Credential](#credential) for accessing a [Service Endpoint](#service-endpoint).
+
+### Service Credential Details Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
+
+### Service Credential Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service Credential](#service-credential) for a [Data Source](#data-source) of a [Consent](#consent).
 
 ### Service Credentials Request Message
-A [Qiy Node Message](#qiy-node-message) for requesting [Service Credentials](#service-credentials).
+A [Qiy Node Message](#qiy-node-message) for requesting [Service Credentials](#service-credential).
+
+### Service Credentials Response Message
+A [Qiy Node Message](#qiy-node-message) for providing [Service Credentials](#service-credential).
+
+### Service Credential Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
+
+### Service Credential Update Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to update a [Service Credential](#service-credential) of a [Data Source](#data-source) of a [Consent](#consent).
+
+### Service Credentials Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Credentials](#service-credential).
 
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
@@ -598,20 +751,32 @@ A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Servi
 ### Service Provider Id
 The [Identity](#identity) of the [Service Provider](#service-provider) as registered by the [Access Provider](#access-provider).
 
-### Service Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service](#service).
-
 ### Service Provider Register Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+See [Provider Register Request].
 
 ### Service Provider Unregister Request
-A [Qiy Node Request](#qiy-node-request) for [Access Providers](#access-provider) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+See [Provider Unregister Request].
 
 ### Service Source
-A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
+A [Service](#service) of a [Service Provider](#service-provider) that provides input services required by another [Service](#service).
 
-### Service Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service).
+### Service Type
+A type of [Service](#service).
+
+### Service Type Details Request
+A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Type](#service-type) in the [Service Library](#service-library).
+
+### Service Type Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service Type](#service-type) in the [Service Library](#service-library).
+
+### Service Type Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service Type](#service-type) in the [Service Library](#service-library).
+
+### Service Type Update Request
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Service Type](#service-type) in the [Service Library](#service-library).
+
+### Service Types Request
+A [Qiy Node Request](#qiy-node-request) to list [Service Types](#service-type) that are registered in the [Service Library](#service-library).
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
@@ -619,8 +784,32 @@ A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](
 ### Source Candidates Message
 A [Qiy Node Message](#qiy-node-message) to propose candidate [Data Sources](#data-source) for a [Consent](#consent).
 
+### Source Details Request
+A [Qiy Node Request](#qiy-node-request) for [Qiy Users](#qiy-user) to obtain details of a [Data Source](#data-source) of a [Consent](#consent).
+
 ### Source Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) as source for a [Service](#service).
+A [Qiy Node Request](#qiy-node-request) to register a [Service](#service) as a [Service Source](#service-source).
+
+### Source Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) as a [Service Source](#service-source).
+
+### Source Update Request
+A [Qiy Node Request](#qiy-node-request) to update a [Service Source](#service-source).
+
+### Subscription
+A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider) with regard to a [Service](#service).
+
+### Subscription Details Request
+A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Subscription](#subscription).
+
+### Subscription Register Request
+A [Qiy Node Request](#qiy-node-request) which can be used to register a [Subscription](#subscription) to a [Service](#service).
+
+### Subscription Unregister Request
+A [Qiy Node Request](#qiy-node-request) which can be used to unregister a [Subscription](#subscription) to a [Service](#service).
+
+### Subscriptions Request
+A [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscriptions](#subscription) in a [Service Portfolio](#service-portfolio).
 
 ### Substitute Access Provider
 An [Access Provider](#access-provider) that has been degignated by the Scheme Authority to replace te original [Access Provider](#access-provider) in case of default for any reason.

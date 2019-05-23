@@ -3,7 +3,7 @@
 
 # Abstract
 
-This document describes how [Service Providers](../Definitions.md#service-provider) and [Access Providers](../Definitions.md#access-provider) manage [Service Catalogues](../Definitions.md#service-catalogue).
+This document describes how [Service Providers](../Qiy%20Node%20Protocol.md#service-provider) and [Access Providers](../Qiy%20Node%20Protocol.md#access-provider) manage [Service Catalogues](../Qiy%20Node%20Protocol.md#service-catalogue).
 
 
 # Contents
@@ -22,32 +22,32 @@ This document describes how [Service Providers](../Definitions.md#service-provid
 
 # Primary Actors
 
-* [Service Provider](../Definitions.md#service-provider)
+* [Service Provider](../Qiy%20Node%20Protocol.md#service-provider)
 * [Qiy Trust Network](../Definitions.md#qiy-trust-network)
 
 
 # Preconditions
 
-1. [Service Provider](../Definitions.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+1. [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) has access to the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
 
 
 # Basic Flow: Service Provider registers a Service
 
-The [Service Provider](../Definitions.md#service-provider) can register a [Service](../Definitions.md#service) using a [Catalogue Register Request](../Definitions.md#catalogue-register-request).
+The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can register a [Service](../Qiy%20Node%20Protocol.md#service) using a [Published Service Register Request](../Qiy%20Node%20Protocol.md#published-service-register-request).
 
 ![Register Service](../images/Register_Service_-_UC11.png)
 
 
 # Postconditions
 
-1. The [Service](../Definitions.md#service) is included in the [Service Catalogue](../Definitions.md#service-catalogue) of the [Service Provider](../Definitions.md#service-provider).
+1. The [Service](../Qiy%20Node%20Protocol.md#service) is included in the [Service Catalogue](../Qiy%20Node%20Protocol.md#service-catalogue) of the [Service Provider](../Qiy%20Node%20Protocol.md#service-provider).
 
 
 # Extensions
 
 ## E1. The Service Provider unregisters a Service
 
-The [Service Provider](../Definitions.md#service-provider) can uregister a [Service](../Definitions.md#service) using a [Catalogue Unregister Request](../Definitions.md#catalogue-unregister-request).
+The [Service Provider](../Qiy%20Node%20Protocol.md#service-provider) can unregister a [Service](../Qiy%20Node%20Protocol.md#service) using a [Published Service Unregister Request](../Qiy%20Node%20Protocol.md#published-service-unregister-request).
 
 ![Unregister Service](../images/Unregister_Service_-_UC11.png)
 

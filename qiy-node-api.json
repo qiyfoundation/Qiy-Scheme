@@ -1,0 +1,4360 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.0.0",
+        "title": "Qiy Node API",
+        "description": "RESTful API documentation of the [Qiy Node API](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-api).",
+        "license": {
+            "name": "Qiy Foundation License for the Qiy Scheme",
+            "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/master/LICENSE.md"
+        },
+        "termsOfService": "https://github.com/qiyfoundation/Qiy-Scheme",
+        "contact": {
+            "name": "Work Stream Functionality & Technology",
+            "url": "https://github.com/qiyfoundation/Qiy-Scheme/projects/2",
+            "email": "info@qiyfoundation.org"
+        }
+    },
+    "host": "access.provider.host",
+    "basePath": "/qiy-node-implementation/api",
+    "schemes": [
+        "https"
+    ],
+    "definitions": {
+        "AccountModel": {
+            "description": "Account Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Account links.",
+                    "properties": {
+                        "provider": {
+                            "description": "Service Provider (publishedProviderUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Account (accountUrl)",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "self",
+                        "provider"
+                    ],
+                    "type": "object"
+                },
+                "persistentIds": {
+                    "description": "Persistent Ids.",
+                    "items": {
+                        "$ref": "#/definitions/PersistentIdModel"
+                    },
+                    "type": "array" 
+                },
+                "state": {
+                    "description": "State of the account.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "AccountsModel": {
+            "description": "List of Accounts.",
+            "items": {
+                "description": "Account (accountUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "ApiModel": {
+            "properties": {
+                "currentVersion": {
+                    "type": "string",
+                    "description": "Api version.",
+                    "maxItems": 1,
+                    "minItems": 1
+                },
+                "id": {
+                    "description": "[Qiy Node Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-id). This property is only included when the request is authenticated.",
+                    "type": "string",
+                    "maxItems": 1,
+                    "minItems": 0
+                },
+                "links": {
+                    "$ref": "#/definitions/ApiLinksModel"
+                }
+            },
+            "required": [
+                "currentVersion",
+                "links"
+            ],
+            "type": "object"
+        },
+        "ApiLinksModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/EndpointAddressesModel"
+                }
+            ]
+        },
+        "CandidateModel": {
+            "description": "Candidate Model.",
+            "properties": {
+                "service": {
+                    "description": "Data Service (publishedServiceUrl).",
+                    "format": "url",
+                    "type": "string"
+                },
+                "account": {
+                    "description": "Linked Account (accountUrl).",
+                    "format": "url",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "service"
+            ],
+            "type": "object"
+        },
+        "CandidatesMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+                                    "type": "string"
+                                },
+                                "candidates": {
+                                    "$ref": "#/definitions/CandidatesModel"
+                                }
+                            },
+                            "required": [
+                                "consent",
+                                "candidates"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#candidates-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "CandidatesModel": {
+            "description": "Candidates.",
+            "items": {
+                "$ref": "#/definitions/CandidateModel"
+            },
+            "type": "array"
+        },
+        "CatalogueModel": {
+            "description": "Catalogue details.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Catalogue links.",
+                    "properties": {
+                        "provider": {
+                            "description": "Published Provider url",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Catalogue url",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "services": {
+                            "description": "Published Services url (publishedServicesUrl).",
+                            "format": "url",
+                            "type": "string" 
+                        }
+                    },
+                    "required": [
+                        "self",
+                        "provider"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the catalogue.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "CataloguesModel": {
+            "description": "List of Catalogues.",
+            "items": {
+                "description": "Catalogue url (catalogueUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "ConnectionCreatedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Connection Created Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-created-event).",
+                    "properties": {
+                            "extraData": {
+                            "format": "null",
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "CONNECTION_CREATED_EVENT"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ConnectionsResponseModel": {
+            "description": "Response of Connections Request.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "items": {  
+                            "$ref": "#/definitions/ConnectionModel"
+                        },
+                        "type": "array"
+                    },
+                    "links": {
+                        "description": "tbd",
+                        "items": {
+                                "type": "object"
+                        },
+                        "type": "array"
+                    }
+                }
+            },
+            "type": "array"
+        },
+        "ConnectionModel": {
+            "description": "Connection details.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "mbox": {
+                            "description": "Messagebox (mboxUrl).",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "references": {
+                            "description": "References Url (referencesUrl).",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "self": {
+                            "description": "Connection (connectionUrl).",
+                            "type": "string",
+                            "format": "url"
+                        }
+                    },
+                    "required": [
+                        "mbox",
+                        "references",
+                        "self"
+                    ]
+                },
+                "persistentId": {
+                    "description": "[Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id) of the [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection).",
+                    "format": "See Persistent Id Model",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection).",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "persistentId",
+                "state"
+            ],
+            "type": "object"
+        },
+        "ConnectTokenJsonModel": {
+            "description": "See [Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token).",
+            "properties": {
+                "target": {
+                    "description": "The [Transport Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#transport-connect-token).",
+                    "type": "string"
+                },
+                "identifier": {
+                    "description": "This property is only used in responses and holds the alias.",
+                    "type": "string"
+                },
+                "tmpSecret": {
+                    "type": "string",
+                    "description": "Base64-encoded temporary secret.",
+                    "format": "Base64-encoded"
+                }
+            },
+            "required": [
+                "target",
+                "tmpSecret"
+            ],
+            "type": "object"
+        },
+        "ConnectTokenModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/ConnectTokenMetadataModel"
+                },
+                {
+		    "description": "Connect Token Json.",
+		    "properties": {
+		        "json": {
+                            "$ref": "#/definitions/ConnectTokenJsonModel"
+			}
+		    },
+		    "type": "object"
+                }
+            ],
+            "description": "Connect Token details",
+            "type": "object"
+        },
+        "ConnectTokenMetadataModel": {
+            "type": "object",
+            "properties": {
+                "expires": {
+                    "type": "integer",
+                    "description": "Expiration date time.",
+                    "format": "Unix time in ms",
+                    "minItems": 0,
+                    "maxItems": 1
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Connect Token name",
+                    "minItems": 0,
+                    "maxItems": 1
+                },
+                "note": {
+                    "description": "Note",
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "useBudget": {
+                    "type": "integer",
+                    "description": "Maximum number of use times",
+                    "maxItems": 1,
+                    "minItems": 0
+                },
+                "actions": {
+                    "type": "object",
+                    "description": "Instructions to be executed immediately after connecting.",
+                    "properties": {
+                        "messages": {
+                            "description": "Messages",
+                            "items": {
+                                "$ref": "#/definitions/MessageModel"
+                            },
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+        "ConnectTokenRequestParametersModel": {
+	            "$ref": "#/definitions/ConnectTokenModel"
+        },
+        "ConnectTokensModel": {
+            "description": "List of Connect Token Urls.",
+            "items": {
+                "description": "Connect Token url (connectTokenUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "ConsentAccessTokenModel": {
+            "description": "Consent access token.",
+            "format": "uuid",
+            "type": "string"
+        },
+        "ConsentAuditLogModel": {
+            "description": "Audit log.",
+            "items": {
+                "description": "Audit log entry with Service Provider confirmations.",
+                "properties": {
+                    "changeRecorded": {
+                        "description": "Creation time of the audit log entry.",
+                        "format": "Unix time in ms",
+                        "type": "integer"
+                    },
+                    "changeTime": {
+                        "description": "Time of status change.",
+                        "format": "Unix time in ms",
+                        "type": "integer"
+                    },
+                    "statusChange": {
+                        "description": "Status change.",
+                        "properties": {
+                            "new": {
+                                "description": "New status.",
+                                "type": "string"
+                            },
+                            "old": {
+                                "description": "Old status.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "new",
+                            "old"
+                        ],
+                        "type": "object"
+                    },
+                    "confirmation": {
+                        "description": "Service Provider confirmation data.",
+                        "properties": {
+                            "confirmationRecorded": {
+                                "description": "Record time of the confirmation in this audit log entry.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+                            },
+                            "confirmationSignature": {
+                                "description": "Confirmation signature by the Service Provider over the consentId, the old status, the new status, the changeTime and the confirmationTime.",
+                                "type": "string"
+                            },
+                            "confirmationTime": {
+                                "description": "Time of confirmation.",
+                                "format": "Unix time in ms",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                           "confirmationRecorded",
+                           "confirmationSignature",
+                           "confirmationTime"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "changeTime",
+                    "changeRecorded",
+                    "statusChange"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "ConsentCredentialModel": {
+            "description": "Consent Credential.",
+            "$ref": "#/definitions/ConsentCredentialType"
+        },
+        "ConsentCredentialsType": {
+            "items": {
+                "$ref": "#/definitions/ConsentCredentialModel"
+            },
+            "type": "array"
+        },
+        "ConsentCredentialType": {
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "publishedProviderUrl": {
+                    "description": "The publishedProviderUrl of the Service Provider that will use the credential.",
+                    "format": "url",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the credential.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "Access token.",
+                    "$ref": "#/definitions/ConsentAccessTokenModel"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "state",
+                "token"
+            ],
+            "type": "object"
+        },
+        "ConsentGrantedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel"
+                },
+                { 
+                    "description": "See [Consent Granted Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-granted-event).",
+                    "properties": {
+                        "extraData": {
+                            "description": "extra data: Consent Id.",
+                            "properties": {
+                                "consentId": {
+                                    "description": "Consent Id.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consentId"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "extraData"
+                    ],
+                    "type": "object"
+                }
+            ]
+        },
+        "ConsentModel": {
+            "description": "Consent model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "auditLog": {
+                    "$ref": "#/definitions/ConsentAuditLogModel"
+                },
+                "consentId": {
+                    "description": "Consent Id.",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "consentRequestSignature": {
+                    "description": "Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId.",
+                    "format": "url",
+                    "type": "string"
+                },
+                "consentRequestTime": {
+                    "description": "Consent request time.",
+                    "format": "Unix time in ms",
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "credentials": {
+                        "description": "Consent Credentials.",
+                        "properties": {
+                            "auditCredentials": {
+                                "description": "Consent Audit Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsType"
+                            },
+                            "dataProviderCredentials": {
+                                "description": "Consent Data Provider Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsType"
+                            },
+                            "individualCredentials": {
+                                "description": "Consent Individual Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsType"
+                            },
+                            "relyingPartyCredentials": {
+                                "description": "Consent Relying Party Credentials.",
+                                "$ref": "#/definitions/ConsentCredentialsType"
+                            }
+                        },
+                        "type": "object"
+                },
+                "dataTypeUrl": {
+                    "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
+                    "format": "url",
+                    "type": "string"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "candidates": {
+                            "description": "Candidates (candidatesUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Consent Url",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "sources": {
+                            "description": "Sources (sourcesUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "subscription": {
+                            "description": "Subscription (subscriptionUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "self",
+                        "subscription"
+                    ]
+                },
+                "persistentId": {
+                    "description": "Persistent Id of the connection between the Relying Party and the Individual.",
+                    "$ref": "#/definitions/PersistentIdModel"
+                },
+                "publishedServiceUrl": {
+                    "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
+                    "format": "url",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the consent.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "consentId",
+                "consentRequestTime",
+                "consentRequestSignature",
+                "dataTypeUrl",
+                "links",
+                "persistentId",
+                "publishedServiceUrl",
+                "state"
+            ],
+            "type": "object"
+        },
+        "ConsentNotificationMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+                                    "type": "string"
+                                },
+                                "serviceProvider": {
+                                    "description": "Service Provider (publishedProviderUrl)",
+                                    "format": "url",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consent",
+                                "serviceProvider"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-notification-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ConsentRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "consentUrl": {
+                                    "description": "Consent Url (consentUrl).",
+                                    "format": "url",
+                                    "type": "string"
+                                },
+                                "consentId": {
+                                    "description": "Consent Id.",
+                                    "format": "uuid",
+                                    "type": "string"
+                                },
+                                       "consentRequestSignature": {
+                                    "description": "Signature of the Service Provider over the consentId, dataTypeUrl, publishedServiceUrl, consentRequestedTime and persistentId.",
+                                    "format": "url",
+                                    "type": "string"
+                                },
+                                "consentRequestTime": {
+                                   "description": "Consent request time.",
+                                   "format": "Unix time in ms",
+                                   "readOnly": true,
+                                   "type": "integer"
+                                },
+                                "credential": {
+                                    "description": "Consent Individual Credential.",
+                                    "$ref": "#/definitions/ConsentCredentialType"
+                                },
+                                "dataTypeUrl": {
+                                    "description": "The Personal Data that the Service Provider requests Consent for (dataTypeUrl).",
+                                    "format": "url",
+                                    "type": "string"
+                                },
+                                "persistentId": {
+                                    "description": "Persistent Id of the connection between the Relying Party and the Individual.",
+                                    "$ref": "#/definitions/PersistentIdModel"
+                                },
+                                "publishedServiceUrl": {
+                                    "description": "The Service that the Service Provider intends to use the Personal Data for (publishedServiceUrl).",
+                                    "format": "url",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consentId",
+                                "consentRequestSignature",
+                                "consentRequestTime",
+                                "dataTypeUrl",
+                                "persistentId",
+                                "publishedServiceUrl"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-request-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ConsentStateEnum": {
+            "description": "Consent State.",
+            "enum": [
+                "deleted",
+                "granted",
+                "markedForDeletion",
+                "new",
+                "withdrawn"
+            ]
+        },
+        "ConsentUpdateModel": {
+            "description": "Consent update model.",
+            "properties": {
+                "state": {
+                    "$ref": "#/definitions/ConsentStateEnum"
+                }
+            },
+            "type": "object"
+        },
+        "ConsentUrlsAndConsentAccessTokensModel": {
+            "description": "List of Consent Urls and Consent Access Tokens.",
+            "items": {
+                "properties": {
+                    "consentUrl": {
+                        "description": "Consent Url.",
+                        "format": "url",
+                        "type": "string"
+                    },
+                    "accessToken": {
+                        "$ref": "#/definitions/ConsentAccessTokenModel"
+                    }
+                },
+                "required": [
+                    "consentUrl",
+                    "accessToken"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "DataServiceUrlModel": {
+            "description": "Data Descriptor of the Data Service that will serve as the source for the Personal Data (publishedServiceUrl).",
+            "format": "url",
+            "type": "string"
+        },
+        "DataTypeModel": {
+            "description": "Data Type Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Data Type links.",
+                    "properties": {
+                        "consumedBy": {
+                            "description": "Service Types and Service Providers that consume data of this type.",
+                            "properties": {
+                                "serviceTypes": {
+                                    "description": "Service Types that consume data of this type.",
+                                    "items": {
+                                        "description": "Service Type that consumes data of this type (serviceTypeUrl).",
+                                        "format": "url",
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "serviceProviders": {
+                                    "description": "Service Providers that consume data of this type.",
+                                    "items": {
+                                        "description": "Service Provider that consumes data of this type (publishedProviderUrl).",
+                                        "format": "url",
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "descriptor": {
+                            "description": "Data Type Descriptor.",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "producedBy": {
+                            "description": "Service Types and Service Providers that produce data of this type.",
+                            "properties": {
+                                "serviceTypes": {
+                                    "description": "Service Types that produce data of this type.",
+                                    "items": {
+                                        "description": "Service Type that produces data of this type (serviceTypeUrl).",
+                                        "format": "url",
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "serviceProviders": {
+                                    "description": "Service Providers that produce data of this type.",
+                                    "items": {
+                                        "description": "Service Provider that produces data of this type (publishedProviderUrl).",
+                                        "format": "url",
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "registeredBy": {
+                            "description": "Access Provider (publishedProviderUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Data Type (dataTypeUrl)",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "descriptor",
+                        "registeredBy",
+                        "self"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the Data Type.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "DataTypesModel": {
+            "description": "List of Data Types.",
+            "items": {
+                "description": "Data Type url",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "EndpointAddressesModel": {
+            "type": "object",
+            "description": "Current path endpoint addresses.",
+            "properties": {
+                "connections": {
+                    "description": "Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "create": {
+                    "description": "Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is not authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "ctCreate": {
+                    "description": "Current address for the 'connect token create'-endpoint (ctCreateEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "ctList": {
+                    "description": "Current address for the 'connect token list'-endpoint (ctListEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "delete": {
+                    "description": "Current address for the 'delete'-endpoint (deleteEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "events": {
+                    "description": "Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "library": {
+                    "description": "Current address for the 'library'-endpoint (libraryEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "portfolio": {
+                    "description": "Current address for the 'portfolio'-endpoint (portfolioEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "ref": {
+                    "description": "Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "refs": {
+                    "description": "Current address for the 'references'-endpoint (refsEndpoint). This property is only included when the request is authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                }
+            }
+        },
+        "EventStreamModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#events).",
+                    "format": "Stream of event objects."
+                }
+            ]
+        },
+        "EventModel": {
+            "description": "Event Model.",
+            "type": "object",
+            "properties": {
+                "connectionUrl": {
+                    "description": "Connection Url.",
+                    "type": "string",
+                    "format": "url"
+                },
+                "extraData": {
+                    "description": "Property for extra event data."
+                },
+                "type": {
+                    "description": "Event type name.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "connectionUrl",
+                "extraData",
+                "type"
+            ]
+        },
+        "LibraryModel": {
+            "description": "Library model",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "catalogues": {
+                            "description": "Catalogues Url (cataloguesUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "dataTypes": {
+                            "description": "Data Types url (dataTypesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "messageTypes": {
+                            "description": "Data Types url (messageTypesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "providers": {
+                            "description": "Published Providers url (publishedProvidersUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "serviceTypes": {
+                            "description": "Service Types url (serviceTypesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "catalogues",
+                        "dataTypes",
+                        "providers",
+                        "serviceTypes"
+                    ]
+                },
+                "state": {
+                    "description": "State of the library.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "LocationAndLinkModel": {
+            "description": "Location and link.",
+            "type": "object",
+            "properties": {
+                "Location": {
+                    "description": "Url of the created connection.",
+                    "type": "string"
+                },
+                "Link": {
+                    "description": "Link header parameter, containing the mailbox url for the connection.",
+                    "type": "string"
+                }
+            }
+        },
+        "MessageModel": {
+            "description": "See [Qiy Node Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-message).",
+            "properties": {
+                "created": {
+                   "description": "Message creation time.",
+                   "format": "Unix time in ms",
+                   "readOnly": true,
+                   "type": "integer"
+                },
+                "inbound": {
+                    "description": "Whether the received message is inbound or outbound.",
+                    "readOnly": true,
+                    "type": "boolean"
+                },
+                "payload": {
+                    "description": "The Base64-encoded payload of the message.",
+                    "format": "Base64-encoded",
+                    "maxItems": 1,
+                    "minItems": 1,
+                    "type": "object"
+                },
+                "refSerialNr": {
+                    "description": "Reference serial number",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "integer",
+                    "format": "nullable"
+                },
+                "serialNr": {
+                    "type": "integer",
+                    "description": "Serial number of the message."
+                },
+                "text": {
+                    "description": "Subject",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Message Type (messageTypeUrl)",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "payload",
+                "refSerialNr",
+                "text",
+                "type"
+            ],
+            "type": "object"
+        },
+        "MessagesModel": {
+            "description": "Qiy Node Mailbox messages.",
+            "items": {
+                "$ref": "#/definitions/MessageModel"
+            },
+            "type": "array"
+        },
+        "PersistentIdEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Persistent Id Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id-event).",
+                    "properties": {
+                            "extraData": {
+                            "description": "extra data: Persistent Ids and Service Provider Identity.",
+                            "properties": {
+                                "persistentIds": {
+                                    "description": "Persistent Ids",
+                                    "items": {
+                                        "description": "Persistent Id",
+                                        "format": "See Persistent Id Model.",
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "providerId": {
+                                    "description": "Service Provider identity (publishedProviderUrl).",
+                                    "format": "url",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "persistentIds",
+                                "providerId"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "PERSISTENT_ID_EVENT"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "MessageReceivedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Message Received Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-received-event).",
+                    "properties": {
+                            "extraData": {
+                            "format": "null",
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "MESSAGE_RECEIVED"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "MessageTypeModel": {
+            "description": "Message Type Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Message Type links.",
+                    "properties": {
+                        "descriptor": {
+                            "description": "Message Type Descriptor.",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "provider": {
+                            "description": "Access Provider (publishedProviderUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Message Type (messageTypeUrl)",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "descriptor",
+                        "self",
+                        "provider"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the Message Type.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "MessageTypesModel": {
+            "description": "List of Message Types.",
+            "items": {
+                "description": "Message Type (messageTypeUrl).",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "OperationModel": {
+            "description": "Operation Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "self": {
+                            "description": "Operation (operationUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "source": {
+                            "description": "Source (sourceUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "self",
+                        "source"
+                    ]
+                },
+                "reference": {
+                    "$ref": "#/definitions/OperationReferenceModel"
+                },
+                "specification": {
+                    "$ref": "#/definitions/OperationSpecificationModel"
+                },
+                "state": {
+                    "description": "State of the Operation.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "OperationsModel": {
+            "description": "List of Operations.",
+            "items": {
+                "description": "Operation (operationUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "OperationReferenceMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "consent": {
+                                    "description": "Consent (consentUrl)",
+                                    "format": "url",
+                                    "type": "string"
+                                },
+                                "operationReference": {
+                                    "$ref": "#/definitions/OperationReferenceModel"
+                                },
+                                "serviceProvider": {
+                                    "description": "Service Provider (publishedProviderUrl)",
+                                    "format": "url",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "consent",
+                                "operationReference",
+                                "serviceProvider"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-reference-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "OperationReferenceRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "message_descriptor": {
+                                    "type": "string",
+                                    "format": "https://code.in.digital-me.nl/DOC/FuncQiy/blob/master/QS%20User%20Node%20Protocol-gitbucket.md#operation-reference-request-message"
+                                },
+                                "created": {
+                                    "description": "Message creation time.",
+                                    "type": "integer",
+                                    "format": "Unix time in ms"
+                                }
+                            }
+                        },
+                        "protocol": {
+                            "type": "string",
+                            "description": "[Data Descriptor](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-descriptor) to identify the requested data.",
+                            "format": "url"
+                        }
+                    }
+                }
+            ]
+        },
+        "OperationReferenceModel": {
+            "description": "See [Operation Reference](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-reference).",
+            "type": "string"
+        },
+        "OperationSpecificationModel": {
+            "description": "See [Operation Specification](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification).",
+            "properties": {
+                "body": {
+                    "description": "Required body data.",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "object",
+                    "format": "not nullable"
+                },
+                "headers": {
+                    "description": "The headers to be used.",
+                    "items": {
+                        "properties": {
+                            "accept": {
+                                "description": "Accept header.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "type": "array"
+                },
+                "method": {
+                    "description": "The supported http operation.",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "queryParams": {
+                    "description": "Required query parameters",
+                    "items": {
+                        "type": "object"
+                    },
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "transport": {
+                    "description": "The supported transfer protocol.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                },
+                "url": {
+                    "description": "Resource url/Service Endpoint url",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string",
+                    "format": "url"
+                }
+            },
+            "type": "object"
+        },
+        "OperationSpecificationRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "operationType": {
+                                    "description": "Operation Type (operationTypeUrl)",
+                                    "format": "url",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "operationType"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-specification-request-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "OperationTypeModel": {
+            "description": "Operation Type Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Operation Type links.",
+                    "properties": {
+                        "descriptor": {
+                            "description": "Operation Type Descriptor.",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "consumes": {
+                            "description": "Consumes Data Type (dataTypeUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "response": {
+                            "description": "Response Data Type (dataTypeUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "serviceType": {
+                            "description": "Service Type (serviceTypeUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Operation Type (operationTypeUrl)",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "descriptor",
+                        "self",
+                        "serviceType"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the Operation Type.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "OperationTypesModel": {
+            "description": "List of Operation Types.",
+            "items": {
+                "description": "Operation Type url",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "PersistentIdModel": {
+            "description": "See [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id).",
+            "format": "ascii string with length 24",
+            "type": "string"
+        },
+        "PortfolioModel": {
+            "description": "Portfolio Model.",
+            "properties": {
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "accounts": {
+                            "description": "Accounts (accountsUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "consents": {
+                            "description": "Consents (consentsUrl)",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "subscriptions": {
+                            "description": "Subscriptions (subscriptionsUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "PortfolioRegisterMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "description": "Empty payload.",
+                            "format": "null",
+                            "type": "string"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-register-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "PublishedProviderModel": {
+            "description": "Published Provider Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Published Provider links.",
+                    "properties": {
+                        "accessProvider": {
+                            "description": "Access Provider (accessProviderUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "consumes": {
+                            "description": "Data Types that the Service Provider consumes.",
+                            "items": {
+                                "description": "Consumes Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "produces": {
+                            "description": "Data Types that the Service Provider consumes.",
+                            "items": {
+                                "description": "Produces Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "providerDescription": {
+                            "description": "External documentation about the Service Provider.",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Published Provider url (publishedProviderUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "services": {
+                            "description": "Published Services url (publishedServicesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "accessProvider",
+                        "providerDescription",
+                        "self",
+                        "services"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the service.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "PublishedProvidersModel": {
+            "description": "List of Published Providers.",
+            "items": {
+                "description": "Published Provider url",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "PublishedServiceModel": {
+            "description": "Published Service Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Published Service links.",
+                    "properties": {
+                        "operationTypes": {
+                            "description": "Operation Type APIs.",
+                            "items": {
+                                "description": "Operation Type API.",
+                                "properties": {
+                                    "operationApi": {
+                                        "description": "Link to the API for the Operation as provided by the Service Provider (operationApiUrl).",
+                                        "format": "url",
+                                        "type": "string"
+                                    },
+                                    "operationType": {
+                                        "description": "Operation Type (operationTypeUrl)",
+                                        "format": "url",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "operationApi",
+                                    "operationType"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "provider": {
+                            "description": "Service Provider (publishedProviderUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Published Service (publishedServiceUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "serviceDescription": {
+                            "description": "Service Description (serviceDescriptionUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "serviceType": {
+                            "description": "Service Type (serviceTypeUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "provider",
+                        "self",
+                        "serviceDescription",
+                        "serviceType"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the service.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "PublishedServicesModel": {
+            "description": "List of Published Services.",
+            "items": {
+                "description": "Publised Service url (publishedServiceUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "QiyNodeCreateRequestParametersModel": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QiyNodeId"
+                },
+                {
+                    "$ref": "#/definitions/QiyNodePublicKey"
+                }
+            ]
+        },
+        "QiyNodeCredentialModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/QiyNodeId"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "privateKey": {
+                            "description": "Qiy Node RSA private key.",
+                            "type": "string",
+                            "minItems": 1,
+                            "maxItems": 1
+                        }
+                    },
+                    "required": [
+                        "privateKey"
+                    ]
+                }
+            ]
+        },
+        "QiyNodeId": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "Qiy Node Id.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        "QiyNodePublicKey": {
+            "type": "object",
+            "properties": {
+                "publicKey": {
+                    "description": "Qiy Node RSA public key.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                }
+            },
+            "required": [
+                "publicKey"
+            ]
+        },
+        "ReferenceResultModel": {
+            "description": "Result of the Operation Execute Request.",
+            "properties": {
+                "connection": {
+                    "description": "Connection (connectionUrl).",
+                    "format": "uri",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "ref": {
+                    "description": "Data Reference/Operation Reference.",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "value": {
+                    "description": "Return value of the Service Endpoint, accessed immediately after the request.",
+                    "format": "Base64-encoded",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                }
+            },
+            "required": [
+                        "connection",
+                        "ref",
+                        "value"
+                    ],
+            "type": "object"
+        },
+        "ReferencesResultModel": {
+            "description": "References result.",
+            "items": {
+                "description": "References result by Operation Type.",
+                "properties": {
+                    "operationType": {
+                        "description": "Operation Type (operationTypeUrl).",
+                        "type": "string"
+                    },
+                    "results": {
+                        "items": {
+                            "$ref": "#/definitions/ReferenceResultModel"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": true
+        },
+        "ServiceCredentialModel": {
+            "description": "Service Credential Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "accessToken": {
+                    "description": "Service Endpoint Access Token.",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "source": {
+                            "description": "Source (sourceUrl).",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "self": {
+                            "description": "Service Credential (serviceCredentialUrl)",
+                            "type": "string",
+                            "format": "url"
+                        }
+                    },
+                    "required": [
+                        "source",
+                        "self"
+                    ]
+                },
+                "state": {
+                    "description": "State of the Service Credential.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "state",
+                "activeFrom",
+                "activeUntil",
+                "links"
+            ],
+            "type": "object"
+        },
+        "ServiceCredentialsModel": {
+            "description": "List of Service Credentials.",
+            "items": {
+                "description": "Service Credential (serviceCredentialUrl)",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "ServiceCredentialsRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "description": "Payload with list of Source Urls.",
+                            "items": {
+                                "description": "Source Url (sourceUrl).",
+                                "format": "url",
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-request-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ServiceCredentialsResponseMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "properties": {
+                        "payload": {
+                            "$ref": "#/definitions/ServiceCredentialsModel"
+                        },
+                        "type": {
+                            "format": "'https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-response-message'",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ServiceTypeModel": {
+            "description": "Service Type Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Service Type links.",
+                    "properties": {
+                        "consumes": {
+                            "description": "Data Types that the service consumes.",
+                            "items": {
+                                "description": "Consumes Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "descriptor": {
+                            "description": "Service Type Descriptor.",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "operations": {
+                            "description": "Operation Types (operationTypesUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "produces": {
+                            "description": "Data Types that the service produces.",
+                            "items": {
+                                "description": "Produces Data Type (dataTypeUrl).",
+                                "format": "url",
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "registeredBy": {
+                            "description": "Access Provider (publishedProviderUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Service Type (serviceTypeUrl)",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "descriptor",
+                        "registeredBy",
+                        "self",
+                        "operations"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the Service Type.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "ServiceTypesModel": {
+            "description": "List of Service Types.",
+            "items": {
+                "description": "Service Type url",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "SourceModel": {
+            "description": "Source Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                 "links": {
+                    "properties": {
+                        "account": {
+                            "description": "Account with Data Provider (accountUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "consent": {
+                            "description": "Consent (consentUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "dataService": {
+                            "description": "Data Service (publishedServiceUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "operations": {
+                            "description": "Operations (operationsUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Source (sourceUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "serviceCredentials": {
+                            "description": "Service Credentials (serviceCredentialsUrl).",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "consent",
+                        "self"
+                    ],
+                    "type": "object"
+                },
+                "state": {
+                    "description": "State of the source.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "state"
+            ],
+            "type": "object"
+        },
+        "SourceUrlModel": {
+            "description": "Data Source for the Personal Data (sourceUrl).",
+            "format": "url",
+            "type": "string"
+        },
+        "SubscriptionModel": {
+            "description": "Subscription Model.",
+            "properties": {
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "description": "Subscription links.",
+                    "properties": {
+                        "consent": {
+                            "description": "Consent (consentUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "self": {
+                            "description": "Subscription (subscriptionUrl)",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "service": {
+                            "description": "Service (publishedServiceUrl).",
+                            "format": "url",
+                            "type": "string"
+                        },
+                        "account": {
+                            "description": "Account (accountUrl)",
+                            "format": "url",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "self",
+                        "service"
+                    ],
+                    "type": "object"
+                },
+                "persistentId": {
+                    "description": "Persistent Id.",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State of the service.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "activeFrom",
+                "activeUntil",
+                "links",
+                "persistentId",
+                "state"
+            ],
+            "type": "object"
+        },
+        "SubscriptionsModel": {
+            "description": "List of Subscriptions.",
+            "items": {
+                "description": "Subscription url",
+                "format": "url",
+                "type": "string"
+            },
+            "type": "array"
+        }
+    },
+    "parameters": {
+        "authorizationParam": {
+            "name": "Authorization",
+            "in": "header",
+            "description": "See [Authorization Header Parameter](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#authorization-header-parameter).",
+            "required": true,
+            "type": "string",
+            "format": "QTF [Qiy Node id] [Unix time in ms]:[signature]"
+        },
+        "authorizationOptionalParam": {
+            "name": "Authorization",
+            "in": "header",
+            "description": "See [Authorization Header Parameter](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#authorization-header-parameter).",
+            "required": false,
+            "type": "string",
+            "format": "QTF [Qiy Node id] [Unix time in ms]:[signature]"
+        },
+        "idParam": {
+            "name": "id",
+            "in": "query",
+            "description": "id parameter.",
+            "required": true,
+            "type": "string"
+        },
+        "sinceParam": {
+            "name": "since",
+            "in": "query",
+            "description": "Limit results to period after date=time stamp 'since'.",
+            "required": false,
+            "type": "integer",
+            "format": "Unix time in ms"
+        }
+    },
+    "paths": {
+        "/accountsUrl": {
+            "get": {
+                "summary": "Get Accounts",
+                "description": "See [Accounts Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#accounts-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/AccountsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Account",
+                    "Portfolio"
+                ]
+            }
+        },
+        "/accountUrl": {
+            "delete": {
+                "summary": "Unregister Account.",
+                "description": "See [Account Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Account",
+                    "Portfolio"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Account Details",
+                "description": "See [Account Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Portfolio"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/AccountModel"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Account details",
+                "description": "See [Account Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#account-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "account-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AccountModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Portfolio"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/api": {
+            "get": {
+                "summary": "API information",
+                "description": "Get api information and current endpoint addresses. Use this request daily to remain operational, see [Dynamic Path Endpoint Addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#dynamic-path-endpoint-addresses) for more information.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationOptionalParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfull response",
+                        "schema": {
+                            "$ref": "#/definitions/ApiModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "PathEndpointAddresses",
+                    "Versions"
+                ]
+            }
+        },
+        "/candidatesUrl": {
+            "get": {
+                "summary": "Get Candidates",
+                "description": "See [Candidates Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#candidates-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CandidatesModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/cataloguesUrl": {
+            "get": {
+                "summary": "Get Catalogues",
+                "description": "See [Catalogues Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogues-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CataloguesModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/catalogueUrl": {
+            "get": {
+                "summary": "Get Catalogue Details",
+                "description": "See [Catalogue Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#catalogue-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/CatalogueModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/connectionUrl": {
+            "delete": {
+                "summary": "Delete connection.",
+                "description": "See [Connection Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Connect"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Connection Details",
+                "description": "See [Connection Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect",
+                    "Message",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectionModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/connectionsEndpoint": {
+            "get": {
+                "summary": "Get Connections",
+                "description": "See [Connections Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connections-request).",
+                "parameters": [
+                    {
+                        "name": "since",
+                        "in": "query",
+                        "description": "Limit results to [Connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection) that have been active since the time stamp 'since'.",
+                        "format": "Unix time in ms",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "persistentId",
+                        "in": "query",
+                        "description": "Limit result to [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection) with a [Persistent Id](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#persistent-id) equaling 'persistentId'.",
+                        "format": "See Persistent Id Model",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectionsResponseModel"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Connection Create Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Connection Create Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-create-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenJsonModel"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/LocationAndLinkModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Connect",
+                    "Data Provider",
+                    "Relying Party"
+                ]
+            }
+        },
+        "/connectTokenUrl": {
+            "delete": {
+                "summary": "Delete connect token.",
+                "description": "See [Connect Token Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Connect Token"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Connect Token Details",
+                "description": "See [Connect Token Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect Token",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenModel"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Connect Token Details",
+                "description": "See [Connect Token Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenMetadataModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connect Token"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/consentsUrl": {
+            "get": {
+                "summary": "Get Consents",
+                "description": "See [Consents Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consents-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ConsentUrlsAndConsentAccessTokensModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Consent"
+                ]
+            }
+        },
+        "/consentUrl": {
+            "delete": {
+                "summary": "Delete consent.",
+                "description": "See [Consent Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Consent"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Consent Details",
+                "description": "See [Consent Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Consent"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConsentModel"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Consent details",
+                "description": "See [Consent Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#consent-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "consent-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConsentUpdateModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Consent"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Register Source",
+                "description": "See [Source Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-register-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "consent-access-token",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "data-service-url",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DataServiceUrlModel"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/SourceUrlModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/createEndpoint": {
+            "post": {
+                "summary": "Create Qiy Node.",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Qiy Node Create Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-create-request).",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "create-request-parameters",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QiyNodeCreateRequestParametersModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Lifecycle"
+                ]
+            }
+        },
+        "/ctListEndpoint": {
+            "get": {
+                "summary": "Get Connect Tokens",
+                "description": "See [Connection Tokens Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connection-tokens-request).",
+                "parameters": [
+                    {
+                        "name": "since",
+                        "in": "query",
+                        "description": "Limit results to [Connect Tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token) that have been active since the time stamp 'since'.",
+                        "format": "Unix time in ms",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect Token"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokensModel"
+                        }
+                    }
+                }
+            }
+	},
+        "/serviceCredentialsUrl": {
+            "get": {
+                "summary": "Get Service Credentials",
+                "description": "See [Service Credentials Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credentials-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceCredentialsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Source"
+                ]
+            },
+            "post": {
+                "summary": "Register Service Credential.",
+                "description": "See [Service Credential Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-register-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "service-credentials",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ServiceCredentialModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Source"
+                ]
+            }
+        },
+        "/ctCreateEndpoint": {
+            "post": {
+                "summary": "Create or Register Connect Token",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Connect Token Create Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-create-request) or [Connect Token Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#connect-token-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token-request-details",
+                        "description": "Connect Token request parameters",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenRequestParametersModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connect Token",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "The status code of a success response will be 201 Created.",
+                        "headers": {
+                            "Location": {
+                                "description": "The Connect Token Url of the generated token, see /connectTokenUrl.",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/dataTypesUrl": {
+            "get": {
+                "summary": "Get Data Types",
+                "description": "See [Data Types Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-types-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/DataTypesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
+            "post": {
+                "summary": "Data Type Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Data Type Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-type-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/DataTypeModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/dataTypeUrl": {
+            "delete": {
+                "summary": "Unregister Data Type.",
+                "description": "See [Data Type Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-type-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Data Type Details",
+                "description": "See [Data Type Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#data-type-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/DataTypeModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/deleteEndpoint": {
+            "delete": {
+                "summary": "Delete Qiy Node.",
+                "description": "See [Qiy Node Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#qiy-node-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Lifecycle"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Once the local data has been deleted a response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            }
+        },
+        "/eventsEndpoint": {
+            "get": {
+                "summary": "Start listening to events",
+                "description": "See [Events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#events).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "text/event-stream"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/EventStreamModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Connect",
+                    "Data",
+                    "Data Provider",
+                    "Relying Party"
+                ]
+            }
+        },
+        "/libraryEndpoint": {
+            "get": {
+                "summary": "Get Library details",
+                "description": "See [Library Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#library-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/LibraryModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/mboxUrl": {
+            "get": {
+                "summary": "Get messages",
+                "description": "See [Messages Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#messages-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/sinceParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/MessagesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Message",
+                    "Relying Party"
+                ]
+            },
+            "post": {
+                "summary": "Send message",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Message Post Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-post-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "message",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/MessageModel"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data Provider",
+                    "Message"
+                ]
+            }
+        },
+        "/messageUrl": {
+            "delete": {
+                "summary": "Delete message.",
+                "description": "See [Message Delete Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Message"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Message Details",
+                "description": "See [Message Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Message"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/MessageModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/messageTypesUrl": {
+            "get": {
+                "summary": "Get Message Types",
+                "description": "See [Message Types Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-types-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/MessageTypesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
+            "post": {
+                "summary": "Message Type Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Message Type Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-type-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/MessageTypeModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/messageTypeUrl": {
+            "delete": {
+                "summary": "Unregister Message Type.",
+                "description": "See [Message Type Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-type-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Message Type Details",
+                "description": "See [Message Type Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#message-type-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/MessageTypeModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/operationsUrl": {
+            "get": {
+                "summary": "Get Operations",
+                "description": "See [Operations Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operations-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Source"
+                ]
+            },
+            "post": {
+                "summary": "Operation Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Operation Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OperationModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Source"
+                ]
+            }
+        },
+        "/operationUrl": {
+            "delete": {
+                "summary": "Unregister Operation.",
+                "description": "See [Operation Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Operation Details",
+                "description": "See [Operation Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/operationTypesUrl": {
+            "get": {
+                "summary": "Get Operation Types",
+                "description": "See [Operation Types Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-types-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationTypesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
+            "post": {
+                "summary": "Operation Type Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Operation Type Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-type-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OperationTypeModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/operationTypeUrl": {
+            "delete": {
+                "summary": "Unregister Operation Type.",
+                "description": "See [Operation Type Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-type-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Operation Type Details",
+                "description": "See [Operation Type Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-type-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationTypeModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/portfolioEndpoint": {
+            "get": {
+                "summary": "Get Portfolio details",
+                "description": "See [Portfolio Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#portfolio-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PortfolioModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Account",
+                    "Portfolio"
+                ]
+            }
+        },
+        "/publishedProviderUrl": {
+            "delete": {
+                "summary": "Unregister Published Provider.",
+                "description": "See [Published Provider Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Published Provider Details",
+                "description": "See [Published Provider Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/PublishedProviderModel"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Published Provider details",
+                "description": "See [Published Provider Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "provider-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PublishedProviderModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/publishedProvidersUrl": {
+            "get": {
+                "summary": "Get Published Providers",
+                "description": "See [Published Providers Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-providers-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PublishedProvidersModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
+            "post": {
+                "summary": "Published Provider Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Published Provider Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-provider-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "provider",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PublishedProviderModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/publishedServicesUrl": {
+            "get": {
+                "summary": "Get Published Services",
+                "description": "See [Published Services Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-services-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/PublishedServicesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Catalogue"
+                ]
+            },
+            "post": {
+                "summary": "Register Published Service.",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Published Service Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-register-request).",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "service-description",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PublishedServiceModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Catalogue"
+                ]
+            }
+        },
+        "/publishedServiceUrl": {
+            "delete": {
+                "summary": "Unregister Published Service.",
+                "description": "See [Published Service Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Published Service Details",
+                "description": "See [Published Service Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#published-service-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Catalogue"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/PublishedServiceModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/serviceCredentialUrl": {
+            "delete": {
+                "summary": "Unregister Service Credential.",
+                "description": "See [Service Credential Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Service Credential Details",
+                "description": "See [Service Credential Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceCredentialModel"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Service Credential Details",
+                "description": "See [Service Credential Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-credential-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service-credentials",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ServiceCredentialModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/serviceTypesUrl": {
+            "get": {
+                "summary": "Get Service Types",
+                "description": "See [Service Types Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-types-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceTypesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            },
+            "post": {
+                "summary": "Service Type Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Service Type Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-type-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ServiceTypeModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Library"
+                ]
+            }
+        },
+        "/serviceTypeUrl": {
+            "delete": {
+                "summary": "Unregister Service Type.",
+                "description": "See [Service Type Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-type-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Service Type Details",
+                "description": "See [Service Type Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#service-type-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json",
+                    "text/html"
+                ],
+                "tags": [
+                    "Library"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceTypeModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/sourceUrl": {
+            "delete": {
+                "summary": "Unregister Source.",
+                "description": "See [Source Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Source Details",
+                "description": "See [Source Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/SourceModel"
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update Source details",
+                "description": "See [Source Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#source-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "source-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SourceModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Source"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/subscriptionsUrl": {
+            "get": {
+                "summary": "Get Subscriptions",
+                "description": "See [Subscriptions Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscriptions-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/SubscriptionsModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Portfolio"
+                ]
+            },
+            "post": {
+                "summary": "Subscription Register Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Subscription Register Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SubscriptionModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Portfolio"
+                ]
+            }
+        },
+        "/subscriptionUrl": {
+            "delete": {
+                "summary": "Unregister Subscription.",
+                "description": "See [Subscription Unregister Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-unregister-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "tags": [
+                    "Portfolio"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "A response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Subscription details",
+                "description": "See [Subscription Details Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/SubscriptionModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Portfolio"
+                ]
+            },
+            "patch": {
+                "summary": "Update Subscription details",
+                "description": "See [Subscription Update Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#subscription-update-request).",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "source-update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SubscriptionModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Portfolio"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200."
+                    }
+                }
+            }
+        },
+        "/refEndpoint": {
+            "get": {
+                "summary": "Operation Execute Request",
+                "description": "See [Operation Execute Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-execute-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/idParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ReferenceResultModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Relying Party"
+                ]
+            }
+        },
+        "/refsEndpoint": {
+            "get": {
+                "summary": "Resolve references",
+                "description": "See [Operation Execute Request](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/qiy-node-interface/Qiy%20Node%20Protocol.md#operation-execute-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/sinceParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ReferencesResultModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Relying Party"
+                ]
+            }
+        }
+    }
+}
+
