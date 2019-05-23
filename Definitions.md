@@ -176,7 +176,7 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this do
 5 January, 2015.
 
 ### Entity
-See https://en.wikipedia.org/wiki/Entity.
+An organisation that is capable of bearing legal rights and obligations, such as a business, a corporation, a government agency or a non-governmental organisation.
 
 Sometimes used in the sense of [Legal Entity](#legal-entity).
 
@@ -463,8 +463,14 @@ As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimat
 ### Technology Interface
 A software solution or a device with which different technologies can interact with each other, with an application or with a network.
 
+### Substitute Access Provider
+An [Access Provider](#access-provider) that has been degignated by the Scheme Authority to replace te original [Access Provider](#access-provider) in case of default for any reason.
+
 ### Technology Service
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html 
+
+### Technology Interface
+A software solution or a device with which different technologies can interact with each other, with an application or with a network.
 
 ### Territory
 The geographic region served by a [Regional Authority](#regional-authority).
@@ -508,12 +514,8 @@ See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 ### Use Case
 See https://en.wikipedia.org/wiki/Use_case.
 
-### User
-A [Business Role](#business-role) for [Entities](#entity).
-
-In general: a consumer of a [Service](#service).
-
-In the context of the Qiy Scheme, see: [Qiy User](#qiy-user).
+### Validated Data
+[Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
 
 ### User Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
