@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage his [Connections](../Definitions.md#connection).
+This document describes how a [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can manage his [Connections](../Qiy%20Node%20Protocol.md#connection).
 
 # Contents
 
@@ -21,12 +21,12 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 # Primary Actors
 
-* [Qiy User](../Definitions.md#qiy-user)
+* [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user)
 * [Qiy Trust Network](../Definitions.md#qiy-trust-network)
 
 # Preconditions
 
-1. The [Qiy User](../Definitions.md#qiy-user) has a [Connection](../Definitions.md#connection).
+1. The [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) has a [Connection](../Qiy%20Node%20Protocol.md#connection).
 
 
 # Basic Flow: Delete Connection
@@ -36,27 +36,27 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 ## 1. The Qiy User requests the Qiy Trust Network to delete a Connection
 
-The [Qiy User](../Definitions.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Connection](../Definitions.md#connection) by using its [Connection Uri](../Definitions.md#connection-uri) in a [Connection Delete Request](../Definitions.md#connection-delete-request).
+The [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Connection](../Qiy%20Node%20Protocol.md#connection) using a [Connection Delete Request](../Qiy%20Node%20Protocol.md#connection-delete-request).
 
 ## 2. The Qiy Trust Network deletes the Connection
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Connection](../Definitions.md#connection).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Connection](../Qiy%20Node%20Protocol.md#connection).
 
 
 # Postconditions
 
-1. The [Connection](../Definitions.md#connection) does not exist anymore.
+1. The [Connection](../Qiy%20Node%20Protocol.md#connection) does not exist anymore.
 
 
 # Extensions
 
 ## E1 List Connections
 
-A [Qiy User](../Definitions.md#qiy-user) can list his [Connections](../Definitions.md#connection) using a [Connections Request](../Definitions.md#connections-request).
+A [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can list his [Connections](../Qiy%20Node%20Protocol.md#connection) using a [Connections Request](../Qiy%20Node%20Protocol.md#connections-request).
 
 ## E2 Get Connection Details
 
-A [Qiy User](../Definitions.md#qiy-user) can get the details of a [Connection](../Definitions.md#connection) using a [Connection Details Request](../Definitions.md#connection-details-request).
+A [Qiy User](../Qiy%20Node%20Protocol.md#qiy-user) can get the details of a [Connection](../Qiy%20Node%20Protocol.md#connection) using a [Connection Details Request](../Qiy%20Node%20Protocol.md#connection-details-request).
 
 
 

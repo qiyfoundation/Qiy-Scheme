@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage his [Qiy Node Messages](../Definitions.md#qiy-node-message).
+This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage his [Qiy Node Messages](../Qiy%20Node%20Protocol.md#qiy-node-message).
 
 # Contents
 
@@ -26,7 +26,7 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 # Preconditions
 
-1. The [Qiy User](../Definitions.md#qiy-user) has exchanged a [Qiy Node Message](../Definitions.md#qiy-node-message).
+1. The [Qiy User](../Definitions.md#qiy-user) has exchanged a [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message).
 
 
 # Basic Flow: Delete Message
@@ -36,11 +36,11 @@ This document describes how a [Qiy User](../Definitions.md#qiy-user) can manage 
 
 ## 1. The Qiy User requests the Qiy Trust Network to delete a Message
 
-The [Qiy User](../Definitions.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Qiy Node Message](../Definitions.md#qiy-node-message) using a [Message Delete Request](../Definitions.md#message-delete-request).
+The [Qiy User](../Definitions.md#qiy-user) requests the [Qiy Trust Network](../Definitions.md#qiy-trust-network) to delete a [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) using a [Message Delete Request](../Qiy%20Node%20Protocol.md#message-delete-request).
 
 ## 2. The Qiy Trust Network deletes the Message
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Qiy Node Message](../Definitions.md#qiy-node-message).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message).
 
 
 # Postconditions
@@ -52,11 +52,11 @@ The [Qiy Trust Network](../Definitions.md#qiy-trust-network) deletes the [Qiy No
 
 ## E1 List Messages
 
-A [Qiy User](../Definitions.md#qiy-user) can list his [Qiy Node Messages](../Definitions.md#qiy-node-message) using a [Messages Request](../Definitions.md#messages-request).
+A [Qiy User](../Definitions.md#qiy-user) can list his [Qiy Node Messages](../Qiy%20Node%20Protocol.md#qiy-node-message) using a [Messages Request](../Qiy%20Node%20Protocol.md#messages-request).
 
 ## E2 Get Message Details
 
-A [Qiy User](../Definitions.md#qiy-user) can get the details of a [Qiy Node Message](../Definitions.md#qiy-node-message) using a [Message Details Request](../Definitions.md#message-details-request).
+A [Qiy User](../Definitions.md#qiy-user) can get the details of a [Qiy Node Message](../Qiy%20Node%20Protocol.md#qiy-node-message) using a [Message Details Request](../Qiy%20Node%20Protocol.md#message-details-request).
 
 
 
