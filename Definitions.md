@@ -892,4 +892,3 @@ An [Attribute](#attribute) that has been made available to an [Entity](#entity) 
 ### Verified Identifier
 An [Identifier](#identifier) that has been linked to an [Entity](#entity) by a trusted third party.
 
-
