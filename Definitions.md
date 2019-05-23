@@ -192,7 +192,7 @@ A technical protocol that is part of the [Qiy Open Standard](#qiy-open-standard)
 A set of open technical protocols which form part of the [Qiy Scheme](#qiy-scheme).
 
 ### Qiy Scheme
-The open standard conosisting of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Personal Data](#personal-data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange [Personal Data](#personal-data) to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).
+The open standard consisting of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Personal Data](#personal-data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange [Personal Data](#personal-data) to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).
 
 ### Qiy Scheme Policy for Applications
 A set of [Qiy Scheme](#qiy-scheme) rules under which [Applications](#application) can access and use the [Qiy Trust Network](#qiy-trust-network).
@@ -272,7 +272,7 @@ A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Servi
 ### Service by Reference
 A pattern for using[Services](#service) indirectly by means of [References](#reference) ([Operation Reference](#operation-reference)).
 
-Substitute Access Provider
+### Substitute Access Provider
 An [Access Provider](#access-provider) that has been degignated by the Scheme Authority to replace te original [Access Provider](#access-provider) in case of default for any reason.
 
 ### Technology Service
@@ -287,7 +287,7 @@ The geographic region served by a [Regional Authority](#regional-authority).
 ### Token
 See https://en.wikipedia.org/wiki/Token#Computing.
 
-####Transient ID
+### Transient ID
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can only take place for the duration of a session.
 
 ### Trust
