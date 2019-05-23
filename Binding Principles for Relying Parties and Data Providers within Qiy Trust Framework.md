@@ -1,44 +1,45 @@
-# Binding Principles for Relying Parties and Data Providers within Qiy Trust Network 
+# Binding principles for Relying Parties and Data Providers within a Qiy Trust Network ("Qiy Trust Principles")
 
 
 ## Abstract
 
-This document defines the binding principles that apply in respect of all data of individuals that a Relying Party and / or Data Provider come in contact with via the Qiy Trust Network. The Relying Party and / or Data Provider must respect these Binding Principles. The Service Provider is, through the Service Provider license required to incorporate these principles into binding contracts with the Relying Party and / or Data Provider. The Qiy Trust Principles are reflected in a so-called Charter for Individuals which seeks to inform the individual user of the Qiy Trust Network on their rights.
+The Qiy Scheme provides an open and global system for the exchange of personal data via Qiy Trust Networks, whereby individual persons are in control of their own personal data. The Qiy Scheme consists of three layers: a technical standard which consists of technical protocols; a set of rules and regulations; and, an organisational model. It is administered independently of political and market forces by the Qiy Foundation. The Qiy Foundation acts as the global Scheme Authority. The Qiy Foundation is financed by its Members and through revenues that it receives by granting operating licences to Access Poviders. The Qiy Foundation is independently governed, and supervised by a Board of Supervisors. 
+This document is one of the constitutional documents of the Qiy Scheme. It lays down the binding principles (the "Qiy Trust Principles") that all Users of the Qiy Scheme must respect when processing personal data by means of a Qiy Trust Network. 
+Under their licence to operate, which is granted to them by the Scheme Authority (or, in delegation by the Scheme Authority, by a Regional Authority), Access Providers that are in competition with each other can each develop infrastructure in the form of a Qiy Trust Network to which they can then connect Individuals, organisations and devices ('Internet of Things"). Access Providers are required to incorporate a Qiy Trust Principles into legally binding contracts with Relying Parties and/or Data Providers. 
+The Qiy Trust Principles are mirrored in the 'Charter of Individual Rights', which is a separate legal document that contains the general terms and conditions under which Individuals are prepared to consent to the processing of their personal data. The provisions of the 'Charter of Individual Rights' must be respected by Relying Parties and Data Providers in their relations with Individuals to the extent that they process personal data of those Individuals and the protection offered by the 'Charter of Individual Rights' is higher than the protection offered under the terms and conditions or privacy statements of the Relying Parties and Data Providers themselves. Access Providers can only provide Relying Parties and Data Providers access to a Qiy Trust Network on the basis of a written agreement by which those Relying Parties and/or Data Providers accept to be bound by the provisions contained in the 'Charter of Individual Rights' in all cases in which they process personal data of Individuals that connect to them via a Qiy Trust Network.
 
 
-1. Parties (Relying Parties and Data Providers can only participate in the Qiy Trust Network if they uphold the following principles.
+Thus, Relying Parties and Data Providers can only be connected to a Qiy Trust Network in the case where they uphold the following Binding Principles.
 
-2. An individual who uses the Qiy Trust Network is anonymous until he/she gives permission to be de-anonymized for a specific service. 
+1. An Individual who uses a Qiy Trust Network has the right to share his or her personal data on the basis of a pseudo identity until he or she chooses to be identified for a specific purpose. 
 
-3. Within the Qiy Trust Network, personal data is only shared after explicit and unambiguous permission of the individual. (Permission is either not given, given for single use, or for a limited amount of time).
+2. Within a Qiy Trust Network, and unless otherwise required by law, personal data is only shared on the basis of explicit consent of the Individual for each of the specified, explicit and legitimate purposes of the processing for which the personal data is to be processed. This consent shall be obtained when entering into a contractual agreement or on an ad hoc basis before the start of the processing. The processing period for which the explicit consent is to be obtained shall be specified or, if that is not possible, the criteria used to determine that period.
 
-4. Every Service Provider using the Qiy Trust Network informs the individual (in clearly and in easy to understand language) in advance about the purpose for which the data is to be used.
+3. A Data Provider or Relying Party operating under the Qiy Scheme informs the Individual (in an intelligible and easily accessible form, using clear and plain language) in advance about the purpose(s) for which the personal data is to be processed.
 
-5. Every Service Provider using the Qiy Trust Network will not ask for more personal data than necessary for the intended purpose.
+4. The quantity and the nature of the personal data requested by a Relying Party operating under the Qiy Scheme shall be adequate, relevant and limited to what is necessary in relation to the purpose(s) for which the data is processed.
 	
-6. A party using the Qiy Trust Network will only use personal data for the exact purpose it has been provided for.
+5. A party operating under the Qiy Scheme will only use personal data for the purpose(s) for which this data has been provided for by the Individual concerned.
 
-7. A party using the Qiy Trust Network will only share personal information with third parties after explicit and unambiguous permission of the individual and only for the purpose the data has been provided for. 
+6. Unless otherwise required by law, a party operating under the Qiy Scheme will not store personal data for a longer period of time than necessary for the purpose(s) for which the data has been provided, . 
 
-8. Every party using the Qiy Trust Network will not store the data for a longer amount of time than necessary for the purpose for which the data has been provided, unless legislation requires this. Essentially, data which are no longer necessary are deleted within six months. The individual has the right to access and influence his/her provided data.
+7. A Data Provider or Relying Party operating under the Qiy Scheme shall take every reasonable step to ensure that personal data which are inaccurate, having regard to the purpose(s) for which it is processed, is erased or rectified without delay.
 
-9. Every party using the Qiy Trust Network will have a suitable security systems implemented. 
+8. A party operating on the basis of the Qiy Scheme ensures appropriate security of personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures. 
 
-10. Every party using the Qiy Trust Network is required to be audited regularly according to the rules of the Scheme Authority.
+9. A party operating on the basis of the Qiy Scheme shall accept that it will be audited periodically according to the rules of the Scheme Authority.
 
-11. Every party using the Qiy Trust Network will implement the Qiy Standard according to the requirements of the Scheme Authority.
+10. A party operating on the basis of the Qiy Scheme shall comply with the rules and regulations, and with the technical standard of the Qiy Scheme.
 
-12. Additionally, every party will comply with the Trust Framework in both writing and spirit. 
 
-13. Complaints and disputes
+# Complaints and disputes
 
-    a.	Complaints and disputes
-    
-    In case of a complaint or dispute, the first entity to address is the service provider. When this does not lead to an adequate solution, the complaint or dispute can be presented to the Regional Authority (now: Qiy Foundation). Every service provider has a clear place on its website where an individual can go with his/her complaints and disputes. 
+In the case of a complaint or dispute, the first entity an Individual should be able to address is the Data Provider or Relying Party. 
 
-    b.	Disputes Commission
+In the case where this does not lead to an adequate solution, the complaint or dispute can be submitted to the Regional Authority (Qiy Foundation for the time being). A Data Provider or Relying Party shall have a clear and easy to find section on its website where an individual can turn to with his/her complaints and disputes. 
 
-    When the regional Scheme Authority cannot solve adequately solve the issue, the complaint or dispute can be submitted to the Disputes Commission.
+In the case where the Regional Authority cannot adequately solve the issue, the complaint or dispute shall be submitted to the Disputes Committee.
 
-These principles can only be amended by the Scheme Authority. 
+The above Binding Principles for Relying Parties and Data Providers within a Qiy Trust Network can only be amended by the Scheme Authority.
+
 
