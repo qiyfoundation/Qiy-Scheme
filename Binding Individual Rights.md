@@ -34,7 +34,7 @@ Each Relying Party and / or Data Provider that uses my data or makes my data ava
 
 ## 7 Privacy statement Relying Parties and Data Providers
 
-Relying Parties and Data Providers accept that the Qiy Trust Principles take precedence over existing or future own privacy statements and that the provisions of these statements that are inconsistent with the Qiy Trust Network and this Charter will be considered void.
+Relying Parties and Data Providers accept that their existing or future own privacy statements must comply with the Qiy Trust Principles, that these may provide a higher protection but that the provisions of these statements that are inconsistent with the Qiy Trust Network and this Charter will be considered void.
 
 ## 8 Complaints and disputes
 

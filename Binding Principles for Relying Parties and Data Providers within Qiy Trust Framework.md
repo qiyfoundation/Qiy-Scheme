@@ -1,7 +1,5 @@
 # Binding principles for Relying Parties and Data Providers within a Qiy Trust Network ("Qiy Trust Principles")
 
-Qiy Scheme V1.1
-
 
 ## Abstract
 
@@ -9,6 +7,7 @@ The Qiy Scheme provides an open and global system for the exchange of personal d
 This document is one of the constitutional documents of the Qiy Scheme. It lays down the binding principles (the "Qiy Trust Principles") that all Users of the Qiy Scheme must respect when processing personal data by means of a Qiy Trust Network. 
 Under their licence to operate, which is granted to them by the Scheme Authority (or, in delegation by the Scheme Authority, by a Regional Authority), Access Providers that are in competition with each other can each develop infrastructure in the form of a Qiy Trust Network to which they can then connect Individuals, organisations and devices ('Internet of Things"). Access Providers are required to incorporate a Qiy Trust Principles into legally binding contracts with Relying Parties and/or Data Providers. 
 The Qiy Trust Principles are mirrored in the 'Charter of Individual Rights', which is a separate legal document that contains the general terms and conditions under which Individuals are prepared to consent to the processing of their personal data. The provisions of the 'Charter of Individual Rights' must be respected by Relying Parties and Data Providers in their relations with Individuals to the extent that they process personal data of those Individuals and the protection offered by the 'Charter of Individual Rights' is higher than the protection offered under the terms and conditions or privacy statements of the Relying Parties and Data Providers themselves. Access Providers can only provide Relying Parties and Data Providers access to a Qiy Trust Network on the basis of a written agreement by which those Relying Parties and/or Data Providers accept to be bound by the provisions contained in the 'Charter of Individual Rights' in all cases in which they process personal data of Individuals that connect to them via a Qiy Trust Network.
+
 
 Thus, Relying Parties and Data Providers can only be connected to a Qiy Trust Network in the case where they uphold the following Binding Principles.
 
@@ -32,7 +31,8 @@ Thus, Relying Parties and Data Providers can only be connected to a Qiy Trust Ne
 
 10. A party operating on the basis of the Qiy Scheme shall comply with the rules and regulations, and with the technical standard of the Qiy Scheme.
 
-Complaints and disputes
+
+# Complaints and disputes
 
 In the case of a complaint or dispute, the first entity an Individual should be able to address is the Data Provider or Relying Party. 
 
