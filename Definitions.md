@@ -7,6 +7,9 @@ The [Qiy Scheme](#qiy-scheme) defines a framework for [Individuals](#individual)
 
 ## Definitions
 
+### Accepter
+A [Business Role](#business-role) for a [Qiy User](#qiy-user) who is creating a [Connection](#connection) using a [Connect Token](#connect-token) that is provided by a [Proposer](#proposer).
+
 ### Access
 The principle which authorizes the access of an [Individual](#individual) to his or her [Personal Data](#personal-data), one of the [Qiy Trust Principles](#qiy-trust-principles).
 
@@ -22,8 +25,17 @@ Not directly or indirectly traceable to a natural person.
 ### Application
 An [Application Service](#application-service) or software for such a service. 
 
+### Application Connect Token
+A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create [Connections](#connection).
+
+### Application Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
 ### Application Service
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+
+### Architectural Layers
+The [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme): the [User Layer](#user-layer), the [Application Layer](#application-layer), the [Qiy Node Layer](#qiy-node-layer), the [Service Layer](#service-layer), the [Transport Layer](#transport-layer) and the [Carrier Layer](#carrier-layer).
 
 ### Assertion
 A positive statement or declaration about a [User](#user).
@@ -37,20 +49,89 @@ The general terms and conditions under which an [Individual](#individual) exchan
 ### Business Object
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
 
+### Business Process
+As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946048
+
 ### Business Role
 As defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+
+### Carrier
+A [Technology Service](#technology-service) that provides the [Services](#service) of the [Carrier Layer](#carrier-layer). 
+
+### Carrier API
+[Technology Interface](#technology-interface) of the [Carrier](#carrier).
+
+### Carrier Implementation
+A software package which can be used to realize a [Carrier](#carrier).
+
+### Carrier Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Carrier Node
+A [Node](#node) which hosts one or more [Carriers](#carrier).
+
+### Carrier Protocol
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
+
+### Communication Network
+As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090 
+
+### Connect Proposal
+A [Business Object](#business-object) for a proposal to connect via Qiy.
 
 ### Connect Token
 A [Literal](#literal) used to create a [Connection](#connection).
 
+### Connect Token Create Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
+
+### Connect Token Register Request
+A [Qiy Node Request](#qiy-node-request) that can be used to register a [Connect Token](#connect-token).
+
 ### Connection
-An electronic communications link connecting two [Qiy Nodes](#qiy-node).
+A bi-directional digital communications link between two [Qiy Nodes](#qiy-node).
+
+### Connection Create Request
+A [Qiy Node Request](#qiy-node-request) that can be used to create a [Connection](#connection) with a [Connect Token](#connect-token).
+
+### Connection Created Event
+A [Qiy Node Event](#qiy-node-event) that is generated when a [Connection](#connection) has been created.
+
+### Connection Delete Request
+A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Connection](#connection).
 
 ### Connection Uri
 A [Uri](#uri) which is used to identify a [Connection](#connection).
 
 ### Consent
 Any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
+
+### Consent Data Descriptor
+[Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
+
+### Consent Denied Message
+A [Qiy Node Message](#qiy-node-message) which can be used to communicate the denial of a [Consent](#consent).
+
+### Consent Granted Message
+A [Qiy Node Message](#qiy-node-message) which can be used to communicate the granting of a [Consent](#consent).
+
+### Consent Request
+A [Qiy Node Request](#qiy-node-request) which can be used to [Request](#request) for a [Consent](#consent).
+
+### Consent Request Message
+A [Qiy Node Message](#qiy-node-message) which can be used to [Request](#request) for a [Consent](#consent).
+
+### Consent Service
+A [Technology Service](#technology-service) used to maintain [Consents](#consent) and their status.
+
+### Consent Service Description
+A [Service Description](#service-description) of the [Service](#service) for which a [Consent](#consent) applies.
+
+### Consent Service Descriptor
+A [Service Descriptor](#service-descriptor) of a [Consent Service Description](#consent-service-description).
+
+### Consent Uri
+A [Uri](#uri) which is used to identify a [Consent](#consent).
 
 ### Core Identifier
 Immutable and secret means, which uniquely identify a [Qiy Node](#qiy-node) registration.
@@ -60,6 +141,15 @@ Immutable combination of [Verified Identifier](#verified-identifier) and [Verifi
 
 ### Data
 [Data](#data) in a raw form; unorganized facts that need to be processed. [Data](#data) can be something simple and seemingly random and useless until it is organized.
+
+### Data by Reference
+A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data-reference), see also [Service by Reference](#service-by-reference).
+
+### Data Description
+A description of [Data](#data) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
+
+### Data Descriptor
+An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
 
 ### Data Provider
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Trust Network](#qiy-trust-network) to other [Qiy Users](#qiy-user) on [Request](#request).
@@ -76,6 +166,9 @@ A [Service](#service), namely the provisioning of [Data](#data).
 ### Data Service Description
 A [Service Description](#service-description) of a [Data Service](#data-service).
 
+### Data Subject
+As defined in the [GDPR](#gdpr).
+
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
 
@@ -84,6 +177,8 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this do
 
 ### Entity
 An organisation that is capable of bearing legal rights and obligations, such as a business, a corporation, a government agency or a non-governmental organisation.
+
+Sometimes used in the sense of [Legal Entity](#legal-entity).
 
 ### Entitlement
 A usage right for a [Resource](#resource) owned by some other [Entity](#entity).
@@ -122,6 +217,9 @@ A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), fo
 ### Information 
 [Data](#data) processed, organised, structured, or presented in a certain context, so that it is usable. Information provides context to [Data](#data).
 
+### Legal Entity
+An organisation that is capable of bearing legal rights and obligations, such as a business, a corporation, a government agency or a non-governmental organisation.
+
 ### Legitimate Purpose
 A legal ground for the processing of [Personal Data](#personal-data).
 
@@ -140,14 +238,53 @@ See https://en.wikipedia.org/wiki/Literal_(computer_programming).
 ### Local ID
 Synonymous with [Identifier](#identifier)
 
+### Message Post Request
+A [Qiy Node Request](#qiy-node-request) that can be used to post a [Qiy Node Message](#qiy-node-message).
+
+### Message Received Event
+A [Qiy Node Event](#qiy-node-event) that is generated when a [Qiy Node Message](#qiy-node-message) has been received.
+
+### Messages Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the messages of a [Qiy Node](#qiy-node).
+
+### Node
+As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946084
+
+### Node Id
+A [Qiy Node](#qiy-node) id.
+
+### Offline Connect Token
+A [Connect Token](#connect-token) created by a [Qiy Application](#qiy-application), for example when its [Qiy Node](#qiy-node) was temporarily not accessible.
+
+### Online Connect Token
+A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
+
 ### Operation
 An activity undertaken to render a [Service](#service).
+
+### Operation Execute Request
+A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](#reference) using an [Operation Reference](#operation-reference).
 
 ### Operation Reference
 A [Business Object](#business-object) used by the [Service by Reference](#service-by-reference)-pattern to execute an [Operation](#operation) by reference.
 
+### Operation Reference Message
+A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference) over a [Connection](#connection).
+
+### Operation Reference Request Message
+A [Qiy Node Message](#qiy-node-message) that can be used to [Request](#request) for [Operation References](#operation-reference).
+
+### Operation Register Request
+A [Qiy Node Request](#qiy-node-request) that can be used to obtain an [Operation Reference](#operation-reference) by registrating an [Operation Specification](#operation-specification).
+
 ### Operation Specification
 A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
+
+### Path
+A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
+
+### Path Create Request
+A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
 
 ### Persistent ID
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can take place over multiple sessions as long as the [Connection](#connection) is maintained.
@@ -158,6 +295,12 @@ Any [Information](#information) relating to an [Individual](#individual) who can
 ### Pseudo ID
 An [Anonymous](#anoymous) [Attribute](#attribute) relating to an [Individual](#individual) which can either be persistent or transient.
 
+### Proposer
+A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
+
+### Proposer Id
+The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
+
 ### Pseudonym
 Synonymous with [Identifier](#identifier) and [Local ID](#local-id).
 
@@ -166,6 +309,9 @@ See https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
 ### Qiy Application
 An [Application](#application) that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-applications).
+
+### Qiy Application Protocol
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
 
 ### Qiy Foundation
 A foundation dedicated to putting people back in control of their [Personal Data](#personal-data) while creating value for organizations, see https://www.qiyfoundation.org/about-qiy/.
@@ -184,6 +330,21 @@ The set of [Credentials](#credential) that can be used to access a [Qiy Node](#q
 
 ### Qiy Node Documentation
 The [Qiy Node Documentation](#qiy-node-documentation) consists of the [Qiy Node API](#qiy-node-api) and the [Qiy Node Protocol](#qiy-node-protocol).
+
+### Qiy Node Event
+A [Technology Event](#technology-event) of a [Qiy Node](#qiy-node).
+
+### Qiy Node Implementation
+An [Application](#application) which can be used to realize a [Qiy Node](#qiy-node).
+
+### Qiy Node Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Qiy Node Message
+A message that is exchanged using a [Connection](#connection).
+
+### Qiy Node Request
+A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
 
 ### Qiy Node Protocol
 A technical protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node).
@@ -254,23 +415,53 @@ The global [Entity](#entity) that administers, manages, controls and further dev
 ### Service
 An information society service; i.e., any service normally provided for remuneration, at a distance, by electronic means and at the individual request of a recipient of services.
 
+### Service by Reference
+A pattern for consuming [Services](#service) indirectly using [References](#reference) ([Operation Reference](#operation-reference)).
+
 ### Service Catalogue
 A [Business Object](#business-object) for information about all the [Services](#service) that a [Service Provider](#service-provider) can provide.
 
 ### Service Description
 A description of a [Service](#service) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
 
+### Service Descriptor
+An [Uri](#uri) which can be used to identify and obtain a [Service Description](#service-description).
+
 ### Service Endpoint
 A [Technology Service](#technology-service) provided by a [Service Provider](#service-provider) that makes it possible to yse the [Services](#service).
+
+### Service Endpoint API
+[Technology Interface](#technology-interface) of a [Service Endpoint](#service-endpoint).
+
+### Service Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
 ### Service Library
 A [Technology Service](#technology-service) that supports the [Service](#service) processes of the [Individuals](#individual) and the [Service Providers](#service-provider).
 
+### Service Portfolio
+A [Business Object](#business-object) for information about all the [Services](#service) that an [Individual](#individual) is or has been consuming.
+
 ### Service Provider
 A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Services](#service).
 
-### Service by Reference
-A pattern for using[Services](#service) indirectly by means of [References](#reference) ([Operation Reference](#operation-reference)).
+### Source Candidates Request
+A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
+
+### Source Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) as source for a [Service](#service).
+
+### Service Source
+A [Service Provider](#service-provider) that can or is providing a specific [Service](#service).
+
+### Substitute Access Provider
+An [Access Provider](#access-provider) that has been degignated by the Scheme Authority to replace te original [Access Provider](#access-provider) in case of default for any reason.
+
+### Technology Event
+As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096
+
+### Technology Interface
+A software solution or a device with which different technologies can interact with each other, with an application or with a network.
 
 ### Substitute Access Provider
 An [Access Provider](#access-provider) that has been degignated by the Scheme Authority to replace te original [Access Provider](#access-provider) in case of default for any reason.
@@ -290,6 +481,27 @@ See https://en.wikipedia.org/wiki/Token#Computing.
 ### Transient ID
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can only take place for the duration of a session.
 
+### Transport Connect Token
+A [Literal](#literal) used to create [Paths](#path).
+
+### Transport Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Transport Message
+A message that is exchanged over a [Path](#path) between two [Transporters](#transporter).
+
+### Transport Protocol
+A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Transporters](#transporter).
+
+### Transporter
+A [Technology Service](#technology-service) that provides transport [Services](#service).
+
+### Transporter API
+[Technology Interface](#technology-interface) of a [Transporter](#transporter).
+
+### Transporter Implementation
+A software package which can be used to realize a [Transporter](#transporter).
+
 ### Trust
 An [Entity](#entity)'s confident reliance on the outcome of an interaction.
 
@@ -301,6 +513,15 @@ See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 
 ### Use Case
 See https://en.wikipedia.org/wiki/Use_case.
+
+### Validated Data
+[Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
+
+### User Layer
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+
+### Uuid
+See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 
 ### Validated Data
 [Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
