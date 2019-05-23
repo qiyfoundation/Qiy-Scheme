@@ -7,14 +7,14 @@ The Qiy Scheme defines a framework for individual users, companies and governmen
 This document is a policy document which describes the requirements for new releases of the Qiy Scheme and how these new releases are managed.
 
 # 2 Versioning
-The Supervisory Authority of the Qiy Foundation decides upon the release of new versions of the Qiy Scheme:
-* The Supervisory Authority will release a major version when it introduces incompatible changes.
-* The Supervisory Authority will release a minor version when functionality is added in a backwards-compatible manner.
-* The Supervisory Authority will release a patch version for backwards-compatible (bug) fixes.
+The Executive Board of the Qiy Foundation decides upon the release of new versions of the Qiy Scheme:
+* The Executive Board will release a major version when it introduces incompatible changes.
+* The Executive Board will release a minor version when functionality is added in a backwards-compatible manner.
+* The Executive Board will release a patch version for backwards-compatible (bug) fixes.
 
 # 3 Rules
 New versions of the Qiy Scheme will apply from the date of release.
-The Supervisory Authority will follow these rules:
+The Executive Board will follow these rules:
 * Major versions shall be announced timely in order to grant those who are connected to the Qiy Trust Network ample time to adjust their settings or to take other measures to implement the changes.
 * Minor versions shall not be announced and upgrading to a newer version shall be optional.
 * Patch versions shall not be announced.
