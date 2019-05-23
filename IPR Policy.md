@@ -29,25 +29,25 @@ The Qiy Foundation's IPR Policy defines rights and obligations for the Qiy Found
 
 The following table intends to give a clear overview of the most important rights and obligations of the Qiy Foundation as the Scheme Authority, the Contributors,the Secretariat and the rights of third parties as specified under the Qiy Foundation's IPR Policy. 
 
-## Organisation
+## 5.1 Organisation
 
-### Obligations
+### 5.1.1 Obligations
 * to inform users of standards about Essential IPRs declared and ensure that this information is publicly available;
 * to perform IPR searches if the EU and/or EFTA so require and reasonable expenses are met;
 * to grant licenses on Qiy Foundation-owned IPRs (other than copyright) on FRAND terms and conditions;
 * to respect confidential information until publication of the relevant Specification.
 
-### Rights
+### 5.1.2 Rights
 
-## Contributor
+## 5.2 Contributor
 
-### Obligations
+### 5.2.1 Obligations
 * to inform Qiy Foundation’s about their own, and  other people's Essential IPRs; 
 * owners of Essential IPRs are requested to undertake to grant licenses on fair, reasonable and non¬discriminatory terms and conditions;
 * owners of Essential IPRs who refuse to grant a license when no alternative is available, are requested to reconsider their position and provide the Executive Director with a justification;
 * to abstain from claiming copyright on standards documentation (text, graphics etc., of the standard itself) on behalf of the Contributor itself and its employees.
 
-### Rights
+### 5.2.2 Rights
 * no obligation to conduct IPR searches;
 * to refuse the inclusion of own IPRs in standard;
 * to be granted licenses on FRAND terms and conditions in respect of a standard;
@@ -55,21 +55,21 @@ The following table intends to give a clear overview of the most important right
 * to use IPRs owned by Qiy Foundation’s free of charge;
 * to have confidential information respected until publication of the relevant Specification.
 
-## Secretariat
+## 5.3 Secretariat
 
-### Obligations
+### 5.3.1 Obligations
 * the Executive Director to contact on behalf of Qiy Foundation, owners of Essential IPRs having refused to grant licenses;
 * the Executive Director to request the owner of an Essential IPR to give within three months an undertaking in writing that it is prepared to grant licenses.
 
-### Rights
+### 5.3.2 Rights
 
-## Third Party
+## 5.4 Third Party
 
-### Obligations
+### 5.4.1 Obligations
 * the Qiy Foundation’s IPR Policy is only binding on Qiy Foundation’s Contributors. Third parties do not have any legal obligations under the Policy;
 * when the Qiy Foundation is informed that an IPR belonging to a non-Contributor could be essential for a standard, the non¬-Contributor owner is also requested to undertake to grant licenses on FRAND terms and conditions.
 
-### Rights
+### 5.4.2 Rights
 * to refuse the inclusion of their own Essential IPRs in Specifications;
 * to be granted licenses on FRAND terms and conditions in respect of a standard;
 * to be granted licenses for Qiy Foundation owned IPRs (other than copyright in the standard documentation) on FRAND terms and conditions;
@@ -86,7 +86,7 @@ The main problems for Qiy Foundation as a standards body which may arise from 'l
 
 If the above issues cannot be satisfactorily resolved, then the Qiy Foundation has to change the standard, which in some extreme cases could even include the need to start again with the development of that standard. 
 
-Intentional delays, where proven, should be treated as a breach of the IPR Policy and can be sanctioned by the Executive Board, in consultation with the Supervisory Authority.
+Intentional delays, where proven, should be treated as a breach of the IPR Policy and can be sanctioned by the Executive Board, in consultation with the Executive Board.
 
 'Intentional Delay' arises when it can be demonstrated that a Contributor has deliberately withheld IPR disclosures significantly beyond what would be expected from normal considerations of timely disclosure.
 
@@ -143,14 +143,14 @@ A formal call for IPR disclosures shall be made by the Chairperson at the beginn
 
 The formal call for IPR disclosures needs to be made by the Chairperson orally or in writing according to the example given below. Contributors need to be reminded that the forms for the notification of essential IPRs and licensing declaration are available on-line and attached in Annex [NUMBER] of the Qiy Foundation's Rules & Regulations.
 
-### Example of a formal call for IPRs 
-### The attention of the Contributors of this Work Stream Functionality & Technology is drawn to the fact that Qiy Foundation's Contributors shall use reasonable endeavours under the Qiy Foundation's IPR Policy, Annex [NUMBER] of the Rules & Regulations, to inform the Qiy Foundation of Essential IPRs in a timely fashion. This section covers the obligation to notify its own IPRs but also other companies' IPRs. 
+### 8.3.1 Example of a formal call for IPRs 
+The attention of the Contributors of this Work Stream Functionality & Technology is drawn to the fact that Qiy Foundation's Contributors shall use reasonable endeavours under the Qiy Foundation's IPR Policy, Annex [NUMBER] of the Rules & Regulations, to inform the Qiy Foundation of Essential IPRs in a timely fashion. This section covers the obligation to notify its own IPRs but also other companies' IPRs. 
 
-### The Contributors take note that they are hereby invited:
+The Contributors take note that they are hereby invited:
 * to investigate in their company whether their company does own IPRs which are, or are likely to become Essential in respect of the work of the Work Stream Functionality & Technology;
 * to notify to the Chairperson or to the Qiy Foundation's Executive Director all potential IPRs that their company may own, by means of the IPR Information Statement and the Licensing Declaration forms that they can obtain from the Qiy Foundation's Chief Technical Officer or [WEBSITE ADDRESS].
 
-### Contributors are encouraged to make general IPR undertakings/declarations that they will make licenses available for all their IPRs under FRAND terms and conditions related to a specific standardization area and then, as soon as feasible, provide (or refine) detailed disclosures.
+Contributors are encouraged to make general IPR undertakings/declarations that they will make licenses available for all their IPRs under FRAND terms and conditions related to a specific standardization area and then, as soon as feasible, provide (or refine) detailed disclosures.
 
 During the meeting a short reminder call for IPR disclosures should be made:
 * on formal submission of a technical solution;
@@ -186,10 +186,10 @@ The Secretariat, and especially the General Counsel, have a general duty to assi
 The Qiy Foundation's Secretariat will ensure that an appropriate reminder of the duty to disclose the identity of Essential IPRs is included in all published Specifications in the form of a standard text.
 
 Specifically, the Secretariat shall ensure that the following marking appears in the Specifications prior to Publication, Contributor vote or Public Enquiry:
-### Intellectual Property Rights
-### IPRs essential or potentially essential to the present document may have been declared to the Qiy Foundation. The information pertaining to these essential IPRs, if any, is publicly available for everyone and can be found in [DOCUMENT NUMBER]: 'Intellectual Property Rights (IPRs); Essential, or potentially Essential, IPRs notified to the Qiy Foundation in respect of the Qiy Standard', which is available from the Qiy Foundation's Secretariat. Latest updates are available on the Qiy Foundation's Web server [LOCATION].
+### 9.1.1 Intellectual Property Rights
+IPRs essential or potentially essential to the present document may have been declared to the Qiy Foundation. The information pertaining to these essential IPRs, if any, is publicly available for everyone and can be found in [DOCUMENT NUMBER]: 'Intellectual Property Rights (IPRs); Essential, or potentially Essential, IPRs notified to the Qiy Foundation in respect of the Qiy Standard', which is available from the Qiy Foundation's Secretariat. Latest updates are available on the Qiy Foundation's Web server [LOCATION].
 
-### Pursuant to the Qiy Foundation's IPR Policy, no investigation, including IPR searches, has been carried out by Qiy Foundation. No guarantee can be given as to the existence of other IPRs not referenced in [ABOVE DOCUMENT NUMBER] (or the updates on the Qiy Foundation's Web server) which are, or may be, or may become, essential to the present document.
+Pursuant to the Qiy Foundation's IPR Policy, no investigation, including IPR searches, has been carried out by Qiy Foundation. No guarantee can be given as to the existence of other IPRs not referenced in [ABOVE DOCUMENT NUMBER] (or the updates on the Qiy Foundation's Web server) which are, or may be, or may become, essential to the present document.
 
 ## 9.2 Non response by an IPR owner to a request for a licensing declaration
 In situations where there has been no response from an IPR owner to a request for licensing declaration within three months after an Essential IPR relating to the Qiy Standard or to a particular Specification is brought to the attention of the Qiy Foundation or the response is not sufficiently defined, the steps listed in paragraph 8.3 below should be applied.
@@ -207,7 +207,7 @@ The published Qiy Standard or published Specifications should not be redrafted b
 ## 9.5 Acknowledgement of third parties' copyrights 
 Due acknowledgment of copyrights owned by third parties, which are identifiable in Qiy Foundation's documentation, must be made in the following form:
 
-### Some material contained herein is the copyright of, or has been supplied by ... [NAME OF PARTY IN QUESTION].
+Some material contained herein is the copyright of, or has been supplied by ... [NAME OF PARTY IN QUESTION].
 
 In response to the obligation on the Chairpersons to report to the Secretariat any copyright restrictions in draft documents adopted by their Work Streams, the Secretariat will inform the Chairpersons if copyright licenses/assignments are required. If so, then they must be obtained before publication of the document. The Secretariat will determine, with the assistance of the Chairperson of the Work Stream which it concerns, which third party copyrights, if any, have to be acknowledged.
 
@@ -272,4 +272,5 @@ However, it should be noted that once an IPR (patent) has been granted, in the a
 
 ## 11.4 Notice on the use of NDAs in IPR negotiations 
 It is recognized that non-disclosure agreements (NDAs) may be used to protect the commercial interests of both potential licensor and potential licensee during an Essential IPR licensing negotiation, and this general practice is not challenged. Nevertheless, the Qiy Foundation expects its Contributors (as well as non-Contributors) to engage in an impartial and honest Essential IPR licensing negotiation process for FRAND terms and conditions.
+
 1 'Essential IPR' means that it is not possible on technical (but not commercial) grounds, taking into account normal technical practice and the state of the art generally available at the time of standardization, to make, sell, lease, otherwise dispose of, repair, use or operate equipment, software or methods which comply with a Standard without infringing that IPR. Where a Standard can only be implemented by technical solutions, all of which are infringements of IPRs, all such IPRs shall be considered 'Essential'.
