@@ -18,7 +18,7 @@ The development process starts at the level of Work Streams. Everyone is free to
 ## 4.1 Parties fulfilling a role in the process
 
 ### Contributor
-Any individual person who wishes to do so can make suggestions for the further development of the Qiy Scheme by sending a pull request. The GitHub Terms of Service apply, notably Section D thereof dealing with User-Generated Content. However, Contributors of possibly copyrighted materials must first sign a Contributor License Agreement. And, in the case where an individual is an employee in a country where intellectual property created by employees automatically becomes the property of the employer, this person will need to sign in advance a Contributor License Agreement for individuals with an employment relationship and to submit a signed Employer’s Declaration by which the employer grants the Qiy Foundation an irrevocable license to use that intellectual property, as set out in the said Contributor License Agreement.
+Any individual person who wishes to do so can make suggestions for the further development of the Qiy Scheme by sending a pull request. The GitHub Terms of Service apply, notably Section D thereof dealing with User-Generated Content. However, Contributors of possibly copyrighted materials must first sign a Contributor License Agreement. And, in the case where an individual is an employee in a country where intellectual property created by employees automatically becomes the property of the employer, this person will need to sign in advance a Contributor License Agreement for individuals with an employment relationship and to submit a signed Employer's Declaration by which the employer grants the Qiy Foundation an irrevocable license to use that intellectual property, as set out in the said Contributor License Agreement.
 
 ### Work Stream
 Work Streams provide a forum for discussion and have as their main tasks the preparation of relevant work programmes and to contribute to the further development of the Qiy Scheme. A Work Stream is the primary decision making centre for all matters that fall within its Terms of Reference.
@@ -27,7 +27,7 @@ It is the responsibility of the Executive Board of the Qiy Foundation to create 
 
 A Work Stream prepares drafts concerning the management, further development and maintenance of the Qiy Scheme for consideration by the Executive Board.
 
-A Work Stream may establish working groups, if required. When this is the case, the Work Stream shall decide on the rules for the working group, within the scope of the Qiy Foundation’s Rules & Regulations and the Work Stream Procedures.
+A Work Stream may establish working groups, if required. When this is the case, the Work Stream shall decide on the rules for the working group, within the scope of the Qiy Foundation's Rules & Regulations and the Work Stream Procedures.
 
 Participation in a Work Stream or working group is by invitation by the Chairperson only. Non-Members with a special expertise may be invited to participate in working groups or even in a Work Stream. Where deemed necessary by the Chairperson of a Work Stream, participants in Work Streams or working groups will be asked to sign a Mutual Confidentiality and Non-Disclosure Agreement with the Qiy Foundation.
 

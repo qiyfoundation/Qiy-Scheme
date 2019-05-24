@@ -43,7 +43,7 @@ The following table intends to give a clear overview of the most important right
 
 ### 5.2.1 Obligations
 * to inform Qiy Foundation's about their own, and  other people's Essential IPRs; 
-* owners of Essential IPRs are requested to undertake to grant licenses on fair, reasonable and non¬discriminatory terms and conditions;
+* owners of Essential IPRs are requested to undertake to grant licenses on fair, reasonable and non-discriminatory terms and conditions;
 * owners of Essential IPRs who refuse to grant a license when no alternative is available, are requested to reconsider their position and provide the Executive Director with a justification;
 * to abstain from claiming copyright on standards documentation (text, graphics etc., of the standard itself) on behalf of the Contributor itself and its employees.
 
@@ -67,7 +67,7 @@ The following table intends to give a clear overview of the most important right
 
 ### 5.4.1 Obligations
 * the Qiy Foundation's IPR Policy is only binding on Qiy Foundation's Contributors. Third parties do not have any legal obligations under the Policy;
-* when the Qiy Foundation is informed that an IPR belonging to a non-Contributor could be essential for a standard, the non¬-Contributor owner is also requested to undertake to grant licenses on FRAND terms and conditions.
+* when the Qiy Foundation is informed that an IPR belonging to a non-Contributor could be essential for a standard, the non-Contributor owner is also requested to undertake to grant licenses on FRAND terms and conditions.
 
 ### 5.4.2 Rights
 * to refuse the inclusion of their own Essential IPRs in Specifications;
