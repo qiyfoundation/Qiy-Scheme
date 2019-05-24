@@ -270,7 +270,7 @@ A [Service Description](#service-description) of a [Data Service](#data-service)
 A [Service Source](#service-source): a [Data Service](#data-service) that will be used to provide the [Personal Data](#personal-data) for a [Consent](#consent).
 
 ### Data Subject
-As defined in the [GDPR](#gdpr).
+As defined in the [General Data Protection Regulation](#general-data-protection-regulation).
 
 ### Data Type
 A type of [Data](#data).
@@ -312,9 +312,6 @@ A legal document which defines the arrangement by which an [Entity](#entity) dep
 
 ### Events Request
 A [Qiy Node Request](#qiy-node-request) to handle [Qiy Node Events](#qiy-node-event).
-
-### Expiration Date
-The Expiration Date of the [Transition Phase](#transition-phase): 30 juni 2019, or any earlier date as set unilaterally by the [Scheme Authority](#scheme-authority).
 
 ### Federation
 A formation of a unity by multiple [Entities](#entity) in which some components are shared, while each retains control of its own affairs.
@@ -455,20 +452,23 @@ A specification of a [HTTP Request](#http-request) for the execution of an [Oper
 ### Operation Specification Request Message
 A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
 
+### Operation Type
+The type of an [Operation](#operation).
+
 ### Operation Type Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of a [Operation Type] in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to get the details of an [Operation Type](#operation-type) in the [Service Library](#service-library).
 
 ### Operation Type Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Operation Type] in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to register a [Operation Type](#operation-type) in the [Service Library](#service-library).
 
 ### Operation Type Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type] in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type](#operation-type) in the [Service Library](#service-library).
 
 ### Operation Type Update Request
-A [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type] in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type](#operation-type) in the [Service Library](#service-library).
 
 ### Operation Types Request
-A [Qiy Node Request](#qiy-node-request) to list the [Operation Types] that are registered in the [Service Library](#service-library).
+A [Qiy Node Request](#qiy-node-request) to list the [Operation Types](#operation-type) that are registered in the [Service Library](#service-library).
 
 ### Operation Unregister Request
 A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
@@ -497,7 +497,7 @@ A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent
 ### Personal Data
 [Data](#data) relating to an [Individual](#individual). This can be the name, address, telephone number, age, health [Data](#data), account balance, but also personal preferences, etcetera. [Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared with [Relying Parties](#relying-party) by [Individuals](#individual).
 
-As defined in the [GDPR](#gdpr).
+As defined in the [General Data Protection Regulation](#general-data-protection-regulation).
 
 ### Portfolio Details Request
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
@@ -513,6 +513,12 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates cre
 
 ### Proposer Id
 The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
+
+### Provider Register Request
+A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
+
+### Provider Unregister Request
+A [Qiy Node Request](#qiy-node-request) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
 
 ### Pseudonym
 Synonymous with [Identifier](#identifier) and [Local Id](#local-id).
@@ -888,6 +894,9 @@ A piece of information that is cryptographically trustworthy.
 
 ### Verified Attribute
 An [Attribute](#attribute) that has been made available to an [Entity](#entity) by a trusted third party.
+
+### Verifiable Attribute
+An [Attribute](#attribute) that has been made available to an [Entity](#entity), the source of which can be reliably identified and contacted to authoritatively authenticate the attribute.
 
 ### Verified Identifier
 An [Identifier](#identifier) that has been linked to an [Entity](#entity) by a trusted third party.

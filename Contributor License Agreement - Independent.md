@@ -50,7 +50,7 @@ By signing this Contributor License Agreement (hereinafter: CLA) you accept the 
 
 3.2	In no event will any Party be liable to any other party for lost profits, or any form of indirect, special, incidental, or consequential damages of any character from any cause of action of any kind with respect to this CLA, whether based on breach of contract, tort (including negligence), or otherwise, and whether or not the other Party has been advised on the possibility of such damage.
 
-3.3	Should I wish to submit work that is not my original creation, I may submit it to the Qiy Foundation separately from any Contribution, identifying the complete details of its source and of any license or other restriction (including, but not limited to, related patents, trademarks, and license agreements) of which I am personally aware, and conspicuously marking the work as "Submitted on behalf of a third-party: [named here]".
+3.3	Should I wish to submit work that is not my original creation, I may submit it to the Qiy Foundation separately from any Contribution, identifying the complete details of its source and of any license or other restriction (including, but not limited to, related patents, trademarks, and license agreements) of which I am personally aware, and conspicuously marking the work as "Submitted on behalf of a third-party: {named here}".
 
 3.4	I am familiar with the contents of and I accept the IPR Policy Rules and Guidelines, which have been adopted by the Qiy Foundation prior to signing this CLA. 
 
