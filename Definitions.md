@@ -251,7 +251,7 @@ An [Uri](#uri) which can be used to identify and obtain a [Data Description](#da
 ### Data Provider
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Trust Network](#qiy-trust-network) to other [Qiy Users](#qiy-user) on [Request](#request).
 
-### Data Provider ID
+### Data Provider Id
 An [Identifier](#identifier) which can be used to identify a [Data Provider](#data-provider) within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Data Reference
@@ -329,7 +329,7 @@ The model on which basis the Qiy Scheme is independently administered, managed, 
 As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
-Synonymous with [Local ID](#local-id) and [Pseudonym](#pseudonym).
+Synonymous with [Local Id](#local-id) and [Pseudonym](#pseudonym).
 An [Attribute](#attribute) of an [Identity](#identity), such as a name, an identification number, location data, an online identifier or one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity which identifies an [Individual](#individual) with sufficient uniqueness and immutability.
 
 ### Identity
@@ -368,7 +368,7 @@ The combination of annual fees to be paid by an [Access Provider](#access-provid
 ### Literal
 See https://en.wikipedia.org/wiki/Literal_(computer_programming).
 
-### Local ID
+### Local Id
 Synonymous with [Identifier](#identifier)
 
 ### Message Description
@@ -488,7 +488,7 @@ A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transport
 ### Payload
 An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which contains the [Data](#data) that the [Sender](#sender) wants to transfer to the [Receiver](#receiver).
 
-### Persistent ID
+### Persistent Id
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can take place over multiple sessions as long as the [Connection](#connection) is maintained.
 
 ### Persistent Id Event
@@ -505,7 +505,7 @@ A [Qiy Node Request](#qiy-node-request) which can be used to get the details of 
 ### Portfolio Register Message
 A [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](#data-provider) to a [Service Portfolio](#service-portfolio).
 
-### Pseudo ID
+### Pseudo Id
 An [Anonymous](#anoymous) [Attribute](#attribute) relating to an [Individual](#individual) which can either be persistent or transient.
 
 ### Proposer
@@ -515,7 +515,7 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates cre
 The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
 
 ### Pseudonym
-Synonymous with [Identifier](#identifier) and [Local ID](#local-id).
+Synonymous with [Identifier](#identifier) and [Local Id](#local-id).
 
 ### Public Key Infrastructure
 See https://en.wikipedia.org/wiki/Public_key_infrastructure.
@@ -655,7 +655,7 @@ A local [Entity](#entity) that adheres to the overall [Qiy Scheme](#qiy-scheme) 
 ### Relying Party
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
 
-### Relying Party ID
+### Relying Party Id
 An [Identifier](#identifier) which can be used to identify a [Relying Party](#relying-party) within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Request
@@ -829,7 +829,7 @@ The geographic region served by a [Regional Authority](#regional-authority).
 ### Token
 See https://en.wikipedia.org/wiki/Token#Computing.
 
-### Transient ID
+### Transient Id
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can only take place for the duration of a session.
 
 ### Transport Connect Token
