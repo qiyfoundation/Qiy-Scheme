@@ -68,7 +68,7 @@ A positive statement or declaration about a [User](#user).
 A quality that is a particular characteristic of an [Individual](#individual) or an [Entity](#entity).
 
 ### Binding Individual Terms
-The general terms and conditions under which an [Individual](#individual) exchanges [Personal Data](#personal-data) with other [Users](#user) via the [Qiy Trust Network](#qiy-trust-network).
+The general terms and conditions under which an [Individual](#individual) exchanges [Personal Data](#personal-data) with other [Users](#user) via the [Qiy Trust Network](#qiy-trust-network), see [Binding Individual Terms](Binding%20Individual%20Terms.md).
 
 ### Business Object
 As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946055

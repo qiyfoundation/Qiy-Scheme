@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document represents the general terms under which [Individuals](#individual) are prepared to consent to the processing of [Personal Data](#personal-data) within the [Qiy Trust Network](#qiy-trust-network). These terms are binding for all [Users](#user): [Binding Individual Terms](#binding-individual-terms).
+This document represents the general terms under which [Individuals](#individual) are prepared to consent to the processing of [Personal Data](#personal-data) within the [Qiy Trust Network](#qiy-trust-network). These terms are binding for all [Users](#user): [Binding Individual Terms](Definitions.md#binding-individual-terms).
 
 ## 1 Anonymity
 I shall have the right to choose to remain [Anonymous](#anonymous). Processing of my [Personal Data](#personal-data) shall only be allowed on the basis of and in compliance with these [Binding Individual Terms](#binding-individual-terms).
@@ -16,11 +16,11 @@ When I am asked to provide [Personal Data](#personal-data) for an online service
 Only when fully informed, I can decide to make (part of) my (validated) [Personal Data](#personal-data) available.
 
 ## 4 Data minimisation
-The quantity and nature of the requested must be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed
+The quantity and nature of the requested data must be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed.
 
 ## 5 Online tracking
 
-Online tracking is not permitted without my prior explicit [Consent](#consent)
+Online tracking is not permitted without my prior explicit [Consent](#consent).
 
 ## 6 Erasure of Personal Data
 Unless prescribes otherwise by law, I shall have the right to obtain the erasure of my [Personal Data](#personal-data) without undue delay, whenever I wish.
@@ -30,9 +30,9 @@ Each [Service Provider](#service-provider) must ensure that [Personal Data](#per
 Each [Service Provider](#service-provider) must have an adequate security policy in place, based on the requirements imposed by or on behalf of the [Scheme Authority](#scheme-authority).
 
 ## 8 Privacy statement Service Providers
-[Service Providers](#service-provider) accept that the [Binding Individual Terms](#binding-individual-terms) take precedence over their existing or future privacy statements where they offer me a higher protection and that the provisions of these statements that are inconsistent with the [Qiy Scheme](#qiy-scheme) and these [Binding Individual Terms](#binding-individual-terms) will be considered void. In the case where existing or future privacy statements of [Service Providers](#service-provider) offer a higher protection, these privacy statements will teke precendence.
+[Service Providers](#service-provider) accept that the [Binding Individual Terms](#binding-individual-terms) take precedence over their existing or future privacy statements where they offer me a higher protection and that the provisions of these statements that are inconsistent with the [Qiy Scheme](Definitions.md#qiy-scheme) and these [Binding Individual Terms](#binding-individual-terms) will be considered void. In the case where existing or future privacy statements of [Service Providers](#service-provider) offer a higher protection, these privacy statements will teke precendence.
 
 ## 9 Complaints and disputes
-In the event of a complaint or dispute, the first in line to be addressed shall be the [Service Provider](#service-provider). If this does not lead to a satisfactory solution, the complaint or dispute may be submitted to the Regional Authority (for now: Qiy Foundation). Each Service Provider shall publish a clear and easy to find announcement on its website indicating to whom complaints can be addressed and whom to contact in case of a dispute.
-The complaint procedure and the procedure for dispute resolution as prescribed by the Scheme Authority or, in delegation by the Scheme Authority, as adopted by the Regional Authority shall apply.
+In the event of a complaint or dispute, the first in line to be addressed shall be the [Service Provider](#service-provider). If this does not lead to a satisfactory solution, the complaint or dispute may be submitted to the [Regional Authority](Definitions.md#regional-authority) (for now: [Qiy Foundation](Definitions.md#qiy-foundation)). Each [Service Provider](Definitions.md#service-provider) shall publish a clear and easy to find announcement on its website indicating to whom complaints can be addressed and whom to contact in case of a dispute.
+The complaint procedure and the procedure for dispute resolution as prescribed by the [Scheme Authority](Definitions.md#scheme-authority) or, in delegation by the [Scheme Authority](Definitions.md#scheme-authority), as adopted by the [Regional Authority](Definitions.md#regional-authority) shall apply.
 
