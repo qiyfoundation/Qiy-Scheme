@@ -354,7 +354,7 @@ The session [Credentials](Definitions.md#credential) are persisted in the [Servi
 This chapter describes the [Application Layer](Definitions.md#application-layer) and how it supports the processes of the data reuse scenario.
 
 ## 5.1 Qiy Application
-A [Qiy Application](Definitions.md#qiy-application) is an [Application Service](Definitions.md#application-service) or software which uses the [Qiy Trust Network](Definitions.md#qiy-trust-network).
+A [Qiy Application](Definitions.md#qiy-application) is an [Application](Definitions.md#application) that uses the [Qiy Trust Network](Definitions.md#qiy-trust-network).
 * A [Qiy User](Definitions.md#qiy-user) can only use Qiy with a [Qiy Application](Definitions.md#qiy-application).
 * A [Qiy User](Definitions.md#qiy-user) can use one or more [Qiy Applications](Definitions.md#qiy-application).
 * Two or more [Qiy Applications](Definitions.md#qiy-application) can concurrently use one and the same [Qiy Node](Definitions.md#qiy-node).

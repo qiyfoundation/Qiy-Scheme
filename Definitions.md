@@ -10,9 +10,6 @@ The [Qiy Scheme](#qiy-scheme) defines a framework for [Individuals](#individual)
 ### Accepter
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) who is creating a [Connection](#connection) using a [Connect Token](#connect-token) that is provided by a [Proposer](#proposer).
 
-### Access
-The principle which authorizes the access of an [Individual](#individual) to his or her [Personal Data](#personal-data), one of the [Qiy Trust Principles](#qiy-trust-principles).
-
 ### Access Provider
 An organisation which provides [Qiy Users](#qiy-user) access to the [Qiy Trust Network](#qiy-trust-network).
 
@@ -32,7 +29,7 @@ A [Qiy Node Request](#qiy-node-request) to register an [Account](#account).
 A [Qiy Node Request](#qiy-node-request) to update the details of an [Account](#account).
 
 ### Accountability
-[Service Providers](#service-provider) are responsible for, and must be able to demonstrate compliance with the [Qiy Trust Principles](#qiy-trust-principles).
+[Service Providers](#service-provider) shall ensure compliance with the [Qiy Trust Principles](#qiy-trust-principles) and must be able to demonstrate that they do so.
 
 ### Accounts Request
 A [Qiy Node Request](#qiy-node-request) to list [Accounts](#account).
@@ -44,7 +41,7 @@ Not directly or indirectly traceable to a natural person.
 See [Application Programming Interface](#application-programming-interface).
 
 ### Application
-An [Application Service](#application-service) or software for such a service. 
+A computer program that has been designed to help persons and/or organisations to consume and/or provide services.
 
 ### Application Connect Token
 A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create [Connections](#connection).
@@ -53,10 +50,7 @@ A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
 
 ### Application Programming Interface
-As described in https://en.wikipedia.org/wiki/Application_programming_interface.
-
-### Application Service
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap09.html#_Toc489946075
+A description of how an [Application](Definitions.md#application) can be accessed by another [Application](Definitions.md#application).
 
 ### Architectural Layers
 The [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme): the [User Layer](#user-layer), the [Application Layer](#application-layer), the [Qiy Node Layer](#qiy-node-layer), the [Service Layer](#service-layer), the [Transport Layer](#transport-layer) and the [Carrier Layer](#carrier-layer).
@@ -65,7 +59,7 @@ The [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-schem
 A positive statement or declaration about a [User](#user).
 
 ### Attribute
-A quality that is a particular characteristic of an [Individual](#individual) or an [Entity](#entity).
+A quality that is a particular characteristic of an [Individual](#individual) or a [Legal Entity](#entity).
 
 ### Binding Individual Terms
 The general terms and conditions under which an [Individual](#individual) exchanges [Personal Data](#personal-data) with other [Users](#user) via the [Qiy Trust Network](#qiy-trust-network), see [Binding Individual Terms](Binding%20Individual%20Terms.md).
@@ -270,7 +264,7 @@ A [Service Description](#service-description) of a [Data Service](#data-service)
 A [Service Source](#service-source): a [Data Service](#data-service) that will be used to provide the [Personal Data](#personal-data) for a [Consent](#consent).
 
 ### Data Subject
-As defined in the [General Data Protection Regulation](#general-data-protection-regulation).
+An identified or identifiable natural person to whom data relates to; an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person, as defined in the [General Data Protection Regulation](#general-data-protection-regulation).
 
 ### Data Type
 A type of [Data](#data).
@@ -297,18 +291,16 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this do
 5 January, 2015.
 
 ### Entity
-See https://en.wikipedia.org/wiki/Entity.
-
-Sometimes used in the sense of [Legal Entity](#legal-entity).
+A thing with distinct and independent existence.
 
 ### Entitlement
-A usage right for a [Resource](#resource) owned by some other [Entity](#entity).
+A usage right for a [Resource](#resource) owned by some other [Legal Entity](#legal-entity).
 
 ### Escrow Agent
-[Entity](#entity) that ensures the execution of the arrangements as laid down in the [Escrow Agreement](#escrow-agreement), the management, control and storage of the deposit and the assessment of the functionality and completeness of the deposited materials, and whether these are up-to-date, by means of a verification investigation.
+A [Legal Entity](#legal-entity) that ensures the execution of the arrangements as laid down in the [Escrow Agreement](#escrow-agreement), the management, control and storage of the deposit and the assessment of the functionality and completeness of the deposited materials, and whether these are up-to-date, by means of a verification investigation.
 
 ### Escrow Agreement
-A legal document which defines the arrangement by which an [Entity](#entity) deposits an asset with an [Escrow Agent](#escrow-agent), who, in turn, makes a delivery to another [Entity](#entity) if and when the specified conditions of the contract are met.
+A legal document which defines the arrangement by which a [Legal Entity](#legal-entity) deposits an asset with an [Escrow Agent](#escrow-agent), who, in turn, makes a delivery to another [Legal Entity](#legal-entity) if and when the specified conditions of the contract are met.
 
 ### Events Request
 A [Qiy Node Request](#qiy-node-request) to handle [Qiy Node Events](#qiy-node-event).
@@ -326,8 +318,7 @@ The model on which basis the Qiy Scheme is independently administered, managed, 
 As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
-Synonymous with [Local Id](#local-id) and [Pseudonym](#pseudonym).
-An [Attribute](#attribute) of an [Identity](#identity), such as a name, an identification number, location data, an online identifier or one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity which identifies an [Individual](#individual) with sufficient uniqueness and immutability.
+A [Token](#token) that identifies an [Entity](#entity).
 
 ### Identity
 A [User](#user) centric term. An [Entity](#entity) uses an [Identity](#identity) to represent an aspect of itself (such as parent or employee and client or server) through a collection of [Attributes](#attribute), in any interactive situation.
@@ -345,7 +336,7 @@ Json is an open-standard format, see https://en.wikipedia.org/wiki/JSON
 One of the basic data types of [Json](#json).
 
 ### Legal Entity
-An organisation that is capable of bearing legal rights and obligations, such as a business, a corporation, a government agency or a non-governmental organisation.
+An [Entity](#entity) that is capable of bearing legal rights and obligations, such as a business, a corporation, a government agency or a non-governmental organisation.
 
 ### Legitimate Purpose
 A legal ground for the processing of [Personal Data](#personal-data).
@@ -632,7 +623,7 @@ A [Communication Network](#communication-network) that connects [Qiy Nodes](#qiy
 The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Qiy Users](#qiy-user) must respect these principles.
 
 ### Qiy User
-A [Business Role](#business-role): an [Entity](#entity) that is using the [Qiy Trust Network](#qiy-trust-network).
+A [Business Role](#business-role): a [Legal Entity](#legal-entity) that is using the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Webapp
 A [Qiy Application](#qiy-application) that is accessible via a web browser.
@@ -650,7 +641,7 @@ A [Literal](#literal).
 An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
 
 ### Regional Authority
-A local [Entity](#entity) that adheres to the overall [Qiy Scheme](#qiy-scheme) and, in delegation by the [Scheme Authority](#scheme-authority) fulfils the following [Roles](#role) at the level of a geographic region: 
+A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#qiy-scheme) and, in delegation by the [Scheme Authority](#scheme-authority) fulfils the following [Roles](#role) at the level of a geographic region: 
 * License [Access Providers](#access-provider) under the rules and regulations of the Scheme Authority](#scheme-authority)
 * Certify regional auditors (technical and non-technical) to perform audits on behalf of the [Scheme Authority](#scheme-authority) and to assist in fraud prevention
 * Regional stakeholder engagement, regional marketing, public relations and public affairs tasks and communication concerning the [Qiy Scheme](#qiy-scheme)
@@ -668,7 +659,7 @@ An [Identifier](#identifier) which can be used to identify a [Relying Party](#re
 A [Business Object](#business-object): a call or message requesting something.
 
 ### Resource
-A [Service](#service), which its owner can provide to another [Entity](#entity).
+A [Service](#service), which its owner can provide to another [Legal Entity](#legal-entity).
 
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
@@ -677,7 +668,7 @@ A set of connected rights, obligations and behaviours as conceptualized in the [
 An RSA private key, see https://en.wikipedia.org/wiki/RSA_(cryptosystem).
 
 ### Scheme Authority
-The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at a global level: 
+The non-profit [Legal Entity](#legal-entity), which fulfils the following [Roles](#role) at a global level: 
 * Supervision and monitoring 
 * Definition of eligibility requirements for [Licenses](#license) 
 * Definition and management of requirements, rules and regulations as specified in the [Qiy Scheme](#qiy-scheme) 
@@ -686,7 +677,7 @@ The non-profit [Entity](#entity), which fulfils the following [Roles](#role) at 
 * Compliance
 
 ### Scheme Authority
-The global [Entity](#entity) that administers, manages, controls and further develops the [Qiy Scheme](#qiy=scheme).
+The global [Legal Entity](#legal-entity) that administers, manages, controls and further develops the [Qiy Scheme](#qiy=scheme).
 
 ### Sender
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that sends a [Qiy Node Message](#qiy-node-message) to a [Receiver](#receiver).
