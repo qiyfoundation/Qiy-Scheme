@@ -889,6 +889,9 @@ See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 ### Validated Data
 [Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
 
+### Validated Attribute
+An [Attribute](#attribute) emanating from a source that can be reliably identified and that has verified the validity of the [Attribute](#attribute) by itself.
+
 ### Verifiable Claim
 A piece of information that is cryptographically trustworthy.
 
