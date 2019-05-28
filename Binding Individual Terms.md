@@ -5,7 +5,7 @@
 This document represents the general terms under which [Individuals](Definitions.md#individual) are prepared to consent to the processing of [Personal Data](Definitions.md#personal-data) within the [Qiy Trust Network](Definitions.md#qiy-trust-network). These terms are binding for all [Users](Definitions.md#user): [Binding Individual Terms](Definitions.md#binding-individual-terms).
 
 ## 1 Anonymity
-I shall have the right to choose to remain [Anonymous](Definitions.md#anonymous). Processing of my [Personal Data](Definitions.md#personal-data) shall only be allowed on the basis of and in compliance with these [Binding Individual Terms](Definitions.md#binding-individual-terms).
+I shall have the right to choose to remain [Anonymous](Definitions.md#anonymous). Processing of [Data](Definitions.md#data) that apply to me shall only be allowed on the basis of and in compliance with these [Binding Individual Terms](Definitions.md#binding-individual-terms).
 Despite my choice to remain [Anonymous](Definitions.md#anonymous), I can choose to share [Validated Attributes](Definitions.md#validated-attribute) or [Verifiable Claims](Definitions.md#verifiable-claim). In transactions where I cannot act anonymously, I have the choice to either provide [Personal Data](Definitions.md#personal-data) or to abort the transaction. [Service Providers](Definitions.md#service-provider) accept that the right to remain [Anonymous](Definitions.md#anonymous) is a basic premise in these [Binding Individual Terms](Definitions.md#binding-individual-terms).
 
 ## 2 Consent

@@ -256,7 +256,7 @@ Alternatively, [Qiy Users](Definitions.md#qiy-user) may instantiate a [Qiy Node]
 
 ## 4.4 Persistent Id
 
-The [Persistent Id](Definitions.md#persistent-id) is an identifier for a [Connection](Definitions.md#connection) which is created by the [Qiy Trust Network](Definitions.md#qiy-trust-network) and communicated to both the [Accepter](Definitions.md#accepter) and the [Proposer](Definitions.md#proposer) which can be used between these two as a [Pseudonym](Definitions.md#pseudonym), but with the following constraints:
+The [Persistent Id](Definitions.md#persistent-id) is an identifier for a [Connection](Definitions.md#connection) which is created by the [Qiy Trust Network](Definitions.md#qiy-trust-network) and communicated to both the [Accepter](Definitions.md#accepter) and the [Proposer](Definitions.md#proposer) which can be used between these two as a [Pseudo Id](Definitions.md#pseudo-id), but with the following constraints:
 * The [Persistent Id](Definitions.md#persistent-id) is the same for both the [Accepter](Definitions.md#accepter) and the [Proposer](Definitions.md#proposer).
 * The [Persistent Id](Definitions.md#persistent-id) is only known by the [Accepter](Definitions.md#accepter) and the [Proposer](Definitions.md#proposer) and can not be used outside this scope.
 

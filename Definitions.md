@@ -97,6 +97,12 @@ A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](
 ### Catalogues Request
 A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
+### Claim
+
+A statement that one subject, such as a person or organization, makes about itself or another subject.
+
+Definition taken from https://en.wikipedia.org/wiki/Claims-based_identity.
+
 ### Communication Network
 A communication network represents a set of structures that connects computer systems or other electronic devices for transmission, routing, and reception of data or data-based communications such as voice and video as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090.
 
@@ -104,7 +110,7 @@ A communication network represents a set of structures that connects computer sy
 A [Business Object](#business-object) for a proposal to connect via Qiy.
 
 ### Connect Token
-A [Literal](#literal) used to create a [Connection](#connection).
+A [Token](#token) used to create a [Connection](#connection).
 
 ### Connect Token Create Request
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a [Connect Token](#connect-token) from the [Qiy Node](#qiy-node).
@@ -156,7 +162,6 @@ An audit log of a [Consent](#consent) which is accessible via its [Consent Repos
 
 ### Consent Credential
 Credential which provide access to a [Consent Repository](#consent-repository).
-
 
 ### Consent Data Descriptor
 [Data Descriptor](#data-descriptor) in a [Service Description](#service-description) referring to the [Data Description](#data-description) describing the [Personal Data](#personal-data) that is used to provide the [Service](#service).
@@ -242,6 +247,14 @@ A description of [Data](#data) that is both human- and machine-readable as addre
 ### Data Descriptor
 An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
 
+### Data Object
+
+[Data](#data) consisting of a collection of name/value pairs.
+
+### Data Object Attribute
+
+A name/value pair of a [Data Object](#data-object) where the name and value are known as the name and value of the attribute respectively.
+
 ### Data Provider
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Data](#data) (or [Assertions](#assertion)) through the [Qiy Trust Network](#qiy-trust-network) to other [Qiy Users](#qiy-user) on [Request](#request).
 
@@ -292,11 +305,11 @@ One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this do
 ### Effective Date
 5 January, 2015.
 
-### Entity
-A thing with distinct and independent existence.
-
 ### Entitlement
 A usage right for a [Resource](#resource) owned by some other [Legal Entity](#legal-entity).
+
+### Entity
+A concept (thing, thought, organism, ...) with distinct and independent existence.
 
 ### Escrow Agent
 A [Legal Entity](#legal-entity) that ensures the execution of the arrangements as laid down in the [Escrow Agreement](#escrow-agreement), the management, control and storage of the deposit and the assessment of the functionality and completeness of the deposited materials, and whether these are up-to-date, by means of a verification investigation.
@@ -325,7 +338,7 @@ A letter, number, symbol, or any combination of those that identifies a unique [
 Definition based on https://en.wikipedia.org/wiki/Identifier#In_computer_science.
 
 ### Identity
-A [User](#user) centric term. An [Entity](#entity) uses an [Identity](#identity) to represent an aspect of itself (such as parent or employee and client or server) through a collection of [Attributes](#attribute), in any interactive situation.
+Any [Information](#information) and/or [Data](#data) that can be used to identify an [Entity](#entity).
 
 ### Individual
 A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), for a natural person that uses the [Qiy Trust Network](#qiy-trust-network).
@@ -334,10 +347,7 @@ A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), fo
 A human-processable physical representation of facts, perceptions or other concepts.
 
 ### Json
-Json is an open-standard format, see https://en.wikipedia.org/wiki/JSON
-
-### Json Object
-One of the basic data types of [Json](#json).
+Json is data-interchange format, see https://en.wikipedia.org/wiki/JSON
 
 ### Legal Entity
 An [Entity](#entity) that is capable of bearing legal rights and obligations, such as a business, a corporation, a government agency or a non-governmental organisation.
@@ -357,9 +367,6 @@ The agreement between the [Scheme Authority](#scheme-authority) (or in delegatio
 ### License Fee
 The combination of annual fees to be paid by an [Access Provider](#access-provider) to the [Scheme Authority](#scheme-authority) in exchange for a [License](#license).
 
-### Literal
-See https://en.wikipedia.org/wiki/Literal_(computer_programming).
-
 ### Local Id
 Synonymous with [Identifier](#identifier)
 
@@ -373,7 +380,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node M
 This term is used in the following senses:
 * A [Uri](#uri) which identifies a [Message Description](#message-description).
 * A [Uri](#uri) which can be used to obtain a [Message Description](#message-description) from the [Service Library](#service-library).
-* An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message).
+* A [Property](#property) of a [Qiy Node Message](#qiy-node-message).
 
 ### Message Details Request
 A [Qiy Node Request](#qiy-node-request) that can be used to get the details of a [Qiy Node Message](#qiy-node-message).
@@ -481,7 +488,7 @@ A [Data](#data) link between two [Transporters](#transporter) which is used to e
 A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
 
 ### Payload
-An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which contains the [Data](#data) that the [Sender](#sender) wants to transfer to the [Receiver](#receiver).
+A [Property](#property) of a [Qiy Node Message](#qiy-node-message) which contains the [Data](#data) that the [Sender](#sender) wants to transfer to the [Receiver](#receiver).
 
 ### Persistent Id
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can take place over multiple sessions as long as the [Connection](#connection) is maintained.
@@ -501,14 +508,15 @@ A [Qiy Node Request](#qiy-node-request) which can be used to get the details of 
 ### Portfolio Register Message
 A [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](#data-provider) to a [Service Portfolio](#service-portfolio).
 
-### Pseudo Id
-An [Anonymous](#anonymous) [Attribute](#attribute) relating to an [Individual](#individual) which can either be persistent or transient.
+### Property
+
+A [Data Object Attribute](#data-object-attribute).
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
 
 ### Proposer Id
-The [Identity](#identity) of the [Proposer](#proposer) as registered by the [Access Provider](#access-provider).
+A [Proposer](#proposer) [Identifier](#identifier).
 
 ### Provider Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
@@ -516,8 +524,9 @@ A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#servic
 ### Provider Unregister Request
 A [Qiy Node Request](#qiy-node-request) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
 
-### Pseudonym
-Synonymous with [Identifier](#identifier) and [Local Id](#local-id).
+### Pseudo Id
+An [Identifier](#identifier) that a [Service Provider](#service-provider) can use to provide services to a natural person, but that the [Service Provider](#service-provider) can not use to identify the natural person.
+The Pseudo Id can either be persistent or transient.
 
 ### Public Key Infrastructure
 A public key infrastructure (PKI) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store & revoke digital certificates and manage public-key encryption, see https://en.wikipedia.org/wiki/Public_key_infrastructure.
@@ -640,10 +649,10 @@ See https://en.wikipedia.org/wiki/QR_code.
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that receives a [Qiy Node Message](#qiy-node-message) from a [Sender](#sender).
 
 ### Reference
-A [Literal](#literal).
+An [Identifier](#identifier).
 
 ### Reference Serial Number
-An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
+A [Property](#property) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
 
 ### Regional Authority
 A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#qiy-scheme) and, in delegation by the [Scheme Authority](#scheme-authority) fulfils the following [Roles](#role) at the level of a geographic region: 
@@ -658,7 +667,7 @@ A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
 
 ### Relying Party Id
-An [Identifier](#identifier) which can be used to identify a [Relying Party](#relying-party) within the [Qiy Trust Network](#qiy-trust-network).
+A [Relying Party](#relying-party) [Identifier](#identifier).
 
 ### Request
 A [Business Object](#business-object): a call or message requesting something.
@@ -688,7 +697,7 @@ The global [Legal Entity](#legal-entity) that administers, manages, controls and
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that sends a [Qiy Node Message](#qiy-node-message) to a [Receiver](#receiver).
 
 ### Serial Number
-An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which identify the [Qiy Node Messages](#qiy-node-message) exchanged between one [Sender](#sender) and one [Receiver](#receiver). [Serial Numbers](#serial-number) for [Qiy Node Messages](#qiy-node-message) that are exchanged in the same direction are unique and increase over time.
+An [[Property](#property) of a [Qiy Node Message](#qiy-node-message) which identify the [Qiy Node Messages](#qiy-node-message) exchanged between one [Sender](#sender) and one [Receiver](#receiver). [Serial Numbers](#serial-number) for [Qiy Node Messages](#qiy-node-message) that are exchanged in the same direction are unique and increase over time.
 
 ### Service
 An information society service; i.e., any service normally provided for remuneration, at a distance, by electronic means and at the individual request of a recipient of services.
@@ -751,7 +760,7 @@ A [Business Object](#business-object) for information about all the [Services](#
 A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Services](#service).
 
 ### Service Provider Id
-The [Identity](#identity) of the [Service Provider](#service-provider) as registered by the [Access Provider](#access-provider).
+A [Service Provider](#service-provider) [Identifier](#identifier).
 
 ### Service Provider Register Request
 See [Provider Register Request].
@@ -829,13 +838,13 @@ A technology service represents an explicitly defined exposed technology behavio
 The geographic region served by a [Regional Authority](#regional-authority).
 
 ### Token
-See https://en.wikipedia.org/wiki/Token#Computing.
+An [Identifier](#identifier) used by [Applications](#application) that can only be used to access the [Entity](#entity) it identifies by the [Application](#application) that created it.
 
 ### Transient Id
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can only take place for the duration of a session.
 
 ### Transport Connect Token
-A [Literal](#literal) used to create [Paths](#path).
+A [Token](#token) used to create [Paths](#path).
 
 ### Transport Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
@@ -862,10 +871,12 @@ An [Entity](#entity)'s confident reliance on the outcome of an interaction.
 A relation between multiple [Entities](#entity), which is characterized by a mutual reliance on the outcome of an interaction.
 
 ### Uri
-See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource and that complies with the syntax defined in https://tools.ietf.org/html/rfc3986.
 
 ### Use Case
-For the definion, see https://en.wikipedia.org/wiki/Use_case.
+A list of actions or event steps typically defining the interactions between a role and a system to achieve a goal.
+
+Definition based on https://en.wikipedia.org/wiki/Use_case.
 
 For the [Use Cases](#use-case) of the [Qiy Scheme](#qiy-scheme), see [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
 
@@ -889,7 +900,7 @@ See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 An [Attribute](#attribute) emanating from a source that can be reliably identified and that has verified the validity of the [Attribute](#attribute) by itself.
 
 ### Verifiable Claim
-A piece of information that is cryptographically trustworthy.
+A [Claim](#claim) that is cryptographically trustworthy.
 
 ### Verified Attribute
 An [Attribute](#attribute) that has been made available to an [Entity](#entity) by a trusted third party.
