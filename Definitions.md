@@ -41,7 +41,7 @@ Not directly or indirectly traceable to a natural person.
 See [Application Programming Interface](#application-programming-interface).
 
 ### Application
-A computer program that has been designed to help persons and/or organisations to perform tasks, for example to help providing or consuming [Services](#service).
+A computer program that has been designed to perform tasks, for example to help persons and/or organisations to provide or consume [Services](#service).
 
 ### Application Connect Token
 A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create [Connections](#connection).
@@ -77,7 +77,7 @@ A business role is the responsibility for performing specific behavior, to which
 A [Technology Service](#technology-service) that provides the [Services](#service) of the [Carrier Layer](#carrier-layer). 
 
 ### Carrier API
-[Technology Interface](#technology-interface) of the [Carrier](#carrier).
+The [Application Programming Interface](#application-programming-interface) of a [Carrier](#carrier).
 
 ### Carrier Implementation
 A software package which can be used to realize a [Carrier](#carrier).
@@ -563,7 +563,7 @@ An organization underwriting the vision and the mission of the [Qiy Foundation](
 A [Technology Service](#technology-service) that functions as a point of entry for a [Qiy User](#qiy-user) to the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
-The [API](#api) of the [Qiy Node Interface](#qiy-node-interface) which is part of the [Qiy Open Standard](#qiy-open-standard).
+The [Application Programming Interface](#application-programming-interface) of the [Qiy Node](#qiy-node) which is part of the [Qiy Open Standard](#qiy-open-standard).
 
 ### Qiy Node Credential
 The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node).
@@ -728,10 +728,10 @@ An [Uri](#uri) which can be used to identify and obtain a [Service Description](
 A [Business Process](#business-process) to find [Service Providers](#service-provider) for a given [Service](#service).
 
 ### Service Endpoint
-A [Technology Service](#technology-service) provided by a [Service Provider](#service-provider) to allow the consumption of one or more of his [Services](#service).
+A [Technology Interface](#technology-interface) provided by a [Service Provider](#service-provider) to allow the consumption of one or more of his [Services](#service).
 
 ### Service Endpoint API
-[Technology Interface](#technology-interface) of a [Service Endpoint](#service-endpoint).
+The [Application Programming Interface](#application-programming-interface) of a [Service Endpoint](#service-endpoint).
 
 ### Service Layer
 One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
@@ -815,7 +815,7 @@ An [Access Provider](#access-provider) that has been degignated by the Scheme Au
 A technology event is a technology behavior element that denotes a state change as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096.
 
 ### Technology Interface
-A software solution or a device with which different technologies can interact with each other, with an application or with a network, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946088
+A technology interface represents a point of access where technology services offered by a node can be accessed as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946088.
 
 ### Technology Service
 A technology service represents an explicitly defined exposed technology behavior as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946097.
@@ -845,7 +845,7 @@ A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which
 A [Technology Service](#technology-service) that provides transport [Services](#service).
 
 ### Transporter API
-[Technology Interface](#technology-interface) of a [Transporter](#transporter).
+The [Application Programming Interface](#application-programming-interface) of a [Transporter](#transporter).
 
 ### Transporter Implementation
 A software package which can be used to realize a [Transporter](#transporter).
