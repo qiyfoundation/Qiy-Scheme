@@ -41,7 +41,7 @@ Not directly or indirectly traceable to a natural person.
 See [Application Programming Interface](#application-programming-interface).
 
 ### Application
-A computer program that has been designed to help persons and/or organisations to consume and/or provide services.
+A computer program that has been designed to help persons and/or organisations to perform tasks, for example to help providing or consuming [Services](#service).
 
 ### Application Connect Token
 A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create [Connections](#connection).
@@ -65,13 +65,13 @@ A quality that is a particular characteristic of an [Individual](#individual) or
 The general terms and conditions under which an [Individual](#individual) exchanges [Personal Data](#personal-data) with other [Users](#user) via the [Qiy Trust Network](#qiy-trust-network), see [Binding Individual Terms](Binding%20Individual%20Terms.md).
 
 ### Business Object
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946055
+A business object represents a concept used within a particular business domain as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946055
 
 ### Business Process
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946048
+A business process represents a sequence of business behaviors that achieves a specific outcome such as a defined set of products or business services as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946048
 
 ### Business Role
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946043
+A business role is the responsibility for performing specific behavior, to which an actor can be assigned, or the part an actor plays in a particular action or event as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap08.html#_Toc489946043
 
 ### Carrier
 A [Technology Service](#technology-service) that provides the [Services](#service) of the [Carrier Layer](#carrier-layer). 
@@ -98,7 +98,7 @@ A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](
 A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
 ### Communication Network
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090 
+A communication network represents a set of structures that connects computer systems or other electronic devices for transmission, routing, and reception of data or data-based communications such as voice and video as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090.
 
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
@@ -315,7 +315,7 @@ REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 Apr
 The model on which basis the Qiy Scheme is independently administered, managed, controlled and audited. It is built on the concept of "trias politica": the division of powers into three branches, each with separate and independent powers and areas of responsibility so that the powers of one branch are not in conflict with the powers associated with the other branches. 
 
 ### HTTP Request
-As defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
+A request message from a client to a server as defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
 A [Token](#token) that identifies an [Entity](#entity).
@@ -402,7 +402,7 @@ A [Qiy Node Request](#qiy-node-request) to update the details of a [Message Type
 A [Qiy Node Request](#qiy-node-request) to list [Message Types](#message-type) that are registered in the [Service Library](#service-library).
 
 ### Node
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946084
+A node represents a computational or physical resource that hosts, manipulates, or interacts with other computational or physical resources as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946084.
 
 ### Node Id
 A [Qiy Node](#qiy-node) id.
@@ -515,7 +515,7 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service Provider](#serv
 Synonymous with [Identifier](#identifier) and [Local Id](#local-id).
 
 ### Public Key Infrastructure
-See https://en.wikipedia.org/wiki/Public_key_infrastructure.
+A public key infrastructure (PKI) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store & revoke digital certificates and manage public-key encryption, see https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
 ### Published Provider Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Provider](#service-provider).
@@ -812,13 +812,13 @@ A [Qiy Node Request](#qiy-node-request) which can be used to list the [Subscript
 An [Access Provider](#access-provider) that has been degignated by the Scheme Authority to replace te original [Access Provider](#access-provider) in case of default for any reason.
 
 ### Technology Event
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096
+A technology event is a technology behavior element that denotes a state change as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946096.
 
 ### Technology Interface
-A software solution or a device with which different technologies can interact with each other, with an application or with a network, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946088
+A software solution or a device with which different technologies can interact with each other, with an application or with a network, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946088
 
 ### Technology Service
-As defined in Archimate 3.0, see http://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946097 
+A technology service represents an explicitly defined exposed technology behavior as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946097.
 
 ### Territory
 The geographic region served by a [Regional Authority](#regional-authority).
