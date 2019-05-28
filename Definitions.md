@@ -231,7 +231,7 @@ Immutable and secret means, which uniquely identify a [Qiy Node](#qiy-node) regi
 Immutable combination of [Verified Identifier](#verified-identifier) and [Verified Attributes](#verified-attribute)
 
 ### Data
-[Data](#data) in a raw form; unorganized facts that need to be processed. [Data](#data) can be something simple and seemingly random and useless until it is organized.
+[Information](#information) that has been encoded in a computer-processable form.
 
 ### Data by Reference
 A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data-reference), see also [Service by Reference](#service-by-reference).
@@ -264,7 +264,9 @@ A [Service Description](#service-description) of a [Data Service](#data-service)
 A [Service Source](#service-source): a [Data Service](#data-service) that will be used to provide the [Personal Data](#personal-data) for a [Consent](#consent).
 
 ### Data Subject
-An identified or identifiable natural person to whom data relates to; an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person, as defined in the [General Data Protection Regulation](#general-data-protection-regulation).
+An identified or identifiable natural person to whom data relates to; an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an [Identifier](#identifier) such as a name, an identification number, location data, an online [Identifier](#identifier) or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person, as defined in the [General Data Protection Regulation](#general-data-protection-regulation).
+
+Based on the definition given in the [General Data Protection Regulation](#general-data-protection-regulation).
 
 ### Data Type
 A type of [Data](#data).
@@ -318,7 +320,9 @@ The model on which basis the Qiy Scheme is independently administered, managed, 
 A request message from a client to a server as defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
-A [Token](#token) that identifies an [Entity](#entity).
+A letter, number, symbol, or any combination of those that identifies a unique [Entity](#entity).
+
+Definition based on https://en.wikipedia.org/wiki/Identifier#In_computer_science.
 
 ### Identity
 A [User](#user) centric term. An [Entity](#entity) uses an [Identity](#identity) to represent an aspect of itself (such as parent or employee and client or server) through a collection of [Attributes](#attribute), in any interactive situation.
@@ -327,7 +331,7 @@ A [User](#user) centric term. An [Entity](#entity) uses an [Identity](#identity)
 A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), for a natural person that uses the [Qiy Trust Network](#qiy-trust-network).
 
 ### Information 
-[Data](#data) processed, organised, structured, or presented in a certain context, so that it is usable. Information provides context to [Data](#data).
+A human-processable physical representation of facts, perceptions or other concepts.
 
 ### Json
 Json is an open-standard format, see https://en.wikipedia.org/wiki/JSON
@@ -486,9 +490,10 @@ An [Identifier](#identifier) which can be used to identify a [Connection](#conne
 A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent Id](#persistent-id) of a new [Connection](#connection).
 
 ### Personal Data
-[Data](#data) relating to an [Individual](#individual). This can be the name, address, telephone number, age, health [Data](#data), account balance, but also personal preferences, etcetera. [Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared with [Relying Parties](#relying-party) by [Individuals](#individual).
+Any [Information](#information) or [Data](#data) relating to a [Data Subject](#data-subject).
+[Personal Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared anonymously with [Relying Parties](#relying-party) by the related [Individuals](#individual).
 
-As defined in the [General Data Protection Regulation](#general-data-protection-regulation).
+Based on the definition given in the [General Data Protection Regulation](#general-data-protection-regulation).
 
 ### Portfolio Details Request
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
@@ -497,7 +502,7 @@ A [Qiy Node Request](#qiy-node-request) which can be used to get the details of 
 A [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](#data-provider) to a [Service Portfolio](#service-portfolio).
 
 ### Pseudo Id
-An [Anonymous](#anoymous) [Attribute](#attribute) relating to an [Individual](#individual) which can either be persistent or transient.
+An [Anonymous](#anonymous) [Attribute](#attribute) relating to an [Individual](#individual) which can either be persistent or transient.
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
