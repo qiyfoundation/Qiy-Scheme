@@ -227,14 +227,14 @@ A [Qiy Node Request](#qiy-node-request) which can be used to communicate the wit
 ### Consents Request
 A [Qiy Node Request](#qiy-node-request) which can be used by [Qiy Users](#qiy-user) to access their [Consents](#consent).
 
-### Core Identifier
-Immutable and secret means, which uniquely identify a [Qiy Node](#qiy-node) registration.
-
 ### Credential
-Immutable combination of [Verified Identifier](#verified-identifier) and [Verified Attributes](#verified-attribute)
+One or more named [Strings](#strings) or [Data Sets](#data-set) that can be used to gain access to a resource.
 
 ### Data
 [Information](#information) that has been encoded in a computer-processable form.
+
+### Data Set
+A sequence of binary digits.
 
 ### Data by Reference
 A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data-reference), see also [Service by Reference](#service-by-reference).
@@ -249,7 +249,7 @@ An [Uri](#uri) which can be used to identify and obtain a [Data Description](#da
 
 [Data](#data) consisting of a collection of name/value pairs.
 
-### Data Object Attribute
+### Attribute
 
 A name/value pair of a [Data Object](#data-object) where the name and value are known as the name and value of the attribute respectively.
 
@@ -331,7 +331,7 @@ The model on which basis the Qiy Scheme is independently administered, managed, 
 A request message from a client to a server as defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
-A letter, number, symbol, or any combination of those that identifies a unique [Entity](#entity).
+A [String](#string) that identifies a unique [Entity](#entity).
 
 Definition based on https://en.wikipedia.org/wiki/Identifier#In_computer_science.
 
@@ -366,7 +366,7 @@ The agreement between the [Scheme Authority](#scheme-authority) (or in delegatio
 The combination of annual fees to be paid by an [Access Provider](#access-provider) to the [Scheme Authority](#scheme-authority) in exchange for a [License](#license).
 
 ### Local Id
-Synonymous with [Identifier](#identifier)
+An [Identifier](#identifier) that can only be used for identification within a limited scope, for example by a [Service Provider](#service-provider) to identify its costumers.
 
 ### Message Description
 A [Data Description](#data-description) of a [Qiy Node Message](#qiy-node-message).
@@ -378,7 +378,7 @@ A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node M
 This term is used in the following senses:
 * A [Uri](#uri) which identifies a [Message Description](#message-description).
 * A [Uri](#uri) which can be used to obtain a [Message Description](#message-description) from the [Service Library](#service-library).
-* A [Property](#property) of a [Qiy Node Message](#qiy-node-message).
+* An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message).
 
 ### Message Details Request
 A [Qiy Node Request](#qiy-node-request) that can be used to get the details of a [Qiy Node Message](#qiy-node-message).
@@ -486,7 +486,7 @@ A [Data](#data) link between two [Transporters](#transporter) which is used to e
 A [Request](#request) of a [Qiy Node](#qiy-node) to its [Transporter](#transporter) to create a [Path](#path).
 
 ### Payload
-A [Property](#property) of a [Qiy Node Message](#qiy-node-message) which contains the [Data](#data) that the [Sender](#sender) wants to transfer to the [Receiver](#receiver).
+An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which contains the [Data](#data) that the [Sender](#sender) wants to transfer to the [Receiver](#receiver).
 
 ### Persistent Id
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can take place over multiple sessions as long as the [Connection](#connection) is maintained.
@@ -505,10 +505,6 @@ A [Qiy Node Request](#qiy-node-request) which can be used to get the details of 
 
 ### Portfolio Register Message
 A [Qiy Node Message](#qiy-node-message) to request to add a [Data Provider](#data-provider) to a [Service Portfolio](#service-portfolio).
-
-### Property
-
-A [Data Object Attribute](#data-object-attribute).
 
 ### Proposer
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that initiates creating a [Connection](#connection) by providing a [Connect Token](#connect-token), sometimes using a [Connect Proposal](#connect-proposal).
@@ -656,7 +652,7 @@ A [Business Role](#business-role) for a [Qiy User](#qiy-user) that receives a [Q
 An [Identifier](#identifier).
 
 ### Reference Serial Number
-A [Property](#property) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
+An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
 
 ### Regional Authority
 A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#qiy-scheme) and, in delegation by the [Scheme Authority](#scheme-authority) fulfils the following [Roles](#role) at the level of a geographic region: 
@@ -704,7 +700,7 @@ The global [Legal Entity](#legal-entity) that administers, manages, controls and
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that sends a [Qiy Node Message](#qiy-node-message) to a [Receiver](#receiver).
 
 ### Serial Number
-An [[Property](#property) of a [Qiy Node Message](#qiy-node-message) which identify the [Qiy Node Messages](#qiy-node-message) exchanged between one [Sender](#sender) and one [Receiver](#receiver). [Serial Numbers](#serial-number) for [Qiy Node Messages](#qiy-node-message) that are exchanged in the same direction are unique and increase over time.
+An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which identify the [Qiy Node Messages](#qiy-node-message) exchanged between one [Sender](#sender) and one [Receiver](#receiver). [Serial Numbers](#serial-number) for [Qiy Node Messages](#qiy-node-message) that are exchanged in the same direction are unique and increase over time.
 
 ### Service
 An information society service; i.e., any service normally provided for remuneration, at a distance, by electronic means and at the individual request of a recipient of services.
@@ -813,6 +809,9 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) as a
 
 ### Source Update Request
 A [Qiy Node Request](#qiy-node-request) to update a [Service Source](#service-source).
+
+### String
+A letter, number, symbol, or any combination of those.
 
 ### Subscription
 A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider) with regard to a [Service](#service).
