@@ -58,8 +58,6 @@ The [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-schem
 ### Assertion
 A positive statement or declaration about a [User](#user).
 
-### Attribute
-A quality that is a particular characteristic of an [Individual](#individual) or a [Legal Entity](#entity).
 
 ### Binding Individual Terms
 The general terms and conditions under which an [Individual](#individual) exchanges [Personal Data](#personal-data) with other [Users](#user) via the [Qiy Trust Network](#qiy-trust-network), see [Binding Individual Terms](Binding%20Individual%20Terms.md).
@@ -528,6 +526,9 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service Provider](#serv
 An [Identifier](#identifier) that a [Service Provider](#service-provider) can use to provide services to a natural person, but that the [Service Provider](#service-provider) can not use to identify the natural person.
 The Pseudo Id can either be persistent or transient.
 
+### Pseudonymisation
+The processing of [Personal Data](#personal-data) in such a manner that the [Personal Data](#personal-data) can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person.
+
 ### Public Key Infrastructure
 A public key infrastructure (PKI) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store & revoke digital certificates and manage public-key encryption, see https://en.wikipedia.org/wiki/Public_key_infrastructure.
 
@@ -566,6 +567,9 @@ An [Application](#application) that complies with the [Qiy Scheme Policy for App
 
 ### Qiy Application Protocol
 A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
+
+### Qiy Data
+[Relating Data](#relating-data) that is processed within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Foundation
 A foundation dedicated to putting people back in control of their [Personal Data](#personal-data) while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
@@ -662,6 +666,9 @@ A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#
 * Facilitate an independent complaint and appeal process for licensees
 * Ensure compliance
 * Collect [License Fees](#license-fee)
+
+### Relating Data
+[Information](#information) or [Data](#data) that relates to an [Individual](#individual).
 
 ### Relying Party
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
@@ -896,18 +903,6 @@ See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 ### Validated Data
 [Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
 
-### Validated Attribute
-An [Attribute](#attribute) emanating from a source that can be reliably identified and that has verified the validity of the [Attribute](#attribute) by itself.
-
-### Verifiable Claim
-A [Claim](#claim) that is cryptographically trustworthy.
-
-### Verified Attribute
-An [Attribute](#attribute) that has been made available to an [Entity](#entity) by a trusted third party.
-
-### Verifiable Attribute
-An [Attribute](#attribute) that has been made available to an [Entity](#entity), the source of which can be reliably identified and contacted to authoritatively authenticate the attribute.
-
-### Verified Identifier
-An [Identifier](#identifier) that has been linked to an [Entity](#entity) by a trusted third party.
+### Verified Claim
+[Claim](#claim) emanating from a source that can be reliably identified and that has verified the validity of the [Claim](#claim) by itself.
 

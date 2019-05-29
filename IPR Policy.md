@@ -179,7 +179,7 @@ The Chairperson shall ensure that all technical proposals adopted by the Work St
 ## 8.6 Confidential information 
 It may happen that the Chairperson or any of the Work Streams are offered confidential information. There are certain precautions which must be observed. For this reasons, Contributors may be asked to sign with the [Qiy Foundation](Definitions.md#qiy-foundation) a Mutual Non-Disclosure and Confidentiality Agreement. When in doubt in regard to the need, Chairpersons of the Work Streams are strongly urged to contact the [Secretariat](Definitions.md#secretariat) before proceeding.
 
-# 9 Qiy Foundation's [Secretariat](Definitions.md#secretariat) Duties 
+# 9 Qiy Foundation's Secretariat Duties 
 The [Secretariat](Definitions.md#secretariat), and especially the [General Counsel](Definitions.md#general-counsel), have a general duty to assist the Chairperson in IPR matters. In addition to this, the [Secretariat](Definitions.md#secretariat) is responsible for the actions below:
 
 ## 9.1 Information on Essential IPRs in Specifications 

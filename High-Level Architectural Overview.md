@@ -398,7 +398,7 @@ A [Qiy Application](Definitions.md#qiy-application) can be linked to an existing
 
 ### 5.2.1 Application Connect Token
 [Qiy Applications](Definitions.md#qiy-application) exchange [Application Connect Tokens](Definitions.md#application-connect-token) to create [Connections](Definitions.md#connection). 
-In addition to the [Connect Token](Definitions.md#connect-token) that is necessary to create the [Connection](Definitions.md#connection), it contains the name or [Pseudonym](Definitions.md#pseudonym) to be displayed in the [Connect Proposal](Definitions.md#connect-proposal). 
+In addition to the [Connect Token](Definitions.md#connect-token) that is necessary to create the [Connection](Definitions.md#connection), it contains the name (true or not) to be displayed in the [Connect Proposal](Definitions.md#connect-proposal). 
 For more information, please refer to [5.2.3 Generate Application Connect Token](#523-generate-application-connect-token).
 
 ### 5.2.2 Proposer: Connect
