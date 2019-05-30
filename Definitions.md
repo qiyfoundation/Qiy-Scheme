@@ -95,8 +95,10 @@ A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](
 ### Catalogues Request
 A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
-### Claim
+### Character String
+A letter, number, symbol, or any combination of those possibly separated by one or more spaces and/or tabs.
 
+### Claim
 A statement that one subject, such as a person or organization, makes about itself or another subject.
 
 Definition taken from https://en.wikipedia.org/wiki/Claims-based_identity.
@@ -228,12 +230,12 @@ A [Qiy Node Request](#qiy-node-request) which can be used to communicate the wit
 A [Qiy Node Request](#qiy-node-request) which can be used by [Qiy Users](#qiy-user) to access their [Consents](#consent).
 
 ### Credential
-One or more named [Strings](#strings) or [Data Sets](#data-set) that can be used to gain access to a resource.
+One or more named [Character Strings](#character-string) or [Data Strings](#data-string) that can be used to gain access to a resource.
 
 ### Data
 [Information](#information) that has been encoded in a computer-processable form.
 
-### Data Set
+### Data String
 A sequence of binary digits.
 
 ### Data by Reference
@@ -331,7 +333,7 @@ The model on which basis the Qiy Scheme is independently administered, managed, 
 A request message from a client to a server as defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
-A [String](#string) that identifies a unique [Entity](#entity).
+A [Character String](#character-string) that identifies a unique [Entity](#entity).
 
 Definition based on https://en.wikipedia.org/wiki/Identifier#In_computer_science.
 
@@ -809,9 +811,6 @@ A [Qiy Node Request](#qiy-node-request) to unregister a [Service](#service) as a
 
 ### Source Update Request
 A [Qiy Node Request](#qiy-node-request) to update a [Service Source](#service-source).
-
-### String
-A letter, number, symbol, or any combination of those.
 
 ### Subscription
 A [Business Object](#business-object) for a relation between a consumer ([Qiy User](#qiy-user)) and a [Service Provider](#service-provider) with regard to a [Service](#service).
