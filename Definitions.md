@@ -95,9 +95,6 @@ A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](
 ### Catalogues Request
 A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#service-catalogue) in the [Service Library](#service-library).
 
-### Character String
-A letter, number, symbol, or any combination of those possibly separated by one or more spaces and/or tabs.
-
 ### Claim
 A statement that one subject, such as a person or organization, makes about itself or another subject.
 
@@ -230,13 +227,10 @@ A [Qiy Node Request](#qiy-node-request) which can be used to communicate the wit
 A [Qiy Node Request](#qiy-node-request) which can be used by [Qiy Users](#qiy-user) to access their [Consents](#consent).
 
 ### Credential
-One or more named [Character Strings](#character-string) or [Data Strings](#data-string) that can be used to gain access to a resource.
+One or more named [Strings](#string) or [Data](#data) that can be used to gain access to a resource.
 
 ### Data
-[Information](#information) that has been encoded in a computer-processable form.
-
-### Data String
-A sequence of binary digits.
+[Information](#information) that has been encoded in a computer-processable form; a collection of binary digits.
 
 ### Data by Reference
 A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data-reference), see also [Service by Reference](#service-by-reference).
@@ -248,11 +242,9 @@ A description of [Data](#data) that is both human- and machine-readable as addre
 An [Uri](#uri) which can be used to identify and obtain a [Data Description](#data-description).
 
 ### Data Object
-
 [Data](#data) consisting of a collection of name/value pairs.
 
 ### Attribute
-
 A name/value pair of a [Data Object](#data-object) where the name and value are known as the name and value of the attribute respectively.
 
 ### Data Provider
@@ -302,9 +294,6 @@ A [Qiy Node Request](#qiy-node-request) to list the [Data Types](#data-type) tha
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
 
-### Effective Date
-5 January, 2015.
-
 ### Entitlement
 A usage right for a [Resource](#resource) owned by some other [Legal Entity](#legal-entity).
 
@@ -333,12 +322,12 @@ The model on which basis the Qiy Scheme is independently administered, managed, 
 A request message from a client to a server as defined in RFC 2616, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html.
 
 ### Identifier
-A [Character String](#character-string) that identifies a unique [Entity](#entity).
+A [String](#string) that identifies a unique [Entity](#entity).
 
 Definition based on https://en.wikipedia.org/wiki/Identifier#In_computer_science.
 
 ### Identity
-Any [Information](#information) and/or [Data](#data) that can be used to identify an [Entity](#entity).
+Any [Information](#information) that can be used to identify an [Entity](#entity).
 
 ### Individual
 A [Business Role](#business-role), a specialisation of [Qiy User](#qiy-user), for a natural person that uses the [Qiy Trust Network](#qiy-trust-network).
@@ -497,10 +486,7 @@ An [Identifier](#identifier) which can be used to identify a [Connection](#conne
 A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent Id](#persistent-id) of a new [Connection](#connection).
 
 ### Personal Data
-Any [Information](#information) or [Data](#data) relating to a [Data Subject](#data-subject).
-[Personal Data](#data) are stored at [Data Providers](#data-provider) servers or at the site of the [Individual](#individual) (e.g. in a [Data](#data) vault) and can be shared anonymously with [Relying Parties](#relying-party) by the related [Individuals](#individual).
-
-Based on the definition given in the [General Data Protection Regulation](#general-data-protection-regulation).
+Any [Information](#information) relating to a [Data Subject](#data-subject).
 
 ### Portfolio Details Request
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
@@ -666,7 +652,7 @@ A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#
 * Collect [License Fees](#license-fee)
 
 ### Relating Data
-[Information](#information) or [Data](#data) that relates to an [Individual](#individual).
+[Information](#information) that relates to an [Individual](#individual).
 
 ### Relying Party
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
@@ -843,7 +829,7 @@ A technology service represents an explicitly defined exposed technology behavio
 The geographic region served by a [Regional Authority](#regional-authority).
 
 ### Token
-An [Identifier](#identifier) used by [Applications](#application) that can only be used to access the [Entity](#entity) it identifies by the [Application](#application) that created it.
+A [String](#string) or [Data](#data) that has meaning in a specific context.
 
 ### Transient Id
 An [Identifier](#identifier) which can be used to identify a [Connection](#connection) and which has the same value for the [Qiy Users](#qiy-user) whose [Qiy Nodes](#qiy-nodes) are linked through this [Connection](#connection). Identification can only take place for the duration of a session.
@@ -886,9 +872,7 @@ Definition based on https://en.wikipedia.org/wiki/Use_case.
 For the [Use Cases](#use-case) of the [Qiy Scheme](#qiy-scheme), see [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
 
 ### User
-A [Business Role](#business-role) for [Entities](#entity).
-
-In general: a consumer of a [Service](#service).
+A [Business Role](#business-role) for natural persons and organisations that use an [Application](#application).
 
 In the context of the Qiy Scheme, see: [Qiy User](#qiy-user).
 
