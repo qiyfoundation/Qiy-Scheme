@@ -606,9 +606,6 @@ A protocol that is part of the [Qiy Standard](#qiy-standard) and which describes
 ### Qiy Node Request
 A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
 
-### Qiy Standard
-A set of open standards concerning the technical aspects of the [Qiy Scheme](#qiy-scheme), a subset of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
-
 ### Qiy Scheme
 The open standard consisting of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Personal Data](#personal-data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange [Personal Data](#personal-data) to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).
 
@@ -617,6 +614,9 @@ A set of [Qiy Scheme](#qiy-scheme) rules under which [Applications](#application
 
 ### Qiy Scheme Rulebook
 A set of documents concerning governance, legal and technical aspects of the [Qiy Scheme](#qiy-scheme).
+
+### Qiy Standard
+A set of open standards concerning the technical aspects of the [Qiy Scheme](#qiy-scheme), a subset of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
 ### Qiy Trust Network
 A [Communication Network](#communication-network) that connects [Qiy Nodes](#qiy-node) and that is provided by [Access Providers](#access-provider) to [Qiy Users](#qiy-user) under the rules of the [Qiy Scheme](#qiy-scheme). 
