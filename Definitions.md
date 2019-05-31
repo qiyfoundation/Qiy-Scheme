@@ -87,7 +87,7 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 A [Node](#node) which hosts one or more [Carriers](#carrier).
 
 ### Carrier Protocol
-A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Carriers](#carrier).
+A protocol that is part of the [Qiy Standard](#qiy-standard) and which describes the interactions of [Carriers](#carrier).
 
 ### Catalogue Details Request
 A [Qiy Node Request](#qiy-node-request) to get details of a [Service Catalogue](#service-catalogue).
@@ -550,7 +550,7 @@ A [Qiy Application](#qiy-application) that can be installed on a smart phone or 
 An [Application](#application) that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-applications).
 
 ### Qiy Application Protocol
-A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
+A protocol that is part of the [Qiy Standard](#qiy-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
 
 ### Qiy Data
 [Relating Data](#relating-data) that is processed within the [Qiy Trust Network](#qiy-trust-network).
@@ -565,7 +565,7 @@ An organization underwriting the vision and the mission of the [Qiy Foundation](
 A [Technology Service](#technology-service) that functions as a point of entry for a [Qiy User](#qiy-user) to the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
-The [Application Programming Interface](#application-programming-interface) of the [Qiy Node](#qiy-node) which is part of the [Qiy Open Standard](#qiy-open-standard).
+The [Application Programming Interface](#application-programming-interface) of the [Qiy Node](#qiy-node) which is part of the [Qiy Standard](#qiy-standard).
 
 ### Qiy Node Credential
 The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node).
@@ -601,13 +601,13 @@ A message that is exchanged between a [Sender](#sender) and a [Receiver](#receiv
 A [HTTP Request](#http-request) to create a [Qiy Node](#qiy-node).
 
 ### Qiy Node Protocol
-A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Qiy Nodes](#qiy-node), see [Qiy Node Protocol document](Qiy%20Node%20Protocol.md).
+A protocol that is part of the [Qiy Standard](#qiy-standard) and which describes the interactions of [Qiy Nodes](#qiy-node), see [Qiy Node Protocol document](Qiy%20Node%20Protocol.md).
 
 ### Qiy Node Request
 A [HTTP Request](#http-request) for a [Qiy Node](#qiy-node).
 
-### Qiy Open Standard
-A set of open technical standards which form part of the [Qiy Scheme](#qiy-scheme).
+### Qiy Standard
+A set of open standards concerning the technical aspects of the [Qiy Scheme](#qiy-scheme), a subset of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
 ### Qiy Scheme
 The open standard consisting of technical, operational and business rules and agreements which fosters interoperability between the interconnected [Entities](#entity), and which enables the exchange of [Personal Data](#personal-data) between [Data Providers](#data-provider), [Individuals](#individual) and [Relying Parties](#relying-party), with the [Consent](#consent) of the [Individual](#individual). The [Qiy Scheme](#qiy-scheme) forms the basis of the [Qiy Trust Network](#qiy-trust-network) through which [Users](#user) can safely control and exchange [Personal Data](#personal-data) to which an [Individual](#individual) can connect via a personal [Qiy Node](#qiy-node).
@@ -844,7 +844,7 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 A message that is exchanged over a [Path](#path) between two [Transporters](#transporter).
 
 ### Transport Protocol
-A protocol that is part of the [Qiy Open Standard](#qiy-open-standard) and which describes the interactions of [Transporters](#transporter).
+A protocol that is part of the [Qiy Standard](#qiy-standard) and which describes the interactions of [Transporters](#transporter).
 
 ### Transporter
 A [Technology Service](#technology-service) that provides transport [Services](#service).

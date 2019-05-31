@@ -224,7 +224,7 @@ As described above, privacy is at the heart of Qiy and security being a 'conditi
 
 An [Individual](Definitions.md#individual) can only control his [Personal Data](Definitions.md#personal-data), when all concerned systems are interoperable.
 This is achieved as follows:
-* Applications exchange [Data](Definitions.md#data) and/or messages via Qiy using open standards of the [Qiy Scheme](Definitions.md#qiy-scheme) ([Qiy Open Standard](Definitions.md#qiy-open-standard)).
+* Applications exchange [Data](Definitions.md#data) and/or messages via Qiy using open standards of the [Qiy Scheme](Definitions.md#qiy-scheme) ([Qiy Standard](Definitions.md#qiy-standard)).
 * Applications exchange self-describing [Data](Definitions.md#data) and/or messages using [Data Descriptions](Definitions.md#data-description) which are available to all concerned parties (via the [Service Library](Definitions.md#service-library)).
 
 ## 3.5 Governance
@@ -361,7 +361,7 @@ A [Qiy Application](Definitions.md#qiy-application) is an [Application](Definiti
 
 ### 5.1.1 Qiy Application Protocol
 The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describes the interactions of the [Qiy Applications](Definitions.md#qiy-application) with eachother and the underlying layers.
-* The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) is an open standard and is part of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+* The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) is an open standard and is part of the [Qiy Standard](Definitions.md#qiy-standard).
 
 The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describes among others how [Qiy Applications](Definitions.md#qiy-application):
 * ... create a [Qiy Node](Definitions.md#qiy-node) for a [Qiy User](Definitions.md#qiy-user).
@@ -527,18 +527,18 @@ A [Qiy Node](Definitions.md#qiy-node):
 
 ### 6.2.1 Qiy Node Protocol
 The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) describes the interaction between the [Qiy Nodes](Definitions.md#qiy-node) and the underlying layers.
-* The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) is one of the protocols in the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+* The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) is one of the protocols in the [Qiy Standard](Definitions.md#qiy-standard).
 The [Qiy Node Protocol](Definitions.md#qiy-node-protocol) describes for example:
 * How a [Qiy Node](Definitions.md#qiy-node) is instantiated.
 * How [Qiy Nodes](Definitions.md#qiy-node) create [Connections](Definitions.md#connection) and use them to exchange [Data](Definitions.md#data), messages or to provide/consume [Services](Definitions.md#service).
 
 ### 6.2.2 Qiy Node API
-The [Qiy Node API](Definitions.md#qiy-node-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Qiy Node](Definitions.md#qiy-node), one of the APIs of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+The [Qiy Node API](Definitions.md#qiy-node-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Qiy Node](Definitions.md#qiy-node), one of the APIs of the [Qiy Standard](Definitions.md#qiy-standard).
 * The [Qiy Node API](Definitions.md#qiy-node-api) is intended for use by [Qiy Applications](Definitions.md#qiy-application).
 
 ### 6.2.3 Qiy Node Implementation
 A [Qiy Node Implementation](Definitions.md#qiy-node-implementation) is a software package which can be used to realize a [Qiy Node](Definitions.md#qiy-node).
-The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Qiy Node Implementations](Definitions.md#qiy-node-implementation), as long as the implementation complies with the [Qiy Open Standard](Definitions.md#qiy-open-standard) and the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). 
+The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Qiy Node Implementations](Definitions.md#qiy-node-implementation), as long as the implementation complies with the [Qiy Standard](Definitions.md#qiy-standard) and the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). 
 
 ### 6.2.4 Qiy Node Instantiation
 A [Qiy Node](Definitions.md#qiy-node) can be created in two ways:
@@ -719,15 +719,15 @@ A [Transporter](Definitions.md#transporter) can be used for:
 
 ## 8.3 Transport Protocol
 The [Transport Protocol](Definitions.md#transport-protocol) describes the interaction between [Transporters](Definitions.md#transporter) and the underlying layer.
-The protocol is one of the protocols of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+The protocol is one of the protocols of the [Qiy Standard](Definitions.md#qiy-standard).
 
 ## 8.4 Transporter API
-The [Transporter API](Definitions.md#transporter-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Transporter](Definitions.md#transporter), one of the APIs of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+The [Transporter API](Definitions.md#transporter-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Transporter](Definitions.md#transporter), one of the APIs of the [Qiy Standard](Definitions.md#qiy-standard).
 * The [Transporter API](Definitions.md#transporter-api) is intended for use by [Qiy Nodes](Definitions.md#qiy-node).
 
 ## 8.5 Transporter Implementation
 A [Transporter Implementation](Definitions.md#transporter-implementation) is a software package which can be used to realize a [Transporter](Definitions.md#transporter).
-The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Transporter Implementations](Definitions.md#transporter-implementation), as long as the implementation complies with the [Qiy Open Standard](Definitions.md#qiy-open-standard) and the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). 
+The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Transporter Implementations](Definitions.md#transporter-implementation), as long as the implementation complies with the [Qiy Standard](Definitions.md#qiy-standard) and the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). 
 
 ## 8.6 Transporter Instantiation
 A [Transporter](Definitions.md#transporter) can only be instantiated by an [Access Provider](Definitions.md#access-provider).
@@ -769,14 +769,14 @@ The [Carrier](Definitions.md#carrier) comes with the following rules:
 
 ## 9.3 Carrier Protocol
 The [Carrier Protocol](Definitions.md#carrier-protocol) describes the interaction between [Carriers](Definitions.md#carrier).
-The protocol is part of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+The protocol is part of the [Qiy Standard](Definitions.md#qiy-standard).
 
 ## 9.4 Carrier API
-The [Carrier API](Definitions.md#carrier-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Carrier](Definitions.md#carrier) and is part of the [Qiy Open Standard](Definitions.md#qiy-open-standard).
+The [Carrier API](Definitions.md#carrier-api) is the [Technology Interface](Definitions.md#technology-interface) of the [Carrier](Definitions.md#carrier) and is part of the [Qiy Standard](Definitions.md#qiy-standard).
 
 ## 9.5 Carrier Implementation
 A [Carrier Implementation](Definitions.md#carrier-implementation) is a software package which can be used to realize a [Carrier](Definitions.md#carrier)
-The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Carrier Implementations](Definitions.md#carrier-implementation), as long as the implementation complies with the [Qiy Open Standard](Definitions.md#qiy-open-standard) and the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). 
+The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Carrier Implementations](Definitions.md#carrier-implementation), as long as the implementation complies with the [Qiy Standard](Definitions.md#qiy-standard) and the rules of the [Qiy Scheme](Definitions.md#qiy-scheme). 
 
 ## 9.6 Carrier Node
 A [Carrier Node](Definitions.md#carrier-node) is a [Node](Definitions.md#node) which hosts one or more [Carriers](Definitions.md#carrier).
