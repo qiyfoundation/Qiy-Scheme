@@ -60,7 +60,9 @@ Thus, the R&R must be transparent and non-discriminatory and applicable to all p
 Parties, which meet the requirements of the [Qiy Scheme](Definitions.md#qiy-scheme), may qualify for a license to operate on the basis of the [Qiy Scheme](Definitions.md#qiy-scheme) and offer [Qiy Trust Network](Definitions.md#qiy-trust-network) services. The [Scheme Authority](Definitions.md#scheme-authority), as the owner of the Scheme, will delegate the issuing of these licenses to the [Regional Authority](Definitions.md#regional-authority) via a so-called 'Master license'.
 
 ### 1.2.2 Qiy Standard
-The [Qiy Standard](Definitions.md#qiy-standard) is a normative specification describing features that are mandatory and optional for implementations claiming conformance to the [Qiy Standard](Definitions.md#qiy-standard). The [Qiy Standard](Definitions.md#qiy-standard) is published on [https://github.com/qiyfoundation/Qiy-Scheme/releases](https://github.com/qiyfoundation/Qiy-Scheme/releases), for more information, see [Qiy Guide](Qiy%20Guide.md), [Qiy Scheme Releases](Qiy%20Scheme%20Releases.md) and/or [Qiy Scheme Documentation](Qiy%20Scheme%20Documentation.md).
+The [Qiy Standard](Definitions.md#qiy-standard) is a normative specification for implementations claiming conformance to the [Qiy Standard](Definitions.md#qiy-standard).
+All requirements in the [Qiy Standard](#qiy-standard) are mandatory for implementation, except where explicitly stated otherwise.
+The [Qiy Standard](Definitions.md#qiy-standard) is published on [https://github.com/qiyfoundation/Qiy-Scheme/releases](https://github.com/qiyfoundation/Qiy-Scheme/releases), for more information, see [Qiy Guide](Qiy%20Guide.md), [Qiy Scheme Releases](Qiy%20Scheme%20Releases.md) and/or [Qiy Scheme Documentation](Qiy%20Scheme%20Documentation.md).
 
 # 2 Governance Model
 ## 2.1 Context Governance Model
