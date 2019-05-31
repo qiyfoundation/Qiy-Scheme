@@ -886,5 +886,5 @@ See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 [Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
 
 ### Verified Claim
-[Claim](#claim) emanating from a source that can be reliably identified and that has verified the validity of the [Claim](#claim) by itself.
+A [Claim](#claim) emanating from a source that can be reliably identified and that has verified the validity of the [Claim](#claim) by itself.
 

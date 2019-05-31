@@ -20,7 +20,7 @@ This document defines the basic principles that underlie the [Qiy Scheme](Defini
 
 7. A [Service Provider](Definitions.md#service-provider) shall not ask for more [Relating Data](Definitions.md#relating-data) than strictly necessary for the specified [Legitimate Purpose(s)](Definitions.md#legitimate-purpose). A party connected to the [Qiy Trust Network](#qiy-trust-network) shall only process [Relating Data](Definitions.md#relating-data) for the [Legitimate Purpose(s)](Definitions.md#legitimate-purpose) for which it has been made available.
 
-9. When a [Relying Party](Definitions.md#relying-party) requests [Validated Data](Definitions.md#validated-data) or a [Verified Claims](Definitions.md#verified-claim) it shall ascertain in advance that this is really necessary for the [Legitimate Purpose(s)](Definitions.md#legitimate-purpose) on which the requrest is based.
+9. When a [Relying Party](Definitions.md#relying-party) requests [Validated Data](Definitions.md#validated-data) or a [Verified Claim](Definitions.md#verified-claim) it shall ascertain in advance that this is really necessary for the [Legitimate Purpose(s)](Definitions.md#legitimate-purpose) on which the requrest is based.
 
 10. Unless prescribed otherwise by law, a [Service Provider](Definitions.md#service-provider) shall not store the [Relating Data](Definitions.md#relating-data) for a longer period than necessary for the specified [Legitimate Purpose(s)](Definitions.md#legitimate-purpose) for which the [Relating Data](Definitions.md#relating-data) has been made available.
 
