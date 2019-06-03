@@ -35,7 +35,7 @@ A [Qiy Node Request](#qiy-node-request) to update the details of an [Account](#a
 A [Qiy Node Request](#qiy-node-request) to list [Accounts](#account).
 
 ### Anonymous
-Not directly or indirectly traceable to a natural person.
+Not directly or indirectly traceable to an [Individual](#individual).
 
 ### API
 See [Application Programming Interface](#application-programming-interface).
@@ -100,9 +100,6 @@ A statement that one subject, such as a person or organization, makes about itse
 
 Definition taken from https://en.wikipedia.org/wiki/Claims-based_identity.
 
-### Communication Network
-A communication network represents a set of structures that connects computer systems or other electronic devices for transmission, routing, and reception of data or data-based communications such as voice and video as defined in Archimate 3.0, see https://pubs.opengroup.org/architecture/archimate3-doc/chap10.html#_Toc489946090.
-
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
 
@@ -152,7 +149,7 @@ A [Uri](#uri) which is used to identify a [Connection](#connection).
 A [Qiy Node Request](#qiy-node-request) that can be used to obtain a list of all the [Connections](#connection) of a [Qiy Node](#qiy-node).
 
 ### Consent
-Any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
+Any freely given, specific, informed and unambiguous indication of the [Individual](#individual)'s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of [Personal Data](#personal-data).
 
 ### Consent Audit Log
 An audit log of a [Consent](#consent) which is accessible via its [Consent Repository](#consent-repository).
@@ -268,11 +265,6 @@ A [Service Description](#service-description) of a [Data Service](#data-service)
 ### Data Source
 A [Service Source](#service-source): a [Data Service](#data-service) that will be used to provide the [Personal Data](#personal-data) for a [Consent](#consent).
 
-### Data Subject
-An identified or identifiable natural person to whom data relates to; an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an [Identifier](#identifier) such as a name, an identification number, location data, an online [Identifier](#identifier) or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person, as defined in the [General Data Protection Regulation](#general-data-protection-regulation).
-
-Based on the definition given in the [General Data Protection Regulation](#general-data-protection-regulation).
-
 ### Data Type
 A type of [Data](#data).
 
@@ -293,6 +285,17 @@ A [Qiy Node Request](#qiy-node-request) to list the [Data Types](#data-type) tha
 
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
+
+### Electronic Communications Network
+A transmission systems, whether or not based on a permanent infrastructure or centralised administration capacity,  and, where applicable, switching or routing equipment and other resources, including network elements which are not active, which permit the conveyance of signals by wire, radio, optical or other electromagnetic means, including satellite networks, fixed (circuit- and packet-switched, including internet) and mobile networks, electricity cable systems, to the extent that they are used for the purpose of transmitting signals, networks used for radio and television broadcasting, and cable television networks, irrespective of the type of information conveyed.
+(source: Article 2: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32018L1972&from=EN).
+
+### Electronic Communications Service
+a service normally provided for remuneration via [Electronic Communications Networks](#electronic-communications-network), which encompasses, with the exception of services providing, or exercising editorial control over, content transmitted using electronic communications networks and services, the following types of services:
+* 'internet access service' as defined in point (2) of the second paragraph of Article 2 of Regulation (EU) 2015/2120;
+* interpersonal communications service; and
+* services consisting wholly or mainly in the conveyance of signals such as transmission services used for the provision of machine-to-machine services and for broadcasting.
+(source: Article 2 DIRECTIVE (EU) 2018/1972 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 11 December 2018)
 
 ### Entitlement
 A usage right for a [Resource](#resource) owned by some other [Legal Entity](#legal-entity).
@@ -486,7 +489,8 @@ An [Identifier](#identifier) which can be used to identify a [Connection](#conne
 A [Qiy Node Event](#qiy-node-event) which is used to communicate the [Persistent Id](#persistent-id) of a new [Connection](#connection).
 
 ### Personal Data
-Any [Information](#information) relating to a [Data Subject](#data-subject).
+Any [Information](#information) relating to an identified or identifiable [Individual](#individual).
+Identifiable [Individual](#individual) means any who can be identified, directly or indirectly, in particular by reference to an [Identifier](#identifier), such as an identification number, location data, an online [Identifier](#identifier) or one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of an [Individual](#individual).
 
 ### Portfolio Details Request
 A [Qiy Node Request](#qiy-node-request) which can be used to get the details of a [Service Portfolio](#service-portfolio).
@@ -507,11 +511,11 @@ A [Qiy Node Request](#qiy-node-request) to register a [Service Provider](#servic
 A [Qiy Node Request](#qiy-node-request) to unregister a [Service Provider](#service-provider) with the [Qiy Trust Network](#qiy-trust-network).
 
 ### Pseudo Id
-An [Identifier](#identifier) that a [Service Provider](#service-provider) can use to provide services to a natural person, but that the [Service Provider](#service-provider) can not use to identify the natural person.
+An [Identifier](#identifier) that a [Service Provider](#service-provider) can use to provide services to an [Individual](#individual), but that the [Service Provider](#service-provider) can not use to identify the [Individual](#individual).
 The Pseudo Id can either be persistent or transient.
 
 ### Pseudonymisation
-The processing of [Personal Data](#personal-data) in such a manner that the [Personal Data](#personal-data) can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person.
+The processing of [Personal Data](#personal-data) in such a manner that the [Personal Data](#personal-data) can no longer be attributed to a specific [Individual](#individual) without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the [Personal Data](#personal-data) are not attributed to an identified or identifiable [Individual](#individual).
 
 ### Public Key Infrastructure
 A public key infrastructure (PKI) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store & revoke digital certificates and manage public-key encryption, see https://en.wikipedia.org/wiki/Public_key_infrastructure.
@@ -547,13 +551,10 @@ A [Qiy Node Request](#qiy-node-request) which can be used to list the [Services]
 A [Qiy Application](#qiy-application) that can be installed on a smart phone or similar device.
 
 ### Qiy Application
-An [Application](#application) that complies with the [Qiy Scheme Policy for Applications](#qiy-scheme-policy-for-applications).
+An [Application](#application) that uses the [Qiy Trust Network](#qiy-trust-network) and that complies with the [Qiy Scheme](#qiy-scheme).
 
 ### Qiy Application Protocol
 A protocol that is part of the [Qiy Standard](#qiy-standard) and which describes the interactions of [Qiy Applications](#qiy-application).
-
-### Qiy Data
-[Relating Data](#relating-data) that is processed within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Foundation
 A foundation dedicated to putting people back in control of their [Personal Data](#personal-data) while creating value for organisations, see https://www.qiyfoundation.org/about-qiy/.
@@ -619,7 +620,7 @@ A set of documents concerning governance, legal and technical aspects of the [Qi
 A set of open standards concerning the technical aspects of the [Qiy Scheme](#qiy-scheme), a subset of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook).
 
 ### Qiy Trust Network
-A [Communication Network](#communication-network) that connects [Qiy Nodes](#qiy-node) and that is provided by [Access Providers](#access-provider) to [Qiy Users](#qiy-user) under the rules of the [Qiy Scheme](#qiy-scheme). 
+An [Electronic Communications Network](#electronic-communications-network) that connects [Qiy Nodes](#qiy-node) and that is provided by [Access Providers](#access-provider) to [Qiy Users](#qiy-user) under the rules of the [Qiy Scheme](#qiy-scheme). 
 
 ### Qiy Trust Principles
 The basic principles, which underlie the [Qiy Scheme](#qiy-scheme) and its overall business model. All [Qiy Users](#qiy-user) must respect these principles.
@@ -650,9 +651,6 @@ A local [Legal Entity](#legal-entity) that adheres to the overall [Qiy Scheme](#
 * Facilitate an independent complaint and appeal process for licensees
 * Ensure compliance
 * Collect [License Fees](#license-fee)
-
-### Relating Data
-[Information](#information) that relates to an [Individual](#individual).
 
 ### Relying Party
 A [Business Role](#business-role), a specialisation of [Service Provider](#service-provider): a [Legal Entity](#legal-entity) that provides [Services](#service) to other [Qiy Users](#qiy-user) via the [Qiy Trust Network](#qiy-trust-network).
@@ -872,7 +870,7 @@ Definition based on https://en.wikipedia.org/wiki/Use_case.
 For the [Use Cases](#use-case) of the [Qiy Scheme](#qiy-scheme), see [UC00 Use Cases Overview](./use-cases/UC00%20Use%20Cases%20Overview.md).
 
 ### User
-A [Business Role](#business-role) for natural persons and organisations that use an [Application](#application).
+A [Business Role](#business-role) for [Individuals](#individual) and [Legal Entities](#legal-entities) that use an [Application](#application).
 
 In the context of the Qiy Scheme, see: [Qiy User](#qiy-user).
 
@@ -882,9 +880,9 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 ### Uuid
 See https://en.wikipedia.org/wiki/Universally_unique_identifier.
 
-### Validated Data
-[Data](#data) emanating from a source that can be reliably identified and that has verified the validity of the data by itself.
+### Verified Data
+Self-describing [Data](#data) emanating from a source that can be reliably identified and contacted, of which the authenticity can be reliably determined without contacting the source.
 
-### Verified Claim
-A [Claim](#claim) emanating from a source that can be reliably identified and that has verified the validity of the [Claim](#claim) by itself.
+### Verifiable Data
+[Data](#data) emanating from a source that can be reliably identified and contacted to verify the authenticty of the [Data](#data).
 
