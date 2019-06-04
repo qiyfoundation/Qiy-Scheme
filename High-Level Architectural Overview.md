@@ -497,6 +497,8 @@ This goes as follows:
 * The [Qiy Application](Definitions.md#qiy-application) uses the [Operation Reference](Definitions.md#operation-reference) in a [Operation Execute Request](Definitions.md#operation-execute-request) to its [Qiy Node](Definitions.md#qiy-node).
 * The [Qiy Node](Definitions.md#qiy-node) returns the requested [Data](Definitions.md#data).
 
+The [Qiy Standard](Definitions.md#qiy-standard) allows the exchange of json body parameters in post-requests between the [Relying Party](Definitions.md#relying-party) and the [Data Provider](Definitions.md#data-provider) via the [Operation Execute Request](Definitions.md#operation-execute-request), for example to allow for the exchange of public keys to implement encryption schemes that have been agreed between them.
+
 ![Relying Party: Request data](./images/relying-party--request-data.png)
 
 
