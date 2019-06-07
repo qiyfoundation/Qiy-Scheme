@@ -34,7 +34,7 @@ An example was also given during the presentation.
 
 # Presentation
 
-The presentation that was used during the Working Stream session is publicly available on github, see: [QS WSFT Meeting 2019-06-06.pptx](QS WSFT Meeting 2019-06-06.pptx)
+The presentation that was used during the Working Stream session is publicly available on github, see: [QS WSFT Meeting 2019-06-06.pptx](QS%20WSFT%20Meeting%202019-06-06.pptx)
 
 
 # Collaboration
