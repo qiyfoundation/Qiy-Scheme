@@ -1,6 +1,12 @@
 # What is the Qiy Scheme?
 The Qiy Scheme defines a framework for individual users, companies and governmental organisations to safely control and exchange personal data.
 
+The Qiy Scheme is maintained by members of the Qiy Foundation and contributors using a formal process with a review board.
+
+Approved content is published in the master branche and new content for review (and contributors) can be found in the default review branch.
+
+
+
 ## The Qiy Scheme Rulebook
 The Qiy Scheme Rulebook consists of a set of documents concerning governance, legal and technical issues. The evolution of the rules is a dynamic and continuous process.
 
