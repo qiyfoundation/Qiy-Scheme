@@ -106,9 +106,9 @@ For development, please refer to:
 
 ## Software Engineers
 
-Please refer to the [Use Case Specifications](Definitions.md#use-case-specifications) and the [Qiy Node Documentation](Definitions.md#qiy-node-documentation) of the [Qiy Node Implementation](Definitions.md#qiy-node-implementation) of your [Access Provider](Definitions.md#access-provider).
+To integrate your front-end and back-end applications with Qiy, please refer to the [Qiy Node API](https://qiy.api.digital-me.nl) provided by DigitalMe, a (Qiy) [Access Provider](Definitions.md#access-provider).
 
-For development, please refer to:
+For furthering the technical specifications, please refer to:
 * [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) 
 * your [Access Provider](Definitions.md#access-provider)
 
