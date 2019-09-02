@@ -1,0 +1,104 @@
+# UC05 Request Consent
+
+# Abstract
+
+This document describes how a [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) can acquire [Consent](../Qiy%20Node%20Protocol.md#consent) to use [Personal Data](../Definitions.md#personal-data) of an [Individual](../Definitions.md#individual) for a [Service](../Qiy%20Node%20Protocol.md#service) it provides.
+
+# Contents
+
+
+1. [Primary Actors](#primary-actors)
+1. [Preconditions](#preconditions)
+1. [Basic Flow: Relying Party requests Consent](#basic-flow-relying-party-requests-consent)
+	1. [The Relying Party sends a Consent Request to the Qiy Trust Network](#1-the-relying-party-sends-a-consent-request-to-the-qiy-trust-network)
+	1. [The Qiy Trust Network creates a Consent Repository](#2-the-qiy-trust-network-creates-a-consent-repository)
+	1. [The Qiy Trust Network returns the Consent Relying Party Credentials to the Relying Party](#3-the-qiy-trust-network-returns-the-consent-relying-party-credentials-to-the-relying-party)
+	1. [The Qiy Trust Network sends a Consent Request Message to the Individual](#4-the-qiy-trust-network-sends-a-consent-request-message-to-the-individual)
+	1. [The Individual gets the Consent details from the Qiy Trust Network](#5-the-individual-gets-the-consent-details-from-the-qiy-trust-network)
+	1. [The Individual grants Consent](#6-the-individual-grants-consent)
+	1. [The Qiy Trust Network registers the granting of the Consent in the Consent Repository](#7-the-qiy-trust-network-registers-the-granting-of-the-consent-in-the-consent-repository)
+	1. [The Qiy Trust Network notifies the Relying Party that the Consent has been granted](#8-the-qiy-trust-network-notifies-the-relying-party-that-the-consent-has-been-granted)
+1. [Postconditions](#postconditions)
+1. [Diagram Source Code](#diagram-source-code)
+	1. [Request Consent](#request-consent)
+
+# Primary Actors
+
+* [Individual](../Definitions.md#individual)
+* [Relying Party](../Qiy%20Node%20Protocol.md#relying-party)
+* [Qiy Trust Network](../Definitions.md#qiy-trust-network)
+
+# Preconditions
+
+1. The [Individual](../Definitions.md#individual) has a [Connection](../Qiy%20Node%20Protocol.md#connection) with the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) and knows its [Persistent Id](../Qiy%20Node%20Protocol.md#persistent-id). 
+1. The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) has a [Connection](../Qiy%20Node%20Protocol.md#connection) with the [Individual](../Definitions.md#individual) and knows its [Persistent Id](../Qiy%20Node%20Protocol.md#persistent-id).
+1. The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) knows the (local) [Identity](../Definitions.md#identity) of the [Individual](../Definitions.md#individual).
+1. The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) has permission to provide the [Service](../Qiy%20Node%20Protocol.md#service) via Qiy.
+
+# Basic Flow: Relying Party requests Consent
+
+The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) requests an [Individual](../Definitions.md#individual) [Consent](../Qiy%20Node%20Protocol.md#consent) to use a specific set of [Personal Data](../Definitions.md#personal-data) for a [Service](../Qiy%20Node%20Protocol.md#service) it provides.
+
+![Request Consent](../images/Request_Consent_-_UC05.png)
+
+## 1. The Relying Party sends a Consent Request to the Qiy Trust Network
+
+The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) requests [Consent](../Qiy%20Node%20Protocol.md#consent) to use [Personal Data](../Qiy%20Node%20Protocol.md#personal-data) for one of his [Services](../Qiy%20Node%20Protocol.md#services) via the [Qiy Trust Network](../Definitions.md#qiy-trust-network) using a [Consent Request Message](../Qiy%20Node%20Protocol.md#consent-request-message) which he sends to the [Individual](../Definitions.md#individual).
+
+## 2. The Qiy Trust Network creates a Consent Repository
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) creates a [Consent Repository](../Qiy%20Node%20Protocol.md#consent-repository) and [Consent Credentials](../Qiy%20Node%20Protocol.md#consent-credential) for the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party), the [Individual](../Definitions.md#individual) and a [Data Provider](../Qiy%20Node%20Protocol.md#data-provider).
+
+## 3. The Qiy Trust Network returns the Consent Relying Party Credentials to the Relying Party
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) returns the [Consent Relying Party Credential](../Qiy%20Node%20Protocol.md#consent-relying-party-credential) to the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party).
+
+## 4. The Qiy Trust Network sends a Consent Request Message to the Individual
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) forwards the [Consent Request Message](../Qiy%20Node%20Protocol.md#consent-request-message) with the [Consent Individual Credential](../Qiy%20Node%20Protocol.md#consent-individual-credential) to the [Individual](../Definitions.md#individual).
+
+## 5. The Individual gets the Consent details from the Qiy Trust Network
+
+The [Individual](../Definitions.md#individual) uses the [Consent Individual Credential](../Qiy%20Node%20Protocol.md#consent-individual-credential) in a [Consent Details Request](../Qiy%20Node%20Protocol.md#consent-details-request) to get the details of the requested Consent from the [Qiy Trust Network](../Definitions.md#qiy-trust-network).
+
+## 6. The Individual grants Consent
+
+The [Individual](../Definitions.md#individual) grants the requested [Consent](../Qiy%20Node%20Protocol.md#consent) which is communicated to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) in a [Consent Granted Request](../Qiy%20Node%20Protocol.md#consent-granted-request). 
+
+## 7. The Qiy Trust Network registers the granting of the Consent in the Consent Repository
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) registers the granting of the [Consent](../Qiy%20Node%20Protocol.md#consent) in the [Consent Repository](../Qiy%20Node%20Protocol.md#consent-repository).
+
+## 8. The Qiy Trust Network notifies the Relying Party that the Consent has been granted
+
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) notifies the [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) that the [Consent](../Qiy%20Node%20Protocol.md#consent) has been granted using a [Consent Granted Event](../Qiy%20Node%20Protocol.md#consent-granted-event).
+
+
+# Postconditions
+
+1. The [Relying Party](../Qiy%20Node%20Protocol.md#relying-party) has [Consent](../Qiy%20Node%20Protocol.md#consent) to use the requested [Personal Data](../Qiy%20Node%20Protocol.md#personal-data) of the [Individual](../Definitions.md#individual) for its [Service](../Qiy%20Node%20Protocol.md#service).
+
+
+# Diagram Source Code
+
+## Request Consent
+
+![Request Consent](../images/Request_Consent_-_UC05.png)
+
+```
+title "Request Consent"
+
+participant "Relying Party"     as RP
+participant "Qiy Trust Network" as QTF
+participant "Individual"        as User
+
+RP   ->  QTF  : 1 Request Consent
+QTF  ->  QTF  : 2 Create Consent Repository
+QTF  ->  RP   : 3 Return Consent Credential
+QTF  ->  User : 4 Request Consent
+User ->  QTF  : 5 Get Consent Details
+User ->  QTF  : 6 Grant Consent
+QTF  ->  QTF  : 7 Register Grant
+QTF  ->  RP   : 8 Notify Grant
+```
+
