@@ -1,14 +1,11 @@
 # What is the Qiy Scheme?
-The Qiy Scheme defines a framework for individual users, companies and governmental organisations to safely control and exchange personal data.
+The Qiy Scheme defines a framework for individual users, companies and organisations to [safely control and exchange personal data](Qiy%20Trust%20Principles.md "See Qiy Trust Principles").
 
-The Qiy Scheme is maintained by members of the Qiy Foundation and contributors using a formal process with a review board.
+The Qiy Scheme is maintained by members of the Qiy Foundation and contributors using a formal [review](Qiy%20Scheme%20Documentation.md "See 'Qiy Scheme Documentation'") and [release](Qiy%Scheme%Releases.md "See 'Qiy Scheme Releases'") process governed by the rules laid down in the [Governance Model](Governance%20Model.md).
 
-Approved content is published in the master branche and new content for review (and contributors) can be found in the default review branch.
+Approved content is published in the [master branch](https://github.com/qiyfoundation/Qiy-Scheme/tree/master) and new content for review (and contributors) can be found in the [review-board branch](https://github.com/qiyfoundation/Qiy-Scheme "The review-board branch is displayed by default").
 
 
-
-## The Qiy Scheme Rulebook
-The Qiy Scheme Rulebook consists of a set of documents concerning governance, legal and technical issues. The evolution of the rules is a dynamic and continuous process.
 
 ## Work Streams
 The maintenance and development of the Qiy Scheme is delegated to appointed Work Streams.
@@ -18,6 +15,7 @@ Git-Flow is a set of conventions about how to work with Git and adopted by the W
 
 Conventions used:
 
+* Develop branch : **review-board**
 * Feature and topic branch prefix: **topic/**
 * Hotfix branch prefix: **hotfix/**
 * Release branch prefix: **review-board/**
