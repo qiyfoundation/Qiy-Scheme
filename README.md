@@ -1,11 +1,10 @@
 # What is the Qiy Scheme?
 The Qiy Scheme defines a set of principles, the [Qiy Trust Principles](Qiy%20Trust%20Principles.md#qiy-trust-principles), a framework and a network, the [Qiy Trust Network](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Definitions.md#qiy-trust-network), for individual users, companies and organisations to safely control and exchange personal data.
-
 The Qiy Scheme is maintained by members of the Qiy Foundation and contributors using a formal [review](Qiy%20Scheme%20Documentation.md "See 'Qiy Scheme Documentation'") and [release](Qiy%20Scheme%20Releases.md "See 'Qiy Scheme Releases'") process governed by the rules laid down in the [Governance Model](Governance%20Model.md).
 In short, approved content is published in the [master branch](https://github.com/qiyfoundation/Qiy-Scheme/tree/master) and content for review and contributions can be found in the [review-board branch](https://github.com/qiyfoundation/Qiy-Scheme "The review-board branch is displayed by default").
 
 
-## Work Streams
+## Questions & Contributions
 The maintenance and development of the Qiy Scheme is delegated to appointed Work Streams as described in [Qiy Scheme Documentation](Qiy%20Scheme%20Documentation.md), but individuals also contribute with questions and change proposals by e-mail to info __at__ qiyfoundation __dot__ org or using github issues or pull requests.
 
 # Git-Flow
