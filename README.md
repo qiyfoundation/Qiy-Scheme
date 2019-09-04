@@ -5,7 +5,7 @@ The Qiy Scheme is maintained by members of the Qiy Foundation and contributors u
 In short, approved content is published in the [master branch](https://github.com/qiyfoundation/Qiy-Scheme/tree/master) and content for review and contributions can be found in the [review-board branch](https://github.com/qiyfoundation/Qiy-Scheme "The review-board branch is displayed by default").
 
 
-## Work Streams
+## Questions & Contributions
 The maintenance and development of the Qiy Scheme is delegated to appointed Work Streams as described in [Qiy Scheme Documentation](Qiy%20Scheme%20Documentation.md), but individuals also contribute with questions and change proposals by e-mail to info __at__ qiyfoundation __dot__ org or using github issues or pull requests.
 
 # Git-Flow
