@@ -59,6 +59,12 @@ The fiKks community is introducing end-to-end encryption in their standards.
 Please refer to [fiKks on Github](https://github.com/qiyfoundation/fiKks) for more information.
 
 
+# Financieel Paspoort Foundation
+
+The Financieel Paspoort Foundation has initiated the development of end-to-end encryption to increase the security and privacy friendliness and to deminiss the legal risks of their solution.
+Please refer to the website for more information https://financieelpaspoort.nl.
+
+
 # Digital Me
 
 Digital Me has been found willing to support the development and implementation of end-2-end encryption.
