@@ -15,6 +15,7 @@ freek.driesenaar@qiyfoundation.org
 1. [Collaboration](#collaboration)
 1. [Qiy Scheme](#qiy-scheme)
 1. [fiKks](#fiKks)
+1. [Financieel Paspoort Foundation](#financieel-paspoort-foundation)
 1. [Digital Me](#digital-me)
 1. [Next steps](#next-steps)
 
