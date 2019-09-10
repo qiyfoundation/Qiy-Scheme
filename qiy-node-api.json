@@ -1,0 +1,1831 @@
+!!_____   WORK IN PROGRESS _________!!
+
+
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "tbd",
+	"title": "Qiy Node API",
+        "description": "tbd",
+        "license": {
+            tbd
+        }
+    },
+    "host": "user.dolden.net",
+    "basePath": "/user",
+    "schemes": [
+        "https"
+    ],
+    "definitions": {
+        "ApiModel": {
+            "properties": {
+                "currentVersion": {
+                    "type": "string",
+                    "description": "Api version.",
+                    "example": "0.2.0-SNAPSHOT",
+                    "maxItems": 1,
+                    "minItems": 1
+                },
+                "id": {
+                    "description": "Qiy Node id. This property is only included when the request is authenticated.",
+                    "type": "string",
+                    "maxItems": 1,
+                    "minItems": 0
+                },
+                "links": {
+                    "$ref": "#/definitions/ApiLinksModel"
+                }
+            },
+            "required": [
+                "currentVersion",
+                "links"
+            ],
+            "type": "object"
+        },
+        "ApiLinksModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/EndpointAddressesModel"
+                },
+                {
+                    "$ref": "#/definitions/TemplatesModel"
+                }
+            ]
+        },
+        "ConnectionsResponseModel": {
+            "description": "Response of [Connections Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connections-request).",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "items": {  
+                            "$ref": "#/definitions/ConnectionDetailsModel"
+                        },
+                        "type": "array"
+                    },
+                    "links": {
+                        "description": "tbd",
+                        "items": {
+                                "type": "object"
+                        },
+                        "type": "array"
+                    }
+                }
+            },
+            "type": "array"
+        },
+        "ConnectionDetailsModel": {
+            "description": "Connection details.",
+            "properties": {
+                "state": {
+                    "description": "State of the connection.",
+                    "type": "string",
+                    "example": "connected"
+                },
+                "activeFrom": {
+                    "description": "Active from date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "activeUntil": {
+                    "description": "Active until date time stamp.",
+                    "type": "integer",
+                    "format": "Unix time in ms, nullable"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "mbox": {
+                            "description": "Messagebox Url.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "references": {
+                            "description": "References Url.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "self": {
+                            "description": "Connection Url",
+                            "type": "string",
+                            "format": "url"
+                        }
+                    },
+                    "required": [
+                        "mbox",
+                        "references",
+                        "self"
+                    ]
+                }
+            },
+            "required": [
+                "state",
+                "activeFrom",
+                "activeUntil",
+                "links"
+            ],
+            "type": "object"
+        },
+        "ConnectTokenDataModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/ConnectTokenMetadataModel"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "json": {
+                            "$ref": "#/definitions/ConnectTokenModel"
+                        }
+                    }
+                }
+            ],
+            "description": "Connect Token details",
+            "type": "object"
+        },
+        "ConnectTokenMetadataModel": {
+            "type": "object",
+            "properties": {
+                "expires": {
+                    "type": "integer",
+                    "description": "Expiration date time.",
+                    "format": "Unix time in ms",
+                    "minItems": 0,
+                    "maxItems": 1
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Connect Token name",
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "example": "Test Code"
+                },
+                "note": {
+                    "description": "Note",
+                    "example": "Do not remove",
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "useBudget": {
+                    "type": "integer",
+                    "description": "Maximum number of use times",
+                    "example": 10,
+                    "maxItems": 1,
+                    "minItems": 0
+                },
+                "actions": {
+                    "type": "object",
+                    "description": "Instructions to be executed immediately after connecting.",
+                    "properties": {
+                        "messages": {
+                            "description": "Messages",
+                            "example": [
+                                {
+                                    "serialNr": null,
+                                    "refSerialNr": null,
+                                    "text": "Please accept my card",
+                                    "protocol": "https://protocols.qidida.nl/dappre/v.1.0.0",
+                                    "inbound": false,
+                                    "sent": false,
+                                    "payload": "OWEzYjJlZDEtMjYzYS00NzIyLWE1MTUtMDkyMzA2OGE3YTMw"
+                                }
+                            ],
+                            "items": {
+                                "$ref": "#/definitions/MessageModel"
+                            },
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+        "ConnectTokenModel": {
+            "description": "See [Connect Token](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connect-token).",
+            "properties": {
+                "target": {
+                    "description": "The [Transport Connect Token](https://code.in.digital-me.nl/DOC/FuncQiy/blob/master/Functional%20Specification-gitbucket.md#transport-connect-token).",
+                    "example": "https://issuer.dolden.net/issuer/routes/webhook/0daec27c-316f-4fd4-b0a5-d074d4c751dd",
+                    "type": "string"
+                },
+                "identifier": {
+                    "description": "This property is only used in responses and holds the Qiy Node id.",
+                    "type": "string"
+                },
+                "tmpSecret": {
+                    "type": "string",
+                    "description": "Base64-encoded temporary secret.",
+                    "example": "Wma8iea8XFOmagPOy/yM/g==",
+                    "format": "Base64-encoded"
+                }
+            },
+            "required": [
+                "target",
+                "tmpSecret"
+            ],
+            "type": "object"
+        },
+        "ConnectTokenRequestParametersModel": {
+            "allOf": [
+                { "$ref": "#/definitions/ConnectTokenMetadataModel" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "json": {
+                            "$ref": "#/definitions/ConnectTokenModel" 
+                        }
+                    }
+                }
+            ]
+        },
+        "DomainDetailsMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "description": "[Domain Details Message](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#domain-details-message).",
+                    "type": "object",
+                    "properties": {
+                        "payload": {
+                            "properties": {
+                                "name": {
+                                    "description": "tbd",
+                                    "type": "string"
+                                },
+                                "persistentId": {
+                                    "description": "Base64-encoded [Persistent Id](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#persistent-id) of the Data Provider",
+                                    "type": "string",
+                                    "format": "Base64-encoded"
+                                },
+                                "protocols": {
+                                    "description": "List of provided (data) services.",
+                                    "type": "array",
+                                    "items": {
+                                        "description": "Service Descriptor or Data Descriptor.",
+                                        "type": "string",
+                                        "format": "url"
+                                    }
+                                },
+                                "publicKey": {
+                                    "description": "Base64-encoded public key of the Data Provider.",
+                                    "type": "string",
+                                    "format": "Base64-encoded"
+                                }
+                            },
+                            "required": [
+                                "publicKey",
+                                "name",
+                                "persistentId",
+                                "protocols"
+                            ]
+                        },
+                        "protocol": {
+                            "type": "string",
+                            "description": "[Service Descriptor](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#service-descriptor) for the service catalogue publication service.",
+                            "format": "url, value: 'https://protocols.qiy.nl/domain-details/v.1.0.0'"
+                        }
+                    }
+                }
+            ]
+        },
+        "EndpointAddressesModel": {
+            "type": "object",
+            "description": "Current endpoint addresses.",
+            "properties": {
+                "create": {
+                    "description": "Current address for the 'create'-endpoint (createEndpoint). This property is only included when the request is partly authenticated, e.g. only by an Access Provider Token.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "connections": {
+                    "description": "Current address for the 'connections'-endpoint (connectionsEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "ctCreate": {
+                    "description": "Current address for the 'connect token create'-endpoint (ctCreateEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "ctList": {
+                    "description": "Current address for the 'connect token list'-endpoint (ctListEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "events": {
+                    "description": "Current address for the 'events'-endpoint (eventsEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "ref": {
+                    "description": "Current address for the 'reference'-endpoint (refEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "refs": {
+                    "description": "Current address for the 'references'-endpoint (refsEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "scan": {
+                    "description": "Current address for the 'create connection'-endpoint (scanEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                },
+                "serviceCatalogue": {
+                    "description": "Current address for the 'service catalogue'-endpoint (serviceCatalogueEndpoint). This property is only included when the request is fully authenticated.",
+                    "format": "url",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                }
+	    }
+        },
+        "EventStreamModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                { 
+                    "description": "See [Events](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#events).",
+                    "format": "Stream of event objects."
+                }
+            ]
+        },
+        "EventModel": {
+            "description": "Event Model.",
+            "type": "object",
+            "properties": {
+                "connectionUrl": {
+                    "description": "Connection Url.",
+                    "type": "string",
+                    "format": "url"
+                },
+                "extraData": {
+                    "description": "Property for extra event data.",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Event type name.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "connectionUrl",
+                "extraData",
+                "type"
+            ]
+        },
+        "ConnectedToRouterEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Connected To Router Event.",
+                    "example": {
+                        "type": "CONNECTED_TO_ROUTER",
+                        "connectionUrl": "https://dappre-all.local/user/connections/user/Sint Joseph/0a3a2d37-9790-4244-b55d-37b94e180a8b",
+                        "extraData": "https://dappre-all.local/issuer/routes/webhook/d9807df3-d62d-41c5-91bf-0cd5a572e786"
+                    },
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "Target url of the related connect token.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "type": {
+                            "format": "CONNECTED_TO_ROUTER",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "DataReferenceReceivedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Data Reference Received Event.",
+                    "example": {
+                        "type": "DATA_REFERENCE_RECEIVED",
+                        "connectionUrl": "https://dappre-all.local/user/connections/user/Sint Joseph/0a3a2d37-9790-4244-b55d-37b94e180a8b",
+                        "extraData": "NjUzMDdhNjAtODNiZi00MTEwLTkwMDktZjUxNDE4MmQ4NGUx"
+                    },
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "Base64-encoded data reference.",
+                            "format": "Base64-encoded",
+                            "type": "string"
+                        },
+                        "type": {
+                            "format": "DATA_REFERENCE_RECEIVED",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "DataRequestForwardedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Data Request Forwarded Event.",
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "tbd.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "type": {
+                            "format": "DATA_REQUEST_FORWARDED",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "DataRequestFulfilledEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Data Request Fulfilled Event.",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "tbd.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "type": {
+                            "format": "DATA_REQUEST_FULFILLED",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "LocationAndLinkModel": {
+            "description": "Location and link. NB - both passed as response header parameters.",
+            "type": "object",
+            "properties": {
+                "Location": {
+                    "description": "Url of the created connection.",
+                    "type": "string",
+                    "example": "https://dappre-all.local/user/connections/user/jmeter-tribes-0/9a6331cc-3400-4c77-a3a9-ff69e8dbf869"
+                },
+                "Link": {
+                    "description": "Link header parameter, containing the mailbox url for the connection.",
+                    "type": "string",
+                    "example": "<https://dappre-all.local/user/mbox/user/jmeter-tribes-0/9a6331cc-3400-4c77-a3a9-ff69e8dbf869>; rel=\"mbox\""
+                }
+            }
+        },
+        "MailboxMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "inbound": {
+                            "type": "boolean",
+                            "description": "Whether the received message is inbound or outbound."
+                        },
+                        "serialNr": {
+                            "type": "integer",
+                            "description": "Serial number of the message."
+                        }
+                    },
+                    "required": [
+                        "inbound",
+                        "serialNr"
+                    ]
+                }
+            ]
+        },
+        "MailboxMessagesModel": {
+            "description": "Qiy Node Mailbox messages.",
+            "items": {
+                "$ref": "#/definitions/MailboxMessageModel"
+            },
+            "type": "array"
+        },
+        "MessageModel": {
+            "description": "See [Qiy Node Message](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#qiy-node-message).",
+            "type": "object",
+            "properties": {
+                "protocol": {
+                    "description": "Application protocol",
+                    "example": "http://www.egem.nl/StUF/StUF0301",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "refSerialNr": {
+                    "description": "Reference serial number",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "integer",
+                    "format": "nullable (NB: See [OpenAPI 2.0 does not support nullable fields](https://github.com/swagger-api/swagger-node/issues/399) and [OpenAPI 3.0 'nullable'-attribute](https://swagger.io/docs/specification/data-models/data-types/#nullable).)"
+                },
+                "text": {
+                    "description": "Subject",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "example": "StUF record",
+                    "type": "string"
+                },
+                "payload": {
+                    "description": "The Base64-encoded payload of the message.",
+                    "example": "OWEzYjJlZDEtMjYzYS00NzIyLWE1MTUtMDkyMzA2OGE3YTMw",
+                    "format": "Base64-encoded",
+                    "maxItems": 1,
+                    "minItems": 1,
+                    "type": "object"
+                }
+            },
+            "required": [
+                "protocol",
+                "refSerialNr",
+                "text",
+                "payload"
+            ]
+        },
+        "OperationReferenceModel": {
+            "properties": {
+                "created": {
+                    "description": "Creation time.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "expires": {
+                    "description": "Expiration time.",
+                    "format": "Unix time in ms or -1 for maxint, default: maxint",
+                    "type": "integer"
+                },
+                "operationDescriptor": {
+                    "description": "Operation Descriptor of the Operation to be executed by reference.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "operationReferenceJson": {
+                    "description": "Operation Reference.",
+                    "properties": {
+                        "referenceValue": {
+                            "$ref": "#/definitions/OperationReferenceValueModel"
+                        },
+                        "since": {
+                            "description": "Used in execution requests to request for changes since the latest request.",
+                            "format": "Unix time in ms, default 0",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "referenceValue"
+                    ],
+                    "type": "object"
+                },
+                "operationSpecification": {
+                    "$ref": "#/definitions/OperationSpecificationModel"
+                },
+                "operationReferenceUrl": {
+                    "description": "Endpoint address for the Operation Reference.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "relyingPartyIds": {
+                    "description": "Relying Party Ids of related Relying Parties.",
+                    "items": {
+                        "description": "Relying Party Id",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "requestId": {
+                    "description": "Request Id",
+                    "type": "string"
+                },
+                "serviceProviderId": {
+                    "description": "Service Provider Id of the organization that provides the service.",
+                    "type": "string"
+                },
+                "useBudget": {
+                    "description": "Use budget.",
+                    "format": "-1 for maxint, default: maxint",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "OperationReferenceRequestBaseModel": {
+            "properties": {
+                "candidateServiceProviderIds": {
+                    "description": "Ids of possible Service Providers.",
+                    "items": {
+                        "description": "Service Provider Id",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "chosenServiceProviderIds": {
+                    "description": "Ids of chosen Service Providers.",
+                    "items": {
+                        "description": "Service Provider Id",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "created": {
+                    "description": "Message creation time.",
+                    "type": "integer",
+                    "format": "Unix time in ms"
+                },
+                "fromRelyingPartyId": {
+                    "description": "Relying Party Id in case of a request by a Relying Party to an Individual.",
+                    "type": "string"
+                },
+                "messageDescriptor": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "operationReferenceRequestUrl": {
+                    "description": "Endpoint address for the Operation Reference Request.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "operationDescriptor": {
+                    "description": "Operation Descriptor of the Operation to be executed by reference.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "operationReferences": {
+                    "description": "Operation References.",
+                    "items": {
+                        "$ref": "#/definitions/OperationReferenceModel"
+                    },
+                    "type": "array"
+                },
+                "requestId": {
+                    "description": "Request Id",
+                    "type": "string"
+                },
+                "toServiceProviderId": {
+                    "description": "Service Provider Id in case of a request by an Individual to a Service Provider.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "requestId",
+                "created"
+            ],
+            "type": "object"
+        },
+        "OperationReferenceMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "payload": {
+                            "$ref": "#/definitions/OperationReferenceModel"
+                        },
+                        "protocol": {
+                            "description": "Operation Reference Message Descriptor.",
+                            "format": "url",
+                            "pattern": "https://github.com/digital-me/qiy-node/blob/topic/updating-chapter-8-data-reuse/qs-user-node.md#operation-reference-message",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "OperationReferenceReceivedEventModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/EventModel"
+                },
+                {
+                    "description": "See [Operation Reference Received Event](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-reference-received-event).",
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Connection Url of the connection over which the Operation Reference was received.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "$ref": "#/definitions/OperationReferenceModel"
+                        },
+                        "type": {
+                            "format": "OPERATION_REFERENCE_RECEIVED",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "OperationReferenceRequestEventModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/EventModel"
+                },
+                {
+                    "description": "See [Operation Reference Request Event](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-reference-request-event).",
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Connection Url of the connection of the Operation Reference Request Message.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "$ref": "#/definitions/OperationReferenceRequestBaseModel"
+                        },
+                        "type": {
+                            "format": "OPERATION_REFERENCE_REQUEST",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "OperationReferenceRequestMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "payload": {
+                            "$ref": "#/definitions/OperationReferenceRequestBaseModel"
+                        },
+                        "protocol": {
+                            "type": "string",
+                            "description": "[Data Descriptor](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#data-descriptor) to identify the requested data.",
+                            "format": "url"
+                        }
+                    }
+                }
+            ]
+        },
+        "OperationReferenceValueModel": {
+            "description": "Operation Reference value",
+            "pattern": "[a-zA-Z0-9]{8,128}",
+            "type": "string"
+        },
+        "OperationSpecificationModel": {
+            "type": "object",
+            "description": "See [Operation Specification](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-specification).",
+            "properties": {
+                "body": {
+                    "description": "Required body data.",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "object",
+                    "format": "not nullable"
+                },
+                "headers": {
+                    "description": "The headers to be used.",
+                    "items": {
+                        "properties": {
+                            "accept": {
+                                "description": "Accept header.",
+                                "example": "text/plain",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "minItems": 0,
+                    "maxItems": 1,
+                    "type": "array"
+                },
+                "method": {
+                    "description": "The supported http operation.",
+                    "example": "get",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "queryParams": {
+                    "description": "Required query parameters",
+                    "items": {
+                        "type": "object"
+                    },
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "array"
+                },
+                "transport": {
+                    "description": "The supported transfer protocol.",
+                    "example": "https",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                },
+                "url": {
+                    "description": "Resource url",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string",
+                    "format": "url"
+                }
+            }
+        },
+        "PersistentIdEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "See [Persistent Id Event](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#persistent-id-event).",
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Connection Url of the created connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "[Persistent Id](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#persistent-id) and Connection Url of active connection when applicable.",
+                            "type": "object",
+                            "properties": {
+                                "new-uri": {
+                                    "description": "Connection Url of active connection.",
+                                    "type": "string",
+                                    "format": "url"
+                                },
+                                "pid": {
+                                    "description": "[Persistent Id](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#persistent-id) of the connected Qiy Node.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "pid"
+                            ]
+                        },
+                        "type": {
+                            "format": "PID",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "QiyNodeCreateRequestParametersModel": {
+            "type": "object",
+            "properties": {
+                "alias": {
+                    "description": "Use same value as id.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                },
+                "password": {
+                    "description": "See [Transport Password](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#transport-password).",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                },
+                "publicKey": {
+                    "description": "Public key to be used to authenticate future requests.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                },
+                "id": {
+                    "description": "Qiy Node id.",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                }
+            },
+            "required": [
+                "alias",
+                "password",
+                "publicKey",
+                "id"
+            ]
+        },
+        "ReferenceDetailsModel": {
+            "description": "Reference details.",
+            "type": "object",
+            "properties": {
+                "ref": {
+                    "description": "Resource reference.",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "value": {
+                    "description": "Return value of the resource, accessed immediately after the request.",
+                    "format": "Base64-encoded",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                },
+                "connection": {
+                    "description": "Connection uri.",
+                    "format": "uri",
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "type": "string"
+                }
+            }
+        },
+        "ReferenceResultModel": {
+            "description": "Resolved Reference",
+            "type": "object",
+            "properties": {
+                "data": {
+                    "description": "Data",
+                    "type": "string",
+                    "example": "OWEzYjJlZDEtMjYzYS00NzIyLWE1MTUtMDkyMzA2OGE3YTMw\""
+                }
+            }
+        },
+        "ReferencesResultModel": {
+            "description": "References result.",
+            "example": {
+                "https://protocols.qidida.nl/dappre/v.1.0.0": [
+                    {
+                        "ref": "mmywczbvmq3wcljrmyytaljugi2dcllbgzrwgllbgvtdkytcha2dqnrsga",
+                        "value": null,
+                        "connection": "https://user.dolden.net/user/connections/user/5951c859-ace9-4a64-a13b-1b48f1669a7c/ed2bf121-d472-4471-a02f-df08c722eb00"
+                    },
+                    {
+                        "ref": "my4gcojxgy4tcljsga3dgljuhbswcllbgi2deljzgq4deojxmjsdkojvg4",
+                        "value": null,
+                        "connection": "https://user.dolden.net/user/connections/user/5951c859-ace9-4a64-a13b-1b48f1669a7c/85dffda9-beb1-4579-92d8-32ae9dc2ff13"
+                    }
+                ]
+            },
+            "type": "object",
+            "properties": {
+                "applicationProtocolUriPatternProperty": {
+                    "description": "References with the application protocol uri specified by the name of the object property.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ReferenceDetailsModel"
+                    }
+                }
+            },
+            "uniqueItems": true
+        },
+        "ServiceCatalogueModel": {
+            "description": "See [Service Catalogue](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#service-catalogue).",
+            "properties": {
+                "serviceDescriptors": {
+                    "description": "The Service Descriptors of the provided services.",
+                    "items": {
+                        "description": "Service Descriptor",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "ServiceCatalogueEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Service Catalogue Event.",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "Service Catalogue",
+                            "properties": {
+                                "serviceCatalogue": {
+                                    "$ref": "#/definitions/ServiceCatalogueModel"
+                                }
+                            },
+                            "required": [
+                                "serviceCatalogue"
+                            ],
+                            "type": "object"
+                        },
+                        "type": {
+                            "format": "SERVICE_CATALOGUE",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            ]
+        },
+        "ServiceCatalogueMessageModel": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MessageModel"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "payload": {
+                            "$ref": "#/definitions/ServiceCatalogueModel"
+                        },
+                        "protocol": {
+                            "description": "Service Catalogue Message Descriptor.",
+                            "format": "url",
+                            "pattern": "https://github.com/digital-me/qiy-node/blob/topic/data-reuse/qs-user-node.md#service-catalogue-message",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "SharedSecretReceivedEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Shared Secret Received Event.",
+                    "example": {
+                        "type": "SHARED_SECRET_RECEIVED",
+                        "connectionUrl": "https://dappre-all.local/user/connections/user/Sint Joseph/0a3a2d37-9790-4244-b55d-37b94e180a8b",
+                        "extraData": null
+                    },
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "Null.",
+                            "type": "string",
+                            "format": "null"
+                        },
+                        "type": {
+                            "format": "SHARED_SECRET_RECEIVED",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "SharedSecretSentEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "Shared Secret Sent Event.",
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Url of the related connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "tbd.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "type": {
+                            "format": "SHARED_SECRET_SENT",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "StateHandledEventModel": {
+            "allOf": [
+                {   "$ref": "#/definitions/EventModel" },
+                {
+                    "description": "See [State Handled Event](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#state-handled-event).",
+                    "type": "object",
+                    "properties": {
+                        "connectionUrl": {
+                            "description": "Connection Url of the created connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "extraData": {
+                            "description": "Connection Url of the active connection.",
+                            "type": "string",
+                            "format": "url"
+                        },
+                        "type": {
+                            "format": "STATE_HANDLED",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "TemplatesModel": {
+            "type": "object",
+            "description": "Current endpoint addresses.",
+            "properties": {
+                "targetTemplate": {
+                    "description": "tbd. This property is only included when the request is authenticated.",
+                    "maxItems": 1,
+                    "minItems": 0,
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "parameters": {
+        "accessProviderTokenParam": {
+            "name": "AP-Token",
+            "in": "header",
+            "description": "See [Access Provider Token](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#access-provider-token).",
+            "required": true,
+            "type": "string",
+            "format": "jwt"
+        },
+        "authorizationOptionalParam": {
+            "name": "Authorization",
+            "in": "header",
+            "description": "See [Authorization Header Parameter](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#authorization-header-parameter).",
+            "required": false,
+            "type": "string",
+            "format": "QTF [Qiy Node id] [Unix time in ms]:[signature]"
+        },
+        "authorizationParam": {
+            "name": "Authorization",
+            "in": "header",
+            "description": "See [Authorization Header Parameter](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#authorization-header-parameter).",
+            "required": true,
+            "type": "string",
+            "format": "QTF [Qiy Node id] [Unix time in ms]:[signature]"
+        },
+        "idParam": {
+            "name": "id",
+            "in": "query",
+            "description": "id parameter.",
+            "required": true,
+            "type": "string"
+        },
+        "passwordParam": {
+            "name": "password",
+            "description": "See [Transport Password](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#transport-password).",
+            "in": "header",
+            "required": true,
+            "type": "string"
+        },
+        "sinceParam": {
+            "name": "since",
+            "in": "query",
+            "description": "Limit results to period after date=time stamp 'since'.",
+            "required": false,
+            "type": "integer",
+            "format": "Unix time in ms"
+        }
+    },
+    "paths": {
+        "/api": {
+            "get": {
+                "summary": "API information",
+                "description": "Get api information and current endpoint addresses. Use this request daily to remain operational, see [Dynamic Path Endpoint Addresses](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#dynamic-path-endpoint-addresses) for more information.",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationOptionalParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfull response",
+                        "schema": {
+                            "$ref": "#/definitions/ApiModel"
+                        }
+                    }
+                },
+                "tags": [
+                    "PathEndpointAddresses",
+                    "Versions"
+                ]
+            }
+        },
+        "/connectionUrl": {
+            "get": {
+                "summary": "Get Connection Details",
+                "description": "See [Connection Details Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connection-details-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect",
+                    "Message",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectionDetailsModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/connectionsEndpoint": {
+            "get": {
+                "summary": "Get Connections",
+                "description": "See [Connections Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connections-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/sinceParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectionsResponseModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/connectTokenUrl": {
+            "get": {
+                "summary": "Get Connect Token Details",
+                "description": "Get Connect Token Details, see [Connect Token Create Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connect-token-create-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Connect",
+                    "Relying Party"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The status code of a success response will be 200.",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenDataModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/createEndpoint": {
+            "post": {
+                "summary": "Create Qiy Node.",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Qiy Node Create Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#qiy-node-create-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Create request parameters",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/QiyNodeCreateRequestParametersModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Lifecycle"
+                ]
+            }
+        },
+        "/ctCreateEndpoint": {
+            "post": {
+                "summary": "Create or Register Connect Token",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Connect Token Create Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connect-token-create-request) or [Connect Token Register Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connect-token-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/passwordParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token-request-details",
+                        "description": "Connect Token request parameters",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenRequestParametersModel"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connect",
+                    "Relying Party",
+                    "Transport Requests"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "The status code of a success response will be 201 Created.",
+                        "headers": {
+                            "Location": {
+                                "description": "The Connect Token Url of the generated token, see /connectTokenUrl.",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/eventsEndpoint": {
+            "get": {
+                "summary": "Start listening to events",
+                "description": "See [Events](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#events).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "text/event-stream"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/EventStreamModel"
+                        }
+                    },
+                    "400": {
+                        "description": "[400,600> Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Connect",
+                    "Data",
+                    "Data Provider",
+                    "Relying Party"
+                ]
+            }
+        },
+        "/mboxUrl": {
+            "get": {
+                "summary": "Get messages",
+                "description": "See [Messages Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#messages-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/sinceParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/MailboxMessagesModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Message",
+                    "Relying Party"
+                ]
+            },
+            "post": {
+                "summary": "Send message",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Message Post Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#message-post-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/passwordParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "message",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/MessageModel"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data Provider",
+                    "Message",
+                    "Transport Requests"
+                ]
+            }
+        },
+        "/operationReferenceRequestUrl": {
+            "post": {
+                "summary": "Operation Reference Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Operation Reference Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-reference-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "OperationReferenceRequest",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/OperationReferenceRequestBaseModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfull response"
+                    }
+                },
+                "tags": [
+                    "Operation"
+                ]
+            }
+        },
+        "/owners/id/{id}": {
+            "delete": {
+                "summary": "Delete Qiy Node.",
+                "description": "See [Qiy Node Delete Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#qiy-node-delete-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/passwordParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "id",
+                        "description": "Qiy Node id.",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Lifecycle",
+                    "Transport Requests"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Once the local data has been deleted a response code 204 (NO CONTENT) will indicate a success."
+                    },
+                    "400": {
+                        "description": "Failures will be indicated with response codes 400 to but-not-including 600.        "
+                    }
+                }
+            }
+        },
+        "/refEndpoint": {
+            "get": {
+                "summary": "Operation Execute Request",
+                "description": "See [Operation Execute Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-execute-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/idParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ReferenceResultModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Operation",
+                    "Relying Party"
+                ]
+            }
+        },
+        "/refsEndpoint": {
+            "get": {
+                "summary": "Resolve references",
+                "description": "See [Operation Execute Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-execute-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "$ref": "#/parameters/sinceParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ReferencesResultModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Operation",
+                    "Relying Party"
+                ]
+            },
+            "post": {
+                "summary": "Register Operation Specification",
+                "description": "See [Operation Register Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-register-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "operationReference",
+                        "description": "See [Operation Reference](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#operation-reference).",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/OperationReferenceModel"
+                        }
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/OperationReferenceModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Data",
+                    "Data Provider",
+                    "Operation",
+                    "Service Provider"
+                ]
+            }
+        },
+        "/scanEndpoint": {
+            "post": {
+                "summary": "Connection Create Request",
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "See [Connection Create Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#connection-create-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/passwordParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "connect-token",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ConnectTokenModel"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "201 Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/LocationAndLinkModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Connect",
+                    "Data Provider",
+                    "Relying Party",
+                    "Transport Requests"
+                ]
+            }
+        },
+        "/serviceCatalogueEndpoint": {
+            "get": {
+                "summary": "Service Catalogue Request",
+                "description": "See [Service Catalogue Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#service-catalogue-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution.",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceCatalogueModel"
+                        }
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Service Catalogue"
+                ]
+            },
+            "put": {
+                "summary": "Service Catalogue Replace Request",
+                "description": "See [Service Catalogue Replace Request](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#service-catalogue-replace-request).",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/accessProviderTokenParam"
+                    },
+                    {
+                        "$ref": "#/parameters/authorizationParam"
+                    },
+                    {
+                        "name": "service-catalogue",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceCatalogueModel"
+                        }
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200, Successful execution."
+                    },
+                    "400": {
+                        "description": "400,600 Unsuccessful execution."
+                    }
+                },
+                "tags": [
+                    "Service Catalogue"
+                ]
+            }
+        }
+    }
+}
+
+
