@@ -13,7 +13,7 @@ Service Providers and Application Providers can register with an Access Provider
 
 ## Service Desk
 
-Please contact the Service Desk for your requests. The Service Desk is available during regular CEST office hours and can be contacted by e-mail or phone:
+Please contact the Service Desk for your requests. The Service Desk is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
 
     service@digital-me.nl
     +31 (0) 411-616565
@@ -22,10 +22,10 @@ Please contact the Service Desk for your requests. The Service Desk is available
 
 This api is versioned using Semantic Versioning 2.0.0 and follows this specification. In addition, the following rules apply:
 
-    DigitalMe supports two major versions in the production environment: one primary version and one secondary version.
-    DigitalMe will support a secondary version for at least 6 months.
-    DigitalMe supports one development version in a development environment.
-    A development version may change at any time.
+    Two major versions are supported in the production environment: one primary version and one secondary version.
+    The secondary version will be supported for at least 6 months.
+    One development version is supported in a development environment.
+    The development version may change at any time.
 
 The current version of the api is returned by Get /api.
 
@@ -33,19 +33,21 @@ The current version of the api is returned by Get /api.
 
 ### App Authentication
 
-In the next version, Qiy Applications are required to authenticate requests using an API Key implemented using basic authentication.
+Qiy Applications are required to authenticate requests using an API Key implemented using basic authentication.
 
-An e-mail address provided by the application provider will be used to maintain the API Keys. Please use this e-mail address to e-mail the Service Desk your API Key request.
+An e-mail address provided by the application provider will be used to maintain the API Keys. Please use this e-mail address to e-mail the [Service Desk](#service-desk) your API Key request.
 
 ### User Authentication
 
 All requests but the request to create a Qiy Node and the Api Request MUST be user authenticated using a signed token that can only be calculated using a Qiy Node Credential.
 
-The token can be passed in the 'Authorization'-header parameter, but MUST be passed in the 'Authorization-node-QTN'-header parameter when App Authentication is used.
-Python
+The token MUST be passed in the 'Authorization-node-QTN'-header parameter.
+
+#### Python
 
 In Python, the authorization header parameter can be calculated with the package 'pyOpenSSL'. Using a pem-file with the primary key of the Qiy Node it can be generated as follows:
 
+```
 from OpenSSL.crypto import sign
 from base64 import b64encode
 import OpenSSL
@@ -62,11 +64,13 @@ def authHeader(qiy_node_id, unix_time_in_msecs, body):
                 ,"sha256")
                 ).decode()
         return "QTF {0} {1}:{2}".format(qiy_node_id, unix_time_in_msecs, signature)
+```
 
-Bash
+#### Bash
 
 The authorization header parameter can be generated with this Bass script:
 
+```
 #!/usr/bin/env bash
 
 set -eu
@@ -107,6 +111,7 @@ genPem() {
 genPem
 authHeader "${INPUT}"
 echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [${UUID}] \nWhen I calculate the Authorization header\nThen the value should be: \n  [${AUTH_HEADER}]"
+```
 
 ### Password Header Parameter
 
@@ -190,14 +195,12 @@ This endpoint can be used to get or set the contents of a Service Catalogue. The
 
 ## Servers
 
-The Qiy Node service runs in a Mock environment, a development environment, the acceptance environment and the production environment. The server urls are:
-DTAP environment 	Server url
-Mock 	 - See the url variable in the Postman 'Mock Server' environment - 
-Dev2
-    	https://dev2-user.testonly.digital-me.nl/user
-    
-Acceptance
-    	https://user.dolden.net/user
+The Qiy Node service runs in a a development environment, the acceptance environment and the production environment. The server urls are:
+
+| DTAP environment | Server url                                    |
+| ---------------- | --------------------------------------------- |
+| Dev2             | https://dev2-user.testonly.digital-me.nl/user |
+| Acceptance       | https://user.dolden.net/user                  |
     
 
 The server url of the Production environment will be given during the entry-transition phase, when your Qiy Trust Based solution will go live.
@@ -275,13 +278,16 @@ This event is fired when a connection has been created, see GET State Handled Ev
 ### User Action Message Event
 
 This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
+
 Example event
 
+```
 event: USER_ACTION_MESSAGE data: {
    'type': 'USER_ACTION_MESSAGE',
    'connectionUrl': 'https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e',
    'extraData': 'https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4'
 }
+```
 
 ## Documentation
 
@@ -420,6 +426,7 @@ Python
 
 In Python, the primary key can be created with the package 'cryptography'. The key can be created and persisted as follows:
 
+```
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric.rsa import generate_private_key
 from cryptography.hazmat.primitives import serialization
@@ -436,11 +443,13 @@ with open(pem_filename, "wb") as f:
         format=serialization.PrivateFormat.TraditionalOpenSSL,
         encryption_algorithm=serialization.NoEncryption())
         )
+```
 
 * Qiy Node Public Key
 
 In python, the public key can be obtained using the package 'pyOpenSSL'. Given the pem-file, this goes as follows:
 
+```
 import OpenSSL
 
 with open("data/"+target_short_node_id+".pem" , "r") as f:
@@ -449,6 +458,7 @@ private_key = OpenSSL.crypto.load_privatekey(OpenSSL.crypto.FILETYPE_PEM, buffer
 public_key=OpenSSL.crypto.dump_publickey(
     OpenSSL.crypto.FILETYPE_ASN1,
     private_key)
+```
 
 #### Connections
 
@@ -476,10 +486,12 @@ A Connect Token is a json-object with three members which can be created as foll
 
 In Java the tmpSecret can be generated as follows:
 
+```
 SecureRandom RANDOM = new SecureRandom();
 byte[] tmpSecret = new byte[16];
 RANDOM.nextBytes(tmpSecret);
 String tmpSecretString = Base64.getEncoder().encodeToString(tmpSecret);
+```
 
 ##### Online Connect Tokens
 
@@ -526,453 +538,87 @@ Qiy Users can use connections to send and receive messages.
 # API
 
 ## GET Api
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/api
 
 GET /api can be used to get the api version and the current address of the Node Create Endpoint.
 
-NB: App Authentication is OPTIONAL in this version, but will be MANDATORY in v1.
-HEADERS
-x-mock-response-code
-get_api
-
-
-Example Request
-Api - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/api"
-
-Example Response
-200 - OK
-
-{
-  "links": {
-    "create": "https://user.digital-me.nl/nodes/"
-  },
-  "serverTime": 1537352486551,
-  "id": "68235db3-a391-42ab-964e-de7773640e5b",
-  "currentVersion": "1.0.44"
-}
-
 # Nodes
+
 ## POST Request creation of Qiy Node
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/nodeCreateEndpointUrl
 
 This Node Create Endpoint-call can be used to request the creation of a Qiy Node.
 
-A 201-Created will be returned when the Qiy Node has been created.
-HEADERS
-Content-Type
-application/json
-x-mock-response-name
-Mock Request creation of Qiy Node - OK
-BODY raw
-
-{
-	"alias": "pt_usernode_qnc_test_de", 
-	"id": "pt_usernode_qnc_test_de", 
-	"publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0TK8dMRxvXp66teemQe/tzUi26LBWfkO0pWGqyzmnNO6ISALt+rgEPl5mhqztAU4xI9iE/L9dCzC3snb2OQT+2/IaV9ilt1UAmZhyuogPeTKykPRFR2oT51wWoIuG4hD0x6iBhFCorn087Te99oS1RwS1RR5wFjIs/ol3ldawZ29xemsskmPEWJ/QpfpauBxvSbZEXRy15cAWnWO9yVzizUszwNjP8Ca0/K7NKa+lOtp09egO12SBMfX871AI44wWkZqPsr+O5cpo8Srw+90dbETA1Ypno3lpel2lBMQaf0+Srmjd/bJs9dlaXCTljoLt2uvOmriDSI6eSJZ7FxH4wIDAQAB", 
-	"password": "9b449623-f361-425b-bca8-8c23c159e4c0",
-	"nodeSettings": {
-		"askDappre": "no",
-		"usePersistentId": "yes"
-	}
-}
-
-
-
-Example Request
-Create Qiy Node - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/nodeCreateEndpointUrl" \
-  --header "Content-Type: application/json" \
-  --header "AP-Token: {{apToken}}" \
-  --data "{
-	\"alias\": \"pt_usernode_qnc_test_de\", 
-	\"id\": \"pt_usernode_qnc_test_de\", 
-	\"publicKey\": \"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0TK8dMRxvXp66teemQe/tzUi26LBWfkO0pWGqyzmnNO6ISALt+rgEPl5mhqztAU4xI9iE/L9dCzC3snb2OQT+2/IaV9ilt1UAmZhyuogPeTKykPRFR2oT51wWoIuG4hD0x6iBhFCorn087Te99oS1RwS1RR5wFjIs/ol3ldawZ29xemsskmPEWJ/QpfpauBxvSbZEXRy15cAWnWO9yVzizUszwNjP8Ca0/K7NKa+lOtp09egO12SBMfX871AI44wWkZqPsr+O5cpo8Srw+90dbETA1Ypno3lpel2lBMQaf0+Srmjd/bJs9dlaXCTljoLt2uvOmriDSI6eSJZ7FxH4wIDAQAB\", 
-	\"password\": \"9b449623-f361-425b-bca8-8c23c159e4c0\",
-	\"nodeSettings\": {
-		\"askDappre\": \"no\",
-		\"usePersistentId\": \"yes\"
-	}
-}
-"
 
 ## GET Get endpoint addresses
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/api
 
 Get current addresses of the dynamic path endpoints.
-HEADERS
-x-mock-response-name
-Mock Get endpoint addresses - OK
 
-
-Example Request
-Get endpoint addresses - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/api" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}"
-
-Example Response
-200 - OK
-
-{
-  "currentVersion": "1.0.66-SNAPSHOT",
-  "serverTime": 1565172386740,
-  "id": "mgd_dev2",
-  "links": {
-    "scan": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2",
-    "connections": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2",
-    "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/feeds",
-    "ctCreate": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2",
-    "ct-create": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2",
-    "self": "https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2",
 
 ## PUT Set event callback endpoints
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventCallbacksEndpointUrl
 
 This Event Callbacks Endpoint-request can be used to define the addresses of the event callback endpoints.
-HEADERS
-Content-Type
-application/json
-BODY raw
 
-{
-	"DATA_REFERENCE_RECEIVED2": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/dataReferenceReceivedCallbackEndpointUrl",
-	"STATE_HANDLED": "stateHandledCallbackEndpointUrl"
-}
-
-
-
-Example Request
-Set event callback endpoints - OK
-
-curl --location --request PUT "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventCallbacksEndpointUrl" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}" \
-  --data "{
-	\"DATA_REFERENCE_RECEIVED2\": \"http://localhost:10443/test\",
-	\"STATE_HANDLED\": \"http://localhost:10443/test\"
-}"
 
 ## GET Get event callback endpoints
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventCallbacksEndpointUrl
 
 This Event Callbacks Endpoint-request can be used to get the addresses of the event callback endpoints.
-HEADERS
-Accept
-application/json
 
-
-Example Request
-Get event callback endpoints - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventCallbacksEndpointUrl" \
-  --header "Accept: application/json"
-
-Example Response
-200 - OK
-
-{
-  "DATA_REFERENCE_RECEIVED2": "http://localhost:10443/test",
-  "STATE_HANDLED": "http://localhost:10443/test"
-}
 
 ## GET Start listening to events
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventsEndpointUrl
 
 This Events Endpoint-call can be used to start listening to Qiy Node events.
 
 It starts a long-living session with a heartbeat to keep the response open. Every 10 seconds a 'ping' comment will be sent. If this is not received for more than that time, something has gone wrong.
-HEADERS
-x-mock-response-name
-Mock Start listening to events - ping
 
-
-Example Request
-Start listening to events - ping
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventsEndpointUrl" \
-  --header "x-mock-response-name: Mock Start listening to events - ping"
-
-Example Response
-200 - OK
-
-: ping
 
 ## GET Get node settings
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_nodeSettings
 
 This Node Settings Endpoint-call returns the node settings.
-HEADERS
-x-mock-response-name
-Mock Get node settings - OK
 
-
-Example Request
-Get node settings - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_nodeSettings" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}"
-
-Example Response
-200 - OK
-
-{
-  "askDappre": "no",
-  "usePersistentId": "yes"
-}
 
 ## PUT Set node settings
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_nodeSettings
 
 This Node Settings Endpoint-call sets the node settings.
-HEADERS
-Content-Type
-application/json
-x-mock-response-name
-Mock Set node settings - OK
-BODY raw
-
-{
-	"askDappre": "no",
-	"usePersistentId": "yes"
-}
 
 
-
-Example Request
-Set node settings - OK
-
-curl --location --request PUT "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_nodeSettings" \
-  --header "Content-Type: application/json" \
-  --header "x-mock-response-name: Mock Set node settings - OK" \
-  --data "{
-	\"askDappre\": \"no\",
-	\"usePersistentId\": \"yes\"
-}"
-
-# DEL Delete Qiy Node
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_self
+## DEL Delete Qiy Node
 
 This Self Endpoint-call can be used to delete a Qiy Node.
-HEADERS
-password
-{{transportPassword}}
-x-mock-response-name
-Mock Delete Qiy Node - OK
 
-
-Example Request
-Delete Qiy Node - OK
-
-curl --location --request DELETE "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_self" \
-  --header "password: {{transportPassword}}" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}"
 
 # Services
+
 ## GET Get service catalogue
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_serviceCatalog?internal=False
 
 This Service Catalogue Endpoint-call gets the Service Catalogue.
-HEADERS
-x-mock-response-name
-Mock Get Service Catalogue - OK
-PARAMS
-internal
-False
 
-If False or None, only external services will be gotten.
-
-
-
-Example Request
-Get Service Catalogue - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_serviceCatalog?internal=False" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}"
-
-Example Response
-200 - OK
-
-{
-  "{{serviceTypeUrl}}": {
-    "type": "external",
-    "uri": "{{feedRequestEndpointUrl}}",
-    "method": "POST"
-  }
-}
 
 ## PUT Set service catalogue
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_serviceCatalog
 
 This Service Catalogue Endpoint-call sets the Service Catalogue including the uri and the method of Service Endpoints.
-HEADERS
-Content-Type
-application/json
-x-mock-response-name
-Mock Set service catalogue - OK
-BODY raw
 
-{
-  "{{serviceTypeUrl}}": {
-    "type": "external",
-    "uri": "{{feedRequestEndpointUrl}}",
-    "method": "POST"
-  }
-}
-
-
-
-Example Request
-Set service catalogue - OK
-
-curl --location --request PUT "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_serviceCatalog" \
-  --header "Content-Type: application/json" \
-  --header "x-mock-response-name: Mock Set service catalogue - OK" \
-  --data "{
-  \"{{serviceTypeUrl}}\": {
-    \"type\": \"external\",
-    \"uri\": \"{{feedRequestEndpointUrl}}\",
-    \"method\": \"POST\"
-  }
-}"
 
 # Connections
 
 ## Relying Party/Data Provider
-POST Request connect token
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_ctCreate
+
+### POST Request connect token
 
 This Connect Token Create Endpoint-call can be used to request a connect token: a json object with the members 'identifier', 'tmpSecret' and 'target'. When the call was succesfull, a 200-OK will be returned with the Connect Token Url in the Location header of the response.
-HEADERS
-Content-Type
-application/json
-password
-{{transportPassword}}
-x-mock-response-name
-Mock Request connect token - OK
-Accept
-application/json
-BODY raw
-
-{
-    "expires": 2349020398,
-	"useBudget": 1
-}
 
 
-
-Example Request
-Request connect token - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_ctCreate" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}" \
-  --header "Content-Type: application/json" \
-  --header "password: {{transportPassword}}" \
-  --data "{
-    \"expires\": 2349020398,
-    \"useBudget\": 1
-}"
-
-Example Response
-200 - OK
-
-{
-  "expires": 2349020398,
-  "useBudget": 1,
-  "json": {
-    "identifier": "Service Provider",
-    "tmpSecret": "7nzMAI61N6b5dPCCYD4IgQ==",
-    "target": "https://issuer.dolden.net/issuer/routes/webhook/5e581908-06d3-4ad0-9f14-8ec85b9b9fb4"
-  }
-}
-
-POST Register connect token
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_ctCreate
+### POST Register connect token
 
 This Connect Token Create Endpoint-call registers a connect token: a json object with the members 'identifier', 'tmpSecret' and 'target'. The call returns the Connect Token Url in the Location header of the response.
-HEADERS
-Content-Type
-application/json
-password
-{{transportPassword}}
-x-mock-response-name
-Mock Register connect token - OK
-BODY raw
-
-{
-    "expires": 2349020398,
-	"useBudget": 1,
-	"json": {
-		"identifier": "Service Provider 1",
-		"tmpSecret": "9paMAI61N6b5dPCCYD4IiS==",
-		"target": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1connectTokenOffline2target"
-	}
-}
 
 
-
-Example Request
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_ctCreate" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}" \
-  --header "Content-Type: application/json" \
-  --header "password: {{transportPassword}}" \
-  --data "{
-	\"useBudget\": 1,
-	\"json\": {
-		\"identifier\": \"Service Provider\",
-		\"tmpSecret\": \"7nzMAI61N6b5dPCCYD4IgQ==\",
-		\"target\": \"https://issuer.dolden.net/issuer/routes/webhook/5e581908-06d3-4ad0-9f14-8ec85b9b9fb4\"
-	}
-}"
-
-POST State Handled Callback
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/stateHandledCallbackEndpointUrl
+### POST State Handled Callback
 
 This callback on the [State Handled Callback Endpoint][API Basics Documentation Service Provider Setup Endpoints State Handled Endpoint] can be used to detect a new connection.
-HEADERS
-x-mock-response-name
-Mock State Handled Callback - OK
-BODY raw
 
-{
-  "type": "STATE_HANDLED",
-  "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
-  "extraData": {
-    "newUri": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/ce5b2dd5-1bdd-41aa-b0ad-d0afa2e9a3cb",
-    "connectToken": "https://dev1-user.testonly.digital-me.nl/user/connecttokens/509f79f8-6562-49cd-bb24-4163557d7e59/7ced41dc-76ff-469e-9fa0-3f34c73d0a2b",
-    "PID": "9GqX94/EoOcD47hCvBQ+eg=="
-  }
-}
-
-
-
-Example Request
-State Handled Callback - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/stateHandledCallbackEndpointUrl" \
-  --header "x-mock-response-name: Mock State Handled Callback - OK" \
-  --data "{
-  \"type\": \"STATE_HANDLED\",
-  \"connectionUrl\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae\",
-  \"extraData\": {
-    \"newUri\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/ce5b2dd5-1bdd-41aa-b0ad-d0afa2e9a3cb\",
-    \"connectToken\": \"https://dev1-user.testonly.digital-me.nl/user/connecttokens/509f79f8-6562-49cd-bb24-4163557d7e59/7ced41dc-76ff-469e-9fa0-3f34c73d0a2b\",
-    \"PID\": \"9GqX94/EoOcD47hCvBQ+eg==\"
-  }
-}"
 
 ## Individual
-POST Request connection
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1connectionCreateEndpointUrl
+
+### POST Request connection
 
 This asynchronous Connection Create Endpoint-call can be used to request a connection using a Connect Token: a json object with the members 'identifier', 'tmpSecret' and 'target'.
 
@@ -981,235 +627,42 @@ The creation of the connection can be followed using events, for details see /AP
 If and when the connection has been established, at least two State Handled Events will be fired; one for the Qiy Node Client that requested the connection and one for the Qiy Node Client that requested or registered the Connect Token. The event will also be fired for any other Qiy Node Client that is connected to one of the involved Qiy Nodes. Also, two State Handled Callbacks will be fired for the Qiy Nodes, but only if the State Handled Callback Endpoint has been set, see Set event callback endpoints.
 
 Alternatively, the list of connections can be gotten. Here a connection should be present with the 'activeFrom' property should have the value of the current time (in milliseconds from the epoch), 'pid' should be a Base 64 encoded value, 'state' should be 'connected'.
-HEADERS
-Content-Type
-application/json
-x-mock-response-name
-Mock Request connection - OK
-BODY raw
-
-{
-    "identifier": "Service Provider 1",
-    "tmpSecret": "9paMAI61N6b5dPCCYD4IiS==",
-    "target": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1connectTokenOffline2target"
-}
 
 
-
-Example Request
-Request connection - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_scan" \
-  --header "Content-Type: application/json" \
-  --data "{
-    \"identifier\": \"Service Provider 1\",
-    \"tmpSecret\": \"9paMAI61N6b5dPCCYD4IiS==\",
-    \"target\": \"https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1connectTokenOffline2target\"
-}"
-
-GET Connected to Router Event
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1eventsEndpointUrl
+### GET Connected to Router Event
 
 The Connected to Router Event can be used to monitor the creation of a connection.
-HEADERS
-Accept
-text/event-stream
-x-mock-response-name
-Mock Connected to Router Event - OK
 
 
-Example Request
-Connected to Router Event - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventsEndpointUrl" \
-  --header "Accept: text/event-stream"
-
-Example Response
--
-
-event: CONNECTED_TO_ROUTER data: {
-  "type":"CONNECTED_TO_ROUTER",
-  "connectionUrl":"https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_citizen_dev2/bb4f7e57-2b72-48d0-a317-7c7203505389"
-}
-
-GET Persistent Id Event
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1eventsEndpointUrl
+### GET Persistent Id Event
 
 The Persistent Id Event is an event that is created upon creation of a connection.
-HEADERS
-Accept
-text/event-stream
-x-mock-response-name
-Mock Persistent Id Event - OK
 
 
-Example Request
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventsEndpointUrl" \
-  --header "Accept: text/event-stream"
-
-Example Response
--
-
-event: PID data: {
-  "type":"PID",
-  "connectionUrl":"https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_citizen_dev2/bb4f7e57-2b72-48d0-a317-7c7203505389",
-  "extraData":{
-    "new-uri":"https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_citizen_dev2/e3d7e3f7-e5f8-44d9-89d8-f9ecbbd56bd1",
-    "pid":"KjwFO9FzDrAC7Cd8YDJj8w=="
-  }
-}
-
-GET State Handled Event
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1eventsEndpointUrl
+### GET State Handled Event
 
 This event is fired when a connection has been created.
-HEADERS
-Accept
-text/event-stream
-x-mock-response-name
-Mock State Handled Event - OK
 
-
-Example Request
-State Handled Event - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/eventsEndpointUrl" \
-  --header "Accept: text/event-stream"
-
-Example Response
-200 - OK
-
-event: STATE_HANDLED data: {
-  "type":"STATE_HANDLED",
-  "connectionUrl":"https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_citizen_dev2/e3d7e3f7-e5f8-44d9-89d8-f9ecbbd56bd1",
-  "extraData":{
-    "newUri":"https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_citizen_dev2/e3d7e3f7-e5f8-44d9-89d8-f9ecbbd56bd1",
-    "PID":"KjwFO9FzDrAC7Cd8YDJj8w=="
-  }
-}
 
 ## GET Get connection
-{{connectionEndpointUrl}}
 
 This Connection Endpoint-call returns connection details.
 
 
-Example Request
-Get connection - OK
-
-curl --location --request GET "{{connectionEndpointUrl}}" \
-  --header "Authorization: QTF pt_usernode_qnc_test_de 1519064940667:qtLYGGLWtsBELt9YWh/MBwqofyMNiTzUZypYeA+VjbOWt6LWdG1Fp3xZHlfPHADZUlBgvyWGyirCEqg8qBYiJXJsXaZDz5t+qQSZx0Euod7aMaSDPIUqeicujiKJAQLEyQYb5g9nJFXswKus6gq1DlXU807eGLkf8LYMrRMLijLcXnSbu7iW0ZZgnNwVS3+9NOTBLTwhy166DO7Th7IGz/4FxWq7ba90Hhp24PzYvskaC8FCEj1iNs4T8uu6KWvazN3xZL40WLUFK9m5FjJP4epaCwjqJSOtmhovqkEu++ML3K7Us5rPM9toshPZwut5VYEJFkMBSMsoTK5xdz7Qrw==" \
-  --header "AP-Token: {{apToken}}"
-
-Example Response
-200 - OK
-
-{
-  "activeFrom": 1551796945000,
-  "links": {
-    "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds",
-    "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
-    "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
-    "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0"
-  },
-  "pid": "aAQt41QqCvJuy8DMBayDCQ==",
-  "state": "connected"
-}
-
 ## GET Get connect token
-{{connectTokenUrl}}
 
 This call returns the details of a Connect Token.
 
-When succesfull, a 200-OK will be returned with the details in the body of the response.
-HEADERS
-Accept
-application/json
-
-
-Example Request
-Get connect token - OK
-
-curl --location --request GET "{{sp1connectToken1url}}" \
-  --header "Accept: application/json"
-
-Example Response
-200 - OK
-
-{
-  "expires": 2349020398,
-  "name": "example token",
-  "note": "Just an example",
-  "useBudget": 1,
-  "json": {
-    "identifier": "Service Provider",
-    "tmpSecret": "7nzMAI61N6b5dPCCYD4IgQ==",
-    "target": "https://issuer.dolden.net/issuer/routes/webhook/5e581908-06d3-4ad0-9f14-8ec85b9b9fb4"
-  }
-}
 
 ## GET List connect tokens
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1connectTokenListEndpointUrl
 
 This Connect Token List Endpoint-call lists the connect tokens.
-HEADERS
-Accept
-application/json
-x-mock-response-name
-Mock List connect tokens - OK
 
-
-Example Request
-List connect tokens
-
-curl --location --request GET "{{connectTokenEndpointUrl}}"
-
-Example Response
--
-
-[
-  {
-    "created": 1542882407000,
-    "json": {
-      "identifier": "mgd_dev2",
-      "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
-      "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
-    },
-    "lastUsed": 1542882800000,
-    "links": {
-      "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
 
 ## GET List connections
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1connectionsListEndpointUrl
 
 This Connections List Endpoint-call can be used to list connections.
-HEADERS
-Accept
-application/json
-x-mock-response-name
-Mock List connections - OK
 
-
-Example Request
-List connections - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/get_api_response_links_connections"
-
-Example Response
--
-
-{
-  "result": [
-    {
-      "state": "expired",
-      "activeFrom": 1544686272000,
-      "activeUntil": 1544693472000,
-      "pid": "vjQK/rOw6CoSuWPZy6K93w==",
-      "links": {
-        "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
-        "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
-        "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
 
 # Relations
 
@@ -1220,74 +673,16 @@ tbd
 tbd
 
 # Messages
+
 ## POST Send message
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionMbox
 
 This Mailbox Endpoint-call can be used to send a message over a connection with another Qiy User.
-HEADERS
-password
-{{transportPassword}}
-Content-Type
-application/json
-BODY raw
 
-{
-	"protocol": "https://example.com/qiy/node/message",
-	"refSerialNr": -1,
-	"text": "Hello world!",
-	"payload": "SGVsbG8gV29ybGQh"
-}
-
-
-
-Example Request
-Send message - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionMbox" \
-  --header "password: {{transportPassword}}" \
-  --header "Content-Type: application/json" \
-  --data "{
-    \"protocol\": \"https://example.com/qiy/node/message\",
-    \"refSerialNr\": -1,
-    \"text\": \"Hello world!\",
-    \"payload\": \"SGVsbG8gV29ybGQh\"
-}"
 
 ## GET List messages
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionMbox?since=0
 
 This Mailbox Endpoint-call lists messages.
-HEADERS
-password
-{{transportPassword}}
-Accept
-application/json
-PARAMS
-since
-0
 
-
-Example Request
-List messages - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionMbox?since=0" \
-  --header "password: {{transportPassword}}" \
-  --header "Accept: application/json"
-
-Example Response
-200 - OK
-
-{
-  "result": [
-    {
-      "inbound": false,
-      "payload": "eyJwdWJsaWNLZXkiOiJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXU0cXNYMmlISzE0MzhXZjRCcGxiMjBqYXdjN0U3Mng0MTMwUW9QaE9MajByM0VSTi8wSmpjK3FoaU1QQVBEVCtTa1NQbmdGckN2RTRhR0pIOWIwdm8rWVkvcW1FbVFzdGw0d2s5cEFHTnVJdHh0TStab0RoTHdkRHBETTc0QkE4aFZ3cXJHQVA5UUovNktibFFLbXRPT09NY0tTUXB0RXNFQ3NFQytMZThpTkJhU2ozRnBMbWpHUWkxYjZXMG1UMU1aYzVFUjRTOFVmN2hkajhpS0JRc3hFcjdZUThqZ2FXdE1rakZOU0tZemt2Vi9zU3FtL2t0akh4Q21MUk5yRXdvaDBvZ1V1S1FEMnJuK1piWXovalBMWjRZOFd4Q3d2Wi9jVjFkMDc5Wk16S0hYWVBLT3J1RnJOWTZjZng5STRsckEyVHdsSXpOQVd5RHQzN1ZsQ2xEUUlEQVFBQiIsInBlcnNpc3RlbnRJZCI6ImxOMUxEN2lBSGZ2bDVvTWRCZ0k4VWc9PSIsInByb3RvY29scyI6WyJodHRwczovL3Byb3RvY29scy5xaXkubmwvaW52aXRlcy92LjEuMC4wIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2NsZWFudXAvbWVzc2FnZXMvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9zdGF0ZS92LjEuMC4wIiwiaHR0cHM6Ly9naXRodWIuY29tL3FpeWZvdW5kYXRpb24vZmlLa3MvdHJlZS9tYXN0ZXIvc2NoZW1hL3YxIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2RhdGEtcmVmZXJlbmNlL3BlZXIvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9yZWZlcmVuY2UtbWFuYWdlbWVudC8xLjAuMCJdLCJuYW1lIjoibWdkX2RldjIifQ==",
-      "processed": false,
-      "protocol": "https://protocols.qiy.nl/domain-details/v.1.0.0",
-      "serialNr": 1,
-      "sent": true,
-      "text": "Our details"
-    },
 
 # Consents
 
@@ -1297,10 +692,11 @@ tbd
 
 ## Relying Party
 
-fiKks
+### fiKks
 
 Example of an encrypted PaymentsDueList:
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Voorbeeld van een versleutelde openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
 <!--Betaalwijze automatische incasso.-->
@@ -1385,11 +781,13 @@ atjLgllhb0Rno0/lOLRweJofn/dwjhcAC1HA/3018ym0NjCdMOckxlOVCcuOdcANn0MBPy5AnTzI&#13
 pwkxkoVFFx3tWRSyGEWXULKZ+ckE0W8b/EpSSgQkhjMsnXMmqn9ruq/lqTkflfT9QXwmxNBTFw==</xenc:CipherValue>
   </xenc:CipherData>
 </xenc:EncryptedData>
+```
 
 secret key: "secret_key123456" iv: "1234567890123456"
 
 Input parameter before base64-encoding:
 
+```
 <?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <ds:KeyInfo xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">
     <ds:KeyValue>
@@ -1401,9 +799,11 @@ Input parameter before base64-encoding:
         </ds:RSAKeyValue>
     </ds:KeyValue> 
 </ds:KeyInfo>
+```
 
 Decrypted xml:
 
+```
 <PaymentDueList xmlns="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList https://raw.githubusercontent.com/qiyfoundation/fiKks/master/schema/v1/xsd/PaymentDueList-1.0.xsd">
         <Invoice>
         <cbc:ID>1</cbc:ID>
@@ -1470,598 +870,106 @@ Decrypted xml:
     </cac:LegalMonetaryTotal>
     </Invoice>
 </PaymentDueList>
+```
 
 aes encrypted key in b64:
 
+```
 uE4BeFaIaBjoRQWUPdzzlhnVdQVsijVawcIkurMykWAMbc7rDx8iLACIHTv9uEuhm8MJCfgsMy7eTynpZaLxfYIeQ8FVMUVX3Am2Y9ytEXca3tKMQpw7MPcOX14XjOgvNT5Ld/PRG9j914+/rT5Sh00sE8xogxf2OH/5Urjzf7I=
+```
 
 public key:
 
+```
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqw2GC01WSwYPhkrWtbaKIY7XU78HMQhlrOi+cwrfvLdFW++Oa/XPji4DnTmDLJRPOIKe0dX2042YnXVsfiSiqolAVk9e4oDK6715Hdb+lngQYEwwhUfZqpI6w8xMjkr2XZg5bx8CgRlC1hVawKvKA7Jy0GJqYllEn4AoVkIhjkQIDAQAB
+```
 
 public key - base64 encoded:
 
+```
 TUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FEcXcyR0MwMVdTd1lQaGtyV3RiYUtJWTdYVTc4SE1RaGxyT2krY3dyZnZMZEZXKytPYS9YUGppNERuVG1ETEpSUE9JS2UwZFgyMDQyWW5YVnNmaVNpcW9sQVZrOWU0b0RLNjcxNUhkYitsbmdRWUV3d2hVZlpxcEk2dzh4TWprcjJYWmc1Yng4Q2dSbEMxaFZhd0t2S0E3SnkwR0pxWWxsRW40QW9Wa0loamtRSURBUUFC
+```
 
 private key:
 
+```
 MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAOrDYYLTVZLBg+GSta1toohjtdTvwcxCGWs6L5zCt+8t0Vb745r9c+OLgOdOYMslE84gp7R1fbTjZiddWx+JKKqiUBWT17igMrrvXkd1v6WeBBgTDCFR9mqkjrDzEyOSvZdmDlvHwKBGULWFVrAq8oDsnLQYmpiWUSfgChWQiGORAgMBAAECgYEA396xfjBJykj/mnxtA5UpCScMnqKEDGR8GOTDwpltDYiDuI873PEVMkg2BF2ZsB8LY+WAB3aDCZxQLfm4i7ogK8Py/UUnW4ZY98RFCGwVLxsWDoNgB5cEDbPomc1UmNALfO9DE10GD3uuLXuqHGy5wCVxvXEw1xdkocFPmIzsjgECQQD+345dPHMQXNG3G43FG3pkhImulSyQRk7tITdLT+eqoXNfie6ZVymFm+dpPBrp6BSsgdpSuzuuleZdM4De79hdAkEA680Q4UEV7GzsYIPzjrOGY9Dq9kwt0DCtxeLd+RrFQomrtxUg5GDkdbzlAi8x7sMxh5n8oNluLJDx68M0wdQ0xQJBAN6dMOGq3O2bxOjkPi29VGfbg85jKStS3bks2/kB790Pa5A1D5wLj47Nn5BBGVjYhsYuHR1JwFU7RJx/Ub5nS1kCQGC8Qf6G+v2BOf/mYhba43kzjhD485qDPeb+yV2Wc/J2FDIJwvKuJUt/8NtSjUOMZFdi/tbmHGLAG99Ct/QEoJkCQETBfCMVF4v5oOcI6kPlr2NEc5ipyEhiLnGEhTZEtY9q95UVscHO0AmnmoRtTIK5xsUtImIDXTN9R3xL1HSzzLw=
+```
 
-POST Access feed - fikks - encrypted
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/duePaymentsRpFeedsEndpointUrl/VHN1N3JwSTBVbXBCQ3IvYnFZT0J1bng4ZEF3PQ==
-HEADERS
-Accept
-application/xml
-Content-Type
-application/xml
-x-mock-response-name
-Mock Access feed - fikks - encrypted - OK
-BODY raw
+#### POST Access feed - fikks - encrypted
 
-<?xml version="1.0" encoding="UTF-8"?>
-<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-    <ds:KeyValue>
-        <ds:RSAKeyValue>
-            <ds:Modulus>6sNhgtNVksGD4ZK1rW2iiGO11O/BzEIZazovnMK37y3RVvvjmv1z44uA505gyyUTziCntHV9tONmJ11bH4koqqJQFZPXuKAyuu9eR3W/pZ4EGBMMIVH2aqSOsPMTI5K9l2YOW8fAoEZQtYVWsCrygOyctBiamJZRJ+AKFZCIY5E=</ds:Modulus>
-            <ds:Exponent>AQAB</ds:Exponent>
-        </ds:RSAKeyValue>
-    </ds:KeyValue>
-</ds:KeyInfo>
+tbd
 
+#### POST Access feed - fikks - not encrypted
 
+tbd
 
-Example Request
-Access feed - fikks - encrypted - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/duePaymentsRpFeedsEndpointUrl/VHN1N3JwSTBVbXBCQ3IvYnFZT0J1bng4ZEF3PQ==" \
-  --header "Content-Type: application/xml" \
-  --header "Accept: application/xml" \
-  --data "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<ds:KeyInfo xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">
-    <ds:KeyValue>
-        <ds:RSAKeyValue>
-            <ds:Modulus>6sNhgtNVksGD4ZK1rW2iiGO11O/BzEIZazovnMK37y3RVvvjmv1z44uA505gyyUTziCntHV9tONmJ11bH4koqqJQFZPXuKAyuu9eR3W/pZ4EGBMMIVH2aqSOsPMTI5K9l2YOW8fAoEZQtYVWsCrygOyctBiamJZRJ+AKFZCIY5E=</ds:Modulus>
-            <ds:Exponent>AQAB</ds:Exponent>
-        </ds:RSAKeyValue>
-    </ds:KeyValue>
-</ds:KeyInfo>"
-
-Example Response
-200 - OK
-
-<?xml version="1.0" encoding="UTF-8"?>
-<!--Voorbeeld van een versleutelde openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
-<!--Betaalwijze automatische incasso.-->
-<xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Type="http://www.w3.org/2001/04/xmlenc#Element">
-  <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
-  <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
-    <xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
-      <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
-      <xenc:CipherData>
-        <xenc:CipherValue>ANlVWhxP62DScbyueRjY4LzHwL2xlL44hFfhbT0/qRtKCiSUgFwWigsewos7qHj6APsBjHv+AA8j&#13;
-OP5cA8BO3w0oBquAqGxjFAfqKoAGWCWEZ29xKH6zIy7wRsyC8yO46Clljvgp27q9a9AhLEs5XfeF&#13;
-
-POST Access feed - fikks - not encrypted
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/duePaymentsRpFeedsEndpointUrl/VHN1N3JwSTBVbXBCQ3IvYnFZT0J1bng4ZEF3PQ==
-HEADERS
-Accept
-application/xml
-
-
-Example Request
-Access feed - fikks - not encrypted - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/duePaymentsRpFeedsEndpointUrl/VHN1N3JwSTBVbXBCQ3IvYnFZT0J1bng4ZEF3PQ==" \
-  --header "Accept: application/xml"
-
-Example Response
-200 - OK
-
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- speciale response... Deze is gewijzigd! En weer! -->
-<!--Voorbeeld van een openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
-<!--Betaalwijze automatische incasso.-->
-<PaymentDueList xmlns="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList https://raw.githubusercontent.com/qiyfoundation/fiKks/master/schema/v1/xsd/PaymentDueList-1.0.xsd"
-	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
-	<Invoice>
-		<cbc:ID>1</cbc:ID>
-
-POST Request for feed
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionFeeds
+### POST Request for feed
 
 A Relying Party uses this Connection Feeds Endpoint-call to request for a feed.
 
 Optionally, a Feed Request Callback body parameter can be included in the 'input'-member of the body json object as a base64-encoded byte array.
 
-When successfull this will end in a [Data Reference Received Event-v2][API Basics Events Data Reference Received Event-v2]. Failure will be either a HTTP error status code or a [Data Reference Failure Event][API Basics Events Data Reference Failure].
-HEADERS
-password
-{{transportPassword}}
-Content-Type
-application/json
-Accept
-application/json
-BODY raw
 
-{
-  "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-  "text": "Requesting feed.",
-  "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
-}
-
-
-
-Example Request
-Request for feed - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionFeeds" \
-  --header "password: {{transportPassword}}" \
-  --header "Content-Type: application/json" \
-  --header "Accept: application/json" \
-  --data "{
-  \"protocol\": \"https://github.com/qiyfoundation/fiKks/tree/master/schema/v1\",
-  \"text\": \"Requesting feed.\",
-  \"input\": \"Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==\"
-}"
-
-Example Response
-201 - Created
-
-{
-  "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-  "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
-}
-
-POST Data Reference Received-v2 Callback
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1dataReferenceReceivedv2CallbackUrl?
+### POST Data Reference Received-v2 Callback
 
 A Relying Party can use this Data Reference Received-v2-callback on the Data Reference Received-v2 Endpoint to receive new feed id's.
-PARAMS
-BODY raw
-
-{
-  "type": "DATA_REFERENCE_RECEIVED2",
-  "connectionUrl": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionUrl",
-  "extraData": {
-    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-    "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
-  }
-}
 
 
-
-Example Request
-Data Reference Received-v2 Callback - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1dataReferenceReceivedv2CallbackUrl" \
-  --header "Content-Type: application/json" \
-  --data "{
-  \"type\": \"DATA_REFERENCE_RECEIVED2\",
-  \"connectionUrl\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/pqc_test_d4_relying_party/a646bcd3-a844-4774-8068-55ea8b4b2669\",
-  \"extraData\": {
-    \"protocol\": \"https://github.com/qiyfoundation/fiKks/tree/master/schema/v1\",
-    \"value\": \"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==\"
-  }
-}"
-
-GET Data Reference Received-v2 Event
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1eventsEndpointUrl
+### GET Data Reference Received-v2 Event
 
 A Relying Party can use the [Data Reference Received Event-v2][API Basics Events Data Reference Received Event-v2] to detect a new feed.
-HEADERS
-Accept
-text/event-stream
 
-
-Example Request
-Data Reference Received Event-v2 - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1eventsEndpointUrl" \
-  --header "Accept: text/event-stream"
-
-Example Response
--
-
-
-event: DATA_REFERENCE_RECEIVED2 data: {
-    "type": "DATA_REFERENCE_RECEIVED2",
-    "connectionUrl": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid1sp1connectionUrl",
-    "extraData": {
-        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-        "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
-    }
-}
-
-POST Access feed
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1feedsEndpointUrl/SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==
+### POST Access feed
 
 A Relying Party uses this Feeds Endpoint-call to access a single feed.
 
 The body may include operation request parameters encoded as a base-64 encoded byte array as described in the Qiy Scheme change proposal on free parameters.
-HEADERS
-Content-Type
-text/plain
-BODY raw
-
-Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==
 
 
-
-Example Request
-Access feed - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1feedsEndpointUrl/SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==" \
-  --header "Content-Type: text/plain" \
-  --data "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
-
-Example Response
-200 - OK
-
-{
-  "activities-heart": [
-    {
-      "customHeartRateZones": [],
-      "dateTime": "today",
-      "heartRateZones": [
-        {
-          "caloriesOut": 138.8351,
-          "max": 86,
-          "min": 30,
-          "minutes": 65,
-
-POST Access feeds
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1feedsEndpointUrl
+### POST Access feeds
 
 A Relying Party can use this Feeds Endpoint-call to access one or more feeds.
 
-The json body may include 'input'-members for operation request parameters encoded as a base-64 encoded byte array as described in the Qiy Scheme change proposal on free parameters.
 
-When successfull, the data is returned in the response of the body in a format as this:
-
-{ "{{feed_id1}}": { "content-type": "application/xml", "output": "" }, "{{feed_id2}}": { "content-type": "application/json", "output": "" } }
-HEADERS
-Content-Type
-application/json
-Accept
-application/json
-BODY raw
-
-{
-	"{{feed_id1}}": {
-		"input": "<optional json member with base-64 encrypted byte array>"
-	},
-	"{{feed_id2}}": {
-		"input": "<optional json member with base-64 encrypted byte array>"
-	}
-}
-
-
-
-Example Request
-Access feeds
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/sp1feedsEndpointUrl" \
-  --header "Content-Type: application/json" \
-  --header "Accept: application/json" \
-  --data "{
-	\"{{feed_id1}}\": {
-		\"input\": \"<optional json member with base-64 encrypted byte array>\"
-	},
-	\"{{feed_id2}}\": {
-		\"input\": \"<optional json member with base-64 encrypted byte array>\"
-	}
-}"
-
-GET List feed id's
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/feedsEndpointUrl?operation=https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
+### GET List feeds
 
 This Feeds Endpoint-request can be used to list the feed's with feed details of a Qiy Node or a connection for all or a set of protocols (operation types).
-HEADERS
-Accept
-application/json
-PARAMS
-operation
-https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
 
-This parameter can be provided more then once.
-
-
-
-Example Request
-List feed id's
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/feedsEndpointUrl" \
-  --header "Accept: application/json"
-
-Example Response
-200 - OK
-
-{
-  "QZJ5MOWNEXARVTTBWMYZAO7ISYOQQOAU": {
-    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
-    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-    "lastUpdated": 1565083591687,
-    "created": 1565083591605,
-    "status": "Created"
-  },
-  "CE22UFPUKSW77IA26A2OKHVKEA3RU6ES": {
-    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
-    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
 
 ## Data Provider
-POST Feed Request Callback
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/dp1serviceEndpointUrl
+
+### POST Feed Request Callback
 
 A Data Provider receives this Service Endpoint-callback when an Individual has set him as the source of a feed.
-HEADERS
-Content-Type
-application/json
-Accept
-application/json
-BODY raw
-
-{
-  "connection": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid3dp1connectionUrl",
-  "pid": "1IqX94/EoOcD47hCvBQ+gi==",
-  "message": {
-    "serialNr": 6,
-    "text": "Requesting 'test data'",
-    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-    "inbound": true,
-    "sent": false,
-    "thirdPartyRef": " 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI="
-  },
-  "mbox": "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/pid3dp1connectionMbox"
-}
 
 
-
-Example Request
-Feed Request Callback - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/dp1serviceEndpointUrl" \
-  --header "Content-Type: application/json" \
-  --header "Accept: application/json" \
-  --data "{
-  \"connection\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/96cd5389-6def-4f6f-b3a9-b613a66ec522/ad4ac9cb-62e1-43ad-8495-9ac426b229c2\",
-  \"pid\": \"G5grIomOi7aBEV9nYE5Vlg==\",
-  \"message\": {
-    \"serialNr\": 6,
-    \"text\": \"Requesting 'test data'\",
-    \"protocol\": \"https://github.com/qiyfoundation/fiKks/tree/master/schema/v1\",
-    \"inbound\": true,
-    \"sent\": false,
-    \"thirdPartyRef\": \"4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI=\"
-  },
-  \"mbox\": \"https://dev1-user.testonly.digital-me.nl/user/mbox/user/96cd5389-6def-4f6f-b3a9-b613a66ec522/ad4ac9cb-62e1-43ad-8495-9ac426b229c2\"
-}"
-
-Example Response
--
-
-{
-  "id": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
-}
-
-POST Access feed callback
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/dp1serviceEndpointUrl/resolve
+### POST Access feed callback
 
 A Data Provider receives this Service Endpoint-callback after an access feed-request.
-HEADERS
-Content-Type
-application/json
-Accept
-application/json
-BODY raw
 
-{
-	"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
-		"input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
-	}
-}
-
-
-
-Example Request
-Access feed callback - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/dp1serviceEndpointUrl/resolve" \
-  --header "Content-Type: application/json" \
-  --data "{
-	\"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==\": {
-		\"input\": \"Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==\"
-	}
-}"
-
-Example Response
-200 - OK
-
-{
-    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
-        "output": "{
-    "activities-heart": [
-        {
-            "customHeartRateZones": [],
-            "dateTime": "today",
-            "heartRateZones": [
-                {
-                    "caloriesOut": 138.8351,
-                    "max": 86,
 
 ## Individual
-GET User Action Message Event
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1eventsEndpointUrl
+
+### GET User Action Message Event
 
 An End User App can use the User Action Message Event to detect the receipt of a feed request.
-HEADERS
-Accept
-text/event-stream
-x-mock-response-name
-Mock User Action Message Event - OK
 
 
-Example Request
-User Action Message Event - OK
-
-curl --location --request GET "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1eventsEndpointUrl" \
-  --header "Accept: text/event-stream"
-
-Example Response
--
-
-event: USER_ACTION_MESSAGE data: {
-   'type': 'USER_ACTION_MESSAGE',
-   'connectionUrl': 'https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e',
-   'extraData': 'https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4'
-}
-
-GET Get user action message
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1action1messageUrl
+### GET Get user action message
 
 A Qiy Node Client can use this call to get the details of a received message that requires user interaction using a userActionMessageUrl extracted from a User Action Message Event.
-HEADERS
-Accept
-application/json
 
 
-Example Request
-200 OK
-
-curl --location --request GET "{{actionMessageUrl}}" \
-  --header "Accept: application/json"
-
-Example Response
-200 - OK
-
-{
-  "result": [
-    {
-      "connection": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
-      "created": 1562059030644,
-      "links": {
-        "self": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4",
-        "handle": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
-      },
-      "message": {
-        "serialNr": 5,
-
-POST Set feed
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1action1option1url
+### POST Set feed
 
 An End User App uses this call to set a Data Provider as the source for a feed request.
 
 
-Example Request
-Set feed - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1action1option1url"
-
-PUT Add feed
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1action1option1url
+### PUT Add feed
 
 An End User App uses this call to add a Data Provider as a source for a feed request.
 
-
-Example Request
-Add feed - OK
-
-curl --location --request PUT "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/in1action1option1url"
-
-# End-to-end encryption (draft)
-## POST Request for feed
-{{connectionFeedsEndpointUrl}}
-
-tbd
-HEADERS
-password
-{{transportPassword}}
-BODY raw
-
-{
-  "protocol": https://github.com/qiyfoundation/fiKks/tree/master/schema/v1,
-  "text": "Requesting feed.",
-  "input": "<optional json member for Feed Request Callback body parameter; a base64 encoded byte array>"
-}
-
-
-
-Example Request
-Request for feed
-
-curl --location --request POST "{{connectionFeedsEndpointUrl}}" \
-  --header "password: {{transportPassword}}" \
-  --data "{
-  \"protocol\": https://github.com/qiyfoundation/fiKks/tree/master/schema/v1,
-  \"text\": \"Requesting feed.\",
-  \"input\": \"<optional json member for Feed Request Callback body parameter; a base64 encoded byte array>\"
-}"
-
-## POST Access feed
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/feedsEndpointUrl/{{feed_id}}
-
-tbd
-BODY raw
-
-"<optional operation parameter(s) encoded as a base64 encoded byte array>"
-
-
-
-Example Request
-Access feed - OK
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/feedsEndpointUrl{{feed_id}}"
-
-Example Response
-200 - OK
-
-{
-  "activities-heart": [
-    {
-      "customHeartRateZones": [],
-      "dateTime": "today",
-      "heartRateZones": [
-        {
-          "caloriesOut": 138.8351,
-          "max": 86,
-          "min": 30,
-          "minutes": 65,
-
-## POST Access feeds
-https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/feedsEndpointUrl
-
-tbd
-HEADERS
-Content-Type
-application/json
-BODY raw
-
-{
-	"{{feed_id1}}": {
-		"input": "<optional json member with base-64 encrypted byte array>"
-	},
-	"{{feed_id2}}": {
-		"input": "<optional json member with base-64 encrypted byte array>"
-	}
-}
-
-
-
-Example Request
-Access feeds
-
-curl --location --request POST "https://4b86023e-8e5e-4c82-a844-ffe548890819.mock.pstmn.io/feedsEndpointUrl" \
-  --header "Content-Type: application/json" \
-  --data "{
-	\"{{feed_id1}}\": {
-		\"input\": \"<optional json member with base-64 encrypted byte array>\"
-	},
-	\"{{feed_id2}}\": {
-		\"input\": \"<optional json member with base-64 encrypted byte array>\"
-	}
-}"
 
 # Getting help
 
