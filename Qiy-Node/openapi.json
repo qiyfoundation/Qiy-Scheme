@@ -1,14 +1,11 @@
-!!_____   WORK IN PROGRESS _________!!
-
-
 {
     "openapi": "3.0.0",
     "info": {
         "version": "tbd",
 	"title": "Qiy Node API",
-        "description": "tbd",
+        "description": "See [Qiy Node API](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy%20Node%20API.md)",
         "license": {
-            tbd
+            
         }
     },
     "host": "user.dolden.net",
