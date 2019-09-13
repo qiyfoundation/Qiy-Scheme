@@ -31,7 +31,7 @@ In addition, the following rules apply for [Qiy Node Implementations][Definition
     One development version may be supported in a development environment.
     The development version may change at any time.
 
-The version of the api that is supported must be returned by [Get api info](#get-api-info).
+The version of the api that is supported must be returned by [Get api info][API Get Api].
 
 ## Authentication
 
