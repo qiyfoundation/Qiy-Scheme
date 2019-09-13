@@ -199,12 +199,14 @@ This endpoint can be used to get or set the contents of a Service Catalogue. The
 
 ## Servers
 
-The Qiy Node service runs in a a development environment, the acceptance environment and the production environment. The server urls are:
+The Qiy Node service runs in a a development environment, the acceptance environment and the production environment. In addition, a proxy service is provided for discovery, experimentation and evaluation.
+The server urls are:
 
-| DTAP environment | Server url                                    |
-| ---------------- | --------------------------------------------- |
-| Dev2             | https://dev2-user.testonly.digital-me.nl/user |
-| Acceptance       | https://user.dolden.net/user                  |
+| Server Name      | Server url                                                                  |
+| ---------------- | --------------------------------------------------------------------------- |
+| Proxy            | https://qiy-test-tool-dpyt.cloud.digital-me.nl                              |
+| Dev2             | https://dev2-user.testonly.digital-me.nl/user                               |
+| Acceptance       | https://user.dolden.net/user                                                |
     
 
 The server url of the Production environment will be given during the entry-transition phase, when your Qiy Trust Based solution will go live.
@@ -216,6 +218,17 @@ Ensure that the following system settings are configurable to allow for smooth s
 * Qiy Node private key
 * Transport password
 * API key
+
+### Proxy server
+
+The proxy server provides an easy means to access Dev2 for taking care of the authentication.
+The proxy server can be used to create Qiy Nodes and access it via its '/qiy_nodes/<node_name>/proxy'-endpoint:
+
+* App authentication is provided when a dummy 'Authorization'-header parameter is provided in the request.
+* App authenticaiton and user authentication is provided when a dummy 'Authorization-node-QTN'-header parameter is provided in the request. 
+* App authentication, user authentication and transport authentication is provided when a dummy 'password'-header parameter is provided in the request. 
+
+The values of the mentioned header parameters are ignored.
 
 ## Events
 
