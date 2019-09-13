@@ -212,13 +212,13 @@
                 "type": "object",
                 "properties": {
                     "alias": {
-                        "description": "Use same value as id.",
+                        "description": "Qiy Node alias, returned in connect tokens.",
                         "type": "string",
                         "minItems": 1,
                         "maxItems": 1
                     },
                     "password": {
-                        "description": "See [Transport Password](https://github.com/digital-me/qiy-node/tree/topic/data-reuse/qs-user-node.md#transport-password).",
+                        "description": "See [Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication).",
                         "type": "string",
                         "minItems": 1,
                         "maxItems": 1
