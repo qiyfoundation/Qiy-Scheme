@@ -1,45 +1,49 @@
 # Qiy Node API
 
-This document describes the Qiy Node API.
+This document describes the [Qiy Node][Definitions Qiy Node] API - the API that is to be provided by [Qiy Node Implementations][Definitions Qiy Node Implementation].
 
 # API Basics
 
 ## Registration
 
-Service Providers and Application Providers can register with an Access Provider:
+[Service Providers][Definitions Service Provider] and [Application Providers][Definitions Application Provider] can register with an [Access Provider][Definitions Access Provider]:
 
-* both receive an API Key
-* Service Providers can whitelist endpoints and receive a Qiy Node Credential.
+* both receive an [API Key][Definitions API Key]
+* [Service Providers][Definitions Service Provider] can whitelist endpoints and receive a [Qiy Node Credential][Definitions Qiy Node Credential].
 
 ## Service Desk
 
-Please contact the Service Desk for your requests. The Service Desk is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
+Please contact the Service Desk of your [Access Provider][Definitions Access Provider] for your requests. The Service Desk of the [Access Provider][Definitions Access Provider] DigitalMe is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
 
     service@digital-me.nl
     +31 (0) 411-616565
 
 ## Versions
 
-This api is versioned using Semantic Versioning 2.0.0 and follows this specification. In addition, the following rules apply:
+The api is versioned using Semantic Versioning 2.0.0 and follows this specification. 
+The version of the api described in the Qiy Node API, this document, is the same as the version of the [Qiy Scheme][Definitions Qiy Scheme] that it is part of.
 
-    Two major versions are supported in the production environment: one primary version and one secondary version.
-    The secondary version will be supported for at least 6 months.
-    One development version is supported in a development environment.
+In addition, the following rules apply for [Qiy Node Implementations][Definitions Qiy Node Implementation]:
+
+    Two major versions must be supported in the production environment: one primary version and one secondary version.
+    The major versions should be supported in an acceptance environment.
+    The secondary version must be supported for at least 6 months.
+    One development version may be supported in a development environment.
     The development version may change at any time.
 
-The current version of the api is returned by Get /api.
+The version of the api that is supported must be returned by [Get api info](#get-api-info).
 
 ## Authentication
 
 ### App Authentication
 
-Qiy Applications are required to authenticate requests using an API Key implemented using basic authentication.
+Qiy Applications are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication.
 
-An e-mail address provided by the application provider will be used to maintain the API Keys. Please use this e-mail address to e-mail the [Service Desk](#service-desk) your API Key request.
+An e-mail address provided by the application provider will be used to maintain the [API Keys][Definitions API Key]. Please use this e-mail address to e-mail the [Service Desk](#service-desk) your [API Key][Definitions API Key] request.
 
 ### User Authentication
 
-All requests but the request to create a Qiy Node and the Api Request MUST be user authenticated using a signed token that can only be calculated using a Qiy Node Credential.
+All requests but the request to create a Qiy Node and the Api Request MUST be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential].
 
 The token MUST be passed in the 'Authorization-node-QTN'-header parameter.
 
@@ -291,46 +295,6 @@ event: USER_ACTION_MESSAGE data: {
 
 ## Documentation
 
-### Qiy Scheme
-
-The Qiy Scheme of the Qiy Foundation is a means to give individuals control over their data while creating value for organisations, see https://www.qiyfoundation.org.
-
-#### Qiy Trust Network
-
-The Qiy Trust Network is the operational part of the Qiy Scheme which enables its users to securely and privately connect and interact.
-
-##### Access Provider
-
-An Access Provider is an organisation that provides Service Providers access to the Qiy Trust Network.
-
-##### Application Provider
-
-An Application Provider is an organisation that provides software and/or applications to Qiy Users that can be used to access the Qiy Trust Network.
-
-#### Qiy User
-
-A Qiy User is a user of the Qiy Trust Network.
-
-##### Individual
-
-An Individual is a Qiy User that accesses the Qiy Trust Network as a natural person.
-
-##### Service Provider
-
-A Service Provider is a Qiy User that uses the Qiy Trust Network to provide services to Individuals.
-
-###### Relying Party
-
-A Relying Party is a Service Provider that uses services provided by other Service Providers. They can do so using Feed requests.
-
-###### Data Provider
-
-A Data Provider is a Service Provider that provides personal data services. They provide data subjects control over personal data using feeds, see Service Orchestration.
-
-### End User App
-
-An End User App is a Qiy Node Client which enables an Individual to subscribe to and orchestrate (data) services.
-
 #### Setup
 
 An End User App can only access the Qiy Trust Network under the following preconditions:
@@ -344,7 +308,7 @@ An End User App can only access the Qiy Trust Network under the following precon
 An Individual can subscribe to a service as follows:
 
     Conclude an subscription agreement (out-of-scope).
-    Connect with the Service Provider.
+    Connect with the [Service Provider][Definitions Service Provider].
 
 #### Orchestrate
 
@@ -362,20 +326,20 @@ After these steps, feeds will be automatically created and provided to the Relyi
 
 #### Setup
 
-Before a Service Provider can provide services via Qiy he has to make the following preparations:
+Before a [Service Provider][Definitions Service Provider] can provide services via Qiy he has to make the following preparations:
 
     Describe the services and make these descriptions publicly available.
     Setup a State Handled Endpoint.
     (only for Data Providers:) Setup Service Endpoint(s).
     (only for Relying Parties:) Setup Data Reference Received-v2 Endpoint.
     Prepare the Computer systems to correctly produce authenticated requests.
-    Contact the Access Provider DigitalMe to whitelist the endpoints and receive a Qiy Node Credential and an API Key.
+    Contact the [Access Provider][Definitions Access Provider] DigitalMe to whitelist the endpoints and receive a [Qiy Node Credential][Definitions Qiy Node Credential] and an [API Key][Definitions API Key].
     Configure the computer system for the Qiy Node.
     Publish the Service Catalogue with Qiy.
 
 ##### Service Catalogue
 
-A Service Provider publishes the (data) service types it supports in his Service Catalogue, which consists of an array of urls for Service Type Descriptions with additional details, for example for the associated [Feed Request Endpoints][API Basics Documentation Service Provider Setup Endpoints Feed Request Endpoint], see Get service catalogue.
+A [Service Provider][Definitions Service Provider] publishes the (data) service types it supports in his Service Catalogue, which consists of an array of urls for Service Type Descriptions with additional details, for example for the associated [Feed Request Endpoints][API Basics Documentation Service Provider Setup Endpoints Feed Request Endpoint], see Get service catalogue.
 
 A Service Type Description can contain a list of urls for the description of the Operation Types of the service which are used in as value of the protocol-member in [Feed Requests][Feeds Request for feed]. If the Service Type Description does not contain Operation Type Urls, the Service Type Description Url can be used instead.
 
@@ -399,14 +363,6 @@ A Data Provider uses this backend endpoint to serve requests for feed callback r
 
 The Data Provider provides the uri of the endpoint using set service catalogue.
 
-### Qiy Node Client
-
-A Qiy Node Client is any Application Service that accesses a Qiy Node. This section addresses topics that are relevant for developers of both End User Apps and computer systems of Service Providers.
-
-#### Qiy Node
-
-A Qiy Node is an access point for the Qiy Trust Network and can be maintained and used with node calls. Qiy Nodes are provided by DigitalMe to Service Providers on registration. End User Apps can create Qiy Nodes by generating a Qiy Node credential and request the creation of a Qiy Node as described in section 3.1 Create Qiy Node of the DigitalMe Qiy Node specification.
-
 ##### Settings
 
 A Qiy Node can have diferent settings which can be maintained with the get and set node setting calls.
@@ -421,8 +377,9 @@ A Qiy Node credential consists of:
 
 * Qiy Node Primary Key
 
-One element of the Qiy Node Credential is the primary key.
-Python
+One element of the [Qiy Node Credential][Definitions Qiy Node Credential] is the primary key.
+
+* Python
 
 In Python, the primary key can be created with the package 'cryptography'. The key can be created and persisted as follows:
 
@@ -462,7 +419,7 @@ public_key=OpenSSL.crypto.dump_publickey(
 
 #### Connections
 
-Individuals can connect and interact with other Individuals and Service Providers using connections between the related Qiy Nodes.
+Individuals can connect and interact with other Individuals and [Service Providers][Definitions Service Provider] using connections between the related Qiy Nodes.
 
 Connections can be created between an invitor and an invitee using Connect Tokens as follows:
 
@@ -474,7 +431,7 @@ Connections can be created between an invitor and an invitee using Connect Token
 
 #### Connect Tokens
 
-A Connect Token can be used to create connections between Qiy Users, for example an Individual and a Service Provider. The connect token may be created by either of the two, but when connecting to a Service Provider it must always be [registered][Connections Register connect token] or otherwise [requested][Connections Request connect token] by the Service Provider.
+A Connect Token can be used to create connections between Qiy Users, for example an Individual and a [Service Provider][Definitions Service Provider]. The connect token may be created by either of the two, but when connecting to a [Service Provider][Definitions Service Provider] it must always be [registered][Connections Register connect token] or otherwise [requested][Connections Request connect token] by the [Service Provider][Definitions Service Provider].
 
 ##### Create Connect Token
 
@@ -1084,6 +1041,14 @@ Please contact the [Service Desk](#service-desk).
 [Connections Get connect token]: https://qiy.api.digital-me.nl/?version=latest#c8b4b003-e8ec-4fb2-bafa-f37f0c4d2925
 [Connections List connect tokens]: https://qiy.api.digital-me.nl/?version=latest#669c1d26-94fa-460b-a2ad-e899ccb91d2b
 [Connections List connections]: https://qiy.api.digital-me.nl/?version=latest#1ddd2cbf-5a25-422f-a650-28f551dce88c
+[Definitions Access Provider]: ../Definitions.md#access-provider
+[Definitions API Key]: #app-authentication
+[Definitions Application Provider]: ../Definitions.md#application-provider
+[Definitions Service Provider]: ../Definitions.md#service-provider
+[Definitions Qiy Node]: ../Definitions.md#qiy-node
+[Definitions Qiy Node Credential]: #qiy-node-credential
+[Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
+[Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
 [Relations]: https://qiy.api.digital-me.nl/?version=latest#4f4c5a3e-388c-48ff-b847-6c11c3738254
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Messages]: https://qiy.api.digital-me.nl/?version=latest#b0169810-fd5c-4422-95a1-0beb2fc77a3e
