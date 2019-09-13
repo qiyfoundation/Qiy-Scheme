@@ -537,7 +537,7 @@ Qiy Users can use connections to send and receive messages.
 
 # API
 
-## Api
+## Api info
 
 GET /api can be used to get the api version and the current address of the Node Create Endpoint.
 
