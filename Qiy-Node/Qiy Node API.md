@@ -179,11 +179,11 @@ This endpoint can be used to get and set settings of a Qiy Node. The current add
 
 ### Reference Endpoint
 
-This endpoint can be used to tbd. The current address of the endpoint is returned in the "ref"-member of the response of Get endpoint addresses.
+This endpoint is deprecated.
 
 ### References Endpoint
 
-This endpoint is deprecated. The current address of the endpoint is returned in the "refs"-member of the response of Get endpoint addresses.
+This endpoint is deprecated.
 
 ### Self Endpoint
 
@@ -985,24 +985,24 @@ Please contact the [Service Desk](#service-desk).
 [API Basics Authentication User Authentication]: #user-authentication
 [API Basics Authentication Transport Authentication]: #transport-authentication
 [API Basics Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
-[API Basics Dynamic Endpoint Addresses Action Messages List Endpoint]: https://qiy.api.digital-me.nl/?version=latest#24fe7d0c-e803-4994-a781-6b6b0f2534ef
-[API Basics Dynamic Endpoint Addresses Connect Token Create Endpoint]: https://qiy.api.digital-me.nl/?version=latest#c8036835-aa4a-4c73-94db-b9fb084e5d77
-[API Basics Dynamic Endpoint Addresses Connect Token List Endpoint]: https://qiy.api.digital-me.nl/?version=latest#568119c2-8dd2-4c70-8a79-482518d970b7
-[API Basics Dynamic Endpoint Addresses Connection Create Endpoint]: https://qiy.api.digital-me.nl/?version=latest#c8036835-aa4a-4c73-94db-b9fb084e5d77
-[API Basics Dynamic Endpoint Addresses Connection Endpoint]: https://qiy.api.digital-me.nl/?version=latest#206c6bd7-85d9-4ddd-a19b-2c8b4c09f3ef
-[API Basics Dynamic Endpoint Addresses Connection Feeds Endpoint]: https://qiy.api.digital-me.nl/?version=latest#83733816-fccd-4742-823c-c42afe1eb6c8
-[API Basics Dynamic Endpoint Addresses Connections List Endpoint]: https://qiy.api.digital-me.nl/?version=latest#fb4165c2-fd97-4845-b18a-e224a6eb2c85
-[API Basics Dynamic Endpoint Addresses Events Endpoint]: https://qiy.api.digital-me.nl/?version=latest#12555314-883a-4822-ad8c-eb7963449bbf
-[API Basics Dynamic Endpoint Addresses Event Callbacks Endpoint]: https://qiy.api.digital-me.nl/?version=latest#cf56bedf-4720-4f22-9744-bcdec6e6b0d6
-[API Basics Dynamic Endpoint Addresses Feeds Endpoint]: https://qiy.api.digital-me.nl/?version=latest#2a84a690-ea4c-4558-b2b0-c96ca620999d
-[API Basics Dynamic Endpoint Addresses Mailbox Endpoint]: https://qiy.api.digital-me.nl/?version=latest#2904fccb-0811-4797-b03e-2a465e7e6ac4
-[API Basics Dynamic Endpoint Addresses Node Create Endpoint]: https://qiy.api.digital-me.nl/?version=latest#acdc31a9-3cb1-40b0-acbd-2a66755bee8b
-[API Basics Dynamic Endpoint Addresses Node Settings Endpoint]: https://qiy.api.digital-me.nl/?version=latest#6fc15306-1abd-4a86-967f-c93a620026a4
-[API Basics Dynamic Endpoint Addresses Reference Endpoint]: https://qiy.api.digital-me.nl/?version=latest#197435e1-bd20-4ec0-b61c-d39d0a63a3be
-[API Basics Dynamic Endpoint Addresses References Endpoint]: https://qiy.api.digital-me.nl/?version=latest#da467cef-7fda-4299-9170-1af2f0c2f0d6
-[API Basics Dynamic Endpoint Addresses Self Endpoint]: https://qiy.api.digital-me.nl/?version=latest#6b2fd98d-3022-4f00-ad8c-b6d31b42bb3c
-[API Basics Dynamic Endpoint Addresses Service Catalogue Endpoint]: https://qiy.api.digital-me.nl/?version=latest#81cfd38e-f582-408e-8493-071244725734
-[API Basics Servers]: https://qiy.api.digital-me.nl/?version=latest#cc501098-99e8-4584-8343-1bc679b80c03
+[API Basics Dynamic Endpoint Addresses Action Messages List Endpoint]: #action-messages-list-endpoint
+[API Basics Dynamic Endpoint Addresses Connect Token Create Endpoint]: #connect-token-create-endpoint
+[API Basics Dynamic Endpoint Addresses Connect Token List Endpoint]: #connect-token-list-endpoint
+[API Basics Dynamic Endpoint Addresses Connection Create Endpoint]: #connection-create-endpoint
+[API Basics Dynamic Endpoint Addresses Connection Endpoint]: #connection-endpoint
+[API Basics Dynamic Endpoint Addresses Connection Feeds Endpoint]: #connection-feeds-endpoint
+[API Basics Dynamic Endpoint Addresses Connections List Endpoint]: #connections-list-endpoint
+[API Basics Dynamic Endpoint Addresses Events Endpoint]: #events-endpoint
+[API Basics Dynamic Endpoint Addresses Event Callbacks Endpoint]: #event-callbacks-endpoint
+[API Basics Dynamic Endpoint Addresses Feeds Endpoint]: #feeds-endpoint
+[API Basics Dynamic Endpoint Addresses Mailbox Endpoint]: #mailbox-endpoint
+[API Basics Dynamic Endpoint Addresses Node Create Endpoint]: #node-create-endpoint
+[API Basics Dynamic Endpoint Addresses Node Settings Endpoint]: #node-settings-endpoint
+[API Basics Dynamic Endpoint Addresses Reference Endpoint]: #reference-endpoint
+[API Basics Dynamic Endpoint Addresses References Endpoint]: #references-endpoint
+[API Basics Dynamic Endpoint Addresses Self Endpoint]: #self-endpoint
+[API Basics Dynamic Endpoint Addresses Service Catalogue Endpoint]: #service-catalogue-endpoint
+[API Basics Servers]: #servers
 [API Basics Servers Mock Server]: https://qiy.api.digital-me.nl/?version=latest#fd504a4c-7781-413d-8968-d1c1f788f063
 [API Basics Events]: https://qiy.api.digital-me.nl/?version=latest#ecbb4a43-d2a8-47bb-8f04-dd2afaa835a7
 [API Basics Events Connected to Router Event]: https://qiy.api.digital-me.nl/?version=latest#d8724e2f-00cc-4af1-9408-01b1aaf91ed5
