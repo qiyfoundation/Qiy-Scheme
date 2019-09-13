@@ -539,7 +539,7 @@ Qiy Users can use connections to send and receive messages.
 
 ## Api info
 
-[GET /api][[API Get Api info] can be used to get the [api version][API Basics Versions] and the current address of the [Node Create Endpoint][API Basics Dynamic Endpoint Addresses Node Create Endpoint].
+[GET /api][API Get Api info] can be used to get the [api version][API Basics Versions] and the current address of the [Node Create Endpoint][API Basics Dynamic Endpoint Addresses Node Create Endpoint].
 
 # Nodes
 
