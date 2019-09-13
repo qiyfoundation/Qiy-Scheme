@@ -113,7 +113,7 @@ authHeader "${INPUT}"
 echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [${UUID}] \nWhen I calculate the Authorization header\nThen the value should be: \n  [${AUTH_HEADER}]"
 ```
 
-### Password Header Parameter
+### Transport Authentication
 
 Some request have a mandatory 'password'-header parameter, because they use the Transport Layer which requires authentication with a Transport Password.
 
