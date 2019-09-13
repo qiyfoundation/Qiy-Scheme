@@ -539,7 +539,7 @@ Qiy Users can use connections to send and receive messages.
 
 ## Api info
 
-[GET /api][API Get Api info] can be used to get the [api version][API Basics Versions] and the current address of the [Node Create Endpoint][API Basics Dynamic Endpoint Addresses Node Create Endpoint].
+An [app authenticated][API Basics Authentication App Authentication] [GET /api][API Get Api] can be used to get the [api version][API Basics Versions] and the current address of the [Node Create Endpoint][API Basics Dynamic Endpoint Addresses Node Create Endpoint].
 
 # Nodes
 
@@ -550,7 +550,7 @@ This Node Create Endpoint-call can be used to request the creation of a Qiy Node
 
 ## Get endpoint addresses
 
-Get [current addresses of the dynamic path endpoints][API Basics Dynamic Endpoint Addresses].
+A [user authenticated][API Basics Authentication User Authentication] [GET /api][API Get Api] can be used to get the [current addresses of the dynamic path endpoints][API Basics Dynamic Endpoint Addresses].
 
 
 ## Set event callback endpoints
@@ -979,12 +979,12 @@ Please contact the [Service Desk](#service-desk).
 [API Basics]: https://qiy.api.digital-me.nl/?version=latest#a5c62ac8-8f2c-4d57-b970-42ff89253670
 [API Basics Registration]: https://qiy.api.digital-me.nl/?version=latest#699276ef-e0b7-4ff8-852d-a5b2e175b4e3
 [API Basics Service Desk]: https://qiy.api.digital-me.nl/?version=latest#9060bf32-11d2-4736-add3-629b52491c70
-[API Basics Versions]: https://qiy.api.digital-me.nl/?version=latest#8e731f8f-2cdb-4c6c-b502-7555d705c5f6
-[API Basics Authentication]: https://qiy.api.digital-me.nl/?version=latest#6a185fe3-fa9f-4996-b436-0766d5487f87
-[API Basics Authentication App Authentication]: https://qiy.api.digital-me.nl/?version=latest#9c68b30f-cbb6-4126-9214-4d60562f1d9a
-[API Basics Authentication User Authentication]: https://qiy.api.digital-me.nl/?version=latest#d9f23a90-d3bd-4efd-817e-b4105376036c
-[API Basics Authentication Password Header Parameter]: https://qiy.api.digital-me.nl/?version=latest#e938a043-41b6-43f8-94cd-65d5aee253c0
-[API Basics Dynamic Endpoint Addresses]: https://qiy.api.digital-me.nl/?version=latest#afa57f39-5d0b-42cd-9530-6415d9b3200f
+[API Basics Versions]: #versions
+[API Basics Authentication]: #authentication
+[API Basics Authentication App Authentication]: #app-authentication
+[API Basics Authentication User Authentication]: #user-authentication
+[API Basics Authentication Transport Authentication]: #transport-authentication
+[API Basics Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
 [API Basics Dynamic Endpoint Addresses Action Messages List Endpoint]: https://qiy.api.digital-me.nl/?version=latest#24fe7d0c-e803-4994-a781-6b6b0f2534ef
 [API Basics Dynamic Endpoint Addresses Connect Token Create Endpoint]: https://qiy.api.digital-me.nl/?version=latest#c8036835-aa4a-4c73-94db-b9fb084e5d77
 [API Basics Dynamic Endpoint Addresses Connect Token List Endpoint]: https://qiy.api.digital-me.nl/?version=latest#568119c2-8dd2-4c70-8a79-482518d970b7
@@ -1057,7 +1057,7 @@ Please contact the [Service Desk](#service-desk).
 [API Basics Documentation Qiy Node Client Events]: https://qiy.api.digital-me.nl/?version=latest#4978ab24-b193-40c1-858f-58622673d13b
 [API Basics Documentation Qiy Node Client Messages]: https://qiy.api.digital-me.nl/?version=latest#d128578f-2fb7-41ec-b777-da7f2341d274
 [API]: https://qiy.api.digital-me.nl/?version=latest#076c9660-4323-42f1-b087-6cad8e484c3a
-[API Get Api info]: https://qiy.api.digital-me.nl/?version=latest#27416893-7da4-411f-8847-88103d17dc86
+[API Get Api]: https://qiy.api.digital-me.nl/?version=latest#27416893-7da4-411f-8847-88103d17dc86
 [Nodes]: https://qiy.api.digital-me.nl/?version=latest#62279de6-0df7-497a-9a1e-cddc17bbbc63
 [Nodes Request creation of Qiy Node]: https://qiy.api.digital-me.nl/?version=latest#806d07bb-f6eb-47f8-bc07-71119440fc0d
 [Nodes Get endpoint addresses]: https://qiy.api.digital-me.nl/?version=latest#0bdb3ea3-0e8c-4f6d-8a92-8230d1be9a02
