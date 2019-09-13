@@ -153,7 +153,7 @@ The current address of the endpoint is returned in a "feeds"-endpoint of a conne
 
 ### Connections List Endpoint
 
-The Connections List Endpoint can be used to list connections. The current address of the endpoint is returned in the "ctList"-member of the response of Get endpoint addresses.
+The Connections List Endpoint can be used to list connections. The current address of the endpoint is returned in the "connections"-member of the response of Get endpoint addresses.
 
 ### Events Endpoint
 
@@ -172,6 +172,10 @@ The address of the endpoint for a connection is returned in the "feeds"-member o
 ### Mailbox Endpoint
 
 This endpoint can be used to send and receive messages. The current address of the endpoint is returned in a "mbox"-member of the response of List connections or Get connection.
+
+### Manage References Endpoint
+
+This endpoint is deprecated. The current address of the endpoint is returned in the "manRef"-member of the response of List connections or Get connection.
 
 ### Node Create Endpoint
 
@@ -196,6 +200,10 @@ This endpoint can be used to delete a Qiy Node. The endpoint address is returned
 ### Service Catalogue Endpoint
 
 This endpoint can be used to get or set the contents of a Service Catalogue. The current address of the endpoint is returned in the "serviceCatalog"-member of the response of Get endpoint addresses.
+
+### Target Template Endpoint
+
+This endpoint can be used to create off line connect tokens. The current address of the endpoint is returned in the "target-tempate"-member of the response of Get endpoint addresses.
 
 ## Servers
 
