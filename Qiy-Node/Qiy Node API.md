@@ -179,7 +179,7 @@ This endpoint is deprecated. The current address of the endpoint is returned in 
 
 ### Node Create Endpoint
 
-This endpoint can be used to request the creation of a Qiy Node. The current address of the endpoint is returned by Get /api.
+This endpoint can be used to [request the creation of a Qiy Node](#request-creation-of-qiy-node). The current address of the endpoint is returned by [Get /api](#api-info).
 
 ### Node Settings Endpoint
 
@@ -523,7 +523,7 @@ An [app authenticated][API Basics Authentication App Authentication] [GET /api][
 
 ## Request creation of Qiy Node
 
-This Node Create Endpoint-call can be used to request the creation of a Qiy Node.
+This [Node Create Endpoint](#node-create-endpoint)-call can be used to [request the creation of a Qiy Node][Nodes Request creation of Qiy Node].
 
 
 ## Get endpoint addresses
