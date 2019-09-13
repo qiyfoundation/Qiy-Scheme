@@ -15,8 +15,8 @@
     },
     "servers": [
         {
-            "url": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/dp/proxy/v1",
-            "description": "Development Proxy server"
+            "url": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1",
+            "description": "Proxy server"
         },
         {
             "url": "https://dev2-user.testonly.digital-me.nl/user/v1",
