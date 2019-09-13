@@ -30,7 +30,7 @@
     "paths": {
         "/api": {
             "get": {
-                "description": "See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-api)",
+                "description": "See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#api-info) and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)",
                 "operationId": "api",
                 "responses": {
                     "default": {
@@ -47,7 +47,10 @@
                         }
                     }
                 },
-                "security": [{ "appAuthentication": []}]
+                "security": [
+                    { "appAuthentication": []},
+                    { "userAuthentication": []}
+                ]
             }
         }
     },
@@ -85,3 +88,4 @@
     },
     "security": [{"userAuthentication":[]}]
 }
+
