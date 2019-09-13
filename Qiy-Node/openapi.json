@@ -34,22 +34,16 @@
                 "operationId": "api",
                 "responses": {
                     "default": {
-                        "description": "default response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
+                        "$ref": "#/components/responses/default"
                     }
                 },
                 "security": [
-                    { "appAuthentication": []},
-                    { "userAuthentication": []}
+                    {
+                        "appAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
+                    }
                 ]
             }
         }
@@ -74,6 +68,49 @@
                 "in": "header"
             }
         },
+        "responses": {
+            "default": {
+                "description": "The default response is an json errors array with error 401 Authentication required",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "errors": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {
+                                                "type": "number",
+                                                "enum": [
+                                                    401
+                                                ]
+                                            },
+                                            "message": {
+                                                "type": "string",
+                                                "pattern": "Authentication required!"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {},
+        "examples": {
+            "authenticationRequired": {
+                "errors": [
+                    {
+                        "status": 401,
+                        "message": "Authentication required!"
+                    }
+                ]
+            }
+        },
         "securitySchemes": {
             "appAuthentication": {
                 "$ref": "#/components/schemas/appAuthentication"
@@ -86,6 +123,9 @@
             }
         }
     },
-    "security": [{"userAuthentication":[]}]
+    "security": [
+        {
+            "userAuthentication": []
+        }
+    ]
 }
-
