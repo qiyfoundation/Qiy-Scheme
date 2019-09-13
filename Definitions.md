@@ -52,6 +52,9 @@ One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qi
 ### Application Programming Interface
 A description of how an [Application](Definitions.md#application) can be accessed by another [Application](Definitions.md#application).
 
+### Application Provider
+A legal entity that provides [Qiy Applications](#qiy-applications).
+
 ### Architectural Layers
 The [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme): the [User Layer](#user-layer), the [Application Layer](#application-layer), the [Qiy Node Layer](#qiy-node-layer), the [Service Layer](#service-layer), the [Transport Layer](#transport-layer) and the [Carrier Layer](#carrier-layer).
 
