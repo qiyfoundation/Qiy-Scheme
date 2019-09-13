@@ -539,7 +539,7 @@ Qiy Users can use connections to send and receive messages.
 
 ## Api info
 
-GET /api can be used to get the api version and the current address of the Node Create Endpoint.
+[GET /api][[API Get Api info] can be used to get the [api version][API Basics Versions] and the current address of the [Node Create Endpoint][API Basics Dynamic Endpoint Addresses Node Create Endpoint].
 
 # Nodes
 
@@ -550,7 +550,7 @@ This Node Create Endpoint-call can be used to request the creation of a Qiy Node
 
 ## Get endpoint addresses
 
-Get current addresses of the dynamic path endpoints.
+Get [current addresses of the dynamic path endpoints][API Basics Dynamic Endpoint Addresses].
 
 
 ## Set event callback endpoints
@@ -1057,7 +1057,7 @@ Please contact the [Service Desk](#service-desk).
 [API Basics Documentation Qiy Node Client Events]: https://qiy.api.digital-me.nl/?version=latest#4978ab24-b193-40c1-858f-58622673d13b
 [API Basics Documentation Qiy Node Client Messages]: https://qiy.api.digital-me.nl/?version=latest#d128578f-2fb7-41ec-b777-da7f2341d274
 [API]: https://qiy.api.digital-me.nl/?version=latest#076c9660-4323-42f1-b087-6cad8e484c3a
-[API Get Api]: https://qiy.api.digital-me.nl/?version=latest#27416893-7da4-411f-8847-88103d17dc86
+[API Get Api info]: https://qiy.api.digital-me.nl/?version=latest#27416893-7da4-411f-8847-88103d17dc86
 [Nodes]: https://qiy.api.digital-me.nl/?version=latest#62279de6-0df7-497a-9a1e-cddc17bbbc63
 [Nodes Request creation of Qiy Node]: https://qiy.api.digital-me.nl/?version=latest#806d07bb-f6eb-47f8-bc07-71119440fc0d
 [Nodes Get endpoint addresses]: https://qiy.api.digital-me.nl/?version=latest#0bdb3ea3-0e8c-4f6d-8a92-8230d1be9a02
