@@ -161,7 +161,7 @@ The Events Endpoint can be used to receive events. The current address of the en
 
 ### Event Callbacks Endpoint
 
-This Endpoint can be used to set or get the addresses of the Event Callback endpoints. The current address of the endpoint is returned in the "eventCallbacks"-member of the response of Get endpoint addresses.
+This endpoint can be used to [set](#set-event-callbacks-endpoints) or [get the addresses of the Event Callback endpoints](#get-event-callback-endpoints). The current address of the endpoint is returned in the "eventCallbacks"-member of the response of [Get endpoint addresses](#get-endpoint-addresses).
 
 ### Feeds Endpoint
 
@@ -533,12 +533,12 @@ A [user authenticated][API Basics Authentication User Authentication] [GET /api]
 
 ## Set event callback endpoints
 
-This Event Callbacks Endpoint-request can be used to define the addresses of the event callback endpoints.
+This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used to [define the addresses of the event callback endpoints][Nodes Set event callback endpoints].
 
 
 ## Get event callback endpoints
 
-This Event Callbacks Endpoint-request can be used to get the addresses of the event callback endpoints.
+This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used to [get the addresses of the event callback endpoints][Nodes Get event callback endpoints].
 
 
 ## Start listening to events
