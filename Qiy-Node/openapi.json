@@ -33,8 +33,14 @@
                 "description": "See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#api-info) and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)",
                 "operationId": "api",
                 "responses": {
+                    "apiAppAuthenticated": {
+                        "$ref": "#/components/responses/apiAppAuthenticated"
+                    },
                     "default": {
                         "$ref": "#/components/responses/default"
+                    },
+                    "userAuthenticated": {
+                        "$ref": "#/components/responses/apiUserAuthenticated"
                     }
                 },
                 "security": [
@@ -69,8 +75,41 @@
             }
         },
         "responses": {
+            "apiAppAuthenticated": {
+                "description": "App authenticated response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "links": {
+                                    "type": "object",
+                                    "properties": {
+                                        "create": {
+                                            "description": "[Node Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint) url",
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "serverTime": {
+                                    "description": "Server time in unix time in mili seconds.",
+                                    "type": "number"
+                                },
+                                "currentVersion": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/apiGetAppAuthenticated"
+                            }
+                        }
+                    }
+                }
+            },
             "default": {
-                "description": "The default response is an json errors array with error 401 Authentication required",
+                "description": "Default response",
                 "content": {
                     "application/json": {
                         "schema": {
@@ -95,6 +134,108 @@
                                     }
                                 }
                             }
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/authenticationRequired"
+                            }
+                        }
+                    }
+                }
+            },
+            "apiUserAuthenticated": {
+                "description": "User authenticated response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "links": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amList": {
+                                            "description": "[Action Messages List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#action-messages-list-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "connections": {
+                                            "description": "[Connections List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connections-list-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "ctCreate": {
+                                            "description": "[Connect Token Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "ct-create": {
+                                            "description": "deprecated",
+                                            "type": "string"
+                                        },
+                                        "ctList": {
+                                            "description": "[Connect Token List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "ct-list": {
+                                            "description": "deprecated",
+                                            "type": "string"
+                                        },
+                                        "eventCallbacks": {
+                                            "description": "[Event Callbacks Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "events": {
+                                            "description": "[Events Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#events-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "feeds": {
+                                            "description": "[Feeds Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "manRef": {
+                                            "description": "deprecated",
+                                            "type": "string"
+                                        },
+                                        "nodeSettings": {
+                                            "description": "[Node Settings Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "ref": {
+                                            "description": "deprecated",
+                                            "type": "string"
+                                        },
+                                        "refs": {
+                                            "description": "deprecated",
+                                            "type": "string"
+                                        },
+                                        "scan": {
+                                            "description": "[Connection Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "self": {
+                                            "description": "[Self Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#self-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "serviceCatalog": {
+                                            "description": "[Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint) url",
+                                            "type": "string"
+                                        },
+                                        "target-tempate": {
+                                            "description": "[Target Template Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#target-template-endpoint) url",
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "serverTime": {
+                                    "description": "Server time in unix time in mili seconds.",
+                                    "type": "number"
+                                },
+                                "currentVersion": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/apiGetUserAuthenticated"
+                            }
                         }
                     }
                 }
@@ -102,6 +243,37 @@
         },
         "parameters": {},
         "examples": {
+            "apiGetAppAuthenticated": {
+                "links": {
+                    "create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners"
+                },
+                "serverTime": 1568366519145,
+                "currentVersion": "1.0.67-SNAPSHOT"
+            },
+            "apiGetUserAuthenticated": {
+                "links": {
+                    "amList": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/mbox/user/action/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "ct-create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "scan": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "nodeSettings": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "ref": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549/single",
+                    "manRef": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/reference-management/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "refs": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "eventCallbacks": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549/eventcallbacks",
+                    "self": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners/id/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "ctList": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "feeds": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/31962764-596b-4eff-b80d-9cd32a65a549/feeds",
+                    "target-template": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/~id~",
+                    "serviceCatalog": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/servicecatalog/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "ctCreate": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "ct-list": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "connections": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549",
+                    "events": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/events/31962764-596b-4eff-b80d-9cd32a65a549"
+                },
+                "serverTime": 1568374440048,
+                "id": "31962764-596b-4eff-b80d-9cd32a65a549",
+                "currentVersion": "1.0.67-SNAPSHOT"
+            },
             "authenticationRequired": {
                 "errors": [
                     {
