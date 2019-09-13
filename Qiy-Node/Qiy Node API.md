@@ -537,62 +537,62 @@ Qiy Users can use connections to send and receive messages.
 
 # API
 
-## GET Api
+## Api
 
 GET /api can be used to get the api version and the current address of the Node Create Endpoint.
 
 # Nodes
 
-## POST Request creation of Qiy Node
+## Request creation of Qiy Node
 
 This Node Create Endpoint-call can be used to request the creation of a Qiy Node.
 
 
-## GET Get endpoint addresses
+## Get endpoint addresses
 
 Get current addresses of the dynamic path endpoints.
 
 
-## PUT Set event callback endpoints
+## Set event callback endpoints
 
 This Event Callbacks Endpoint-request can be used to define the addresses of the event callback endpoints.
 
 
-## GET Get event callback endpoints
+## Get event callback endpoints
 
 This Event Callbacks Endpoint-request can be used to get the addresses of the event callback endpoints.
 
 
-## GET Start listening to events
+## Start listening to events
 
 This Events Endpoint-call can be used to start listening to Qiy Node events.
 
 It starts a long-living session with a heartbeat to keep the response open. Every 10 seconds a 'ping' comment will be sent. If this is not received for more than that time, something has gone wrong.
 
 
-## GET Get node settings
+## Get node settings
 
 This Node Settings Endpoint-call returns the node settings.
 
 
-## PUT Set node settings
+## Set node settings
 
 This Node Settings Endpoint-call sets the node settings.
 
 
-## DEL Delete Qiy Node
+## Delete Qiy Node
 
 This Self Endpoint-call can be used to delete a Qiy Node.
 
 
 # Services
 
-## GET Get service catalogue
+## Get service catalogue
 
 This Service Catalogue Endpoint-call gets the Service Catalogue.
 
 
-## PUT Set service catalogue
+## Set service catalogue
 
 This Service Catalogue Endpoint-call sets the Service Catalogue including the uri and the method of Service Endpoints.
 
@@ -601,24 +601,24 @@ This Service Catalogue Endpoint-call sets the Service Catalogue including the ur
 
 ## Relying Party/Data Provider
 
-### POST Request connect token
+### Request connect token
 
 This Connect Token Create Endpoint-call can be used to request a connect token: a json object with the members 'identifier', 'tmpSecret' and 'target'. When the call was succesfull, a 200-OK will be returned with the Connect Token Url in the Location header of the response.
 
 
-### POST Register connect token
+### Register connect token
 
 This Connect Token Create Endpoint-call registers a connect token: a json object with the members 'identifier', 'tmpSecret' and 'target'. The call returns the Connect Token Url in the Location header of the response.
 
 
-### POST State Handled Callback
+### State Handled Callback
 
 This callback on the [State Handled Callback Endpoint][API Basics Documentation Service Provider Setup Endpoints State Handled Endpoint] can be used to detect a new connection.
 
 
 ## Individual
 
-### POST Request connection
+### Request connection
 
 This asynchronous Connection Create Endpoint-call can be used to request a connection using a Connect Token: a json object with the members 'identifier', 'tmpSecret' and 'target'.
 
@@ -629,37 +629,37 @@ If and when the connection has been established, at least two State Handled Even
 Alternatively, the list of connections can be gotten. Here a connection should be present with the 'activeFrom' property should have the value of the current time (in milliseconds from the epoch), 'pid' should be a Base 64 encoded value, 'state' should be 'connected'.
 
 
-### GET Connected to Router Event
+### Connected to Router Event
 
 The Connected to Router Event can be used to monitor the creation of a connection.
 
 
-### GET Persistent Id Event
+### Persistent Id Event
 
 The Persistent Id Event is an event that is created upon creation of a connection.
 
 
-### GET State Handled Event
+### State Handled Event
 
 This event is fired when a connection has been created.
 
 
-## GET Get connection
+## Get connection
 
 This Connection Endpoint-call returns connection details.
 
 
-## GET Get connect token
+## Get connect token
 
 This call returns the details of a Connect Token.
 
 
-## GET List connect tokens
+## List connect tokens
 
 This Connect Token List Endpoint-call lists the connect tokens.
 
 
-## GET List connections
+## List connections
 
 This Connections List Endpoint-call can be used to list connections.
 
@@ -674,12 +674,12 @@ tbd
 
 # Messages
 
-## POST Send message
+## Send message
 
 This Mailbox Endpoint-call can be used to send a message over a connection with another Qiy User.
 
 
-## GET List messages
+## List messages
 
 This Mailbox Endpoint-call lists messages.
 
@@ -896,77 +896,77 @@ private key:
 MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAOrDYYLTVZLBg+GSta1toohjtdTvwcxCGWs6L5zCt+8t0Vb745r9c+OLgOdOYMslE84gp7R1fbTjZiddWx+JKKqiUBWT17igMrrvXkd1v6WeBBgTDCFR9mqkjrDzEyOSvZdmDlvHwKBGULWFVrAq8oDsnLQYmpiWUSfgChWQiGORAgMBAAECgYEA396xfjBJykj/mnxtA5UpCScMnqKEDGR8GOTDwpltDYiDuI873PEVMkg2BF2ZsB8LY+WAB3aDCZxQLfm4i7ogK8Py/UUnW4ZY98RFCGwVLxsWDoNgB5cEDbPomc1UmNALfO9DE10GD3uuLXuqHGy5wCVxvXEw1xdkocFPmIzsjgECQQD+345dPHMQXNG3G43FG3pkhImulSyQRk7tITdLT+eqoXNfie6ZVymFm+dpPBrp6BSsgdpSuzuuleZdM4De79hdAkEA680Q4UEV7GzsYIPzjrOGY9Dq9kwt0DCtxeLd+RrFQomrtxUg5GDkdbzlAi8x7sMxh5n8oNluLJDx68M0wdQ0xQJBAN6dMOGq3O2bxOjkPi29VGfbg85jKStS3bks2/kB790Pa5A1D5wLj47Nn5BBGVjYhsYuHR1JwFU7RJx/Ub5nS1kCQGC8Qf6G+v2BOf/mYhba43kzjhD485qDPeb+yV2Wc/J2FDIJwvKuJUt/8NtSjUOMZFdi/tbmHGLAG99Ct/QEoJkCQETBfCMVF4v5oOcI6kPlr2NEc5ipyEhiLnGEhTZEtY9q95UVscHO0AmnmoRtTIK5xsUtImIDXTN9R3xL1HSzzLw=
 ```
 
-#### POST Access feed - fikks - encrypted
+#### Access feed - fikks - encrypted
 
 tbd
 
-#### POST Access feed - fikks - not encrypted
+#### Access feed - fikks - not encrypted
 
 tbd
 
-### POST Request for feed
+### Request for feed
 
 A Relying Party uses this Connection Feeds Endpoint-call to request for a feed.
 
 Optionally, a Feed Request Callback body parameter can be included in the 'input'-member of the body json object as a base64-encoded byte array.
 
 
-### POST Data Reference Received-v2 Callback
+### Data Reference Received-v2 Callback
 
 A Relying Party can use this Data Reference Received-v2-callback on the Data Reference Received-v2 Endpoint to receive new feed id's.
 
 
-### GET Data Reference Received-v2 Event
+### Data Reference Received-v2 Event
 
 A Relying Party can use the [Data Reference Received Event-v2][API Basics Events Data Reference Received Event-v2] to detect a new feed.
 
-### POST Access feed
+### Access feed
 
 A Relying Party uses this Feeds Endpoint-call to access a single feed.
 
 The body may include operation request parameters encoded as a base-64 encoded byte array as described in the Qiy Scheme change proposal on free parameters.
 
 
-### POST Access feeds
+### Access feeds
 
 A Relying Party can use this Feeds Endpoint-call to access one or more feeds.
 
 
-### GET List feeds
+### List feeds
 
 This Feeds Endpoint-request can be used to list the feed's with feed details of a Qiy Node or a connection for all or a set of protocols (operation types).
 
 
 ## Data Provider
 
-### POST Feed Request Callback
+### Feed Request Callback
 
 A Data Provider receives this Service Endpoint-callback when an Individual has set him as the source of a feed.
 
 
-### POST Access feed callback
+### Access feed callback
 
 A Data Provider receives this Service Endpoint-callback after an access feed-request.
 
 
 ## Individual
 
-### GET User Action Message Event
+### User Action Message Event
 
 An End User App can use the User Action Message Event to detect the receipt of a feed request.
 
 
-### GET Get user action message
+### Get user action message
 
 A Qiy Node Client can use this call to get the details of a received message that requires user interaction using a userActionMessageUrl extracted from a User Action Message Event.
 
 
-### POST Set feed
+### Set feed
 
 An End User App uses this call to set a Data Provider as the source for a feed request.
 
 
-### PUT Add feed
+### Add feed
 
 An End User App uses this call to add a Data Provider as a source for a feed request.
 
