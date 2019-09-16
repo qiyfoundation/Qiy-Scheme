@@ -50,7 +50,7 @@
                 ]
             }
         },
-        "/eventCallbacksEndpoint": {
+        "/EventCallbacksEndpoint": {
             "put": {
                 "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
@@ -77,9 +77,21 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
+            },
+            "get": {
+                "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
+                "operationId": "Get event callback endpoints",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/eventCallbacksResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
             }
         },
-        "/nodeCreateEndpoint": {
+        "/NodeCreateEndpoint": {
             "post": {
                 "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
                 "operationId": "Request creation of Qiy Node",
