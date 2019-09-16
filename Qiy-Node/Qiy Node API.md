@@ -234,7 +234,7 @@ The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test To
 Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-endpoint:
 
 * App authentication is provided when a dummy 'Authorization'-header parameter is provided in the request.
-* App authenticaiton and user authentication is provided when a dummy 'Authorization-node-QTN'-header parameter is provided in the request. 
+* App authentication and user authentication is provided when a dummy 'Authorization-node-QTN'-header parameter is provided in the request. 
 * App authentication, user authentication and transport authentication is provided when a dummy 'password'-header parameter is provided in the request. 
 
 The values of the mentioned header parameters are ignored.
