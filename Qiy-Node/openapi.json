@@ -71,7 +71,7 @@
                 },
                 "responses": {
                     "200": {
-                        "$ref": "#/components/responses/eventCallbacksSet"
+                        "$ref": "#/components/responses/eventCallbacksResponse"
                     },
                     "default": {
                         "$ref": "#/components/responses/default"
@@ -346,8 +346,20 @@
                     }
                 }
             },
-            "eventCallbacksSet": {
-                "description": "Event callbacks set"
+            "eventCallbacksResponse": {
+                "description": "Event callbacks set",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schema/eventCallbackEndpointUrls"
+                        }
+                    },
+                    "examples": {
+                        "example": {
+                            "$ref": "#/components/examples/eventCallbackEndpointUrls"
+                        }
+                    }
+                }
             },
             "nodeCreated": {
                 "description": "Node created"
