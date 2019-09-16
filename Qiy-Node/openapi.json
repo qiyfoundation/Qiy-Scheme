@@ -265,6 +265,7 @@
                     "password": {
                         "description": "See [Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication).",
                         "type": "string",
+                        "format": "uuid",
                         "minItems": 1,
                         "maxItems": 1
                     },
@@ -277,6 +278,7 @@
                     "id": {
                         "description": "Qiy Node id.",
                         "type": "string",
+                        "format": "uuid",
                         "minItems": 1,
                         "maxItems": 1
                     }
@@ -413,8 +415,8 @@
                 "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
             },
             "nodeCreateRequestBody": {
-                "alias": "pt_usernode_qnc_test_de",
-                "id": "pt_usernode_qnc_test_de",
+                "alias": "Your Service Provider",
+                "id": "cb06fb8e-4e48-4eb1-8b5f-a46e9eef1308",
                 "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0TK8dMRxvXp66teemQe/tzUi26LBWfkO0pWGqyzmnNO6ISALt+rgEPl5mhqztAU4xI9iE/L9dCzC3snb2OQT+2/IaV9ilt1UAmZhyuogPeTKykPRFR2oT51wWoIuG4hD0x6iBhFCorn087Te99oS1RwS1RR5wFjIs/ol3ldawZ29xemsskmPEWJ/QpfpauBxvSbZEXRy15cAWnWO9yVzizUszwNjP8Ca0/K7NKa+lOtp09egO12SBMfX871AI44wWkZqPsr+O5cpo8Srw+90dbETA1Ypno3lpel2lBMQaf0+Srmjd/bJs9dlaXCTljoLt2uvOmriDSI6eSJZ7FxH4wIDAQAB",
                 "password": "9b449623-f361-425b-bca8-8c23c159e4c0",
                 "nodeSettings": {
