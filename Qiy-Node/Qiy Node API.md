@@ -157,7 +157,7 @@ The Connections List Endpoint can be used to list connections. The current addre
 
 ### Events Endpoint
 
-The Events Endpoint can be used to receive events. The current address of the endpoint is returned in the "events"-member of the response of Get endpoint addresses.
+This endpoint can be used to [receive "Server-Sent Events"-events](#start-listening-to-events). The current address of the endpoint is returned in the "events"-member of the response of [Get endpoint addresses](#get-endpoint-addresses).
 
 ### Event Callbacks Endpoint
 
@@ -508,7 +508,7 @@ The feed-flow for a Data Provider (DP) is as follows:
 
 #### Events
 
-A Qiy Node supports a number of events. The Qiy Client can receive the events using a Server-Sent Events-listener, see Start listening to events, or using callbacks.
+A Qiy Node supports a number of events. The Qiy Client can receive the events using a Server-Sent Events-listener, see [Start listening to events](#start-listening-to-events), or using callbacks.
 
 #### Messages
 
@@ -544,7 +544,7 @@ This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used t
 
 ## Start listening to events
 
-This [Events Endpoint][API Basics Dynamic Endpoint Addresses Events Endpoint]-call can be used to start listening to [Qiy Node events](#events).
+This [Events Endpoint](#events-endpoint)-call can be used to start listening to [Qiy Node events](#events).
 
 It starts a long-living session with a heartbeat to keep the response open. 
 Every 10 seconds a 'ping' comment will be sent. If this is not received for more than that time, something has gone wrong.
