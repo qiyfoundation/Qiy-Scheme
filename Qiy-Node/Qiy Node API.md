@@ -230,7 +230,8 @@ Ensure that the following system settings are configurable to allow for smooth s
 ### Proxy server
 
 The proxy server provides an easy means to access Dev2 for taking care of the authentication.
-The proxy server can be used to create Qiy Nodes and access it via its '/qiy_nodes/<node_name>/proxy'-endpoint:
+The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool] instead.
+Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-endpoint:
 
 * App authentication is provided when a dummy 'Authorization'-header parameter is provided in the request.
 * App authenticaiton and user authentication is provided when a dummy 'Authorization-node-QTN'-header parameter is provided in the request. 
@@ -1096,3 +1097,4 @@ Please contact the [Service Desk](#service-desk).
 [Feeds Individual Set feed]: https://qiy.api.digital-me.nl/?version=latest#00faf2fd-c7c7-4d5d-b4d8-19f7a8cc55b1
 [Feeds Individual Add feed]: https://qiy.api.digital-me.nl/?version=latest#d628b6d5-057f-4ce9-9a01-2c13e785cda0
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
+[Qiy Test Tool]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
