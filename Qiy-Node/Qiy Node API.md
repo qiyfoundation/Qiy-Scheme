@@ -241,7 +241,7 @@ The values of the mentioned header parameters are ignored.
 
 ## Events
 
-This section describes the events that can be fired by a Qiy Node.
+This section describes the [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events)-events that can be fired by a Qiy Node and catched by a client using [Start listening to events](#start-listening-to-events).
 
 ### Connected to Router Event
 
