@@ -241,6 +241,8 @@ The values of the mentioned header parameters are ignored.
 
 ## Events
 
+This section describes the events that can be fired by a Qiy Node.
+
 ### Connected to Router Event
 
 This event is fired after a request for a connection and can be used to monitor the creation of a connection.
