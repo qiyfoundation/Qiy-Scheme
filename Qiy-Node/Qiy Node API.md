@@ -119,7 +119,7 @@ echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [$
 
 ### Transport Authentication
 
-Some request have a mandatory 'password'-header parameter, because they use the Transport Layer which requires authentication with a Transport Password.
+Some request require Transport Authentication in order to access the Transport Layer. Authentication can be achieved by providing the Transport Password, a uuid, in the 'password'-header parameter.
 
 ## Dynamic Endpoint Addresses
 
@@ -224,7 +224,7 @@ Ensure that the following system settings are configurable to allow for smooth s
 * server url
 * Qiy Node Id
 * Qiy Node private key
-* Transport password
+* Transport Password
 * API key
 
 ### Proxy server
