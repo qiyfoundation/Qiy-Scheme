@@ -548,8 +548,8 @@ This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used t
 
 This [Events Endpoint](#events-endpoint)-call can be used to [start listening][Nodes Start listening to events] to [Qiy Node events](#events).
 
-It starts a long-living session with a heartbeat to keep the response open. 
-Every 10 seconds a 'ping' comment will be sent. If this is not received for more than that time, something has gone wrong.
+It starts a long-living session with a heartbeat to keep the session open. 
+Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
 
 
 ## Get node settings
