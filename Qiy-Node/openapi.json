@@ -50,15 +50,10 @@
                 ]
             }
         },
-        "/nodesettings/{nodeId}/eventcallbacks": {
+        "/eventCallbacksEndpoint": {
             "put": {
                 "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
-                "parameters": [
-                    {
-                        "$ref": "#/components/parameters/nodeId"
-                    }
-                ],
                 "requestBody": {
                     "description": "Callback endpoint urls",
                     "content": {
@@ -84,7 +79,7 @@
                 }
             }
         },
-        "/owners": {
+        "/nodeCreateEndpoint": {
             "post": {
                 "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
                 "operationId": "Request creation of Qiy Node",
@@ -358,18 +353,7 @@
                 "description": "Node created"
             }
         },
-        "parameters": {
-            "nodeId": {
-                "name": "nodeId",
-                "in": "path",
-                "description": "Qiy Node Id",
-                "required": true,
-                "schema": {
-                    "description": "Qiy Node Id",
-                    "type": "string"
-                }
-            }
-        },
+        "parameters": {},
         "examples": {
             "apiGetAppAuthenticated": {
                 "links": {
