@@ -95,17 +95,6 @@
             "get": {
                 "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
                 "operationId": "Start listening to events",
-                "parameters": [
-                    {
-                        "name": "Accept",
-                        "in": "header",
-                        "required": true,
-                        "schema": {
-                            "type": "string",
-                            "pattern": "text/event-stream"
-                        }
-                    }
-                ],
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/eventsResponse"
@@ -401,9 +390,7 @@
             "eventsResponse": {
                 "description": "Events",
                 "content": {
-                    "text/event-stream": {
-                        
-                    },
+                    "text/event-stream": {},
                     "examples": {
                         "example": {
                             "$ref": "#/components/examples/eventsResponseExample"
@@ -460,7 +447,7 @@
                 "DATA_REFERENCE_RECEIVED2": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dataReferenceReceivedCallbackEndpointUrl",
                 "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
             },
-            "eventsResponseExample": ":ping\n:ping\n",
+            "eventsResponseExample": ":ping",
             "nodeCreateRequestBody": {
                 "alias": "Your Service Provider",
                 "id": "cb06fb8e-4e48-4eb1-8b5f-a46e9eef1308",
