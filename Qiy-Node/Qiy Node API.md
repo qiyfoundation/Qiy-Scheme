@@ -210,11 +210,11 @@ This endpoint can be used to create off line connect tokens. The current address
 The Qiy Node service runs in a a development environment, the acceptance environment and the production environment. In addition, a proxy service is provided for discovery, experimentation, and evaluation.
 The server urls are:
 
-| Server Name      | Server url                                                                  |
-| ---------------- | --------------------------------------------------------------------------- |
-| Proxy            | https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy |
-| Dev2             | https://dev2-user.testonly.digital-me.nl/user                               |
-| Acceptance       | https://user.dolden.net/user                                                |
+| Server Name      | Server url                                                          |
+| ---------------- | ------------------------------------------------------------------- |
+| Proxy            | https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy |
+| Dev2             | https://dev2-user.testonly.digital-me.nl/user                       |
+| Acceptance       | https://user.dolden.net/user                                        |
     
 
 The server url of the Production environment will be given during the entry-transition phase, when your Qiy Trust Based solution will go live.
@@ -551,7 +551,7 @@ This [Events Endpoint](#events-endpoint)-call can be used to [start listening][N
 It starts a long-living session with a heartbeat to keep the session open. 
 Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
 
-The [Qiy Test Tool][Qiy Test Tool] can be used to monitor the events of a Qiy Node using the 'qiy_nodes/<node_name>/events'-path, see for example [https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/events](https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/events).
+The [Qiy Test Tool][Qiy Test Tool] can be used to monitor the events of a Qiy Node using the 'qiy_nodes/<node_name>/events'-path, see for example [http://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/events](http://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/events).
 
 ## Get node settings
 
