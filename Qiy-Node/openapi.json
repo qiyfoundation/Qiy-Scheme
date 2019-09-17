@@ -179,6 +179,25 @@
                     }
                 ]
             }
+        },
+        "/SelfEndpoint": {
+            "delete": {
+                "description": "See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)",
+                "operationId": "Delete Qiy Node",
+                "responses": {
+                    "201": {
+                        "$ref": "#/components/responses/nodeDeleted"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                },
+                "security": [
+                    {
+                        "appAuthentication": []
+                    }
+                ]
+            }
         }
     },
     "components": {
@@ -467,6 +486,9 @@
             },
             "nodeCreated": {
                 "description": "Node created"
+            },
+            "nodeDeleted": {
+                "description": "Node deleted"
             }
         },
         "parameters": {},
