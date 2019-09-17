@@ -15,15 +15,15 @@
     },
     "servers": [
         {
-            "url": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1",
+            "url": "https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy",
             "description": "Proxy server"
         },
         {
-            "url": "https://dev2-user.testonly.digital-me.nl/user/v1",
+            "url": "https://dev2-user.testonly.digital-me.nl/user",
             "description": "Development 2 server"
         },
         {
-            "url": "https://user.dolden.net/user/v1",
+            "url": "https://user.dolden.net/user",
             "description": "Acceptance server"
         }
     ],
