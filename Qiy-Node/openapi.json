@@ -91,6 +91,47 @@
                 }
             }
         },
+        "/NodeSettingsEndpoint": {
+            "get": {
+                "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
+                "operationId": "Get node settings",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/nodeSettingsResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "put": {
+                "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
+                "operationId": "Set node settings",
+                "requestBody": {
+                    "description": "Node settings",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/nodeSettings"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/nodeSettings"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/nodeSettingsResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/EventsEndpoint": {
             "get": {
                 "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
@@ -305,6 +346,17 @@
                     }
                 }
             },
+            "nodeSettings": {
+                "type": "object",
+                "properties": {
+                    "askDappre": {
+                        "type": "string"
+                    },
+                    "usePersistentId": {
+                        "type": "string"
+                    }
+                }
+            },
             "userAuthentication": {
                 "description": "Also requires app authentication, see [Qiy Node User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-authentication)",
                 "type": "apiKey",
@@ -387,6 +439,21 @@
                     }
                 }
             },
+            "nodeSettingsResponse": {
+                "description": "Node settings",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schema/nodeSettings"
+                        }
+                    },
+                    "examples": {
+                        "example": {
+                            "$ref": "#/components/examples/nodeSettings"
+                        }
+                    }
+                }
+            },
             "eventsResponse": {
                 "description": "Events",
                 "content": {
@@ -457,6 +524,10 @@
                     "askDappre": "no",
                     "usePersistentId": "yes"
                 }
+            },
+            "nodeSettings": {
+                "askDappre": "no",
+                "usePersistentId": "yes"
             }
         },
         "securitySchemes": {
