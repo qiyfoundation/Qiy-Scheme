@@ -551,7 +551,7 @@ This [Events Endpoint](#events-endpoint)-call can be used to [start listening][N
 It starts a long-living session with a heartbeat to keep the session open. 
 Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
 
-The [Qiy Test Tool][Qiy Test Tool] can be used to monitor the events of a Qiy Node using the 'qiy_nodes/<node_name>/events'-path, see for example [http://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/events](http://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/events).
+The [Qiy Test Tool][Qiy Test Tool] can be used to monitor the events of a Qiy Node using the 'qiy_nodes/<node_name>/events'-path, see for example [https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/events](https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/events).
 
 ## Get node settings
 
