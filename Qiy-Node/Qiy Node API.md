@@ -233,11 +233,12 @@ The proxy server provides an easy means to access Dev2 for taking care of the au
 The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool] instead.
 Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-endpoint:
 
-* App authentication is provided when a dummy 'Authorization'-header parameter is provided in the request.
-* App authentication and user authentication is provided when a dummy 'Authorization-node-QTN'-header parameter is provided in the request. 
-* App authentication, user authentication and transport authentication is provided when a dummy 'password'-header parameter is provided in the request. 
+* App authentication is provided when an 'Authorization'-header parameter is provided in the request.
+* App authentication and user authentication is provided when an 'Authorization-node-QTN'-header parameter is provided in the request. 
+* App authentication, user authentication and transport authentication is provided when a 'password'-header parameter is provided in the request. 
 
-The values of the mentioned header parameters are ignored.
+The values of the 'Autorization-node-QTN'-header parameter and the 'password'-header parameters are always ignored.
+The value of the 'Autorization'-header parameter is reused when basic authentication is used and ignored otherwise.
 
 ## Events
 
