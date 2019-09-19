@@ -53,6 +53,44 @@
                 ]
             }
         },
+        "/ConnectTokenCreateEndpoint": {
+            "post": {
+                "tags": [
+                    "connect token",
+                    "lifecycle"
+                ],
+                "description": "See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connect-token)",
+                "operationId": "Request connect token",
+                "requestBody": {
+                    "description": "Connect token",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/connectTokenCreateRequestBody"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/connectTokenCreateRequestBody"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "$ref": "#/components/responses/connectTokenCreated"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                },
+                "security": [
+                    {
+                        "transportAuthentication": []
+                    }
+                ]
+            }
+        },
         "/EventCallbacksEndpoint": {
             "put": {
                 "tags": [
@@ -398,6 +436,185 @@
                     }
                 }
             },
+            "connectToken": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyCreated"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyExpires"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyJson"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyLastUsed"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyLinks"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyName"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyUseBudget"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyUseSpend"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyValid"
+                    }
+                ]
+            },
+            "connectTokenCreateRequestBody": {
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyExpires"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyName"
+                    },
+                    {
+                        "$ref": "#/components/schemas/connectTokenPropertyUseBudget"
+                    }
+                ]
+            },
+            "connectTokenPropertyCreated": {
+                "type": "object",
+                "properties": {
+                    "created": {
+                        "description": "Creation datetimestamp",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "maxItems": 1
+                    }
+                }
+            },
+            "connectTokenPropertyExpires": {
+                "type": "object",
+                "properties": {
+                    "expires": {
+                        "description": "Expiration datetime",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "nullable": true,
+                        "default": null,
+                        "minItems": 0,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "connectTokenPropertyJson": {
+                "type": "object",
+                "properties": {
+                    "json": {
+                        "description": "Connect token json",
+                        "type": "object",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "tmpSecret": {
+                                "type": "string"
+                            },
+                            "target": {
+                                "type": "string",
+                                "format": "url"
+                            }
+                        }
+                    }
+                }
+            },
+            "connectTokenPropertyLastUsed": {
+                "type": "object",
+                "properties": {
+                    "lastUsed": {
+                        "description": "Last used datetimestamp",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "nullable": true,
+                        "default": null,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "connectTokenPropertyLinks": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "Connect token links",
+                        "type": "object",
+                        "minItems": 1,
+                        "maxItems": 1,
+                        "properties": {
+                            "delete": {
+                                "type": "string",
+                                "format": "url"
+                            },
+                            "self": {
+                                "type": "string",
+                                "format": "url"
+                            },
+                            "update": {
+                                "type": "string",
+                                "format": "url"
+                            }
+                        }
+                    }
+                }
+            },
+            "connectTokenPropertyName": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true,
+                        "default": null,
+                        "minItems": 0,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "connectTokenPropertyUseBudget": {
+                "type": "object",
+                "properties": {
+                    "useBudget": {
+                        "description": "Number of connections that can be created with the connect token",
+                        "type": "number",
+                        "nullable": true,
+                        "default": null,
+                        "minItems": 0,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "connectTokenPropertyUseSpend": {
+                "type": "object",
+                "properties": {
+                    "useSpend": {
+                        "description": "Number of connections that have been created with the connect token",
+                        "type": "number",
+                        "nullable": true,
+                        "default": null,
+                        "minItems": 0,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "connectTokenPropertyValid": {
+                "type": "object",
+                "properties": {
+                    "valid": {
+                        "description": "Whether the connect token can be used or not",
+                        "type": "boolean",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "eventCallbackEndpointUrls": {
                 "type": "object",
                 "properties": {
@@ -509,6 +726,21 @@
                             },
                             "apiGetUserAuthenticated": {
                                 "$ref": "#/components/examples/apiGetUserAuthenticated"
+                            }
+                        }
+                    }
+                }
+            },
+            "connectTokenCreated": {
+                "description": "Connect token created",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/connectToken"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/connectTokenNew"
                             }
                         }
                     }
@@ -652,6 +884,44 @@
                         "message": "Authentication required!"
                     }
                 ]
+            },
+            "connectTokenCreateRequestBody": {
+                "expires": 2349020398,
+                "useBudget": 1
+            },
+            "connectTokenNew": {
+                "created": 1542882407000,
+                "json": {
+                    "identifier": "mgd_dev2",
+                    "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                    "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                },
+                "lastUsed": null,
+                "links": {
+                    "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                    "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                    "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
+                },
+                "useBudget": 1,
+                "useSpend": 0,
+                "valid": true
+            },
+            "connectTokenUsed": {
+                "created": 1542882407000,
+                "json": {
+                    "identifier": "mgd_dev2",
+                    "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                    "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                },
+                "lastUsed": 1542882800000,
+                "links": {
+                    "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                    "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                    "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
+                },
+                "useBudget": 1,
+                "useSpend": 1,
+                "valid": true
             },
             "eventCallbackEndpointUrls": {
                 "DATA_REFERENCE_RECEIVED2": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dataReferenceReceivedCallbackEndpointUrl",
