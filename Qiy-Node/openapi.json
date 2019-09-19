@@ -30,6 +30,9 @@
     "paths": {
         "/api": {
             "get": {
+                "tags": [
+                    "api"
+                ],
                 "description": "See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#api-info) and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)",
                 "operationId": "api",
                 "responses": {
@@ -52,6 +55,9 @@
         },
         "/EventCallbacksEndpoint": {
             "put": {
+                "tags": [
+                    "node"
+                ],
                 "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
                 "requestBody": {
@@ -79,6 +85,9 @@
                 }
             },
             "get": {
+                "tags": [
+                    "node"
+                ],
                 "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
                 "operationId": "Get event callback endpoints",
                 "responses": {
@@ -93,6 +102,9 @@
         },
         "/NodeSettingsEndpoint": {
             "get": {
+                "tags": [
+                    "node"
+                ],
                 "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
                 "operationId": "Get node settings",
                 "responses": {
@@ -105,6 +117,9 @@
                 }
             },
             "put": {
+                "tags": [
+                    "node"
+                ],
                 "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
                 "operationId": "Set node settings",
                 "requestBody": {
@@ -134,6 +149,9 @@
         },
         "/EventsEndpoint": {
             "get": {
+                "tags": [
+                    "node"
+                ],
                 "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
                 "operationId": "Start listening to events",
                 "responses": {
@@ -148,6 +166,10 @@
         },
         "/NodeCreateEndpoint": {
             "post": {
+                "tags": [
+                    "node",
+                    "lifecycle"
+                ],
                 "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
                 "operationId": "Request creation of Qiy Node",
                 "requestBody": {
@@ -182,6 +204,10 @@
         },
         "/SelfEndpoint": {
             "delete": {
+                "tags": [
+                    "node",
+                    "lifecycle"
+                ],
                 "description": "See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)",
                 "operationId": "Delete Qiy Node",
                 "responses": {
@@ -197,6 +223,55 @@
                         "appAuthentication": []
                     }
                 ]
+            }
+        },
+        "/ServiceCatalogueEndpoint": {
+            "get": {
+                "tags": [
+                    "node",
+                    "service"
+                ],
+                "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
+                "operationId": "Get service catalogue",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/serviceCatalogueResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "node",
+                    "service"
+                ],
+                "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
+                "operationId": "Set service catalogue",
+                "requestBody": {
+                    "description": "Service catalogue",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/serviceCatalogue"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/serviceCatalogue"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/serviceCatalogueResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
             }
         }
     },
@@ -376,14 +451,45 @@
                     }
                 }
             },
-            "userAuthentication": {
-                "description": "Also requires app authentication, see [Qiy Node User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-authentication)",
+            "serviceCatalogue": {
+                "type": "object",
+                "x-patternProperties": {
+                    "https?://[a-z0-9]+([-./]?[a-z0-9])*": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "external",
+                                    "internal"
+                                ]
+                            },
+                            "uri": {
+                                "description": "Feed request endpoint url",
+                                "type": "string",
+                                "format": "url"
+                            },
+                            "method": {
+                                "type": "string",
+                                "enum": [
+                                    "GET",
+                                    "POST",
+                                    "PUT",
+                                    "SET"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "transportAuthentication": {
+                "description": "Also requires user authentication, see [Qiy Node Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication)",
                 "type": "apiKey",
                 "name": "Authorization-node-QTN",
                 "in": "header"
             },
-            "transportAuthentication": {
-                "description": "Also requires user authentication, see [Qiy Node Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication)",
+            "userAuthentication": {
+                "description": "Also requires app authentication, see [Qiy Node User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-authentication)",
                 "type": "apiKey",
                 "name": "Authorization-node-QTN",
                 "in": "header"
@@ -489,6 +595,21 @@
             },
             "nodeDeleted": {
                 "description": "Node deleted"
+            },
+            "serviceCatalogueResponse": {
+                "description": "Service catalogue",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schema/serviceCatalogue"
+                        }
+                    },
+                    "examples": {
+                        "example": {
+                            "$ref": "#/components/examples/serviceCatalogue"
+                        }
+                    }
+                }
             }
         },
         "parameters": {},
@@ -550,6 +671,13 @@
             "nodeSettings": {
                 "askDappre": "no",
                 "usePersistentId": "yes"
+            },
+            "serviceCatalogue": {
+                "https://service-type-url.example": {
+                    "type": "external",
+                    "uri": "https://feed-request-endpoint-url.example",
+                    "method": "POST"
+                }
             }
         },
         "securitySchemes": {
