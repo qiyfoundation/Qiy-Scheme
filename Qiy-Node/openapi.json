@@ -125,6 +125,30 @@
                         "$ref": "#/components/responses/default"
                     }
                 },
+                "callbacks": {
+                    "stateHandledCallback": {
+                        "stateHandledCallbackEndpointUrl": {
+                            "post": {
+                                "requestBody": {
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "$ref": "#/components/schemas/stateHandledEventData"
+                                            },
+                                            "examples": {
+                                                "example": {
+                                                    "$ref": "#/components/examples/stateHandledEventData"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": true
+                                }
+                            }
+                        }
+                    },
+                    "stateHandledEvent": {}
+                },
                 "security": [
                     {
                         "transportAuthentication": []
@@ -743,6 +767,52 @@
                     }
                 }
             },
+            "stateHandledEventData": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "STATE_HANDLED"
+                        ],
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "connectionUrl": {
+                        "description": "Connection url of the new connection with the Qiy Node",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "extraData": {
+                        "type": "object",
+                        "properties": {
+                            "newUri": {
+                                "description": "Connection url of the first connection with the Qiy Node",
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "connectToken": {
+                                "description": "Connection token url of the connect token that was used to create the connection",
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "PID": {
+                                "type": "string",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "transportAuthentication": {
                 "description": "Also requires user authentication, see [Qiy Node Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication)",
                 "type": "apiKey",
@@ -1008,6 +1078,15 @@
                     "type": "external",
                     "uri": "https://feed-request-endpoint-url.example",
                     "method": "POST"
+                }
+            },
+            "stateHandledEventData": {
+                "type": "STATE_HANDLED",
+                "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
+                "extraData": {
+                    "newUri": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/ce5b2dd5-1bdd-41aa-b0ad-d0afa2e9a3cb",
+                    "connectToken": "https://dev1-user.testonly.digital-me.nl/user/connecttokens/509f79f8-6562-49cd-bb24-4163557d7e59/7ced41dc-76ff-469e-9fa0-3f34c73d0a2b",
+                    "PID": "9GqX94/EoOcD47hCvBQ+eg=="
                 }
             }
         },
