@@ -100,53 +100,6 @@
                 }
             }
         },
-        "/NodeSettingsEndpoint": {
-            "get": {
-                "tags": [
-                    "node"
-                ],
-                "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
-                "operationId": "Get node settings",
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/nodeSettingsResponse"
-                    },
-                    "default": {
-                        "$ref": "#/components/responses/default"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "node"
-                ],
-                "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
-                "operationId": "Set node settings",
-                "requestBody": {
-                    "description": "Node settings",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/nodeSettings"
-                            },
-                            "examples": {
-                                "example": {
-                                    "$ref": "#/components/examples/nodeSettings"
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/nodeSettingsResponse"
-                    },
-                    "default": {
-                        "$ref": "#/components/responses/default"
-                    }
-                }
-            }
-        },
         "/EventsEndpoint": {
             "get": {
                 "tags": [
@@ -200,6 +153,53 @@
                         "appAuthentication": []
                     }
                 ]
+            }
+        },
+        "/NodeSettingsEndpoint": {
+            "get": {
+                "tags": [
+                    "node"
+                ],
+                "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
+                "operationId": "Get node settings",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/nodeSettingsResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "node"
+                ],
+                "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
+                "operationId": "Set node settings",
+                "requestBody": {
+                    "description": "Node settings",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/nodeSettings"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/nodeSettings"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/nodeSettingsResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
             }
         },
         "/SelfEndpoint": {
@@ -564,21 +564,6 @@
                     }
                 }
             },
-            "nodeSettingsResponse": {
-                "description": "Node settings",
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schema/nodeSettings"
-                        }
-                    },
-                    "examples": {
-                        "example": {
-                            "$ref": "#/components/examples/nodeSettings"
-                        }
-                    }
-                }
-            },
             "eventsResponse": {
                 "description": "Events",
                 "content": {
@@ -595,6 +580,21 @@
             },
             "nodeDeleted": {
                 "description": "Node deleted"
+            },
+            "nodeSettingsResponse": {
+                "description": "Node settings",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schema/nodeSettings"
+                        }
+                    },
+                    "examples": {
+                        "example": {
+                            "$ref": "#/components/examples/nodeSettings"
+                        }
+                    }
+                }
             },
             "serviceCatalogueResponse": {
                 "description": "Service catalogue",
