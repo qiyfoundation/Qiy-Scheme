@@ -53,6 +53,44 @@
                 ]
             }
         },
+        "/ConnectionCreateEndpoint": {
+            "post": {
+                "tags": [
+                    "connection",
+                    "lifecycle"
+                ],
+                "description": "See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connection)",
+                "operationId": "Request connection",
+                "requestBody": {
+                    "description": "Connect token json",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/connectTokenPropertyJson"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/connectTokenJson"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "$ref": "#/components/responses/connectionCreated"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                },
+                "security": [
+                    {
+                        "transportAuthentication": []
+                    }
+                ]
+            }
+        },
         "/ConnectTokenCreateEndpoint": {
             "post": {
                 "tags": [
@@ -737,6 +775,9 @@
                     }
                 }
             },
+            "connectionCreated": {
+                "description": "Connection created"
+            },
             "connectTokenCreateEndpointPostRequest": {
                 "description": "Connect token created or registered",
                 "content": {
@@ -903,6 +944,11 @@
                     "tmpSecret": "9paMAI61N6b5dPCCYD4IiS==",
                     "target": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/sp1connectTokenOffline2target"
                 }
+            },
+            "connectTokenJson": {
+                "identifier": "mgd_dev2",
+                "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
             },
             "connectTokenNew": {
                 "created": 1542882407000,
