@@ -84,6 +84,11 @@
                         "$ref": "#/components/responses/default"
                     }
                 },
+                "x-events": {
+                    "stateHandled": {
+                        "$ref": "#/components/x-events/stateHandled"
+                    }
+                },
                 "security": [
                     {
                         "transportAuthentication": []
@@ -1099,6 +1104,14 @@
             },
             "userAuthentication": {
                 "$ref": "#/components/schemas/userAuthentication"
+            }
+        },
+        "x-events": {
+            "stateHandled": {
+                "event": "STATE_HANDLED",
+                "data": {
+                    "$ref": "#/components/schemas/stateHandledEventData"
+                }
             }
         }
     },
