@@ -246,7 +246,7 @@
                 },
                 "x-events": {
                     "stateHandled": {
-                        "$ref": "#/components/x-eventsstaeHandled"
+                        "$ref": "#/components/x-events/stateHandled"
                     }
                 },
                 "security": [
@@ -660,6 +660,14 @@
                     },
                     "default": {
                         "$ref": "#/components/responses/default"
+                    }
+                },
+                "callbacks": {
+                    "feedRequest": {
+                        "$ref": "#/components/callbacks/feedRequest"
+                    },
+                    "accessFeed": {
+                        "$ref": "#/components/callbacks/accessFeed"
                     }
                 }
             }
@@ -1415,6 +1423,68 @@
                     }
                 }
             },
+            "serviceEndpointFeedAccessRequest": {
+                "type": "object",
+                "x-patternProperties": {
+                    "[\\x00-\\x7F]+": {
+                        "type": "object",
+                        "properties": {
+                            "input": {
+                                "description": "Optional body for the access request for the given feed id",
+                                "type": "string",
+                                "format": "base64-encoded byte array",
+                                "nullable": true,
+                                "minItems": 0,
+                                "default": null,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "serviceEndpointFeedRequest": {
+                "type": "object",
+                "properties": {
+                    "connection": {
+                        "description": "Connection url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "mbox": {
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "message": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/message"
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "thirdPartyRef": {
+                                        "type": "string",
+                                        "format": "ascii no whitespace",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    }
+                                },
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                       ]
+                    },
+                    "pid": {
+                        "type": "",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "stateHandled": {
                 "type": "object",
                 "properties": {
@@ -2123,6 +2193,24 @@
                     "method": "POST"
                 }
             },
+            "serviceEndpointFeedAccessRequest": {
+            	"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+            		"input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+            	}
+            },
+            "serviceEndpointFeedRequest": {
+                "connection": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl",
+                "message": {
+                    "inbound": true,
+                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                    "sent": false,
+                    "serialNr": 6,
+                    "text": "Requesting 'test data'",
+                    "thirdPartyRef": " 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI="
+                },
+                "mbox": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox",
+                "pid": "1IqX94/EoOcD47hCvBQ+gi=="
+            },
             "stateHandled": {
                 "type": "STATE_HANDLED",
                 "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
@@ -2145,6 +2233,27 @@
             }
         },
         "callbacks": {
+            "accessFeed": {
+                "$serviceEndpointUrl": {
+                    "post": {
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/serviceEndpointFeedAccessRequest"
+                                    },
+                                    "examples": {
+                                        "example": {
+                                            "$ref": "#/components/examples/serviceEndpointFeedAccessRequest"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                }
+            },
             "dataReferenceReceivedv2": {
                 "$dataReferenceReceivedv2EndpointUrl": {
                     "post": {
@@ -2157,6 +2266,27 @@
                                     "examples": {
                                         "example": {
                                             "$ref": "#/components/examples/dataReferenceReceivedv2"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "feedRequest": {
+                "$serviceEndpointUrl": {
+                    "post": {
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/serviceEndpointFeedRequest"
+                                    },
+                                    "examples": {
+                                        "example": {
+                                            "$ref": "#/components/examples/serviceEndpointFeedRequest"
                                         }
                                     }
                                 }
