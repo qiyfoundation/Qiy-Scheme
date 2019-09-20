@@ -1799,16 +1799,22 @@
             }
         },
         "x-events": {
-            "stateHandled": {
-                "event": "STATE_HANDLED",
+            "dataReferenceReceivedv2": {
+                "event": "DATA_REFERENCE_RECEIVED2",
                 "data": {
-                    "$ref": "#/components/schemas/stateHandled"
+                    "$ref": "#/components/schemas/dataReferenceReceivedv2"
                 }
             },
             "routingFailed": {
                 "event": "ROUTING_FAILED",
                 "data": {
                     "$ref": "#/components/schemas/routingFailed"
+                }
+            },
+            "stateHandled": {
+                "event": "STATE_HANDLED",
+                "data": {
+                    "$ref": "#/components/schemas/stateHandled"
                 }
             }
         }
