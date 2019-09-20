@@ -145,7 +145,7 @@
                 },
                 "responses": {
                     "201": {
-                        "$ref": "#/components/responses/feed"
+                        "$ref": "#/components/responses/feedRequestResponse"
                     },
                     "default": {
                         "$ref": "#/components/responses/default"
@@ -342,6 +342,37 @@
             }
         },
         "/FeedsEndpoint": {
+            "get": {
+                "tags": [
+                    "feed"
+                ],
+                "description": "See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-feeds)",
+                "operationId": "List feeds",
+                "x-url": "$FeedsEndpointUrl",
+                "requestBody": {
+                    "description": "List feeds",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/feedList"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/feedList"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/feedList"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
             "post": {
                 "tags": [
                     "feed",
@@ -367,7 +398,7 @@
                 },
                 "responses": {
                     "200": {
-                        "$ref": "#/components/responses/feedsResponse"
+                        "$ref": "#/components/responses/feedsAccessResponse"
                     },
                     "default": {
                         "$ref": "#/components/responses/default"
@@ -404,7 +435,7 @@
                 },
                 "responses": {
                     "200": {
-                        "$ref": "#/components/responses/feedResponse"
+                        "$ref": "#/components/responses/feedAccessResponse"
                     },
                     "default": {
                         "$ref": "#/components/responses/default"
@@ -1079,20 +1110,47 @@
                     }
                 }
             },
-            "feed": {
+            "feedDetails": {
                 "type": "object",
                 "properties": {
+                    "connection": {
+                        "description": "Connection url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": "1",
+                        "maxItems": "1"
+                    },
+                    "created": {
+                        "description": "Creation datetimestamp",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "minItems": "1",
+                        "maxItems": "1"
+                    },
+                    "lastUpdated": {
+                        "description": "Last updated datetimestamp",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "minItems": "1",
+                        "maxItems": "1"
+                    },
                     "protocol": {
                         "description": "Service type url",
                         "type": "string",
                         "format": "url",
-                        "minItems": 1,
-                        "maxItems": 1
+                        "minItems": "1",
+                        "maxItems": "1"
                     },
-                    "feedId": {
+                    "status": {
+                        "description": "Feed status",
                         "type": "string",
-                        "minItems": 1,
-                        "maxItems": 1
+                        "enum": [
+                            "Created",
+                            "Message sent",
+                            "Sending message failed"
+                        ],
+                        "minItems": "1",
+                        "maxItems": "1"
                     }
                 }
             },
@@ -1101,13 +1159,21 @@
                 "type": "string",
                 "format": "ascii no whitespace"
             },
+            "feedList": {
+                "type": "object",
+                "x-patternProperties": {
+                    "[\\x00-\\x7F]+": {
+                        "$ref": "#/components/schemas/feedDetails"
+                    }
+                }
+            },
             "feedRequest": {
                 "type": "object",
                 "properties": {
                     "input": {
-                        "description": "Feed request body",
+                        "description": "Optional body for Feed request callback body",
                         "type": "string",
-                        "format": "base64-encoded",
+                        "format": "base64-encoded byte array",
                         "nullable": true,
                         "minItems": 0,
                         "default": null,
@@ -1128,7 +1194,24 @@
                     }
                 }
             },
-            "feedResponse": {
+            "feedRequestResponse": {
+                "type": "object",
+                "properties": {
+                    "protocol": {
+                        "description": "Service type url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "feedId": {
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "feedAccessResponse": {
                 "description": "The feed response format is described in the service type description"
             },
             "feedsAccessRequest": {
@@ -1150,7 +1233,7 @@
                     }
                 }
             },
-            "feedsResponse": {
+            "feedsAccessResponse": {
                 "type": "object",
                 "x-patternProperties": {
                     "[\\x00-\\x7F]+": {
@@ -1523,46 +1606,61 @@
                     }
                 }
             },
-            "feed": {
-                "description": "Feed",
+            "feedRequestResponse": {
+                "description": "Feed request response",
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schemas/feed"
+                            "$ref": "#/components/schemas/feedRequestResponse"
                         },
                         "examples": {
                             "feed": {
-                                "$ref": "#/components/examples/feed"
+                                "$ref": "#/components/examples/feedRequestResponse"
                             }
                         }
                     }
                 }
             },
-            "feedResponse": {
-                "description": "Feed response",
+            "feedAccessResponse": {
+                "description": "Feed access response",
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schemas/feedResponse"
+                            "$ref": "#/components/schemas/feedAccessResponse"
                         },
                         "examples": {
                             "Feed response": {
-                                "$ref": "#/components/examples/feedResponse"
+                                "$ref": "#/components/examples/feedAccessResponse"
                             }
                         }
                     }
                 }
             },
-            "feedsResponse": {
-                "description": "Feeds response",
+            "feedList": {
+                "description": "Feed list",
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schemas/feedsResponse"
+                            "$ref": "#/components/schemas/feedList"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/feedList"
+                            }
+                        }
+                    }
+                }
+            },
+            "feedsAccessResponse": {
+                "description": "Feeds access response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/feedsAccessResponse"
                         },
                         "examples": {
                             "Feeds response": {
-                                "$ref": "#/components/examples/feedsResponse"
+                                "$ref": "#/components/examples/feedsAccessResponse"
                             }
                         }
                     }
@@ -1852,16 +1950,7 @@
                     "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
                 }
             },
-            "feed": {
-                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
-                "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
-            },
-            "feedRequest": {
-                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
-                "text": "Requesting feed.",
-                "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
-            },
-            "feedResponse": {
+            "feedAccessResponse": {
                 "activities-heart": [
                     {
                         "customHeartRateZones": [],
@@ -1926,7 +2015,54 @@
                     "datasetType": "minute"
                 }
             },
-            "feedsResponse": { 
+            "feedList": {
+                "QZJ5MOWNEXARVTTBWMYZAO7ISYOQQOAU": {
+                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
+                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                    "lastUpdated": 1565083591687,
+                    "created": 1565083591605,
+                    "status": "Created"
+                },
+                "CE22UFPUKSW77IA26A2OKHVKEA3RU6ES": {
+                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
+                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                    "lastUpdated": 1565083781626,
+                    "created": 1565083781575,
+                    "status": "Message sent"
+                },
+                "PYSSVYZLIDBI5YDGHA6ONFWMTON4T2U3": {
+                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3",
+                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                    "lastUpdated": 1564985247945,
+                    "created": 1564985247891,
+                    "status": "Sending message failed"
+                },
+                "RIUDDVYZLIDBI5YDGHAONFWMTON4INH78": {
+                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3",
+                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                    "lastUpdated": 1564985247945,
+                    "created": 1564985247891,
+                    "status": "Ready to resolve"
+                }
+            },
+            "feedRequest": {
+                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                "text": "Requesting feed.",
+                "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+            },
+            "feedRequestResponse": {
+                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
+            },
+            "feedsAccessRequest": {
+                "{{feed_id1}}": {
+                    "input": "<optional json member with base-64 encrypted byte array>"
+                },
+                "{{feed_id2}}": {
+                    "input": "<optional json member with base-64 encrypted byte array>"
+                }
+            },
+            "feedsAccessResponse": { 
                 "<feed_id1>": {
                     "content-type": "application/xml",
                     "output": "<base64-encoded feed_id1 access response>"
@@ -1936,15 +2072,6 @@
                     "output": "<base64-encoded feed_id2 access response>"
                 } 
                 
-            }                
-            ,
-            "feedsAccessRequest": {
-                "{{feed_id1}}": {
-                    "input": "<optional json member with base-64 encrypted byte array>"
-                },
-                "{{feed_id2}}": {
-                    "input": "<optional json member with base-64 encrypted byte array>"
-                }
             },
             "messageList": {
                 "result": [
