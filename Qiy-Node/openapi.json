@@ -296,6 +296,23 @@
                 }
             }
         },
+        "/MailboxEndpoint": {
+            "get": {
+                "tags": [
+                    "mail"
+                ],
+                "description": "See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-messages)",
+                "operationId": "List messages",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/messageList"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/NodeCreateEndpoint": {
             "post": {
                 "tags": [
@@ -656,7 +673,9 @@
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/connection"
-                        }
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
                     }
                 }
             },
@@ -859,6 +878,67 @@
                     }
                 }
             },
+            "message": {
+                "type": "object",
+                "properties": {
+                    "inbound": {
+                        "type": "boolean",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "payload": {
+                        "description": "",
+                        "type": "string",
+                        "format": "base64-encoded",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "processed": {
+                        "type": "boolean",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "protocol": {
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "refSerialNr": {
+                        "type": "number",
+                        "minItems": 0,
+                        "maxItems": 1
+                    },
+                    "sent": {
+                        "type": "boolean",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "serialNr": {
+                        "type": "number",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "text": {
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "messageList": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/message"
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "nodeCreateRequestBody": {
                 "type": "object",
                 "properties": {
@@ -1054,6 +1134,21 @@
             "connectionCreated": {
                 "description": "Connection created"
             },
+            "connectionList": {
+                "description": "Connection list",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/connectionList"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/connectionList"
+                            }
+                        }
+                    }
+                }
+            },
             "connectToken": {
                 "description": "Connect token",
                 "content": {
@@ -1156,6 +1251,21 @@
                     "examples": {
                         "example": {
                             "$ref": "#/components/examples/eventsResponseExample"
+                        }
+                    }
+                }
+            },
+            "messageList": {
+                "description": "Message list",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/messageList"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/messageList"
+                            }
                         }
                     }
                 }
@@ -1383,6 +1493,29 @@
                 "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
             },
             "eventsResponseExample": ":ping",
+            "messageList": {
+                "result": [
+                    {
+                        "inbound": false,
+                        "payload": "eyJwdWJsaWNLZXkiOiJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXU0cXNYMmlISzE0MzhXZjRCcGxiMjBqYXdjN0U3Mng0MTMwUW9QaE9MajByM0VSTi8wSmpjK3FoaU1QQVBEVCtTa1NQbmdGckN2RTRhR0pIOWIwdm8rWVkvcW1FbVFzdGw0d2s5cEFHTnVJdHh0TStab0RoTHdkRHBETTc0QkE4aFZ3cXJHQVA5UUovNktibFFLbXRPT09NY0tTUXB0RXNFQ3NFQytMZThpTkJhU2ozRnBMbWpHUWkxYjZXMG1UMU1aYzVFUjRTOFVmN2hkajhpS0JRc3hFcjdZUThqZ2FXdE1rakZOU0tZemt2Vi9zU3FtL2t0akh4Q21MUk5yRXdvaDBvZ1V1S1FEMnJuK1piWXovalBMWjRZOFd4Q3d2Wi9jVjFkMDc5Wk16S0hYWVBLT3J1RnJOWTZjZng5STRsckEyVHdsSXpOQVd5RHQzN1ZsQ2xEUUlEQVFBQiIsInBlcnNpc3RlbnRJZCI6ImxOMUxEN2lBSGZ2bDVvTWRCZ0k4VWc9PSIsInByb3RvY29scyI6WyJodHRwczovL3Byb3RvY29scy5xaXkubmwvaW52aXRlcy92LjEuMC4wIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2NsZWFudXAvbWVzc2FnZXMvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9zdGF0ZS92LjEuMC4wIiwiaHR0cHM6Ly9naXRodWIuY29tL3FpeWZvdW5kYXRpb24vZmlLa3MvdHJlZS9tYXN0ZXIvc2NoZW1hL3YxIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2RhdGEtcmVmZXJlbmNlL3BlZXIvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9yZWZlcmVuY2UtbWFuYWdlbWVudC8xLjAuMCJdLCJuYW1lIjoibWdkX2RldjIifQ==",
+                        "processed": false,
+                        "protocol": "https://protocols.qiy.nl/domain-details/v.1.0.0",
+                        "serialNr": 1,
+                        "sent": true,
+                        "text": "Our details"
+                    },
+                    {
+                        "inbound": true,
+                        "payload": "eyJwZXJzaXN0ZW50SWQiOiJLandGTzlGekRyQUM3Q2Q4WURKajh3PT0ifQ==",
+                        "processed": true,
+                        "protocol": "https://protocols.qiy.nl/reuse-persistent-id/v.1.0.0",
+                        "refSerialNr": 1,
+                        "sent": false,
+                        "serialNr": 2,
+                        "text": "Known by this persistent id"
+                    }
+                ]
+            },
             "nodeCreateRequestBody": {
                 "alias": "Your Service Provider",
                 "id": "cb06fb8e-4e48-4eb1-8b5f-a46e9eef1308",
