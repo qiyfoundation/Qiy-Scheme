@@ -341,6 +341,38 @@
                 }
             }
         },
+        "/FeedsEndpoint": {
+            "post": {
+                "tags": [
+                    "feed",
+                    "access"
+                ],
+                "description": "See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#access-feed)",
+                "operationId": "Access feed",
+                "x-url": "$FeedsEndpointUrl/$feedId",
+                "requestBody": {
+                    "description": "Access request details",
+                    "content": {
+                        "text": {
+                            "examples": {
+                                "example": {
+                                    "description": "An example of base64-encoded input. NB: the enclosing quotes must not be part of the body.",
+                                    "value": "VGhlIGJvZHkgbWF5IGluY2x1ZGUgYSBzZXJ2aWNlIGVuZHBvaW50IGZlZWQgYWNjZXNzIHJlcXVlc3QgYm9keSBlbmNvZGVkIGFzIGEgYmFzZS02NCBlbmNvZGVkIGJ5dGUgYXJyYXku"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/feedResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/MailboxEndpoint": {
             "get": {
                 "tags": [
@@ -962,10 +994,12 @@
             "dataReferenceReceivedv2": {
                 "type": "object",
                 "properties": {
-                    "type": { 
+                    "type": {
                         "description": "Event type",
                         "type": "string",
-                        "enum": ["DATA_REFERENCE_RECEIVED2"],
+                        "enum": [
+                            "DATA_REFERENCE_RECEIVED2"
+                        ],
                         "minItems": 1,
                         "maxItems": 1
                     },
@@ -1023,6 +1057,11 @@
                     }
                 }
             },
+            "feedId": {
+                "description": "Feed id",
+                "type": "string",
+                "format": "ascii"
+            },
             "feedRequest": {
                 "type": "object",
                 "properties": {
@@ -1050,6 +1089,9 @@
                     }
                 }
             },
+            "feedResponse": {
+                "description": "The feed response format is described in the service type description"
+            },
             "message": {
                 "type": "object",
                 "properties": {
@@ -1059,9 +1101,9 @@
                         "maxItems": 1
                     },
                     "payload": {
-                        "description": "",
+                        "description": "Payload",
                         "type": "string",
-                        "format": "base64-encoded",
+                        "format": "ascii",
                         "minItems": 1,
                         "maxItems": 1
                     },
@@ -1417,6 +1459,21 @@
                     }
                 }
             },
+            "feedResponse": {
+                "description": "Feed response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/feedResponse"
+                        },
+                        "examples": {
+                            "Feed response": {
+                                "$ref": "#/components/examples/feedResponse"
+                            }
+                        }
+                    }
+                }
+            },
             "eventCallbacksResponse": {
                 "description": "Event callbacks set",
                 "content": {
@@ -1498,7 +1555,16 @@
                 }
             }
         },
-        "parameters": {},
+        "parameters": {
+            "feedId": {
+                "name": "feedId",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "$ref": "#/components/schemas/feedId"
+                }
+            }
+        },
         "examples": {
             "apiGetAppAuthenticated": {
                 "links": {
@@ -1700,6 +1766,71 @@
                 "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
                 "text": "Requesting feed.",
                 "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+            },
+            "feedResponse": {
+                "activities-heart": [
+                    {
+                        "customHeartRateZones": [],
+                        "dateTime": "today",
+                        "heartRateZones": [
+                            {
+                                "caloriesOut": 138.8351,
+                                "max": 86,
+                                "min": 30,
+                                "minutes": 65,
+                                "name": "Out of Range"
+                            },
+                            {
+                                "caloriesOut": 309.96824,
+                                "max": 120,
+                                "min": 86,
+                                "minutes": 177,
+                                "name": "Fat Burn"
+                            },
+                            {
+                                "caloriesOut": 198.6678,
+                                "max": 146,
+                                "min": 120,
+                                "minutes": 59,
+                                "name": "Cardio"
+                            },
+                            {
+                                "caloriesOut": 8.1326,
+                                "max": 220,
+                                "min": 146,
+                                "minutes": 7,
+                                "name": "Peak"
+                            }
+                        ],
+                        "value": "102.28"
+                    }
+                ],
+                "activities-heart-intraday": {
+                    "dataset": [
+                        {
+                            "time": "12:00:00",
+                            "value": 111
+                        },
+                        {
+                            "time": "12:01:00",
+                            "value": 97
+                        },
+                        {
+                            "time": "12:02:00",
+                            "value": 112
+                        },
+                        {
+                            "time": "12:03:00",
+                            "value": 114
+                        },
+                        {
+                            "time": "12:04:00",
+                            "value": 136
+                        }
+                    ],
+                    "datasetInterval": 1,
+                    "datasetType": "minute"
+                }
             },
             "messageList": {
                 "result": [
