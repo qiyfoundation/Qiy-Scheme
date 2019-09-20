@@ -87,6 +87,9 @@
                 "x-events": {
                     "stateHandled": {
                         "$ref": "#/components/x-events/stateHandled"
+                    },
+                    "routingFailed": {
+                        "$ref": "#/components/x-events/routingFailed"
                     }
                 },
                 "security": [
@@ -94,6 +97,23 @@
                         "transportAuthentication": []
                     }
                 ]
+            }
+        },
+        "/ConnectionEndpoint": {
+            "get": {
+                "tags": [
+                    "connection"
+                ],
+                "description": "See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connection)",
+                "operationId": "Get connection",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/connection"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
             }
         },
         "/ConnectTokenCreateEndpoint": {
@@ -506,6 +526,78 @@
                     }
                 }
             },
+            "connection": {
+                "type": "object",
+                "properties": {
+                    "activeFrom": {
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "activeUntil": {
+                        "description": "Endtime of the active period",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "nullable": true,
+                        "minItems": 0,
+                        "default": null,
+                        "maxItems": 1
+                    },
+                    "links": {
+                        "type": "object",
+                        "properties": {
+                            "feeds": {
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "mbox": {
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "parent": {
+                                "description": "Connection url of the first connection with the Qiy Node",
+                                "type": "string",
+                                "format": "url",
+                                "nullable": true,
+                                "minItems": 0,
+                                "default": null,
+                                "maxItems": 1
+                            },
+                            "references": {
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "self": {
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        }
+                    },
+                    "pid": {
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "state": {
+                        "type": "string",
+                        "enum": [
+                            "connected",
+                            "expired"
+                        ],
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "connectToken": {
                 "allOf": [
                     {
@@ -741,6 +833,33 @@
                     }
                 }
             },
+            "routingFailedEventData": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "ROUTING_FAILED"
+                        ],
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "extraData": {
+                        "type": "object",
+                        "properties": {
+                            "connectToken": {
+                                "description": "Connection token url of the connect token that was used to request the connection",
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "serviceCatalogue": {
                 "type": "object",
                 "x-patternProperties": {
@@ -845,6 +964,20 @@
                             },
                             "apiGetUserAuthenticated": {
                                 "$ref": "#/components/examples/apiGetUserAuthenticated"
+                            }
+                        }
+                    }
+                }
+            },
+            "connection": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/schema/connection"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/connection"
                             }
                         }
                     }
@@ -1007,6 +1140,30 @@
                     }
                 ]
             },
+            "connection": {
+                "activeFrom": 1551796945000,
+                "links": {
+                    "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds",
+                    "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
+                    "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
+                    "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0"
+                },
+                "pid": "aAQt41QqCvJuy8DMBayDCQ==",
+                "state": "connected"
+            },
+            "connectionExpired": {
+                "state": "expired",
+                "activeFrom": 1544686272000,
+                "activeUntil": 1544693472000,
+                "pid": "vjQK/rOw6CoSuWPZy6K93w==",
+                "links": {
+                    "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                    "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                    "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
+                    "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                    "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
+                }
+            },
             "connectTokenRequestRequestBody": {
                 "expires": 2349020398,
                 "useBudget": 1
@@ -1111,6 +1268,12 @@
                 "event": "STATE_HANDLED",
                 "data": {
                     "$ref": "#/components/schemas/stateHandledEventData"
+                }
+            },
+            "routingFailed": {
+                "event": "ROUTING_FAILED",
+                "data": {
+                    "$ref": "#/components/schemas/routingFailedEventData"
                 }
             }
         }
