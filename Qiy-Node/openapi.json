@@ -61,6 +61,7 @@
                 ],
                 "description": "See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connection)",
                 "operationId": "Request connection",
+                "x-url": "$ConnectionCreateEndpointUrl",
                 "requestBody": {
                     "description": "Connect token json",
                     "content": {
@@ -106,6 +107,7 @@
                 ],
                 "description": "See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connection)",
                 "operationId": "Get connection",
+                "x-url": "$ConnectionEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/connection"
@@ -125,6 +127,7 @@
                 ],
                 "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
                 "operationId": "Request for feed",
+                "x-url": "$ConnectionFeedsEndpointUrl",
                 "requestBody": {
                     "description": "Feed request details",
                     "content": {
@@ -172,6 +175,7 @@
                 ],
                 "description": "See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connections)",
                 "operationId": "List connects",
+                "x-url": "$ConnectionListEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/connectionList"
@@ -189,6 +193,7 @@
                 ],
                 "description": "See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)",
                 "operationId": "Get connect token",
+                "x-url": "$ConnectTokenEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/connectToken"
@@ -207,6 +212,7 @@
                 ],
                 "description": "See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connect-token) or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)",
                 "operationId": "Request or register connect token",
+                "x-url": "$ConnectTokenCreateEndpointUrl",
                 "requestBody": {
                     "description": "Connect token request or registration details",
                     "content": {
@@ -257,6 +263,7 @@
                 ],
                 "description": "See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)",
                 "operationId": "List connect tokens",
+                "x-url": "$ConnectTokenListEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/connectTokenList"
@@ -274,6 +281,7 @@
                 ],
                 "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
+                "x-url": "$EventCallbacksEndpointUrl",
                 "requestBody": {
                     "description": "Callback endpoint urls",
                     "content": {
@@ -304,6 +312,7 @@
                 ],
                 "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
                 "operationId": "Get event callback endpoints",
+                "x-url": "$EventCallbacksEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/eventCallbacksResponse"
@@ -321,6 +330,7 @@
                 ],
                 "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
                 "operationId": "Start listening to events",
+                "x-url": "$EventsEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/eventsResponse"
@@ -338,6 +348,7 @@
                 ],
                 "description": "See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-messages)",
                 "operationId": "List messages",
+                "x-url": "$MailboxEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/messageList"
@@ -358,6 +369,7 @@
                 ],
                 "description": "See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#send-message)",
                 "operationId": "Send message",
+                "x-url": "$MailboxEndpointUrl",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -395,6 +407,7 @@
                 ],
                 "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
                 "operationId": "Request creation of Qiy Node",
+                "x-url": "$NodeCreateEndpointUrl",
                 "requestBody": {
                     "description": "Request details",
                     "content": {
@@ -432,6 +445,7 @@
                 ],
                 "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
                 "operationId": "Get node settings",
+                "x-url": "$NodeSettingsEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/nodeSettingsResponse"
@@ -447,6 +461,7 @@
                 ],
                 "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
                 "operationId": "Set node settings",
+                "x-url": "$NodeSettingsEndpointUrl",
                 "requestBody": {
                     "description": "Node settings",
                     "content": {
@@ -480,6 +495,7 @@
                 ],
                 "description": "See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)",
                 "operationId": "Delete Qiy Node",
+                "x-url": "$SelfEndpointUrl",
                 "responses": {
                     "201": {
                         "$ref": "#/components/responses/nodeDeleted"
@@ -503,6 +519,7 @@
                 ],
                 "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
                 "operationId": "Get service catalogue",
+                "x-url": "$ServiceCatalogueEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/serviceCatalogueResponse"
@@ -519,6 +536,7 @@
                 ],
                 "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
                 "operationId": "Set service catalogue",
+                "x-url": "$ServiceCatalogueEndpointUrl",
                 "requestBody": {
                     "description": "Service catalogue",
                     "content": {
@@ -1756,7 +1774,7 @@
         },
         "callbacks": {
             "dataReferenceReceivedv2": {
-                "dataReferenceReceivedv2EndpointUrl": {
+                "$dataReferenceReceivedv2EndpointUrl": {
                     "post": {
                         "requestBody": {
                             "content": {
@@ -1777,7 +1795,7 @@
                 }
             },
             "stateHandled": {
-                "stateHandledCallbackEndpointUrl": {
+                "$stateHandledCallbackEndpointUrl": {
                     "post": {
                         "requestBody": {
                             "content": {
