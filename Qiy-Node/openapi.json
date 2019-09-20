@@ -116,6 +116,23 @@
                 }
             }
         },
+        "/ConnectTokenEndpoint": {
+            "get": {
+                "tags": [
+                    "connect token"
+                ],
+                "description": "See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)",
+                "operationId": "Get connect token",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/connectToken"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/ConnectTokenCreateEndpoint": {
             "post": {
                 "tags": [
@@ -985,6 +1002,21 @@
             },
             "connectionCreated": {
                 "description": "Connection created"
+            },
+            "connectToken": {
+                "description": "Connect token",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/connectToken"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/connectTokenNew"
+                            }
+                        }
+                    }
+                }
             },
             "connectTokenCreateEndpointPostRequest": {
                 "description": "Connect token created or registered",
