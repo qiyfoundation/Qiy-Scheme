@@ -341,6 +341,40 @@
                 }
             }
         },
+        "/FeedsEndpoint": {
+            "post": {
+                "tags": [
+                    "feed",
+                    "access"
+                ],
+                "description": "See [Access feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#access-feeds)",
+                "operationId": "Access feeds",
+                "x-url": "$FeedsEndpointUrl",
+                "requestBody": {
+                    "description": "Access feeds request details",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/feedsAccessRequest"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/feedsAccessRequest"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/feedsResponse"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/FeedsEndpoint/{feedId}": {
             "post": {
                 "tags": [
@@ -1065,7 +1099,7 @@
             "feedId": {
                 "description": "Feed id",
                 "type": "string",
-                "format": "ascii"
+                "format": "ascii no whitespace"
             },
             "feedRequest": {
                 "type": "object",
@@ -1096,6 +1130,46 @@
             },
             "feedResponse": {
                 "description": "The feed response format is described in the service type description"
+            },
+            "feedsAccessRequest": {
+                "type": "object",
+                "x-patternProperties": {
+                    "[\\x00-\\x7F]+": {
+                        "type": "object",
+                        "properties": {
+                            "input": {
+                                "description": "Optional body for the access request for the given feed id",
+                                "type": "string",
+                                "format": "base64-encoded byte array",
+                                "nullable": true,
+                                "minItems": 0,
+                                "default": null,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "feedsResponse": {
+                "type": "object",
+                "x-patternProperties": {
+                    "[\\x00-\\x7F]+": {
+                        "type": "object",
+                        "properties": {
+                            "content-type": {
+                                "type": "string",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "output": {
+                                "type": "string",
+                                "format": "base64-encoded byte array",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
             },
             "message": {
                 "type": "object",
@@ -1479,6 +1553,21 @@
                     }
                 }
             },
+            "feedsResponse": {
+                "description": "Feeds response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/feedsResponse"
+                        },
+                        "examples": {
+                            "Feeds response": {
+                                "$ref": "#/components/examples/feedsResponse"
+                            }
+                        }
+                    }
+                }
+            },
             "eventCallbacksResponse": {
                 "description": "Event callbacks set",
                 "content": {
@@ -1835,6 +1924,26 @@
                     ],
                     "datasetInterval": 1,
                     "datasetType": "minute"
+                }
+            },
+            "feedsResponse": { 
+                "<feed_id1>": {
+                    "content-type": "application/xml",
+                    "output": "<base64-encoded feed_id1 access response>"
+                }, 
+                "<feed_id2>": {
+                    "content-type": "application/json",
+                    "output": "<base64-encoded feed_id2 access response>"
+                } 
+                
+            }                
+            ,
+            "feedsAccessRequest": {
+                "{{feed_id1}}": {
+                    "input": "<optional json member with base-64 encrypted byte array>"
+                },
+                "{{feed_id2}}": {
+                    "input": "<optional json member with base-64 encrypted byte array>"
                 }
             },
             "messageList": {
