@@ -116,6 +116,61 @@
                 }
             }
         },
+        "/ConnectionFeedsEndpoint": {
+            "post": {
+                "tags": [
+                    "connection",
+                    "feed",
+                    "lifecycle"
+                ],
+                "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
+                "operationId": "Request for feed",
+                "requestBody": {
+                    "description": "Feed request details",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/feedRequest"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/feedRequest"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "$ref": "#/components/responses/feed"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                },
+                "callbacks": {
+                    "dataReferenceReceivedv2": {
+                        "$ref": "#/components/x-events/dataReferenceReceivedv2"
+                    },
+                    "dataReferenceFailure": {
+                        "$ref": "#/components/x-events/dataReferenceFailure"
+                    }
+                },
+                "x-events": {
+                    "dataReferenceReceivedv2": {
+                        "$ref": "#/components/x-events/dataReferenceReceivedv2"
+                    },
+                    "dataReferenceFailure": {
+                        "$ref": "#/components/x-events/dataReferenceFailure"
+                    }
+                },
+                "security": [
+                    {
+                        "transportAuthentication": []
+                    }
+                ]
+            }
+        },
         "/ConnectionListEndpoint": {
             "get": {
                 "tags": [
@@ -325,13 +380,13 @@
                 "operationId": "Send message",
                 "requestBody": {
                     "content": {
-                        "application/json":{
-                            "schema":{
-                                "$ref":"#/components/schemas/message"
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/message"
                             },
-                            "examples":{
-                                "example":{
-                                    "$ref":"#/components/examples/messageNew"
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/messageNew"
                                 }
                             }
                         }
@@ -917,6 +972,50 @@
                     }
                 }
             },
+            "feed": {
+                "type": "object",
+                "properties": {
+                    "protocol": {
+                        "description": "Service type url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "feedId": {
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "feedRequest": {
+                "type": "object",
+                "properties": {
+                    "input": {
+                        "description": "Feed request body",
+                        "type": "string",
+                        "format": "base64-encoded",
+                        "nullable": true,
+                        "minItems": 0,
+                        "default": null,
+                        "maxItems": 1
+                    },
+                    "protocol": {
+                        "description": "Service type url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "text": {
+                        "description": "Feed request remark",
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "message": {
                 "type": "object",
                 "properties": {
@@ -1158,9 +1257,10 @@
             },
             "connection": {
                 "content": {
+                    "description": "Connection",
                     "application/json": {
                         "schema": {
-                            "$ref": "#/schema/connection"
+                            "$ref": "#/schemas/connection"
                         },
                         "examples": {
                             "example": {
@@ -1263,6 +1363,21 @@
                         "examples": {
                             "example": {
                                 "$ref": "#/components/examples/authenticationRequired"
+                            }
+                        }
+                    }
+                }
+            },
+            "feed": {
+                "description": "Feed",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/feed"
+                        },
+                        "examples": {
+                            "feed": {
+                                "$ref": "#/components/examples/feed"
                             }
                         }
                     }
@@ -1535,6 +1650,19 @@
                 "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
             },
             "eventsResponseExample": ":ping",
+            "feed": {
+                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
+            },
+            "feedOld": {
+                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
+            },
+            "feedRequest": {
+                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                "text": "Requesting feed.",
+                "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+            },
             "messageList": {
                 "result": [
                     {
@@ -1558,11 +1686,11 @@
                     }
                 ]
             },
-            "messageNew":{
-            	"protocol": "https://example.com/qiy/node/message",
-            	"refSerialNr": -1,
-            	"text": "Hello world!",
-            	"payload": "SGVsbG8gV29ybGQh"                
+            "messageNew": {
+                "protocol": "https://example.com/qiy/node/message",
+                "refSerialNr": -1,
+                "text": "Hello world!",
+                "payload": "SGVsbG8gV29ybGQh"
             },
             "nodeCreateRequestBody": {
                 "alias": "Your Service Provider",
