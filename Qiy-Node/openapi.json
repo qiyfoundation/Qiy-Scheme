@@ -341,7 +341,7 @@
                 }
             }
         },
-        "/FeedsEndpoint": {
+        "/FeedsEndpoint/{feedId}": {
             "post": {
                 "tags": [
                     "feed",
@@ -350,6 +350,11 @@
                 "description": "See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#access-feed)",
                 "operationId": "Access feed",
                 "x-url": "$FeedsEndpointUrl/$feedId",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/feedId"
+                    }
+                ],
                 "requestBody": {
                     "description": "Access request details",
                     "content": {
