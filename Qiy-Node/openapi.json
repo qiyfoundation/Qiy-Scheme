@@ -240,18 +240,18 @@
                     }
                 },
                 "callbacks": {
-                    "stateHandledCallback": {
+                    "stateHandled": {
                         "stateHandledCallbackEndpointUrl": {
                             "post": {
                                 "requestBody": {
                                     "content": {
                                         "application/json": {
                                             "schema": {
-                                                "$ref": "#/components/schemas/stateHandledEventData"
+                                                "$ref": "#/components/schemas/stateHandled"
                                             },
                                             "examples": {
                                                 "example": {
-                                                    "$ref": "#/components/examples/stateHandledEventData"
+                                                    "$ref": "#/components/examples/stateHandled"
                                                 }
                                             }
                                         }
@@ -260,8 +260,12 @@
                                 }
                             }
                         }
-                    },
-                    "stateHandledEvent": {}
+                    }
+                },
+                "x-events": {
+                    "stateHandled": {
+                        "$ref": "#/components/x-eventsstaeHandled"
+                    }
                 },
                 "security": [
                     {
@@ -1119,7 +1123,7 @@
                     }
                 }
             },
-            "routingFailedEventData": {
+            "routingFailed": {
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1177,7 +1181,7 @@
                     }
                 }
             },
-            "stateHandledEventData": {
+            "stateHandled": {
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1713,7 +1717,7 @@
                     "method": "POST"
                 }
             },
-            "stateHandledEventData": {
+            "stateHandled": {
                 "type": "STATE_HANDLED",
                 "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
                 "extraData": {
@@ -1738,13 +1742,13 @@
             "stateHandled": {
                 "event": "STATE_HANDLED",
                 "data": {
-                    "$ref": "#/components/schemas/stateHandledEventData"
+                    "$ref": "#/components/schemas/stateHandled"
                 }
             },
             "routingFailed": {
                 "event": "ROUTING_FAILED",
                 "data": {
-                    "$ref": "#/components/schemas/routingFailedEventData"
+                    "$ref": "#/components/schemas/routingFailed"
                 }
             }
         }
