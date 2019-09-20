@@ -116,6 +116,23 @@
                 }
             }
         },
+        "/ConnectionListEndpoint": {
+            "get": {
+                "tags": [
+                    "connect list"
+                ],
+                "description": "See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connections)",
+                "operationId": "List connects",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/connectionList"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/ConnectTokenEndpoint": {
             "get": {
                 "tags": [
@@ -196,6 +213,23 @@
                         "transportAuthentication": []
                     }
                 ]
+            }
+        },
+        "/ConnectTokenListEndpoint": {
+            "get": {
+                "tags": [
+                    "connect token"
+                ],
+                "description": "See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)",
+                "operationId": "List connect tokens",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/connectTokenList"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
             }
         },
         "/EventCallbacksEndpoint": {
@@ -615,6 +649,17 @@
                     }
                 }
             },
+            "connectionList": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/connection"
+                        }
+                    }
+                }
+            },
             "connectToken": {
                 "allOf": [
                     {
@@ -661,6 +706,12 @@
                         "$ref": "#/components/schemas/connectTokenPropertyUseBudget"
                     }
                 ]
+            },
+            "connectTokenList": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/connectToken"
+                }
             },
             "connectTokenPropertyCreated": {
                 "type": "object",
@@ -1033,6 +1084,21 @@
                     }
                 }
             },
+            "connectTokenList": {
+                "description": "Connect token list",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/connectTokenList"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/connectTokenList"
+                            }
+                        }
+                    }
+                }
+            },
             "default": {
                 "description": "Default response",
                 "content": {
@@ -1196,6 +1262,34 @@
                     "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
                 }
             },
+            "connectionList": {
+                "result": [
+                    {
+                        "state": "expired",
+                        "activeFrom": 1544686272000,
+                        "activeUntil": 1544693472000,
+                        "pid": "vjQK/rOw6CoSuWPZy6K93w==",
+                        "links": {
+                            "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                            "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                            "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
+                            "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                            "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
+                        }
+                    },
+                    {
+                        "state": "connected",
+                        "activeFrom": 1544685886000,
+                        "pid": "nfIols4wKn9bBVkqnkHKbw==",
+                        "links": {
+                            "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                            "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/7f4dd669-9381-40e1-8f6e-4c9904476d8a/feeds",
+                            "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                            "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a"
+                        }
+                    }
+                ]
+            },
             "connectTokenRequestRequestBody": {
                 "expires": 2349020398,
                 "useBudget": 1
@@ -1214,6 +1308,42 @@
                 "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
                 "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
             },
+            "connectTokenList": [
+                {
+                    "created": 1542882407000,
+                    "json": {
+                        "identifier": "mgd_dev2",
+                        "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                        "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                    },
+                    "lastUsed": 1542882800000,
+                    "links": {
+                        "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                        "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                        "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
+                    },
+                    "useBudget": 1,
+                    "useSpend": 1,
+                    "valid": true
+                },
+                {
+                    "created": 1544537654000,
+                    "json": {
+                        "identifier": "mgd_dev2",
+                        "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/beb82a8f-4e7f-4927-b272-cceb24402cc0",
+                        "tmpSecret": "5rqlN8YDI3rGP46cl+kE8Q=="
+                    },
+                    "lastUsed": 1544537657000,
+                    "links": {
+                        "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd",
+                        "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd",
+                        "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd"
+                    },
+                    "useBudget": 1,
+                    "useSpend": 1,
+                    "valid": true
+                }
+            ],
             "connectTokenNew": {
                 "created": 1542882407000,
                 "json": {
