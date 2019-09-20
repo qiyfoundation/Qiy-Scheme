@@ -150,18 +150,12 @@
                 },
                 "callbacks": {
                     "dataReferenceReceivedv2": {
-                        "$ref": "#/components/x-events/dataReferenceReceivedv2"
-                    },
-                    "dataReferenceFailure": {
-                        "$ref": "#/components/x-events/dataReferenceFailure"
+                        "$ref": "#/components/callbacks/dataReferenceReceivedv2"
                     }
                 },
                 "x-events": {
                     "dataReferenceReceivedv2": {
                         "$ref": "#/components/x-events/dataReferenceReceivedv2"
-                    },
-                    "dataReferenceFailure": {
-                        "$ref": "#/components/x-events/dataReferenceFailure"
                     }
                 },
                 "security": [
@@ -241,25 +235,7 @@
                 },
                 "callbacks": {
                     "stateHandled": {
-                        "stateHandledCallbackEndpointUrl": {
-                            "post": {
-                                "requestBody": {
-                                    "content": {
-                                        "application/json": {
-                                            "schema": {
-                                                "$ref": "#/components/schemas/stateHandled"
-                                            },
-                                            "examples": {
-                                                "example": {
-                                                    "$ref": "#/components/examples/stateHandled"
-                                                }
-                                            }
-                                        }
-                                    },
-                                    "required": true
-                                }
-                            }
-                        }
+                        "$ref": "#/components/callbacks/stateHandled"
                     }
                 },
                 "x-events": {
@@ -965,6 +941,42 @@
                     }
                 }
             },
+            "dataReferenceReceivedv2": {
+                "type": "object",
+                "properties": {
+                    "type": { 
+                        "description": "Event type",
+                        "type": "string",
+                        "enum": ["DATA_REFERENCE_RECEIVED2"],
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "connectionUrl": {
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "extraData": {
+                        "type": "object",
+                        "properties": {
+                            "protocol": {
+                                "description": "Service type url",
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "value": {
+                                "description": "Feed id",
+                                "type": "string",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
+            },
             "eventCallbackEndpointUrls": {
                 "type": "object",
                 "properties": {
@@ -1654,11 +1666,15 @@
                 "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
             },
             "eventsResponseExample": ":ping",
-            "feed": {
-                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
-                "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
+            "dataReferenceReceivedv2": {
+                "type": "DATA_REFERENCE_RECEIVED2",
+                "connectionUrl": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid1sp1connectionUrl",
+                "extraData": {
+                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                    "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
+                }
             },
-            "feedOld": {
+            "feed": {
                 "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
                 "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
             },
@@ -1736,6 +1752,50 @@
             },
             "userAuthentication": {
                 "$ref": "#/components/schemas/userAuthentication"
+            }
+        },
+        "callbacks": {
+            "dataReferenceReceivedv2": {
+                "dataReferenceReceivedv2EndpointUrl": {
+                    "post": {
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/dataReferenceReceivedv2"
+                                    },
+                                    "examples": {
+                                        "example": {
+                                            "$ref": "#/components/examples/dataReferenceReceivedv2"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "stateHandled": {
+                "stateHandledCallbackEndpointUrl": {
+                    "post": {
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/stateHandled"
+                                    },
+                                    "examples": {
+                                        "example": {
+                                            "$ref": "#/components/examples/stateHandled"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": true
+                        }
+                    }
+                }
             }
         },
         "x-events": {
