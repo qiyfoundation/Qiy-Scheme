@@ -310,7 +310,46 @@
                     "default": {
                         "$ref": "#/components/responses/default"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "transportAuthentication": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "mail"
+                ],
+                "description": "See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#send-message)",
+                "operationId": "Send message",
+                "requestBody": {
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "$ref":"#/components/schemas/message"
+                            },
+                            "examples":{
+                                "example":{
+                                    "$ref":"#/components/examples/messageNew"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/messageSent"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                },
+                "security": [
+                    {
+                        "transportAuthentication": []
+                    }
+                ]
             }
         },
         "/NodeCreateEndpoint": {
@@ -1270,6 +1309,9 @@
                     }
                 }
             },
+            "messageSent": {
+                "description": "Message sent"
+            },
             "nodeCreated": {
                 "description": "Node created"
             },
@@ -1515,6 +1557,12 @@
                         "text": "Known by this persistent id"
                     }
                 ]
+            },
+            "messageNew":{
+            	"protocol": "https://example.com/qiy/node/message",
+            	"refSerialNr": -1,
+            	"text": "Hello world!",
+            	"payload": "SGVsbG8gV29ybGQh"                
             },
             "nodeCreateRequestBody": {
                 "alias": "Your Service Provider",
