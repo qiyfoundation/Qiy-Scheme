@@ -794,7 +794,11 @@
                         "type": "object",
                         "x-patternProperties": {
                             "$pidRex": {
-                                "$ref": "#/components/schemas/action"
+                                "description": "Action url",
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
                             }
                         },
                         "minItems": 1,
@@ -1997,7 +2001,7 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schema/nodeSettings"
+                            "$ref": "#/components/schemas/nodeSettings"
                         }
                     },
                     "examples": {
