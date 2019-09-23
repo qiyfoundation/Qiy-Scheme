@@ -7,7 +7,7 @@
             "description": "Find more info here",
             "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md"
         },
-        "version": "1.0.0",
+        "version": "1.1.0",
         "license": {
             "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License",
             "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
@@ -15,15 +15,15 @@
     },
     "servers": [
         {
-            "url": "https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy",
+            "url": "https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v1",
             "description": "Proxy server"
         },
         {
-            "url": "https://dev2-user.testonly.digital-me.nl/user",
+            "url": "https://dev2-user.testonly.digital-me.nl/user/v1",
             "description": "Development 2 server"
         },
         {
-            "url": "https://user.dolden.net/user",
+            "url": "https://user.dolden.net/user/v1",
             "description": "Acceptance server"
         }
     ],
