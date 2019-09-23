@@ -506,14 +506,15 @@
                 }
             }
         },
-        "/MailboxEndpoint": {
+        "/MessagesEndpoint": {
             "get": {
                 "tags": [
-                    "mail"
+                    "list",
+                    "message"
                 ],
                 "description": "See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-messages)",
                 "operationId": "List messages",
-                "x-url": "$MailboxEndpointUrl",
+                "x-url": "$MessagesEndpointUrl",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/messageList"
@@ -530,11 +531,11 @@
             },
             "post": {
                 "tags": [
-                    "mail"
+                    "message"
                 ],
                 "description": "See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#send-message)",
                 "operationId": "Send message",
-                "x-url": "$MailboxEndpointUrl",
+                "x-url": "$MessagesEndpointUrl",
                 "requestBody": {
                     "content": {
                         "application/json": {
