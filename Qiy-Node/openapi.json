@@ -247,6 +247,9 @@
                 "x-events": {
                     "stateHandled": {
                         "$ref": "#/components/x-events/stateHandled"
+                    },
+                    "userActionMessage": {
+                        "$ref": "#/components/x-events/userActionMessage"
                     }
                 },
                 "security": [
@@ -1069,7 +1072,8 @@
                     }
                 }
             },
-            "dataReferenceReceivedv2": {
+            "dataReferenceReceivedv2Event": {
+                "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1365,7 +1369,8 @@
                     }
                 }
             },
-            "routingFailed": {
+            "routingFailedEvent": {
+                "description": "See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1485,7 +1490,8 @@
                     }
                 }
             },
-            "stateHandled": {
+            "stateHandledEvent": {
+                "description": "See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1536,6 +1542,34 @@
                 "type": "apiKey",
                 "name": "Authorization-node-QTN",
                 "in": "header"
+            },
+            "userActionMessageEvent": {
+                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "USER_ACTION_MESSAGE"
+                        ],
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "connectionUrl": {
+                        "description": "Connection url of the new connection with the Qiy Node",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "extraData": {
+                        "description": "Url of the user action message",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
             },
             "userAuthentication": {
                 "description": "Also requires app authentication, see [Qiy Node User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-authentication)",
@@ -2320,21 +2354,51 @@
         },
         "x-events": {
             "dataReferenceReceivedv2": {
+                "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
                 "event": "DATA_REFERENCE_RECEIVED2",
                 "data": {
-                    "$ref": "#/components/schemas/dataReferenceReceivedv2"
+                    "schema": {
+                        "$ref": "#/components/schemas/dataReferenceReceivedv2Event"
+                    },
+                    "examples": {
+                    }
                 }
             },
             "routingFailed": {
+                "description": "See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)",
                 "event": "ROUTING_FAILED",
                 "data": {
-                    "$ref": "#/components/schemas/routingFailed"
+                    "schema": {
+                        "$ref": "#/components/schemas/routingFailedEvent"
+                    }
                 }
             },
             "stateHandled": {
+                "description": "See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)",
                 "event": "STATE_HANDLED",
                 "data": {
-                    "$ref": "#/components/schemas/stateHandled"
+                    "schema": {
+                        "$ref": "#/components/schemas/stateHandledEvent"
+                    }
+                }
+            },
+            "userActionMessage": {
+                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
+                "event": "USER_ACTION_MESSAGE",
+                "data": {
+                    "schema": {
+                        "$ref": "#/components/schemas/userActionMessage"
+                    },
+                    "examples": {
+                        "example": {
+                            "type": "USER_ACTION_MESSAGE",
+                            "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
+                            "extraData": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4"
+                        }
+                    }
+                },
+                "examples": {
+                    "example": "event: USER_ACTION_MESSAGE\ndata: { \"type\": \"USER_ACTION_MESSAGE\", \"connectionUrl\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e\", \"extraData\": \"https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4\"}\n"
                 }
             }
         }
