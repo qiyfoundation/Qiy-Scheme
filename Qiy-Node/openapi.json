@@ -53,6 +53,25 @@
                 ]
             }
         },
+        "/ActionMessageListEndpoint": {
+            "get": {
+                "tags": [
+                    "action message",
+                    "list"
+                ],
+                "description": "See [List action messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-action-messages)",
+                "operationId": "List action messages",
+                "x-url": "$ActionMessageListEndpointUrl",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/actionMessageList"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/ConnectionCreateEndpoint": {
             "post": {
                 "tags": [
@@ -171,7 +190,8 @@
         "/ConnectionListEndpoint": {
             "get": {
                 "tags": [
-                    "connect list"
+                    "connection",
+                    "list"
                 ],
                 "description": "See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connections)",
                 "operationId": "List connects",
@@ -678,6 +698,96 @@
     },
     "components": {
         "schemas": {
+            "actionMessage": {
+                "type": "object",
+                "properties": {
+                    "connection": {
+                        "description": "Connection url of the related connection",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "created": {
+                        "description": "Creation datetimestamp",
+                        "type": "number",
+                        "format": "Unix time in mili seconds",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "handle": {
+                                    "type": "string",
+                                    "format": "url",
+                                    "minItems": 1,
+                                    "maxItems": 1
+                                },
+                                "self": {
+                                    "type": "string",
+                                    "format": "url",
+                                    "minItems": 1,
+                                    "maxItems": 1
+                                }
+                            }
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "message": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/message"
+                            },
+                            {
+                                "type": "object",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        ]
+                    },
+                    "optionPIDs": {
+                        "type": "object",
+                        "x-patternProperties": {
+                            "$pidRex": {
+                                "$ref": "#/components/schemas/action"
+                            }
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "relayOptions": {
+                        "type": "object",
+                        "x-patternProperties": {
+                            "$nodeIdRex": {
+                                "description": "Action url",
+                                "type": "string",
+                                "format": "url",
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "actionMessageList": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/actionMessage"
+                        },
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
             "appAuthentication": {
                 "description": "See [Qiy Node App Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#app-authentication)",
                 "type": "http",
@@ -1481,7 +1591,7 @@
                                 "minItems": 1,
                                 "maxItems": 1
                             }
-                       ]
+                        ]
                     },
                     "pid": {
                         "type": "",
@@ -1592,6 +1702,21 @@
                             },
                             "apiGetUserAuthenticated": {
                                 "$ref": "#/components/examples/apiGetUserAuthenticated"
+                            }
+                        }
+                    }
+                }
+            },
+            "actionMesageList": {
+                "description": "Action Message list",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/actionMessageList"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/actionMessageList"
                             }
                         }
                     }
@@ -1862,6 +1987,35 @@
             }
         },
         "examples": {
+            "actionMessageList": {
+                "result": [
+                    {
+                        "connection": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
+                        "created": 1562059030644,
+                        "links": {
+                            "self": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4",
+                            "handle": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                        },
+                        "message": {
+                            "serialNr": 5,
+                            "text": "huh?",
+                            "protocol": "http://bla.nl/events",
+                            "inbound": true,
+                            "sent": false,
+                            "payload": "eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=",
+                            "processed": true
+                        },
+                        "optionPIDs": {
+                            "jRMCgeCzt3zFGDZuutuNvg==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
+                            "kpKugxcUU7AdJJgVUVuFnA==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                        },
+                        "relayOptions": {
+                            "8f4edf58-73dd-4fee-b344-149c924f1605": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
+                            "wip_feed_rp": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                        }
+                    }
+                ]
+            },
             "apiGetAppAuthenticated": {
                 "links": {
                     "create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners"
@@ -2166,16 +2320,15 @@
                     "input": "<optional json member with base-64 encrypted byte array>"
                 }
             },
-            "feedsAccessResponse": { 
+            "feedsAccessResponse": {
                 "<feed_id1>": {
                     "content-type": "application/xml",
                     "output": "<base64-encoded feed_id1 access response>"
-                }, 
+                },
                 "<feed_id2>": {
                     "content-type": "application/json",
                     "output": "<base64-encoded feed_id2 access response>"
-                } 
-                
+                }
             },
             "messageList": {
                 "result": [
@@ -2228,9 +2381,9 @@
                 }
             },
             "serviceEndpointFeedAccessRequest": {
-            	"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
-            		"input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
-            	}
+                "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+                    "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+                }
             },
             "serviceEndpointFeedRequest": {
                 "connection": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl",
@@ -2360,8 +2513,7 @@
                     "schema": {
                         "$ref": "#/components/schemas/dataReferenceReceivedv2Event"
                     },
-                    "examples": {
-                    }
+                    "examples": {}
                 }
             },
             "routingFailed": {
