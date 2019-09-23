@@ -2039,99 +2039,112 @@
         },
         "examples": {
             "actionMessageList": {
-                "result": [
-                    {
-                        "connection": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
-                        "created": 1562059030644,
-                        "links": {
-                            "self": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4",
-                            "handle": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
-                        },
-                        "message": {
-                            "serialNr": 5,
-                            "text": "huh?",
-                            "protocol": "http://bla.nl/events",
-                            "inbound": true,
-                            "sent": false,
-                            "payload": "eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=",
-                            "processed": true
-                        },
-                        "optionPIDs": {
-                            "jRMCgeCzt3zFGDZuutuNvg==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
-                            "kpKugxcUU7AdJJgVUVuFnA==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
-                        },
-                        "relayOptions": {
-                            "8f4edf58-73dd-4fee-b344-149c924f1605": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
-                            "wip_feed_rp": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                "value": {
+                    "result": [
+                        {
+                            "connection": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
+                            "created": 1562059030644,
+                            "links": {
+                                "self": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4",
+                                "handle": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                            },
+                            "message": {
+                                "serialNr": 5,
+                                "text": "huh?",
+                                "protocol": "http://bla.nl/events",
+                                "inbound": true,
+                                "sent": false,
+                                "payload": "eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=",
+                                "processed": true
+                            },
+                            "optionPIDs": {
+                                "jRMCgeCzt3zFGDZuutuNvg==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
+                                "kpKugxcUU7AdJJgVUVuFnA==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                            },
+                            "relayOptions": {
+                                "8f4edf58-73dd-4fee-b344-149c924f1605": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
+                                "wip_feed_rp": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                            }
                         }
-                    }
-                ]
+                    ]
+                }
             },
             "apiGetAppAuthenticated": {
-                "links": {
-                    "create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners"
-                },
-                "serverTime": 1568366519145,
-                "currentVersion": "1.0.67-SNAPSHOT"
+                "value": {
+                    "links": {
+                        "create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners"
+                    },
+                    "serverTime": 1568366519145,
+                    "currentVersion": "1.0.67-SNAPSHOT"
+                }
             },
             "apiGetUserAuthenticated": {
-                "links": {
-                    "amList": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/mbox/user/action/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "ct-create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "scan": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "nodeSettings": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "ref": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549/single",
-                    "manRef": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/reference-management/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "refs": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "eventCallbacks": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549/eventcallbacks",
-                    "self": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners/id/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "ctList": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "feeds": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/31962764-596b-4eff-b80d-9cd32a65a549/feeds",
-                    "target-template": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/~id~",
-                    "serviceCatalog": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/servicecatalog/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "ctCreate": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "ct-list": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "connections": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549",
-                    "events": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/events/31962764-596b-4eff-b80d-9cd32a65a549"
-                },
-                "serverTime": 1568374440048,
-                "id": "31962764-596b-4eff-b80d-9cd32a65a549",
-                "currentVersion": "1.0.67-SNAPSHOT"
+                "value": {
+                    "links": {
+                        "amList": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/mbox/user/action/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "ct-create": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "scan": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "nodeSettings": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "ref": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549/single",
+                        "manRef": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/reference-management/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "refs": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "eventCallbacks": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549/eventcallbacks",
+                        "self": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners/id/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "ctList": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "feeds": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/31962764-596b-4eff-b80d-9cd32a65a549/feeds",
+                        "target-template": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/~id~",
+                        "serviceCatalog": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/servicecatalog/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "ctCreate": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "ct-list": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "connections": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549",
+                        "events": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/events/31962764-596b-4eff-b80d-9cd32a65a549"
+                    },
+                    "serverTime": 1568374440048,
+                    "id": "31962764-596b-4eff-b80d-9cd32a65a549",
+                    "currentVersion": "1.0.67-SNAPSHOT"
+                }
             },
             "authenticationRequired": {
-                "errors": [
-                    {
-                        "status": 401,
-                        "message": "Authentication required!"
-                    }
-                ]
+                "value": {
+                    "errors": [
+                        {
+                            "status": 401,
+                            "message": "Authentication required!"
+                        }
+                    ]
+                }
             },
             "connection": {
-                "activeFrom": 1551796945000,
-                "links": {
-                    "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds",
-                    "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
-                    "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
-                    "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0"
-                },
-                "pid": "aAQt41QqCvJuy8DMBayDCQ==",
-                "state": "connected"
+                "value": {
+                    "activeFrom": 1551796945000,
+                    "links": {
+                        "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds",
+                        "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
+                        "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0",
+                        "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0"
+                    },
+                    "pid": "aAQt41QqCvJuy8DMBayDCQ==",
+                    "state": "connected"
+                }
             },
             "connectionExpired": {
-                "state": "expired",
-                "activeFrom": 1544686272000,
-                "activeUntil": 1544693472000,
-                "pid": "vjQK/rOw6CoSuWPZy6K93w==",
-                "links": {
-                    "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
-                    "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
-                    "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
-                    "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
-                    "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
+                "value": {
+                    "state": "expired",
+                    "activeFrom": 1544686272000,
+                    "activeUntil": 1544693472000,
+                    "pid": "vjQK/rOw6CoSuWPZy6K93w==",
+                    "links": {
+                        "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                        "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                        "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
+                        "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                        "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
+                    }
                 }
             },
             "connectionList": {
-                "result": [
+                "value": {
+                    "result": [
                     {
                         "state": "expired",
                         "activeFrom": 1544686272000,
@@ -2157,27 +2170,91 @@
                         }
                     }
                 ]
+                }
             },
             "connectTokenRequestRequestBody": {
-                "expires": 2349020398,
-                "useBudget": 1
+                "value": {
+                    "expires": 2349020398,
+                    "useBudget": 1
+                }
             },
             "connectTokenRegisterRequestBody": {
-                "expires": 2349020398,
-                "useBudget": 1,
-                "json": {
-                    "identifier": "Service Provider 1",
-                    "tmpSecret": "9paMAI61N6b5dPCCYD4IiS==",
-                    "target": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/sp1connectTokenOffline2target"
+                "value": {
+                    "expires": 2349020398,
+                    "useBudget": 1,
+                    "json": {
+                        "identifier": "Service Provider 1",
+                        "tmpSecret": "9paMAI61N6b5dPCCYD4IiS==",
+                        "target": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/sp1connectTokenOffline2target"
+                    }
                 }
             },
             "connectTokenJson": {
-                "identifier": "mgd_dev2",
-                "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
-                "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                "value": {
+                    "identifier": "mgd_dev2",
+                    "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                    "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                }
             },
-            "connectTokenList": [
-                {
+            "connectTokenList": {
+                "value": [
+                    {
+                        "created": 1542882407000,
+                        "json": {
+                            "identifier": "mgd_dev2",
+                            "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                            "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                        },
+                        "lastUsed": 1542882800000,
+                        "links": {
+                            "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                            "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                            "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
+                        },
+                        "useBudget": 1,
+                        "useSpend": 1,
+                        "valid": true
+                    },
+                    {
+                        "created": 1544537654000,
+                        "json": {
+                            "identifier": "mgd_dev2",
+                            "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/beb82a8f-4e7f-4927-b272-cceb24402cc0",
+                            "tmpSecret": "5rqlN8YDI3rGP46cl+kE8Q=="
+                        },
+                        "lastUsed": 1544537657000,
+                        "links": {
+                            "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd",
+                            "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd",
+                            "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd"
+                        },
+                        "useBudget": 1,
+                        "useSpend": 1,
+                        "valid": true
+                    }
+                ]
+            },
+            "connectTokenNew": {
+                "value": {
+                    "created": 1542882407000,
+                    "json": {
+                        "identifier": "mgd_dev2",
+                        "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
+                        "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
+                    },
+                    "lastUsed": null,
+                    "links": {
+                        "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                        "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
+                        "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
+                    },
+                    "useBudget": 1,
+                    "useSpend": 0,
+                    "valid": true
+                }
+            },
+            "connectTokenUsed": {
+                "value": {
                     "created": 1542882407000,
                     "json": {
                         "identifier": "mgd_dev2",
@@ -2193,196 +2270,164 @@
                     "useBudget": 1,
                     "useSpend": 1,
                     "valid": true
-                },
-                {
-                    "created": 1544537654000,
-                    "json": {
-                        "identifier": "mgd_dev2",
-                        "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/beb82a8f-4e7f-4927-b272-cceb24402cc0",
-                        "tmpSecret": "5rqlN8YDI3rGP46cl+kE8Q=="
-                    },
-                    "lastUsed": 1544537657000,
-                    "links": {
-                        "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd",
-                        "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd",
-                        "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/ed2135cd-3a87-4720-b14a-82522778decd"
-                    },
-                    "useBudget": 1,
-                    "useSpend": 1,
-                    "valid": true
                 }
-            ],
-            "connectTokenNew": {
-                "created": 1542882407000,
-                "json": {
-                    "identifier": "mgd_dev2",
-                    "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
-                    "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
-                },
-                "lastUsed": null,
-                "links": {
-                    "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
-                    "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
-                    "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
-                },
-                "useBudget": 1,
-                "useSpend": 0,
-                "valid": true
-            },
-            "connectTokenUsed": {
-                "created": 1542882407000,
-                "json": {
-                    "identifier": "mgd_dev2",
-                    "target": "https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/2fe11d37-ee84-45f9-b07c-629c11532407",
-                    "tmpSecret": "tOCChOFtQiflrMGBPQfy8w=="
-                },
-                "lastUsed": 1542882800000,
-                "links": {
-                    "self": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
-                    "delete": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40",
-                    "update": "https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40"
-                },
-                "useBudget": 1,
-                "useSpend": 1,
-                "valid": true
             },
             "eventCallbackEndpointUrls": {
-                "DATA_REFERENCE_RECEIVED2": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dataReferenceReceivedCallbackEndpointUrl",
-                "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
+                "value": {
+                    "DATA_REFERENCE_RECEIVED2": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dataReferenceReceivedCallbackEndpointUrl",
+                    "STATE_HANDLED": "stateHandledCallbackEndpointUrl"
+                }
             },
-            "eventsResponseExample": ":ping",
+            "eventsResponseExample": {
+                "value": ":ping"
+            },
             "dataReferenceReceivedv2": {
-                "type": "DATA_REFERENCE_RECEIVED2",
-                "connectionUrl": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid1sp1connectionUrl",
-                "extraData": {
-                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-                    "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
+                "value": {
+                    "type": "DATA_REFERENCE_RECEIVED2",
+                    "connectionUrl": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid1sp1connectionUrl",
+                    "extraData": {
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
+                    }
                 }
             },
             "feedAccessResponse": {
-                "activities-heart": [
-                    {
-                        "customHeartRateZones": [],
-                        "dateTime": "today",
-                        "heartRateZones": [
+                "value": {
+                    "activities-heart": [
+                        {
+                            "customHeartRateZones": [],
+                            "dateTime": "today",
+                            "heartRateZones": [
+                                {
+                                    "caloriesOut": 138.8351,
+                                    "max": 86,
+                                    "min": 30,
+                                    "minutes": 65,
+                                    "name": "Out of Range"
+                                },
+                                {
+                                    "caloriesOut": 309.96824,
+                                    "max": 120,
+                                    "min": 86,
+                                    "minutes": 177,
+                                    "name": "Fat Burn"
+                                },
+                                {
+                                    "caloriesOut": 198.6678,
+                                    "max": 146,
+                                    "min": 120,
+                                    "minutes": 59,
+                                    "name": "Cardio"
+                                },
+                                {
+                                    "caloriesOut": 8.1326,
+                                    "max": 220,
+                                    "min": 146,
+                                    "minutes": 7,
+                                    "name": "Peak"
+                                }
+                            ],
+                            "value": "102.28"
+                        }
+                ],
+                    "activities-heart-intraday": {
+                        "dataset": [
                             {
-                                "caloriesOut": 138.8351,
-                                "max": 86,
-                                "min": 30,
-                                "minutes": 65,
-                                "name": "Out of Range"
+                                "time": "12:00:00",
+                                "value": 111
                             },
                             {
-                                "caloriesOut": 309.96824,
-                                "max": 120,
-                                "min": 86,
-                                "minutes": 177,
-                                "name": "Fat Burn"
+                                "time": "12:01:00",
+                                "value": 97
                             },
                             {
-                                "caloriesOut": 198.6678,
-                                "max": 146,
-                                "min": 120,
-                                "minutes": 59,
-                                "name": "Cardio"
+                                "time": "12:02:00",
+                                "value": 112
                             },
                             {
-                                "caloriesOut": 8.1326,
-                                "max": 220,
-                                "min": 146,
-                                "minutes": 7,
-                                "name": "Peak"
+                                "time": "12:03:00",
+                                "value": 114
+                            },
+                            {
+                                "time": "12:04:00",
+                                "value": 136
                             }
                         ],
-                        "value": "102.28"
-                    }
-                ],
-                "activities-heart-intraday": {
-                    "dataset": [
-                        {
-                            "time": "12:00:00",
-                            "value": 111
-                        },
-                        {
-                            "time": "12:01:00",
-                            "value": 97
-                        },
-                        {
-                            "time": "12:02:00",
-                            "value": 112
-                        },
-                        {
-                            "time": "12:03:00",
-                            "value": 114
-                        },
-                        {
-                            "time": "12:04:00",
-                            "value": 136
-                        }
-                    ],
-                    "datasetInterval": 1,
-                    "datasetType": "minute"
+                        "datasetInterval": 1,
+                        "datasetType": "minute"
+                }
                 }
             },
             "feedList": {
-                "QZJ5MOWNEXARVTTBWMYZAO7ISYOQQOAU": {
-                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
-                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-                    "lastUpdated": 1565083591687,
-                    "created": 1565083591605,
-                    "status": "Created"
-                },
-                "CE22UFPUKSW77IA26A2OKHVKEA3RU6ES": {
-                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
-                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-                    "lastUpdated": 1565083781626,
-                    "created": 1565083781575,
-                    "status": "Message sent"
-                },
-                "PYSSVYZLIDBI5YDGHA6ONFWMTON4T2U3": {
-                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3",
-                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-                    "lastUpdated": 1564985247945,
-                    "created": 1564985247891,
-                    "status": "Sending message failed"
-                },
-                "RIUDDVYZLIDBI5YDGHAONFWMTON4INH78": {
-                    "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3",
-                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-                    "lastUpdated": 1564985247945,
-                    "created": 1564985247891,
-                    "status": "Ready to resolve"
+                "value": {
+                    "QZJ5MOWNEXARVTTBWMYZAO7ISYOQQOAU": {
+                        "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "lastUpdated": 1565083591687,
+                        "created": 1565083591605,
+                        "status": "Created"
+                    },
+                    "CE22UFPUKSW77IA26A2OKHVKEA3RU6ES": {
+                        "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f",
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "lastUpdated": 1565083781626,
+                        "created": 1565083781575,
+                        "status": "Message sent"
+                    },
+                    "PYSSVYZLIDBI5YDGHA6ONFWMTON4T2U3": {
+                        "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3",
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "lastUpdated": 1564985247945,
+                        "created": 1564985247891,
+                        "status": "Sending message failed"
+                    },
+                    "RIUDDVYZLIDBI5YDGHAONFWMTON4INH78": {
+                        "connection": "https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3",
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "lastUpdated": 1564985247945,
+                        "created": 1564985247891,
+                        "status": "Ready to resolve"
+                    }
                 }
             },
             "feedRequest": {
-                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
-                "text": "Requesting feed.",
-                "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+                "value": {
+                    "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                    "text": "Requesting feed.",
+                    "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+                }
             },
             "feedRequestResponse": {
-                "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
-                "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
+                "value": {
+                    "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                    "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
+                }
             },
             "feedsAccessRequest": {
-                "{{feed_id1}}": {
-                    "input": "<optional json member with base-64 encrypted byte array>"
-                },
-                "{{feed_id2}}": {
-                    "input": "<optional json member with base-64 encrypted byte array>"
+                "value": {
+                    "{{feed_id1}}": {
+                        "input": "<optional json member with base-64 encrypted byte array>"
+                    },
+                    "{{feed_id2}}": {
+                        "input": "<optional json member with base-64 encrypted byte array>"
+                    }
                 }
             },
             "feedsAccessResponse": {
-                "<feed_id1>": {
-                    "content-type": "application/xml",
-                    "output": "<base64-encoded feed_id1 access response>"
-                },
-                "<feed_id2>": {
-                    "content-type": "application/json",
-                    "output": "<base64-encoded feed_id2 access response>"
+                "value": {
+                    "<feed_id1>": {
+                        "content-type": "application/xml",
+                        "output": "<base64-encoded feed_id1 access response>"
+                    },
+                    "<feed_id2>": {
+                        "content-type": "application/json",
+                        "output": "<base64-encoded feed_id2 access response>"
+                    }
                 }
             },
             "messageList": {
-                "result": [
+                "value": {
+                    "result": [
                     {
                         "inbound": false,
                         "payload": "eyJwdWJsaWNLZXkiOiJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXU0cXNYMmlISzE0MzhXZjRCcGxiMjBqYXdjN0U3Mng0MTMwUW9QaE9MajByM0VSTi8wSmpjK3FoaU1QQVBEVCtTa1NQbmdGckN2RTRhR0pIOWIwdm8rWVkvcW1FbVFzdGw0d2s5cEFHTnVJdHh0TStab0RoTHdkRHBETTc0QkE4aFZ3cXJHQVA5UUovNktibFFLbXRPT09NY0tTUXB0RXNFQ3NFQytMZThpTkJhU2ozRnBMbWpHUWkxYjZXMG1UMU1aYzVFUjRTOFVmN2hkajhpS0JRc3hFcjdZUThqZ2FXdE1rakZOU0tZemt2Vi9zU3FtL2t0akh4Q21MUk5yRXdvaDBvZ1V1S1FEMnJuK1piWXovalBMWjRZOFd4Q3d2Wi9jVjFkMDc5Wk16S0hYWVBLT3J1RnJOWTZjZng5STRsckEyVHdsSXpOQVd5RHQzN1ZsQ2xEUUlEQVFBQiIsInBlcnNpc3RlbnRJZCI6ImxOMUxEN2lBSGZ2bDVvTWRCZ0k4VWc9PSIsInByb3RvY29scyI6WyJodHRwczovL3Byb3RvY29scy5xaXkubmwvaW52aXRlcy92LjEuMC4wIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2NsZWFudXAvbWVzc2FnZXMvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9zdGF0ZS92LjEuMC4wIiwiaHR0cHM6Ly9naXRodWIuY29tL3FpeWZvdW5kYXRpb24vZmlLa3MvdHJlZS9tYXN0ZXIvc2NoZW1hL3YxIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2RhdGEtcmVmZXJlbmNlL3BlZXIvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9yZWZlcmVuY2UtbWFuYWdlbWVudC8xLjAuMCJdLCJuYW1lIjoibWdkX2RldjIifQ==",
@@ -2403,59 +2448,74 @@
                         "text": "Known by this persistent id"
                     }
                 ]
+                }
             },
             "messageNew": {
-                "protocol": "https://example.com/qiy/node/message",
-                "refSerialNr": -1,
-                "text": "Hello world!",
-                "payload": "SGVsbG8gV29ybGQh"
+                "value": {
+                    "protocol": "https://example.com/qiy/node/message",
+                    "refSerialNr": -1,
+                    "text": "Hello world!",
+                    "payload": "SGVsbG8gV29ybGQh"
+                }
             },
             "nodeCreateRequestBody": {
-                "alias": "Your Service Provider",
-                "id": "cb06fb8e-4e48-4eb1-8b5f-a46e9eef1308",
-                "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0TK8dMRxvXp66teemQe/tzUi26LBWfkO0pWGqyzmnNO6ISALt+rgEPl5mhqztAU4xI9iE/L9dCzC3snb2OQT+2/IaV9ilt1UAmZhyuogPeTKykPRFR2oT51wWoIuG4hD0x6iBhFCorn087Te99oS1RwS1RR5wFjIs/ol3ldawZ29xemsskmPEWJ/QpfpauBxvSbZEXRy15cAWnWO9yVzizUszwNjP8Ca0/K7NKa+lOtp09egO12SBMfX871AI44wWkZqPsr+O5cpo8Srw+90dbETA1Ypno3lpel2lBMQaf0+Srmjd/bJs9dlaXCTljoLt2uvOmriDSI6eSJZ7FxH4wIDAQAB",
-                "password": "9b449623-f361-425b-bca8-8c23c159e4c0",
-                "nodeSettings": {
+                "value": {
+                    "alias": "Your Service Provider",
+                    "id": "cb06fb8e-4e48-4eb1-8b5f-a46e9eef1308",
+                    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0TK8dMRxvXp66teemQe/tzUi26LBWfkO0pWGqyzmnNO6ISALt+rgEPl5mhqztAU4xI9iE/L9dCzC3snb2OQT+2/IaV9ilt1UAmZhyuogPeTKykPRFR2oT51wWoIuG4hD0x6iBhFCorn087Te99oS1RwS1RR5wFjIs/ol3ldawZ29xemsskmPEWJ/QpfpauBxvSbZEXRy15cAWnWO9yVzizUszwNjP8Ca0/K7NKa+lOtp09egO12SBMfX871AI44wWkZqPsr+O5cpo8Srw+90dbETA1Ypno3lpel2lBMQaf0+Srmjd/bJs9dlaXCTljoLt2uvOmriDSI6eSJZ7FxH4wIDAQAB",
+                    "password": "9b449623-f361-425b-bca8-8c23c159e4c0",
+                    "nodeSettings": {
+                        "askDappre": "no",
+                        "usePersistentId": "yes"
+                    }
+                }
+            },
+            "nodeSettings": {
+                "value": {
                     "askDappre": "no",
                     "usePersistentId": "yes"
                 }
             },
-            "nodeSettings": {
-                "askDappre": "no",
-                "usePersistentId": "yes"
-            },
             "serviceCatalogue": {
-                "https://service-type-url.example": {
-                    "type": "external",
-                    "uri": "https://feed-request-endpoint-url.example",
-                    "method": "POST"
+                "value": {
+                    "https://service-type-url.example": {
+                        "type": "external",
+                        "uri": "https://feed-request-endpoint-url.example",
+                        "method": "POST"
+                    }
                 }
             },
             "serviceEndpointFeedAccessRequest": {
-                "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
-                    "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+                "value": {
+                    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+                        "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+                    }
                 }
             },
             "serviceEndpointFeedRequest": {
-                "connection": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl",
-                "message": {
-                    "inbound": true,
-                    "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
-                    "sent": false,
-                    "serialNr": 6,
-                    "text": "Requesting 'test data'",
-                    "thirdPartyRef": " 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI="
-                },
-                "mbox": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox",
-                "pid": "1IqX94/EoOcD47hCvBQ+gi=="
+                "value": {
+                    "connection": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl",
+                    "message": {
+                        "inbound": true,
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "sent": false,
+                        "serialNr": 6,
+                        "text": "Requesting 'test data'",
+                        "thirdPartyRef": " 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI="
+                    },
+                    "mbox": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox",
+                    "pid": "1IqX94/EoOcD47hCvBQ+gi=="
+                }
             },
             "stateHandled": {
-                "type": "STATE_HANDLED",
-                "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
-                "extraData": {
-                    "newUri": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/ce5b2dd5-1bdd-41aa-b0ad-d0afa2e9a3cb",
-                    "connectToken": "https://dev1-user.testonly.digital-me.nl/user/connecttokens/509f79f8-6562-49cd-bb24-4163557d7e59/7ced41dc-76ff-469e-9fa0-3f34c73d0a2b",
-                    "PID": "9GqX94/EoOcD47hCvBQ+eg=="
+                "value": {
+                    "type": "STATE_HANDLED",
+                    "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
+                    "extraData": {
+                        "newUri": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/ce5b2dd5-1bdd-41aa-b0ad-d0afa2e9a3cb",
+                        "connectToken": "https://dev1-user.testonly.digital-me.nl/user/connecttokens/509f79f8-6562-49cd-bb24-4163557d7e59/7ced41dc-76ff-469e-9fa0-3f34c73d0a2b",
+                        "PID": "9GqX94/EoOcD47hCvBQ+eg=="
+                    }
                 }
             }
         },
