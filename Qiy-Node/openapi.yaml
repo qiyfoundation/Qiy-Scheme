@@ -1435,27 +1435,28 @@ components:
       serverTime: 1568366519145
       currentVersion: 1.0.67-SNAPSHOT
     apiGetUserAuthenticated:
-      links:
-        amList: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/mbox/user/action/31962764-596b-4eff-b80d-9cd32a65a549
-        ct-create: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
-        scan: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549
-        nodeSettings: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549
-        ref: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549/single
-        manRef: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/reference-management/31962764-596b-4eff-b80d-9cd32a65a549
-        refs: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549
-        eventCallbacks: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549/eventcallbacks
-        self: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners/id/31962764-596b-4eff-b80d-9cd32a65a549
-        ctList: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
-        feeds: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/31962764-596b-4eff-b80d-9cd32a65a549/feeds
-        target-template: https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/~id~
-        serviceCatalog: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/servicecatalog/31962764-596b-4eff-b80d-9cd32a65a549
-        ctCreate: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
-        ct-list: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
-        connections: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549
-        events: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/events/31962764-596b-4eff-b80d-9cd32a65a549
-      serverTime: 1568374440048
-      id: 31962764-596b-4eff-b80d-9cd32a65a549
-      currentVersion: 1.0.67-SNAPSHOT
+      value:
+        links:
+          amList: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/mbox/user/action/31962764-596b-4eff-b80d-9cd32a65a549
+          ct-create: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
+          scan: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549
+          nodeSettings: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549
+          ref: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549/single
+          manRef: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/reference-management/31962764-596b-4eff-b80d-9cd32a65a549
+          refs: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/references/31962764-596b-4eff-b80d-9cd32a65a549
+          eventCallbacks: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/nodesettings/31962764-596b-4eff-b80d-9cd32a65a549/eventcallbacks
+          self: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/owners/id/31962764-596b-4eff-b80d-9cd32a65a549
+          ctList: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
+          feeds: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/31962764-596b-4eff-b80d-9cd32a65a549/feeds
+          target-template: https://dev2-issuer.testonly.digital-me.nl/issuer/routes/webhook/~id~
+          serviceCatalog: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/servicecatalog/31962764-596b-4eff-b80d-9cd32a65a549
+          ctCreate: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
+          ct-list: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connecttokens/31962764-596b-4eff-b80d-9cd32a65a549
+          connections: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/connections/user/31962764-596b-4eff-b80d-9cd32a65a549
+          events: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/events/31962764-596b-4eff-b80d-9cd32a65a549
+        serverTime: 1568374440048
+        id: 31962764-596b-4eff-b80d-9cd32a65a549
+        currentVersion: 1.0.67-SNAPSHOT
     authenticationRequired:
       errors:
       - status: 401
