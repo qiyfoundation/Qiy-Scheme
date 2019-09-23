@@ -53,6 +53,46 @@
                 ]
             }
         },
+        "/ActionEndpoint": {
+            "post": {
+                "tags": [
+                    "action",
+                    "feed",
+                    "source",
+                    "set"
+                ],
+                "description": "See [Set feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-feed-source)",
+                "operationId": "Set feed source",
+                "x-url": "$ActionEndpointUrl",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/feedSourceSet"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "action",
+                    "feed",
+                    "source",
+                    "add"
+                ],
+                "description": "See [Add feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#add-feed-source)",
+                "operationId": "Add feed source",
+                "x-url": "$ActionEndpointUrl",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/feedSourceAdd"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/ActionMessageListEndpoint": {
             "get": {
                 "tags": [
@@ -1894,6 +1934,12 @@
                         }
                     }
                 }
+            },
+            "feedSourceAdd": {
+                "description": "Add feed source response"
+            },
+            "feedSourceSet": {
+                "description": "Set feed source response"
             },
             "eventCallbacksResponse": {
                 "description": "Event callbacks set",
