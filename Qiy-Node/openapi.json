@@ -1772,7 +1772,7 @@
                     "description": "Connection",
                     "application/json": {
                         "schema": {
-                            "$ref": "#/schemas/connection"
+                            "$ref": "#/components/schemas/connection"
                         },
                         "examples": {
                             "example": {
@@ -1951,7 +1951,7 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schema/eventCallbackEndpointUrls"
+                            "$ref": "#/components/schemas/eventCallbackEndpointUrls"
                         }
                     },
                     "examples": {
@@ -2016,7 +2016,7 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schema/serviceCatalogue"
+                            "$ref": "#/components/schemas/serviceCatalogue"
                         }
                     },
                     "examples": {
@@ -2507,7 +2507,7 @@
                     "pid": "1IqX94/EoOcD47hCvBQ+gi=="
                 }
             },
-            "stateHandled": {
+            "stateHandledEvent": {
                 "value": {
                     "type": "STATE_HANDLED",
                     "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae",
@@ -2601,11 +2601,11 @@
                             "content": {
                                 "application/json": {
                                     "schema": {
-                                        "$ref": "#/components/schemas/stateHandled"
+                                        "$ref": "#/components/schemas/stateHandledEvent"
                                     },
                                     "examples": {
                                         "example": {
-                                            "$ref": "#/components/examples/stateHandled"
+                                            "$ref": "#/components/examples/stateHandledEvent"
                                         }
                                     }
                                 }
@@ -2650,7 +2650,7 @@
                 "event": "USER_ACTION_MESSAGE",
                 "data": {
                     "schema": {
-                        "$ref": "#/components/schemas/userActionMessage"
+                        "$ref": "#/components/schemas/userActionMessageEvent"
                     },
                     "examples": {
                         "example": {
