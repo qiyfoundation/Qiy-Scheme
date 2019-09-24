@@ -1,53 +1,51 @@
 # Qiy Node API
 
-This document describes the [Qiy Node][Definitions Qiy Node] API - the API that is to be provided by [Qiy Node Implementations][Definitions Qiy Node Implementation].
+This document describes the [Qiy Node][Definitions Qiy Node] API - the API that can be used to access the [Qiy Trust Network][Definitions Qiy Trust Network] and which is to be provided by [Qiy Node Implementations][Definitions Qiy Node Implementation].
 
-# API Basics
-
-## Registration
+Developers can contact an [Access Provider][Definitions Access Provider] for a developer key.
 
 [Service Providers][Definitions Service Provider] and [Application Providers][Definitions Application Provider] can register with an [Access Provider][Definitions Access Provider]:
 
-* both receive an [API Key][Definitions API Key]
-* [Service Providers][Definitions Service Provider] can whitelist endpoints and receive a [Qiy Node Credential][Definitions Qiy Node Credential].
+* to receive an [API Key][Definitions API Key]
+* [Service Providers][Definitions Service Provider] can whitelist endpoints and receive a [Qiy Node Credential][Definitions Qiy Node Credential] for their Qiy account.
 
-## Service Desk
+# Service Desk
 
 Please contact the Service Desk of your [Access Provider][Definitions Access Provider] for your requests. The Service Desk of the [Access Provider][Definitions Access Provider] DigitalMe is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
 
     service@digital-me.nl
     +31 (0) 411-616565
 
-## Versions
+# Versions
 
-The api is versioned using Semantic Versioning 2.0.0 and follows this specification. 
+The api is versioned using Semantic Versioning 2.0.0 and follows the rules described in [Qiy Scheme Releases](../Qiy Scheme Releases.md).
 The version of the api described in the Qiy Node API, this document, is the same as the version of the [Qiy Scheme][Definitions Qiy Scheme] that it is part of.
 
 In addition, the following rules apply for [Qiy Node Implementations][Definitions Qiy Node Implementation]:
 
-    Two major versions must be supported in the production environment: one primary version and one secondary version.
-    The major versions should be supported in an acceptance environment.
-    The secondary version must be supported for at least 6 months.
-    One development version may be supported in a development environment.
-    The development version may change at any time.
+* Two major versions must be supported in the production environment: one primary version and one secondary version.
+* The major versions should be supported in an acceptance environment.
+* The secondary version must be supported for at least 6 months.
+* One development version may be supported in a development environment.
+* The development version may change at any time.
 
 The version of the api that is supported must be returned by [Get api info][API Get Api].
 
-## Authentication
+# Authentication
 
-### App Authentication
+## App Authentication
 
 Qiy Applications are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication.
 
 An e-mail address provided by the application provider will be used to maintain the [API Keys][Definitions API Key]. Please use this e-mail address to e-mail the [Service Desk](#service-desk) your [API Key][Definitions API Key] request.
 
-### User Authentication
+## User Authentication
 
 All requests but the request to create a Qiy Node and the Api Request MUST be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential].
 
 The token MUST be passed in the 'Authorization-node-QTN'-header parameter.
 
-#### Python
+### Python
 
 In Python, the authorization header parameter can be calculated with the package 'pyOpenSSL'. Using a pem-file with the primary key of the Qiy Node it can be generated as follows:
 
@@ -70,9 +68,9 @@ def authHeader(qiy_node_id, unix_time_in_msecs, body):
         return "QTF {0} {1}:{2}".format(qiy_node_id, unix_time_in_msecs, signature)
 ```
 
-#### Bash
+### Bash
 
-The authorization header parameter can be generated with this Bass script:
+The authorization header parameter can be generated with this Bash script:
 
 ```
 #!/usr/bin/env bash
@@ -117,95 +115,95 @@ authHeader "${INPUT}"
 echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [${UUID}] \nWhen I calculate the Authorization header\nThen the value should be: \n  [${AUTH_HEADER}]"
 ```
 
-### Transport Authentication
+## Transport Authentication
 
 Some request require Transport Authentication in order to access the Transport Layer. Authentication can be achieved by providing the Transport Password, a uuid, in the 'password'-header parameter.
 
-## Dynamic Endpoint Addresses
+# Dynamic Endpoint Addresses
 
 The Qiy Node Api uses dynamic endpoint addresses most of which can be obtained using GET /api and Get endpoint addresses. The addresses can be cached, but should be refreshed every day.
 
-### Action Messages List Endpoint
+## Action Messages List Endpoint
 
 This endpoint can be used to list action messages. The current address of the endpoint is returned in the "amList"-member of the response of Get endpoint addresses.
 
-### Connect Token Create Endpoint
+## Connect Token Create Endpoint
 
 This endpoint can be used to request or register Connect Tokens. The current address of the endpoint is returned in the "ctCreate"-member of the response of Get endpoint addresses.
 
-### Connect Token List Endpoint
+## Connect Token List Endpoint
 
 This endpoint can be used to list Connect Tokens. The current address of the endpoint is returned in the "ctList"-member of the response of Get endpoint addresses.
 
-### Connection Create Endpoint
+## Connection Create Endpoint
 
 The Connection Create Endpoint can be used to create a connection. The current address of the endpoint is returned in the "scan"-member of the response of Get endpoint addresses.
 
-### Connection Endpoint
+## Connection Endpoint
 
 This endpoint can be used to get the details of a connection. The endpoint urls are returned by Request connection and List connections.
 
-### Connection Feeds Endpoint
+## Connection Feeds Endpoint
 
 This endpoint can be used by a Relying Party to request for a feed.
 
 The current address of the endpoint is returned in a "feeds"-endpoint of a connection.
 
-### Connections List Endpoint
+## Connections List Endpoint
 
 The Connections List Endpoint can be used to list connections. The current address of the endpoint is returned in the "connections"-member of the response of Get endpoint addresses.
 
-### Events Endpoint
+## Events Endpoint
 
 This endpoint can be used to [receive "Server-Sent Events"-events](#start-listening-to-events). The current address of the endpoint is returned in the "events"-member of the response of [Get endpoint addresses](#get-endpoint-addresses).
 
-### Event Callbacks Endpoint
+## Event Callbacks Endpoint
 
 This endpoint can be used to [set](#set-event-callback-endpoints) or [get the addresses of the Event Callback endpoints](#get-event-callback-endpoints). The current address of the endpoint is returned in the "eventCallbacks"-member of the response of [Get endpoint addresses](#get-endpoint-addresses).
 
-### Feeds Endpoint
+## Feeds Endpoint
 
 A Relying Party uses this endpoint to list or access one or more feeds of an Individual (connection) or of himself (a Qiy Node).
 
 The address of the endpoint for a connection is returned in the "feeds"-member of the response of List connections and/or Get connection. The address of the endpoint for a Qiy Node is returned in the "feeds"-member of the response of Get endpoint addresses.
 
-### Mailbox Endpoint
+## Mailbox Endpoint
 
 This endpoint can be used to send and receive messages. The current address of the endpoint is returned in a "mbox"-member of the response of List connections or Get connection.
 
-### Manage References Endpoint
+## Manage References Endpoint
 
 This endpoint is deprecated. The current address of the endpoint is returned in the "manRef"-member of the response of List connections or Get connection.
 
-### Node Create Endpoint
+## Node Create Endpoint
 
 This endpoint can be used to [request the creation of a Qiy Node](#request-creation-of-qiy-node). The current address of the endpoint is returned by [Get /api](#api-info).
 
-### Node Settings Endpoint
+## Node Settings Endpoint
 
 This endpoint can be used to get and set settings of a Qiy Node. The current address of the endpoint is returned in the "nodeSettings"-member of the response of Get endpoint addresses
 
-### Reference Endpoint
+## Reference Endpoint
 
 This endpoint is deprecated.
 
-### References Endpoint
+## References Endpoint
 
 This endpoint is deprecated.
 
-### Self Endpoint
+## Self Endpoint
 
 This endpoint can be used to delete a Qiy Node. The endpoint address is returned in the 'self'-property of Get endpoint addresses.
 
-### Service Catalogue Endpoint
+## Service Catalogue Endpoint
 
 This endpoint can be used to get or set the contents of a Service Catalogue. The current address of the endpoint is returned in the "serviceCatalog"-member of the response of Get endpoint addresses.
 
-### Target Template Endpoint
+## Target Template Endpoint
 
 This endpoint can be used to create off line connect tokens. The current address of the endpoint is returned in the "target-tempate"-member of the response of Get endpoint addresses.
 
-## Servers
+# Servers
 
 The Qiy Node service runs in a a development environment, the acceptance environment and the production environment. In addition, a proxy service is provided for discovery, experimentation, and evaluation.
 The server urls are:
@@ -227,7 +225,7 @@ Ensure that the following system settings are configurable to allow for smooth s
 * Transport Password
 * API key
 
-### Proxy server
+## Proxy server
 
 The proxy server provides an easy means to access Dev2 for taking care of the authentication.
 The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool] instead.
@@ -240,71 +238,71 @@ Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-e
 The values of the 'Autorization-node-QTN'-header parameter and the 'password'-header parameters are always ignored.
 The value of the 'Autorization'-header parameter is reused when basic authentication is used and ignored otherwise.
 
-## Events
+# Events
 
 This section describes the [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events)-events that can be fired by a Qiy Node and catched by a client using [Start listening to events](#start-listening-to-events).
 
-### Connected to Router Event
+## Connected to Router Event
 
 This event is fired after a request for a connection and can be used to monitor the creation of a connection.
 
-### Connected to Router Failed Event
+## Connected to Router Failed Event
 
 This event is fired after a request for a connection and signals that a connection could not be established.
 
-### Data Reference Failure Event
+## Data Reference Failure Event
 
 This server-sent event is fired when a Request for feed fails.
 
-### Data Reference Received-v2 Event
+## Data Reference Received-v2 Event
 
 This server-sent event is generated by a Qiy Node of a Relying Party when it has received a new feed.
 
-### Data Request Forwarded Event
+## Data Request Forwarded Event
 
 This server-sent event is fired when a feed is being accessed.
 
-### Data Request Fulfilled Event
+## Data Request Fulfilled Event
 
 This server-sent event is fired when a feed has been accessed succesfully.
 
-### Data Request Failure Event
+## Data Request Failure Event
 
 This server-sent event is fired when a feed could not be accessed succesfully.
 
-### Data Request Not Forwarded Event
+## Data Request Not Forwarded Event
 
 This server-sent event is fired when and if a feed cannot be accessed.
 
-### Pending Peer Data Reference Event
+## Pending Peer Data Reference Event
 
 This server-sent event can be fired when a feed is being accessed.
 
-### Unexpected Data Reference Event
+## Unexpected Data Reference Event
 
 This server-sent event can be fired when a feed is being accessed.
 
-### Persistent Id Event
+## Persistent Id Event
 
 This event can be used to monitor the creation of a connection.
 
-### Routing Failure Event
+## Routing Failure Event
 
 This event is fired after a request for a connection and signals that a connection could not be established.
 
-### Shared Secret Received Event
+## Shared Secret Received Event
 
 This event is fired after a request for a connection upon creating connection.
 
-### Shared Secret Sent Event
+## Shared Secret Sent Event
 
 This event is fired after a request for a connection upon creating connection.
 
-### State Handled Event
+## State Handled Event
 
 This event is fired when a connection has been created, see GET State Handled Event for an example.
 
-### User Action Message Event
+## User Action Message Event
 
 This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
 
@@ -318,9 +316,9 @@ event: USER_ACTION_MESSAGE data: {
 }
 ```
 
-## Documentation
+# Documentation
 
-#### Setup
+### Setup
 
 An End User App can only access the Qiy Trust Network under the following preconditions:
 
@@ -328,14 +326,14 @@ An End User App can only access the Qiy Trust Network under the following precon
     The End User App correctly authenticates Qiy Node requests.
     The End User App must allow End Users to use a new Qiy Node or reuse an existing one.
 
-#### Subscribe
+### Subscribe
 
 An Individual can subscribe to a service as follows:
 
     Conclude an subscription agreement (out-of-scope).
     Connect with the [Service Provider][Definitions Service Provider].
 
-#### Orchestrate
+### Orchestrate
 
 When an Individual has subscribed to a Service provided by a Relying Party, the latter may request for a feed. The End User App can process these requests as follows:
 
@@ -347,9 +345,9 @@ When an Individual has subscribed to a Service provided by a Relying Party, the 
 
 After these steps, feeds will be automatically created and provided to the Relying Party.
 
-### Service Provider
+## Service Provider
 
-#### Setup
+### Setup
 
 Before a [Service Provider][Definitions Service Provider] can provide services via Qiy he has to make the following preparations:
 
@@ -362,15 +360,15 @@ Before a [Service Provider][Definitions Service Provider] can provide services v
     Configure the computer system for the Qiy Node.
     Publish the Service Catalogue with Qiy.
 
-##### Service Catalogue
+#### Service Catalogue
 
 A [Service Provider][Definitions Service Provider] publishes the (data) service types it supports in his Service Catalogue, which consists of an array of urls for Service Type Descriptions with additional details, for example for the associated [Feed Request Endpoints][API Basics Documentation Service Provider Setup Endpoints Feed Request Endpoint], see Get service catalogue.
 
 A Service Type Description can contain a list of urls for the description of the Operation Types of the service which are used in as value of the protocol-member in [Feed Requests][Feeds Request for feed]. If the Service Type Description does not contain Operation Type Urls, the Service Type Description Url can be used instead.
 
-##### Endpoints
+#### Endpoints
 
-###### Event Callback Endpoints
+##### Event Callback Endpoints
 
 * State Handled Endpoint
 
@@ -382,17 +380,17 @@ This event callback endpoint is a Technology Service which can be setup and used
 
 The address of the endpoint can be defined with Set event callback endpoint.
 
-###### Service Endpoint
+##### Service Endpoint
 
 A Data Provider uses this backend endpoint to serve requests for feed callback requests and feed access callback requests.
 
 The Data Provider provides the uri of the endpoint using set service catalogue.
 
-##### Settings
+#### Settings
 
 A Qiy Node can have diferent settings which can be maintained with the get and set node setting calls.
 
-##### Qiy Node Credential
+#### Qiy Node Credential
 
 A Qiy Node credential consists of:
 
@@ -442,7 +440,7 @@ public_key=OpenSSL.crypto.dump_publickey(
     private_key)
 ```
 
-#### Connections
+### Connections
 
 Individuals can connect and interact with other Individuals and [Service Providers][Definitions Service Provider] using connections between the related Qiy Nodes.
 
@@ -454,11 +452,11 @@ Connections can be created between an invitor and an invitee using Connect Token
     The invitor receives a [State Handled Callback][Connections State Handled Callback] notifying that the connect token has been used to create a connection.
     The invitee receives a [State Handled Event][Connections State Handled Event] notifying that the connection has been established.
 
-#### Connect Tokens
+### Connect Tokens
 
 A Connect Token can be used to create connections between Qiy Users, for example an Individual and a [Service Provider][Definitions Service Provider]. The connect token may be created by either of the two, but when connecting to a [Service Provider][Definitions Service Provider] it must always be [registered][Connections Register connect token] or otherwise [requested][Connections Request connect token] by the [Service Provider][Definitions Service Provider].
 
-##### Create Connect Token
+#### Create Connect Token
 
 A Connect Token is a json-object with three members which can be created as follows:
 
@@ -475,22 +473,22 @@ RANDOM.nextBytes(tmpSecret);
 String tmpSecretString = Base64.getEncoder().encodeToString(tmpSecret);
 ```
 
-##### Online Connect Tokens
+#### Online Connect Tokens
 
 An Online Connect Token is a connect token that has been created by the Qiy Trust Network when executing [Request Connect Token][Connections Request connect token].
 
-##### Offline Connect Tokens
+#### Offline Connect Tokens
 
 An Offline Connect Token is a Connect Token that has been created by a Qiy Node Client and registered later using [Register connect token][Connections Register connect token].
 
-##### On-Connected Actions
+#### On-Connected Actions
 
 An On-Connected Actions is an action such as the execution of a http-request that can be defined for a Connect Token and that is executed whenever the token has been used to create a connection.
 
-#### Feeds
+### Feeds
 
 Feeds can be used by a Relying Party to access personal data (consume subscribed services) of an individual from (provided by) a Data Provider.
-##### Relying Party
+#### Relying Party
 
 A Relying Party (RP) can do so as follows:
 
@@ -498,22 +496,22 @@ A Relying Party (RP) can do so as follows:
     The RP receives a callback with (or polls for) a feed id.
     The RP uses the feed id in a feed access-request to acquire the data (issue a service operation request).
 
-##### End User App
+#### End User App
 
 The feed-flow of an End User App is described tbd.
 
-##### Data Provider
+#### Data Provider
 
 The feed-flow for a Data Provider (DP) is as follows:
 
     The DP sets up and uses a Service Endpoint to receive and process requests for feeds and return feed id's.
     The DP sets up and uses the same Service Endpoint to receive and process feed access requests.
 
-#### Events
+### Events
 
 A Qiy Node supports a number of events. The Qiy Client can receive the events using a Server-Sent Events-listener, see [Start listening to events](#start-listening-to-events), or using callbacks.
 
-#### Messages
+### Messages
 
 Qiy Users can use connections to send and receive messages.
 
