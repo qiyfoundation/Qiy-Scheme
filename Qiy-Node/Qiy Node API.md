@@ -918,7 +918,7 @@ A Relying Party can use this Feeds Endpoint-call to access one or more feeds.
 
 ### List feeds
 
-This Feeds Endpoint-request can be used to list the feed's with feed details of a Qiy Node or a connection for all or a set of protocols (operation types).
+This Feeds Endpoint-request can be used to list the feed's of a Qiy Node or of a connection for all or a set of protocols (operation types), see [List feeds request].
 
 
 ## Data Provider
@@ -1103,3 +1103,5 @@ Please contact the [Service Desk](#service-desk).
 [Feeds Individual Add feed]: https://qiy.api.digital-me.nl/?version=latest#d628b6d5-057f-4ce9-9a01-2c13e785cda0
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [Qiy Test Tool]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
+
+[List feeds request]:file:///C:/Users/Freek%20Driesenaar/Documents/GitHub/Qiy-Scheme/Qiy-Node/openapi.html#/feed/List_feeds
