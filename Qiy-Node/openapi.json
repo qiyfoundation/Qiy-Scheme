@@ -412,21 +412,6 @@
                 "description": "See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-feeds)",
                 "operationId": "List feeds",
                 "x-url": "$FeedsEndpointUrl",
-                "requestBody": {
-                    "description": "List feeds",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/feedList"
-                            },
-                            "examples": {
-                                "example": {
-                                    "$ref": "#/components/examples/feedList"
-                                }
-                            }
-                        }
-                    }
-                },
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/feedList"
@@ -1752,7 +1737,7 @@
                     }
                 }
             },
-            "actionMesageList": {
+            "actionMessageList": {
                 "description": "Action Message list",
                 "content": {
                     "application/json": {
