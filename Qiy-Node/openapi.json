@@ -2281,7 +2281,7 @@
             "eventsResponseExample": {
                 "value": ":ping"
             },
-            "dataReferenceReceivedv2": {
+            "dataReferenceReceivedv2Event": {
                 "value": {
                     "type": "DATA_REFERENCE_RECEIVED2",
                     "connectionUrl": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid1sp1connectionUrl",
@@ -2559,11 +2559,11 @@
                             "content": {
                                 "application/json": {
                                     "schema": {
-                                        "$ref": "#/components/schemas/dataReferenceReceivedv2"
+                                        "$ref": "#/components/schemas/dataReferenceReceivedv2Event"
                                     },
                                     "examples": {
                                         "example": {
-                                            "$ref": "#/components/examples/dataReferenceReceivedv2"
+                                            "$ref": "#/components/examples/dataReferenceReceivedv2Event"
                                         }
                                     }
                                 }
