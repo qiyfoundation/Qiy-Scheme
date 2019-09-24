@@ -104,7 +104,9 @@ paths:
         routingFailed:
           "$ref": "#/components/x-events/routingFailed"
       security:
+      - appAuthentication: []
       - transportAuthentication: []
+      - userAuthentication: []
   "/ConnectionEndpoint":
     get:
       tags:
@@ -147,7 +149,9 @@ paths:
         dataReferenceReceivedv2:
           "$ref": "#/components/x-events/dataReferenceReceivedv2"
       security:
+      - appAuthentication: []
       - transportAuthentication: []
+      - userAuthentication: []
   "/ConnectionListEndpoint":
     get:
       tags:
@@ -207,7 +211,9 @@ paths:
         userActionMessage:
           "$ref": "#/components/x-events/userActionMessage"
       security:
+      - appAuthentication: []
       - transportAuthentication: []
+      - userAuthentication: []
   "/ConnectTokenListEndpoint":
     get:
       tags:
@@ -271,15 +277,6 @@ paths:
       description: See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-feeds)
       operationId: List feeds
       x-url: "$FeedsEndpointUrl"
-      requestBody:
-        description: List feeds
-        content:
-          application/json:
-            schema:
-              "$ref": "#/components/schemas/feedList"
-            examples:
-              example:
-                "$ref": "#/components/examples/feedList"
       responses:
         '200':
           "$ref": "#/components/responses/feedList"
@@ -344,7 +341,9 @@ paths:
         default:
           "$ref": "#/components/responses/default"
       security:
+      - appAuthentication: []
       - transportAuthentication: []
+      - userAuthentication: []
     post:
       tags:
       - message
@@ -365,7 +364,9 @@ paths:
         default:
           "$ref": "#/components/responses/default"
       security:
+      - appAuthentication: []
       - transportAuthentication: []
+      - userAuthentication: []
   "/NodeCreateEndpoint":
     post:
       tags:
@@ -1233,7 +1234,7 @@ components:
               "$ref": "#/components/examples/apiGetAppAuthenticated"
             apiGetUserAuthenticated:
               "$ref": "#/components/examples/apiGetUserAuthenticated"
-    actionMesageList:
+    actionMessageList:
       description: Action Message list
       content:
         application/json:
@@ -1844,5 +1845,6 @@ components:
           event: USER_ACTION_MESSAGE
           data: { "type": "USER_ACTION_MESSAGE", "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e", "extraData": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4"}
 security:
+- appAuthentication: []
 - userAuthentication: []
 
