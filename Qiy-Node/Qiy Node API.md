@@ -1104,4 +1104,4 @@ Please contact the [Service Desk](#service-desk).
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [Qiy Test Tool]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 
-[List feeds request]: file:///C:/Users/Freek%20Driesenaar/Documents/GitHub/Qiy-Scheme/Qiy-Node/openapi.html#/feed/List_feeds
+[List feeds request]: http://127.0.0.1:8000/openapi.html#/feed/List_feeds
