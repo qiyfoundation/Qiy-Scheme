@@ -154,7 +154,13 @@
                 },
                 "security": [
                     {
+                        "appAuthentication": []
+                    },
+                    {
                         "transportAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
                     }
                 ]
             }
@@ -222,7 +228,13 @@
                 },
                 "security": [
                     {
+                        "appAuthentication": []
+                    },
+                    {
                         "transportAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
                     }
                 ]
             }
@@ -314,7 +326,13 @@
                 },
                 "security": [
                     {
+                        "appAuthentication": []
+                    },
+                    {
                         "transportAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
                     }
                 ]
             }
@@ -510,7 +528,13 @@
                 },
                 "security": [
                     {
+                        "appAuthentication": []
+                    },
+                    {
                         "transportAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
                     }
                 ]
             },
@@ -545,7 +569,13 @@
                 },
                 "security": [
                     {
+                        "appAuthentication": []
+                    },
+                    {
                         "transportAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
                     }
                 ]
             }
@@ -2652,6 +2682,9 @@
         }
     },
     "security": [
+        {
+            "appAuthentication": []
+        },
         {
             "userAuthentication": []
         }
