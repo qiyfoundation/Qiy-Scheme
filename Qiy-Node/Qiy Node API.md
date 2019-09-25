@@ -18,7 +18,7 @@ Please contact the Service Desk of your [Access Provider][Definitions Access Pro
 
 # Versions
 
-The api is versioned using Semantic Versioning 2.0.0 and follows the rules described in [Qiy Scheme Releases](../Qiy Scheme Releases.md).
+The api is versioned using Semantic Versioning 2.0.0 and follows the rules described in [Qiy Scheme Releases](../Qiy%20Scheme%20Releases.md).
 The version of the api described in the Qiy Node API, this document, is the same as the version of the [Qiy Scheme][Definitions Qiy Scheme] that it is part of.
 
 In addition, the following rules apply for [Qiy Node Implementations][Definitions Qiy Node Implementation]:
