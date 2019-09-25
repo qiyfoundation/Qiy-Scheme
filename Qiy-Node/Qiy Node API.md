@@ -1,24 +1,26 @@
 # Qiy Node API
 
-This document describes the [Qiy Node][Definitions Qiy Node] API - the API that can be used to access the [Qiy Trust Network][Definitions Qiy Trust Network] and which is to be provided by [Qiy Node Implementations][Definitions Qiy Node Implementation].
+This document describes the Qiy Node API - the API for [Qiy Nodes][Definitions Qiy Node], in layman's terms: a digital identity for [Individuals][Definitions Individual] and/or [Service Providers][Definitions Service Provider] to provide and/or consume digital services.
+In technical terms a Qiy Node provides a point of access for the [Qiy Trust Network][Definitions Qiy Trust Network] that can be used to allows individuals to provide [Relying Parties][Definitions Relying Party] access to [Resources][Definitions Resource] protected by [Data Providers][Definitions Data Provider], for example using a [POST /FeedsEndpoint/{feedId}]-request.
+Individuals acquire Qiy Nodes when they use Qiy-based end-user applications.
+Service Providers acquire Qiy Nodes from [Access Providers][Definitions Access Providers].
 
-Developers can contact an [Access Provider][Definitions Access Provider] for a developer key.
+Software developers use the api to build [Qiy Node Clients][Definitions Qiy Node Client] (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
-[Service Providers][Definitions Service Provider] and [Application Providers][Definitions Application Provider] can register with an [Access Provider][Definitions Access Provider]:
-
-* to receive an [API Key][Definitions API Key]
-* [Service Providers][Definitions Service Provider] can whitelist endpoints and receive a [Qiy Node Credential][Definitions Qiy Node Credential] for their Qiy account.
 
 # Service Desk
 
-Please contact the Service Desk of your [Access Provider][Definitions Access Provider] for your requests. The Service Desk of the [Access Provider][Definitions Access Provider] DigitalMe is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
+The api provides access to the [Qiy Trust Network][Definitions Qiy Trust Network] which is provided by its [Access Providers][Definitions Access Providers].
+Please contact the Service Desk of your Access Provider for your requests. 
+The Service Desk of the Access Provider [DigitalMe] is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
 
-    service@digital-me.nl
+    service _at_ digital-me _dot_ nl
     +31 (0) 411-616565
+
 
 # Versions
 
-The api is versioned using Semantic Versioning 2.0.0 and follows the rules described in [Qiy Scheme Releases](../Qiy%20Scheme%20Releases.md).
+The api is versioned using [Semantic Versioning 2.0.0](https://semver.org) and follows the rules described in [Qiy Scheme Releases](../Qiy%20Scheme%20Releases.md).
 The version of the api described in the Qiy Node API, this document, is the same as the version of the [Qiy Scheme][Definitions Qiy Scheme] that it is part of.
 
 In addition, the following rules apply for [Qiy Node Implementations][Definitions Qiy Node Implementation]:
@@ -29,21 +31,21 @@ In addition, the following rules apply for [Qiy Node Implementations][Definition
 * One development version may be supported in a development environment.
 * The development version may change at any time.
 
-The version of the api that is supported must be returned by [Get api info][API Get Api].
+The version of the api that is supported must be returned by [Get /api].
+
 
 # Authentication
 
 ## App Authentication
 
-Qiy Applications are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication.
+[Qiy Applications][Definitions Qiy Application] are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication, see for example [GET /api].
 
-An e-mail address provided by the application provider will be used to maintain the [API Keys][Definitions API Key]. Please use this e-mail address to e-mail the [Service Desk](#service-desk) your [API Key][Definitions API Key] request.
+API Keys are provided by Access Providers.
 
 ## User Authentication
 
-All requests but the request to create a Qiy Node and the Api Request MUST be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential].
-
-The token MUST be passed in the 'Authorization-node-QTN'-header parameter.
+Most requests must be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential] as described below.
+The token is passed in the 'Authorization-node-QTN'-header parameter, see for example [POST /FeedsEndpoint/{feedId}].
 
 ### Python
 
@@ -103,10 +105,6 @@ genPem() {
     printf "%sBEGIN RSA PRIVATE KEY%s\n%s\n%sEND RSA PRIVATE KEY%s\n" "${dashes}" "${dashes}" "${private_key}" "${dashes}" "${dashes}" > ${UUID}_private.pem
 }
 
-
-
-
-
 #########################
 # Do actual work
 #########################
@@ -117,71 +115,77 @@ echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [$
 
 ## Transport Authentication
 
-Some request require Transport Authentication in order to access the Transport Layer. Authentication can be achieved by providing the Transport Password, a uuid, in the 'password'-header parameter.
+Some requests require [Transport Authentication][Definitions Transport Authentication] in order to access the [Transport Layer]. Authentication can be achieved by providing the Transport Password, a uuid, in the 'password'-header parameter, see for example [POST /ConnectionCreateEndpoint].
 
 # Dynamic Endpoint Addresses
 
-The Qiy Node Api uses dynamic endpoint addresses most of which can be obtained using GET /api and Get endpoint addresses. The addresses can be cached, but should be refreshed every day.
+The Qiy Node Api uses dynamic endpoint addresses most of which can be obtained using [GET /api]. The addresses can be cached, but should be refreshed every day.
 
 ## Action Messages List Endpoint
 
-This endpoint can be used to list action messages. The current address of the endpoint is returned in the "amList"-member of the response of Get endpoint addresses.
+This endpoint can be used for [List action messages]. The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
 
 ## Connect Token Create Endpoint
 
-This endpoint can be used to request or register Connect Tokens. The current address of the endpoint is returned in the "ctCreate"-member of the response of Get endpoint addresses.
+This endpoint can be used to [request][Request connect token] or [register][Register connect token] [Connect Tokens][Definitions Connect Token]. The current address of the endpoint is returned in the "ctCreate"-member of the response of Get endpoint addresses.
 
 ## Connect Token List Endpoint
 
-This endpoint can be used to list Connect Tokens. The current address of the endpoint is returned in the "ctList"-member of the response of Get endpoint addresses.
+This endpoint can be used for [List connect tokens]. The current address of the endpoint is returned in the "ctList"-member of the response of [Get endpoint addresses].
 
 ## Connection Create Endpoint
 
-The Connection Create Endpoint can be used to create a connection. The current address of the endpoint is returned in the "scan"-member of the response of Get endpoint addresses.
+This endpoint can be used for [Request connection]. The current address of the endpoint is returned in the "scan"-member of the response of [Get endpoint addresses].
 
 ## Connection Endpoint
 
-This endpoint can be used to get the details of a connection. The endpoint urls are returned by Request connection and List connections.
+This endpoint can be used for [Get connection]. The endpoint urls are returned by [Request connection] and [List connections].
 
 ## Connection Feeds Endpoint
 
-This endpoint can be used by a Relying Party to request for a feed.
+This endpoint can be used by a Relying Party to request an Individual for a feed to access a protected resource, see [Request for feed].
 
-The current address of the endpoint is returned in a "feeds"-endpoint of a connection.
+The current address of the endpoint is returned in a "feeds"-endpoint of a connection, see [Get connection] or [List connections].
 
 ## Connections List Endpoint
 
-The Connections List Endpoint can be used to list connections. The current address of the endpoint is returned in the "connections"-member of the response of Get endpoint addresses.
+This endpoint can be used for [List connections]. The current address of the endpoint is returned in the "connections"-member of the response of [Get endpoint addresses].
 
 ## Events Endpoint
 
-This endpoint can be used to [receive "Server-Sent Events"-events](#start-listening-to-events). The current address of the endpoint is returned in the "events"-member of the response of [Get endpoint addresses](#get-endpoint-addresses).
+This endpoint can be used for [Start listening to events]. The current address of the endpoint is returned in the "events"-member of the response of [Get endpoint addresses].
 
 ## Event Callbacks Endpoint
 
-This endpoint can be used to [set](#set-event-callback-endpoints) or [get the addresses of the Event Callback endpoints](#get-event-callback-endpoints). The current address of the endpoint is returned in the "eventCallbacks"-member of the response of [Get endpoint addresses](#get-endpoint-addresses).
+This endpoint can be used to [set][Set event callback endpoints] or [get][Get event callback endpoints] the addresses of the Event Callback Endpoints.
+The current addresses of the Event Callbacks Endpoint is returned in the "eventCallbacks"-member of the response of [Get endpoint addresses].
 
 ## Feeds Endpoint
 
-A Relying Party uses this endpoint to list or access one or more feeds of an Individual (connection) or of himself (a Qiy Node).
+A Relying Party uses this endpoint to [list][List feeds] or [access one][Access feed] or [more][Access feeds] feeds of an Individual (connection) or of himself (a Qiy Node).
 
-The address of the endpoint for a connection is returned in the "feeds"-member of the response of List connections and/or Get connection. The address of the endpoint for a Qiy Node is returned in the "feeds"-member of the response of Get endpoint addresses.
+The address of the endpoint for a connection is returned in the "feeds"-member of the response of [List connections] and/or [Get connection].
+The address of the endpoint for a Qiy Node is returned in the "feeds"-member of the response of [Get endpoint addresses].
 
-## Mailbox Endpoint
+## Messages Endpoint
 
-This endpoint can be used to send and receive messages. The current address of the endpoint is returned in a "mbox"-member of the response of List connections or Get connection.
+This endpoint can be used for [Send message] and [List messages]. 
+The current address of the endpoint is returned in a "mbox"-member of the response of [List connections] or [Get connection].
 
 ## Manage References Endpoint
 
-This endpoint is deprecated. The current address of the endpoint is returned in the "manRef"-member of the response of List connections or Get connection.
+This endpoint is deprecated.
+The current address of the endpoint is returned in the "manRef"-member of the response of [List connections] or [Get connection].
 
 ## Node Create Endpoint
 
-This endpoint can be used to [request the creation of a Qiy Node](#request-creation-of-qiy-node). The current address of the endpoint is returned by [Get /api](#api-info).
+This endpoint can be used for [Request creation of Qiy Node].
+The current address of the endpoint is returned by [Get /api].
 
 ## Node Settings Endpoint
 
-This endpoint can be used to get and set settings of a Qiy Node. The current address of the endpoint is returned in the "nodeSettings"-member of the response of Get endpoint addresses
+This endpoint can be used for [Get node settings] and [Set node settings].
+The current address of the endpoint is returned in the "nodeSettings"-member of the response of [Get endpoint addresses].
 
 ## Reference Endpoint
 
@@ -193,15 +197,18 @@ This endpoint is deprecated.
 
 ## Self Endpoint
 
-This endpoint can be used to delete a Qiy Node. The endpoint address is returned in the 'self'-property of Get endpoint addresses.
+This endpoint can be used for [Delete Qiy Node].
+The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
 
 ## Service Catalogue Endpoint
 
-This endpoint can be used to get or set the contents of a Service Catalogue. The current address of the endpoint is returned in the "serviceCatalog"-member of the response of Get endpoint addresses.
+This endpoint can be used to [get][Get service catalogue] or [set][Set service catalogue] the contents of a [Service Catalogue][Definitions Service Catalogue].
+The current address of the endpoint is returned in the "serviceCatalog"-member of the response of [Get endpoint addresses].
 
 ## Target Template Endpoint
 
-This endpoint can be used to create off line connect tokens. The current address of the endpoint is returned in the "target-tempate"-member of the response of Get endpoint addresses.
+This endpoint can be used to [create off line connect tokens](#offline-connect-tokens).
+The current address of the endpoint is returned in the "target-tempate"-member of the response of [Get endpoint addresses].
 
 # Servers
 
@@ -228,7 +235,7 @@ Ensure that the following system settings are configurable to allow for smooth s
 ## Proxy server
 
 The proxy server provides an easy means to access Dev2 for taking care of the authentication.
-The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool] instead.
+The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool pa] instead.
 Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-endpoint:
 
 * App authentication is provided when an 'Authorization'-header parameter is provided in the request.
@@ -958,6 +965,10 @@ An End User App uses this call to add a Data Provider as a source for a feed req
 Please contact the [Service Desk](#service-desk).
 
 
+[Access feed]: #access-feed
+[Access feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feed
+[Access feeds]: #access-feeds
+[Access feeds request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feeds
 [API Basics]: https://qiy.api.digital-me.nl/?version=latest#a5c62ac8-8f2c-4d57-b970-42ff89253670
 [API Basics Registration]: https://qiy.api.digital-me.nl/?version=latest#699276ef-e0b7-4ff8-852d-a5b2e175b4e3
 [API Basics Service Desk]: https://qiy.api.digital-me.nl/?version=latest#9060bf32-11d2-4736-add3-629b52491c70
@@ -1040,18 +1051,6 @@ Please contact the [Service Desk](#service-desk).
 [API Basics Documentation Qiy Node Client Messages]: https://qiy.api.digital-me.nl/?version=latest#d128578f-2fb7-41ec-b777-da7f2341d274
 [API]: https://qiy.api.digital-me.nl/?version=latest#076c9660-4323-42f1-b087-6cad8e484c3a
 [API Get Api]: https://qiy.api.digital-me.nl/?version=latest#27416893-7da4-411f-8847-88103d17dc86
-[Nodes]: https://qiy.api.digital-me.nl/?version=latest#62279de6-0df7-497a-9a1e-cddc17bbbc63
-[Nodes Request creation of Qiy Node]: https://qiy.api.digital-me.nl/?version=latest#806d07bb-f6eb-47f8-bc07-71119440fc0d
-[Nodes Get endpoint addresses]: https://qiy.api.digital-me.nl/?version=latest#0bdb3ea3-0e8c-4f6d-8a92-8230d1be9a02
-[Nodes Set event callback endpoints]: https://qiy.api.digital-me.nl/?version=latest#2887a3e0-5e5c-40ea-83b7-e40ce6cf5333
-[Nodes Get event callback endpoints]: https://qiy.api.digital-me.nl/?version=latest#d0750a63-eee1-41ef-b093-ad0ef8c720e3
-[Nodes Start listening to events]: https://qiy.api.digital-me.nl/?version=latest#abd171d1-4aee-4e8c-a599-00914f277d62
-[Nodes Get node settings]: https://qiy.api.digital-me.nl/?version=latest#7bb9f259-c23d-4038-8cba-237671b167a7
-[Nodes Set node settings]: https://qiy.api.digital-me.nl/?version=latest#07e66599-8dff-4ed4-9a9f-4773fb5515d7
-[Nodes Delete Qiy Node]: https://qiy.api.digital-me.nl/?version=latest#5c60f3f0-ea95-40f7-9487-3664d9a4b293
-[Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
-[Services Get service catalogue]: https://qiy.api.digital-me.nl/?version=latest#91f6b195-9c43-4c95-9618-57631714343b
-[Services Set service catalogue]: https://qiy.api.digital-me.nl/?version=latest#d29ddd91-cdcf-48af-abe4-42cd6d54694b
 [Connections]: https://qiy.api.digital-me.nl/?version=latest#466096f2-591f-4ee9-af4e-a7c68ceb6571
 [Connections Relying Party/Data Provider]: https://qiy.api.digital-me.nl/?version=latest#a97bc6a5-4612-4fb9-b4e7-5dbb243c26e6
 [Connections Relying Party/Data Provider Request connect token]: https://qiy.api.digital-me.nl/?version=latest#aeca4ebb-74b7-4fc5-8980-ca8079f4a733
@@ -1066,20 +1065,28 @@ Please contact the [Service Desk](#service-desk).
 [Connections Get connect token]: https://qiy.api.digital-me.nl/?version=latest#c8b4b003-e8ec-4fb2-bafa-f37f0c4d2925
 [Connections List connect tokens]: https://qiy.api.digital-me.nl/?version=latest#669c1d26-94fa-460b-a2ad-e899ccb91d2b
 [Connections List connections]: https://qiy.api.digital-me.nl/?version=latest#1ddd2cbf-5a25-422f-a650-28f551dce88c
+[Consents]: https://qiy.api.digital-me.nl/?version=latest#3f42e884-3ffa-4387-8896-05e7226d5a9f
 [Definitions Access Provider]: ../Definitions.md#access-provider
 [Definitions API Key]: #app-authentication
 [Definitions Application Provider]: ../Definitions.md#application-provider
+[Definitions Connect Token]: ../Definitions.md#connect-token
+[Definitions Data Provider]: ../Definitions.md#data-provider
+[Definitions Individual]: ../Definitions.md#individual
+[Definitions Relying Party]: ../Definitions.md#relying-party
+[Definitions Resource]: ../Definitions.md#resource
+[Definitions Service Catalogue]: ../Definitions.md#service-catalogue
 [Definitions Service Provider]: ../Definitions.md#service-provider
+[Definitions Transport Authentication]: ../Definitions.md#transport-authentication
 [Definitions Qiy Node]: ../Definitions.md#qiy-node
+[Definitions Qiy Node Clients]: ../Definitions.md#qiy-node-client
 [Definitions Qiy Node Credential]: #qiy-node-credential
 [Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
+[Definitions Qiy Application]: ../Definitions.md#qiy-application
 [Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
-[Relations]: https://qiy.api.digital-me.nl/?version=latest#4f4c5a3e-388c-48ff-b847-6c11c3738254
-[Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
-[Messages]: https://qiy.api.digital-me.nl/?version=latest#b0169810-fd5c-4422-95a1-0beb2fc77a3e
-[Messages Send message]: https://qiy.api.digital-me.nl/?version=latest#a58badea-0b4c-4c85-8254-96bab05892fa
-[Messages List messages]: https://qiy.api.digital-me.nl/?version=latest#45ada0ae-c416-4348-81b1-44f7b2a9e44f
-[Consents]: https://qiy.api.digital-me.nl/?version=latest#3f42e884-3ffa-4387-8896-05e7226d5a9f
+[Definitions Qiy Trust Network]: ../Definitions.md#qiy-trust-network
+[Delete Qiy Node]: #delete-qiy-node
+[Delete Qiy Node request]: http://127.0.0.1:8000/openapi-doc.html#/lifecycle/Delete_Qiy_Node
+[DigitalMe]: https://digital-me.nl/
 [Feeds]: https://qiy.api.digital-me.nl/?version=latest#acd5667e-984f-4c24-b065-09a233fc876f
 [Feeds Relying Party]: https://qiy.api.digital-me.nl/?version=latest#946ef50b-e186-444c-a2a8-243597a81987
 [Feeds Relying Party fiKks]: https://qiy.api.digital-me.nl/?version=latest#3811d8af-3dce-421e-8d3e-cf38963ad1c6
@@ -1099,7 +1106,69 @@ Please contact the [Service Desk](#service-desk).
 [Feeds Individual Get user action message]: https://qiy.api.digital-me.nl/?version=latest#122a0a4b-f6fc-4180-b970-d07db11667c9
 [Feeds Individual Set feed]: https://qiy.api.digital-me.nl/?version=latest#00faf2fd-c7c7-4d5d-b4d8-19f7a8cc55b1
 [Feeds Individual Add feed]: https://qiy.api.digital-me.nl/?version=latest#d628b6d5-057f-4ce9-9a01-2c13e785cda0
+[Get /api]: https://127.0.0.1:8000/openapi.html
+[Get connection]: #get-connection
+[Get connection request]: http://127.0.0.1:8000/openapi-doc.html#/connection/Get_connection
+[Get endpoint addresses]: #get-endpoint-addresses
+[Get endpoint addresses request]: http://127.0.0.1:8000/openapi-doc.html#/api/api
+[Get event callback endpoints]: #get-event-callback-endpoints
+[Get event callback endpoints request]: http://127.0.0.1:8000/openapi-doc.html#/node/get_event_callback_endpoints
+[Get node settings]: #get-node-settings
+[Get node settings request]: http://127.0.0.1:8000/openapi-doc.html#/node/Get_node_settings
+[Get service catalogue]: #get-service-catalogue
+[Get service catalogue request]: http://127.0.0.1:8000/openapi-doc.html#/service/Get_service_catalogue
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
-[Qiy Test Tool]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
+[List action message]: #list-action-message
+[List action message request]: http://127.0.0.1:8000/openapi-doc.html#/action_message/List_action_message
+[List connect tokens]: #list-connect-tokens
+[List connect tokens request]: http://127.0.0.1:8000/openapi-doc.html#/connect_token/List_connect_tokens
+[List connections]: #list-connections
+[List connections request]: http://127.0.0.1:8000/openapi-doc.html#/connection/List_connections
+[List feeds]: #list-feeds
+[List feeds request]: http://127.0.0.1:8000/openapi-doc.html#/feed/List_feeds
+[List messages]: #list-messages
+[List messages request]: http://127.0.0.1:8000/openapi-doc.html#/message/List_messages
+[Messages]: https://qiy.api.digital-me.nl/?version=latest#b0169810-fd5c-4422-95a1-0beb2fc77a3e
+[Messages Send message]: https://qiy.api.digital-me.nl/?version=latest#a58badea-0b4c-4c85-8254-96bab05892fa
+[Messages List messages]: https://qiy.api.digital-me.nl/?version=latest#45ada0ae-c416-4348-81b1-44f7b2a9e44f
+[Nodes]: https://qiy.api.digital-me.nl/?version=latest#62279de6-0df7-497a-9a1e-cddc17bbbc63
+[Nodes Request creation of Qiy Node]: https://qiy.api.digital-me.nl/?version=latest#806d07bb-f6eb-47f8-bc07-71119440fc0d
+[Nodes Get endpoint addresses]: https://qiy.api.digital-me.nl/?version=latest#0bdb3ea3-0e8c-4f6d-8a92-8230d1be9a02
+[Nodes Set event callback endpoints]: https://qiy.api.digital-me.nl/?version=latest#2887a3e0-5e5c-40ea-83b7-e40ce6cf5333
+[Nodes Get event callback endpoints]: https://qiy.api.digital-me.nl/?version=latest#d0750a63-eee1-41ef-b093-ad0ef8c720e3
+[Nodes Start listening to events]: https://qiy.api.digital-me.nl/?version=latest#abd171d1-4aee-4e8c-a599-00914f277d62
+[Nodes Get node settings]: https://qiy.api.digital-me.nl/?version=latest#7bb9f259-c23d-4038-8cba-237671b167a7
+[Nodes Set node settings]: https://qiy.api.digital-me.nl/?version=latest#07e66599-8dff-4ed4-9a9f-4773fb5515d7
+[Nodes Delete Qiy Node]: https://qiy.api.digital-me.nl/?version=latest#5c60f3f0-ea95-40f7-9487-3664d9a4b293
+[POST /FeedsEndpoint/{feedId}]: https://127.0.0.1:8000/openapi.html
+[POST /ConnectionCreateEndpoint]: https://127.0.0.1:8000/openapi.html
+[Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
+[Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy
+[Register connect token]: #register-connect-token
+[Register connect token request]: http://127.0.0.1:8000/openapi-doc.html#/connect_token/Request_or_register_connect_token
+[Request connect token]: #request-connect-token
+[Request connect token request]: http://127.0.0.1:8000/openapi-doc.html#/connect_token/Request_or_register_connect_token
+[Request connection]: #request-connection
+[Request connection request]: http://127.0.0.1:8000/openapi-doc.html#/connection/Request_connection
+[Request creation of Qiy Node]: #request-creation-of-qiy-node
+[Request creation of Qiy Node request]: http://127.0.0.1:8000/openapi-doc.html#/lifecycle/Request_creation_of_qiy-node
+[Request for feed]: #request-for-feed
+[Request for feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Request_for_feed
+[Relations]: https://qiy.api.digital-me.nl/?version=latest#4f4c5a3e-388c-48ff-b847-6c11c3738254
+[Request connection request]: http://127.0.0.1:8000/openapi-doc.html#/connection/Request_connection
+[Send message]: #send-message
+[Send message request]: http://127.0.0.1:8000/openapi-doc.html#/message/Send_message
+[Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
+[Services Get service catalogue]: https://qiy.api.digital-me.nl/?version=latest#91f6b195-9c43-4c95-9618-57631714343b
+[Services Set service catalogue]: https://qiy.api.digital-me.nl/?version=latest#d29ddd91-cdcf-48af-abe4-42cd6d54694b
+[Set service catalogue]: #set-service-catalogue
+[Set service catalogue request]: http://127.0.0.1:8000/openapi-doc.html#/service/Set_service_catalogue
+[Set event callback endpoints]: #set-event-callback-endpoints
+[Set event callback endpoints request]: http://127.0.0.1:8000/openapi-doc.html#/node/set_event_callback_endpoints
+[Set node settings]: #set-node-settings
+[Set node settings request]: http://127.0.0.1:8000/openapi-doc.html#/node/Set_node_settings
+[Start listening to events]: #start-listening-to-events
+[Start listening to events request]: http://127.0.0.1:8000/openapi-doc.html#/connect_token/Start_listening_to_events
+[Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
+[Transport Layer]: ../High-Level%20Architectural%20Overview.md#transport-layer
 
-[List feeds request]: http://127.0.0.1:8000/openapi.html#/feed/List_feeds
