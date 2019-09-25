@@ -452,29 +452,47 @@ A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specificati
 ### Operation Type
 The type of an [Operation](#operation).
 
+_deprecated_
+
 ### Operation Type Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of an [Operation Type](#operation-type) in the [Service Library](#service-library).
+
+_deprecated_
 
 ### Operation Type Register Request
 A [Qiy Node Request](#qiy-node-request) to register a [Operation Type](#operation-type) in the [Service Library](#service-library).
 
+_deprecated_
+
 ### Operation Type Unregister Request
 A [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type](#operation-type) in the [Service Library](#service-library).
+
+_deprecated_
 
 ### Operation Type Update Request
 A [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type](#operation-type) in the [Service Library](#service-library).
 
+_deprecated_
+
 ### Operation Types Request
 A [Qiy Node Request](#qiy-node-request) to list the [Operation Types](#operation-type) that are registered in the [Service Library](#service-library).
+
+_deprecated_
 
 ### Operation Unregister Request
 A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
 
+_deprecated_
+
 ### Operation Update Request
 A [Qiy Node Request](#qiy-node-request) to update the details of an [Operation](#operation).
 
+_deprecated_
+
 ### Operations Request
 A [Qiy Node Request](#qiy-node-request) to list [Operations](#operation).
+
+_deprecated_
 
 ### Path
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
@@ -752,7 +770,7 @@ A [Technology Service](#technology-service) that supports the [Service](#service
 A [Business Object](#business-object) for information about all the [Services](#service) that an [Individual](#individual) is or has been consuming.
 
 ### Service Provider
-A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Services](#service).
+A [Business Role](#business-role): a [Qiy User](#qiy-user) which provides [Services](#service): a [Relying Party](#relying-party) or a [Data Provider](#data-provider).
 
 ### Service Provider Id
 A [Service Provider](#service-provider) [Identifier](#identifier).
@@ -767,7 +785,7 @@ See [Provider Unregister Request].
 A [Service](#service) of a [Service Provider](#service-provider) that provides input services required by another [Service](#service).
 
 ### Service Type
-A type of [Service](#service).
+The type of a [Service](#service) denoted with a [Service Type Url](#service-type-url) such as https://github.com/qiyfoundation/Payment-Due-List/tree/master/schema/v1.
 
 ### Service Type Details Request
 A [Qiy Node Request](#qiy-node-request) to get the details of a [Service Type](#service-type) in the [Service Library](#service-library).
