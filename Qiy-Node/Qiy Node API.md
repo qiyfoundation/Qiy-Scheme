@@ -1,17 +1,20 @@
 # Qiy Node API
 
 This document describes the Qiy Node API - the API for [Qiy Nodes][Definitions Qiy Node], in layman's terms: a digital identity for [Individuals][Definitions Individual] and/or [Service Providers][Definitions Service Provider] to provide and/or consume digital services.
-In technical terms a Qiy Node provides a point of access for the [Qiy Trust Network][Definitions Qiy Trust Network] that can be used to allows individuals to provide [Relying Parties][Definitions Relying Party] access to [Resources][Definitions Resource] protected by [Data Providers][Definitions Data Provider], for example using a [POST /FeedsEndpoint/{feedId}]-request.
+
+In technical terms a Qiy Node provides a point of access for the [Qiy Trust Network][Definitions Qiy Trust Network] that can be used to allows individuals to provide [Relying Parties][Definitions Relying Party] access to [Resources][Definitions Resource] protected by [Data Providers][Definitions Data Provider], for example using [POST /FeedsEndpoint/{feedId}].
+
 Individuals acquire Qiy Nodes when they use Qiy-based end-user applications.
-Service Providers acquire Qiy Nodes from [Access Providers][Definitions Access Providers].
+Service Providers acquire Qiy Nodes from [Access Providers][Definitions Access Provider].
 
 Software developers use the api to build [Qiy Node Clients][Definitions Qiy Node Client] (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
 
 # Service Desk
 
-The api provides access to the [Qiy Trust Network][Definitions Qiy Trust Network] which is provided by its [Access Providers][Definitions Access Providers].
+The api provides access to the [Qiy Trust Network][Definitions Qiy Trust Network] which is provided by its [Access Providers][Definitions Access Provider].
 Please contact the Service Desk of your Access Provider for your requests. 
+
 The Service Desk of the Access Provider [DigitalMe] is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
 
     service _at_ digital-me _dot_ nl
@@ -1078,7 +1081,7 @@ Please contact the [Service Desk](#service-desk).
 [Definitions Service Provider]: ../Definitions.md#service-provider
 [Definitions Transport Authentication]: ../Definitions.md#transport-authentication
 [Definitions Qiy Node]: ../Definitions.md#qiy-node
-[Definitions Qiy Node Clients]: ../Definitions.md#qiy-node-client
+[Definitions Qiy Node Client]: ../Definitions.md#qiy-node-client
 [Definitions Qiy Node Credential]: #qiy-node-credential
 [Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
 [Definitions Qiy Application]: ../Definitions.md#qiy-application
@@ -1118,8 +1121,8 @@ Please contact the [Service Desk](#service-desk).
 [Get service catalogue]: #get-service-catalogue
 [Get service catalogue request]: http://127.0.0.1:8000/openapi-doc.html#/service/Get_service_catalogue
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
-[List action message]: #list-action-message
-[List action message request]: http://127.0.0.1:8000/openapi-doc.html#/action_message/List_action_message
+[List action messages]: #list-action-messages
+[List action messages request]: http://127.0.0.1:8000/openapi-doc.html#/action_message/List_action_messages
 [List connect tokens]: #list-connect-tokens
 [List connect tokens request]: http://127.0.0.1:8000/openapi-doc.html#/connect_token/List_connect_tokens
 [List connections]: #list-connections
@@ -1170,5 +1173,5 @@ Please contact the [Service Desk](#service-desk).
 [Start listening to events]: #start-listening-to-events
 [Start listening to events request]: http://127.0.0.1:8000/openapi-doc.html#/connect_token/Start_listening_to_events
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
-[Transport Layer]: ../High-Level%20Architectural%20Overview.md#transport-layer
+[Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
 
