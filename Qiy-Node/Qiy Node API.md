@@ -11,17 +11,6 @@ Service Providers are provided with at least three Qiy Nodes by their [Access Pr
 Software developers use the api to build [Qiy Node Clients][Definitions Qiy Node Client] (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
 
-# Service Desk
-
-The api provides access to the [Qiy Trust Network][Definitions Qiy Trust Network] which is provided by its [Access Providers][Definitions Access Provider].
-Please contact the Service Desk of your Access Provider for your requests. 
-
-The Service Desk of the Access Provider [DigitalMe] is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
-
-    service _at_ digital-me _dot_ nl
-    +31 (0) 411-616565
-
-
 # Servers
 
 The api is provided in a development environment, the acceptance environment and the production environment.
@@ -38,7 +27,6 @@ The server urls are:
 
 The server url of the Production environment is provided in the entry-transition phase, when a [Qiy Application] goes live.
 
-
 ## Proxy server
 
 The proxy server provides an easy means to access the development environment for taking care of the authentication.
@@ -51,6 +39,16 @@ Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-e
 
 The values of the 'Autorization-node-QTN'-header parameter and the 'password'-header parameters are always ignored.
 The value of the 'Autorization'-header parameter is reused when basic authentication is used and ignored otherwise.
+
+## Service Desk
+
+The api provides access to the [Qiy Trust Network][Definitions Qiy Trust Network] which is provided by its [Access Providers][Definitions Access Provider].
+Please contact the Service Desk of your Access Provider for your requests. 
+
+The Service Desk of the Access Provider [DigitalMe] is available during regular CE(S)T office hours and can be contacted by e-mail or phone:
+
+    service _at_ digital-me _dot_ nl
+    +31 (0) 411-616565
 
 
 # Versions
