@@ -571,6 +571,9 @@ A [Technology Service](#technology-service) that functions as a point of entry f
 ### Qiy Node API
 The [Application Programming Interface](#application-programming-interface) of the [Qiy Node](#qiy-node) which is part of the [Qiy Standard](#qiy-standard).
 
+### Qiy Node Client
+An [Application](#application) that uses a [Qiy Node](#qiy-node).
+
 ### Qiy Node Credential
 The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node).
 
