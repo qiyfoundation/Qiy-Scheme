@@ -4,8 +4,9 @@ This document describes the Qiy Node API - the API for [Qiy Nodes][Definitions Q
 
 In technical terms a Qiy Node provides a point of access for the [Qiy Trust Network][Definitions Qiy Trust Network] that can be used to allows individuals to provide [Relying Parties][Definitions Relying Party] access to [Resources][Definitions Resource] protected by [Data Providers][Definitions Data Provider], for example using [POST /FeedsEndpoint/{feedId}].
 
-Individuals acquire Qiy Nodes when they use Qiy-based end-user applications.
-Service Providers acquire Qiy Nodes from [Access Providers][Definitions Access Provider].
+Individuals acquire Qiy Nodes [when they use Qiy-based end-user applications][hlao 5.1.2 Creating Qiy Nodes for Individuals].
+
+Service Providers are provided with at least three Qiy Nodes by their [Access Provider][Definitions Access Provider]; one for the production environment, one for the acceptance environment and one for the development environment.
 
 Software developers use the api to build [Qiy Node Clients][Definitions Qiy Node Client] (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
@@ -19,6 +20,37 @@ The Service Desk of the Access Provider [DigitalMe] is available during regular 
 
     service _at_ digital-me _dot_ nl
     +31 (0) 411-616565
+
+
+# Servers
+
+The api is provided in a development environment, the acceptance environment and the production environment.
+In addition, a proxy server for the develoment environment is provided to ease discovery, experimentation, and evaluation.
+
+The server urls are:
+
+| Server Name      | Server url                                                          |
+| ---------------- | ------------------------------------------------------------------- |
+| Proxy            | https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy |
+| Dev2             | https://dev2-user.testonly.digital-me.nl/user                       |
+| Acceptance       | https://user.dolden.net/user                                        |
+
+
+The server url of the Production environment is provided in the entry-transition phase, when a [Qiy Application] goes live.
+
+
+## Proxy server
+
+The proxy server provides an easy means to access the development environment for taking care of the authentication.
+The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool pa] instead.
+Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-endpoint:
+
+* App authentication is provided when an 'Authorization'-header parameter is provided in the request.
+* App authentication and user authentication is provided when an 'Authorization-node-QTN'-header parameter is provided in the request. 
+* App authentication, user authentication and transport authentication is provided when a 'password'-header parameter is provided in the request. 
+
+The values of the 'Autorization-node-QTN'-header parameter and the 'password'-header parameters are always ignored.
+The value of the 'Autorization'-header parameter is reused when basic authentication is used and ignored otherwise.
 
 
 # Versions
@@ -43,7 +75,7 @@ The version of the api that is supported must be returned by [Get /api].
 
 [Qiy Applications][Definitions Qiy Application] are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication, see for example [GET /api].
 
-API Keys are provided by Access Providers.
+Two API Keys are provided by Access Providers: one for the Production environment and one for the other environments.
 
 ## User Authentication
 
@@ -122,209 +154,11 @@ Some requests require [Transport Authentication][Definitions Transport Authentic
 
 # Dynamic Endpoint Addresses
 
-The Qiy Node Api uses dynamic endpoint addresses most of which can be obtained using [GET /api]. The addresses can be cached, but should be refreshed every day.
-
-## Action Messages List Endpoint
-
-This endpoint can be used for [List action messages]. The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
-
-## Connect Token Create Endpoint
-
-This endpoint can be used to [request][Request connect token] or [register][Register connect token] [Connect Tokens][Definitions Connect Token]. The current address of the endpoint is returned in the "ctCreate"-member of the response of Get endpoint addresses.
-
-## Connect Token List Endpoint
-
-This endpoint can be used for [List connect tokens]. The current address of the endpoint is returned in the "ctList"-member of the response of [Get endpoint addresses].
-
-## Connection Create Endpoint
-
-This endpoint can be used for [Request connection]. The current address of the endpoint is returned in the "scan"-member of the response of [Get endpoint addresses].
-
-## Connection Endpoint
-
-This endpoint can be used for [Get connection]. The endpoint urls are returned by [Request connection] and [List connections].
-
-## Connection Feeds Endpoint
-
-This endpoint can be used by a Relying Party to request an Individual for a feed to access a protected resource, see [Request for feed].
-
-The current address of the endpoint is returned in a "feeds"-endpoint of a connection, see [Get connection] or [List connections].
-
-## Connections List Endpoint
-
-This endpoint can be used for [List connections]. The current address of the endpoint is returned in the "connections"-member of the response of [Get endpoint addresses].
-
-## Events Endpoint
-
-This endpoint can be used for [Start listening to events]. The current address of the endpoint is returned in the "events"-member of the response of [Get endpoint addresses].
-
-## Event Callbacks Endpoint
-
-This endpoint can be used to [set][Set event callback endpoints] or [get][Get event callback endpoints] the addresses of the Event Callback Endpoints.
-The current addresses of the Event Callbacks Endpoint is returned in the "eventCallbacks"-member of the response of [Get endpoint addresses].
-
-## Feeds Endpoint
-
-A Relying Party uses this endpoint to [list][List feeds] or [access one][Access feed] or [more][Access feeds] feeds of an Individual (connection) or of himself (a Qiy Node).
-
-The address of the endpoint for a connection is returned in the "feeds"-member of the response of [List connections] and/or [Get connection].
-The address of the endpoint for a Qiy Node is returned in the "feeds"-member of the response of [Get endpoint addresses].
-
-## Messages Endpoint
-
-This endpoint can be used for [Send message] and [List messages]. 
-The current address of the endpoint is returned in a "mbox"-member of the response of [List connections] or [Get connection].
-
-## Manage References Endpoint
-
-This endpoint is deprecated.
-The current address of the endpoint is returned in the "manRef"-member of the response of [List connections] or [Get connection].
-
-## Node Create Endpoint
-
-This endpoint can be used for [Request creation of Qiy Node].
-The current address of the endpoint is returned by [Get /api].
-
-## Node Settings Endpoint
-
-This endpoint can be used for [Get node settings] and [Set node settings].
-The current address of the endpoint is returned in the "nodeSettings"-member of the response of [Get endpoint addresses].
-
-## Reference Endpoint
-
-This endpoint is deprecated.
-
-## References Endpoint
-
-This endpoint is deprecated.
-
-## Self Endpoint
-
-This endpoint can be used for [Delete Qiy Node].
-The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
-
-## Service Catalogue Endpoint
-
-This endpoint can be used to [get][Get service catalogue] or [set][Set service catalogue] the contents of a [Service Catalogue][Definitions Service Catalogue].
-The current address of the endpoint is returned in the "serviceCatalog"-member of the response of [Get endpoint addresses].
-
-## Target Template Endpoint
-
-This endpoint can be used to [create off line connect tokens](#offline-connect-tokens).
-The current address of the endpoint is returned in the "target-tempate"-member of the response of [Get endpoint addresses].
-
-# Servers
-
-The Qiy Node service runs in a a development environment, the acceptance environment and the production environment. In addition, a proxy service is provided for discovery, experimentation, and evaluation.
-The server urls are:
-
-| Server Name      | Server url                                                          |
-| ---------------- | ------------------------------------------------------------------- |
-| Proxy            | https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy |
-| Dev2             | https://dev2-user.testonly.digital-me.nl/user                       |
-| Acceptance       | https://user.dolden.net/user                                        |
-    
-
-The server url of the Production environment will be given during the entry-transition phase, when your Qiy Trust Based solution will go live.
-
-Ensure that the following system settings are configurable to allow for smooth switching between the environments:
-
-* server url
-* Qiy Node Id
-* Qiy Node private key
-* Transport Password
-* API key
-
-## Proxy server
-
-The proxy server provides an easy means to access Dev2 for taking care of the authentication.
-The proxy server cannot be used to create Qiy Nodes, please use the [Qiy Test Tool][Qiy Test Tool pa] instead.
-Afterwards, Qiy Nodes can be accessed via their '/qiy_nodes/<node_name>/proxy'-endpoint:
-
-* App authentication is provided when an 'Authorization'-header parameter is provided in the request.
-* App authentication and user authentication is provided when an 'Authorization-node-QTN'-header parameter is provided in the request. 
-* App authentication, user authentication and transport authentication is provided when a 'password'-header parameter is provided in the request. 
-
-The values of the 'Autorization-node-QTN'-header parameter and the 'password'-header parameters are always ignored.
-The value of the 'Autorization'-header parameter is reused when basic authentication is used and ignored otherwise.
+The Qiy Node Api uses [dynamic endpoint addresses][Annex A Dynamic Endpoint Addresses] most of which can be obtained using [GET /api]. The addresses can be cached, but should be refreshed every day.
 
 # Events
 
-This section describes the [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events)-events that can be fired by a Qiy Node and catched by a client using [Start listening to events](#start-listening-to-events).
-
-## Connected to Router Event
-
-This event is fired after a request for a connection and can be used to monitor the creation of a connection.
-
-## Connected to Router Failed Event
-
-This event is fired after a request for a connection and signals that a connection could not be established.
-
-## Data Reference Failure Event
-
-This server-sent event is fired when a Request for feed fails.
-
-## Data Reference Received-v2 Event
-
-This server-sent event is generated by a Qiy Node of a Relying Party when it has received a new feed.
-
-## Data Request Forwarded Event
-
-This server-sent event is fired when a feed is being accessed.
-
-## Data Request Fulfilled Event
-
-This server-sent event is fired when a feed has been accessed succesfully.
-
-## Data Request Failure Event
-
-This server-sent event is fired when a feed could not be accessed succesfully.
-
-## Data Request Not Forwarded Event
-
-This server-sent event is fired when and if a feed cannot be accessed.
-
-## Pending Peer Data Reference Event
-
-This server-sent event can be fired when a feed is being accessed.
-
-## Unexpected Data Reference Event
-
-This server-sent event can be fired when a feed is being accessed.
-
-## Persistent Id Event
-
-This event can be used to monitor the creation of a connection.
-
-## Routing Failure Event
-
-This event is fired after a request for a connection and signals that a connection could not be established.
-
-## Shared Secret Received Event
-
-This event is fired after a request for a connection upon creating connection.
-
-## Shared Secret Sent Event
-
-This event is fired after a request for a connection upon creating connection.
-
-## State Handled Event
-
-This event is fired when a connection has been created, see GET State Handled Event for an example.
-
-## User Action Message Event
-
-This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
-
-Example event
-
-```
-event: USER_ACTION_MESSAGE data: {
-   'type': 'USER_ACTION_MESSAGE',
-   'connectionUrl': 'https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e',
-   'extraData': 'https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4'
-}
-```
+The Qiy Node API provides a number of [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events)-events which can be catched with [Start listening to events](#start-listening-to-events), see [Annex B Events].
 
 # Documentation
 
@@ -967,11 +801,185 @@ An End User App uses this call to add a Data Provider as a source for a feed req
 
 Please contact the [Service Desk](#service-desk).
 
+# Annex A Dynamic Endpoint Addresses
+
+This annex describes the Dynamic Endpoint Addresses
+
+## Action Messages List Endpoint
+
+This endpoint can be used for [List action messages]. The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
+
+## Connect Token Create Endpoint
+
+This endpoint can be used to [request][Request connect token] or [register][Register connect token] [Connect Tokens][Definitions Connect Token]. The current address of the endpoint is returned in the "ctCreate"-member of the response of Get endpoint addresses.
+
+## Connect Token List Endpoint
+
+This endpoint can be used for [List connect tokens]. The current address of the endpoint is returned in the "ctList"-member of the response of [Get endpoint addresses].
+
+## Connection Create Endpoint
+
+This endpoint can be used for [Request connection]. The current address of the endpoint is returned in the "scan"-member of the response of [Get endpoint addresses].
+
+## Connection Endpoint
+
+This endpoint can be used for [Get connection]. The endpoint urls are returned by [Request connection] and [List connections].
+
+## Connection Feeds Endpoint
+
+This endpoint can be used by a Relying Party to request an Individual for a feed to access a protected resource, see [Request for feed].
+
+The current address of the endpoint is returned in a "feeds"-endpoint of a connection, see [Get connection] or [List connections].
+
+## Connections List Endpoint
+
+This endpoint can be used for [List connections]. The current address of the endpoint is returned in the "connections"-member of the response of [Get endpoint addresses].
+
+## Events Endpoint
+
+This endpoint can be used for [Start listening to events]. The current address of the endpoint is returned in the "events"-member of the response of [Get endpoint addresses].
+
+## Event Callbacks Endpoint
+
+This endpoint can be used to [set][Set event callback endpoints] or [get][Get event callback endpoints] the addresses of the Event Callback Endpoints.
+The current addresses of the Event Callbacks Endpoint is returned in the "eventCallbacks"-member of the response of [Get endpoint addresses].
+
+## Feeds Endpoint
+
+A Relying Party uses this endpoint to [list][List feeds] or [access one][Access feed] or [more][Access feeds] feeds of an Individual (connection) or of himself (a Qiy Node).
+
+The address of the endpoint for a connection is returned in the "feeds"-member of the response of [List connections] and/or [Get connection].
+The address of the endpoint for a Qiy Node is returned in the "feeds"-member of the response of [Get endpoint addresses].
+
+## Messages Endpoint
+
+This endpoint can be used for [Send message] and [List messages]. 
+The current address of the endpoint is returned in a "mbox"-member of the response of [List connections] or [Get connection].
+
+## Manage References Endpoint
+
+This endpoint is deprecated.
+The current address of the endpoint is returned in the "manRef"-member of the response of [List connections] or [Get connection].
+
+## Node Create Endpoint
+
+This endpoint can be used for [Request creation of Qiy Node].
+The current address of the endpoint is returned by [Get /api].
+
+## Node Settings Endpoint
+
+This endpoint can be used for [Get node settings] and [Set node settings].
+The current address of the endpoint is returned in the "nodeSettings"-member of the response of [Get endpoint addresses].
+
+## Reference Endpoint
+
+This endpoint is deprecated.
+
+## References Endpoint
+
+This endpoint is deprecated.
+
+## Self Endpoint
+
+This endpoint can be used for [Delete Qiy Node].
+The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
+
+## Service Catalogue Endpoint
+
+This endpoint can be used to [get][Get service catalogue] or [set][Set service catalogue] the contents of a [Service Catalogue][Definitions Service Catalogue].
+The current address of the endpoint is returned in the "serviceCatalog"-member of the response of [Get endpoint addresses].
+
+## Target Template Endpoint
+
+This endpoint can be used to [create off line connect tokens](#offline-connect-tokens).
+The current address of the endpoint is returned in the "target-tempate"-member of the response of [Get endpoint addresses].
+
+
+# Annex B Events
+
+This section describes the Qiy Node events.
+
+## Connected to Router Event
+
+This event is fired after a request for a connection and can be used to monitor the creation of a connection.
+
+## Connected to Router Failed Event
+
+This event is fired after a request for a connection and signals that a connection could not be established.
+
+## Data Reference Failure Event
+
+This server-sent event is fired when a Request for feed fails.
+
+## Data Reference Received-v2 Event
+
+This server-sent event is generated by a Qiy Node of a Relying Party when it has received a new feed.
+
+## Data Request Forwarded Event
+
+This server-sent event is fired when a feed is being accessed.
+
+## Data Request Fulfilled Event
+
+This server-sent event is fired when a feed has been accessed succesfully.
+
+## Data Request Failure Event
+
+This server-sent event is fired when a feed could not be accessed succesfully.
+
+## Data Request Not Forwarded Event
+
+This server-sent event is fired when and if a feed cannot be accessed.
+
+## Pending Peer Data Reference Event
+
+This server-sent event can be fired when a feed is being accessed.
+
+## Unexpected Data Reference Event
+
+This server-sent event can be fired when a feed is being accessed.
+
+## Persistent Id Event
+
+This event can be used to monitor the creation of a connection.
+
+## Routing Failure Event
+
+This event is fired after a request for a connection and signals that a connection could not be established.
+
+## Shared Secret Received Event
+
+This event is fired after a request for a connection upon creating connection.
+
+## Shared Secret Sent Event
+
+This event is fired after a request for a connection upon creating connection.
+
+## State Handled Event
+
+This event is fired when a connection has been created, see GET State Handled Event for an example.
+
+## User Action Message Event
+
+This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
+
+Example event
+
+```
+event: USER_ACTION_MESSAGE data: {
+   'type': 'USER_ACTION_MESSAGE',
+   'connectionUrl': 'https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e',
+   'extraData': 'https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4'
+}
+```
+
 
 [Access feed]: #access-feed
 [Access feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feed
 [Access feeds]: #access-feeds
 [Access feeds request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feeds
+[Annex A Dynamic Endpoint Addresses] #annex-a-dynamic-endpoint-addresses
+[Annex B Events] #annex-b-events
 [API Basics]: https://qiy.api.digital-me.nl/?version=latest#a5c62ac8-8f2c-4d57-b970-42ff89253670
 [API Basics Registration]: https://qiy.api.digital-me.nl/?version=latest#699276ef-e0b7-4ff8-852d-a5b2e175b4e3
 [API Basics Service Desk]: https://qiy.api.digital-me.nl/?version=latest#9060bf32-11d2-4736-add3-629b52491c70
@@ -1121,6 +1129,7 @@ Please contact the [Service Desk](#service-desk).
 [Get service catalogue]: #get-service-catalogue
 [Get service catalogue request]: http://127.0.0.1:8000/openapi-doc.html#/service/Get_service_catalogue
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
+[hlao 5.1.2 Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [List action messages]: #list-action-messages
 [List action messages request]: http://127.0.0.1:8000/openapi-doc.html#/action_message/List_action_messages
 [List connect tokens]: #list-connect-tokens
