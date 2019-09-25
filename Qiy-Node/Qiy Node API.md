@@ -963,13 +963,23 @@ This event is fired when a connection has been created, see GET State Handled Ev
 
 This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
 
+Example event
+
+```
+event: USER_ACTION_MESSAGE data: {
+   'type': 'USER_ACTION_MESSAGE',
+   'connectionUrl': 'https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e',
+   'extraData': 'https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4'
+}
+```
+
 
 [Access feed]: #access-feed
 [Access feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feed
 [Access feeds]: #access-feeds
 [Access feeds request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feeds
-[Annex A Dynamic Endpoint Addresses] #annex-a-dynamic-endpoint-addresses
-[Annex B Events] #annex-b-events
+[Annex A Dynamic Endpoint Addresses]: #annex-a-dynamic-endpoint-addresses
+[Annex B Events]: #annex-b-events
 [API Basics]: https://qiy.api.digital-me.nl/?version=latest#a5c62ac8-8f2c-4d57-b970-42ff89253670
 [API Basics Registration]: https://qiy.api.digital-me.nl/?version=latest#699276ef-e0b7-4ff8-852d-a5b2e175b4e3
 [API Basics Service Desk]: https://qiy.api.digital-me.nl/?version=latest#9060bf32-11d2-4736-add3-629b52491c70
