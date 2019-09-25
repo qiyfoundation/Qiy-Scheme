@@ -1783,8 +1783,8 @@
                 }
             },
             "connection": {
+                "description": "Connection",
                 "content": {
-                    "description": "Connection",
                     "application/json": {
                         "schema": {
                             "$ref": "#/components/schemas/connection"

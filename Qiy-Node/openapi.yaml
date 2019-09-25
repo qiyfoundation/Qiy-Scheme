@@ -1244,8 +1244,8 @@ components:
             example:
               "$ref": "#/components/examples/actionMessageList"
     connection:
+      description: Connection
       content:
-        description: Connection
         application/json:
           schema:
             "$ref": "#/components/schemas/connection"
