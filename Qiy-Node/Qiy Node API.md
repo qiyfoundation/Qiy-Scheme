@@ -963,16 +963,6 @@ This event is fired when a connection has been created, see GET State Handled Ev
 
 This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
 
-Example event
-
-```
-event: USER_ACTION_MESSAGE data: {
-   'type': 'USER_ACTION_MESSAGE',
-   'connectionUrl': 'https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e',
-   'extraData': 'https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4'
-}
-```
-
 
 [Access feed]: #access-feed
 [Access feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feed
