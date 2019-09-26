@@ -723,7 +723,7 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
-[Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy
+[Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [Register connect token]: #register-connect-token
 [Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_or_register_connect_token
 [Request connect token]: #request-connect-token
