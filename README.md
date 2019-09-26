@@ -112,7 +112,7 @@ For development, please refer to:
 
 ## Software Engineers
 
-To integrate your front-end and back-end applications with Qiy, please refer to the [Qiy Node API](https://qiy.api.digital-me.nl) provided by DigitalMe, a (Qiy) [Access Provider](Definitions.md#access-provider).
+To integrate your front-end and back-end applications with Qiy, please refer to the [Qiy Node API](./Qiy-Node/Qiy%20Node%20API.md).
 
 For furthering the technical specifications, please refer to:
 * [Work Stream Functionality and Technology](https://github.com/qiyfoundation/Qiy-Scheme/projects/2) 
