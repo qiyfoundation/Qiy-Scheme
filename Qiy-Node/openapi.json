@@ -2,10 +2,10 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Qiy Node API",
-        "description": "Find more info here: [Qiy Node API](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md)",
+        "description": "Find more info here: [Qiy Node API](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md)",
         "externalDocs": {
             "description": "Find more info here",
-            "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md"
+            "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md"
         },
         "version": "1.1.0",
         "license": {
@@ -33,7 +33,7 @@
                 "tags": [
                     "api"
                 ],
-                "description": "See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#api-info) and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)",
+                "description": "See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#api-info) and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)",
                 "operationId": "api",
                 "responses": {
                     "200": {
@@ -59,7 +59,7 @@
                     "controller",
                     "feed"
                 ],
-                "description": "See [Set feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-feed-source)",
+                "description": "See [Set feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-feed-source)",
                 "operationId": "Set feed source",
                 "x-url": "$ActionEndpointUrl",
                 "responses": {
@@ -76,7 +76,7 @@
                     "controller",
                     "feed"
                 ],
-                "description": "See [Add feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#add-feed-source)",
+                "description": "See [Add feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#add-feed-source)",
                 "operationId": "Add feed source",
                 "x-url": "$ActionEndpointUrl",
                 "responses": {
@@ -94,7 +94,7 @@
                 "tags": [
                     "action message"
                 ],
-                "description": "See [Get action message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-action-message)",
+                "description": "See [Get action message](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-action-message)",
                 "operationId": "Get action message",
                 "x-url": "$ActionMessageEndpointUrl",
                 "responses": {
@@ -113,7 +113,7 @@
                     "controller",
                     "action message"
                 ],
-                "description": "See [List action messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-action-messages)",
+                "description": "See [List action messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-action-messages)",
                 "operationId": "List action messages",
                 "x-url": "$ActionMessageListEndpointUrl",
                 "responses": {
@@ -131,7 +131,7 @@
                 "tags": [
                     "connection"
                 ],
-                "description": "See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connection)",
+                "description": "See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-connection)",
                 "operationId": "Request connection",
                 "x-url": "$ConnectionCreateEndpointUrl",
                 "requestBody": {
@@ -183,7 +183,7 @@
                 "tags": [
                     "connection"
                 ],
-                "description": "See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connection)",
+                "description": "See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connection)",
                 "operationId": "Get connection",
                 "x-url": "$ConnectionEndpointUrl",
                 "responses": {
@@ -202,7 +202,7 @@
                     "client",
                     "feed"
                 ],
-                "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
+                "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
                 "operationId": "Request for feed",
                 "x-url": "$ConnectionFeedsEndpointUrl",
                 "requestBody": {
@@ -256,7 +256,7 @@
                 "tags": [
                     "connection"
                 ],
-                "description": "See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connections)",
+                "description": "See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connections)",
                 "operationId": "List connections",
                 "x-url": "$ConnectionListEndpointUrl",
                 "responses": {
@@ -274,7 +274,7 @@
                 "tags": [
                     "connection"
                 ],
-                "description": "See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)",
+                "description": "See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)",
                 "operationId": "Get connect token",
                 "x-url": "$ConnectTokenEndpointUrl",
                 "responses": {
@@ -292,7 +292,7 @@
                 "tags": [
                     "connection"
                 ],
-                "description": "See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connect-token) or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)",
+                "description": "See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-connect-token) or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)",
                 "operationId": "Request or register connect token",
                 "x-url": "$ConnectTokenCreateEndpointUrl",
                 "requestBody": {
@@ -352,7 +352,7 @@
                 "tags": [
                     "connection"
                 ],
-                "description": "See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)",
+                "description": "See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)",
                 "operationId": "List connect tokens",
                 "x-url": "$ConnectTokenListEndpointUrl",
                 "responses": {
@@ -370,7 +370,7 @@
                 "tags": [
                     "configuration"
                 ],
-                "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
+                "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
                 "x-url": "$EventCallbacksEndpointUrl",
                 "requestBody": {
@@ -401,7 +401,7 @@
                 "tags": [
                     "configuration"
                 ],
-                "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
+                "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
                 "operationId": "Get event callback endpoints",
                 "x-url": "$EventCallbacksEndpointUrl",
                 "responses": {
@@ -419,7 +419,7 @@
                 "tags": [
                     "controller"
                 ],
-                "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
+                "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
                 "operationId": "Start listening to events",
                 "x-url": "$EventsEndpointUrl",
                 "responses": {
@@ -438,7 +438,7 @@
                     "client",
                     "feed"
                 ],
-                "description": "See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-feeds)",
+                "description": "See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-feeds)",
                 "operationId": "List feeds",
                 "x-url": "$FeedsEndpointUrl",
                 "responses": {
@@ -455,7 +455,7 @@
                     "client",
                     "feed"
                 ],
-                "description": "See [Access feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#access-feeds)",
+                "description": "See [Access feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feeds)",
                 "operationId": "Access feeds",
                 "x-url": "$FeedsEndpointUrl",
                 "requestBody": {
@@ -489,7 +489,7 @@
                     "client",
                     "feed"
                 ],
-                "description": "See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#access-feed)",
+                "description": "See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feed)",
                 "operationId": "Access feed",
                 "x-url": "$FeedsEndpointUrl/$feedId",
                 "parameters": [
@@ -525,7 +525,7 @@
                 "tags": [
                     "message"
                 ],
-                "description": "See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-messages)",
+                "description": "See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-messages)",
                 "operationId": "List messages",
                 "x-url": "$MessagesEndpointUrl",
                 "responses": {
@@ -552,7 +552,7 @@
                 "tags": [
                     "message"
                 ],
-                "description": "See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#send-message)",
+                "description": "See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#send-message)",
                 "operationId": "Send message",
                 "x-url": "$MessagesEndpointUrl",
                 "requestBody": {
@@ -595,7 +595,7 @@
                 "tags": [
                     "node"
                 ],
-                "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
+                "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
                 "operationId": "Request creation of Qiy Node",
                 "x-url": "$NodeCreateEndpointUrl",
                 "requestBody": {
@@ -633,7 +633,7 @@
                 "tags": [
                     "configuration"
                 ],
-                "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
+                "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
                 "operationId": "Get node settings",
                 "x-url": "$NodeSettingsEndpointUrl",
                 "responses": {
@@ -649,7 +649,7 @@
                 "tags": [
                     "configuration"
                 ],
-                "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
+                "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
                 "operationId": "Set node settings",
                 "x-url": "$NodeSettingsEndpointUrl",
                 "requestBody": {
@@ -682,7 +682,7 @@
                 "tags": [
                     "node"
                 ],
-                "description": "See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)",
+                "description": "See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)",
                 "operationId": "Delete Qiy Node",
                 "x-url": "$SelfEndpointUrl",
                 "responses": {
@@ -705,7 +705,7 @@
                 "tags": [
                     "server"
                 ],
-                "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
+                "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
                 "operationId": "Get service catalogue",
                 "x-url": "$ServiceCatalogueEndpointUrl",
                 "responses": {
@@ -721,7 +721,7 @@
                 "tags": [
                     "server"
                 ],
-                "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
+                "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
                 "operationId": "Set service catalogue",
                 "x-url": "$ServiceCatalogueEndpointUrl",
                 "requestBody": {
@@ -875,7 +875,7 @@
                 }
             },
             "appAuthentication": {
-                "description": "See [Qiy Node App Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#app-authentication)",
+                "description": "See [Qiy Node App Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#app-authentication)",
                 "type": "http",
                 "scheme": "Basic"
             },
@@ -886,7 +886,7 @@
                         "type": "object",
                         "properties": {
                             "create": {
-                                "description": "[Node Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint) url",
+                                "description": "[Node Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint) url",
                                 "type": "string"
                             }
                         }
@@ -917,15 +917,15 @@
                         "type": "object",
                         "properties": {
                             "amList": {
-                                "description": "[Action Messages List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#action-messages-list-endpoint) url",
+                                "description": "[Action Messages List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#action-messages-list-endpoint) url",
                                 "type": "string"
                             },
                             "connections": {
-                                "description": "[Connections List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connections-list-endpoint) url",
+                                "description": "[Connections List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connections-list-endpoint) url",
                                 "type": "string"
                             },
                             "ctCreate": {
-                                "description": "[Connect Token Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint) url",
+                                "description": "[Connect Token Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint) url",
                                 "type": "string"
                             },
                             "ct-create": {
@@ -933,7 +933,7 @@
                                 "type": "string"
                             },
                             "ctList": {
-                                "description": "[Connect Token List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint) url",
+                                "description": "[Connect Token List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint) url",
                                 "type": "string"
                             },
                             "ct-list": {
@@ -941,15 +941,15 @@
                                 "type": "string"
                             },
                             "eventCallbacks": {
-                                "description": "[Event Callbacks Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint) url",
+                                "description": "[Event Callbacks Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint) url",
                                 "type": "string"
                             },
                             "events": {
-                                "description": "[Events Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#events-endpoint) url",
+                                "description": "[Events Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-endpoint) url",
                                 "type": "string"
                             },
                             "feeds": {
-                                "description": "[Feeds Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint) url",
+                                "description": "[Feeds Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint) url",
                                 "type": "string"
                             },
                             "manRef": {
@@ -957,7 +957,7 @@
                                 "type": "string"
                             },
                             "nodeSettings": {
-                                "description": "[Node Settings Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint) url",
+                                "description": "[Node Settings Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint) url",
                                 "type": "string"
                             },
                             "ref": {
@@ -969,19 +969,19 @@
                                 "type": "string"
                             },
                             "scan": {
-                                "description": "[Connection Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint) url",
+                                "description": "[Connection Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint) url",
                                 "type": "string"
                             },
                             "self": {
-                                "description": "[Self Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#self-endpoint) url",
+                                "description": "[Self Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint) url",
                                 "type": "string"
                             },
                             "serviceCatalog": {
-                                "description": "[Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint) url",
+                                "description": "[Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint) url",
                                 "type": "string"
                             },
                             "target-tempate": {
-                                "description": "[Target Template Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#target-template-endpoint) url",
+                                "description": "[Target Template Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#target-template-endpoint) url",
                                 "type": "string"
                             }
                         }
@@ -1269,7 +1269,7 @@
                 }
             },
             "dataReferenceReceivedv2Event": {
-                "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
+                "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1575,7 +1575,7 @@
                         "maxItems": 1
                     },
                     "password": {
-                        "description": "See [Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication).",
+                        "description": "See [Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#transport-authentication).",
                         "type": "string",
                         "format": "uuid",
                         "minItems": 1,
@@ -1608,7 +1608,7 @@
                 }
             },
             "routingFailedEvent": {
-                "description": "See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)",
+                "description": "See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1775,7 +1775,7 @@
                 }
             },
             "stateHandledEvent": {
-                "description": "See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)",
+                "description": "See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1822,13 +1822,13 @@
                 }
             },
             "transportAuthentication": {
-                "description": "Also requires user authentication, see [Qiy Node Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#transport-authentication)",
+                "description": "Also requires user authentication, see [Qiy Node Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#transport-authentication)",
                 "type": "apiKey",
                 "name": "Authorization-node-QTN",
                 "in": "header"
             },
             "userActionMessageEvent": {
-                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
+                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
                 "type": "object",
                 "properties": {
                     "type": {
@@ -1856,7 +1856,7 @@
                 }
             },
             "userAuthentication": {
-                "description": "Also requires app authentication, see [Qiy Node User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-authentication)",
+                "description": "Also requires app authentication, see [Qiy Node User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-authentication)",
                 "type": "apiKey",
                 "name": "Authorization-node-QTN",
                 "in": "header"
@@ -2789,7 +2789,7 @@
         },
         "x-events": {
             "dataReferenceReceivedv2": {
-                "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
+                "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
                 "event": "DATA_REFERENCE_RECEIVED2",
                 "data": {
                     "schema": {
@@ -2799,7 +2799,7 @@
                 }
             },
             "routingFailed": {
-                "description": "See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)",
+                "description": "See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)",
                 "event": "ROUTING_FAILED",
                 "data": {
                     "schema": {
@@ -2808,7 +2808,7 @@
                 }
             },
             "stateHandled": {
-                "description": "See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)",
+                "description": "See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)",
                 "event": "STATE_HANDLED",
                 "data": {
                     "schema": {
@@ -2817,7 +2817,7 @@
                 }
             },
             "userActionMessage": {
-                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
+                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
                 "event": "USER_ACTION_MESSAGE",
                 "data": {
                     "schema": {
