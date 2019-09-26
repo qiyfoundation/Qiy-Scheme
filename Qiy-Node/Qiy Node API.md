@@ -269,6 +269,21 @@ This [Connect Token Create Endpoint]-call can be used to register a [Connect Tok
 The request results in a [State Handled Event] and/or [State Handled Callback] with a matching connection url whenever the connect token was used to create a [Connection][Definitions Connection].
 
 
+The Connect Token is a json-object with three members which can be created as follows:
+
+    * id: This is a label and can be any string.
+    * target: The format of this member is returned in the "target-template"-member of the response of [Get endpoint addresses], where '~id~' should be a uuid.
+    * tmpSecret: This member is a string: an array of 16 random bytes which is base64-encoded.
+
+In Java the tmpSecret can be generated as follows:
+
+```
+SecureRandom RANDOM = new SecureRandom();
+byte[] tmpSecret = new byte[16];
+RANDOM.nextBytes(tmpSecret);
+String tmpSecretString = Base64.getEncoder().encodeToString(tmpSecret);
+```
+
 ## Controller
 
 ### Request connection
