@@ -60,7 +60,7 @@ paths:
   "/ActionMessageEndpoint":
     get:
       tags:
-      - control
+      - action message
       description: See [Get action message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-action-message)
       operationId: Get action message
       x-url: "$ActionMessageEndpointUrl"
@@ -72,7 +72,7 @@ paths:
   "/ActionMessageListEndpoint":
     get:
       tags:
-      - control
+      - action message
       description: See [List action messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-action-messages)
       operationId: List action messages
       x-url: "$ActionMessageListEndpointUrl"
@@ -114,9 +114,7 @@ paths:
   "/ConnectionEndpoint":
     get:
       tags:
-      - client
-      - control
-      - server
+      - connection
       description: See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connection)
       operationId: Get connection
       x-url: "$ConnectionEndpointUrl"
@@ -159,9 +157,7 @@ paths:
   "/ConnectionListEndpoint":
     get:
       tags:
-      - client
-      - control
-      - server
+      - connection
       description: See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connections)
       operationId: List connects
       x-url: "$ConnectionListEndpointUrl"
@@ -173,9 +169,7 @@ paths:
   "/ConnectTokenEndpoint":
     get:
       tags:
-      - client
-      - control
-      - server
+      - connection
       description: See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)
       operationId: Get connect token
       x-url: "$ConnectTokenEndpointUrl"
@@ -188,6 +182,7 @@ paths:
     post:
       tags:
       - client
+      - connection
       - server
       description: See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connect-token)
         or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)
@@ -224,8 +219,7 @@ paths:
   "/ConnectTokenListEndpoint":
     get:
       tags:
-      - client
-      - server
+      - connection
       description: See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)
       operationId: List connect tokens
       x-url: "$ConnectTokenListEndpointUrl"
@@ -377,7 +371,7 @@ paths:
   "/NodeCreateEndpoint":
     post:
       tags:
-      - control
+      - node
       description: See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)
       operationId: Request creation of Qiy Node
       x-url: "$NodeCreateEndpointUrl"
