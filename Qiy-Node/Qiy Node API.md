@@ -197,7 +197,7 @@ This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used t
 
 ## Start listening to events
 
-This [Events Endpoint](#events-endpoint)-call can be used to start listening to [events][Events], see [Start listening to events request].
+After [connecting][Request connection] to Data Providers (servers) and Relying Parties (clients) Individuals (controllers) use this [Events Endpoint](#events-endpoint)-call to catch access requests carried by [User Action Message Events], see [Start listening to events request].
 
 The request starts a long-living session with a heartbeat to keep the session open. 
 Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
@@ -338,11 +338,16 @@ A Qiy Node Client can use this [Action Message List Endpoint]-call to get all us
 
 ### Set feed source
 
-An End User App uses this [Action Endpoint]-call to set a Data Provider as the source for a feed, see [Set feed source request].
+When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
+
+Controllers can use [Set feed source request] to accept the request and set a source for the feed.
+
 
 ### Add feed source
 
-An End User App uses this [Action Endpoint]-call to add a Data Provider as a source for a feed, see [Add feed source request].
+When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
+
+Controllers can use [Add feed source request] to accept the request and set or add a source for the feed.
 
 
 # Annex A Dynamic Endpoint Addresses
@@ -715,3 +720,4 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
 [User Action Message Event]: #user-action-message-event
+[User Action Message Events]: #user-action-message-event
