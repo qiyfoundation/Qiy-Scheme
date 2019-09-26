@@ -252,7 +252,7 @@ The request results in a [State Handled Event] and/or [State Handled Callback] w
 
 ### Request connection
 
-This [Connection Create Endpoint]-call can be used to initiate a connection using (the "json"-member of) a [Connect Token], see [Request connection request].
+This [Connection Create Endpoint]-call can be used to initiate a connection using a [Connect Token], see [Request connection request].
 
 The state of the connection can be monitored using [List connections] or [Get connection], but a [State Handled Event] and/or [State Handled Callback] with a matching connection url will be fired when the connection has been established.
 
@@ -322,34 +322,36 @@ This [Feeds Endpoint]-request can be used to list the feeds of a Qiy Node or of 
 
 A Data Provider receives a [Feed Request Callback] when an Individual has set him as the source of a feed, see [Add feed source] or [Set feed source].
 
-A Data Provider receives a [Access Feed Request] after an access feed-request, see [Access feed] or [Access feeds].
-
+A Data Provider receives a [Access Feed Callback] after an [Access feed] or [Access feeds].
 
 ## Individual
 
-### User Action Message Event
-
-An End User App receives this event when a connected Relying Party has asked a feed to access one of his resources, see [Request for feed].
-The event contains a action message url that can be used to get details, see [Get user action message].
-
 ### Get user action message
 
-A Qiy Node Client can use this [Action Message List Endpoint]-call to get the details of a user action message, see [List action messages].
+An End User App receives a [User Action Message Event] when a connected Relying Party has asked for a feed to access one of his resources, see [Request for feed].
+The event contains an [Action Message Endpoint]-address that can be used with this call to get the details of the action message, see [Get user action message].
 
+### List action messages
 
-### Set feed
+A Qiy Node Client can use this [Action Message List Endpoint]-call to get all user action message, see [List action messages request].
 
-An End User App uses this call to set a Data Provider as the source for a feed request.
+### Set feed source
 
+An End User App uses this [Action Endpoint]-call to set a Data Provider as the source for a feed, see [Set feed source request].
 
-### Add feed
+### Add feed source
 
-An End User App uses this call to add a Data Provider as a source for a feed request.
+An End User App uses this [Action Endpoint]-call to add a Data Provider as a source for a feed, see [Add feed source request].
 
 
 # Annex A Dynamic Endpoint Addresses
 
 This annex describes the Dynamic Endpoint Addresses
+
+## Action Endpoint
+
+This endpoint can be used for [Set feed source] and [Add feed source].
+The current address of the endpoint is returned in the action messages returned by [List action messages] and [Get action message].
 
 ## Action Messages List Endpoint
 
@@ -435,6 +437,18 @@ This endpoint is deprecated.
 This endpoint can be used for [Delete Qiy Node].
 The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
 
+## Service Endpoint
+
+This endpoint is provided by a Data Provider to serve feeds, see [Feed request callback].
+It can be read and set with [Set service catalogue] and [Get service catalogue] respectively.
+
+Note: This endpoint have to be whitelisted by the [Access Provider] before it can be used.
+
+## Service Access Endpoint
+
+This endpoint is provided by a Data Provider to serve resources, see [Feed access callback].
+It's address is [Service Endpoint] appended with 'resolve'. 
+
 ## Service Catalogue Endpoint
 
 This endpoint can be used to [get][Get service catalogue] or [set][Set service catalogue] the contents of a [Service Catalogue][Definitions Service Catalogue].
@@ -512,7 +526,7 @@ This event is fired when a connection has been created, see GET State Handled Ev
 
 ## User Action Message Event
 
-This event is fired by a Qiy Node when it receives a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received.
+This event is fired by a Qiy Node when it has received a message that requires interaction with the End User, and can be used by an End User application to detect that a feed request has been received, see [Set feed source].
 
 Example event
 
@@ -542,7 +556,7 @@ It can be configured using [Set event callback endpoints].
 
 #### State Handled Callback Endpoint
 
-This Event Callback Endpoint can be used as an alternative for the [State Handled Event].
+This [Event Callback Endpoint] can be used as an alternative for the [State Handled Event].
 It can be configured using [Set event callback endpoints].
 
 ### Data Reference Received-v2 Callback
@@ -560,16 +574,19 @@ This [State Handled Callback Endpoint]-callback is executed when a Connect Token
 
 A Data Provider receives this [Service Endpoint]-callback when an Individual has set him as the source of a feed, see [Set feed source] or [Add feed source].
 
-### Access feed callback
+### Access Feed Callback
 
-A Data Provider receives this [Service Endpoint]-callback after an [Access feed]-request.
+A Data Provider receives this [Service Access Endpoint]-callback after an [Access feed].
 
 
 [Access feed]: #access-feed
 [Access feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feed
-[Access feed callback]: #access-feed-callback
+[Access Feed Callback]: #access-feed-callback
 [Access feeds]: #access-feeds
 [Access feeds request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Access_feeds
+[Add feed source]: #add-feed-source
+[Add feed source request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Add_feed_source
+[Action Endpoint]: #action-endpoint
 [Annex A Dynamic Endpoint Addresses]: #annex-a-dynamic-endpoint-addresses
 [Annex B Events]: #annex-b-events
 [Annex C Callbacks]: #annex-c-callbacks
@@ -597,6 +614,7 @@ A Data Provider receives this [Service Endpoint]-callback after an [Access feed]
 [Definitions Relying Party]: ../Definitions.md#relying-party
 [Definitions Resource]: ../Definitions.md#resource
 [Definitions Service Catalogue]: ../Definitions.md#service-catalogue
+[Definitions Service Access Endpoint]: ../Definitions.md#service-access-endpoint
 [Definitions Service Endpoint]: ../Definitions.md#service-endpoint
 [Definitions Service Provider]: ../Definitions.md#service-provider
 [Definitions Service Type]: ../Definitions.md#service-type
@@ -613,9 +631,12 @@ A Data Provider receives this [Service Endpoint]-callback after an [Access feed]
 [DigitalMe]: https://digital-me.nl/
 [Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
 [Events]: #events
+[Event Callback Endpoint]: #event-callback-endpoint
 [Feed Request Callback]: #feed-request-callback
 [Feeds Endpoint]: #feeds-endpoint
 [Get /api]: https://127.0.0.1:8000/openapi.html
+[Get action message]: #get-action-message
+[Get action message request]: http://127.0.0.1:8000/openapi-doc.html#/action/Get_action_message
 [Get connection]: #get-connection
 [Get connection request]: http://127.0.0.1:8000/openapi-doc.html#/connection/Get_connection
 [Get endpoint addresses]: #get-endpoint-addresses
@@ -656,7 +677,6 @@ A Data Provider receives this [Service Endpoint]-callback after an [Access feed]
 [Request creation of Qiy Node request]: http://127.0.0.1:8000/openapi-doc.html#/lifecycle/Request_creation_of_qiy-node
 [Request for feed]: #request-for-feed
 [Request for feed request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Request_for_feed
-[Relations]: https://qiy.api.digital-me.nl/?version=latest#4f4c5a3e-388c-48ff-b847-6c11c3738254
 [Request connection request]: http://127.0.0.1:8000/openapi-doc.html#/connection/Request_connection
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
@@ -665,6 +685,8 @@ A Data Provider receives this [Service Endpoint]-callback after an [Access feed]
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
 [Services Get service catalogue]: https://qiy.api.digital-me.nl/?version=latest#91f6b195-9c43-4c95-9618-57631714343b
 [Services Set service catalogue]: https://qiy.api.digital-me.nl/?version=latest#d29ddd91-cdcf-48af-abe4-42cd6d54694b
+[Set feed source]: #set-feed-source
+[Set feed source request]: http://127.0.0.1:8000/openapi-doc.html#/feed/Set_feed_source
 [Set service catalogue]: #set-service-catalogue
 [Set service catalogue request]: http://127.0.0.1:8000/openapi-doc.html#/service/Set_service_catalogue
 [Set event callback endpoints]: #set-event-callback-endpoints
@@ -678,4 +700,4 @@ A Data Provider receives this [Service Endpoint]-callback after an [Access feed]
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
-
+[User Action Message Event]: #user-action-message-event
