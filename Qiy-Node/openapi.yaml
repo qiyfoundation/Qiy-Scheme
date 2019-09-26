@@ -518,10 +518,18 @@ components:
             minItems: 1
             maxItems: 1
         optionPIDs:
+          description: Action endpoint addresses by pid as property name
           type: object
+          properties:
+            "$pid":
+              description: Action endpoint address
+              type: string
+              format: url
+              minItems: 1
+              maxItems: 1
           x-patternProperties:
             "$pidRex":
-              description: Action url
+              description: Action endpoint address
               type: string
               format: url
               minItems: 1
@@ -529,10 +537,18 @@ components:
           minItems: 1
           maxItems: 1
         relayOptions:
+          description: action endpoint addresses by Qiy Node Id as property name
           type: object
+          properties:
+            "$nodeIdRex":
+              description: Action endpoint address
+              type: string
+              format: url
+              minItems: 1
+              maxItems: 1
           x-patternProperties:
             "$nodeIdRex":
-              description: Action url
+              description: Action endpoint address
               type: string
               format: url
               minItems: 1
@@ -913,7 +929,11 @@ components:
       type: string
       format: ascii no whitespace
     feedList:
+      description: Feeds by service type url as property name
       type: object
+      properties:
+        "[\\x00-\\x7F]+":
+          "$ref": "#/components/schemas/feedDetails"
       x-patternProperties:
         "[\\x00-\\x7F]+":
           "$ref": "#/components/schemas/feedDetails"
@@ -955,7 +975,21 @@ components:
     feedAccessResponse:
       description: The feed response format is described in the service type description
     feedsAccessRequest:
+      description: Access requests by feed id as property name
       type: object
+      properties:
+        "[\\x00-\\x7F]+":
+          type: object
+          properties:
+            input:
+              description: Optional body for the access request for the given feed
+                id
+              type: string
+              format: base64-encoded byte array
+              nullable: true
+              minItems: 0
+              default: 
+              maxItems: 1
       x-patternProperties:
         "[\\x00-\\x7F]+":
           type: object
@@ -970,7 +1004,21 @@ components:
               default: 
               maxItems: 1
     feedsAccessResponse:
+      description: Feed access responses by feed id as property name
       type: object
+      properties:
+        "[\\x00-\\x7F]+":
+          type: object
+          properties:
+            content-type:
+              type: string
+              minItems: 1
+              maxItems: 1
+            output:
+              type: string
+              format: base64-encoded byte array
+              minItems: 1
+              maxItems: 1
       x-patternProperties:
         "[\\x00-\\x7F]+":
           type: object
@@ -1086,7 +1134,28 @@ components:
           minItems: 1
           maxItems: 1
     serviceCatalogue:
+      description: Service catalogue entries by service type url as property name
       type: object
+      properties:
+        https?://[a-z0-9]+([-./]?[a-z0-9])*:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - external
+              - internal
+            uri:
+              description: Feed request endpoint url
+              type: string
+              format: url
+            method:
+              type: string
+              enum:
+              - GET
+              - POST
+              - PUT
+              - SET
       x-patternProperties:
         https?://[a-z0-9]+([-./]?[a-z0-9])*:
           type: object
@@ -1108,7 +1177,21 @@ components:
               - PUT
               - SET
     serviceEndpointFeedAccessRequest:
+      description: Service endpoint access requests by feed id as property name
       type: object
+      properties:
+        "[\\x00-\\x7F]+":
+          type: object
+          properties:
+            input:
+              description: Optional body for the access request for the given feed
+                id
+              type: string
+              format: base64-encoded byte array
+              nullable: true
+              minItems: 0
+              default: 
+              maxItems: 1
       x-patternProperties:
         "[\\x00-\\x7F]+":
           type: object
