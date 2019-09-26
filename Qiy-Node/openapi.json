@@ -74,7 +74,7 @@
             "put": {
                 "tags": [
                     "control",
-		    "feed"
+                    "feed"
                 ],
                 "description": "See [Add feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#add-feed-source)",
                 "operationId": "Add feed source",
@@ -200,7 +200,7 @@
             "post": {
                 "tags": [
                     "client",
-		    "feed"
+                    "feed"
                 ],
                 "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
                 "operationId": "Request for feed",
@@ -404,7 +404,7 @@
             "get": {
                 "tags": [
                     "client",
-		    "configuration",
+                    "configuration",
                     "server"
                 ],
                 "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
@@ -442,7 +442,7 @@
             "get": {
                 "tags": [
                     "client",
-		    "feed"
+                    "feed"
                 ],
                 "description": "See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-feeds)",
                 "operationId": "List feeds",
@@ -493,7 +493,7 @@
             "post": {
                 "tags": [
                     "client",
-		    "feed"
+                    "feed"
                 ],
                 "description": "See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#access-feed)",
                 "operationId": "Access feed",
