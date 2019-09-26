@@ -63,6 +63,18 @@ paths:
           "$ref": "#/components/responses/feedSourceAdd"
         default:
           "$ref": "#/components/responses/default"
+  "/ActionMessageEndpoint":
+    get:
+      tags:
+      - action message
+      description: See [Get action message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-action-message)
+      operationId: Get action message
+      x-url: "$ActionMessageEndpointUrl"
+      responses:
+        '200':
+          "$ref": "#/components/responses/actionMessage"
+        default:
+          "$ref": "#/components/responses/default"
   "/ActionMessageListEndpoint":
     get:
       tags:
@@ -1234,6 +1246,15 @@ components:
               "$ref": "#/components/examples/apiGetAppAuthenticated"
             apiGetUserAuthenticated:
               "$ref": "#/components/examples/apiGetUserAuthenticated"
+    actionMessage:
+      description: Action Message
+      content:
+        application/json:
+          schema:
+            "$ref": "#/components/schemas/actionMessage"
+          examples:
+            example:
+              "$ref": "#/components/examples/actionMessage"
     actionMessageList:
       description: Action Message list
       content:
@@ -1409,6 +1430,27 @@ components:
       schema:
         "$ref": "#/components/schemas/feedId"
   examples:
+    actionMessage:
+      value:
+        connection: https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+        created: 1562059030644
+        links:
+          self: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4
+          handle: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+        message:
+          serialNr: 5
+          text: huh?
+          protocol: http://bla.nl/events
+          inbound: true
+          sent: false
+          payload: eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=
+          processed: true
+        optionPIDs:
+          jRMCgeCzt3zFGDZuutuNvg==: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca
+          kpKugxcUU7AdJJgVUVuFnA==: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+        relayOptions:
+          8f4edf58-73dd-4fee-b344-149c924f1605: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca
+          wip_feed_rp: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
     actionMessageList:
       value:
         result:

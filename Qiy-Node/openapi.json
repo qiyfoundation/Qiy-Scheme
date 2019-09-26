@@ -93,6 +93,24 @@
                 }
             }
         },
+        "/ActionMessageEndpoint": {
+            "get": {
+                "tags": [
+                    "action message"
+                ],
+                "description": "See [Get action message](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-action-message)",
+                "operationId": "Get action message",
+                "x-url": "$ActionMessageEndpointUrl",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/actionMessage"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            }
+        },
         "/ActionMessageListEndpoint": {
             "get": {
                 "tags": [
@@ -1767,6 +1785,21 @@
                     }
                 }
             },
+            "actionMessage": {
+                "description": "Action Message",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/actionMessage"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/actionMessage"
+                            }
+                        }
+                    }
+                }
+            },
             "actionMessageList": {
                 "description": "Action Message list",
                 "content": {
@@ -2053,6 +2086,33 @@
             }
         },
         "examples": {
+            "actionMessage": {
+                "value": {
+                    "connection": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
+                    "created": 1562059030644,
+                    "links": {
+                        "self": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4",
+                        "handle": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                    },
+                    "message": {
+                        "serialNr": 5,
+                        "text": "huh?",
+                        "protocol": "http://bla.nl/events",
+                        "inbound": true,
+                        "sent": false,
+                        "payload": "eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=",
+                        "processed": true
+                    },
+                    "optionPIDs": {
+                        "jRMCgeCzt3zFGDZuutuNvg==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
+                        "kpKugxcUU7AdJJgVUVuFnA==": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                    },
+                    "relayOptions": {
+                        "8f4edf58-73dd-4fee-b344-149c924f1605": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca",
+                        "wip_feed_rp": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e"
+                    }
+                }
+            },
             "actionMessageList": {
                 "value": {
                     "result": [
@@ -2160,31 +2220,31 @@
             "connectionList": {
                 "value": {
                     "result": [
-                    {
-                        "state": "expired",
-                        "activeFrom": 1544686272000,
-                        "activeUntil": 1544693472000,
-                        "pid": "vjQK/rOw6CoSuWPZy6K93w==",
-                        "links": {
-                            "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
-                            "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
-                            "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
-                            "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
-                            "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
+                        {
+                            "state": "expired",
+                            "activeFrom": 1544686272000,
+                            "activeUntil": 1544693472000,
+                            "pid": "vjQK/rOw6CoSuWPZy6K93w==",
+                            "links": {
+                                "parent": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                                "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                                "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/465571a1-d7e6-4d03-ae4b-f1a78b1463f3/feeds",
+                                "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3",
+                                "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/465571a1-d7e6-4d03-ae4b-f1a78b1463f3"
+                            }
+                        },
+                        {
+                            "state": "connected",
+                            "activeFrom": 1544685886000,
+                            "pid": "nfIols4wKn9bBVkqnkHKbw==",
+                            "links": {
+                                "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                                "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/7f4dd669-9381-40e1-8f6e-4c9904476d8a/feeds",
+                                "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
+                                "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a"
+                            }
                         }
-                    },
-                    {
-                        "state": "connected",
-                        "activeFrom": 1544685886000,
-                        "pid": "nfIols4wKn9bBVkqnkHKbw==",
-                        "links": {
-                            "self": "https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
-                            "feeds": "https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/7f4dd669-9381-40e1-8f6e-4c9904476d8a/feeds",
-                            "references": "https://dev2-user.testonly.digital-me.nl/user/references/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a",
-                            "mbox": "https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a"
-                        }
-                    }
-                ]
+                    ]
                 }
             },
             "connectTokenRequestRequestBody": {
@@ -2344,7 +2404,7 @@
                             ],
                             "value": "102.28"
                         }
-                ],
+                    ],
                     "activities-heart-intraday": {
                         "dataset": [
                             {
@@ -2370,7 +2430,7 @@
                         ],
                         "datasetInterval": 1,
                         "datasetType": "minute"
-                }
+                    }
                 }
             },
             "feedList": {
@@ -2443,26 +2503,26 @@
             "messageList": {
                 "value": {
                     "result": [
-                    {
-                        "inbound": false,
-                        "payload": "eyJwdWJsaWNLZXkiOiJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXU0cXNYMmlISzE0MzhXZjRCcGxiMjBqYXdjN0U3Mng0MTMwUW9QaE9MajByM0VSTi8wSmpjK3FoaU1QQVBEVCtTa1NQbmdGckN2RTRhR0pIOWIwdm8rWVkvcW1FbVFzdGw0d2s5cEFHTnVJdHh0TStab0RoTHdkRHBETTc0QkE4aFZ3cXJHQVA5UUovNktibFFLbXRPT09NY0tTUXB0RXNFQ3NFQytMZThpTkJhU2ozRnBMbWpHUWkxYjZXMG1UMU1aYzVFUjRTOFVmN2hkajhpS0JRc3hFcjdZUThqZ2FXdE1rakZOU0tZemt2Vi9zU3FtL2t0akh4Q21MUk5yRXdvaDBvZ1V1S1FEMnJuK1piWXovalBMWjRZOFd4Q3d2Wi9jVjFkMDc5Wk16S0hYWVBLT3J1RnJOWTZjZng5STRsckEyVHdsSXpOQVd5RHQzN1ZsQ2xEUUlEQVFBQiIsInBlcnNpc3RlbnRJZCI6ImxOMUxEN2lBSGZ2bDVvTWRCZ0k4VWc9PSIsInByb3RvY29scyI6WyJodHRwczovL3Byb3RvY29scy5xaXkubmwvaW52aXRlcy92LjEuMC4wIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2NsZWFudXAvbWVzc2FnZXMvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9zdGF0ZS92LjEuMC4wIiwiaHR0cHM6Ly9naXRodWIuY29tL3FpeWZvdW5kYXRpb24vZmlLa3MvdHJlZS9tYXN0ZXIvc2NoZW1hL3YxIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2RhdGEtcmVmZXJlbmNlL3BlZXIvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9yZWZlcmVuY2UtbWFuYWdlbWVudC8xLjAuMCJdLCJuYW1lIjoibWdkX2RldjIifQ==",
-                        "processed": false,
-                        "protocol": "https://protocols.qiy.nl/domain-details/v.1.0.0",
-                        "serialNr": 1,
-                        "sent": true,
-                        "text": "Our details"
-                    },
-                    {
-                        "inbound": true,
-                        "payload": "eyJwZXJzaXN0ZW50SWQiOiJLandGTzlGekRyQUM3Q2Q4WURKajh3PT0ifQ==",
-                        "processed": true,
-                        "protocol": "https://protocols.qiy.nl/reuse-persistent-id/v.1.0.0",
-                        "refSerialNr": 1,
-                        "sent": false,
-                        "serialNr": 2,
-                        "text": "Known by this persistent id"
-                    }
-                ]
+                        {
+                            "inbound": false,
+                            "payload": "eyJwdWJsaWNLZXkiOiJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXU0cXNYMmlISzE0MzhXZjRCcGxiMjBqYXdjN0U3Mng0MTMwUW9QaE9MajByM0VSTi8wSmpjK3FoaU1QQVBEVCtTa1NQbmdGckN2RTRhR0pIOWIwdm8rWVkvcW1FbVFzdGw0d2s5cEFHTnVJdHh0TStab0RoTHdkRHBETTc0QkE4aFZ3cXJHQVA5UUovNktibFFLbXRPT09NY0tTUXB0RXNFQ3NFQytMZThpTkJhU2ozRnBMbWpHUWkxYjZXMG1UMU1aYzVFUjRTOFVmN2hkajhpS0JRc3hFcjdZUThqZ2FXdE1rakZOU0tZemt2Vi9zU3FtL2t0akh4Q21MUk5yRXdvaDBvZ1V1S1FEMnJuK1piWXovalBMWjRZOFd4Q3d2Wi9jVjFkMDc5Wk16S0hYWVBLT3J1RnJOWTZjZng5STRsckEyVHdsSXpOQVd5RHQzN1ZsQ2xEUUlEQVFBQiIsInBlcnNpc3RlbnRJZCI6ImxOMUxEN2lBSGZ2bDVvTWRCZ0k4VWc9PSIsInByb3RvY29scyI6WyJodHRwczovL3Byb3RvY29scy5xaXkubmwvaW52aXRlcy92LjEuMC4wIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2NsZWFudXAvbWVzc2FnZXMvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9zdGF0ZS92LjEuMC4wIiwiaHR0cHM6Ly9naXRodWIuY29tL3FpeWZvdW5kYXRpb24vZmlLa3MvdHJlZS9tYXN0ZXIvc2NoZW1hL3YxIiwiaHR0cHM6Ly9wcm90b2NvbHMucWl5Lm5sL2RhdGEtcmVmZXJlbmNlL3BlZXIvdi4xLjAuMCIsImh0dHBzOi8vcHJvdG9jb2xzLnFpeS5ubC9yZWZlcmVuY2UtbWFuYWdlbWVudC8xLjAuMCJdLCJuYW1lIjoibWdkX2RldjIifQ==",
+                            "processed": false,
+                            "protocol": "https://protocols.qiy.nl/domain-details/v.1.0.0",
+                            "serialNr": 1,
+                            "sent": true,
+                            "text": "Our details"
+                        },
+                        {
+                            "inbound": true,
+                            "payload": "eyJwZXJzaXN0ZW50SWQiOiJLandGTzlGekRyQUM3Q2Q4WURKajh3PT0ifQ==",
+                            "processed": true,
+                            "protocol": "https://protocols.qiy.nl/reuse-persistent-id/v.1.0.0",
+                            "refSerialNr": 1,
+                            "sent": false,
+                            "serialNr": 2,
+                            "text": "Known by this persistent id"
+                        }
+                    ]
                 }
             },
             "messageNew": {
