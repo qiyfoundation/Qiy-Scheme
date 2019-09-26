@@ -86,7 +86,6 @@ paths:
   "/ConnectionCreateEndpoint":
     post:
       tags:
-      - control
       - connection
       description: See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connection)
       operationId: Request connection
@@ -185,9 +184,7 @@ paths:
   "/ConnectTokenCreateEndpoint":
     post:
       tags:
-      - client
       - connection
-      - server
       description: See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connect-token)
         or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)
       operationId: Request or register connect token
@@ -235,9 +232,7 @@ paths:
   "/EventCallbacksEndpoint":
     put:
       tags:
-      - client
       - configuration
-      - server
       description: See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)
       operationId: Set event callback endpoints
       x-url: "$EventCallbacksEndpointUrl"
@@ -257,9 +252,7 @@ paths:
           "$ref": "#/components/responses/default"
     get:
       tags:
-      - client
       - configuration
-      - server
       description: See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)
       operationId: Get event callback endpoints
       x-url: "$EventCallbacksEndpointUrl"
@@ -404,7 +397,6 @@ paths:
     get:
       tags:
       - configuration
-      - node
       description: See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)
       operationId: Get node settings
       x-url: "$NodeSettingsEndpointUrl"
@@ -416,7 +408,6 @@ paths:
     put:
       tags:
       - configuration
-      - node
       description: See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)
       operationId: Set node settings
       x-url: "$NodeSettingsEndpointUrl"
@@ -451,7 +442,6 @@ paths:
   "/ServiceCatalogueEndpoint":
     get:
       tags:
-      - configuration
       - server
       description: See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)
       operationId: Get service catalogue
@@ -463,7 +453,6 @@ paths:
           "$ref": "#/components/responses/default"
     put:
       tags:
-      - configuration
       - server
       description: See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)
       operationId: Set service catalogue

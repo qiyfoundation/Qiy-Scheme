@@ -128,7 +128,6 @@
         "/ConnectionCreateEndpoint": {
             "post": {
                 "tags": [
-                    "control",
                     "connection"
                 ],
                 "description": "See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connection)",
@@ -290,9 +289,7 @@
         "/ConnectTokenCreateEndpoint": {
             "post": {
                 "tags": [
-                    "client",
-                    "connection",
-                    "server"
+                    "connection"
                 ],
                 "description": "See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#request-connect-token) or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)",
                 "operationId": "Request or register connect token",
@@ -370,9 +367,7 @@
         "/EventCallbacksEndpoint": {
             "put": {
                 "tags": [
-                    "client",
-                    "configuration",
-                    "server"
+                    "configuration"
                 ],
                 "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
@@ -403,9 +398,7 @@
             },
             "get": {
                 "tags": [
-                    "client",
-                    "configuration",
-                    "server"
+                    "configuration"
                 ],
                 "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
                 "operationId": "Get event callback endpoints",
@@ -637,8 +630,7 @@
         "/NodeSettingsEndpoint": {
             "get": {
                 "tags": [
-                    "configuration",
-                    "node"
+                    "configuration"
                 ],
                 "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
                 "operationId": "Get node settings",
@@ -654,8 +646,7 @@
             },
             "put": {
                 "tags": [
-                    "configuration",
-                    "node"
+                    "configuration"
                 ],
                 "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
                 "operationId": "Set node settings",
@@ -711,7 +702,6 @@
         "/ServiceCatalogueEndpoint": {
             "get": {
                 "tags": [
-                    "configuration",
                     "server"
                 ],
                 "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
@@ -728,7 +718,6 @@
             },
             "put": {
                 "tags": [
-                    "configuration",
                     "server"
                 ],
                 "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
