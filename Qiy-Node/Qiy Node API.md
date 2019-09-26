@@ -713,7 +713,7 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Set node settings]: #set-node-settings
 [Set node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Set_node_settings
 [Start listening to events]: #start-listening-to-events
-[Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/control/Start_listening_to_events
+[Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/controller/Start_listening_to_events
 [State Handled Event]: #state-handled-event
 [State Handled Callback]: #state-handled-callback
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint

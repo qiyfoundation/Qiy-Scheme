@@ -37,7 +37,7 @@ paths:
   "/ActionEndpoint":
     post:
       tags:
-      - control
+      - controller
       - feed
       description: See [Set feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#set-feed-source)
       operationId: Set feed source
@@ -49,7 +49,7 @@ paths:
           "$ref": "#/components/responses/default"
     put:
       tags:
-      - control
+      - controller
       - feed
       description: See [Add feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#add-feed-source)
       operationId: Add feed source
@@ -74,6 +74,7 @@ paths:
   "/ActionMessageListEndpoint":
     get:
       tags:
+      - controller
       - action message
       description: See [List action messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#list-action-messages)
       operationId: List action messages
@@ -264,7 +265,7 @@ paths:
   "/EventsEndpoint":
     get:
       tags:
-      - control
+      - controller
       description: See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/topic/oas/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)
       operationId: Start listening to events
       x-url: "$EventsEndpointUrl"
