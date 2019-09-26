@@ -1,17 +1,35 @@
 # Qiy Node API
 
-This document describes the Qiy Node API - the API for [Qiy Nodes][Definitions Qiy Node], in layman's terms: a digital identity for [Individuals][Definitions Individual] and/or [Service Providers][Definitions Service Provider] to provide and/or consume digital services.
+This document describes the Qiy Node API.
 
-In technical terms a Qiy Node provides a point of access for the [Qiy Trust Network][Definitions Qiy Trust Network] that can be used to allows individuals to provide [Relying Parties][Definitions Relying Party] access to [Resources][Definitions Resource] protected by [Data Providers][Definitions Data Provider], for example using [POST /FeedsEndpoint/{feedId}].
+Software developers use the api for Qiy-based solutions (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
-Individuals acquire Qiy Nodes [when they use Qiy-based end-user applications][Creating Qiy Nodes for Individuals].
+
+
+# Qiy Node
+
+A [Qiy Node][Definitions Qiy Node] can be viewed as a digital identity for [Individuals][Definitions Individual] and/or organizations ([Service Providers][Definitions Service Provider]).
+Qiy Nodes can be used in solutions that enable Individuals to provide [Relying Parties][Definitions Relying Party] access to personal data that are protected by [Data Providers][Definitions Data Provider].
+
+Individuals acquire Qiy Nodes [when they start using Qiy-based end-user applications][Creating Qiy Nodes for Individuals].
 
 Service Providers are provided with at least three Qiy Nodes by their [Access Provider][Definitions Access Provider]; one for the production environment, one for the acceptance environment and one for the development environment.
 
-Software developers use the api to build [Qiy Node Clients][Definitions Qiy Node Client] (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
+
+# Resource Access Management
+
+The Qiy Node API main feature is Resource Access Management;
+it can be used by a [controller] (eg Individual) to provide a [client] (eg Relying Party) access to a [Service] from a [Service Endpoint] protected by the [Server] (eg Data Provider) using [Feeds], for example as follows:
+* The server announces the available Service, see [Set service catalogue].
+* The controller connects with the server, see [Request connection].
+* The server identifies the controller (out of bounds).
+* The controller connects with the client, see [Request connection].
+* The client requests the controller for a feed, see [Request for feed].
+* The controller accepts the feed and sets the server as the source, see [Set feed source].
+* The server uses the feed to access the service, see [Access feed].
 
 
-# Servers
+# API Servers
 
 The api is provided in a development environment, the acceptance environment and the production environment.
 In addition, a proxy server for the develoment environment is provided to ease discovery, experimentation, and evaluation.
@@ -76,6 +94,8 @@ The version of the api that is supported must be returned by [Get /api].
 Two API Keys are provided by Access Providers: one for the Production environment and one for the other environments.
 
 ## User Authentication
+
+User Authentication ensures that a Qiy Node is only accessed by its rightfull owner.
 
 Most requests must be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential] as described below.
 The token is passed in the 'Authorization-node-QTN'-header parameter, see for example [POST /FeedsEndpoint/{feedId}].
@@ -163,7 +183,7 @@ The Qiy Node API provides a number of [Server-Sent Events](https://en.wikipedia.
 
 # Callbacks
 
-The events can also be catched using callbacks. Also, the Qiy Node API provides some additional callbacks for Data Providers, see [Annex C Callbacks].
+The events can also be catched using callbacks. Also, the Qiy Node API provides some additional callbacks for servers, see [Annex C Callbacks].
 
 
 # API
@@ -197,7 +217,7 @@ This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used t
 
 ## Start listening to events
 
-After [connecting][Request connection] to Data Providers (servers) and Relying Parties (clients) Individuals (controllers) use this [Events Endpoint](#events-endpoint)-call to catch access requests carried by [User Action Message Events], see [Start listening to events request].
+After [connecting][Request connection] to servers and clients, controllers use this [Events Endpoint](#events-endpoint)-call to catch requests for feed in [User Action Message Events], see [Start listening to events request].
 
 The request starts a long-living session with a heartbeat to keep the session open. 
 Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
@@ -228,13 +248,13 @@ This [Service Catalogue Endpoint]-call can be used to get the details of the [Se
 
 ## Set service catalogue
 
-A Data Provider uses this [Service Catalogue Endpoint]-call to publish the provided services using his [Service Catalogue][Definitions Service Catalogue] and related [Service Endpoint(s)][Service Endpoint], see [Set service catalogue request].
+A server uses this [Service Catalogue Endpoint]-call to publish the provided services using his [Service Catalogue][Definitions Service Catalogue] and related [Service Endpoint(s)][Service Endpoint], see [Set service catalogue request].
 
 Afterwards, [Feed Request Callbacks] and [Access Feed Callbacks] are received for these services.
 
 # Connections
 
-## Relying Party/Data Provider
+## Client/Server
 
 ### Request connect token
 
@@ -249,7 +269,7 @@ This [Connect Token Create Endpoint]-call can be used to register a [Connect Tok
 The request results in a [State Handled Event] and/or [State Handled Callback] with a matching connection url whenever the connect token was used to create a [Connection][Definitions Connection].
 
 
-## Individual
+## Controller
 
 ### Request connection
 
@@ -292,11 +312,11 @@ This [Messages Endpoint]-call lists messages, see [List messages request].
 
 # Feeds
 
-## Relying Party
+## Client
 
 ### Request for feed
 
-A Relying Party uses this [Connection Feeds Endpoint]-call to initiate a feed, see [Request for feed request].
+A client uses this [Connection Feeds Endpoint]-call to initiate a feed, see [Request for feed request].
 Optionally, a body parameter can be included in the 'input'-member of the body json object as a base64-encoded byte array.
 
 The request returns an inactive feed, the status of which can be monitored using [List feeds].
@@ -305,13 +325,13 @@ A [Data Reference Received-v2 Event] and a [Data Reference Received-v2 Callback]
 
 ### Access feed
 
-A Relying Party uses this [Feeds Endpoint]-call to access a single feed, see [Access feed request].
+A client uses this [Feeds Endpoint]-call to access a single feed, see [Access feed request].
 The body may include operation request parameters encoded as a base-64 encoded byte array.
 
 
 ### Access feeds
 
-A Relying Party can use this [Feeds Endpoint]-call to access one or more feeds, see [Access feeds request].
+A client uses this [Feeds Endpoint]-call to access one or more feeds, see [Access feeds request].
 
 
 ### List feeds
@@ -319,35 +339,35 @@ A Relying Party can use this [Feeds Endpoint]-call to access one or more feeds, 
 This [Feeds Endpoint]-request can be used to list the feeds of a Qiy Node or of a connection for all or a set of [Service Types][Definitions Service Type] (also known as 'protocols'), see [List feeds request].
 
 
-## Data Provider
+## Server
 
-A Data Provider receives a [Feed Request Callback] when an Individual has set him as the source of a feed, see [Add feed source] or [Set feed source].
+A server receives a [Feed Request Callback] when a controller has set him as the source of a feed, see [Add feed source] or [Set feed source].
 
-A Data Provider receives a [Access Feed Callback] after an [Access feed] or [Access feeds].
+A server receives an [Access Feed Callback] after an [Access feed] or [Access feeds].
 
-## Individual
+## Controller
 
 ### Get user action message
 
-An End User App receives a [User Action Message Event] when a connected Relying Party has asked for a feed to access one of his resources, see [Request for feed].
+An End User App receives a [User Action Message Event] when a connected client has asked for a feed to access one of his resources, see [Request for feed].
 The event contains an [Action Message Endpoint]-address that can be used with this call to get the details of the action message, see [Get user action message].
 
 ### List action messages
 
-A Qiy Node Client can use this [Action Message List Endpoint]-call to get all user action message, see [List action messages request].
+A controller uses this [Action Message List Endpoint]-call to get all open requests for feeds, see [List action messages request].
 
 ### Set feed source
 
 When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
 
-Controllers can use [Set feed source request] to accept the request and set a source for the feed.
+Controllers use [Set feed source request] to accept the request and set a source for the feed.
 
 
 ### Add feed source
 
 When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
 
-Controllers can use [Add feed source request] to accept the request and set or add a source for the feed.
+Controllers use [Add feed source request] to accept the request and set or add a source for the feed.
 
 
 # Annex A Dynamic Endpoint Addresses
@@ -410,7 +430,7 @@ The current addresses of the Event Callbacks Endpoint is returned in the "eventC
 
 ## Feeds Endpoint
 
-A Relying Party uses this endpoint to [list][List feeds] or [access one][Access feed] or [more][Access feeds] feeds of an Individual (connection) or of himself (a Qiy Node).
+A client uses this endpoint to [list][List feeds] or [access one][Access feed] or [more][Access feeds] feeds of a single controller or all connected controllers.
 
 The address of the endpoint for a connection is returned in the "feeds"-member of the response of [List connections] and/or [Get connection].
 The address of the endpoint for a Qiy Node is returned in the "feeds"-member of the response of [Get endpoint addresses].
@@ -450,15 +470,15 @@ The endpoint address is returned in the 'self'-property of [Get endpoint address
 
 ## Service Endpoint
 
-This endpoint is provided by a Data Provider to serve feeds, see [Feed request callback].
+This endpoint is provided by a server to serve feeds, see [Feed request callback].
 It can be read and set with [Set service catalogue] and [Get service catalogue] respectively.
 
 Note: This endpoint have to be whitelisted by the Access Provider before it can be used.
 
 ## Service Access Endpoint
 
-This endpoint is provided by a Data Provider to serve resources, see [Access Feed Callback].
-It's address is [Service Endpoint] appended with 'resolve'. 
+This endpoint is provided by a server to serve resources, see [Access Feed Callback].
+Its address is [Service Endpoint] appended with 'resolve'. 
 
 ## Service Catalogue Endpoint
 
@@ -493,7 +513,7 @@ This event is fired when a source is set or added for a feed, see [Request for f
 
 ## Data Request Forwarded Event
 
-This event is fired after an [Access feed] if and when the access request is forwarded to a Data Provider.
+This event is fired after an [Access feed] if and when the access request is forwarded to a server.
 
 ## Data Request Fulfilled Event
 
@@ -505,7 +525,7 @@ This event is fired after an [Access feed] if and when a feed could not be acces
 
 ## Data Request Not Forwarded Event
 
-This event is fired after an [Access feed] if and when a access request cannot be forwarded to a Data Provider.
+This event is fired after an [Access feed] if and when a access request cannot be forwarded to a server.
 
 ## Pending Peer Data Reference Event
 
@@ -580,15 +600,15 @@ This [Data Reference Received-v2 Callback Endpoint]-callback is fired when a sou
 This [State Handled Callback Endpoint]-callback is executed when a Connect Token has been used to create a connection, see [Register connect token] or [Request connect token].
 
 
-## Data Provider Callbacks
+## Server Callbacks
 
 ### Feed Request Callback
 
-A Data Provider receives this [Service Endpoint]-callback when an Individual has set him as the source of a feed, see [Set feed source] or [Add feed source].
+A server receives this [Service Endpoint]-callback when an controller has set him as the source of a feed, see [Set feed source] or [Add feed source].
 
 ### Access Feed Callback
 
-A Data Provider receives this [Service Access Endpoint]-callback after an [Access feed].
+A server receives this [Service Access Endpoint]-callback after an [Access feed].
 
 
 [Access feed]: #access-feed
@@ -605,8 +625,7 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Annex A Dynamic Endpoint Addresses]: #annex-a-dynamic-endpoint-addresses
 [Annex B Events]: #annex-b-events
 [Annex C Callbacks]: #annex-c-callbacks
-[API]: https://qiy.api.digital-me.nl/?version=latest#076c9660-4323-42f1-b087-6cad8e484c3a
-[API Get Api]: https://qiy.api.digital-me.nl/?version=latest#27416893-7da4-411f-8847-88103d17dc86
+[Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
@@ -614,7 +633,8 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Connection Endpoint]: #connection-endpoint
 [Connection Feeds Endpoint]: #connection-feeds-endpoint
 [Connection List Endpoint]: #connection-list-endpoint
-[Consents]: https://qiy.api.digital-me.nl/?version=latest#3f42e884-3ffa-4387-8896-05e7226d5a9f
+[Controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
+[controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
 [Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [Data Reference Received-v2 Event]: #data-reference-received-v2-event
 [Data Reference Received-v2 Callback]: #data-reference-received-v2-callback
@@ -651,6 +671,7 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
 [Feed Request Callback]: #feed-request-callback
 [Feed Request Callbacks]: #feed-request-callback
+[Feeds]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
 [Feeds Endpoint]: #feeds-endpoint
 [Get /api]: https://fdriesenaar.github.io/openapi.html
 [Get action message]: #get-action-message
@@ -700,6 +721,7 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/message/Send_message
+[Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
 [Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
