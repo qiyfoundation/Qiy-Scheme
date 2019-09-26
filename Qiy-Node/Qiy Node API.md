@@ -4,7 +4,7 @@ This document describes the Qiy Node API - the API for [Qiy Nodes][Definitions Q
 
 In technical terms a Qiy Node provides a point of access for the [Qiy Trust Network][Definitions Qiy Trust Network] that can be used to allows individuals to provide [Relying Parties][Definitions Relying Party] access to [Resources][Definitions Resource] protected by [Data Providers][Definitions Data Provider], for example using [POST /FeedsEndpoint/{feedId}].
 
-Individuals acquire Qiy Nodes [when they use Qiy-based end-user applications][hlao 5.1.2 Creating Qiy Nodes for Individuals].
+Individuals acquire Qiy Nodes [when they use Qiy-based end-user applications][Creating Qiy Nodes for Individuals].
 
 Service Providers are provided with at least three Qiy Nodes by their [Access Provider][Definitions Access Provider]; one for the production environment, one for the acceptance environment and one for the development environment.
 
@@ -25,7 +25,7 @@ The server urls are:
 | Acceptance       | https://user.dolden.net/user                                        |
 
 
-The server url of the Production environment is provided in the entry-transition phase, when a [Qiy Application] goes live.
+The server url of the Production environment is provided in the entry-transition phase, when a [Qiy Application][Definitions Qiy Application] goes live.
 
 ## Proxy server
 
@@ -177,7 +177,7 @@ An App Authenticated [GET /api] can be used to get the api version and the curre
 
 ## Request creation of Qiy Node
 
-This [Node Create Endpoint]-call can be used to request the [creation of a Qiy Node][hla Creating Qiy Nodes fro Individuals], see [Request creation of Qiy Node request].
+This [Node Create Endpoint]-call can be used to request the [creation of a Qiy Node][Creating Qiy Nodes for Individuals], see [Request creation of Qiy Node request].
 
 
 ## Get endpoint addresses
@@ -237,13 +237,13 @@ This [Service Catalogue Endpoint]-call can be used to get the details of the [Se
 
 ### Request connect token
 
-This [Connect Token Create Endpoint]-call can be used to request a [Connect Token], see [Request connect token request].
+This [Connect Token Create Endpoint]-call can be used to request a [Connect Token][Definitions Connect Token], see [Request connect token request].
 
 The request results in a [State Handled Event] and/or [State Handled Callback] with a matching connection url whenever the connect token was used to create a [Connection][Definitions Connection].
 
 ### Register connect token
 
-This [Connect Token Create Endpoint]-call can be used to register a [Connect Token], see [Register connect token request].
+This [Connect Token Create Endpoint]-call can be used to register a [Connect Token][Definitions Connect Token], see [Register connect token request].
 
 The request results in a [State Handled Event] and/or [State Handled Callback] with a matching connection url whenever the connect token was used to create a [Connection][Definitions Connection].
 
@@ -252,7 +252,7 @@ The request results in a [State Handled Event] and/or [State Handled Callback] w
 
 ### Request connection
 
-This [Connection Create Endpoint]-call can be used to initiate a connection using a [Connect Token], see [Request connection request].
+This [Connection Create Endpoint]-call can be used to initiate a connection using a [Connect Token][Definitions Connect Token], see [Request connection request].
 
 The state of the connection can be monitored using [List connections] or [Get connection], but a [State Handled Event] and/or [State Handled Callback] with a matching connection url will be fired when the connection has been established.
 
@@ -608,6 +608,7 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Connection Feeds Endpoint]: #connection-feeds-endpoint
 [Connection List Endpoint]: #connection-list-endpoint
 [Consents]: https://qiy.api.digital-me.nl/?version=latest#3f42e884-3ffa-4387-8896-05e7226d5a9f
+[Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [Data Reference Received-v2 Event]: #data-reference-received-v2-event
 [Data Reference Received-v2 Callback]: #data-reference-received-v2-callback
 [Data Reference Received-v2 Callback Endpoint]: #data-reference-received-v2-callback-endpoint
@@ -615,9 +616,8 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Definitions API Key]: #app-authentication
 [Definitions Application Provider]: ../Definitions.md#application-provider
 [Definitions Connect Token]: ../Definitions.md#connect-token
-[Definitions Data Provider]: ../Definitions.md#data-provider
-[Definitions Connect Token]: ../Definitions.md#connect-token
 [Definitions Connection]: ../Definitions.md#connection
+[Definitions Data Provider]: ../Definitions.md#data-provider
 [Definitions Individual]: ../Definitions.md#individual
 [Definitions Relying Party]: ../Definitions.md#relying-party
 [Definitions Resource]: ../Definitions.md#resource
@@ -639,7 +639,8 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [DigitalMe]: https://digital-me.nl/
 [Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
 [Events]: #events
-[Event Callback Endpoints]: #event-callback-endpoint
+[Event Callback Endpoint]: #event-callback-endpoints
+[Event Callback Endpoints]: #event-callback-endpoints
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
 [Feed Request Callback]: #feed-request-callback
 [Feeds Endpoint]: #feeds-endpoint
@@ -660,7 +661,6 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/service/Get_service_catalogue
 [Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
-[hlao 5.1.2 Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [List action messages]: #list-action-messages
 [List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/List_action_messages
 [List connect tokens]: #list-connect-tokens
@@ -692,6 +692,7 @@ A Data Provider receives this [Service Access Endpoint]-callback after an [Acces
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/message/Send_message
+[Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
