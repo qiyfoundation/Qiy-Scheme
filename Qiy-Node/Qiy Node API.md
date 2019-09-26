@@ -273,9 +273,11 @@ The request results in a [State Handled Event] and/or [State Handled Callback] w
 
 ### Request connection
 
-This [Connection Create Endpoint]-call can be used to initiate a connection using a [Connect Token][Definitions Connect Token], see [Request connection request].
+Controllers use this [Connection Create Endpoint]-call to initiate a connection, see [Request connection request].
 
 The state of the connection can be monitored using [List connections] or [Get connection], but a [State Handled Event] and/or [State Handled Callback] with a matching connection url will be fired when the connection has been established.
+
+The request uses a [Connect Token][Definitions Connect Token] that has been registered or requested by a client or a server, see [Request connect token] or [Register connect token].
 
 
 ## Get connection
