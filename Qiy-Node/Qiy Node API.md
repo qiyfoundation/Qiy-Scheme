@@ -36,11 +36,11 @@ In addition, a proxy server for the develoment environment is provided to ease d
 
 The server urls are:
 
-| Server Name      | Server url                                                          |
-| ---------------- | ------------------------------------------------------------------- |
-| Proxy            | https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy |
-| Dev2             | https://dev2-user.testonly.digital-me.nl/user                       |
-| Acceptance       | https://user.dolden.net/user                                        |
+| Server Name      | Server url                                                             |
+| ---------------- | ---------------------------------------------------------------------- |
+| Proxy            | https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v1 |
+| Dev2             | https://dev2-user.testonly.digital-me.nl/user/v1                       |
+| Acceptance       | https://user.dolden.net/user/v1                                        |
 
 
 The server url of the Production environment is provided in the entry-transition phase, when a [Qiy Application][Definitions Qiy Application] goes live.
