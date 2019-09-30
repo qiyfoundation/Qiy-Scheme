@@ -587,7 +587,7 @@ An organization underwriting the vision and the mission of the [Qiy Foundation](
 A [Technology Service](#technology-service) that functions as a point of entry for a [Qiy User](#qiy-user) to the [Qiy Trust Network](#qiy-trust-network).
 
 ### Qiy Node API
-The [Application Programming Interface](#application-programming-interface) of the [Qiy Node](#qiy-node) which is part of the [Qiy Standard](#qiy-standard).
+The [Application Programming Interface](#application-programming-interface) of the [Qiy Node](#qiy-node) which is part of the [Qiy Standard](#qiy-standard), see [Qiy Node API document].
 
 ### Qiy Node Client
 An [Application](#application) that uses a [Qiy Node](#qiy-node).
@@ -910,3 +910,5 @@ Self-describing [Data](#data) emanating from a source that can be reliably ident
 ### Verifiable Data
 [Data](#data) emanating from a source that can be reliably identified and contacted to verify the authenticty of the [Data](#data).
 
+
+[Qiy Node API document]: Qiy-Node/Qiy%20Node%20API.md
