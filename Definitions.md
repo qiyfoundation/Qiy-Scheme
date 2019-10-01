@@ -624,7 +624,8 @@ A [Web Service](#web-service) provided by a [Server], see [Resource Access Manag
 
 ### Resource Access Management
 The [Qiy Node API] enables a [Client] to access protected [Described Resources] of a [Server] via a [Controller] using [Feeds]. 
-This can be used for example by a [Relying Party] to access [Personal Data] of an [Individual] from a [Data Provider] under control by the [Individual] using what is then called a [Data Reference] or [Reference].
+This can be used for example by a [Relying Party] to access [Personal Data] of an [Individual] from a [Data Provider] under control by the [Individual].
+In this context, the term [Data Reference] or [Reference] may be used instead of [Feed].
 
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
@@ -854,7 +855,9 @@ A [Technology Service].
 [API]: #api
 [API Document]: #api-document
 [Controller]: #controller
+[Client]: #client
 [Described Resource]: #described-resource
+[Described Resources]: #described-resource
 [DigitalMe]: https://digital-me.nl/
 [Data Provider]: #data-provider
 [Data Reference]: #data-reference
@@ -865,6 +868,7 @@ A [Technology Service].
 [Personal Data]: #personal-data
 [Qiy Node Create Request]: #qiy-node-create-request
 [Qiy Node Client]: #qiy-node-client
+[Qiy Node API]: #qiy-node-api
 [Qiy Node API document]: Qiy-Node/Qiy%20Node%20API.md
 [Qiy Node]: #qiy-node
 [Qiy Nodes]: #qiy-node
