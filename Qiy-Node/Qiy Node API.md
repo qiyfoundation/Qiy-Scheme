@@ -102,7 +102,29 @@ The token is passed in the 'Authorization-node-QTN'-header parameter, see for ex
 
 ### Python
 
-In Python, the authorization header parameter can be calculated with the package 'pyOpenSSL'. Using a pem-file with the primary key of the Qiy Node it can be generated as follows:
+In Python, an [RSA Private Key](../Definitions.md#rsa-private-key) can be generated and saved as follows:
+
+```
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.asymmetric.rsa import generate_private_key
+from cryptography.hazmat.primitives import serialization
+
+private_key = generate_private_key(
+        backend=default_backend(),
+        public_exponent=65537,
+        key_size=2048
+        )
+
+with open(pem_filename, "wb") as f:
+    f.write(private_key.private_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PrivateFormat.TraditionalOpenSSL,
+        encryption_algorithm=serialization.NoEncryption())
+        )
+```
+
+The authorization header parameter can be calculated with the package 'pyOpenSSL'. 
+Using a pem-file with the primary key of the Qiy Node as generated with the code above it can be generated as follows:
 
 ```
 from OpenSSL.crypto import sign
