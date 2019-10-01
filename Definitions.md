@@ -40,6 +40,9 @@ Not directly or indirectly traceable to an [Individual](#individual).
 ### API
 See [Application Programming Interface](#application-programming-interface).
 
+### API Document
+A document (or set of documents) that defines or describes an [API].
+
 ### Application
 A computer program that has been designed to perform tasks, for example to help persons and/or organisations to provide or consume [Services](#service).
 
@@ -47,7 +50,7 @@ A computer program that has been designed to perform tasks, for example to help 
 A [Token](#token) that is used by [Qiy Applications](#qiy-application) to create [Connections](#connection).
 
 ### Application Layer
-One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme), see [High-Level Architectural Overview Document].
 
 ### Application Programming Interface
 A description of how an [Application](Definitions.md#application) can be accessed by another [Application](Definitions.md#application).
@@ -84,7 +87,7 @@ The [Application Programming Interface](#application-programming-interface) of a
 A software package which can be used to realize a [Carrier](#carrier).
 
 ### Carrier Layer
-One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme), see [High-Level Architectural Overview Document].
 
 ### Carrier Node
 A [Node](#node) which hosts one or more [Carriers](#carrier).
@@ -102,6 +105,9 @@ A [Qiy Node Request](#qiy-node-request) to list the [Service Catalogues](#servic
 A statement that one subject, such as a person or organization, makes about itself or another subject.
 
 Definition taken from https://en.wikipedia.org/wiki/Claims-based_identity.
+
+### Client
+A [Qiy Node Client] that accesses a [Resource] of a [Server], see [Resource Access Management].
 
 ### Connect Proposal
 A [Business Object](#business-object) for a proposal to connect via Qiy.
@@ -226,14 +232,14 @@ A [Qiy Node Request](#qiy-node-request) which can be used to communicate the wit
 ### Consents Request
 A [Qiy Node Request](#qiy-node-request) which can be used by [Qiy Users](#qiy-user) to access their [Consents](#consent).
 
+### Controller
+A [Qiy Node Client] that controls the access to a [Resource], see [Resource Access Management].
+
 ### Credential
 One or more named [Strings](#string) or [Data](#data) that can be used to gain access to a resource.
 
 ### Data
 [Information](#information) that has been encoded in a computer-processable form; a collection of binary digits.
-
-### Data by Reference
-A pattern for exchanging [Data](#data) indirectly using a [Data Reference](#data-reference), see also [Service by Reference](#service-by-reference).
 
 ### Data Description
 A description of [Data](#data) that is both human- and machine-readable as addressed in https://en.wikipedia.org/wiki/Human-readable_medium.
@@ -254,10 +260,7 @@ A [Business Role](#business-role), a specialisation of [Service Provider](#servi
 An [Identifier](#identifier) which can be used to identify a [Data Provider](#data-provider) within the [Qiy Trust Network](#qiy-trust-network).
 
 ### Data Reference
-An [Operation Reference](#operation-reference) which can be used to consume a [Data Service](#data-service) by reference, namely to obtain [Personal Data](#personal-data) of an [Individual](#individual).
-
-### Data Reference Request
-An [Operation Reference Request](#operation-reference-request) for a [Data Reference](#data-reference).
+Synonym of [Feed] in the context of a [Client] that is accessing data, see [Access Resource Management].
 
 ### Data Service
 A [Service](#service), namely the provisioning of [Data](#data).
@@ -289,6 +292,9 @@ A [Qiy Node Request](#qiy-node-request) to list the [Data Types](#data-type) tha
 ### Definitions of the Qiy Scheme
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
 
+### Described Resource
+A [Resource] with a describing [API Document].
+
 ### Electronic Communications Network
 A transmission systems, whether or not based on a permanent infrastructure or centralised administration capacity,  and, where applicable, switching or routing equipment and other resources, including network elements which are not active, which permit the conveyance of signals by wire, radio, optical or other electromagnetic means, including satellite networks, fixed (circuit- and packet-switched, including internet) and mobile networks, electricity cable systems, to the extent that they are used for the purpose of transmitting signals, networks used for radio and television broadcasting, and cable television networks, irrespective of the type of information conveyed.
 (source: Article 2: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32018L1972&from=EN).
@@ -317,6 +323,9 @@ A [Qiy Node Request](#qiy-node-request) to handle [Qiy Node Events](#qiy-node-ev
 
 ### Federation
 A formation of a unity by multiple [Entities](#entity) in which some components are shared, while each retains control of its own affairs.
+
+### Feed
+A [Feed] can be used by a [Client] to access a resource of a [Server], see [Resource Access Management].
 
 ### General Data Protection Regulation
 REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), OJEU of 04.05.2016, No. L 119: 1-88. 
@@ -419,81 +428,6 @@ A [Connect Token](#connect-token) created by a [Qiy Application](#qiy-applicatio
 ### Online Connect Token
 A [Connect Token](#connect-token) created by a [Qiy Node](#qiy-node).
 
-### Operation
-A 'sub-service' which can be used to consume a [Service](#service).
-
-### Operation Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of an [Operation](#operation).
-
-### Operation Execute Request
-A [Qiy Node Request](#qiy-node-request) that can be used to command the execution of an [Operation](#operation) by [Reference](#reference) using an [Operation Reference](#operation-reference).
-
-### Operation Reference
-A [Business Object](#business-object) used by the [Service by Reference](#service-by-reference)-pattern to execute an [Operation](#operation) by reference.
-
-### Operation Reference Message
-A [Qiy Node Message](#qiy-node-message) that can be used to convey [Operation References](#operation-reference).
-
-### Operation Reference Request
-A [Request](#request) for an [Operation Reference](#operation-reference).
-
-### Operation Reference Request Message
-A [Qiy Node Message](#qiy-node-message) that can be used to convey a [Operation Reference Request](#operation-reference-request).
-
-### Operation Register Request
-A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
-
-### Operation Specification
-A specification of a [HTTP Request](#http-request) for the execution of an [Operation](#operation).
-
-### Operation Specification Request Message
-A [Qiy Node Message](#qiy-node-message) to request for an [Operation Specification](#operation-specification).
-
-### Operation Type
-The type of an [Operation](#operation).
-
-_deprecated_
-
-### Operation Type Details Request
-A [Qiy Node Request](#qiy-node-request) to get the details of an [Operation Type](#operation-type) in the [Service Library](#service-library).
-
-_deprecated_
-
-### Operation Type Register Request
-A [Qiy Node Request](#qiy-node-request) to register a [Operation Type](#operation-type) in the [Service Library](#service-library).
-
-_deprecated_
-
-### Operation Type Unregister Request
-A [Qiy Node Request](#qiy-node-request) to unregister a [Operation Type](#operation-type) in the [Service Library](#service-library).
-
-_deprecated_
-
-### Operation Type Update Request
-A [Qiy Node Request](#qiy-node-request) to update the details of a [Operation Type](#operation-type) in the [Service Library](#service-library).
-
-_deprecated_
-
-### Operation Types Request
-A [Qiy Node Request](#qiy-node-request) to list the [Operation Types](#operation-type) that are registered in the [Service Library](#service-library).
-
-_deprecated_
-
-### Operation Unregister Request
-A [Qiy Node Request](#qiy-node-request) to register an [Operation](#operation).
-
-_deprecated_
-
-### Operation Update Request
-A [Qiy Node Request](#qiy-node-request) to update the details of an [Operation](#operation).
-
-_deprecated_
-
-### Operations Request
-A [Qiy Node Request](#qiy-node-request) to list [Operations](#operation).
-
-_deprecated_
-
 ### Path
 A [Data](#data) link between two [Transporters](#transporter) which is used to exchange [Transport Messages](#transport-message).
 
@@ -593,22 +527,22 @@ The [Application Programming Interface](#application-programming-interface) of t
 An [Application](#application) that uses a [Qiy Node](#qiy-node).
 
 ### Qiy Node Credential
-The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node).
+The [Credential](#credential) that can be used to access a [Qiy Node](#qiy-node), see [Qiy Node API][Qiy Node API Qiy Node Credential].
 
 ### Qiy Node Create Request
-A [Qiy Node Request](#qiy-node-request) that can be used to create a [Qiy Node](#qiy-node).
+A [Qiy Node Request](#qiy-node-request) that can be used to create a [Qiy Node](#qiy-node), see [Qiy Node API][Qiy Node API Request creation of Qiy Node].
 
 ### Qiy Node Delete Request
-A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node](#qiy-node).
+A [Qiy Node Request](#qiy-node-request) that can be used to delete a [Qiy Node](#qiy-node), see [Qiy Node API][Qiy Node API Delete Qiy Node].
 
 ### Qiy Node Documentation
 The [Qiy Node Documentation](#qiy-node-documentation) consists of the [Qiy Node API](#qiy-node-api) and the [Qiy Node Protocol](#qiy-node-protocol).
 
 ### Qiy Node Event
-A [Technology Event](#technology-event) of a [Qiy Node](#qiy-node).
+A [Technology Event](#technology-event) of a [Qiy Node](#qiy-node), see [Qiy Node API Events].
 
 ### Qiy Node Id
-An [Identifier](#identifier) which can be used to identify a [Qiy Node](#qiy-node) within the [Qiy Trust Network](#qiy-trust-network).
+An [Identifier](#identifier) which can be used to identify a [Qiy Node](#qiy-node) within the [Qiy Trust Network](#qiy-trust-network), see [Qiy Node Credential].
 
 ### Qiy Node Implementation
 An [Application](#application) which can be used to realize a [Qiy Node](#qiy-node).
@@ -617,10 +551,10 @@ An [Application](#application) which can be used to realize a [Qiy Node](#qiy-no
 The [Technology Interface](#technology-interface) of a [Qiy Node](#qiy-node).
 
 ### Qiy Node Layer
-One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme), see [High-Level Architectural Overview Document].
 
 ### Qiy Node Message
-A message that is exchanged between a [Sender](#sender) and a [Receiver](#receiver) over a [Connection](#connection).
+A message that is exchanged between [Qiy Nodes], see [Qiy Node API][Qiy Node API Messages].
 
 ### Qiy Node Create Request
 A [HTTP Request](#http-request) to create a [Qiy Node](#qiy-node).
@@ -662,7 +596,7 @@ See https://en.wikipedia.org/wiki/QR_code.
 A [Business Role](#business-role) for a [Qiy User](#qiy-user) that receives a [Qiy Node Message](#qiy-node-message) from a [Sender](#sender).
 
 ### Reference
-An [Identifier](#identifier).
+See [Data Reference].
 
 ### Reference Serial Number
 An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which is used in reply messages to indicate the related [Qiy Node Message](#qiy-node-message).
@@ -686,7 +620,11 @@ A [Relying Party](#relying-party) [Identifier](#identifier).
 A [Business Object](#business-object): a call or message requesting something.
 
 ### Resource
-A [Service](#service), which its owner can provide to another [Legal Entity](#legal-entity).
+A [Web Service](#web-service) provided by a [Server], see [Resource Access Management].
+
+### Resource Access Management
+The [Qiy Node API] enables a [Client] to access protected [Described Resources] of a [Server] via a [Controller] using [Feeds]. 
+This can be used for example by a [Relying Party] to access [Personal Data] of an [Individual] from a [Data Provider] under control by the [Individual] using what is then called a [Data Reference] or [Reference].
 
 ### Role
 A set of connected rights, obligations and behaviours as conceptualized in the [Qiy Scheme](#qiy-scheme).
@@ -714,9 +652,6 @@ An [Attribute](#attribute) of a [Qiy Node Message](#qiy-node-message) which iden
 
 ### Service
 An information society service; i.e., any service normally provided for remuneration, at a distance, by electronic means and at the individual request of a recipient of services.
-
-### Service by Reference
-A pattern for consuming [Services](#service) indirectly using [References](#reference) ([Operation Reference](#operation-reference)).
 
 ### Service Catalogue
 A [Business Object](#business-object) for information about all the [Services](#service) that a [Service Provider](#service-provider) can provide.
@@ -761,7 +696,7 @@ A [Technology Interface](#technology-interface) provided by a [Service Provider]
 The [Application Programming Interface](#application-programming-interface) of a [Service Endpoint](#service-endpoint).
 
 ### Service Layer
-One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme), see [High-Level Architectural Overview Document].
 
 ### Service Library
 A [Technology Service](#technology-service) that supports the [Service](#service) processes of the [Individuals](#individual) and the [Service Providers](#service-provider).
@@ -801,6 +736,9 @@ A [Qiy Node Request](#qiy-node-request) to update the details of a [Service Type
 
 ### Service Types Request
 A [Qiy Node Request](#qiy-node-request) to list [Service Types](#service-type) that are registered in the [Service Library](#service-library).
+
+### Server
+A [Qiy Node Client] that owns a [Resource], see [Resource Access Management].
 
 ### Source Candidates Request
 A [Qiy Node Request](#qiy-node-request) to obtain candidate [Service Providers](#service-provider) for a [Service](#service).
@@ -860,7 +798,7 @@ An [Identifier](#identifier) which can be used to identify a [Connection](#conne
 A [Token](#token) used to create [Paths](#path).
 
 ### Transport Layer
-One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme), see [High-Level Architectural Overview Document].
 
 ### Transport Message
 A message that is exchanged over a [Path](#path) between two [Transporters](#transporter).
@@ -899,7 +837,7 @@ A [Business Role](#business-role) for [Individuals](#individual) and [Legal Enti
 In the context of the Qiy Scheme, see: [Qiy User](#qiy-user).
 
 ### User Layer
-One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme).
+One of the [Architectural Layers](#architectural-layers) of the [Qiy Scheme](#qiy-scheme), see [High-Level Architectural Overview Document].
 
 ### Uuid
 See https://en.wikipedia.org/wiki/Universally_unique_identifier.
@@ -910,5 +848,148 @@ Self-describing [Data](#data) emanating from a source that can be reliably ident
 ### Verifiable Data
 [Data](#data) emanating from a source that can be reliably identified and contacted to verify the authenticty of the [Data](#data).
 
+### Web Service
+A [Technology Service].
 
+[API]: #api
+[API Document]: #api-document
+[Controller]: #controller
+[Described Resource]: #described-resource
+[DigitalMe]: https://digital-me.nl/
+[Data Provider]: #data-provider
+[Data Reference]: #data-reference
+[Feed]: #feed
+[Feeds]: #feeds
+[High-Level Architectural Overview Document]: ../High-Level%20Architectural%20Overview.md
+[Individual]: #individual
+[Personal Data]: #personal-data
+[Qiy Node Create Request]: #qiy-node-create-request
+[Qiy Node Client]: #qiy-node-client
 [Qiy Node API document]: Qiy-Node/Qiy%20Node%20API.md
+[Qiy Node]: #qiy-node
+[Qiy Nodes]: #qiy-node
+[Reference]: #reference
+[Relying Party]: #relying-party
+[Resource]: #resource
+[Resource Access Management]: #resource-access-management
+[Server]: #server
+[Technology Service]: #technology-service
+[Token]: #token
+[Web Service]: #web-service
+
+
+[High-Level Architectural Overview Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.mdQiy-Node/Qiy%20Node%20API.md#512-creating-qiy-nodes-for-individuals
+[High-Level Architectural Overview Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
+
+[Qiy Node API Access feed]: Qiy-Node/Qiy%20Node%20API.md#access-feed
+[Qiy Node API Access feed request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Access_feed
+[Qiy Node API Access Feed Callback]: Qiy-Node/Qiy%20Node%20API.md#access-feed-callback
+[Qiy Node API Access Feed Callbacks]: Qiy-Node/Qiy%20Node%20API.md#access-feed-callback
+[Qiy Node API Access feeds]: Qiy-Node/Qiy%20Node%20API.md#access-feeds
+[Qiy Node API Access feeds request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Access_feeds
+[Qiy Node API Add feed source]: Qiy-Node/Qiy%20Node%20API.md#add-feed-source
+[Qiy Node API Add feed source request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Add_feed_source
+[Qiy Node API Action Endpoint]: Qiy-Node/Qiy%20Node%20API.md#action-endpoint
+[Qiy Node API Action Message Endpoint]: Qiy-Node/Qiy%20Node%20API.md#action-message-endpoint
+[Qiy Node API Action Message List Endpoint]: Qiy-Node/Qiy%20Node%20API.md#action-message-list-endpoint
+[Qiy Node API Annex A Dynamic Endpoint Addresses]: Qiy-Node/Qiy%20Node%20API.md#annex-a-dynamic-endpoint-addresses
+[Qiy Node API Annex B Events]: Qiy-Node/Qiy%20Node%20API.md#annex-b-events
+[Qiy Node API Annex C Callbacks]: Qiy-Node/Qiy%20Node%20API.md#annex-c-callbacks
+[Qiy Node API Client]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/client
+[Qiy Node API Connect Token Create Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint
+[Qiy Node API Connect Token Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connect-token-endpoint
+[Qiy Node API Connect Token List Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint
+[Qiy Node API Connection Create Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint
+[Qiy Node API Connection Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-endpoint
+[Qiy Node API Connection Feeds Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-feeds-endpoint
+[Qiy Node API Connection List Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-list-endpoint
+[Qiy Node API Controller]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/controller
+[Qiy Node API controller]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/controller
+[Qiy Node API Data Reference Received-v2 Event]: Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event
+[Qiy Node API Data Reference Received-v2 Callback]: Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-callback
+[Qiy Node API Data Reference Received-v2 Callback Endpoint]: Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-callback-endpoint
+[Qiy Node API Delete Qiy Node]: Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node
+[Qiy Node API Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Delete_Qiy_Node
+[Qiy Node API Document]: Qiy-Node/Qiy%20Node%20API.md
+[Qiy Node API Dynamic Endpoint Addresses]: Qiy-Node/Qiy%20Node%20API.md#dynamic-endpoint-addresses
+[Qiy Node API Events]: Qiy-Node/Qiy%20Node%20API.md#events
+[Qiy Node API Event Callback Endpoint]: Qiy-Node/Qiy%20Node%20API.md#event-callback-endpoints
+[Qiy Node API Event Callback Endpoints]: Qiy-Node/Qiy%20Node%20API.md#event-callback-endpoints
+[Qiy Node API Event Callbacks Endpoint]: Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint
+[Qiy Node API Feed]: Qiy-Node/Qiy%20Node%20API.md#feed
+[Qiy Node API Feed Request Callback]: Qiy-Node/Qiy%20Node%20API.md#feed-request-callback
+[Qiy Node API Feed Request Callbacks]: Qiy-Node/Qiy%20Node%20API.md#feed-request-callback
+[Qiy Node API Feeds Endpoint]: Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint
+[Qiy Node API Get /api]: https://fdriesenaar.github.io/openapi.html
+[Qiy Node API Get action message]: Qiy-Node/Qiy%20Node%20API.md#get-action-message
+[Qiy Node API Get action message request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/action_message/Get_action_message
+[Qiy Node API Get connect token]: Qiy-Node/Qiy%20Node%20API.md#get-connect-token
+[Qiy Node API Get connect token request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Get_connect_token
+[Qiy Node API Get connection]: Qiy-Node/Qiy%20Node%20API.md#get-connection
+[Qiy Node API Get connection request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Get_connection
+[Qiy Node API Get endpoint addresses]: Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses
+[Qiy Node API Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/api/api
+[Qiy Node API Get event callback endpoints]: Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints
+[Qiy Node API Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/configuration/get_event_callback_endpoints
+[Qiy Node API Get node settings]: Qiy-Node/Qiy%20Node%20API.md#get-node-settings
+[Qiy Node API Get node settings request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Get_node_settings
+[Qiy Node API Get service catalogue]: Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue
+[Qiy Node API Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/server/Get_service_catalogue
+[Qiy Node API Get user action message]: Qiy-Node/Qiy%20Node%20API.md#get-user-action-message
+[Qiy Node API Getting help]: https://qiy.api.digital-me.nl/?version=latestQiy-Node/Qiy%20Node%20API.md#9acb0133-e012-4f49-a1e9-51283b8402c9
+[Qiy Node API List action messages]: Qiy-Node/Qiy%20Node%20API.md#list-action-messages
+[Qiy Node API List action messages request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/action_message/List_action_messages
+[Qiy Node API List connect tokens]: Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens
+[Qiy Node API List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/List_connect_tokens
+[Qiy Node API List connections]: Qiy-Node/Qiy%20Node%20API.md#list-connections
+[Qiy Node API List connections request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/List_connections
+[Qiy Node API List feeds]: Qiy-Node/Qiy%20Node%20API.md#list-feeds
+[Qiy Node API List feeds request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/List_feeds
+[Qiy Node API List messages]: Qiy-Node/Qiy%20Node%20API.md#list-messages
+[Qiy Node API List messages request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/message/List_messages
+[Qiy Node API Message]: Qiy-Node/Qiy%20Node%20API.md#message
+[Qiy Node API Messages]: Qiy-Node/Qiy%20Node%20API.md#messages
+[Qiy Node API Messages Endpoint]: Qiy-Node/Qiy%20Node%20API.md#messages-endpoint
+[Qiy Node API Node Create Endpoint]: Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint
+[Qiy Node API Node Settings Endpoint]: Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint
+[Qiy Node API POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
+[Qiy Node API POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
+[Qiy Node API Qiy Node Credential]: Qiy-Node/Qiy%20Node%20API.md#qiy-node-credential
+[Qiy Node API Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
+[Qiy Node API Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
+[Qiy Node API Register connect token]: Qiy-Node/Qiy%20Node%20API.md#register-connect-token
+[Qiy Node API Register connect token request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_or_register_connect_token
+[Qiy Node API Request connect token]: Qiy-Node/Qiy%20Node%20API.md#request-connect-token
+[Qiy Node API Request connect token request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_or_register_connect_token
+[Qiy Node API Request connection]: Qiy-Node/Qiy%20Node%20API.md#request-connection
+[Qiy Node API Request connection request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_connection
+[Qiy Node API Request creation of Qiy Node]: Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node
+[Qiy Node API Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Request_creation_of_qiy-node
+[Qiy Node API Request for feed]: Qiy-Node/Qiy%20Node%20API.md#request-for-feed
+[Qiy Node API Request for feed request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Request_for_feed
+[Qiy Node API Request connection request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_connection
+[Qiy Node API Self Endpoint]: Qiy-Node/Qiy%20Node%20API.md#self-endpoint
+[Qiy Node API Send message]: Qiy-Node/Qiy%20Node%20API.md#send-message
+[Qiy Node API Send message request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/message/Send_message
+[Qiy Node API Server]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/server
+[Qiy Node API Service Access Endpoint]: Qiy-Node/Qiy%20Node%20API.md#service-access-endpoint
+[Qiy Node API Service Catalogue Endpoint]: Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint
+[Qiy Node API Service Endpoint]: Qiy-Node/Qiy%20Node%20API.md#service-endpoint
+[Qiy Node API Services]: https://qiy.api.digital-me.nl/?version=latestQiy-Node/Qiy%20Node%20API.md#ab572b83-bd18-4a8e-85be-b549a0ac6758
+[Qiy Node API Set feed source]: Qiy-Node/Qiy%20Node%20API.md#set-feed-source
+[Qiy Node API Set feed source request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Set_feed_source
+[Qiy Node API Set service catalogue]: Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue
+[Qiy Node API Set service catalogue request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/service/Set_service_catalogue
+[Qiy Node API Set event callback endpoints]: Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints
+[Qiy Node API Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/configuration/set_event_callback_endpoints
+[Qiy Node API Set node settings]: Qiy-Node/Qiy%20Node%20API.md#set-node-settings
+[Qiy Node API Set node settings request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Set_node_settings
+[Qiy Node API Start listening to events]: Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events
+[Qiy Node API Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/controller/Start_listening_to_events
+[Qiy Node API State Handled Event]: Qiy-Node/Qiy%20Node%20API.md#state-handled-event
+[Qiy Node API State Handled Callback]: Qiy-Node/Qiy%20Node%20API.md#state-handled-callback
+[Qiy Node API State Handled Callback Endpoint]: Qiy-Node/Qiy%20Node%20API.md#state-handled-callback-endpoint
+[Qiy Node API Subscriptions]: https://qiy.api.digital-me.nl/?version=latestQiy-Node/Qiy%20Node%20API.md#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
+[Qiy Node API User Action Message Event]: Qiy-Node/Qiy%20Node%20API.md#user-action-message-event
+[Qiy Node API User Action Message Events]: Qiy-Node/Qiy%20Node%20API.md#user-action-message-event
+
