@@ -2,9 +2,9 @@
 
 This document describes the Qiy Node API.
 
-The Qiy Node API enables a client to access protected described resources of a server via a controller using feeds, see [Definition of Resource Access Management]#../Definitions.md#resource-access-management). 
+The Qiy Node API enables a client to access protected described resources of a server via a controller using feeds, see [Definition of Resource Access Management](../Definitions.md#resource-access-management). 
 
-This can be used for example by a [Relying Party][Definitions Relying Party] to access [Personal Data][Definitions Personal Data] of an [Individual][Definitions Individual] from a [Data Provider][Definitions Data Provider] under control of the [Individual][Definitions Individual] using what is then often called a [Data Reference][Definitions Data Reference].
+This can be used for example by a [Relying Party][Definitions Relying Party] to access [Personal Data][Definitions Personal Data] of an [Individual][Definitions Individual] from a [Data Provider][Definitions Data Provider] under control of the [Individual][Definitions Individual].
 
 Software developers use the api for Qiy-based solutions (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
@@ -14,7 +14,8 @@ Software developers use the api for Qiy-based solutions (as provided interface) 
 A [Qiy Node][Definitions Qiy Node] can be viewed as a digital identity for [Individuals][Definitions Individual] and/or organizations ([Service Providers][Definitions Service Provider]).
 Qiy Nodes can be used in solutions that enable Individuals to provide [Relying Parties][Definitions Relying Party] access to personal data that are protected by [Data Providers][Definitions Data Provider].
 
-Individuals acquire Qiy Nodes [when they start using Qiy-based end-user applications][Creating Qiy Nodes for Individuals].
+Individuals acquire Qiy Nodes when they start using Qiy-based end-user
+applications, see [High-Level Architectural Overview 4.3 Qiy Node].
 
 Service Providers are provided with at least three Qiy Nodes by their [Access Provider][Definitions Access Provider]; one for the production environment, one for the acceptance environment and one for the development environment.
 
@@ -719,6 +720,7 @@ with open(pem_filename, "wb") as f:
 [Definitions Connect Token]: ../Definitions.md#connect-token
 [Definitions Connection]: ../Definitions.md#connection
 [Definitions Data Provider]: ../Definitions.md#data-provider
+[Definitions Personal Data]: ../Definitions.md#personal-data
 [Definitions Individual]: ../Definitions.md#individual
 [Definitions Relying Party]: ../Definitions.md#relying-party
 [Definitions Resource]: ../Definitions.md#resource
@@ -766,6 +768,7 @@ with open(pem_filename, "wb") as f:
 [Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server/Get_service_catalogue
 [Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
+[High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
 [List action messages]: #list-action-messages
 [List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/List_action_messages
 [List connect tokens]: #list-connect-tokens

@@ -251,7 +251,7 @@ Any [Qiy User](Definitions.md#qiy-user) acting in one or both of the [Roles](Def
 ## 4.3 Qiy Node
 A [Qiy User](Definitions.md#qiy-user) must have a [Qiy Node](Definitions.md#qiy-node) to use a Qiy Application, but he may have more Qiy Nodes. 
 [Individuals](Definitions.md#individual) obtain a [Qiy Node](Definitions.md#qiy-node) the first time they use a [Qiy Application](Definitions.md#qiy-application).
-[Service Providers](Definitions.md#service-provider) can acquire a Qiy Node from an [Access Provider](Definitions.md#access-provider).
+[Service Providers](Definitions.md#service-provider) are provided with a Qiy Node by an [Access Provider](Definitions.md#access-provider), see [Qiy Node API](Qiy-Node/Qiy%20Node%20API.md#qiy-node).
 Alternatively, [Qiy Users](Definitions.md#qiy-user) may instantiate a [Qiy Node](Definitions.md#qiy-node) themselves using a [Qiy Node Implementation](Definitions.md#qiy-node-implementation) and register it with an [Access Provider](Definitions.md#access-provider).
 
 ## 4.4 Persistent Id
