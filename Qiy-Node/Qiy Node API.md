@@ -788,7 +788,7 @@ See [openapi.json]#components/schemas/qiy-node-credential
 [Request connection]: #request-connection
 [Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
 [Request creation of Qiy Node]: #request-creation-of-qiy-node
-[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Request_creation_of_qiy-node
+[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Request_creation_of_qiy_node
 [Request for feed]: #request-for-feed
 [Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Request_for_feed
 [Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection

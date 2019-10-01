@@ -882,20 +882,20 @@ A [Technology Service].
 [High-Level Architectural Overview Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
 
 [Qiy Node API Access feed]: Qiy-Node/Qiy%20Node%20API.md#access-feed
-[Qiy Node API Access feed request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Access_feed
+[Qiy Node API Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
 [Qiy Node API Access Feed Callback]: Qiy-Node/Qiy%20Node%20API.md#access-feed-callback
 [Qiy Node API Access Feed Callbacks]: Qiy-Node/Qiy%20Node%20API.md#access-feed-callback
 [Qiy Node API Access feeds]: Qiy-Node/Qiy%20Node%20API.md#access-feeds
-[Qiy Node API Access feeds request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Access_feeds
+[Qiy Node API Access feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feeds
 [Qiy Node API Add feed source]: Qiy-Node/Qiy%20Node%20API.md#add-feed-source
-[Qiy Node API Add feed source request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Add_feed_source
+[Qiy Node API Add feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Add_feed_source
 [Qiy Node API Action Endpoint]: Qiy-Node/Qiy%20Node%20API.md#action-endpoint
 [Qiy Node API Action Message Endpoint]: Qiy-Node/Qiy%20Node%20API.md#action-message-endpoint
 [Qiy Node API Action Message List Endpoint]: Qiy-Node/Qiy%20Node%20API.md#action-message-list-endpoint
 [Qiy Node API Annex A Dynamic Endpoint Addresses]: Qiy-Node/Qiy%20Node%20API.md#annex-a-dynamic-endpoint-addresses
 [Qiy Node API Annex B Events]: Qiy-Node/Qiy%20Node%20API.md#annex-b-events
 [Qiy Node API Annex C Callbacks]: Qiy-Node/Qiy%20Node%20API.md#annex-c-callbacks
-[Qiy Node API Client]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/client
+[Qiy Node API Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
 [Qiy Node API Connect Token Create Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint
 [Qiy Node API Connect Token Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connect-token-endpoint
 [Qiy Node API Connect Token List Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint
@@ -903,13 +903,13 @@ A [Technology Service].
 [Qiy Node API Connection Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-endpoint
 [Qiy Node API Connection Feeds Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-feeds-endpoint
 [Qiy Node API Connection List Endpoint]: Qiy-Node/Qiy%20Node%20API.md#connection-list-endpoint
-[Qiy Node API Controller]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/controller
-[Qiy Node API controller]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/controller
+[Qiy Node API Controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
+[Qiy Node API controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
 [Qiy Node API Data Reference Received-v2 Event]: Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event
 [Qiy Node API Data Reference Received-v2 Callback]: Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-callback
 [Qiy Node API Data Reference Received-v2 Callback Endpoint]: Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-callback-endpoint
 [Qiy Node API Delete Qiy Node]: Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node
-[Qiy Node API Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Delete_Qiy_Node
+[Qiy Node API Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Delete_Qiy_Node
 [Qiy Node API Document]: Qiy-Node/Qiy%20Node%20API.md
 [Qiy Node API Dynamic Endpoint Addresses]: Qiy-Node/Qiy%20Node%20API.md#dynamic-endpoint-addresses
 [Qiy Node API Events]: Qiy-Node/Qiy%20Node%20API.md#events
@@ -922,31 +922,30 @@ A [Technology Service].
 [Qiy Node API Feeds Endpoint]: Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint
 [Qiy Node API Get /api]: https://fdriesenaar.github.io/openapi.html
 [Qiy Node API Get action message]: Qiy-Node/Qiy%20Node%20API.md#get-action-message
-[Qiy Node API Get action message request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/action_message/Get_action_message
+[Qiy Node API Get action message request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/Get_action_message
 [Qiy Node API Get connect token]: Qiy-Node/Qiy%20Node%20API.md#get-connect-token
-[Qiy Node API Get connect token request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Get_connect_token
+[Qiy Node API Get connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Get_connect_token
 [Qiy Node API Get connection]: Qiy-Node/Qiy%20Node%20API.md#get-connection
-[Qiy Node API Get connection request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Get_connection
+[Qiy Node API Get connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Get_connection
 [Qiy Node API Get endpoint addresses]: Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses
-[Qiy Node API Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/api/api
+[Qiy Node API Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.html#/api/api
 [Qiy Node API Get event callback endpoints]: Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints
-[Qiy Node API Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/configuration/get_event_callback_endpoints
+[Qiy Node API Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/configuration/get_event_callback_endpoints
 [Qiy Node API Get node settings]: Qiy-Node/Qiy%20Node%20API.md#get-node-settings
-[Qiy Node API Get node settings request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Get_node_settings
+[Qiy Node API Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Get_node_settings
 [Qiy Node API Get service catalogue]: Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue
-[Qiy Node API Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/server/Get_service_catalogue
+[Qiy Node API Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server/Get_service_catalogue
 [Qiy Node API Get user action message]: Qiy-Node/Qiy%20Node%20API.md#get-user-action-message
-[Qiy Node API Getting help]: https://qiy.api.digital-me.nl/?version=latestQiy-Node/Qiy%20Node%20API.md#9acb0133-e012-4f49-a1e9-51283b8402c9
 [Qiy Node API List action messages]: Qiy-Node/Qiy%20Node%20API.md#list-action-messages
-[Qiy Node API List action messages request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/action_message/List_action_messages
+[Qiy Node API List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/List_action_messages
 [Qiy Node API List connect tokens]: Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens
-[Qiy Node API List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/List_connect_tokens
+[Qiy Node API List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/List_connect_tokens
 [Qiy Node API List connections]: Qiy-Node/Qiy%20Node%20API.md#list-connections
-[Qiy Node API List connections request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/List_connections
+[Qiy Node API List connections request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/List_connections
 [Qiy Node API List feeds]: Qiy-Node/Qiy%20Node%20API.md#list-feeds
-[Qiy Node API List feeds request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/List_feeds
+[Qiy Node API List feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/List_feeds
 [Qiy Node API List messages]: Qiy-Node/Qiy%20Node%20API.md#list-messages
-[Qiy Node API List messages request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/message/List_messages
+[Qiy Node API List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/message/List_messages
 [Qiy Node API Message]: Qiy-Node/Qiy%20Node%20API.md#message
 [Qiy Node API Messages]: Qiy-Node/Qiy%20Node%20API.md#messages
 [Qiy Node API Messages Endpoint]: Qiy-Node/Qiy%20Node%20API.md#messages-endpoint
@@ -958,34 +957,34 @@ A [Technology Service].
 [Qiy Node API Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Node API Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [Qiy Node API Register connect token]: Qiy-Node/Qiy%20Node%20API.md#register-connect-token
-[Qiy Node API Register connect token request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_or_register_connect_token
+[Qiy Node API Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_or_register_connect_token
 [Qiy Node API Request connect token]: Qiy-Node/Qiy%20Node%20API.md#request-connect-token
-[Qiy Node API Request connect token request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_or_register_connect_token
+[Qiy Node API Request connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_or_register_connect_token
 [Qiy Node API Request connection]: Qiy-Node/Qiy%20Node%20API.md#request-connection
-[Qiy Node API Request connection request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_connection
+[Qiy Node API Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
 [Qiy Node API Request creation of Qiy Node]: Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node
-[Qiy Node API Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Request_creation_of_qiy-node
+[Qiy Node API Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Request_creation_of_qiy_node
 [Qiy Node API Request for feed]: Qiy-Node/Qiy%20Node%20API.md#request-for-feed
-[Qiy Node API Request for feed request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Request_for_feed
-[Qiy Node API Request connection request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/connection/Request_connection
+[Qiy Node API Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Request_for_feed
+[Qiy Node API Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
 [Qiy Node API Self Endpoint]: Qiy-Node/Qiy%20Node%20API.md#self-endpoint
 [Qiy Node API Send message]: Qiy-Node/Qiy%20Node%20API.md#send-message
-[Qiy Node API Send message request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/message/Send_message
-[Qiy Node API Server]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/server
+[Qiy Node API Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/message/Send_message
+[Qiy Node API Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
 [Qiy Node API Service Access Endpoint]: Qiy-Node/Qiy%20Node%20API.md#service-access-endpoint
 [Qiy Node API Service Catalogue Endpoint]: Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint
 [Qiy Node API Service Endpoint]: Qiy-Node/Qiy%20Node%20API.md#service-endpoint
 [Qiy Node API Services]: https://qiy.api.digital-me.nl/?version=latestQiy-Node/Qiy%20Node%20API.md#ab572b83-bd18-4a8e-85be-b549a0ac6758
 [Qiy Node API Set feed source]: Qiy-Node/Qiy%20Node%20API.md#set-feed-source
-[Qiy Node API Set feed source request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/feed/Set_feed_source
+[Qiy Node API Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Set_feed_source
 [Qiy Node API Set service catalogue]: Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue
-[Qiy Node API Set service catalogue request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/service/Set_service_catalogue
+[Qiy Node API Set service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/service/Set_service_catalogue
 [Qiy Node API Set event callback endpoints]: Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints
-[Qiy Node API Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/configuration/set_event_callback_endpoints
+[Qiy Node API Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/configuration/set_event_callback_endpoints
 [Qiy Node API Set node settings]: Qiy-Node/Qiy%20Node%20API.md#set-node-settings
-[Qiy Node API Set node settings request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/node/Set_node_settings
+[Qiy Node API Set node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Set_node_settings
 [Qiy Node API Start listening to events]: Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events
-[Qiy Node API Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.htmlQiy-Node/Qiy%20Node%20API.md#/controller/Start_listening_to_events
+[Qiy Node API Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/controller/Start_listening_to_events
 [Qiy Node API State Handled Event]: Qiy-Node/Qiy%20Node%20API.md#state-handled-event
 [Qiy Node API State Handled Callback]: Qiy-Node/Qiy%20Node%20API.md#state-handled-callback
 [Qiy Node API State Handled Callback Endpoint]: Qiy-Node/Qiy%20Node%20API.md#state-handled-callback-endpoint
