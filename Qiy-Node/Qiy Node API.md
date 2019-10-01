@@ -2,8 +2,11 @@
 
 This document describes the Qiy Node API.
 
-Software developers use the api for Qiy-based solutions (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
+The Qiy Node API enables a client to access protected described resources of a server via a controller using feeds, see [Definition of Resource Access Management]#../Definitions.md#resource-access-management). 
 
+This can be used for example by a [Relying Party][Definitions Relying Party] to access [Personal Data][Definitions Personal Data] of an [Individual][Definitions Individual] from a [Data Provider][Definitions Data Provider] under control of the [Individual][Definitions Individual] using what is then often called a [Data Reference][Definitions Data Reference].
+
+Software developers use the api for Qiy-based solutions (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
 
 # Qiy Node
@@ -339,6 +342,9 @@ This [Connection List Endpoint]-call can be used to list connections, see [List 
 
 # Messages
 
+This chapter describes the [Message] requests.
+Please refer to [Message] for the schema.
+
 ## Send message
 
 This [Messages Endpoint]-call can be used to send a message to a connected Qiy Node, see [Send message request].
@@ -350,6 +356,9 @@ This [Messages Endpoint]-call lists messages, see [List messages request].
 
 
 # Feeds
+
+This chapter describes the [Feed] requests.
+Please refer to [Feed] for the schema.
 
 ## Client
 
@@ -649,6 +658,26 @@ A server receives this [Service Endpoint]-callback when an controller has set hi
 
 A server receives this [Service Access Endpoint]-callback after an [Access feed].
 
+# Schemas
+
+The schemas are defined in [openapi.json].
+
+## Feed
+
+See [openapi.json]#components/schemas/qiy-node-credential
+
+## Message
+
+See [openapi.json]#components/schemas/message
+
+## Qiy Node
+
+This section describes the Qiy Node related schemas.
+
+### Qiy Node Credential
+
+See [openapi.json]#components/schemas/qiy-node-credential
+
 
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
@@ -708,9 +737,11 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Event Callback Endpoint]: #event-callback-endpoints
 [Event Callback Endpoints]: #event-callback-endpoints
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
+[Feed]: #feed
 [Feed Request Callback]: #feed-request-callback
 [Feed Request Callbacks]: #feed-request-callback
-[Feeds]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
+[Feed Requests]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
+[Feeds]: #feeds
 [Feeds Endpoint]: #feeds-endpoint
 [Get /api]: https://fdriesenaar.github.io/openapi.html
 [Get action message]: #get-action-message
@@ -739,11 +770,15 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [List feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/List_feeds
 [List messages]: #list-messages
 [List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/message/List_messages
+[Message]: #message
+[Messages]: #messages
 [Messages Endpoint]: #messages-endpoint
 [Node Create Endpoint]: #node-create-endpoint
 [Node Settings Endpoint]: #node-settings-endpoint
+[openapi.json]: #openapi.json
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
+[Qiy Node Credential]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [Register connect token]: #register-connect-token
@@ -782,3 +817,5 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
 [User Action Message Event]: #user-action-message-event
 [User Action Message Events]: #user-action-message-event
+
+
