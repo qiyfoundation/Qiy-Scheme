@@ -172,7 +172,7 @@ echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [$
 
 ## Transport Authentication
 
-Some requests require [Transport Authentication][Definitions Transport Authentication] in order to access the [Transport Layer]. Authentication can be achieved by providing the Transport Password, a uuid, in the 'password'-header parameter, see for example [POST /ConnectionCreateEndpoint].
+Some requests require [Transport Authentication][Definitions Transport Authentication] in order to access the [Transport Layer]. Authentication can be achieved by providing the [Transport Password] in the 'password'-header parameter, see for example [POST /ConnectionCreateEndpoint].
 
 
 # Dynamic Endpoint Addresses
@@ -276,7 +276,7 @@ The request results in a [State Handled Event] and/or [State Handled Callback] w
 The Connect Token is a json-object with three members which can be created as follows:
 
     * id: This is a label and can be any string.
-    * target: The format of this member is returned in the "target-template"-member of the response of [Get endpoint addresses], where '~id~' should be a uuid.
+    * target: The format of this member is returned in the "target-template"-member of the response of [Get endpoint addresses], where '~id~' should be a [uuid].
     * tmpSecret: This member is a string: an array of 16 random bytes which is base64-encoded.
 
 In Java the tmpSecret can be generated as follows:
@@ -651,15 +651,19 @@ See [openapi.json]#components/schemas/message
 
 ## Qiy Node
 
-This section describes the Qiy Node related schemas.
+This section contains the Qiy Node related schemas.
 
 ### Qiy Node Credential
 
-See [openapi.json]#components/schemas/qiy-node-credential
+A Qiy Node Credential consists of:
+* an [RSA Private Key]
+* a [Qiy Node Id], a [uuid],
+* a [Transport Password], a [uuid]
 
-### Python
+For details, please refer to [openapi.json]#components/schemas/qiy-node-credential.
 
-In Python, an [RSA Private Key](../Definitions.md#rsa-private-key) can be generated and saved as follows:
+
+In Python, an [RSA Private Key] can be generated and saved as follows:
 
 ```
 from cryptography.hazmat.backends import default_backend
@@ -781,6 +785,7 @@ with open(pem_filename, "wb") as f:
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
 [Qiy Node Credential]: #qiy-node-credential
+[Qiy Node Id]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [Register connect token]: #register-connect-token
@@ -794,6 +799,7 @@ with open(pem_filename, "wb") as f:
 [Request for feed]: #request-for-feed
 [Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Request_for_feed
 [Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
+[RSA Private Key]: ../Definitions.md#rsa-private-key
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/message/Send_message
@@ -817,7 +823,9 @@ with open(pem_filename, "wb") as f:
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
+[Transport Password]: #qiy-node-credential
 [User Action Message Event]: #user-action-message-event
 [User Action Message Events]: #user-action-message-event
+[uuid]: ../Definitions.md#uuid
 
 
