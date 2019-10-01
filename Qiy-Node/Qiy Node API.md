@@ -100,34 +100,13 @@ Two API Keys are provided by Access Providers: one for the Production environmen
 
 User Authentication ensures that a Qiy Node is only accessed by its rightfull owner.
 
-Most requests must be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential] as described below.
+Most requests must be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential] as described below.
 The token is passed in the 'Authorization-node-QTN'-header parameter, see for example [POST /FeedsEndpoint/{feedId}].
 
 ### Python
 
-In Python, an [RSA Private Key](../Definitions.md#rsa-private-key) can be generated and saved as follows:
-
-```
-from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives.asymmetric.rsa import generate_private_key
-from cryptography.hazmat.primitives import serialization
-
-private_key = generate_private_key(
-        backend=default_backend(),
-        public_exponent=65537,
-        key_size=2048
-        )
-
-with open(pem_filename, "wb") as f:
-    f.write(private_key.private_bytes(
-        encoding=serialization.Encoding.PEM,
-        format=serialization.PrivateFormat.TraditionalOpenSSL,
-        encryption_algorithm=serialization.NoEncryption())
-        )
-```
-
 The authorization header parameter can be calculated with the package 'pyOpenSSL'. 
-Using a pem-file with the primary key of the Qiy Node as generated with the code above it can be generated as follows:
+Using a pem-file with the primary key of the Qiy Node as generated with the code provided with [Qiy Node Credential] it can be generated as follows:
 
 ```
 from OpenSSL.crypto import sign
@@ -678,6 +657,29 @@ This section describes the Qiy Node related schemas.
 
 See [openapi.json]#components/schemas/qiy-node-credential
 
+### Python
+
+In Python, an [RSA Private Key](../Definitions.md#rsa-private-key) can be generated and saved as follows:
+
+```
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.asymmetric.rsa import generate_private_key
+from cryptography.hazmat.primitives import serialization
+
+private_key = generate_private_key(
+        backend=default_backend(),
+        public_exponent=65537,
+        key_size=2048
+        )
+
+with open(pem_filename, "wb") as f:
+    f.write(private_key.private_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PrivateFormat.TraditionalOpenSSL,
+        encryption_algorithm=serialization.NoEncryption())
+        )
+```
+
 
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
@@ -724,7 +726,7 @@ See [openapi.json]#components/schemas/qiy-node-credential
 [Definitions Transport Authentication]: ../Definitions.md#transport-authentication
 [Definitions Qiy Node]: ../Definitions.md#qiy-node
 [Definitions Qiy Node Client]: ../Definitions.md#qiy-node-client
-[Definitions Qiy Node Credential]: #qiy-node-credential
+[Definitions Qiy Node Credential]: ../Definitions.md#qiy-node-credential
 [Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
 [Definitions Qiy Application]: ../Definitions.md#qiy-application
 [Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
@@ -775,7 +777,7 @@ See [openapi.json]#components/schemas/qiy-node-credential
 [Messages Endpoint]: #messages-endpoint
 [Node Create Endpoint]: #node-create-endpoint
 [Node Settings Endpoint]: #node-settings-endpoint
-[openapi.json]: #openapi.json
+[openapi.json]: openapi.json
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
 [Qiy Node Credential]: #qiy-node-credential
