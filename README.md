@@ -1,5 +1,10 @@
 # What is the Qiy Scheme?
-The Qiy Scheme defines a set of principles, the [Qiy Trust Principles](Qiy%20Trust%20Principles.md#qiy-trust-principles), a framework and a network, the [Qiy Trust Network](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Definitions.md#qiy-trust-network), for individual users, companies and organisations to safely control and exchange personal data.
+
+The Qiy Scheme creates value for organisations while offering people a human-centric solution to access, manage and share personal data;
+
+It fosters enduring relationships by enabling people to trustfully access and share personal data with organisations.
+
+To this end, the Qiy Scheme consists of a set of principles, the [Qiy Trust Principles](Qiy%20Trust%20Principles.md#qiy-trust-principles), a framework and a network, the [Qiy Trust Network](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Definitions.md#qiy-trust-network).
 
 The Qiy Scheme is maintained by members of the Qiy Foundation and contributors using a formal [review](Qiy%20Scheme%20Documentation.md "See 'Qiy Scheme Documentation'") and [release](Qiy%20Scheme%20Releases.md "See 'Qiy Scheme Releases'") process governed by the rules laid down in the [Governance Model](Governance%20Model.md).
 In short, approved content is published in the [master branch](https://github.com/qiyfoundation/Qiy-Scheme/tree/master) and content for review and contributions can be found in the [review-board branch](https://github.com/qiyfoundation/Qiy-Scheme "The review-board branch is displayed by default").
@@ -19,6 +24,11 @@ Conventions used:
 * Release branch prefix: **review-board/**
 
 # Readers' Guidance
+
+## Developers
+
+Developers try out Qiy with the [OpenAPI Gui](https://fdriesenaar.github.io/openapi.html).
+
 
 ## General Public
 
