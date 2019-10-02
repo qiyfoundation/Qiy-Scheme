@@ -2,7 +2,7 @@
 
 # Abstract
 
-This document describes how an [Individual](../Definitions.md#individual) can manage his [Consents](../Qiy%20Node%20Protocol.md#consents).
+This document describes how an [Individual](../Definitions.md#individual) can manage his [Consents](../Definitions.md#consents).
 
 # Contents
 
@@ -28,7 +28,7 @@ This document describes how an [Individual](../Definitions.md#individual) can ma
 
 # Preconditions
 
-1. The [Individual](../Definitions.md#individual) has a granted [Consent](../Qiy%20Node%20Protocol.md#consent).
+1. The [Individual](../Definitions.md#individual) has a granted [Consent](../Definitions.md#consent).
 
 
 # Basic Flow: Individual withdraws Consent
@@ -37,39 +37,39 @@ This document describes how an [Individual](../Definitions.md#individual) can ma
 
 ## 1. The Individual informs the withdrawal of a Consent to the Qiy Trust Network
 
-The [Individual](../Definitions.md#individual) informs the withdrawal of a [Consent](../Qiy%20Node%20Protocol.md#consent) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) using a [Consent Withdrawn Request](../Qiy%20Node%20Protocol.md#consent-withdrawn-request).
+The [Individual](../Definitions.md#individual) informs the withdrawal of a [Consent](../Definitions.md#consent) to the [Qiy Trust Network](../Definitions.md#qiy-trust-network) using a [Consent Withdrawn Request](../Definitions.md#consent-withdrawn-request).
 
 ## 2. The Qiy Trust Network registers the withdrawal of the Consent
 
-The [Qiy Trust Network](../Definitions.md#qiy-trust-network) registers the withdrawal of the [Consent](../Qiy%20Node%20Protocol.md#consent) by updating the status of the [Consent](../Qiy%20Node%20Protocol.md#consent) in the [Consent Repository](../Qiy%20Node%20Protocol.md#consent-repository) and registering the change in the [Consent Audit Log](../Qiy%20Node%20Protocol.md#consent-audit-log).
+The [Qiy Trust Network](../Definitions.md#qiy-trust-network) registers the withdrawal of the [Consent](../Definitions.md#consent) by updating the status of the [Consent](../Definitions.md#consent) in the [Consent Repository](../Definitions.md#consent-repository) and registering the change in the [Consent Audit Log](../Definitions.md#consent-audit-log).
 
 
 # Postconditions
 
-1. The status of the [Consent](../Qiy%20Node%20Protocol.md#consent) indicates that it has been withdrawn.
-1. The change has been registered in the [Consent Audit Log](../Qiy%20Node%20Protocol.md#consent-audit-log).
+1. The status of the [Consent](../Definitions.md#consent) indicates that it has been withdrawn.
+1. The change has been registered in the [Consent Audit Log](../Definitions.md#consent-audit-log).
 
 # Extensions
 
 
 ## E1 Delete Consent
 
-An [Individual](../Definitions.md#individual) can delete a [Consent](../Qiy%20Node%20Protocol.md#consent) using a [Consent Delete Request](../Qiy%20Node%20Protocol.md#consent-delete-request).
+An [Individual](../Definitions.md#individual) can delete a [Consent](../Definitions.md#consent) using a [Consent Delete Request](../Definitions.md#consent-delete-request).
 
 
 ## E2 Get Consent Details
 
-[Access Providers](../Definitions.md#access-provider), auditors, [Relying Parties](../Qiy%20Node%20Protocol.md#relying-parties), [Data Providers](#data-provider) and [Individuals](../Definitions.md#individual) can get details of a [Consent](../Qiy%20Node%20Protocol.md#consent) using a [Consent Details Request](../Qiy%20Node%20Protocol.md#consent-details-request).
+[Access Providers](../Definitions.md#access-provider), auditors, [Relying Parties](../Definitions.md#relying-parties), [Data Providers](#data-provider) and [Individuals](../Definitions.md#individual) can get details of a [Consent](../Definitions.md#consent) using a [Consent Details Request](../Definitions.md#consent-details-request).
 
 
 ## E3 List Consents
 
-[Access Providers](../Definitions.md#access-provider), auditors, [Relying Parties](../Qiy%20Node%20Protocol.md#relying-parties), [Data Providers](#data-provider) and [Individuals](../Definitions.md#individual) can list their [Consents](../Qiy%20Node%20Protocol.md#consents) using a [Consents Request](../Qiy%20Node%20Protocol.md#consents-request).
+[Access Providers](../Definitions.md#access-provider), auditors, [Relying Parties](../Definitions.md#relying-parties), [Data Providers](#data-provider) and [Individuals](../Definitions.md#individual) can list their [Consents](../Definitions.md#consents) using a [Consents Request](../Definitions.md#consents-request).
 
 
 ## E4 Regrant Consent
 
-An [Individual](../Definitions.md#individual) can regrant a [Consent](../Qiy%20Node%20Protocol.md#consent) using a [Consent Granted Request](../Qiy%20Node%20Protocol.md#consent-granted-request).
+An [Individual](../Definitions.md#individual) can regrant a [Consent](../Definitions.md#consent) using a [Consent Granted Request](../Definitions.md#consent-granted-request).
 
 
 # Diagram Source Code

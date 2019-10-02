@@ -1111,6 +1111,27 @@ components:
           type: string
         usePersistentId:
           type: string
+    qiyNodeCredential:
+      description: See [Qiy Node Credential](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#qiy-node-credential).
+      type: object
+      properties:
+        password:
+          description: Transport Password for [Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#transport-authentication).
+          type: string
+          format: uuid
+          minItems: 1
+          maxItems: 1
+        privateKey:
+          description: RSA private key for [User Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-authentication).
+          type: string
+          minItems: 1
+          maxItems: 1
+        id:
+          description: Qiy Node id.
+          type: string
+          format: uuid
+          minItems: 1
+          maxItems: 1
     routingFailedEvent:
       description: See [Routing Failed Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#routing-failed-event)
       type: object

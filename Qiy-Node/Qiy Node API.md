@@ -2,8 +2,11 @@
 
 This document describes the Qiy Node API.
 
-Software developers use the api for Qiy-based solutions (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
+The Qiy Node API enables a client to access protected described resources of a server via a controller using feeds, see [Definition of Resource Access Management](../Definitions.md#resource-access-management). 
 
+This can be used for example by a [Relying Party][Definitions Relying Party] to access [Personal Data][Definitions Personal Data] of an [Individual][Definitions Individual] from a [Data Provider][Definitions Data Provider] under control of the [Individual][Definitions Individual].
+
+Software developers use the api for Qiy-based solutions (as provided interface) or [Qiy Node Implementations][Definitions Qiy Node Implementation] (as requirement for implementation).
 
 
 # Qiy Node
@@ -11,7 +14,8 @@ Software developers use the api for Qiy-based solutions (as provided interface) 
 A [Qiy Node][Definitions Qiy Node] can be viewed as a digital identity for [Individuals][Definitions Individual] and/or organizations ([Service Providers][Definitions Service Provider]).
 Qiy Nodes can be used in solutions that enable Individuals to provide [Relying Parties][Definitions Relying Party] access to personal data that are protected by [Data Providers][Definitions Data Provider].
 
-Individuals acquire Qiy Nodes [when they start using Qiy-based end-user applications][Creating Qiy Nodes for Individuals].
+Individuals acquire Qiy Nodes when they start using Qiy-based end-user
+applications, see [High-Level Architectural Overview 4.3 Qiy Node].
 
 Service Providers are provided with at least three Qiy Nodes by their [Access Provider][Definitions Access Provider]; one for the production environment, one for the acceptance environment and one for the development environment.
 
@@ -97,12 +101,13 @@ Two API Keys are provided by Access Providers: one for the Production environmen
 
 User Authentication ensures that a Qiy Node is only accessed by its rightfull owner.
 
-Most requests must be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential][Definitions Qiy Node Credential] as described below.
+Most requests must be user authenticated using a signed token that can only be calculated using a [Qiy Node Credential] as described below.
 The token is passed in the 'Authorization-node-QTN'-header parameter, see for example [POST /FeedsEndpoint/{feedId}].
 
 ### Python
 
-In Python, the authorization header parameter can be calculated with the package 'pyOpenSSL'. Using a pem-file with the primary key of the Qiy Node it can be generated as follows:
+The authorization header parameter can be calculated with the package 'pyOpenSSL'. 
+Using a pem-file with the primary key of the Qiy Node as generated with the code provided with [Qiy Node Credential] it can be generated as follows:
 
 ```
 from OpenSSL.crypto import sign
@@ -168,7 +173,7 @@ echo -e "Given \n  input = [${INPUT}], \n  nonce = [${NONCE}] and \n  ID    = [$
 
 ## Transport Authentication
 
-Some requests require [Transport Authentication][Definitions Transport Authentication] in order to access the [Transport Layer]. Authentication can be achieved by providing the Transport Password, a uuid, in the 'password'-header parameter, see for example [POST /ConnectionCreateEndpoint].
+Some requests require [Transport Authentication][Definitions Transport Authentication] in order to access the [Transport Layer]. Authentication can be achieved by providing the [Transport Password] in the 'password'-header parameter, see for example [POST /ConnectionCreateEndpoint].
 
 
 # Dynamic Endpoint Addresses
@@ -272,7 +277,7 @@ The request results in a [State Handled Event] and/or [State Handled Callback] w
 The Connect Token is a json-object with three members which can be created as follows:
 
     * id: This is a label and can be any string.
-    * target: The format of this member is returned in the "target-template"-member of the response of [Get endpoint addresses], where '~id~' should be a uuid.
+    * target: The format of this member is returned in the "target-template"-member of the response of [Get endpoint addresses], where '~id~' should be a [uuid].
     * tmpSecret: This member is a string: an array of 16 random bytes which is base64-encoded.
 
 In Java the tmpSecret can be generated as follows:
@@ -317,6 +322,9 @@ This [Connection List Endpoint]-call can be used to list connections, see [List 
 
 # Messages
 
+This chapter describes the [Message] requests.
+Please refer to [Message] for the schema.
+
 ## Send message
 
 This [Messages Endpoint]-call can be used to send a message to a connected Qiy Node, see [Send message request].
@@ -328,6 +336,9 @@ This [Messages Endpoint]-call lists messages, see [List messages request].
 
 
 # Feeds
+
+This chapter describes the [Feed] requests.
+Please refer to [Feed] for the schema.
 
 ## Client
 
@@ -627,6 +638,53 @@ A server receives this [Service Endpoint]-callback when an controller has set hi
 
 A server receives this [Service Access Endpoint]-callback after an [Access feed].
 
+# Schemas
+
+The schemas are defined in [openapi.json].
+
+## Feed
+
+See [openapi.json]#components/schemas/qiy-node-credential
+
+## Message
+
+See [openapi.json]#components/schemas/message
+
+## Qiy Node
+
+This section contains the Qiy Node related schemas.
+
+### Qiy Node Credential
+
+A Qiy Node Credential consists of:
+* an [RSA Private Key]
+* a [Qiy Node Id], a [uuid],
+* a [Transport Password], a [uuid]
+
+For details, please refer to [openapi.json]#components/schemas/qiy-node-credential.
+
+
+In Python, an [RSA Private Key] can be generated and saved as follows:
+
+```
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.asymmetric.rsa import generate_private_key
+from cryptography.hazmat.primitives import serialization
+
+private_key = generate_private_key(
+        backend=default_backend(),
+        public_exponent=65537,
+        key_size=2048
+        )
+
+with open(pem_filename, "wb") as f:
+    f.write(private_key.private_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PrivateFormat.TraditionalOpenSSL,
+        encryption_algorithm=serialization.NoEncryption())
+        )
+```
+
 
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
@@ -662,6 +720,7 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Definitions Connect Token]: ../Definitions.md#connect-token
 [Definitions Connection]: ../Definitions.md#connection
 [Definitions Data Provider]: ../Definitions.md#data-provider
+[Definitions Personal Data]: ../Definitions.md#personal-data
 [Definitions Individual]: ../Definitions.md#individual
 [Definitions Relying Party]: ../Definitions.md#relying-party
 [Definitions Resource]: ../Definitions.md#resource
@@ -673,7 +732,7 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Definitions Transport Authentication]: ../Definitions.md#transport-authentication
 [Definitions Qiy Node]: ../Definitions.md#qiy-node
 [Definitions Qiy Node Client]: ../Definitions.md#qiy-node-client
-[Definitions Qiy Node Credential]: #qiy-node-credential
+[Definitions Qiy Node Credential]: ../Definitions.md#qiy-node-credential
 [Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
 [Definitions Qiy Application]: ../Definitions.md#qiy-application
 [Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
@@ -686,9 +745,11 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Event Callback Endpoint]: #event-callback-endpoints
 [Event Callback Endpoints]: #event-callback-endpoints
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
+[Feed]: #feed
 [Feed Request Callback]: #feed-request-callback
 [Feed Request Callbacks]: #feed-request-callback
-[Feeds]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
+[Feed Requests]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
+[Feeds]: #feeds
 [Feeds Endpoint]: #feeds-endpoint
 [Get /api]: https://fdriesenaar.github.io/openapi.html
 [Get action message]: #get-action-message
@@ -707,6 +768,7 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server/Get_service_catalogue
 [Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
+[High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
 [List action messages]: #list-action-messages
 [List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/List_action_messages
 [List connect tokens]: #list-connect-tokens
@@ -717,11 +779,16 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [List feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/List_feeds
 [List messages]: #list-messages
 [List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/message/List_messages
+[Message]: #message
+[Messages]: #messages
 [Messages Endpoint]: #messages-endpoint
 [Node Create Endpoint]: #node-create-endpoint
 [Node Settings Endpoint]: #node-settings-endpoint
+[openapi.json]: openapi.json
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
+[Qiy Node Credential]: #qiy-node-credential
+[Qiy Node Id]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [Register connect token]: #register-connect-token
@@ -731,10 +798,11 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [Request connection]: #request-connection
 [Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
 [Request creation of Qiy Node]: #request-creation-of-qiy-node
-[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Request_creation_of_qiy-node
+[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Request_creation_of_qiy_node
 [Request for feed]: #request-for-feed
 [Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Request_for_feed
 [Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
+[RSA Private Key]: ../Definitions.md#rsa-private-key
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/message/Send_message
@@ -758,5 +826,9 @@ A server receives this [Service Access Endpoint]-callback after an [Access feed]
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
+[Transport Password]: #qiy-node-credential
 [User Action Message Event]: #user-action-message-event
 [User Action Message Events]: #user-action-message-event
+[uuid]: ../Definitions.md#uuid
+
+

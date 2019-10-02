@@ -249,9 +249,9 @@ A [Qiy User](Definitions.md#qiy-user) that provides one or more [Services](Defin
 Any [Qiy User](Definitions.md#qiy-user) acting in one or both of the [Roles](Definitions.md#role) [Relying Party](Definitions.md#relying-party) or [Data Provider](Definitions.md#data-provider) is a [Service Provider](Definitions.md#service-provider).
 
 ## 4.3 Qiy Node
-A [Qiy User](Definitions.md#qiy-user) must have a [Qiy Node](Definitions.md#qiy-node). 
-[Service Providers](Definitions.md#service-provider) can acquire one from an [Access Provider](Definitions.md#access-provider).
+A [Qiy User](Definitions.md#qiy-user) must have a [Qiy Node](Definitions.md#qiy-node) to use a Qiy Application, but he may have more Qiy Nodes. 
 [Individuals](Definitions.md#individual) obtain a [Qiy Node](Definitions.md#qiy-node) the first time they use a [Qiy Application](Definitions.md#qiy-application).
+[Service Providers](Definitions.md#service-provider) are provided with a Qiy Node by an [Access Provider](Definitions.md#access-provider), see [Qiy Node API](Qiy-Node/Qiy%20Node%20API.md#qiy-node).
 Alternatively, [Qiy Users](Definitions.md#qiy-user) may instantiate a [Qiy Node](Definitions.md#qiy-node) themselves using a [Qiy Node Implementation](Definitions.md#qiy-node-implementation) and register it with an [Access Provider](Definitions.md#access-provider).
 
 ## 4.4 Persistent Id
@@ -355,9 +355,13 @@ This chapter describes the [Application Layer](Definitions.md#application-layer)
 
 ## 5.1 Qiy Application
 A [Qiy Application](Definitions.md#qiy-application) is an [Application](Definitions.md#application) that uses the [Qiy Trust Network](Definitions.md#qiy-trust-network).
-* A [Qiy User](Definitions.md#qiy-user) can only use Qiy with a [Qiy Application](Definitions.md#qiy-application).
-* A [Qiy User](Definitions.md#qiy-user) can use one or more [Qiy Applications](Definitions.md#qiy-application).
-* Two or more [Qiy Applications](Definitions.md#qiy-application) can concurrently use one and the same [Qiy Node](Definitions.md#qiy-node).
+* Only Qiy Applications that are registered with an Access Provider can use the Qiy Trust Network, see also [Qiy Node App Authentication].
+* A [Qiy User](Definitions.md#qiy-user) can only use Qiy with a Qiy Application.
+* Two or more Qiy Applications must be able to concurrently use one and the same [Qiy Node](Definitions.md#qiy-node).
+* A Qiy User can use one or more Qiy Applications.
+* A Qiy Application must provide a Qiy User with a Qiy Node if the Qiy User does not have one yet.
+* A Qiy Application must allow a Qiy User to reuse a Qiy Node or use a new one.
+* A Qiy Application must allow a Qiy User to switch Qiy Nodes.
 
 ### 5.1.1 Qiy Application Protocol
 The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describes the interactions of the [Qiy Applications](Definitions.md#qiy-application) with eachother and the underlying layers.
@@ -374,19 +378,21 @@ The [Qiy Application Protocol](Definitions.md#qiy-application-protocol) describe
 
 ### 5.1.2 Creating Qiy Nodes for Individuals
 
-A [Qiy Application](Definitions.md#qiy-application) can create a [Qiy Node](Definitions.md#qiy-node) for a [Qiy User](Definitions.md#qiy-user), especially when he does not have one yet.
-The [Qiy Application](Definitions.md#qiy-application) can do so with the help of an [Access Provider](Definitions.md#access-provider), but first it has to generate the [Credentials](Definitions.md#credential) for the [Qiy Node](Definitions.md#qiy-node) ([Qiy Node Credentials](Definitions.md#qiy-node-credential)):
-* A key pair, consisting of public key and a private key, 
-* A [Node Id](Definitions.md#node-id)
+A [Qiy Application](Definitions.md#qiy-application) creates a [Qiy Node](Definitions.md#qiy-node) for a [Qiy User](Definitions.md#qiy-user) when he does not have one yet.
+The [Qiy Application](Definitions.md#qiy-application) can do so with the Qiy Node call [Request creation of Qiy Node], which requires a [Qiy Node Credential](Definitions.md#qiy-node-credential) created by the application as described in [UC01 Acquire Access to Qiy Trust Network].
+The credential consists of:
+* An RSA key pair,
+* A [Node Id](Definitions.md#node-id),
+* A [Transport Password](Definitions.md#node-id).
 
-The [Qiy Application](Definitions.md#qiy-application) must persists these in order to be able to keep using the [Qiy Node](Definitions.md#qiy-node).
+The credential is used for [Qiy Node User Authentication] and [Qiy Node Transport Authentication].
 
 #### 5.1.2.1 Security consideration
 Some security considerations related to the [Qiy Node Credentials](Definitions.md#qiy-node-credential) are:
 * The [Node Id](Definitions.md#node-id) must be a [Uuid](Definitions.md#uuid) in order to assure that it is unique.
 * The key pair must be unique.
-* The private key must be persisted securily in order to guarantee the security of the [Qiy User](Definitions.md#qiy-user). 
-* The [Node Id](Definitions.md#node-id) should be persisted securily in order to guarantee the security of the [Qiy User](Definitions.md#qiy-user). 
+* The private key must be persisted securily in order to guarantee the security and privacy of the [Qiy User](Definitions.md#qiy-user). 
+* The [Node Id](Definitions.md#node-id) should be persisted securily in order to guarantee the security and privacy of the [Qiy User](Definitions.md#qiy-user). 
 * The [Qiy Applications](Definitions.md#qiy-application) that can be used on consumer devices such as smart phones must provide a way to backup and recover the [Qiy Node Credentials](Definitions.md#qiy-node-credential) in order to overcome cases of loss of the device.
 * A [Qiy User](Definitions.md#qiy-user) must be able to control the devices that can access his [Qiy Node](Definitions.md#qiy-node), for example in order to be able to block access of a (possibly) stolen device.
 
@@ -544,7 +550,7 @@ The [Qiy Scheme](Definitions.md#qiy-scheme) puts no limit on the number of [Qiy 
 A [Qiy Node](Definitions.md#qiy-node) can be created in two ways:
 * It can be instantiated by an [Access Provider](Definitions.md#access-provider). The [Access Provider](Definitions.md#access-provider) will instantiate it with its own [Transporter](Definitions.md#transporter). 
 * It can be instantiated by a [Qiy User](Definitions.md#qiy-user) on a [Node](Definitions.md#node) of his own using a [Qiy Node Implementation](Definitions.md#qiy-node-implementation). 
-When the second option is chosen, the [Qiy User](Definitions.md#qiy-user) is responsible for obtaining a [Transporter](Definitions.md#transporter) and linking it to the [Qiy Node](Definitions.md#qiy-node).
+When the second option is chosen, the [Qiy User](Definitions.md#qiy-user) is responsible for obtaining a [Transporter](Definitions.md#transporter) from an Access Provider and linking it to the [Qiy Node](Definitions.md#qiy-node).
 
 ### 6.2.5 Deleting a Qiy Node
 In principle, a [Qiy Node](Definitions.md#qiy-node) can be deleted by its owner whenever he wants to do so.
@@ -930,8 +936,8 @@ the Service Endpoint
 of the Data Provider.
 ```
 
-
-
-
-
-
+[UC01 Acquire Access to Qiy Trust Network]: use-cases/[UC01%20Acquire%20Access%20to%20Qiy%20Trust%20Network]
+[Request creation of Qiy Node]: Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node
+[Qiy Node App Authentication]: Qiy-Node/Qiy%20Node%20API.md#app-authentication
+[Qiy Node Transport Authentication]: Qiy-Node/Qiy%20Node%20API.md#transport-authentication
+[Qiy Node User Authentication]: Qiy-Node/Qiy%20Node%20API.md#user-authentication
