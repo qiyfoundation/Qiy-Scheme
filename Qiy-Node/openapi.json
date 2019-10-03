@@ -1856,7 +1856,7 @@
             "transportAuthentication": {
                 "description": "Also requires user authentication, see [Qiy Node Transport Authentication](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#transport-authentication)",
                 "type": "apiKey",
-                "name": "Authorization-node-QTN",
+                "name": "password",
                 "in": "header"
             },
             "userActionMessageEvent": {
