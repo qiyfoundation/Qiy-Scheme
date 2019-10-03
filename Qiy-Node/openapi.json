@@ -696,6 +696,12 @@
                 "security": [
                     {
                         "appAuthentication": []
+                    },
+                    {
+                        "transportAuthentication": []
+                    },
+                    {
+                        "userAuthentication": []
                     }
                 ]
             }
@@ -2872,4 +2878,5 @@
         }
     ]
 }
+
 

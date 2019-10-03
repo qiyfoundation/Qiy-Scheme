@@ -440,6 +440,8 @@ paths:
           "$ref": "#/components/responses/default"
       security:
       - appAuthentication: []
+      - transportAuthentication: []
+      - userAuthentication: []
   "/ServiceCatalogueEndpoint":
     get:
       tags:
