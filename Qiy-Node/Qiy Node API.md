@@ -96,6 +96,8 @@ The version of the api that is supported must be returned by [Get /api].
 [Qiy Applications][Definitions Qiy Application] are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication, see for example [GET /api].
 
 Two API Keys are provided by Access Providers: one for the Production environment and one for the other environments.
+In production, the API Key must be updated periodically using rolling updates or immediately if it has or may have been compromised.
+This should also be the case for the other environments.
 
 ## User Authentication
 
