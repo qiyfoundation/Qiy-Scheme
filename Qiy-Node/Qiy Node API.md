@@ -40,14 +40,13 @@ In addition, a proxy server for the develoment environment is provided to ease d
 
 The server urls are:
 
-| Server Name      | Server url                                                             |
-| ---------------- | ---------------------------------------------------------------------- |
-| Proxy            | https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v1 |
-| Dev2             | https://dev2-user.testonly.digital-me.nl/user/v1                       |
-| Acceptance       | https://user.dolden.net/user/v1                                        |
+| Server Name      | Server url                                                                          |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| Proxy            | [https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v1][Proxy Url] |
+| Dev2             | [https://dev2-user.testonly.digital-me.nl/user/v1][Dev2 Url]                        |
+| Acceptance       | [https://user.dolden.net/user/v1][Acceptance Url]                                   |
+| Production       | [https://user.digital-me.nl/user/v1][Production Url]                                |
 
-
-The server url of the Production environment is provided in the entry-transition phase, when a [Qiy Application][Definitions Qiy Application] goes live.
 
 ## Proxy server
 
@@ -685,7 +684,7 @@ with open(pem_filename, "wb") as f:
         )
 ```
 
-
+[Acceptance Url]: #api-servers
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
 [Access Feed Callback]: #access-feed-callback
@@ -739,6 +738,7 @@ with open(pem_filename, "wb") as f:
 [Definitions Qiy Trust Network]: ../Definitions.md#qiy-trust-network
 [Delete Qiy Node]: #delete-qiy-node
 [Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Delete_Qiy_Node
+[Dev2 Url]: #api-servers
 [DigitalMe]: https://digital-me.nl/
 [Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
 [Events]: #events
@@ -787,6 +787,8 @@ with open(pem_filename, "wb") as f:
 [openapi.json]: openapi.json
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
+[Production Url]: #api-servers
+[Proxy Url]: #api-servers
 [Qiy Node Credential]: #qiy-node-credential
 [Qiy Node Id]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
