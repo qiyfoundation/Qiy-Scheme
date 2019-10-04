@@ -790,7 +790,7 @@ with open(pem_filename, "wb") as f:
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
 [Production Url]: https://user.digital-me.nl/user/v0/api
-[Proxy Url]: https://dev2-user.testonly.digital-me.nl/user/v0/api
+[Proxy Url]: https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v0/api
 [Qiy Node Credential]: #qiy-node-credential
 [Qiy Node Id]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
