@@ -33,7 +33,7 @@ it can be used by a [controller] (eg Individual) to provide a [client] (eg Relyi
 * The server uses the feed to access the service, see [Access feed].
 
 
-# API Servers
+# Servers
 
 The api is provided in a development environment, the acceptance environment and the production environment.
 In addition, a proxy server for the develoment environment is provided to ease discovery, experimentation, and evaluation.
@@ -85,14 +85,14 @@ In addition, the following rules apply for [Qiy Node Implementations][Definition
 * One development version may be supported in a development environment.
 * The development version may change at any time.
 
-The version of the api that is supported must be returned by [Get /api].
+The major version of the api must be included in the server url and the full version (MAJOR.MINOR.PATCH) that is supported must be returned by [Get /api].
 
 
 # Authentication
 
 ## App Authentication
 
-[Qiy Applications][Definitions Qiy Application] are required to authenticate requests using an [API Key][Definitions API Key] implemented using basic authentication, see for example [GET /api].
+[Qiy Applications][Definitions Qiy Application] are required to authenticate requests but [GET /api] using an [API Key][Definitions API Key] implemented using basic authentication.
 
 Two API Keys are provided by Access Providers: one for the Production environment and one for the other environments.
 In production, the API Key must be updated periodically using rolling updates or immediately if it has or may have been compromised.
@@ -179,7 +179,7 @@ Some requests require [Transport Authentication][Definitions Transport Authentic
 
 # Dynamic Endpoint Addresses
 
-The Qiy Node Api uses [dynamic endpoint addresses][Annex A Dynamic Endpoint Addresses] most of which can be obtained using [GET /api]. The addresses can be cached, but should be refreshed every day.
+The Qiy Node Api uses [dynamic endpoint addresses][Annex A Dynamic Endpoint Addresses] most of which can be obtained using [Get endpoint addresses]. The addresses can be cached, but should be refreshed every day.
 
 
 # Events
@@ -196,7 +196,7 @@ The events can also be catched using callbacks. Also, the Qiy Node API provides 
 
 ## Api info
 
-An App Authenticated [GET /api] can be used to get the api version and the current address of the [Node Create Endpoint].
+An unauthorized [GET /api] can be used to get the api version and the current address of the [Node Create Endpoint].
 
 
 # Nodes
@@ -208,7 +208,7 @@ This [Node Create Endpoint]-call can be used to request the [creation of a Qiy N
 
 ## Get endpoint addresses
 
-[GET /api] can be used to get the current addresses of the [Dynamic Endpoint Addresses].
+An app authenticated and user authenticated [GET /api] can be used to get the current [Endpoint Addresses][Dynamic Endpoint Addresses].
 
 
 ## Set event callback endpoints
@@ -686,7 +686,7 @@ with open(pem_filename, "wb") as f:
         )
 ```
 
-[Acceptance Url]: #api-servers
+[Acceptance Url]: https://user.dolden.net/user/v0/api
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
 [Access Feed Callback]: #access-feed-callback
@@ -740,7 +740,7 @@ with open(pem_filename, "wb") as f:
 [Definitions Qiy Trust Network]: ../Definitions.md#qiy-trust-network
 [Delete Qiy Node]: #delete-qiy-node
 [Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Delete_Qiy_Node
-[Dev2 Url]: #api-servers
+[Dev2 Url]: https://dev2-user.testonly.digital-me.nl/user/v0/api
 [DigitalMe]: https://digital-me.nl/
 [Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
 [Events]: #events
@@ -789,8 +789,8 @@ with open(pem_filename, "wb") as f:
 [openapi.json]: openapi.json
 [POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
-[Production Url]: #api-servers
-[Proxy Url]: #api-servers
+[Production Url]: https://user.digital-me.nl/user/v0/api
+[Proxy Url]: https://dev2-user.testonly.digital-me.nl/user/v0/api
 [Qiy Node Credential]: #qiy-node-credential
 [Qiy Node Id]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
