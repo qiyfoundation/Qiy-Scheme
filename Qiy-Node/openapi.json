@@ -444,6 +444,11 @@
                 ],
                 "description": "See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-feeds)",
                 "operationId": "List feeds",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/protocol"
+                    }
+                ],
                 "x-url": "$FeedsEndpointUrl",
                 "responses": {
                     "200": {
@@ -1617,6 +1622,12 @@
                     }
                 }
             },
+            "protocol": {
+                "description": "Service type url",
+                "type": "string",
+                "format": "url",
+                "example": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1"
+            },
             "qiyNodeCredential": {
                 "description": "See [Qiy Node Credential](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#qiy-node-credential).",
                 "type": "object",
@@ -2214,6 +2225,16 @@
                 "required": true,
                 "schema": {
                     "$ref": "#/components/schemas/feedId"
+                }
+            },
+            "protocol": {
+                "name": "protocol",
+                "in": "query",
+                "required": false,
+                "style": "form",
+                "explode": true,
+                "schema": {
+                    "$ref": "#/components/schemas/protocol"
                 }
             }
         },
@@ -2882,5 +2903,3 @@
         }
     ]
 }
-
-
