@@ -30,7 +30,9 @@ it can be used by a [controller] (eg Individual) to provide a [client] (eg Relyi
 * The controller connects with the client, see [Request connection].
 * The client requests the controller for a feed, see [Request for feed].
 * The controller accepts the feed and sets the server as the source, see [Set feed source].
+* The server receives a feed request callback and creates a feed, see [Feed Request Callback].
 * The server uses the feed to access the service, see [Access feed].
+* The server receives a feed access callback and returns a response, see [Access Feed Callback].
 
 
 # Servers
@@ -499,7 +501,7 @@ The endpoint address is returned in the 'self'-property of [Get endpoint address
 
 ## Service Endpoint
 
-This endpoint is provided by a server to serve feeds, see [Feed request callback].
+This endpoint is provided by a server to serve feeds, see [Feed Request Callback].
 It can be read and set with [Set service catalogue] and [Get service catalogue] respectively.
 
 Note: This endpoint have to be whitelisted by the Access Provider before it can be used.
@@ -635,9 +637,110 @@ This [State Handled Callback Endpoint]-callback is executed when a Connect Token
 
 A server receives this [Service Endpoint]-callback when an controller has set him as the source of a feed, see [Set feed source] or [Add feed source].
 
+#### Feed Request Callback Example
+
+This python code-snippet can be used to simulate a Feed Request Callback:
+
+```
+import requests
+url = 'https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dp1serviceEndpointUrl'
+payload = "{\r\n  \"connection\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/96cd5389-6def-4f6f-b3a9-b613a66ec522/ad4ac9cb-62e1-43ad-8495-9ac426b229c2\",\r\n  \"pid\": \"G5grIomOi7aBEV9nYE5Vlg==\",\r\n  \"message\": {\r\n    \"serialNr\": 6,\r\n    \"text\": \"Requesting 'test data'\",\r\n    \"protocol\": \"https://github.com/qiyfoundation/fiKks/tree/master/schema/v1\",\r\n    \"inbound\": true,\r\n    \"sent\": false,\r\n    \"thirdPartyRef\": \"4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI=\"\r\n  },\r\n  \"mbox\": \"https://dev1-user.testonly.digital-me.nl/user/mbox/user/96cd5389-6def-4f6f-b3a9-b613a66ec522/ad4ac9cb-62e1-43ad-8495-9ac426b229c2\"\r\n}"
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+response = requests.request('POST', url, headers = headers, data = payload, allow_redirects=False, timeout=undefined, allow_redirects=false)
+print(response.text)
+```
+
+The call could return the following body:
+
+```
+{
+  "id": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
+}
+```
+
 ### Access Feed Callback
 
 A server receives this [Service Access Endpoint]-callback after an [Access feed].
+
+#### Access Feed Callback Example
+
+This python code-snippet can be used to simulate an Access Feed Callback:
+```
+import requests
+url = 'https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dp1serviceEndpointUrl/resolve'
+payload = "{\n\t\"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==\": {\n\t\t\"input\": \"Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==\"\n\t}\n}"
+headers = {
+  'Content-Type': 'application/json'
+}
+response = requests.request('POST', url, headers = headers, data = payload, allow_redirects=False, timeout=undefined, allow_redirects=false)
+print(response.text)
+```
+
+The call could return the following body:
+
+```
+{
+    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+        "output": {
+            "activities-heart": [
+                {
+                    "customHeartRateZones": [],
+                    "dateTime": "today",
+                    "heartRateZones": [
+                        {
+                            "caloriesOut": 138.8351,
+                            "max": 86,
+                            "min": 30,
+                            "minutes": 65,
+                            "name": "Out of Range"
+                        },
+                        {
+                            "caloriesOut": 8.1326,
+                            "max": 220,
+                            "min": 146,
+                            "minutes": 7,
+                            "name": "Peak"
+                        }
+                    ],
+                    "value": "102.28"
+                }
+            ],
+            "activities-heart-intraday": {
+                "dataset": [
+                    {
+                        "time": "12:00:00",
+                        "value": 111
+                    },
+                    {
+                        "time": "12:01:00",
+                        "value": 97
+                    },
+                    {
+                        "time": "12:02:00",
+                        "value": 112
+                    },
+                    {
+                        "time": "13:59:00",
+                        "value": 83
+                    }
+                ],
+                "datasetInterval": 1,
+                "datasetType": "minute"
+            }
+        },
+        "metadata": {
+            "content-type": "application/json"
+        },
+        "error": null
+    }
+}
+
+```
+
+
 
 # Schemas
 
