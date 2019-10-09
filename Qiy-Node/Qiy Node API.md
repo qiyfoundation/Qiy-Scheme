@@ -31,7 +31,7 @@ it can be used by a [controller] (eg Individual) to provide a [client] (eg Relyi
 * The client requests the controller for a feed, see [Request for feed].
 * The controller accepts the feed and sets the server as the source, see [Set feed source].
 * The server receives a feed request callback and creates a feed, see [Feed Request Callback].
-* The server uses the feed to access the service, see [Access feed].
+* The client uses the feed to access the service, see [Access feed].
 * The server receives a feed access callback and returns a response, see [Access Feed Callback].
 
 
