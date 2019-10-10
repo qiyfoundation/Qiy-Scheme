@@ -665,6 +665,21 @@ The call could return the following body:
 
 A server receives this [Service Access Endpoint]-callback after an [Access feed].
 
+The body of the callback request may also contain access requests for more then one feed. 
+Also, an optional input parameter may be passed with the feed access request in the 'input'-member encoded as a base65-encoded byte array.
+
+```
+{
+	"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+		"input": "Im9wdGlvbmFsIGZlZWQgYWNjZXNzIHJlcXVlc3QgYm9keSBlbmNvZGVkIGFzIGEgYmFzZTY0IGVuY29kZWQgYnl0ZSBhcnJheSI="
+	},
+	"TkF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBQR==": {
+		"input": "IkFub3RoZXIgb3B0aW9uYWwgZmVlZCBhY2Nlc3MgcmVxdWVzdCBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+	}
+}
+```
+
+
 #### Access Feed Callback Example
 
 This python code-snippet can be used to simulate an Access Feed Callback:
