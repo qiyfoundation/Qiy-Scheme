@@ -293,7 +293,7 @@ A [Qiy Node Request](#qiy-node-request) to list the [Data Types](#data-type) tha
 One of the documents of the [Qiy Scheme Rulebook](#qiy-scheme-rulebook), this document.
 
 ### Described Resource
-A [Resource] with a describing [API Document].
+A [Resource] with a describing [API Document] that also includes a description of the [Service] for which it is used, see [Resource Access Management].
 
 ### Electronic Communications Network
 A transmission systems, whether or not based on a permanent infrastructure or centralised administration capacity,  and, where applicable, switching or routing equipment and other resources, including network elements which are not active, which permit the conveyance of signals by wire, radio, optical or other electromagnetic means, including satellite networks, fixed (circuit- and packet-switched, including internet) and mobile networks, electricity cable systems, to the extent that they are used for the purpose of transmitting signals, networks used for radio and television broadcasting, and cable television networks, irrespective of the type of information conveyed.
@@ -620,7 +620,7 @@ A [Relying Party](#relying-party) [Identifier](#identifier).
 A [Business Object](#business-object): a call or message requesting something.
 
 ### Resource
-A [Web Service](#web-service) provided by a [Server], see [Resource Access Management].
+A [Web Service](#web-service) provided by a [Server] in order to provide one or more [Services], see [Resource Access Management].
 
 ### Resource Access Management
 The [Qiy Node API] enables a [Client] to access protected [Described Resources] of a [Server] via a [Controller] using [Feeds]. 
@@ -850,7 +850,7 @@ Self-describing [Data](#data) emanating from a source that can be reliably ident
 [Data](#data) emanating from a source that can be reliably identified and contacted to verify the authenticty of the [Data](#data).
 
 ### Web Service
-A [Technology Service].
+A [Technology Service], see also [API], [Resource], [Service].
 
 [API]: #api
 [API Document]: #api-document
@@ -877,6 +877,8 @@ A [Technology Service].
 [Resource]: #resource
 [Resource Access Management]: #resource-access-management
 [Server]: #server
+[Service]: #service
+[Services]: #service
 [Technology Service]: #technology-service
 [Token]: #token
 [Web Service]: #web-service

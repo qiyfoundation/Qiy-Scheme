@@ -23,8 +23,8 @@ Service Providers are provided with at least three Qiy Nodes by their [Access Pr
 # Resource Access Management
 
 The Qiy Node API main feature is Resource Access Management;
-it can be used by a [controller] (eg Individual) to provide a [client] (eg Relying Party) access to a [Service] from a [Service Endpoint] protected by the [Server] (eg Data Provider) using [Feeds], for example as follows:
-* The server announces the available Service, see [Set service catalogue].
+it can be used by a [controller] (eg Individual) to provide a [client] (eg Relying Party) access to a [Described Resource][Definitions Described Resource] (to provide a [Service][Definitions Service]) from a [Service Endpoint] protected by the [Server] (eg Data Provider) using [Feeds], for example using the following scenario:
+* The server announces the available [Service][Definitions Service], see [Set service catalogue].
 * The controller connects with the server, see [Request connection].
 * The server identifies the controller (out of bounds).
 * The controller connects with the client, see [Request connection].
@@ -839,12 +839,14 @@ with open(pem_filename, "wb") as f:
 [Definitions Connect Token]: ../Definitions.md#connect-token
 [Definitions Connection]: ../Definitions.md#connection
 [Definitions Data Provider]: ../Definitions.md#data-provider
+[Definitions Described Resource]: ../Definitions.md#described-resource
 [Definitions Personal Data]: ../Definitions.md#personal-data
 [Definitions Individual]: ../Definitions.md#individual
 [Definitions Relying Party]: ../Definitions.md#relying-party
 [Definitions Resource]: ../Definitions.md#resource
-[Definitions Service Catalogue]: ../Definitions.md#service-catalogue
+[Definitions Service]: ../Definitions.md#service
 [Definitions Service Access Endpoint]: ../Definitions.md#service-access-endpoint
+[Definitions Service Catalogue]: ../Definitions.md#service-catalogue
 [Definitions Service Endpoint]: ../Definitions.md#service-endpoint
 [Definitions Service Provider]: ../Definitions.md#service-provider
 [Definitions Service Type]: ../Definitions.md#service-type
