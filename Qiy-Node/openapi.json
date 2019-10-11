@@ -1350,6 +1350,9 @@
                     }
                 }
             },
+            "dataReferenceReceivedv2CallbackResponse": {
+                "$ref": "#/components/schemas/dataReferenceReceivedv2Event"
+            },
             "dataReferenceReceivedv2Event": {
                 "description": "See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)",
                 "type": "object",
@@ -1370,22 +1373,30 @@
                         "maxItems": 1
                     },
                     "extraData": {
-                        "type": "object",
-                        "properties": {
-                            "protocol": {
-                                "description": "Service type url",
-                                "type": "string",
-                                "format": "url",
-                                "minItems": 1,
-                                "maxItems": 1
+                        "anyOf": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "protocol": {
+                                        "description": "Service type url",
+                                        "type": "string",
+                                        "format": "url",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    },
+                                    "value": {
+                                        "description": "Feed id",
+                                        "type": "string",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    }
+                                }
                             },
-                            "value": {
-                                "description": "Feed id",
-                                "type": "string",
-                                "minItems": 1,
-                                "maxItems": 1
+                            {
+                                "description": "feed id",
+                                "type": "string"
                             }
-                        }
+                        ]
                     }
                 }
             },
@@ -2118,6 +2129,21 @@
                     }
                 }
             },
+            "dataReferenceReceivedv2Callback": {
+                "description": "Data Reference Received v2 callback response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/dataReferenceReceivedv2CallbackResponse"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/dataReferenceReceivedv2CallbackResponse"
+                            }
+                        }
+                    }
+                }
+            },
             "default": {
                 "description": "Default response",
                 "content": {
@@ -2609,6 +2635,13 @@
             "eventsResponseExample": {
                 "value": ":ping"
             },
+            "dataReferenceReceivedv2Callback": {
+                "value": { 
+                    "type":"DATA_REFERENCE_RECEIVED2", 
+                    "connectionUrl":"https://dev2-user.testonly.digital-me.nl/user/connections/user/pt_usernode_fksH_de/d3b58af4-2883-4cef-b203-41e117549906", 
+                    "extraData":"BZWEKR63P2FEJZXYLGBN3XNWCBZU6FZG" 
+                }
+            },
             "dataReferenceReceivedv2Event": {
                 "value": {
                     "type": "DATA_REFERENCE_RECEIVED2",
@@ -2905,6 +2938,14 @@
                                 }
                             },
                             "required": true
+                        },
+                        "responses": {
+                            "200": {
+                                "$ref": "#/components/responses/dataReferenceReceivedv2Callback"
+                            },
+                            "default": {
+                                "$ref": "#/components/responses/default"
+                            }
                         }
                     }
                 }
