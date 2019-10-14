@@ -686,7 +686,15 @@ This python code-snippet can be used to simulate an Access Feed Callback:
 ```
 import requests
 url = 'https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dp1serviceEndpointUrl/resolve'
-payload = "{\n\t\"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==\": {\n\t\t\"input\": \"Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==\"\n\t}\n}"
+payload = """{
+	"SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+		"input": "Im9wdGlvbmFsIGZlZWQgYWNjZXNzIHJlcXVlc3QgYm9keSBlbmNvZGVkIGFzIGEgYmFzZTY0IGVuY29kZWQgYnl0ZSBhcnJheSI="
+	},
+	"TkF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBQR==": {
+		"input": "IkFub3RoZXIgb3B0aW9uYWwgZmVlZCBhY2Nlc3MgcmVxdWVzdCBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+	}
+}
+"""
 headers = {
   'Content-Type': 'application/json'
 }
@@ -698,59 +706,20 @@ The call could return the following body:
 
 ```
 {
-    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
-        "output": {
-            "activities-heart": [
-                {
-                    "customHeartRateZones": [],
-                    "dateTime": "today",
-                    "heartRateZones": [
-                        {
-                            "caloriesOut": 138.8351,
-                            "max": 86,
-                            "min": 30,
-                            "minutes": 65,
-                            "name": "Out of Range"
+                    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+                        "output": "ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTM4LjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAzMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY1LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzA5Ljk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMjAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTc3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTI6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTExCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEyOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDk3CiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=",
+                        "metadata": {
+                            "content-type": "application/json"
                         },
-                        {
-                            "caloriesOut": 8.1326,
-                            "max": 220,
-                            "min": 146,
-                            "minutes": 7,
-                            "name": "Peak"
-                        }
-                    ],
-                    "value": "102.28"
-                }
-            ],
-            "activities-heart-intraday": {
-                "dataset": [
-                    {
-                        "time": "12:00:00",
-                        "value": 111
+                        "error": null
                     },
-                    {
-                        "time": "12:01:00",
-                        "value": 97
-                    },
-                    {
-                        "time": "12:02:00",
-                        "value": 112
-                    },
-                    {
-                        "time": "13:59:00",
-                        "value": 83
+                    "TkF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBQR==": {
+                        "output": "ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTQwLjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDcwLAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAyMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY2LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzAwLjk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMTAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg3LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTY3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTM6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTIxCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEzOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDkwCiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=",
+                        "metadata": {
+                            "content-type": "application/json"
+                        },
+                        "error": null
                     }
-                ],
-                "datasetInterval": 1,
-                "datasetType": "minute"
-            }
-        },
-        "metadata": {
-            "content-type": "application/json"
-        },
-        "error": null
-    }
 }
 
 ```

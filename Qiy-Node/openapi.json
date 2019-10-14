@@ -775,6 +775,73 @@
     },
     "components": {
         "schemas": {
+            "accessFeedCallbackResponse": {
+                "type": "object",
+                "properties": {
+                    "$feedIdRex": {
+                        "type": "object",
+                        "properties": {
+                            "metadata": {
+                                "type": "object",
+                                "properties": {
+                                    "content-type": {
+                                        "type": "string",
+                                        "format": "media type",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    }
+                                },
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "output": {
+                                "type": "string",
+                                "format": "b64-encoded byte array",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "error": {
+                                "type": "string",
+                                "nullable": true,
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                },
+                "x-patternProperties": {
+                    "$feedIdRex": {
+                        "type": "object",
+                        "properties": {
+                            "metadata": {
+                                "type": "object",
+                                "properties": {
+                                    "content-type": {
+                                        "type": "string",
+                                        "format": "media type",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    }
+                                },
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "output": {
+                                "type": "string",
+                                "format": "b64-encoded byte array",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "error": {
+                                "type": "string",
+                                "nullable": true,
+                                "minItems": 1,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
+            },
             "actionMessage": {
                 "type": "object",
                 "properties": {
@@ -1910,6 +1977,21 @@
             }
         },
         "responses": {
+            "accessFeedCallback": {
+                "description": "Access feed callback response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/accessFeedCallbackResponse"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/accessFeedCallbackResponse"
+                            }
+                        }
+                    }
+                }
+            },
             "api": {
                 "description": "Api response",
                 "content": {
@@ -2239,6 +2321,24 @@
             }
         },
         "examples": {
+            "accessFeedCallbackResponse": {
+                "value": {
+                    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+                        "output": "ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTM4LjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAzMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY1LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzA5Ljk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMjAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTc3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTI6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTExCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEyOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDk3CiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=",
+                        "metadata": {
+                            "content-type": "application/json"
+                        },
+                        "error": null
+                    },
+                    "TkF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBQR==": {
+                        "output": "ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTQwLjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDcwLAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAyMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY2LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzAwLjk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMTAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg3LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTY3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTM6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTIxCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEzOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDkwCiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=",
+                        "metadata": {
+                            "content-type": "application/json"
+                        },
+                        "error": null
+                    }
+                }
+            },
             "actionMessage": {
                 "value": {
                     "connection": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
@@ -2760,7 +2860,7 @@
         },
         "callbacks": {
             "accessFeed": {
-                "$serviceEndpointUrl": {
+                "$serviceAccessEndpointUrl": {
                     "post": {
                         "requestBody": {
                             "content": {
@@ -2776,6 +2876,14 @@
                                 }
                             },
                             "required": true
+                        },
+                        "responses": {
+                            "200": {
+                                "$ref": "#/components/responses/accessFeedCallback"
+                            },
+                            "default": {
+                                "$ref": "#/components/responses/default"
+                            }
                         }
                     }
                 }
