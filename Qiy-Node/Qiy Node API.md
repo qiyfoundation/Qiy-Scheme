@@ -626,6 +626,28 @@ It can be configured using [Set event callback endpoints].
 
 This [Data Reference Received-v2 Callback Endpoint]-callback is fired when a source is set for a feed, see [Request for feed], [Set feed source] and [Add feed source].
 
+The body of the callback carries the same load as the [Data Reference Received-v2 Event], see for example thess examples:
+
+```
+{
+    "type": "DATA_REFERENCE_RECEIVED2",
+    "connectionUrl": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid1sp1connectionUrl",
+    "extraData": {
+        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+        "value": "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ=="
+    }
+}
+```
+
+```
+{
+    "type":"DATA_REFERENCE_RECEIVED2", 
+    "connectionUrl":"https://dev2-user.testonly.digital-me.nl/user/connections/user/pt_usernode_fksH_de/d3b58af4-2883-4cef-b203-41e117549906", 
+    "extraData":"BZWEKR63P2FEJZXYLGBN3XNWCBZU6FZG" 
+}
+```
+
+
 ### State Handled Callback
 
 This [State Handled Callback Endpoint]-callback is executed when a Connect Token has been used to create a connection, see [Register connect token] or [Request connect token].
