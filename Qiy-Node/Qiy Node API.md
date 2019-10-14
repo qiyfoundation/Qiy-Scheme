@@ -797,13 +797,13 @@ with open(pem_filename, "wb") as f:
 
 [Acceptance Url]: https://user.dolden.net/user/v0/api
 [Access feed]: #access-feed
-[Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feed
+[Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feed.request
 [Access Feed Callback]: #access-feed-callback
 [Access Feed Callbacks]: #access-feed-callback
 [Access feeds]: #access-feeds
-[Access feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Access_feeds
+[Access feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feeds.access
 [Add feed source]: #add-feed-source
-[Add feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Add_feed_source
+[Add feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.add
 [Action Endpoint]: #action-endpoint
 [Action Message Endpoint]: #action-message-endpoint
 [Action Message List Endpoint]: #action-message-list-endpoint
@@ -850,7 +850,7 @@ with open(pem_filename, "wb") as f:
 [Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
 [Definitions Qiy Trust Network]: ../Definitions.md#qiy-trust-network
 [Delete Qiy Node]: #delete-qiy-node
-[Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Delete_Qiy_Node
+[Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.delete
 [Dev2 Url]: https://dev2-user.testonly.digital-me.nl/user/v0/api
 [DigitalMe]: https://digital-me.nl/
 [Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
@@ -866,32 +866,32 @@ with open(pem_filename, "wb") as f:
 [Feeds Endpoint]: #feeds-endpoint
 [Get /api]: https://fdriesenaar.github.io/openapi.html
 [Get action message]: #get-action-message
-[Get action message request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/Get_action_message
+[Get action message request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.action%20message.get
 [Get connect token]: #get-connect-token
-[Get connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Get_connect_token
+[Get connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connect%20token.get
 [Get connection]: #get-connection
-[Get connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Get_connection
+[Get connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.get
 [Get endpoint addresses]: #get-endpoint-addresses
 [Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.html#/api/api
 [Get event callback endpoints]: #get-event-callback-endpoints
-[Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/configuration/get_event_callback_endpoints
+[Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.event%20callback%20endpoints.get
 [Get node settings]: #get-node-settings
-[Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Get_node_settings
+[Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.node%20settings.get
 [Get service catalogue]: #get-service-catalogue
-[Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server/Get_service_catalogue
+[Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server.service%20catalogue.get
 [Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
 [List action messages]: #list-action-messages
-[List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/action_message/List_action_messages
+[List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.action%20messages.list
 [List connect tokens]: #list-connect-tokens
-[List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/List_connect_tokens
+[List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20tokens.list
 [List connections]: #list-connections
-[List connections request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/List_connections
+[List connections request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connections.list
 [List feeds]: #list-feeds
-[List feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/List_feeds
+[List feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feeds.list
 [List messages]: #list-messages
-[List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/message/List_messages
+[List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/client.messages.list
 [Message]: #message
 [Messages]: #messages
 [Messages Endpoint]: #messages-endpoint
@@ -907,35 +907,34 @@ with open(pem_filename, "wb") as f:
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [Register connect token]: #register-connect-token
-[Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_or_register_connect_token
+[Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.register
 [Request connect token]: #request-connect-token
-[Request connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_or_register_connect_token
+[Request connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.request
 [Request connection]: #request-connection
-[Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
+[Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.request
 [Request creation of Qiy Node]: #request-creation-of-qiy-node
-[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Request_creation_of_qiy_node
+[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
 [Request for feed]: #request-for-feed
-[Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Request_for_feed
-[Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/connection/Request_connection
+[Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feed.request
 [RSA Private Key]: ../Definitions.md#rsa-private-key
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
-[Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/message/Send_message
+[Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/client.message.send
 [Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
 [Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
 [Set feed source]: #set-feed-source
-[Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/feed/Set_feed_source
+[Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.set
 [Set service catalogue]: #set-service-catalogue
-[Set service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/service/Set_service_catalogue
+[Set service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server.service%20catalogue.set
 [Set event callback endpoints]: #set-event-callback-endpoints
-[Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/configuration/set_event_callback_endpoints
+[Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.event%20callback%20endpoints.set
 [Set node settings]: #set-node-settings
-[Set node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/node/Set_node_settings
+[Set node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.node%20settings.set
 [Start listening to events]: #start-listening-to-events
-[Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/controller/Start_listening_to_events
+[Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.events
 [State Handled Event]: #state-handled-event
 [State Handled Callback]: #state-handled-callback
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint
