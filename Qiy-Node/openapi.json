@@ -821,7 +821,7 @@
                             "error": {
                                 "type": "string",
                                 "nullable": true,
-                                "minItems": 1,
+                                "minItems": 0,
                                 "maxItems": 1
                             }
                         }
@@ -853,7 +853,7 @@
                             "error": {
                                 "type": "string",
                                 "nullable": true,
-                                "minItems": 1,
+                                "minItems": 0,
                                 "maxItems": 1
                             }
                         }
