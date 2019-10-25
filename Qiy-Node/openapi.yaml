@@ -1164,6 +1164,11 @@ components:
               maxItems: 1
               minItems: 1
               type: string
+            error:
+              maxItems: 1
+              minItems: 0
+              nullable: true
+              type: string
             output:
               format: base64-encoded byte array
               maxItems: 1
@@ -1177,6 +1182,11 @@ components:
             content-type:
               maxItems: 1
               minItems: 1
+              type: string
+            error:
+              maxItems: 1
+              minItems: 0
+              nullable: true
               type: string
             output:
               format: base64-encoded byte array
