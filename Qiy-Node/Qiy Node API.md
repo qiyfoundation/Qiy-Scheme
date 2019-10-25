@@ -30,7 +30,7 @@ it can be used by a [controller] (eg Individual) to provide a [client] (eg Relyi
 * The controller connects with the client, see [Request connection].
 * The client requests the controller for a feed, see [Request for feed].
 * The controller accepts the feed and sets the server as the source, see [Set feed source].
-* The server receives a feed request callback and creates a feed, see [Feed Request Callback].
+* The server receives a feed request callback and creates a feed, see [Server Feed Request].
 * The client uses the feed to access the service, see [Access feed].
 * The server receives a feed access callback and returns a response, see [Access Feed Callback].
 
@@ -258,7 +258,7 @@ This [Service Catalogue Endpoint]-call can be used to get the details of the [Se
 
 A server uses this [Service Catalogue Endpoint]-call to publish the provided services using his [Service Catalogue][Definitions Service Catalogue] and related [Service Endpoint(s)][Service Endpoint], see [Set service catalogue request].
 
-Afterwards, [Feed Request Callbacks] and [Access Feed Callbacks] are received for these services.
+Afterwards, [Server Feed Request] and [Access Feed Callbacks] are received for these services.
 
 # Connections
 
@@ -372,7 +372,7 @@ This [Feeds Endpoint]-request can be used to list the feeds of a Qiy Node or of 
 
 ## Server
 
-A server receives a [Feed Request Callback] when a controller has set him as the source of a feed, see [Add feed source] or [Set feed source].
+A server receives a [Server Feed Request] when a controller has set him as the source of a feed, see [Add feed source] or [Set feed source].
 
 A server receives an [Access Feed Callback] after an [Access feed] or [Access feeds].
 
@@ -501,14 +501,14 @@ The endpoint address is returned in the 'self'-property of [Get endpoint address
 
 ## Service Endpoint
 
-This endpoint is provided by a server to serve feeds, see [Feed Request Callback].
+This endpoint is provided by a server to serve feeds, see [Server Feed Request].
 It can be read and set with [Set service catalogue] and [Get service catalogue] respectively.
 
 Note: This endpoint have to be whitelisted by the Access Provider before it can be used.
 
 ## Service Access Endpoint
 
-This endpoint is provided by a server to serve resources, see [Access Feed Callback].
+This endpoint is provided by a server to serve resources, see [Services Request].
 Its address is [Service Endpoint] appended with 'resolve'. 
 
 ## Service Catalogue Endpoint
@@ -655,13 +655,13 @@ This [State Handled Callback Endpoint]-callback is executed when a Connect Token
 
 ## Server Callbacks
 
-### Feed Request Callback
+### Server Feed Request
 
 A server receives this [Service Endpoint]-callback when an controller has set him as the source of a feed, see [Set feed source] or [Add feed source].
 
-#### Feed Request Callback Example
+#### Server Feed Request Example
 
-This python code-snippet can be used to simulate a Feed Request Callback:
+This python code-snippet can be used to simulate a Server Feed Request:
 
 ```
 import requests
@@ -683,7 +683,7 @@ The call could return the following body:
 }
 ```
 
-### Access Feed Callback
+### Services Request
 
 A server receives this [Service Access Endpoint]-callback after an [Access feed].
 
@@ -702,9 +702,9 @@ Also, an optional input parameter may be passed with the feed access request in 
 ```
 
 
-#### Access Feed Callback Example
+#### Services Request Example
 
-This python code-snippet can be used to simulate an Access Feed Callback:
+This python code-snippet can be used to simulate an Services Request:
 ```
 import requests
 url = 'https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dp1serviceEndpointUrl/resolve'
@@ -798,8 +798,6 @@ with open(pem_filename, "wb") as f:
 [Acceptance Url]: https://user.dolden.net/user/v0/api
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feed.request
-[Access Feed Callback]: #access-feed-callback
-[Access Feed Callbacks]: #access-feed-callback
 [Access feeds]: #access-feeds
 [Access feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feeds.access
 [Add feed source]: #add-feed-source
@@ -859,8 +857,6 @@ with open(pem_filename, "wb") as f:
 [Event Callback Endpoints]: #event-callback-endpoints
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
 [Feed]: #feed
-[Feed Request Callback]: #feed-request-callback
-[Feed Request Callbacks]: #feed-request-callback
 [Feed Requests]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
 [Feeds]: #feeds
 [Feeds Endpoint]: #feeds-endpoint
@@ -878,7 +874,7 @@ with open(pem_filename, "wb") as f:
 [Get node settings]: #get-node-settings
 [Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.node%20settings.get
 [Get service catalogue]: #get-service-catalogue
-[Get service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server.service%20catalogue.get
+[Get service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/service%20catalogue.get
 [Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
@@ -921,10 +917,16 @@ with open(pem_filename, "wb") as f:
 [Send message]: #send-message
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/client.message.send
 [Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
+[Server Feed Request]: #server-feed-request
+[Server Feed Requests]: #server-feed-request
+[Server Feed Request request]: https://fdriesenaar.github.io/Server/openapi.html#feed%20request
 [Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
+[Services Request]: #services-request
+[Services Requests]: #services-request
+[Services Request request]: https://fdriesenaar.github.io/Server/openapi.html#services%20request
 [Set feed source]: #set-feed-source
 [Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.set
 [Set service catalogue]: #set-service-catalogue
