@@ -1,22 +1,5 @@
 components:
   callbacks:
-    accessFeed:
-      $serviceAccessEndpointUrl:
-        post:
-          requestBody:
-            content:
-              application/json:
-                examples:
-                  example:
-                    $ref: '#/components/examples/serviceEndpointFeedAccessRequest'
-                schema:
-                  $ref: '#/components/schemas/serviceEndpointFeedAccessRequest'
-            required: true
-          responses:
-            '200':
-              $ref: '#/components/responses/accessFeedCallback'
-            default:
-              $ref: '#/components/responses/default'
     dataReferenceReceivedv2:
       $dataReferenceReceivedv2EndpointUrl:
         post:

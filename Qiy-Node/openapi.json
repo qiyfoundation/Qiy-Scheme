@@ -2680,35 +2680,6 @@
             }
         },
         "callbacks": {
-            "accessFeed": {
-                "$serviceAccessEndpointUrl": {
-                    "post": {
-                        "requestBody": {
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "$ref": "#/components/schemas/serviceEndpointFeedAccessRequest"
-                                    },
-                                    "examples": {
-                                        "example": {
-                                            "$ref": "#/components/examples/serviceEndpointFeedAccessRequest"
-                                        }
-                                    }
-                                }
-                            },
-                            "required": true
-                        },
-                        "responses": {
-                            "200": {
-                                "$ref": "#/components/responses/accessFeedCallback"
-                            },
-                            "default": {
-                                "$ref": "#/components/responses/default"
-                            }
-                        }
-                    }
-                }
-            },
             "dataReferenceReceivedv2": {
                 "$dataReferenceReceivedv2EndpointUrl": {
                     "post": {
