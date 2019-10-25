@@ -13,4 +13,5 @@ def j2y(filename):
 
 j2y('openapi.json')
 j2y('Server/openapi.json')
+j2y('Client/openapi.json')
 

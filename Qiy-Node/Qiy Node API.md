@@ -351,7 +351,7 @@ A client uses this [Connection Feeds Endpoint]-call to initiate a feed, see [Req
 Optionally, a body parameter can be included in the 'input'-member of the body json object as a base64-encoded byte array.
 
 The request returns an inactive feed, the status of which can be monitored using [List feeds].
-A [Data Reference Received-v2 Event] and a [Data Reference Received-v2 Callback] will be fired when the feed has been established. 
+A [Data Reference Received-v2 Event] and a [Client Feed Request Callback] will be fired when the feed has been established. 
 
 
 ### Access feed
@@ -612,7 +612,7 @@ This section describes the Qiy Node API Event Callbacks.
 
 This section describes the Event Callback Endpoints.
 
-#### Data Reference Received-v2 Callback Endpoint
+#### Client Feed Request Callback Endpoint
 
 This [Event Callback Endpoint] can be used as an alternative for the [Data Reference Received-v2 Event].
 It can be configured using [Set event callback endpoints].
@@ -622,9 +622,9 @@ It can be configured using [Set event callback endpoints].
 This [Event Callback Endpoint] can be used as an alternative for the [State Handled Event].
 It can be configured using [Set event callback endpoints].
 
-### Data Reference Received-v2 Callback
+### Client Feed Request Callback
 
-This [Data Reference Received-v2 Callback Endpoint]-callback is fired when a source is set for a feed, see [Request for feed], [Set feed source] and [Add feed source].
+This [Client Feed Request Callback Endpoint]-callback is fired when a source is set for a feed, see [Request for feed], [Set feed source] and [Add feed source].
 
 The body of the callback carries the same load as the [Data Reference Received-v2 Event], see for example thess examples:
 
@@ -809,6 +809,9 @@ with open(pem_filename, "wb") as f:
 [Annex B Events]: #annex-b-events
 [Annex C Callbacks]: #annex-c-callbacks
 [Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
+[Client Feed Request Callback]: #client-feed-request-callback
+[Client Feed Request Callback Endpoint]: #client-feed-request-callback-endpoint
+[Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed%20callback
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
@@ -820,8 +823,6 @@ with open(pem_filename, "wb") as f:
 [controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
 [Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [Data Reference Received-v2 Event]: #data-reference-received-v2-event
-[Data Reference Received-v2 Callback]: #data-reference-received-v2-callback
-[Data Reference Received-v2 Callback Endpoint]: #data-reference-received-v2-callback-endpoint
 [Definitions Access Provider]: ../Definitions.md#access-provider
 [Definitions API Key]: #app-authentication
 [Definitions Application Provider]: ../Definitions.md#application-provider

@@ -1,51 +1,5 @@
 components:
   callbacks:
-    accessFeed:
-      $serviceAccessEndpointUrl:
-        post:
-          requestBody:
-            content:
-              application/json:
-                examples:
-                  example:
-                    $ref: '#/components/examples/serviceEndpointFeedAccessRequest'
-                schema:
-                  $ref: '#/components/schemas/serviceEndpointFeedAccessRequest'
-            required: true
-          responses:
-            '200':
-              $ref: '#/components/responses/accessFeedCallback'
-            default:
-              $ref: '#/components/responses/default'
-    dataReferenceReceivedv2:
-      $dataReferenceReceivedv2EndpointUrl:
-        post:
-          requestBody:
-            content:
-              application/json:
-                examples:
-                  example:
-                    $ref: '#/components/examples/dataReferenceReceivedv2Callback'
-                schema:
-                  $ref: '#/components/schemas/dataReferenceReceivedv2Callback'
-            required: true
-          responses:
-            '200':
-              $ref: '#/components/responses/dataReferenceReceivedv2Callback'
-            default:
-              $ref: '#/components/responses/default'
-    feedRequest:
-      $serviceEndpointUrl:
-        post:
-          requestBody:
-            content:
-              application/json:
-                examples:
-                  example:
-                    $ref: '#/components/examples/serviceEndpointFeedRequest'
-                schema:
-                  $ref: '#/components/schemas/serviceEndpointFeedRequest'
-            required: true
     stateHandled:
       $stateHandledCallbackEndpointUrl:
         post:
@@ -254,114 +208,12 @@ components:
             self: https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/7f4dd669-9381-40e1-8f6e-4c9904476d8a
           pid: nfIols4wKn9bBVkqnkHKbw==
           state: connected
-    dataReferenceReceivedv2Callback:
-      value:
-        connectionUrl: https://dev2-user.testonly.digital-me.nl/user/connections/user/pt_usernode_fksH_de/d3b58af4-2883-4cef-b203-41e117549906
-        extraData: BZWEKR63P2FEJZXYLGBN3XNWCBZU6FZG
-        type: DATA_REFERENCE_RECEIVED2
-    dataReferenceReceivedv2Event:
-      value:
-        connectionUrl: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid1sp1connectionUrl
-        extraData:
-          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
-          value: SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==
-        type: DATA_REFERENCE_RECEIVED2
     eventCallbackEndpointUrls:
       value:
         DATA_REFERENCE_RECEIVED2: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dataReferenceReceivedCallbackEndpointUrl
         STATE_HANDLED: stateHandledCallbackEndpointUrl
     eventsResponseExample:
       value: :ping
-    feedAccessResponse:
-      value:
-        activities-heart:
-        - customHeartRateZones: []
-          dateTime: today
-          heartRateZones:
-          - caloriesOut: 138.8351
-            max: 86
-            min: 30
-            minutes: 65
-            name: Out of Range
-          - caloriesOut: 309.96824
-            max: 120
-            min: 86
-            minutes: 177
-            name: Fat Burn
-          - caloriesOut: 198.6678
-            max: 146
-            min: 120
-            minutes: 59
-            name: Cardio
-          - caloriesOut: 8.1326
-            max: 220
-            min: 146
-            minutes: 7
-            name: Peak
-          value: '102.28'
-        activities-heart-intraday:
-          dataset:
-          - time: '12:00:00'
-            value: 111
-          - time: '12:01:00'
-            value: 97
-          - time: '12:02:00'
-            value: 112
-          - time: '12:03:00'
-            value: 114
-          - time: '12:04:00'
-            value: 136
-          datasetInterval: 1
-          datasetType: minute
-    feedList:
-      value:
-        CE22UFPUKSW77IA26A2OKHVKEA3RU6ES:
-          connection: https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f
-          created: 1565083781575
-          lastUpdated: 1565083781626
-          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
-          status: Message sent
-        PYSSVYZLIDBI5YDGHA6ONFWMTON4T2U3:
-          connection: https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3
-          created: 1564985247891
-          lastUpdated: 1564985247945
-          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
-          status: Sending message failed
-        QZJ5MOWNEXARVTTBWMYZAO7ISYOQQOAU:
-          connection: https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/43c5c576-c0d0-4fdd-8593-a57dacdb1a2f
-          created: 1565083591605
-          lastUpdated: 1565083591687
-          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
-          status: Created
-        RIUDDVYZLIDBI5YDGHAONFWMTON4INH78:
-          connection: https://dev2-user.testonly.digital-me.nl/user/connections/user/fp_rp_dev2/f3f5c1d1-61c0-45fd-9faa-f7d377dd89e3
-          created: 1564985247891
-          lastUpdated: 1564985247945
-          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
-          status: Ready to resolve
-    feedRequest:
-      value:
-        input: Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==
-        protocol: https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1
-        text: Requesting feed.
-    feedRequestResponse:
-      value:
-        feedId: 3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M
-        protocol: https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1
-    feedsAccessRequest:
-      value:
-        '{{feed_id1}}':
-          input: <optional json member with base-64 encrypted byte array>
-        '{{feed_id2}}':
-          input: <optional json member with base-64 encrypted byte array>
-    feedsAccessResponse:
-      value:
-        <feed_id1>:
-          content-type: application/xml
-          output: <base64-encoded feed_id1 access response>
-        <feed_id2>:
-          content-type: application/json
-          output: <base64-encoded feed_id2 access response>
     messageList:
       value:
         result:
@@ -399,28 +251,6 @@ components:
       value:
         askDappre: 'no'
         usePersistentId: 'yes'
-    serviceCatalogue:
-      value:
-        https://service-type-url.example:
-          method: POST
-          type: external
-          uri: https://feed-request-endpoint-url.example
-    serviceEndpointFeedAccessRequest:
-      value:
-        SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==:
-          input: Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==
-    serviceEndpointFeedRequest:
-      value:
-        connection: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl
-        mbox: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox
-        message:
-          inbound: true
-          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
-          sent: false
-          serialNr: 6
-          text: Requesting 'test data'
-          thirdPartyRef: ' 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI='
-        pid: 1IqX94/EoOcD47hCvBQ+gi==
     stateHandledEvent:
       value:
         connectionUrl: https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/3b5151e3-adc7-403a-a31a-8bd504e2c8ae
@@ -429,21 +259,6 @@ components:
           connectToken: https://dev1-user.testonly.digital-me.nl/user/connecttokens/509f79f8-6562-49cd-bb24-4163557d7e59/7ced41dc-76ff-469e-9fa0-3f34c73d0a2b
           newUri: https://dev1-user.testonly.digital-me.nl/user/connections/user/509f79f8-6562-49cd-bb24-4163557d7e59/ce5b2dd5-1bdd-41aa-b0ad-d0afa2e9a3cb
         type: STATE_HANDLED
-  parameters:
-    feedId:
-      in: path
-      name: feedId
-      required: true
-      schema:
-        $ref: '#/components/schemas/feedId'
-    protocol:
-      explode: true
-      in: query
-      name: protocol
-      required: false
-      schema:
-        $ref: '#/components/schemas/protocol'
-      style: form
   responses:
     actionMessage:
       content:
@@ -521,8 +336,6 @@ components:
           schema:
             $ref: '#/components/schemas/connectionList'
       description: Connection list
-    dataReferenceReceivedv2Callback:
-      description: Data Reference Received v2 callback response
     default:
       content:
         application/json:
@@ -561,46 +374,6 @@ components:
             $ref: '#/components/examples/eventsResponseExample'
         text/event-stream: {}
       description: Events
-    feedAccessResponse:
-      content:
-        application/json:
-          examples:
-            Feed response:
-              $ref: '#/components/examples/feedAccessResponse'
-          schema:
-            $ref: '#/components/schemas/feedAccessResponse'
-      description: Feed access response
-    feedList:
-      content:
-        application/json:
-          examples:
-            example:
-              $ref: '#/components/examples/feedList'
-          schema:
-            $ref: '#/components/schemas/feedList'
-      description: Feed list
-    feedRequestResponse:
-      content:
-        application/json:
-          examples:
-            feed:
-              $ref: '#/components/examples/feedRequestResponse'
-          schema:
-            $ref: '#/components/schemas/feedRequestResponse'
-      description: Feed request response
-    feedSourceAdd:
-      description: Add feed source response
-    feedSourceSet:
-      description: Set feed source response
-    feedsAccessResponse:
-      content:
-        application/json:
-          examples:
-            Feeds response:
-              $ref: '#/components/examples/feedsAccessResponse'
-          schema:
-            $ref: '#/components/schemas/feedsAccessResponse'
-      description: Feeds access response
     messageList:
       content:
         application/json:
@@ -998,41 +771,6 @@ components:
           minItems: 1
           type: array
       type: object
-    dataReferenceReceivedv2Callback:
-      $ref: '#/components/schemas/dataReferenceReceivedv2Event'
-    dataReferenceReceivedv2Event:
-      description: See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)
-      properties:
-        connectionUrl:
-          format: url
-          maxItems: 1
-          minItems: 1
-          type: string
-        extraData:
-          anyOf:
-          - properties:
-              protocol:
-                description: Service type url
-                format: url
-                maxItems: 1
-                minItems: 1
-                type: string
-              value:
-                description: Feed id
-                maxItems: 1
-                minItems: 1
-                type: string
-            type: object
-          - description: feed id
-            type: string
-        type:
-          description: Event type
-          enum:
-          - DATA_REFERENCE_RECEIVED2
-          maxItems: 1
-          minItems: 1
-          type: string
-      type: object
     eventCallbackEndpointUrls:
       properties:
         DATA_REFERENCE_RECEIVED2:
@@ -1040,150 +778,6 @@ components:
         STATE_HANDLED:
           type: string
       type: object
-    feedAccessResponse:
-      description: The feed response format is described in the service type description
-    feedDetails:
-      properties:
-        connection:
-          description: Connection url
-          format: url
-          maxItems: '1'
-          minItems: '1'
-          type: string
-        created:
-          description: Creation datetimestamp
-          format: Unix time in mili seconds
-          maxItems: '1'
-          minItems: '1'
-          type: number
-        lastUpdated:
-          description: Last updated datetimestamp
-          format: Unix time in mili seconds
-          maxItems: '1'
-          minItems: '1'
-          type: number
-        protocol:
-          description: Service type url
-          format: url
-          maxItems: '1'
-          minItems: '1'
-          type: string
-        status:
-          description: Feed status
-          enum:
-          - Created
-          - Message sent
-          - Sending message failed
-          maxItems: '1'
-          minItems: '1'
-          type: string
-      type: object
-    feedId:
-      description: Feed id
-      format: ascii no whitespace
-      type: string
-    feedList:
-      description: Feeds by service type url as property name
-      properties:
-        '[\x00-\x7F]+':
-          $ref: '#/components/schemas/feedDetails'
-      type: object
-      x-patternProperties:
-        '[\x00-\x7F]+':
-          $ref: '#/components/schemas/feedDetails'
-    feedRequest:
-      properties:
-        input:
-          default: null
-          description: Optional body for Feed request callback body
-          format: base64-encoded byte array
-          maxItems: 1
-          minItems: 0
-          nullable: true
-          type: string
-        protocol:
-          description: Service type url
-          format: url
-          maxItems: 1
-          minItems: 1
-          type: string
-        text:
-          description: Feed request remark
-          maxItems: 1
-          minItems: 1
-          type: string
-      type: object
-    feedRequestResponse:
-      properties:
-        feedId:
-          maxItems: 1
-          minItems: 1
-          type: string
-        protocol:
-          description: Service type url
-          format: url
-          maxItems: 1
-          minItems: 1
-          type: string
-      type: object
-    feedsAccessRequest:
-      description: Access requests by feed id as property name
-      properties:
-        '[\x00-\x7F]+':
-          properties:
-            input:
-              default: null
-              description: Optional body for the access request for the given feed
-                id
-              format: base64-encoded byte array
-              maxItems: 1
-              minItems: 0
-              nullable: true
-              type: string
-          type: object
-      type: object
-      x-patternProperties:
-        '[\x00-\x7F]+':
-          properties:
-            input:
-              default: null
-              description: Optional body for the access request for the given feed
-                id
-              format: base64-encoded byte array
-              maxItems: 1
-              minItems: 0
-              nullable: true
-              type: string
-          type: object
-    feedsAccessResponse:
-      description: Feed access responses by feed id as property name
-      properties:
-        '[\x00-\x7F]+':
-          properties:
-            content-type:
-              maxItems: 1
-              minItems: 1
-              type: string
-            output:
-              format: base64-encoded byte array
-              maxItems: 1
-              minItems: 1
-              type: string
-          type: object
-      type: object
-      x-patternProperties:
-        '[\x00-\x7F]+':
-          properties:
-            content-type:
-              maxItems: 1
-              minItems: 1
-              type: string
-            output:
-              format: base64-encoded byte array
-              maxItems: 1
-              minItems: 1
-              type: string
-          type: object
     message:
       properties:
         inbound:
@@ -1311,65 +905,6 @@ components:
           minItems: 1
           type: string
       type: object
-    serviceEndpointFeedAccessRequest:
-      description: Service endpoint access requests by feed id as property name
-      properties:
-        '[\x00-\x7F]+':
-          properties:
-            input:
-              default: null
-              description: Optional body for the access request for the given feed
-                id
-              format: base64-encoded byte array
-              maxItems: 1
-              minItems: 0
-              nullable: true
-              type: string
-          type: object
-      type: object
-      x-patternProperties:
-        '[\x00-\x7F]+':
-          properties:
-            input:
-              default: null
-              description: Optional body for the access request for the given feed
-                id
-              format: base64-encoded byte array
-              maxItems: 1
-              minItems: 0
-              nullable: true
-              type: string
-          type: object
-    serviceEndpointFeedRequest:
-      properties:
-        connection:
-          description: Connection url
-          format: url
-          maxItems: 1
-          minItems: 1
-          type: string
-        mbox:
-          format: url
-          maxItems: 1
-          minItems: 1
-          type: string
-        message:
-          allOf:
-          - $ref: '#/components/schemas/message'
-          - maxItems: 1
-            minItems: 1
-            properties:
-              thirdPartyRef:
-                format: ascii no whitespace
-                maxItems: 1
-                minItems: 1
-                type: string
-            type: object
-        pid:
-          maxItems: 1
-          minItems: 1
-          type: ''
-      type: object
     stateHandledEvent:
       description: See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)
       properties:
@@ -1448,13 +983,6 @@ components:
     userAuthentication:
       $ref: '#/components/schemas/userAuthentication'
   x-events:
-    dataReferenceReceivedv2:
-      data:
-        examples: {}
-        schema:
-          $ref: '#/components/schemas/dataReferenceReceivedv2Event'
-      description: See [Data Reference Received-v2 Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#data-reference-received-v2-event)
-      event: DATA_REFERENCE_RECEIVED2
     routingFailed:
       data:
         schema:
@@ -1752,63 +1280,6 @@ paths:
       tags:
       - controller.events
       x-url: $EventsEndpointUrl
-  /FeedsEndpoint:
-    get:
-      description: See [List feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-feeds)
-      operationId: List feeds
-      parameters:
-      - $ref: '#/components/parameters/protocol'
-      responses:
-        '200':
-          $ref: '#/components/responses/feedList'
-        default:
-          $ref: '#/components/responses/default'
-      tags:
-      - client.feeds.list
-      x-url: $FeedsEndpointUrl
-    post:
-      description: See [Access feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feeds)
-      operationId: Access feeds
-      requestBody:
-        content:
-          application/json:
-            examples:
-              example:
-                $ref: '#/components/examples/feedsAccessRequest'
-            schema:
-              $ref: '#/components/schemas/feedsAccessRequest'
-        description: Access feeds request details
-      responses:
-        '200':
-          $ref: '#/components/responses/feedsAccessResponse'
-        default:
-          $ref: '#/components/responses/default'
-      tags:
-      - client.feeds.access
-      x-url: $FeedsEndpointUrl
-  /FeedsEndpoint/{feedId}:
-    post:
-      description: See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feed)
-      operationId: Access feed
-      parameters:
-      - $ref: '#/components/parameters/feedId'
-      requestBody:
-        content:
-          text:
-            examples:
-              example:
-                description: 'An example of base64-encoded input. NB: the enclosing
-                  quotes must not be part of the body.'
-                value: VGhlIGJvZHkgbWF5IGluY2x1ZGUgYSBzZXJ2aWNlIGVuZHBvaW50IGZlZWQgYWNjZXNzIHJlcXVlc3QgYm9keSBlbmNvZGVkIGFzIGEgYmFzZS02NCBlbmNvZGVkIGJ5dGUgYXJyYXku
-        description: Access request details
-      responses:
-        '200':
-          $ref: '#/components/responses/feedAccessResponse'
-        default:
-          $ref: '#/components/responses/default'
-      tags:
-      - client.feed.access
-      x-url: $FeedsEndpointUrl/$feedId
   /MessagesEndpoint:
     get:
       description: See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-messages)

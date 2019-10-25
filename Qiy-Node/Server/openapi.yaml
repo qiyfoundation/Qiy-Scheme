@@ -181,7 +181,7 @@ components:
           properties:
             error:
               maxItems: 1
-              minItems: 0
+              minItems: 1
               nullable: true
               type: string
             metadata:
@@ -206,7 +206,7 @@ components:
           properties:
             error:
               maxItems: 1
-              minItems: 0
+              minItems: 1
               nullable: true
               type: string
             metadata:
