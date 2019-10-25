@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Qiy Node API",
+        "title": "Qiy Node API - General",
         "description": "To get started with [this api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md), you need a developer key. You can get it [here](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-desk)",
         "externalDocs": {
             "description": "Find more info here",
@@ -732,134 +732,10 @@
                     }
                 ]
             }
-        },
-        "/ServiceCatalogueEndpoint": {
-            "get": {
-                "tags": [
-                    "server.service catalogue.get"
-                ],
-                "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
-                "operationId": "Get service catalogue",
-                "x-url": "$ServiceCatalogueEndpointUrl",
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/serviceCatalogueResponse"
-                    },
-                    "default": {
-                        "$ref": "#/components/responses/default"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "server.service catalogue.set"
-                ],
-                "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
-                "operationId": "Set service catalogue",
-                "x-url": "$ServiceCatalogueEndpointUrl",
-                "requestBody": {
-                    "description": "Service catalogue",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/serviceCatalogue"
-                            },
-                            "examples": {
-                                "example": {
-                                    "$ref": "#/components/examples/serviceCatalogue"
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/serviceCatalogueResponse"
-                    },
-                    "default": {
-                        "$ref": "#/components/responses/default"
-                    }
-                },
-                "callbacks": {
-                    "feedRequest": {
-                        "$ref": "#/components/callbacks/feedRequest"
-                    },
-                    "accessFeed": {
-                        "$ref": "#/components/callbacks/accessFeed"
-                    }
-                }
-            }
         }
     },
     "components": {
         "schemas": {
-            "accessFeedCallbackResponse": {
-                "type": "object",
-                "properties": {
-                    "$feedIdRex": {
-                        "type": "object",
-                        "properties": {
-                            "metadata": {
-                                "type": "object",
-                                "properties": {
-                                    "content-type": {
-                                        "type": "string",
-                                        "format": "media type",
-                                        "minItems": 1,
-                                        "maxItems": 1
-                                    }
-                                },
-                                "minItems": 1,
-                                "maxItems": 1
-                            },
-                            "output": {
-                                "type": "string",
-                                "format": "b64-encoded byte array",
-                                "minItems": 1,
-                                "maxItems": 1
-                            },
-                            "error": {
-                                "type": "string",
-                                "nullable": true,
-                                "minItems": 0,
-                                "maxItems": 1
-                            }
-                        }
-                    }
-                },
-                "x-patternProperties": {
-                    "$feedIdRex": {
-                        "type": "object",
-                        "properties": {
-                            "metadata": {
-                                "type": "object",
-                                "properties": {
-                                    "content-type": {
-                                        "type": "string",
-                                        "format": "media type",
-                                        "minItems": 1,
-                                        "maxItems": 1
-                                    }
-                                },
-                                "minItems": 1,
-                                "maxItems": 1
-                            },
-                            "output": {
-                                "type": "string",
-                                "format": "b64-encoded byte array",
-                                "minItems": 1,
-                                "maxItems": 1
-                            },
-                            "error": {
-                                "type": "string",
-                                "nullable": true,
-                                "minItems": 0,
-                                "maxItems": 1
-                            }
-                        }
-                    }
-                }
-            },
             "actionMessage": {
                 "type": "object",
                 "properties": {
@@ -1778,66 +1654,6 @@
                     }
                 }
             },
-            "serviceCatalogue": {
-                "description": "Service catalogue entries by service type url as property name",
-                "type": "object",
-                "properties": {
-                    "https?://[a-z0-9]+([-./]?[a-z0-9])*": {
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "external",
-                                    "internal"
-                                ]
-                            },
-                            "uri": {
-                                "description": "Feed request endpoint url",
-                                "type": "string",
-                                "format": "url"
-                            },
-                            "method": {
-                                "type": "string",
-                                "enum": [
-                                    "GET",
-                                    "POST",
-                                    "PUT",
-                                    "SET"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "x-patternProperties": {
-                    "https?://[a-z0-9]+([-./]?[a-z0-9])*": {
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "external",
-                                    "internal"
-                                ]
-                            },
-                            "uri": {
-                                "description": "Feed request endpoint url",
-                                "type": "string",
-                                "format": "url"
-                            },
-                            "method": {
-                                "type": "string",
-                                "enum": [
-                                    "GET",
-                                    "POST",
-                                    "PUT",
-                                    "SET"
-                                ]
-                            }
-                        }
-                    }
-                }
-            },
             "serviceEndpointFeedAccessRequest": {
                 "description": "Service endpoint access requests by feed id as property name",
                 "type": "object",
@@ -2006,21 +1822,6 @@
             }
         },
         "responses": {
-            "accessFeedCallback": {
-                "description": "Access feed callback response",
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/accessFeedCallbackResponse"
-                        },
-                        "examples": {
-                            "example": {
-                                "$ref": "#/components/examples/accessFeedCallbackResponse"
-                            }
-                        }
-                    }
-                }
-            },
             "api": {
                 "description": "Api response",
                 "content": {
@@ -2312,21 +2113,6 @@
                     "examples": {
                         "example": {
                             "$ref": "#/components/examples/nodeSettings"
-                        }
-                    }
-                }
-            },
-            "serviceCatalogueResponse": {
-                "description": "Service catalogue",
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/serviceCatalogue"
-                        }
-                    },
-                    "examples": {
-                        "example": {
-                            "$ref": "#/components/examples/serviceCatalogue"
                         }
                     }
                 }
