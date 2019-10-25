@@ -1,0 +1,482 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Qiy Node API - Server",
+        "description": "To get started with [this api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md), you need a developer key. You can get it [here](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-desk)",
+        "externalDocs": {
+            "description": "Find more info here",
+            "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md"
+        },
+        "version": "1.1.0",
+        "license": {
+            "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License",
+            "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+    },
+    "paths": {
+        "/{serviceAccessEndpointPath}": {
+            "post": {
+                "tags": [
+                    "Services request"
+                ],
+                "description": "See [Services request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#services-request)",
+                "operationId": "Services request",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/servicesRequest"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/servicesRequest"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/services"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "servers": [
+                {
+                    "description": "Service Access Endpoint",
+                    "url": "{ServiceAccessEndpointBaseUrl}",
+                    "variables": {
+                        "ServiceAccessEndpointBaseUrl": {
+                            "description": "See [Service Access Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-access-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-access-endpoint"
+                        }
+                    }
+                }
+            ]
+        },
+        "/{ServiceCatalogueEndpointPath}": {
+            "get": {
+                "tags": [
+                    "Get service catalogue"
+                ],
+                "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
+                "operationId": "Get service catalogue",
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/serviceCatalogue"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Set service catalogue"
+                ],
+                "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
+                "operationId": "Set service catalogue",
+                "requestBody": {
+                    "description": "Service catalogue",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/serviceCatalogue"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/serviceCatalogue"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/serviceCatalogue"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "servers": [
+                {
+                    "description": "Service Catalogue Endpoint",
+                    "url": "{ServiceCatalogueEndpointBaseUrl}",
+                    "variables": {
+                        "ServiceCatalogueEndpointBaseUrl": {
+                            "description": "See [Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint"
+                        }
+                    }
+                }
+            ]
+        },
+        "/{ServiceEndpointPath}": {
+            "post": {
+                "tags": [
+                    "Feed request"
+                ],
+                "description": "Feed request",
+                "externalDocs": {
+                    "description": "Find more info here",
+                    "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-feed-request"
+                },
+                "operationId": "Feed request",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/feedRequest"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/feedRequest"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "$ref": "#/components/responses/feedRequest"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "servers": [
+                {
+                    "description": "Service Endpoint",
+                    "url": "{ServiceEndpointBaseUrl}",
+                    "variables": {
+                        "ServiceEndpointBaseUrl": {
+                            "description": "See [Service Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-endpoint"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "components": {
+        "schemas": {
+            "feedRequest": {
+                "type": "object",
+                "properties": {
+                    "input": {
+                        "description": "Optional body for Feed request callback body",
+                        "type": "string",
+                        "format": "base64-encoded byte array",
+                        "nullable": true,
+                        "minItems": 0,
+                        "default": null,
+                        "maxItems": 1
+                    },
+                    "protocol": {
+                        "description": "Service type url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "text": {
+                        "description": "Feed request remark",
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "feedRequestResponse": {
+                "type": "object",
+                "properties": {
+                    "protocol": {
+                        "description": "Service type url",
+                        "type": "string",
+                        "format": "url",
+                        "minItems": 1,
+                        "maxItems": 1
+                    },
+                    "feedId": {
+                        "type": "string",
+                        "minItems": 1,
+                        "maxItems": 1
+                    }
+                }
+            },
+            "servicesRequest": {
+                "description": "Service requests by feed id",
+                "type": "object",
+                "properties": {
+                    "[\\x00-\\x7F]+": {
+                        "type": "object",
+                        "properties": {
+                            "input": {
+                                "description": "Service request body",
+                                "type": "string",
+                                "format": "base64-encoded byte array",
+                                "nullable": true,
+                                "minItems": 0,
+                                "default": null,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                },
+                "x-patternProperties": {
+                    "[\\x00-\\x7F]+": {
+                        "type": "object",
+                        "properties": {
+                            "input": {
+                                "description": "Optional body for the access request for the given feed id",
+                                "type": "string",
+                                "format": "base64-encoded byte array",
+                                "nullable": true,
+                                "minItems": 0,
+                                "default": null,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "servicesResponse": {
+                "type": "object",
+                "properties": {
+                    "$feedIdRex": {
+                        "type": "object",
+                        "properties": {
+                            "metadata": {
+                                "type": "object",
+                                "properties": {
+                                    "content-type": {
+                                        "type": "string",
+                                        "format": "media type",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    }
+                                },
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "output": {
+                                "type": "string",
+                                "format": "b64-encoded byte array",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "error": {
+                                "type": "string",
+                                "nullable": true,
+                                "minItems": 0,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                },
+                "x-patternProperties": {
+                    "$feedIdRex": {
+                        "type": "object",
+                        "properties": {
+                            "metadata": {
+                                "type": "object",
+                                "properties": {
+                                    "content-type": {
+                                        "type": "string",
+                                        "format": "media type",
+                                        "minItems": 1,
+                                        "maxItems": 1
+                                    }
+                                },
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "output": {
+                                "type": "string",
+                                "format": "b64-encoded byte array",
+                                "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "error": {
+                                "type": "string",
+                                "nullable": true,
+                                "minItems": 0,
+                                "maxItems": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "serviceCatalogue": {
+                "description": "Service catalogue entries by service type url as property name",
+                "type": "object",
+                "properties": {
+                    "https?://[a-z0-9]+([-./]?[a-z0-9])*": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "external",
+                                    "internal"
+                                ]
+                            },
+                            "uri": {
+                                "description": "Feed request endpoint url",
+                                "type": "string",
+                                "format": "url"
+                            },
+                            "method": {
+                                "type": "string",
+                                "enum": [
+                                    "GET",
+                                    "POST",
+                                    "PUT",
+                                    "SET"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "x-patternProperties": {
+                    "https?://[a-z0-9]+([-./]?[a-z0-9])*": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "external",
+                                    "internal"
+                                ]
+                            },
+                            "uri": {
+                                "description": "Feed request endpoint url",
+                                "type": "string",
+                                "format": "url"
+                            },
+                            "method": {
+                                "type": "string",
+                                "enum": [
+                                    "GET",
+                                    "POST",
+                                    "PUT",
+                                    "SET"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "default": {
+                "$ref": "https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/responses/default"
+            },
+            "services": {
+                "description": "Services response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/servicesResponse"
+                        },
+                        "examples": {
+                            "example": {
+                                "$ref": "#/components/examples/servicesResponse"
+                            }
+                        }
+                    }
+                }
+            },
+            "serviceCatalogue": {
+                "description": "Service catalogue",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/serviceCatalogue"
+                        }
+                    },
+                    "examples": {
+                        "example": {
+                            "$ref": "#/components/examples/serviceCatalogue"
+                        }
+                    }
+                }
+            }
+        },
+        "examples": {
+            "feedRequest": {
+                "value": {
+                    "connection": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl",
+                    "message": {
+                        "inbound": true,
+                        "protocol": "https://github.com/qiyfoundation/fiKks/tree/master/schema/v1",
+                        "sent": false,
+                        "serialNr": 6,
+                        "text": "Requesting 'test data'",
+                        "thirdPartyRef": " 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI="
+                    },
+                    "mbox": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox",
+                    "pid": "1IqX94/EoOcD47hCvBQ+gi=="
+                }
+            },
+            "serviceCatalogue": {
+                "value": {
+                    "https://service-type-url.example": {
+                        "type": "external",
+                        "uri": "https://feed-request-endpoint-url.example",
+                        "method": "POST"
+                    }
+                }
+            },
+            "servicesRequest": {
+                "value": {
+                    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+                        "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="
+                    }
+                }
+            },
+            "servicesResponse": {
+                "value": {
+                    "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
+                        "output": "ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTM4LjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAzMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY1LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzA5Ljk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMjAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTc3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTI6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTExCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEyOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDk3CiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=",
+                        "metadata": {
+                            "content-type": "application/json"
+                        },
+                        "error": null
+                    },
+                    "TkF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBQR==": {
+                        "output": "ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTQwLjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDcwLAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAyMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY2LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzAwLjk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMTAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg3LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTY3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTM6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTIxCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEzOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDkwCiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=",
+                        "metadata": {
+                            "content-type": "application/json"
+                        },
+                        "error": null
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "appAuthentication": {
+                "$ref": "https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/schemas/appAuthentication"
+            },
+            "userAuthentication": {
+                "$ref": "https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/schemas/userAuthentication"
+            }
+        }
+    },
+    "security": [
+        {
+            "appAuthentication": []
+        },
+        {
+            "userAuthentication": []
+        }
+    ]
+}
