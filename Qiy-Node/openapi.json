@@ -1468,6 +1468,12 @@
                                 "format": "base64-encoded byte array",
                                 "minItems": 1,
                                 "maxItems": 1
+                            },
+                            "error": {
+                                "type": "string",
+                                "nullable": true,
+                                "minItems": 0,
+                                "maxItems": 1
                             }
                         }
                     }
@@ -1485,6 +1491,12 @@
                                 "type": "string",
                                 "format": "base64-encoded byte array",
                                 "minItems": 1,
+                                "maxItems": 1
+                            },
+                            "error": {
+                                "type": "string",
+                                "nullable": true,
+                                "minItems": 0,
                                 "maxItems": 1
                             }
                         }
