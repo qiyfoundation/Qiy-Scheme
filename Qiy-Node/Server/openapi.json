@@ -14,13 +14,13 @@
         }
     },
     "paths": {
-        "/{serviceAccessEndpointPath}": {
+        "/{ServiceAccessEndpointPath}": {
             "post": {
                 "tags": [
-                    "Services request"
+                    "Services"
                 ],
                 "description": "See [Services request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#services-request)",
-                "operationId": "Services request",
+                "operationId": "Request",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -61,10 +61,10 @@
         "/{ServiceCatalogueEndpointPath}": {
             "get": {
                 "tags": [
-                    "Get service catalogue"
+                    "Service catalogue"
                 ],
                 "description": "See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)",
-                "operationId": "Get service catalogue",
+                "operationId": "Get",
                 "responses": {
                     "200": {
                         "$ref": "#/components/responses/serviceCatalogue"
@@ -76,10 +76,10 @@
             },
             "put": {
                 "tags": [
-                    "Set service catalogue"
+                    "Service catalogue"
                 ],
                 "description": "See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)",
-                "operationId": "Set service catalogue",
+                "operationId": "Set",
                 "requestBody": {
                     "description": "Service catalogue",
                     "content": {
@@ -120,14 +120,14 @@
         "/{ServiceEndpointPath}": {
             "post": {
                 "tags": [
-                    "Feed request"
+                    "Feeds"
                 ],
                 "description": "Feed request",
                 "externalDocs": {
                     "description": "Find more info here",
                     "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-feed-request"
                 },
-                "operationId": "Feed request",
+                "operationId": "Request",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -172,7 +172,7 @@
                 "type": "object",
                 "properties": {
                     "input": {
-                        "description": "Optional body for Feed request callback body",
+                        "description": "Feed request body",
                         "type": "string",
                         "format": "base64-encoded byte array",
                         "nullable": true,
@@ -380,6 +380,21 @@
             "default": {
                 "$ref": "https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/responses/default"
             },
+            "feedRequest": {
+                "description": "Feed request response",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/feedRequestResponse"
+                        },
+                        "examples": {
+                            "feed": {
+                                "$ref": "#/components/examples/feedRequestResponse"
+                            }
+                        }
+                    }
+                }
+            },
             "services": {
                 "description": "Services response",
                 "content": {
@@ -425,6 +440,12 @@
                     },
                     "mbox": "https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox",
                     "pid": "1IqX94/EoOcD47hCvBQ+gi=="
+                }
+            },
+            "feedRequestResponse": {
+                "value": {
+                    "protocol": "https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1",
+                    "feedId": "3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M"
                 }
             },
             "serviceCatalogue": {
