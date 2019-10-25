@@ -874,7 +874,7 @@ with open(pem_filename, "wb") as f:
 [Get node settings]: #get-node-settings
 [Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.node%20settings.get
 [Get service catalogue]: #get-service-catalogue
-[Get service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/service%20catalogue.get
+[Get service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Get
 [Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
@@ -919,18 +919,18 @@ with open(pem_filename, "wb") as f:
 [Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
 [Server Feed Request]: #server-feed-request
 [Server Feed Requests]: #server-feed-request
-[Server Feed Request request]: https://fdriesenaar.github.io/Server/openapi.html#feed%20request
+[Server Feed Request request]: https://fdriesenaar.github.io/Server/openapi.html#Feeds/Request
 [Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
 [Services Request]: #services-request
 [Services Requests]: #services-request
-[Services Request request]: https://fdriesenaar.github.io/Server/openapi.html#services%20request
+[Services Request request]: https://fdriesenaar.github.io/Server/openapi.html#Services/Request
 [Set feed source]: #set-feed-source
 [Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.set
 [Set service catalogue]: #set-service-catalogue
-[Set service catalogue request]: https://fdriesenaar.github.io/openapi-doc.html#/server.service%20catalogue.set
+[Set service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Set
 [Set event callback endpoints]: #set-event-callback-endpoints
 [Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.event%20callback%20endpoints.set
 [Set node settings]: #set-node-settings
