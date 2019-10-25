@@ -358,9 +358,11 @@ components:
       value:
         <feed_id1>:
           content-type: application/xml
+          error: null
           output: <base64-encoded feed_id1 access response>
         <feed_id2>:
           content-type: application/json
+          error: null
           output: <base64-encoded feed_id2 access response>
     messageList:
       value:
@@ -1166,7 +1168,7 @@ components:
               type: string
             error:
               maxItems: 1
-              minItems: 0
+              minItems: 1
               nullable: true
               type: string
             output:
@@ -1185,7 +1187,7 @@ components:
               type: string
             error:
               maxItems: 1
-              minItems: 0
+              minItems: 1
               nullable: true
               type: string
             output:

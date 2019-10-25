@@ -1472,7 +1472,7 @@
                             "error": {
                                 "type": "string",
                                 "nullable": true,
-                                "minItems": 0,
+                                "minItems": 1,
                                 "maxItems": 1
                             }
                         }
@@ -1496,7 +1496,7 @@
                             "error": {
                                 "type": "string",
                                 "nullable": true,
-                                "minItems": 0,
+                                "minItems": 1,
                                 "maxItems": 1
                             }
                         }
@@ -2564,11 +2564,13 @@
                 "value": {
                     "<feed_id1>": {
                         "content-type": "application/xml",
-                        "output": "<base64-encoded feed_id1 access response>"
+                        "output": "<base64-encoded feed_id1 access response>",
+			"error": null
                     },
                     "<feed_id2>": {
                         "content-type": "application/json",
-                        "output": "<base64-encoded feed_id2 access response>"
+                        "output": "<base64-encoded feed_id2 access response>",
+			"error": null
                     }
                 }
             },
