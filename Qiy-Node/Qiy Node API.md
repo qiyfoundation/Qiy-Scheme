@@ -614,7 +614,7 @@ This section describes the Event Callback Endpoints.
 
 #### Client Feed Request Callback Endpoint
 
-This [Event Callback Endpoint] can be used as an alternative for the [Data Reference Received-v2 Event].
+This [Event Callback Endpoint] can be used to receive a callback as an alternative for the [Data Reference Received-v2 Event].
 It can be configured using [Set event callback endpoints].
 
 #### State Handled Callback Endpoint
@@ -624,7 +624,7 @@ It can be configured using [Set event callback endpoints].
 
 ### Client Feed Request Callback
 
-This [Client Feed Request Callback Endpoint]-callback is fired when a source is set for a feed, see [Request for feed], [Set feed source] and [Add feed source].
+This [Client Feed Request Callback Endpoint]-callback is fired when a source is set for a feed, see [Client Feed Request Callback request], [Request for feed], [Set feed source] and [Add feed source].
 
 The body of the callback carries the same load as the [Data Reference Received-v2 Event], see for example thess examples:
 
@@ -797,9 +797,9 @@ with open(pem_filename, "wb") as f:
 
 [Acceptance Url]: https://user.dolden.net/user/v0/api
 [Access feed]: #access-feed
-[Access feed request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feed.request
+[Access feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feed
 [Access feeds]: #access-feeds
-[Access feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feeds.access
+[Access feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feeds
 [Add feed source]: #add-feed-source
 [Add feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.add
 [Action Endpoint]: #action-endpoint
@@ -886,7 +886,7 @@ with open(pem_filename, "wb") as f:
 [List connections]: #list-connections
 [List connections request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connections.list
 [List feeds]: #list-feeds
-[List feeds request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feeds.list
+[List feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/List%20feeds
 [List messages]: #list-messages
 [List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/client.messages.list
 [Message]: #message
@@ -912,7 +912,7 @@ with open(pem_filename, "wb") as f:
 [Request creation of Qiy Node]: #request-creation-of-qiy-node
 [Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
 [Request for feed]: #request-for-feed
-[Request for feed request]: https://fdriesenaar.github.io/openapi-doc.html#/client.feed.request
+[Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed
 [RSA Private Key]: ../Definitions.md#rsa-private-key
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
