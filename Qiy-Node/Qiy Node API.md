@@ -29,6 +29,7 @@ it can be used by a [controller] (eg Individual) to provide a [client] (eg Relyi
 * The server identifies the controller (out of bounds).
 * The controller connects with the client, see [Request connection].
 * The client requests the controller for a feed, see [Request for feed].
+* The controller receives the request via a [Request for feed event] or using [List requests for feed].
 * The controller accepts the feed and sets the server as the source, see [Set feed source].
 * The server receives a feed request callback and creates a feed, see [Server Feed Request].
 * The client uses the feed to access the service, see [Access feed].
@@ -225,7 +226,7 @@ This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used t
 
 ## Start listening to events
 
-After [connecting][Request connection] to servers and clients, controllers use this [Events Endpoint](#events-endpoint)-call to catch requests for feed in [User Action Message Events], see [Start listening to events request].
+After [connecting][Request connection] to servers and clients, controllers use this [Events Endpoint](#events-endpoint)-call to catch [requests for feed events][Request for feed event], see also [Start listening to events request].
 
 The request starts a long-living session with a heartbeat to keep the session open. 
 Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
@@ -351,7 +352,7 @@ A client uses this [Connection Feeds Endpoint]-call to initiate a feed, see [Req
 Optionally, a body parameter can be included in the 'input'-member of the body json object as a base64-encoded byte array.
 
 The request returns an inactive feed, the status of which can be monitored using [List feeds].
-A [Data Reference Received-v2 Event] and a [Client Feed Request Callback] will be fired when the feed has been established. 
+A [Data Reference Received-v2 Event] and a [Client Feed Request Callback] will be fired when the feed can be used or has been changed. 
 
 
 ### Access feed
@@ -378,46 +379,38 @@ A server receives an [Access Feed Callback] after an [Access feed] or [Access fe
 
 ## Controller
 
-### Get user action message
+### Request for feed event
 
-An End User App receives a [User Action Message Event] when a connected client has asked for a feed to access one of his resources, see [Request for feed].
-The event contains an [Action Message Endpoint]-address that can be used with this call to get the details of the action message, see [Get user action message].
+An End User App receives this event when a connected client has requested for a feed, see [Controller request for feed event].
+The event carries an [User Action Message Url][User Action Message] in the extraData property which is used in a [Get request for feed details] to get the details of the request. 
 
-### List action messages
+### Get request for feed details
 
-A controller uses this [Action Message List Endpoint]-call to get all open requests for feeds, see [List action messages request].
+The controller uses this request to get the details of a feed request, see [Get request for feed details request].
+
+The request for feed contains two lists of [Action Urls][Action], one by pid and one by connection url, which can be used to set or add the respective Server as a feed source, see [Set feed source] and/or [Add feed source].
+
+### List requests for feed
+
+A controller uses this [User Action Message List Endpoint]-call to get all open requests for feeds, see [List requests for feed request].
 
 ### Set feed source
 
-When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
-
-Controllers use [Set feed source request] to accept the request and set a source for the feed.
-
+Controllers use [Set feed source request] to accept a request for feed and set a source for the feed.
 
 ### Add feed source
 
-When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
-
-Controllers use [Add feed source request] to accept the request and set or add a source for the feed.
+Controllers use [Add feed source request] to accept a request for feed and add a source to the feed.
 
 
 # Annex A Dynamic Endpoint Addresses
 
 This annex describes the Dynamic Endpoint Addresses
 
-## Action Endpoint
+## User Action Message List Endpoint
 
-This endpoint can be used for [Set feed source] and [Add feed source].
-The current address of the endpoint is returned in the action messages returned by [List action messages] and [Get action message].
-
-## Action Message Endpoint
-
-This endpoint can be used for [Get action message].
-The current address of the endpoint is returned by [List action messages] and included in [User Action Message Event].
-
-## Action Message List Endpoint
-
-This endpoint can be used for [List action messages]. The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
+This endpoint can be used to list [User Action Messages][User Action Message], currently used for [List requests for feed].
+The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
 
 ## Connect Token Create Endpoint
 
@@ -588,7 +581,7 @@ This event is fired after [Get connection] when a connection has been establishe
 
 ## User Action Message Event
 
-This event is fired if and when a user action message is received, see for example [Set feed source].
+This event is fired if and when a [User Action Message] is received, see for example [Request for feed event].
 
 Example event
 
@@ -752,6 +745,10 @@ The call could return the following body:
 
 The schemas are defined in [openapi.json].
 
+## Action
+
+Actions are used to set or add a feed source, see [Set feed source] and/or [Add feed source].
+
 ## Feed
 
 See [openapi.json]#components/schemas/qiy-node-credential
@@ -795,16 +792,20 @@ with open(pem_filename, "wb") as f:
         )
 ```
 
+## User Action Message
+
+User Action Messages are used for request for feed events, see [Request for feed event].
+
+
 [Acceptance Url]: https://user.dolden.net/user/v0/api
 [Access feed]: #access-feed
 [Access feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feed
 [Access feeds]: #access-feeds
 [Access feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feeds
+[Action]: #action
 [Add feed source]: #add-feed-source
-[Add feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.add
-[Action Endpoint]: #action-endpoint
-[Action Message Endpoint]: #action-message-endpoint
-[Action Message List Endpoint]: #action-message-list-endpoint
+[Add feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20sources/Add%20feed%20source
+[User Action Message List Endpoint]: #user-action-message-list-endpoint
 [Annex A Dynamic Endpoint Addresses]: #annex-a-dynamic-endpoint-addresses
 [Annex B Events]: #annex-b-events
 [Annex C Callbacks]: #annex-c-callbacks
@@ -819,8 +820,9 @@ with open(pem_filename, "wb") as f:
 [Connection Endpoint]: #connection-endpoint
 [Connection Feeds Endpoint]: #connection-feeds-endpoint
 [Connection List Endpoint]: #connection-list-endpoint
-[Controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
-[controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
+[Controller]: https://fdriesenaar.github.io/Controller/openapi.html
+[controller]: https://fdriesenaar.github.io/Controller/openapi.html
+[Controller request for feed event]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/Request%20for%20feed%20event
 [Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [Data Reference Received-v2 Event]: #data-reference-received-v2-event
 [Definitions Access Provider]: ../Definitions.md#access-provider
@@ -862,8 +864,6 @@ with open(pem_filename, "wb") as f:
 [Feeds]: #feeds
 [Feeds Endpoint]: #feeds-endpoint
 [Get /api]: https://fdriesenaar.github.io/openapi.html
-[Get action message]: #get-action-message
-[Get action message request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.action%20message.get
 [Get connect token]: #get-connect-token
 [Get connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connect%20token.get
 [Get connection]: #get-connection
@@ -874,13 +874,13 @@ with open(pem_filename, "wb") as f:
 [Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.event%20callback%20endpoints.get
 [Get node settings]: #get-node-settings
 [Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.node%20settings.get
+[Get request for feed details request]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/Get%20request%20for%20feed%20details
 [Get service catalogue]: #get-service-catalogue
 [Get service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Get
-[Get user action message]: #get-user-action-message
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
-[List action messages]: #list-action-messages
-[List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.action%20messages.list
+[List requests for feed]: #list-requests-for-feed
+[List requests for feed request]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/List%20requests%20for%20feeds
 [List connect tokens]: #list-connect-tokens
 [List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20tokens.list
 [List connections]: #list-connections
@@ -912,6 +912,7 @@ with open(pem_filename, "wb") as f:
 [Request creation of Qiy Node]: #request-creation-of-qiy-node
 [Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
 [Request for feed]: #request-for-feed
+[Request for feed event]: #request-for-feed-event
 [Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed
 [RSA Private Key]: ../Definitions.md#rsa-private-key
 [Self Endpoint]: #self-endpoint
@@ -929,7 +930,7 @@ with open(pem_filename, "wb") as f:
 [Services Requests]: #services-request
 [Services Request request]: https://fdriesenaar.github.io/Server/openapi.html#Services/Request
 [Set feed source]: #set-feed-source
-[Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.set
+[Set feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20source/Set%20feed%20source
 [Set service catalogue]: #set-service-catalogue
 [Set service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Set
 [Set event callback endpoints]: #set-event-callback-endpoints
@@ -944,6 +945,7 @@ with open(pem_filename, "wb") as f:
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
 [Transport Password]: #qiy-node-credential
+[User Action Message]: #user-action-message
 [User Action Message Event]: #user-action-message-event
 [User Action Message Events]: #user-action-message-event
 [uuid]: ../Definitions.md#uuid
