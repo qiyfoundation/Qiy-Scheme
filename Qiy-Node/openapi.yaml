@@ -361,6 +361,9 @@ components:
     eventCallbacksResponse:
       content:
         application/json:
+          examples:
+            Feeds response:
+              $ref: '#/components/examples/feedsAccessResponse'
           schema:
             $ref: '#/components/schemas/eventCallbackEndpointUrls'
         examples:
