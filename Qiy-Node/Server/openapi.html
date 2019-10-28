@@ -1,0 +1,30 @@
+<html>
+    <head>    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@3.17.0/swagger-ui.css">
+        <script src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
+        <script>
+
+            function render() {
+                var ui = SwaggerUIBundle({
+		    tagsSorter: "alpha",
+                    url:  "https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/Server/openapi.yaml",
+                    dom_id: '#swagger-ui',
+		    deepLinking: true,
+                    presets: [
+                        SwaggerUIBundle.presets.apis,
+                        SwaggerUIBundle.SwaggerUIStandalonePreset
+                    ],
+                    plugins: [
+                      SwaggerUIBundle.plugins.DownloadUrl
+                    ]
+                });
+            }
+
+        </script>
+    </head>
+
+    <body onload="render()">
+        <div id="swagger-ui"></div>
+    </body>
+</html>
+

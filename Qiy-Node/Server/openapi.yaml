@@ -1,0 +1,343 @@
+components:
+  examples:
+    feedRequest:
+      value:
+        connection: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionUrl
+        mbox: https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/pid3dp1connectionMbox
+        message:
+          inbound: true
+          protocol: https://github.com/qiyfoundation/fiKks/tree/master/schema/v1
+          sent: false
+          serialNr: 6
+          text: Requesting 'test data'
+          thirdPartyRef: ' 4D0OqePJ1yKD41Q9qmixVnVFLWcJHFT1hhKDKG9FmeI='
+        pid: 1IqX94/EoOcD47hCvBQ+gi==
+    feedRequestResponse:
+      value:
+        feedId: 3J2UVSFIAH6X77HXR4MVHBVNG46GWT3M
+        protocol: https://github.com/qiyfoundation/payment-due-list/tree/master/schema/v1
+    serviceCatalogue:
+      value:
+        https://service-type-url.example:
+          method: POST
+          type: external
+          uri: https://feed-request-endpoint-url.example
+    servicesRequest:
+      value:
+        SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==:
+          input: Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==
+    servicesResponse:
+      value:
+        SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==:
+          error: null
+          metadata:
+            content-type: application/json
+          output: ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTM4LjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAzMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY1LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzA5Ljk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMjAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg2LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTc3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTI6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTExCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEyOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDk3CiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=
+        TkF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBQR==:
+          error: null
+          metadata:
+            content-type: application/json
+          output: ewogICAgIlNqRjFSRkJOYW0xNFJteEVjVzhyT1Zkek5rcEhkMVJaYUZkQlBRPT0iOiB7CiAgICAgICAgIm91dHB1dCI6ICJ7CiAgICAiYWN0aXZpdGllcy1oZWFydCI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJjdXN0b21IZWFydFJhdGVab25lcyI6IFtdLAogICAgICAgICAgICAiZGF0ZVRpbWUiOiAidG9kYXkiLAogICAgICAgICAgICAiaGVhcnRSYXRlWm9uZXMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMTQwLjgzNTEsCiAgICAgICAgICAgICAgICAgICAgIm1heCI6IDcwLAogICAgICAgICAgICAgICAgICAgICJtaW4iOiAyMCwKICAgICAgICAgICAgICAgICAgICAibWludXRlcyI6IDY2LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIk91dCBvZiBSYW5nZSIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgImNhbG9yaWVzT3V0IjogMzAwLjk2ODI0LAogICAgICAgICAgICAgICAgICAgICJtYXgiOiAxMTAsCiAgICAgICAgICAgICAgICAgICAgIm1pbiI6IDg3LAogICAgICAgICAgICAgICAgICAgICJtaW51dGVzIjogMTY3LAogICAgICAgICAgICAgICAgICAgICJuYW1lIjogIkZhdCBCdXJuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAogICAgICAgICAgICAidmFsdWUiOiAiMTAyLjI4IgogICAgICAgIH0KICAgIF0sCiAgICAiYWN0aXZpdGllcy1oZWFydC1pbnRyYWRheSI6IHsKICAgICAgICAiZGF0YXNldCI6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInRpbWUiOiAiMTM6MDA6MDAiLAogICAgICAgICAgICAgICAgInZhbHVlIjogMTIxCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0aW1lIjogIjEzOjAxOjAwIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6IDkwCiAgICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJkYXRhc2V0SW50ZXJ2YWwiOiAxLAogICAgICAgICJkYXRhc2V0VHlwZSI6ICJtaW51dGUiCiAgICB9Cn0=
+  responses:
+    default:
+      $ref: https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/responses/default
+    feedRequest:
+      content:
+        application/json:
+          examples:
+            feed:
+              $ref: '#/components/examples/feedRequestResponse'
+          schema:
+            $ref: '#/components/schemas/feedRequestResponse'
+      description: Feed request response
+    serviceCatalogue:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/serviceCatalogue'
+        examples:
+          example:
+            $ref: '#/components/examples/serviceCatalogue'
+      description: Service catalogue
+    services:
+      content:
+        application/json:
+          examples:
+            example:
+              $ref: '#/components/examples/servicesResponse'
+          schema:
+            $ref: '#/components/schemas/servicesResponse'
+      description: Services response
+  schemas:
+    feedRequest:
+      properties:
+        input:
+          default: null
+          description: Feed request body
+          format: base64-encoded byte array
+          maxItems: 1
+          minItems: 0
+          nullable: true
+          type: string
+        protocol:
+          description: Service type url
+          format: url
+          maxItems: 1
+          minItems: 1
+          type: string
+        text:
+          description: Feed request remark
+          maxItems: 1
+          minItems: 1
+          type: string
+      type: object
+    feedRequestResponse:
+      properties:
+        feedId:
+          maxItems: 1
+          minItems: 1
+          type: string
+        protocol:
+          description: Service type url
+          format: url
+          maxItems: 1
+          minItems: 1
+          type: string
+      type: object
+    serviceCatalogue:
+      description: Service catalogue entries by service type url as property name
+      properties:
+        https?://[a-z0-9]+([-./]?[a-z0-9])*:
+          properties:
+            method:
+              enum:
+              - GET
+              - POST
+              - PUT
+              - SET
+              type: string
+            type:
+              enum:
+              - external
+              - internal
+              type: string
+            uri:
+              description: Feed request endpoint url
+              format: url
+              type: string
+          type: object
+      type: object
+      x-patternProperties:
+        https?://[a-z0-9]+([-./]?[a-z0-9])*:
+          properties:
+            method:
+              enum:
+              - GET
+              - POST
+              - PUT
+              - SET
+              type: string
+            type:
+              enum:
+              - external
+              - internal
+              type: string
+            uri:
+              description: Feed request endpoint url
+              format: url
+              type: string
+          type: object
+    servicesRequest:
+      description: Service requests by feed id
+      properties:
+        '[\x00-\x7F]+':
+          properties:
+            input:
+              default: null
+              description: Service request body
+              format: base64-encoded byte array
+              maxItems: 1
+              minItems: 0
+              nullable: true
+              type: string
+          type: object
+      type: object
+      x-patternProperties:
+        '[\x00-\x7F]+':
+          properties:
+            input:
+              default: null
+              description: Optional body for the access request for the given feed
+                id
+              format: base64-encoded byte array
+              maxItems: 1
+              minItems: 0
+              nullable: true
+              type: string
+          type: object
+    servicesResponse:
+      properties:
+        $feedIdRex:
+          properties:
+            error:
+              maxItems: 1
+              minItems: 1
+              nullable: true
+              type: string
+            metadata:
+              maxItems: 1
+              minItems: 1
+              properties:
+                content-type:
+                  format: media type
+                  maxItems: 1
+                  minItems: 1
+                  type: string
+              type: object
+            output:
+              format: b64-encoded byte array
+              maxItems: 1
+              minItems: 1
+              type: string
+          type: object
+      type: object
+      x-patternProperties:
+        $feedIdRex:
+          properties:
+            error:
+              maxItems: 1
+              minItems: 1
+              nullable: true
+              type: string
+            metadata:
+              maxItems: 1
+              minItems: 1
+              properties:
+                content-type:
+                  format: media type
+                  maxItems: 1
+                  minItems: 1
+                  type: string
+              type: object
+            output:
+              format: b64-encoded byte array
+              maxItems: 1
+              minItems: 1
+              type: string
+          type: object
+  securitySchemes:
+    appAuthentication:
+      $ref: https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/schemas/appAuthentication
+    userAuthentication:
+      $ref: https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/schemas/userAuthentication
+info:
+  description: To get started with [this api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md),
+    you need a developer key. You can get it [here](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-desk)
+  externalDocs:
+    description: Find more info here
+    url: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md
+  license:
+    name: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+      Public License
+    url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  title: Qiy Node API - Server
+  version: 1.1.0
+openapi: 3.0.0
+paths:
+  /{ServiceAccessEndpointPath}:
+    post:
+      description: See [Services request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#services-request)
+      operationId: Request
+      requestBody:
+        content:
+          application/json:
+            examples:
+              example:
+                $ref: '#/components/examples/servicesRequest'
+            schema:
+              $ref: '#/components/schemas/servicesRequest'
+        required: true
+      responses:
+        '200':
+          $ref: '#/components/responses/services'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Services
+    servers:
+    - description: Service Access Endpoint
+      url: '{ServiceAccessEndpointBaseUrl}'
+      variables:
+        ServiceAccessEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-access-endpoint
+          description: See [Service Access Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-access-endpoint)
+  /{ServiceCatalogueEndpointPath}:
+    get:
+      description: See [Get service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-service-catalogue)
+      operationId: Get
+      responses:
+        '200':
+          $ref: '#/components/responses/serviceCatalogue'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Service catalogue
+    put:
+      description: See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)
+      operationId: Set
+      requestBody:
+        content:
+          application/json:
+            examples:
+              example:
+                $ref: '#/components/examples/serviceCatalogue'
+            schema:
+              $ref: '#/components/schemas/serviceCatalogue'
+        description: Service catalogue
+      responses:
+        '200':
+          $ref: '#/components/responses/serviceCatalogue'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Service catalogue
+    servers:
+    - description: Service Catalogue Endpoint
+      url: '{ServiceCatalogueEndpointBaseUrl}'
+      variables:
+        ServiceCatalogueEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint
+          description: See [Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint)
+  /{ServiceEndpointPath}:
+    post:
+      description: Feed request
+      externalDocs:
+        description: Find more info here
+        url: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-feed-request
+      operationId: Request
+      requestBody:
+        content:
+          application/json:
+            examples:
+              example:
+                $ref: '#/components/examples/feedRequest'
+            schema:
+              $ref: '#/components/schemas/feedRequest'
+        required: true
+      responses:
+        '201':
+          $ref: '#/components/responses/feedRequest'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Feeds
+    servers:
+    - description: Service Endpoint
+      url: '{ServiceEndpointBaseUrl}'
+      variables:
+        ServiceEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-endpoint
+          description: See [Service Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-endpoint)
+security:
+- appAuthentication: []
+- userAuthentication: []
