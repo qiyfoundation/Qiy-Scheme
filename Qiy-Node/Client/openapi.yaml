@@ -104,6 +104,12 @@ components:
       required: true
       schema:
         $ref: '#/components/schemas/feedId'
+    feedsEndpointPath:
+      description: Feeds Endpoint path, for example 'user/mgd_dev2/feeds' for the
+        Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/feeds'.
+      in: path
+      name: FeedsEndpointPath
+      required: true
     protocol:
       explode: true
       in: query
@@ -370,6 +376,12 @@ info:
 openapi: 3.0.0
 paths:
   /{ConnectionFeedsEndpointPath}:
+    parameters:
+    - description: Connection Feeds Endpoint path, for example 'user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds'
+        for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/'.
+      in: path
+      name: ConnectionFeedsEndpointPath
+      required: true
     post:
       description: See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)
       operationId: Request for feed
@@ -401,6 +413,12 @@ paths:
           default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-feeds-endpoint
           description: See [Connection Feeds Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-feeds-endpoint)
   /{FeedRequestCallbackEndpointPath}:
+    parameters:
+    - description: Feed Request Callback Endpoint path, for example 'qiy/request-for-feed'
+        for the Feed Request Callback Endpoint 'https://client.example.com/qiy/request-for-feed'.
+      in: path
+      name: FeedRequestCallbackEndpointPath
+      required: true
     post:
       requestBody:
         content:
@@ -436,6 +454,8 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Feeds
+    parameters:
+    - $ref: '#/components/parameters/feedsEndpointPath'
     post:
       description: See [Access feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feeds)
       operationId: Access feeds
@@ -463,6 +483,8 @@ paths:
           default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint
           description: See [Feeds Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#feeds-endpoint)
   /{FeedsEndpointPath}/{feedId}:
+    parameters:
+    - $ref: '#/components/parameters/feedsEndpointPath'
     post:
       description: See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feed)
       operationId: Request for feed callback

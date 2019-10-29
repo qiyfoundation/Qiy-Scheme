@@ -67,6 +67,14 @@
                         }
                     }
                 }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectionFeedsEndpointPath",
+                    "in": "path",
+                    "description": "Connection Feeds Endpoint path, for example 'user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds' for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/'.",
+                    "required": true
+                }
             ]
         },
         "/{FeedsEndpointPath}": {
@@ -131,6 +139,11 @@
                         }
                     }
                 }
+            ],
+            "parameters": [
+                {
+                    "$ref": "#/components/parameters/feedsEndpointPath"
+                }
             ]
         },
         "/{FeedsEndpointPath}/{feedId}": {
@@ -178,6 +191,11 @@
                         }
                     }
                 }
+            ],
+            "parameters": [
+                {
+                    "$ref": "#/components/parameters/feedsEndpointPath"
+                }
             ]
         },
         "/{FeedRequestCallbackEndpointPath}": {
@@ -216,6 +234,14 @@
                             "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback-endpoint"
                         }
                     }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "FeedRequestCallbackEndpointPath",
+                    "in": "path",
+                    "description": "Feed Request Callback Endpoint path, for example 'qiy/request-for-feed' for the Feed Request Callback Endpoint 'https://client.example.com/qiy/request-for-feed'.",
+                    "required": true
                 }
             ]
         }
@@ -555,6 +581,12 @@
                 "schema": {
                     "$ref": "#/components/schemas/feedId"
                 }
+            },
+            "feedsEndpointPath": {
+                "name": "FeedsEndpointPath",
+                "in": "path",
+                "description": "Feeds Endpoint path, for example 'user/mgd_dev2/feeds' for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/feeds'.",
+                "required": true
             },
             "protocol": {
                 "name": "protocol",
