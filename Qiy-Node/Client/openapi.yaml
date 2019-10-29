@@ -378,7 +378,7 @@ paths:
   /{ConnectionFeedsEndpointPath}:
     parameters:
     - description: Connection Feeds Endpoint path, for example 'user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds'
-        for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/'.
+        for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds'.
       in: path
       name: ConnectionFeedsEndpointPath
       required: true
@@ -404,7 +404,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - Feeds
+      - Requests for feeds
     servers:
     - description: Connection Feeds Endpoint
       url: '{ConnectionFeedsEndpointBaseUrl}'
@@ -420,6 +420,8 @@ paths:
       name: FeedRequestCallbackEndpointPath
       required: true
     post:
+      description: See [Client Feed Request Callback](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback)
+      operationId: Request for feed callback
       requestBody:
         content:
           application/json:
@@ -434,6 +436,8 @@ paths:
           $ref: '#/components/responses/feedRequestCallback'
         default:
           $ref: '#/components/responses/default'
+      tags:
+      - Requests for feeds
     servers:
     - description: Request for Feed callback endpoint
       url: '{FeedRequestCallbackEndpointBaseUrl}'
@@ -474,7 +478,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Feeds
+      - Feed access requests
     servers:
     - description: Feeds Endpoint
       url: '{FeedsEndpointBaseUrl}'
@@ -487,7 +491,7 @@ paths:
     - $ref: '#/components/parameters/feedsEndpointPath'
     post:
       description: See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feed)
-      operationId: Request for feed callback
+      operationId: Access feed
       parameters:
       - $ref: '#/components/parameters/feedId'
       requestBody:
@@ -505,7 +509,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Feeds
+      - Feed access requests
     servers:
     - description: Feeds Endpoint
       url: '{FeedsEndpointBaseUrl}'

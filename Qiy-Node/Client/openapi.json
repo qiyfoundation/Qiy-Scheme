@@ -17,7 +17,7 @@
         "/{ConnectionFeedsEndpointPath}": {
             "post": {
                 "tags": [
-                    "Feeds"
+                    "Requests for feeds"
                 ],
                 "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
                 "operationId": "Request for feed",
@@ -72,7 +72,59 @@
                 {
                     "name": "ConnectionFeedsEndpointPath",
                     "in": "path",
-                    "description": "Connection Feeds Endpoint path, for example 'user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds' for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/'.",
+                    "description": "Connection Feeds Endpoint path, for example 'user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds' for the Connection Feeds Endpoint 'https://dev2-user.testonly.digital-me.nl/user/mgd_dev2/connections/016706d0-b3c1-4104-b6de-aacdf33230c0/feeds'.",
+                    "required": true
+                }
+            ]
+        },
+        "/{FeedRequestCallbackEndpointPath}": {
+            "post": {
+                "tags": [
+                    "Requests for feeds"
+                ],
+                "description": "See [Client Feed Request Callback](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback)",
+                "operationId": "Request for feed callback",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/feedRequestCallback"
+                            },
+                            "examples": {
+                                "example": {
+                                    "$ref": "#/components/examples/feedRequestCallback"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/feedRequestCallback"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/default"
+                    }
+                }
+            },
+            "servers": [
+                {
+                    "description": "Request for Feed callback endpoint",
+                    "url": "{FeedRequestCallbackEndpointBaseUrl}",
+                    "variables": {
+                        "FeedRequestCallbackEndpointBaseUrl": {
+                            "description": "See [Client Feed Request Callback Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "FeedRequestCallbackEndpointPath",
+                    "in": "path",
+                    "description": "Feed Request Callback Endpoint path, for example 'qiy/request-for-feed' for the Feed Request Callback Endpoint 'https://client.example.com/qiy/request-for-feed'.",
                     "required": true
                 }
             ]
@@ -100,7 +152,7 @@
             },
             "post": {
                 "tags": [
-                    "Feeds"
+                    "Feed access requests"
                 ],
                 "description": "See [Access feeds](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feeds)",
                 "operationId": "Access feeds",
@@ -149,10 +201,10 @@
         "/{FeedsEndpointPath}/{feedId}": {
             "post": {
                 "tags": [
-                    "Feeds"
+                    "Feed access requests"
                 ],
                 "description": "See [Access feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#access-feed)",
-                "operationId": "Request for feed callback",
+                "operationId": "Access feed",
                 "parameters": [
                     {
                         "$ref": "#/components/parameters/feedId"
@@ -195,53 +247,6 @@
             "parameters": [
                 {
                     "$ref": "#/components/parameters/feedsEndpointPath"
-                }
-            ]
-        },
-        "/{FeedRequestCallbackEndpointPath}": {
-            "post": {
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/feedRequestCallback"
-                            },
-                            "examples": {
-                                "example": {
-                                    "$ref": "#/components/examples/feedRequestCallback"
-                                }
-                            }
-                        }
-                    },
-                    "required": true
-                },
-                "responses": {
-                    "200": {
-                        "$ref": "#/components/responses/feedRequestCallback"
-                    },
-                    "default": {
-                        "$ref": "#/components/responses/default"
-                    }
-                }
-            },
-            "servers": [
-                {
-                    "description": "Request for Feed callback endpoint",
-                    "url": "{FeedRequestCallbackEndpointBaseUrl}",
-                    "variables": {
-                        "FeedRequestCallbackEndpointBaseUrl": {
-                            "description": "See [Client Feed Request Callback Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback-endpoint)",
-                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#client-feed-request-callback-endpoint"
-                        }
-                    }
-                }
-            ],
-            "parameters": [
-                {
-                    "name": "FeedRequestCallbackEndpointPath",
-                    "in": "path",
-                    "description": "Feed Request Callback Endpoint path, for example 'qiy/request-for-feed' for the Feed Request Callback Endpoint 'https://client.example.com/qiy/request-for-feed'.",
-                    "required": true
                 }
             ]
         }
@@ -506,9 +511,6 @@
             }
         },
         "responses": {
-            "feedRequestCallback": {
-                "description": "Request for Feed Callback response"
-            },
             "default": {
                 "$ref": "https://raw.githubusercontent.com/qiyfoundation/Qiy-Scheme/review-board/Qiy-Node/openapi.json#/components/responses/default"
             },
@@ -556,6 +558,9 @@
                         }
                     }
                 }
+            },
+            "feedRequestCallback": {
+                "description": "Request for Feed Callback response"
             },
             "feedsAccessResponse": {
                 "description": "Feeds access response",
