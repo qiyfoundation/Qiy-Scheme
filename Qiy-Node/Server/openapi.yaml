@@ -245,6 +245,11 @@ info:
 openapi: 3.0.0
 paths:
   /{ServiceAccessEndpointPath}:
+    parameters:
+    - description: Service Access Endpoint path
+      in: path
+      name: ServiceAccessEndpointPath
+      required: true
     post:
       description: See [Service request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-request)
       operationId: Service request
@@ -282,6 +287,11 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Service catalogue
+    parameters:
+    - description: Service Catalogue Endpoint path
+      in: path
+      name: ServiceCatalogueEndpointPath
+      required: true
     put:
       description: See [Set service catalogue](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-service-catalogue)
       operationId: Set
@@ -309,6 +319,11 @@ paths:
           default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint
           description: See [Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint)
   /{ServiceEndpointPath}:
+    parameters:
+    - description: Service Endpoint path
+      in: path
+      name: ServiceEndpointPath
+      required: true
     post:
       description: See [Server Request for Feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-request-for-feed)
       operationId: Request for feed
