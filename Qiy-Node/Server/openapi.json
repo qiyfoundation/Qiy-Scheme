@@ -17,19 +17,19 @@
         "/{ServiceAccessEndpointPath}": {
             "post": {
                 "tags": [
-                    "Services"
+                    "Service requests"
                 ],
-                "description": "See [Services request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#services-request)",
-                "operationId": "Request",
+                "description": "See [Service request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-request)",
+                "operationId": "Service request",
                 "requestBody": {
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/servicesRequest"
+                                "$ref": "#/components/schemas/serviceRequest"
                             },
                             "examples": {
                                 "example": {
-                                    "$ref": "#/components/examples/servicesRequest"
+                                    "$ref": "#/components/examples/serviceRequest"
                                 }
                             }
                         }
@@ -120,9 +120,9 @@
         "/{ServiceEndpointPath}": {
             "post": {
                 "tags": [
-                    "Feeds"
+                    "Requests for feeds"
                 ],
-                "description": "Feed request",
+                "description": "Request for feed",
                 "externalDocs": {
                     "description": "Find more info here",
                     "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-feed-request"
@@ -212,7 +212,7 @@
                     }
                 }
             },
-            "servicesRequest": {
+            "serviceRequest": {
                 "description": "Service requests by feed id",
                 "type": "object",
                 "properties": {
@@ -457,7 +457,7 @@
                     }
                 }
             },
-            "servicesRequest": {
+            "serviceRequest": {
                 "value": {
                     "SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==": {
                         "input": "Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig=="

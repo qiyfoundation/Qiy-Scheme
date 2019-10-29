@@ -501,7 +501,7 @@ Note: This endpoint have to be whitelisted by the Access Provider before it can 
 
 ## Service Access Endpoint
 
-This endpoint is provided by a server to serve resources, see [Services Request].
+This endpoint is provided by a server to serve resources, see [Service Request].
 Its address is [Service Endpoint] appended with 'resolve'. 
 
 ## Service Catalogue Endpoint
@@ -676,9 +676,9 @@ The call could return the following body:
 }
 ```
 
-### Services Request
+### Service Request
 
-A server receives this [Service Access Endpoint]-callback after an [Access feed].
+A server receives this [Service Access Endpoint]-callback after an [Access feed] or [Access feeds]; despite its name it can combine service requests for different feeds.
 
 The body of the callback request may also contain access requests for more then one feed. 
 Also, an optional input parameter may be passed with the feed access request in the 'input'-member encoded as a base65-encoded byte array.
@@ -695,9 +695,9 @@ Also, an optional input parameter may be passed with the feed access request in 
 ```
 
 
-#### Services Request Example
+#### Service Request Example
 
-This python code-snippet can be used to simulate an Services Request:
+This python code-snippet can be used to simulate a Service Request:
 ```
 import requests
 url = 'https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dp1serviceEndpointUrl/resolve'
@@ -812,7 +812,7 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
 [Client Feed Request Callback]: #client-feed-request-callback
 [Client Feed Request Callback Endpoint]: #client-feed-request-callback-endpoint
-[Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Requests%20for%20feeds/Request%20for%20feed%20callback
+[Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed%20callback
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
@@ -926,9 +926,9 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
-[Services Request]: #services-request
-[Services Requests]: #services-request
-[Services Request request]: https://fdriesenaar.github.io/Server/openapi.html#Services/Request
+[Service Request]: #services-request
+[Service Requests]: #services-request
+[Service Request request]: https://fdriesenaar.github.io/Server/openapi.html#Services/Request
 [Set feed source]: #set-feed-source
 [Set feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20source/Set%20feed%20source
 [Set service catalogue]: #set-service-catalogue
