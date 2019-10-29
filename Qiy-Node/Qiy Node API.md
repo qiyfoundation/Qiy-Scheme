@@ -799,9 +799,9 @@ User Action Messages are used for request for feed events, see [Request for feed
 
 [Acceptance Url]: https://user.dolden.net/user/v0/api
 [Access feed]: #access-feed
-[Access feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feed
+[Access feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feed%20access%20requests/Access%20feed
 [Access feeds]: #access-feeds
-[Access feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feeds
+[Access feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feed%20access%20requests/Access%20feeds
 [Action]: #action
 [Add feed source]: #add-feed-source
 [Add feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20sources/Add%20feed%20source
@@ -812,7 +812,7 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
 [Client Feed Request Callback]: #client-feed-request-callback
 [Client Feed Request Callback Endpoint]: #client-feed-request-callback-endpoint
-[Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed%20callback
+[Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Requests%20for%20feeds/Request%20for%20feed%20callback
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
@@ -913,7 +913,7 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
 [Request for feed]: #request-for-feed
 [Request for feed event]: #request-for-feed-event
-[Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed
+[Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
 [RSA Private Key]: ../Definitions.md#rsa-private-key
 [Self Endpoint]: #self-endpoint
 [Send message]: #send-message
