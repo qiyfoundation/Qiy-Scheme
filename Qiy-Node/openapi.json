@@ -131,60 +131,6 @@
                 }
             }
         },
-        "/ConnectionFeedsEndpoint": {
-            "post": {
-                "tags": [
-                    "client.feed.request"
-                ],
-                "description": "See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)",
-                "operationId": "Request for feed",
-                "x-url": "$ConnectionFeedsEndpointUrl",
-                "requestBody": {
-                    "description": "Feed request details",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/feedRequest"
-                            },
-                            "examples": {
-                                "example": {
-                                    "$ref": "#/components/examples/feedRequest"
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "$ref": "#/components/responses/feedRequestResponse"
-                    },
-                    "default": {
-                        "$ref": "#/components/responses/default"
-                    }
-                },
-                "callbacks": {
-                    "dataReferenceReceivedv2": {
-                        "$ref": "#/components/callbacks/dataReferenceReceivedv2"
-                    }
-                },
-                "x-events": {
-                    "dataReferenceReceivedv2": {
-                        "$ref": "#/components/x-events/dataReferenceReceivedv2"
-                    }
-                },
-                "security": [
-                    {
-                        "appAuthentication": []
-                    },
-                    {
-                        "transportAuthentication": []
-                    },
-                    {
-                        "userAuthentication": []
-                    }
-                ]
-            }
-        },
         "/ConnectionListEndpoint": {
             "get": {
                 "tags": [

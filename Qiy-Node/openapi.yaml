@@ -974,37 +974,6 @@ paths:
       - controller.connection.get
       - server.connection.get
       x-url: $ConnectionEndpointUrl
-  /ConnectionFeedsEndpoint:
-    post:
-      callbacks:
-        dataReferenceReceivedv2:
-          $ref: '#/components/callbacks/dataReferenceReceivedv2'
-      description: See [Request for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-for-feed)
-      operationId: Request for feed
-      requestBody:
-        content:
-          application/json:
-            examples:
-              example:
-                $ref: '#/components/examples/feedRequest'
-            schema:
-              $ref: '#/components/schemas/feedRequest'
-        description: Feed request details
-      responses:
-        '201':
-          $ref: '#/components/responses/feedRequestResponse'
-        default:
-          $ref: '#/components/responses/default'
-      security:
-      - appAuthentication: []
-      - transportAuthentication: []
-      - userAuthentication: []
-      tags:
-      - client.feed.request
-      x-events:
-        dataReferenceReceivedv2:
-          $ref: '#/components/x-events/dataReferenceReceivedv2'
-      x-url: $ConnectionFeedsEndpointUrl
   /ConnectionListEndpoint:
     get:
       description: See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connections)
