@@ -122,12 +122,8 @@
                 "tags": [
                     "Requests for feeds"
                 ],
-                "description": "Request for feed",
-                "externalDocs": {
-                    "description": "Find more info here",
-                    "url": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-feed-request"
-                },
-                "operationId": "Request",
+                "description": "See [Server Request for Feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-request-for-feed)",
+                "operationId": "Request for feed",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -501,3 +497,4 @@
         }
     ]
 }
+
