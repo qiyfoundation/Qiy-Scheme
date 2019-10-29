@@ -61,7 +61,7 @@
                 {
                     "name": "ServiceAccessEndpointPath",
                     "in": "path",
-                    "description": "Service Access Endpoint path",
+                    "description": "Service Access Endpoint path, for example 'qiy/resolve' for the endpoint 'https://server.example.com/qiy/resolve'.",
                     "required": true
                 }
             ]
@@ -128,7 +128,7 @@
                 {
                     "name": "ServiceCatalogueEndpointPath",
                     "in": "path",
-                    "description": "Service Catalogue Endpoint path",
+                    "description": "Service Catalogue Endpoint path, for example 'user/servicecatalog/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/servicecatalog/mgd_dev2'.",
                     "required": true
                 }
             ]
@@ -180,7 +180,7 @@
                 {
                     "name": "ServiceEndpointPath",
                     "in": "path",
-                    "description": "Service Endpoint path",
+                    "description": "Service Endpoint path, for example 'qiy' for the endpoint 'https://server.example.com/qiy'.",
                     "required": true
                 }
             ]
@@ -521,4 +521,3 @@
         }
     ]
 }
-

@@ -246,7 +246,8 @@ openapi: 3.0.0
 paths:
   /{ServiceAccessEndpointPath}:
     parameters:
-    - description: Service Access Endpoint path
+    - description: Service Access Endpoint path, for example 'qiy/resolve' for the
+        endpoint 'https://server.example.com/qiy/resolve'.
       in: path
       name: ServiceAccessEndpointPath
       required: true
@@ -288,7 +289,8 @@ paths:
       tags:
       - Service catalogue
     parameters:
-    - description: Service Catalogue Endpoint path
+    - description: Service Catalogue Endpoint path, for example 'user/servicecatalog/mgd_dev2'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/servicecatalog/mgd_dev2'.
       in: path
       name: ServiceCatalogueEndpointPath
       required: true
@@ -320,7 +322,7 @@ paths:
           description: See [Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint)
   /{ServiceEndpointPath}:
     parameters:
-    - description: Service Endpoint path
+    - description: Service Endpoint path, for example 'qiy' for the endpoint 'https://server.example.com/qiy'.
       in: path
       name: ServiceEndpointPath
       required: true
