@@ -218,9 +218,6 @@
                 "x-events": {
                     "stateHandled": {
                         "$ref": "#/components/x-events/stateHandled"
-                    },
-                    "userActionMessage": {
-                        "$ref": "#/components/x-events/userActionMessage"
                     }
                 },
                 "security": [
@@ -1675,25 +1672,6 @@
                     "schema": {
                         "$ref": "#/components/schemas/stateHandledEvent"
                     }
-                }
-            },
-            "userActionMessage": {
-                "description": "See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)",
-                "event": "USER_ACTION_MESSAGE",
-                "data": {
-                    "schema": {
-                        "$ref": "#/components/schemas/userActionMessageEvent"
-                    },
-                    "examples": {
-                        "example": {
-                            "type": "USER_ACTION_MESSAGE",
-                            "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
-                            "extraData": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4"
-                        }
-                    }
-                },
-                "examples": {
-                    "example": "event: USER_ACTION_MESSAGE\ndata: { \"type\": \"USER_ACTION_MESSAGE\", \"connectionUrl\": \"https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e\", \"extraData\": \"https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4\"}\n"
                 }
             }
         }

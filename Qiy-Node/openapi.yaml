@@ -827,24 +827,6 @@ components:
           $ref: '#/components/schemas/stateHandledEvent'
       description: See [State Handled Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#state-handled-event)
       event: STATE_HANDLED
-    userActionMessage:
-      data:
-        examples:
-          example:
-            connectionUrl: https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
-            extraData: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4
-            type: USER_ACTION_MESSAGE
-        schema:
-          $ref: '#/components/schemas/userActionMessageEvent'
-      description: See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)
-      event: USER_ACTION_MESSAGE
-      examples:
-        example: 'event: USER_ACTION_MESSAGE
-
-          data: { "type": "USER_ACTION_MESSAGE", "connectionUrl": "https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e",
-          "extraData": "https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4"}
-
-          '
 info:
   description: To get started with [this api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md),
     you need a developer key. You can get it [here](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-desk)
@@ -897,8 +879,6 @@ paths:
       x-events:
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
-        userActionMessage:
-          $ref: '#/components/x-events/userActionMessage'
       x-url: $ConnectTokenCreateEndpointUrl
   /ConnectTokenEndpoint:
     get:
