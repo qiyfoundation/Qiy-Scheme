@@ -904,7 +904,6 @@ paths:
       x-events:
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
-      x-url: $ConnectTokenCreateEndpointUrl
     servers:
     - description: Connect Token Create Endpoint
       url: '{ConnectTokenCreateEndpointBaseUrl}'
@@ -923,7 +922,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Connect tokens
-      x-url: $ConnectTokenListEndpointUrl
     parameters:
     - description: Connect Token List Endpoint path, for example 'user/connecttokens/mgd_dev2'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2'.
@@ -948,7 +946,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Connect tokens
-      x-url: $ConnectTokenEndpointUrl
     parameters:
     - description: Connection Url path, for example 'user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'.
@@ -997,7 +994,6 @@ paths:
           $ref: '#/components/x-events/routingFailed'
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
-      x-url: $ConnectionCreateEndpointUrl
     servers:
     - description: Connection Create Endpoint
       url: '{ConnectionCreateEndpointBaseUrl}'
@@ -1016,7 +1012,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Connections
-      x-url: $ConnectionListEndpointUrl
     parameters:
     - description: Connection List Endpoint path, for example 'user/connections/user/mgd_dev2'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2'.
@@ -1041,7 +1036,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Connections
-      x-url: $ConnectionEndpointUrl
     parameters:
     - description: Connection Url path, for example 'user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
@@ -1066,7 +1060,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Event callback endpoints
-      x-url: $EventCallbacksEndpointUrl
     parameters:
     - description: Event Callbacks Endpoint path, for example 'user/nodesettings/mgd_dev2/eventcallbacks'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2/eventcallbacks'.
@@ -1092,7 +1085,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Event callback endpoints
-      x-url: $EventCallbacksEndpointUrl
     servers:
     - description: Event Callbacks Endpoint
       url: '{EventCallbacksEndpointBaseUrl}'
@@ -1111,7 +1103,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Events
-      x-url: $EventsEndpointUrl
     parameters:
     - description: Events Endpoint path, for example 'user/events/mgd_dev2' for the
         endpoint 'https://dev2-user.testonly.digital-me.nl/user/events/mgd_dev2'.
@@ -1140,7 +1131,6 @@ paths:
       - userAuthentication: []
       tags:
       - Messages
-      x-url: $MessagesEndpointUrl
     parameters:
     - description: Messages Endpoint path, for example 'user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
@@ -1169,7 +1159,6 @@ paths:
       - userAuthentication: []
       tags:
       - Messages
-      x-url: $MessagesEndpointUrl
     servers:
     - description: Messages
       url: '{MessagesEndpointBaseUrl}'
@@ -1205,7 +1194,6 @@ paths:
       - appAuthentication: []
       tags:
       - Qiy Nodes
-      x-url: $NodeCreateEndpointUrl
     servers:
     - description: NodeCreate Endpoint
       url: '{NodeCreateEndpointBaseUrl}'
@@ -1224,7 +1212,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Qiy Nodes
-      x-url: $NodeSettingsEndpointUrl
     parameters:
     - description: Node Settings Endpoint path, for example 'user/nodesettings/mgd_dev2'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2'.
@@ -1250,7 +1237,6 @@ paths:
           $ref: '#/components/responses/default'
       tags:
       - Qiy Nodes
-      x-url: $NodeSettingsEndpointUrl
     servers:
     - description: Node Settings Endpoint
       url: '{NodeSettingsEndpointBaseUrl}'
@@ -1273,7 +1259,6 @@ paths:
       - userAuthentication: []
       tags:
       - Qiy Nodes
-      x-url: $SelfEndpointUrl
     parameters:
     - description: Self Endpoint path, for example 'user/owners/id/mgd_dev2' for the
         endpoint 'https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2'.
