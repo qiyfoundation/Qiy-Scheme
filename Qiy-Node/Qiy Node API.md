@@ -845,7 +845,7 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Definitions Service Type]: ../Definitions.md#service-type
 [Definitions Service]: ../Definitions.md#service
 [Definitions Transport Authentication]: ../Definitions.md#transport-authentication
-[Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.delete
+[Delete Qiy Node request]: https://fdriesenaar.github.io/openapi.html#/Qiy%20Nodes/Delete%20Qiy%20Node
 [Delete Qiy Node]: #delete-qiy-node
 [Dev2 Url]: https://dev2-user.testonly.digital-me.nl/user/v0/api
 [DigitalMe]: https://digital-me.nl/
@@ -859,28 +859,28 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Feeds Endpoint]: #feeds-endpoint
 [Feeds]: #feeds
 [Get /api]: https://fdriesenaar.github.io/openapi.html
-[Get connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connect%20token.get
+[Get connect token request]: https://fdriesenaar.github.io/openapi.html#/Connect%20tokens/Get%20connect%20token
 [Get connect token]: #get-connect-token
-[Get connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.get
+[Get connection request]: https://fdriesenaar.github.io/openapi.html#/Connections/Get%20connection
 [Get connection]: #get-connection
 [Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.html#/api/api
 [Get endpoint addresses]: #get-endpoint-addresses
-[Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.event%20callback%20endpoints.get
+[Get event callback endpoints request]: https://fdriesenaar.github.io/openapi.html#/Event%20callback%20endpoints/Get%20event%20callback%20endpoints
 [Get event callback endpoints]: #get-event-callback-endpoints
-[Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.node%20settings.get
+[Get node settings request]: https://fdriesenaar.github.io/openapi.html#/Qiy%20Nodes/Get%20node%20settings
 [Get node settings]: #get-node-settings
 [Get request for feed details request]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/Get%20request%20for%20feed%20details
 [Get service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Get
 [Get service catalogue]: #get-service-catalogue
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
-[List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20tokens.list
+[List connect tokens request]: https://fdriesenaar.github.io/openapi.html#/Connect%20tokens/List%20connect%20tokens
 [List connect tokens]: #list-connect-tokens
-[List connections request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connections.list
+[List connections request]: https://fdriesenaar.github.io/openapi.html#/Connections/List%20connections
 [List connections]: #list-connections
 [List feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/List%20feeds
 [List feeds]: #list-feeds
-[List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/client.messages.list
+[List messages request]: https://fdriesenaar.github.io/openapi.html#/Messages/List%20messages
 [List messages]: #list-messages
 [List requests for feed request]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/List%20requests%20for%20feeds
 [List requests for feed]: #list-requests-for-feed
@@ -898,19 +898,19 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
 [RSA Private Key]: ../Definitions.md#rsa-private-key
-[Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.register
+[Register connect token request]: https://fdriesenaar.github.io/openapi.html#/Connect%20tokens/Request%20or%20register%20connect%20token
 [Register connect token]: #register-connect-token
-[Request connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.request
+[Request connect token request]: https://fdriesenaar.github.io/openapi.html#/Connect%20tokens/Request%20or%20register%20connect%20token
 [Request connect token]: #request-connect-token
-[Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.request
+[Request connection request]: https://fdriesenaar.github.io/openapi.html#/Connections/Request%20connection
 [Request connection]: #request-connection
-[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
+[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi.html#/Qiy%20Nodes/Request%20creation%20of%20Qiy%20Node
 [Request creation of Qiy Node]: #request-creation-of-qiy-node
 [Request for feed event]: #request-for-feed-event
 [Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
 [Request for feed]: #request-for-feed
 [Self Endpoint]: #self-endpoint
-[Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/client.message.send
+[Send message request]: https://fdriesenaar.github.io/openapi.html#/Messages/Send%20message
 [Send message]: #send-message
 [Server Request for Feed request]: https://fdriesenaar.github.io/Server/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
 [Server Request for Feed]: #server-feed-request
@@ -923,15 +923,15 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Service Request]: #services-request
 [Service Requests]: #service-request
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
-[Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.event%20callback%20endpoints.set
+[Set event callback endpoints request]: https://fdriesenaar.github.io/openapi.html#/Event%20callback%20endpoints/Set%20event%20callback%20endpoints
 [Set event callback endpoints]: #set-event-callback-endpoints
 [Set feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20source/Set%20feed%20source
 [Set feed source]: #set-feed-source
-[Set node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.node%20settings.set
+[Set node settings request]: https://fdriesenaar.github.io/openapi.html#/Qiy%20Nodes/Set%20node%20settings
 [Set node settings]: #set-node-settings
 [Set service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Set
 [Set service catalogue]: #set-service-catalogue
-[Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.events
+[Start listening to events request]: https://fdriesenaar.github.io/openapi.html#/Events/Start%20listening%20to%20events
 [Start listening to events]: #start-listening-to-events
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint
 [State Handled Callback]: #state-handled-callback

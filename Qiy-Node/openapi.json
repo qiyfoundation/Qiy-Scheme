@@ -60,9 +60,7 @@
         "/{ConnectionCreateEndpointPath}": {
             "post": {
                 "tags": [
-                    "client.connection.request",
-                    "controller.connection.request",
-                    "server.connection.request"
+                    "Connections"
                 ],
                 "description": "See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-connection)",
                 "operationId": "Request connection",
@@ -134,9 +132,7 @@
         "/{ConnectionUrlPath}": {
             "get": {
                 "tags": [
-                    "client.connection.get",
-                    "controller.connection.get",
-                    "server.connection.get"
+                    "Connections"
                 ],
                 "description": "See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connection)",
                 "operationId": "Get connection",
@@ -174,9 +170,7 @@
         "/{ConnectionListEndpointPath}": {
             "get": {
                 "tags": [
-                    "client.connections.list",
-                    "controller.connections.list",
-                    "server.connections.list"
+                    "Connections"
                 ],
                 "description": "See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connections)",
                 "operationId": "List connections",
@@ -214,9 +208,7 @@
         "/{ConnectTokenUrlPath}": {
             "get": {
                 "tags": [
-                    "client.connect token.get",
-                    "controller.connect token.get",
-                    "server.connect token.get"
+                    "Connect tokens"
                 ],
                 "description": "See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)",
                 "operationId": "Get connect token",
@@ -254,12 +246,7 @@
         "/{ConnectTokenCreateEndpointPath}": {
             "post": {
                 "tags": [
-                    "client.connect token.register",
-                    "controller.connect token.register",
-                    "server.connect token.register",
-                    "client.connect token.request",
-                    "controller.connect token.request",
-                    "server.connect token.request"
+                    "Connect tokens"
                 ],
                 "description": "See [Request connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-connect-token) or [Register connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#register-connect-token)",
                 "operationId": "Request or register connect token",
@@ -336,9 +323,7 @@
         "/{ConnectTokenListEndpointPath}": {
             "get": {
                 "tags": [
-                    "client.connect tokens.list",
-                    "controller.connect tokens.list",
-                    "server.connect tokens.list"
+                    "Connect tokens"
                 ],
                 "description": "See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)",
                 "operationId": "List connect tokens",
@@ -376,8 +361,7 @@
         "/{EventCallbacksEndpointPath}": {
             "put": {
                 "tags": [
-                    "client.configuration.event callback endpoints.set",
-                    "server.configuration.event callback endpoints.set"
+                    "Event callback endpoints"
                 ],
                 "description": "See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)",
                 "operationId": "Set event callback endpoints",
@@ -408,8 +392,7 @@
             },
             "get": {
                 "tags": [
-                    "client.configuration.event callback endpoints.get",
-                    "server.configuration.event callback endpoints.get"
+                    "Event callback endpoints"
                 ],
                 "description": "See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)",
                 "operationId": "Get event callback endpoints",
@@ -447,7 +430,7 @@
         "/{EventsEndpointPath}": {
             "get": {
                 "tags": [
-                    "controller.events"
+                    "Events"
                 ],
                 "description": "See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)",
                 "operationId": "Start listening to events",
@@ -485,9 +468,7 @@
         "/{MessagesEndpointPath}": {
             "get": {
                 "tags": [
-                    "client.messages.list",
-                    "controller.messages.list",
-                    "server.messages.list"
+                    "Messages"
                 ],
                 "description": "See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-messages)",
                 "operationId": "List messages",
@@ -514,9 +495,7 @@
             },
             "post": {
                 "tags": [
-                    "client.message.send",
-                    "controller.message.send",
-                    "server.message.send"
+                    "Messages"
                 ],
                 "description": "See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#send-message)",
                 "operationId": "Send message",
@@ -579,7 +558,7 @@
         "/{NodeCreateEndpointPath}": {
             "post": {
                 "tags": [
-                    "controller.node.request"
+                    "Qiy Nodes"
                 ],
                 "description": "See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)",
                 "operationId": "Request creation of Qiy Node",
@@ -637,9 +616,7 @@
         "/{NodeSettingsEndpointPath}": {
             "get": {
                 "tags": [
-                    "client.configuration.node settings.get",
-                    "controller.configuration.node settings.get",
-                    "server.configuration.node settings.get"
+                    "Qiy Nodes"
                 ],
                 "description": "See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)",
                 "operationId": "Get node settings",
@@ -655,9 +632,7 @@
             },
             "put": {
                 "tags": [
-                    "client.configuration.node settings.set",
-                    "controller.configuration.node settings.set",
-                    "server.configuration.node settings.set"
+                    "Qiy Nodes"
                 ],
                 "description": "See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)",
                 "operationId": "Set node settings",
@@ -710,7 +685,7 @@
         "/{SelfEndpointPath}": {
             "delete": {
                 "tags": [
-                    "controller.node.delete"
+                    "Qiy Nodes"
                 ],
                 "description": "See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)",
                 "operationId": "Delete Qiy Node",

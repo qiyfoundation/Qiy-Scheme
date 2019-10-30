@@ -900,12 +900,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.connect token.register
-      - controller.connect token.register
-      - server.connect token.register
-      - client.connect token.request
-      - controller.connect token.request
-      - server.connect token.request
+      - Connect tokens
       x-events:
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
@@ -927,9 +922,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connect tokens.list
-      - controller.connect tokens.list
-      - server.connect tokens.list
+      - Connect tokens
       x-url: $ConnectTokenListEndpointUrl
     parameters:
     - description: Connect Token List Endpoint path, for example 'user/connecttokens/mgd_dev2'
@@ -954,9 +947,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connect token.get
-      - controller.connect token.get
-      - server.connect token.get
+      - Connect tokens
       x-url: $ConnectTokenEndpointUrl
     parameters:
     - description: Connection Url path, for example 'user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'
@@ -1000,9 +991,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.connection.request
-      - controller.connection.request
-      - server.connection.request
+      - Connections
       x-events:
         routingFailed:
           $ref: '#/components/x-events/routingFailed'
@@ -1026,9 +1015,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connections.list
-      - controller.connections.list
-      - server.connections.list
+      - Connections
       x-url: $ConnectionListEndpointUrl
     parameters:
     - description: Connection List Endpoint path, for example 'user/connections/user/mgd_dev2'
@@ -1053,9 +1040,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connection.get
-      - controller.connection.get
-      - server.connection.get
+      - Connections
       x-url: $ConnectionEndpointUrl
     parameters:
     - description: Connection Url path, for example 'user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
@@ -1080,8 +1065,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.event callback endpoints.get
-      - server.configuration.event callback endpoints.get
+      - Event callback endpoints
       x-url: $EventCallbacksEndpointUrl
     parameters:
     - description: Event Callbacks Endpoint path, for example 'user/nodesettings/mgd_dev2/eventcallbacks'
@@ -1107,8 +1091,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.event callback endpoints.set
-      - server.configuration.event callback endpoints.set
+      - Event callback endpoints
       x-url: $EventCallbacksEndpointUrl
     servers:
     - description: Event Callbacks Endpoint
@@ -1127,7 +1110,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - controller.events
+      - Events
       x-url: $EventsEndpointUrl
     parameters:
     - description: Events Endpoint path, for example 'user/events/mgd_dev2' for the
@@ -1156,9 +1139,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.messages.list
-      - controller.messages.list
-      - server.messages.list
+      - Messages
       x-url: $MessagesEndpointUrl
     parameters:
     - description: Messages Endpoint path, for example 'user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
@@ -1187,9 +1168,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.message.send
-      - controller.message.send
-      - server.message.send
+      - Messages
       x-url: $MessagesEndpointUrl
     servers:
     - description: Messages
@@ -1225,7 +1204,7 @@ paths:
       security:
       - appAuthentication: []
       tags:
-      - controller.node.request
+      - Qiy Nodes
       x-url: $NodeCreateEndpointUrl
     servers:
     - description: NodeCreate Endpoint
@@ -1244,9 +1223,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.node settings.get
-      - controller.configuration.node settings.get
-      - server.configuration.node settings.get
+      - Qiy Nodes
       x-url: $NodeSettingsEndpointUrl
     parameters:
     - description: Node Settings Endpoint path, for example 'user/nodesettings/mgd_dev2'
@@ -1272,9 +1249,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.node settings.set
-      - controller.configuration.node settings.set
-      - server.configuration.node settings.set
+      - Qiy Nodes
       x-url: $NodeSettingsEndpointUrl
     servers:
     - description: Node Settings Endpoint
@@ -1297,7 +1272,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - controller.node.delete
+      - Qiy Nodes
       x-url: $SelfEndpointUrl
     parameters:
     - description: Self Endpoint path, for example 'user/owners/id/mgd_dev2' for the
