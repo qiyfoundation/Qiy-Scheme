@@ -1283,7 +1283,7 @@ paths:
         NodeSettingsEndpointBaseUrl:
           default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint
           description: See [Node Settings Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint)
-  /{QiyNodeUrlPath}:
+  /{SelfEndpointPath}:
     delete:
       description: See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)
       operationId: Delete Qiy Node
@@ -1300,18 +1300,18 @@ paths:
       - controller.node.delete
       x-url: $SelfEndpointUrl
     parameters:
-    - description: Qiy Node Url path, for example 'user/owners/id/mgd_dev2' for the
-        url 'https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2'.
+    - description: Self Endpoint path, for example 'user/owners/id/mgd_dev2' for the
+        endpoint 'https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2'.
       in: path
-      name: QiyNodeUrlPath
+      name: SelfEndpointPath
       required: true
     servers:
-    - description: Qiy Node Url
-      url: '{QiyNodeBaseUrl}'
+    - description: SelfEndpoint
+      url: '{SelfEndpointBaseUrl}'
       variables:
-        QiyNodeBaseUrl:
-          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#qiy-node-url
-          description: See [Qiy Node Url](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#qiy-node-url)
+        SelfEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint
+          description: See [Self Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint)
 security:
 - appAuthentication: []
 - userAuthentication: []

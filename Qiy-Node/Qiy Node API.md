@@ -245,7 +245,7 @@ This [Node Settings Endpoint]-call can be used to change the node settings, see 
 
 ## Delete Qiy Node
 
-This call can be used to delete a Qiy Node, see [Delete Qiy Node request].
+This [Self Endpoint]-call can be used to delete a Qiy Node, see [Delete Qiy Node request].
 
 
 # Services
@@ -477,6 +477,10 @@ This endpoint is deprecated.
 ## References Endpoint
 
 This endpoint is deprecated.
+
+## Self Endpoint
+
+This endpoint can be used for [Delete Qiy Node]. The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
 
 ## Service Endpoint
 
@@ -783,10 +787,6 @@ with open(pem_filename, "wb") as f:
         )
 ```
 
-## Qiy Node Url
-
-A Qiy Node is the digital identity for a person or an organisation and can be identified with a Qiy Node Url which is returned in the 'links.self'-property in the [Get endpoint addresses].
-
 ## User Action Message
 
 User Action Messages are used for request for feed events, see [Request for feed event].
@@ -909,6 +909,7 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Request for feed event]: #request-for-feed-event
 [Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
 [Request for feed]: #request-for-feed
+[Self Endpoint]: #self-endpoint
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/client.message.send
 [Send message]: #send-message
 [Server Request for Feed request]: https://fdriesenaar.github.io/Server/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
