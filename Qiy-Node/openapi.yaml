@@ -900,16 +900,10 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.connect token.register
-      - controller.connect token.register
-      - server.connect token.register
-      - client.connect token.request
-      - controller.connect token.request
-      - server.connect token.request
+      - Connect tokens
       x-events:
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
-      x-url: $ConnectTokenCreateEndpointUrl
     servers:
     - description: Connect Token Create Endpoint
       url: '{ConnectTokenCreateEndpointBaseUrl}'
@@ -927,10 +921,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connect tokens.list
-      - controller.connect tokens.list
-      - server.connect tokens.list
-      x-url: $ConnectTokenListEndpointUrl
+      - Connect tokens
     parameters:
     - description: Connect Token List Endpoint path, for example 'user/connecttokens/mgd_dev2'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2'.
@@ -954,10 +945,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connect token.get
-      - controller.connect token.get
-      - server.connect token.get
-      x-url: $ConnectTokenEndpointUrl
     parameters:
     - description: Connection Url path, for example 'user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'.
@@ -1000,15 +987,12 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.connection.request
-      - controller.connection.request
-      - server.connection.request
+      - Connections
       x-events:
         routingFailed:
           $ref: '#/components/x-events/routingFailed'
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
-      x-url: $ConnectionCreateEndpointUrl
     servers:
     - description: Connection Create Endpoint
       url: '{ConnectionCreateEndpointBaseUrl}'
@@ -1026,10 +1010,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connections.list
-      - controller.connections.list
-      - server.connections.list
-      x-url: $ConnectionListEndpointUrl
+      - Connections
     parameters:
     - description: Connection List Endpoint path, for example 'user/connections/user/mgd_dev2'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2'.
@@ -1053,10 +1034,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.connection.get
-      - controller.connection.get
-      - server.connection.get
-      x-url: $ConnectionEndpointUrl
     parameters:
     - description: Connection Url path, for example 'user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
@@ -1080,9 +1057,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.event callback endpoints.get
-      - server.configuration.event callback endpoints.get
-      x-url: $EventCallbacksEndpointUrl
+      - Event callback endpoints
     parameters:
     - description: Event Callbacks Endpoint path, for example 'user/nodesettings/mgd_dev2/eventcallbacks'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2/eventcallbacks'.
@@ -1107,9 +1082,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.event callback endpoints.set
-      - server.configuration.event callback endpoints.set
-      x-url: $EventCallbacksEndpointUrl
     servers:
     - description: Event Callbacks Endpoint
       url: '{EventCallbacksEndpointBaseUrl}'
@@ -1127,8 +1099,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - controller.events
-      x-url: $EventsEndpointUrl
+      - Events
     parameters:
     - description: Events Endpoint path, for example 'user/events/mgd_dev2' for the
         endpoint 'https://dev2-user.testonly.digital-me.nl/user/events/mgd_dev2'.
@@ -1156,10 +1127,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.messages.list
-      - controller.messages.list
-      - server.messages.list
-      x-url: $MessagesEndpointUrl
+      - Messages
     parameters:
     - description: Messages Endpoint path, for example 'user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
@@ -1187,10 +1155,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - client.message.send
-      - controller.message.send
-      - server.message.send
-      x-url: $MessagesEndpointUrl
+      - Messages
     servers:
     - description: Messages
       url: '{MessagesEndpointBaseUrl}'
@@ -1225,8 +1190,7 @@ paths:
       security:
       - appAuthentication: []
       tags:
-      - controller.node.request
-      x-url: $NodeCreateEndpointUrl
+      - Qiy Nodes
     servers:
     - description: NodeCreate Endpoint
       url: '{NodeCreateEndpointBaseUrl}'
@@ -1244,10 +1208,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.node settings.get
-      - controller.configuration.node settings.get
-      - server.configuration.node settings.get
-      x-url: $NodeSettingsEndpointUrl
+      - Qiy Nodes
     parameters:
     - description: Node Settings Endpoint path, for example 'user/nodesettings/mgd_dev2'
         for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2'.
@@ -1272,10 +1233,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - client.configuration.node settings.set
-      - controller.configuration.node settings.set
-      - server.configuration.node settings.set
-      x-url: $NodeSettingsEndpointUrl
+      - Qiy Nodes
     servers:
     - description: Node Settings Endpoint
       url: '{NodeSettingsEndpointBaseUrl}'
@@ -1297,8 +1255,7 @@ paths:
       - transportAuthentication: []
       - userAuthentication: []
       tags:
-      - controller.node.delete
-      x-url: $SelfEndpointUrl
+      - Qiy Nodes
     parameters:
     - description: Self Endpoint path, for example 'user/owners/id/mgd_dev2' for the
         endpoint 'https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2'.
