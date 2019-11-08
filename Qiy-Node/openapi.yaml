@@ -945,7 +945,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Connect tokens
     parameters:
     - description: Connection Url path, for example 'user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'.
@@ -1035,7 +1034,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Connections
     parameters:
     - description: Connection Url path, for example 'user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
         for the url 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
@@ -1084,7 +1082,6 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Event callback endpoints
     servers:
     - description: Event Callbacks Endpoint
       url: '{EventCallbacksEndpointBaseUrl}'
