@@ -56,6 +56,14 @@
                         }
                     }
                 }
+            ],
+            "parameters": [
+                {
+                    "name": "ServiceAccessEndpointPath",
+                    "in": "path",
+                    "description": "Service Access Endpoint path, for example 'qiy/resolve' for the endpoint 'https://server.example.com/qiy/resolve'.",
+                    "required": true
+                }
             ]
         },
         "/{ServiceCatalogueEndpointPath}": {
@@ -115,6 +123,14 @@
                         }
                     }
                 }
+            ],
+            "parameters": [
+                {
+                    "name": "ServiceCatalogueEndpointPath",
+                    "in": "path",
+                    "description": "Service Catalogue Endpoint path, for example 'user/servicecatalog/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/servicecatalog/mgd_dev2'.",
+                    "required": true
+                }
             ]
         },
         "/{ServiceEndpointPath}": {
@@ -158,6 +174,14 @@
                             "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-endpoint"
                         }
                     }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ServiceEndpointPath",
+                    "in": "path",
+                    "description": "Service Endpoint path, for example 'qiy' for the endpoint 'https://server.example.com/qiy'.",
+                    "required": true
                 }
             ]
         }
