@@ -22,7 +22,7 @@ components:
           method: POST
           type: external
           uri: https://feed-request-endpoint-url.example
-    servicesRequest:
+    serviceRequest:
       value:
         SjF1RFBNam14RmxEcW8rOVdzNkpHd1RZaFdBPQ==:
           input: Im9wdGlvbmFsIG9wZXJhdGlvbiBib2R5IGVuY29kZWQgYXMgYSBiYXNlNjQgZW5jb2RlZCBieXRlIGFycmF5Ig==
@@ -147,7 +147,7 @@ components:
               format: url
               type: string
           type: object
-    servicesRequest:
+    serviceRequest:
       description: Service requests by feed id
       properties:
         '[\x00-\x7F]+':
@@ -246,16 +246,16 @@ openapi: 3.0.0
 paths:
   /{ServiceAccessEndpointPath}:
     post:
-      description: See [Services request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#services-request)
-      operationId: Request
+      description: See [Service request](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-request)
+      operationId: Service request
       requestBody:
         content:
           application/json:
             examples:
               example:
-                $ref: '#/components/examples/servicesRequest'
+                $ref: '#/components/examples/serviceRequest'
             schema:
-              $ref: '#/components/schemas/servicesRequest'
+              $ref: '#/components/schemas/serviceRequest'
         required: true
       responses:
         '200':
@@ -263,7 +263,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Services
+      - Service requests
     servers:
     - description: Service Access Endpoint
       url: '{ServiceAccessEndpointBaseUrl}'
@@ -310,11 +310,8 @@ paths:
           description: See [Service Catalogue Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-catalogue-endpoint)
   /{ServiceEndpointPath}:
     post:
-      description: Feed request
-      externalDocs:
-        description: Find more info here
-        url: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-feed-request
-      operationId: Request
+      description: See [Server Request for Feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#server-request-for-feed)
+      operationId: Request for feed
       requestBody:
         content:
           application/json:
@@ -330,7 +327,7 @@ paths:
         default:
           $ref: '#/components/responses/default'
       tags:
-      - Feeds
+      - Requests for feeds
     servers:
     - description: Service Endpoint
       url: '{ServiceEndpointBaseUrl}'

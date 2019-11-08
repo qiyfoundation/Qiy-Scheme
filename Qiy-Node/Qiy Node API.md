@@ -29,10 +29,11 @@ it can be used by a [controller] (eg Individual) to provide a [client] (eg Relyi
 * The server identifies the controller (out of bounds).
 * The controller connects with the client, see [Request connection].
 * The client requests the controller for a feed, see [Request for feed].
+* The controller receives the request via a [Request for feed event] or using [List requests for feed].
 * The controller accepts the feed and sets the server as the source, see [Set feed source].
-* The server receives a feed request callback and creates a feed, see [Server Feed Request].
+* The server receives a feed request and creates a feed, see [Server Request for Feed].
 * The client uses the feed to access the service, see [Access feed].
-* The server receives a feed access callback and returns a response, see [Access Feed Callback].
+* The server receives a [Service Request] and returns a response that is passed to the client.
 
 
 # Servers
@@ -225,7 +226,7 @@ This [Event Callbacks Endpoint](#event-callbacks-endpoint)-request can be used t
 
 ## Start listening to events
 
-After [connecting][Request connection] to servers and clients, controllers use this [Events Endpoint](#events-endpoint)-call to catch requests for feed in [User Action Message Events], see [Start listening to events request].
+After [connecting][Request connection] to servers and clients, controllers use this [Events Endpoint](#events-endpoint)-call to catch [requests for feed events][Request for feed event], see also [Start listening to events request].
 
 The request starts a long-living session with a heartbeat to keep the session open. 
 Every 10 seconds a line with the text ':ping' will be sent. If this is not received for more than that time, something has gone wrong.
@@ -258,7 +259,7 @@ This [Service Catalogue Endpoint]-call can be used to get the details of the [Se
 
 A server uses this [Service Catalogue Endpoint]-call to publish the provided services using his [Service Catalogue][Definitions Service Catalogue] and related [Service Endpoint(s)][Service Endpoint], see [Set service catalogue request].
 
-Afterwards, [Server Feed Request] and [Access Feed Callbacks] are received for these services.
+Afterwards, [Server Request for Feed] and [Access Feed Callbacks] are received for these services.
 
 # Connections
 
@@ -351,7 +352,7 @@ A client uses this [Connection Feeds Endpoint]-call to initiate a feed, see [Req
 Optionally, a body parameter can be included in the 'input'-member of the body json object as a base64-encoded byte array.
 
 The request returns an inactive feed, the status of which can be monitored using [List feeds].
-A [Data Reference Received-v2 Event] and a [Client Feed Request Callback] will be fired when the feed has been established. 
+A [Data Reference Received-v2 Event] and a [Client Feed Request Callback] will be fired when the feed can be used or has been changed. 
 
 
 ### Access feed
@@ -372,52 +373,44 @@ This [Feeds Endpoint]-request can be used to list the feeds of a Qiy Node or of 
 
 ## Server
 
-A server receives a [Server Feed Request] when a controller has set him as the source of a feed, see [Add feed source] or [Set feed source].
+A server receives a [Server Request for Feed] when a controller has set him as the source of a feed, see [Add feed source] or [Set feed source].
 
 A server receives an [Access Feed Callback] after an [Access feed] or [Access feeds].
 
 ## Controller
 
-### Get user action message
+### Request for feed event
 
-An End User App receives a [User Action Message Event] when a connected client has asked for a feed to access one of his resources, see [Request for feed].
-The event contains an [Action Message Endpoint]-address that can be used with this call to get the details of the action message, see [Get user action message].
+An End User App receives this event when a connected client has requested for a feed, see [Controller request for feed event].
+The event carries an [User Action Message Url][User Action Message] in the extraData property which is used in a [Get request for feed details] to get the details of the request. 
 
-### List action messages
+### Get request for feed details
 
-A controller uses this [Action Message List Endpoint]-call to get all open requests for feeds, see [List action messages request].
+The controller uses this request to get the details of a feed request, see [Get request for feed details request].
+
+The request for feed contains two lists of [Action Urls][Action], one by pid and one by connection url, which can be used to set or add the respective Server as a feed source, see [Set feed source] and/or [Add feed source].
+
+### List requests for feed
+
+A controller uses this [User Action Message List Endpoint]-call to get all open requests for feeds, see [List requests for feed request].
 
 ### Set feed source
 
-When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
-
-Controllers use [Set feed source request] to accept the request and set a source for the feed.
-
+Controllers use [Set feed source request] to accept a request for feed and set a source for the feed.
 
 ### Add feed source
 
-When a controller has received an access request in a [User Action Message Event], he extracts the details of the request using a [Get action message], which lists the possible sources and related action urls.
-
-Controllers use [Add feed source request] to accept the request and set or add a source for the feed.
+Controllers use [Add feed source request] to accept a request for feed and add a source to the feed.
 
 
 # Annex A Dynamic Endpoint Addresses
 
 This annex describes the Dynamic Endpoint Addresses
 
-## Action Endpoint
+## User Action Message List Endpoint
 
-This endpoint can be used for [Set feed source] and [Add feed source].
-The current address of the endpoint is returned in the action messages returned by [List action messages] and [Get action message].
-
-## Action Message Endpoint
-
-This endpoint can be used for [Get action message].
-The current address of the endpoint is returned by [List action messages] and included in [User Action Message Event].
-
-## Action Message List Endpoint
-
-This endpoint can be used for [List action messages]. The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
+This endpoint can be used to list [User Action Messages][User Action Message], currently used for [List requests for feed].
+The current address of the endpoint is returned in the "amList"-member of the response of [Get endpoint addresses].
 
 ## Connect Token Create Endpoint
 
@@ -501,14 +494,14 @@ The endpoint address is returned in the 'self'-property of [Get endpoint address
 
 ## Service Endpoint
 
-This endpoint is provided by a server to serve feeds, see [Server Feed Request].
+This endpoint is provided by a server to serve feeds, see [Server Request for Feed].
 It can be read and set with [Set service catalogue] and [Get service catalogue] respectively.
 
 Note: This endpoint have to be whitelisted by the Access Provider before it can be used.
 
 ## Service Access Endpoint
 
-This endpoint is provided by a server to serve resources, see [Services Request].
+This endpoint is provided by a server to serve resources, see [Service Request].
 Its address is [Service Endpoint] appended with 'resolve'. 
 
 ## Service Catalogue Endpoint
@@ -588,7 +581,7 @@ This event is fired after [Get connection] when a connection has been establishe
 
 ## User Action Message Event
 
-This event is fired if and when a user action message is received, see for example [Set feed source].
+This event is fired if and when a [User Action Message] is received, see for example [Request for feed event].
 
 Example event
 
@@ -655,13 +648,13 @@ This [State Handled Callback Endpoint]-callback is executed when a Connect Token
 
 ## Server Callbacks
 
-### Server Feed Request
+### Server Request for Feed
 
-A server receives this [Service Endpoint]-callback when an controller has set him as the source of a feed, see [Set feed source] or [Add feed source].
+A server receives this [Service Endpoint]-call when a controller has set him as the source of a feed, see [Server Request for Feed request]
 
-#### Server Feed Request Example
+#### Server Request for Feed Example
 
-This python code-snippet can be used to simulate a Server Feed Request:
+This python code-snippet can be used to simulate a Server Request for Feed:
 
 ```
 import requests
@@ -683,9 +676,9 @@ The call could return the following body:
 }
 ```
 
-### Services Request
+### Service Request
 
-A server receives this [Service Access Endpoint]-callback after an [Access feed].
+A server receives this [Service Access Endpoint]-callback after an [Access feed] or [Access feeds]; despite its name it can combine service requests for different feeds, see [Service Request request].
 
 The body of the callback request may also contain access requests for more then one feed. 
 Also, an optional input parameter may be passed with the feed access request in the 'input'-member encoded as a base65-encoded byte array.
@@ -702,9 +695,9 @@ Also, an optional input parameter may be passed with the feed access request in 
 ```
 
 
-#### Services Request Example
+#### Service Request Example
 
-This python code-snippet can be used to simulate an Services Request:
+This python code-snippet can be used to simulate a Service Request:
 ```
 import requests
 url = 'https://qiy-test-tool-dpyt.cloud.digital-me.nl/qiy_nodes/qiy_node_api/proxy/v1/dp1serviceEndpointUrl/resolve'
@@ -752,6 +745,10 @@ The call could return the following body:
 
 The schemas are defined in [openapi.json].
 
+## Action
+
+Actions are used to set or add a feed source, see [Set feed source] and/or [Add feed source].
+
 ## Feed
 
 See [openapi.json]#components/schemas/qiy-node-credential
@@ -795,23 +792,26 @@ with open(pem_filename, "wb") as f:
         )
 ```
 
+## User Action Message
+
+User Action Messages are used for request for feed events, see [Request for feed event].
+
+
 [Acceptance Url]: https://user.dolden.net/user/v0/api
+[Access feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feed%20access%20requests/Access%20feed
 [Access feed]: #access-feed
-[Access feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feed
+[Access feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feed%20access%20requests/Access%20feeds
 [Access feeds]: #access-feeds
-[Access feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Access%20feeds
+[Action]: #action
+[Add feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20sources/Add%20feed%20source
 [Add feed source]: #add-feed-source
-[Add feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.add
-[Action Endpoint]: #action-endpoint
-[Action Message Endpoint]: #action-message-endpoint
-[Action Message List Endpoint]: #action-message-list-endpoint
 [Annex A Dynamic Endpoint Addresses]: #annex-a-dynamic-endpoint-addresses
 [Annex B Events]: #annex-b-events
 [Annex C Callbacks]: #annex-c-callbacks
-[Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
-[Client Feed Request Callback]: #client-feed-request-callback
 [Client Feed Request Callback Endpoint]: #client-feed-request-callback-endpoint
 [Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed%20callback
+[Client Feed Request Callback]: #client-feed-request-callback
+[Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
@@ -819,133 +819,133 @@ with open(pem_filename, "wb") as f:
 [Connection Endpoint]: #connection-endpoint
 [Connection Feeds Endpoint]: #connection-feeds-endpoint
 [Connection List Endpoint]: #connection-list-endpoint
-[Controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
-[controller]: https://fdriesenaar.github.io/openapi-doc.html#/controller
+[Controller request for feed event]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/Request%20for%20feed%20event
+[Controller]: https://fdriesenaar.github.io/Controller/openapi.html
 [Creating Qiy Nodes for Individuals]: ../High-Level%20Architectural%20Overview.md#512-creating-qiy-nodes-for-individuals
 [Data Reference Received-v2 Event]: #data-reference-received-v2-event
-[Definitions Access Provider]: ../Definitions.md#access-provider
 [Definitions API Key]: #app-authentication
+[Definitions Access Provider]: ../Definitions.md#access-provider
 [Definitions Application Provider]: ../Definitions.md#application-provider
 [Definitions Connect Token]: ../Definitions.md#connect-token
 [Definitions Connection]: ../Definitions.md#connection
 [Definitions Data Provider]: ../Definitions.md#data-provider
 [Definitions Described Resource]: ../Definitions.md#described-resource
-[Definitions Personal Data]: ../Definitions.md#personal-data
 [Definitions Individual]: ../Definitions.md#individual
+[Definitions Personal Data]: ../Definitions.md#personal-data
+[Definitions Qiy Application]: ../Definitions.md#qiy-application
+[Definitions Qiy Node Client]: ../Definitions.md#qiy-node-client
+[Definitions Qiy Node Credential]: ../Definitions.md#qiy-node-credential
+[Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
+[Definitions Qiy Node]: ../Definitions.md#qiy-node
+[Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
+[Definitions Qiy Trust Network]: ../Definitions.md#qiy-trust-network
 [Definitions Relying Party]: ../Definitions.md#relying-party
 [Definitions Resource]: ../Definitions.md#resource
-[Definitions Service]: ../Definitions.md#service
 [Definitions Service Access Endpoint]: ../Definitions.md#service-access-endpoint
 [Definitions Service Catalogue]: ../Definitions.md#service-catalogue
 [Definitions Service Endpoint]: ../Definitions.md#service-endpoint
 [Definitions Service Provider]: ../Definitions.md#service-provider
 [Definitions Service Type]: ../Definitions.md#service-type
+[Definitions Service]: ../Definitions.md#service
 [Definitions Transport Authentication]: ../Definitions.md#transport-authentication
-[Definitions Qiy Node]: ../Definitions.md#qiy-node
-[Definitions Qiy Node Client]: ../Definitions.md#qiy-node-client
-[Definitions Qiy Node Credential]: ../Definitions.md#qiy-node-credential
-[Definitions Qiy Node Implementation]: ../Definitions.md#qiy-node-implementation
-[Definitions Qiy Application]: ../Definitions.md#qiy-application
-[Definitions Qiy Scheme]: ../Definitions.md#qiy-scheme
-[Definitions Qiy Trust Network]: ../Definitions.md#qiy-trust-network
-[Delete Qiy Node]: #delete-qiy-node
 [Delete Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.delete
+[Delete Qiy Node]: #delete-qiy-node
 [Dev2 Url]: https://dev2-user.testonly.digital-me.nl/user/v0/api
 [DigitalMe]: https://digital-me.nl/
 [Dynamic Endpoint Addresses]: #dynamic-endpoint-addresses
-[Events]: #events
 [Event Callback Endpoint]: #event-callback-endpoints
 [Event Callback Endpoints]: #event-callback-endpoints
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
-[Feed]: #feed
+[Events]: #events
 [Feed Requests]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
-[Feeds]: #feeds
+[Feed]: #feed
 [Feeds Endpoint]: #feeds-endpoint
+[Feeds]: #feeds
 [Get /api]: https://fdriesenaar.github.io/openapi.html
-[Get action message]: #get-action-message
-[Get action message request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.action%20message.get
-[Get connect token]: #get-connect-token
 [Get connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connect%20token.get
-[Get connection]: #get-connection
+[Get connect token]: #get-connect-token
 [Get connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.get
-[Get endpoint addresses]: #get-endpoint-addresses
+[Get connection]: #get-connection
 [Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.html#/api/api
-[Get event callback endpoints]: #get-event-callback-endpoints
+[Get endpoint addresses]: #get-endpoint-addresses
 [Get event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.event%20callback%20endpoints.get
-[Get node settings]: #get-node-settings
+[Get event callback endpoints]: #get-event-callback-endpoints
 [Get node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/server.configuration.node%20settings.get
-[Get service catalogue]: #get-service-catalogue
+[Get node settings]: #get-node-settings
+[Get request for feed details request]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/Get%20request%20for%20feed%20details
 [Get service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Get
-[Get user action message]: #get-user-action-message
+[Get service catalogue]: #get-service-catalogue
 [Getting help]: https://qiy.api.digital-me.nl/?version=latest#9acb0133-e012-4f49-a1e9-51283b8402c9
 [High-Level Architectural Overview 4.3 Qiy Node]: ../High-Level%20Architectural%20Overview.md#43-qiy-node
-[List action messages]: #list-action-messages
-[List action messages request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.action%20messages.list
-[List connect tokens]: #list-connect-tokens
 [List connect tokens request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20tokens.list
-[List connections]: #list-connections
+[List connect tokens]: #list-connect-tokens
 [List connections request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connections.list
-[List feeds]: #list-feeds
+[List connections]: #list-connections
 [List feeds request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/List%20feeds
-[List messages]: #list-messages
+[List feeds]: #list-feeds
 [List messages request]: https://fdriesenaar.github.io/openapi-doc.html#/client.messages.list
+[List messages]: #list-messages
+[List requests for feed request]: https://fdriesenaar.github.io/Controller/openapi.html#/Requests%20for%20feed/List%20requests%20for%20feeds
+[List requests for feed]: #list-requests-for-feed
 [Message]: #message
-[Messages]: #messages
 [Messages Endpoint]: #messages-endpoint
+[Messages]: #messages
 [Node Create Endpoint]: #node-create-endpoint
 [Node Settings Endpoint]: #node-settings-endpoint
-[openapi.json]: openapi.json
-[POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [POST /ConnectionCreateEndpoint]: https://fdriesenaar.github.io/openapi.html
+[POST /FeedsEndpoint/{feedId}]: https://fdriesenaar.github.io/openapi.html
 [Production Url]: https://user.digital-me.nl/user/v0/api
 [Proxy Url]: https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v0/api
 [Qiy Node Credential]: #qiy-node-credential
 [Qiy Node Id]: #qiy-node-credential
 [Qiy Test Tool dm]: https://qiy-test-tool-dpyt.cloud.digital-me.nl/
 [Qiy Test Tool pa]: https://qiytesttool.pythonanywhere.com/
-[Register connect token]: #register-connect-token
-[Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.register
-[Request connect token]: #request-connect-token
-[Request connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.request
-[Request connection]: #request-connection
-[Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.request
-[Request creation of Qiy Node]: #request-creation-of-qiy-node
-[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
-[Request for feed]: #request-for-feed
-[Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed
 [RSA Private Key]: ../Definitions.md#rsa-private-key
+[Register connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.register
+[Register connect token]: #register-connect-token
+[Request connect token request]: https://fdriesenaar.github.io/openapi-doc.html#/client.connect%20token.request
+[Request connect token]: #request-connect-token
+[Request connection request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.connection.request
+[Request connection]: #request-connection
+[Request creation of Qiy Node request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.node.request
+[Request creation of Qiy Node]: #request-creation-of-qiy-node
+[Request for feed event]: #request-for-feed-event
+[Request for feed request]: https://fdriesenaar.github.io/Client/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
+[Request for feed]: #request-for-feed
 [Self Endpoint]: #self-endpoint
-[Send message]: #send-message
 [Send message request]: https://fdriesenaar.github.io/openapi-doc.html#/client.message.send
+[Send message]: #send-message
+[Server Request for Feed request]: https://fdriesenaar.github.io/Server/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
+[Server Request for Feed]: #server-feed-request
+[Server Request for Feeds]: #server-feed-request
 [Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
-[Server Feed Request]: #server-feed-request
-[Server Feed Requests]: #server-feed-request
-[Server Feed Request request]: https://fdriesenaar.github.io/Server/openapi.html#Feeds/Request
 [Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
+[Service Request request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20requests/Service%20request
+[Service Request]: #services-request
+[Service Requests]: #service-request
 [Services]: https://qiy.api.digital-me.nl/?version=latest#ab572b83-bd18-4a8e-85be-b549a0ac6758
-[Services Request]: #services-request
-[Services Requests]: #services-request
-[Services Request request]: https://fdriesenaar.github.io/Server/openapi.html#Services/Request
-[Set feed source]: #set-feed-source
-[Set feed source request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.feed.source.set
-[Set service catalogue]: #set-service-catalogue
-[Set service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Set
-[Set event callback endpoints]: #set-event-callback-endpoints
 [Set event callback endpoints request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.event%20callback%20endpoints.set
-[Set node settings]: #set-node-settings
+[Set event callback endpoints]: #set-event-callback-endpoints
+[Set feed source request]: https://fdriesenaar.github.io/Controller/openapi.html#/Feed%20source/Set%20feed%20source
+[Set feed source]: #set-feed-source
 [Set node settings request]: https://fdriesenaar.github.io/openapi-doc.html#/client.configuration.node%20settings.set
-[Start listening to events]: #start-listening-to-events
+[Set node settings]: #set-node-settings
+[Set service catalogue request]: https://fdriesenaar.github.io/Server/openapi.html#/Service%20catalogue/Set
+[Set service catalogue]: #set-service-catalogue
 [Start listening to events request]: https://fdriesenaar.github.io/openapi-doc.html#/controller.events
-[State Handled Event]: #state-handled-event
-[State Handled Callback]: #state-handled-callback
+[Start listening to events]: #start-listening-to-events
 [State Handled Callback Endpoint]: #state-handled-callback-endpoint
+[State Handled Callback]: #state-handled-callback
+[State Handled Event]: #state-handled-event
 [Subscriptions]: https://qiy.api.digital-me.nl/?version=latest#ec0ab04d-ab6e-4a9c-9b45-e6b75b583bff
 [Transport Layer]: ../High-Level%20Architectural%20Overview.md#8-the-transport-layer
 [Transport Password]: #qiy-node-credential
 [User Action Message Event]: #user-action-message-event
 [User Action Message Events]: #user-action-message-event
+[User Action Message List Endpoint]: #user-action-message-list-endpoint
+[User Action Message]: #user-action-message
+[controller]: https://fdriesenaar.github.io/Controller/openapi.html
+[openapi.json]: openapi.json
 [uuid]: ../Definitions.md#uuid
-
-

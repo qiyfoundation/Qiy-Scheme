@@ -1,0 +1,296 @@
+components:
+  examples:
+    userActionMessage:
+      value:
+        connection: https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+        created: 1562059030644
+        links:
+          handle: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+          self: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4
+        message:
+          inbound: true
+          payload: eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=
+          processed: true
+          protocol: http://bla.nl/events
+          sent: false
+          serialNr: 5
+          text: huh?
+        optionPIDs:
+          jRMCgeCzt3zFGDZuutuNvg==: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca
+          kpKugxcUU7AdJJgVUVuFnA==: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+        relayOptions:
+          8f4edf58-73dd-4fee-b344-149c924f1605: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca
+          wip_feed_rp: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+    userActionMessageEvent:
+      value:
+        connectionUrl: https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+        extraData: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4
+        type: USER_ACTION_MESSAGE
+    userActionMessageList:
+      value:
+        result:
+        - connection: https://dev1-user.testonly.digital-me.nl/user/connections/user/wip_feed_ind/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+          created: 1562059030644
+          links:
+            handle: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/handle/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+            self: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind?amid=4
+          message:
+            inbound: true
+            payload: eyJrZXkiOiJ3K2pMeTEzZlhJVFpkS3lISy80TWRBPT0iLCJpbnB1dCI6bnVsbH0=
+            processed: true
+            protocol: http://bla.nl/events
+            sent: false
+            serialNr: 5
+            text: huh?
+          optionPIDs:
+            jRMCgeCzt3zFGDZuutuNvg==: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca
+            kpKugxcUU7AdJJgVUVuFnA==: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+          relayOptions:
+            8f4edf58-73dd-4fee-b344-149c924f1605: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/aecbbae3-bd8a-4d94-a7f5-b8fe759dd0ca
+            wip_feed_rp: https://dev1-user.testonly.digital-me.nl/user/mbox/user/action/wip_feed_ind/4/e33b7dcc-a1f1-4195-893d-97698f0e4d8e
+  responses:
+    default:
+      $ref: ../openapi.json#/components/responses/default
+    feedSourceAdd:
+      description: Add feed source response
+    feedSourceSet:
+      description: Set feed source response
+    requestForFeedEvent:
+      content:
+        text/event-stream:
+          examples:
+            example:
+              $ref: '#/components/examples/userActionMessageEvent'
+          schema:
+            $ref: '#/components/schemas/userActionMessageEvent'
+      description: Request for feed event
+    userActionMessage:
+      content:
+        application/json:
+          examples:
+            example:
+              $ref: '#/components/examples/userActionMessage'
+          schema:
+            $ref: '#/components/schemas/userActionMessage'
+      description: User Action Message
+    userActionMessageList:
+      content:
+        application/json:
+          examples:
+            example:
+              $ref: '#/components/examples/userActionMessageList'
+          schema:
+            $ref: '#/components/schemas/userActionMessageList'
+      description: User Action Message list
+  schemas:
+    userActionMessage:
+      properties:
+        connection:
+          description: Connection url of the related connection
+          format: url
+          maxItems: 1
+          minItems: 1
+          type: string
+        created:
+          description: Creation datetimestamp
+          format: Unix time in mili seconds
+          maxItems: 1
+          minItems: 1
+          type: number
+        links:
+          items:
+            properties:
+              handle:
+                format: url
+                maxItems: 1
+                minItems: 1
+                type: string
+              self:
+                format: url
+                maxItems: 1
+                minItems: 1
+                type: string
+            type: object
+          maxItems: 1
+          minItems: 1
+          type: array
+        message:
+          allOf:
+          - $ref: ../openapi.json#/components/schemas/message
+          - maxItems: 1
+            minItems: 1
+            type: object
+        optionPIDs:
+          description: Action endpoint addresses by pid as property name
+          maxItems: 1
+          minItems: 1
+          properties:
+            $pid:
+              description: Action endpoint address
+              format: url
+              maxItems: 1
+              minItems: 1
+              type: string
+          type: object
+          x-patternProperties:
+            $pidRex:
+              description: Action endpoint address
+              format: url
+              maxItems: 1
+              minItems: 1
+              type: string
+        relayOptions:
+          description: action endpoint addresses by Qiy Node Id as property name
+          maxItems: 1
+          minItems: 1
+          properties:
+            $nodeIdRex:
+              description: Action endpoint address
+              format: url
+              maxItems: 1
+              minItems: 1
+              type: string
+          type: object
+          x-patternProperties:
+            $nodeIdRex:
+              description: Action endpoint address
+              format: url
+              maxItems: 1
+              minItems: 1
+              type: string
+      type: object
+    userActionMessageEvent:
+      description: See [User Action Message Event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-event)
+      format: Server-Sent Event
+      properties:
+        connectionUrl:
+          description: Connection url of the Qiy Node that triggered the event
+          format: url
+          maxItems: 1
+          minItems: 1
+          type: string
+        extraData:
+          description: Url of the user action message
+          format: url
+          maxItems: 1
+          minItems: 1
+          type: string
+        type:
+          maxItems: 1
+          minItems: 1
+          pattern: USER_ACTION_MESSAGE
+          type: string
+      type: object
+    userActionMessageList:
+      properties:
+        result:
+          items:
+            $ref: '#/components/schemas/userActionMessage'
+          maxItems: 1
+          minItems: 1
+          type: array
+      type: object
+  securitySchemes:
+    appAuthentication:
+      $ref: ../openapi.json#/components/schemas/appAuthentication
+    userAuthentication:
+      $ref: ../openapi.json#/components/schemas/userAuthentication
+info:
+  description: To get started with [this api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md),
+    you need a developer key. You can get it [here](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#service-desk)
+  externalDocs:
+    description: Find more info here
+    url: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md
+  license:
+    name: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+      Public License
+    url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  title: Qiy Node API - Controller
+  version: 1.1.0
+openapi: 3.0.0
+paths:
+  /{ActionUrlPath}:
+    post:
+      description: See [Set feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-feed-source)
+      operationId: Set feed source
+      responses:
+        '200':
+          $ref: '#/components/responses/feedSourceSet'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Feed sources
+    put:
+      description: See [Add feed source](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#add-feed-source)
+      operationId: Add feed source
+      responses:
+        '200':
+          $ref: '#/components/responses/feedSourceAdd'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Feed sources
+    servers:
+    - description: Action Url
+      url: '{ActionBaseUrl}'
+      variables:
+        ActionBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#action
+          description: See [Action](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#action)
+  /{EventsEndpointPath}:
+    get:
+      description: See [Request for feed event](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-for-feed-event)
+      operationId: Request for feed event
+      responses:
+        '200':
+          $ref: '#/components/responses/requestForFeedEvent'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Requests for feed
+    servers:
+    - description: Events Endpoint
+      url: '{EventsEndpointBaseUrl}'
+      variables:
+        EventsEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-endpoint
+          description: See [Events Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-endpoint)
+  /{UserActionMessageListEndpointPath}:
+    get:
+      description: See [List requests for feed](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-requests-for-feed)
+      operationId: List requests for feed
+      responses:
+        '200':
+          $ref: '#/components/responses/userActionMessageList'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Requests for feed
+    servers:
+    - description: User Action Message List Endpoint
+      url: '{UserActionMessageListEndpointBaseUrl}'
+      variables:
+        UserActionMessageListEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-list-endpoint
+          description: See [User Action Message List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message-list-endpoint)
+  /{UserActionMessagePath}:
+    get:
+      description: See [Get request for feed details](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-request-for-feed-details)
+      operationId: Get request for feed details
+      responses:
+        '200':
+          $ref: '#/components/responses/userActionMessage'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - Requests for feed
+    servers:
+    - description: User Action Message
+      url: '{UserActionMessageBaseUrl}'
+      variables:
+        UserActionMessageBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message
+          description: See [User Action Message](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#user-action-message)
+security:
+- appAuthentication: []
+- userAuthentication: []
