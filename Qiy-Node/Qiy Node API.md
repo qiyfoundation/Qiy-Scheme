@@ -306,12 +306,12 @@ The request uses a [Connect Token][Definitions Connect Token] that has been regi
 
 ## Get connection
 
-This [Connection Endpoint]-call returns the details of a connection, see [Get connection request].
+This [Connection]-call returns the details of a connection, see [Get connection request].
 
 
 ## Get connect token
 
-This [Connect Token Endpoint]-call returns the details of a [Connect Token][Definitions Connect Token], see [Get connect token request].
+This [Connect Token]-call returns the details of a [Connect Token][Definitions Connect Token], see [Get connect token request].
 
 
 ## List connect tokens
@@ -416,11 +416,6 @@ The current address of the endpoint is returned in the "amList"-member of the re
 
 This endpoint can be used to [request][Request connect token] or [register][Register connect token] [Connect Tokens][Definitions Connect Token]. The current address of the endpoint is returned in the "ctCreate"-member of the response of Get endpoint addresses.
 
-## Connect Token Endpoint
-
-This endpoint can be used for [Get connect token].
-The endpoint address (connect token url) is returned by [Request connect token], [Register connect token], and [List connect tokens] (in links.self).
-
 ## Connect Token List Endpoint
 
 This endpoint can be used for [List connect tokens]. The current address of the endpoint is returned in the "ctList"-member of the response of [Get endpoint addresses].
@@ -428,10 +423,6 @@ This endpoint can be used for [List connect tokens]. The current address of the 
 ## Connection Create Endpoint
 
 This endpoint can be used for [Request connection]. The current address of the endpoint is returned in the "scan"-member of the response of [Get endpoint addresses].
-
-## Connection Endpoint
-
-This endpoint can be used for [Get connection]. The endpoint urls are returned by [Request connection] and [List connections].
 
 ## Connection Feeds Endpoint
 
@@ -489,8 +480,7 @@ This endpoint is deprecated.
 
 ## Self Endpoint
 
-This endpoint can be used for [Delete Qiy Node].
-The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
+This endpoint can be used for [Delete Qiy Node]. The endpoint address is returned in the 'self'-property of [Get endpoint addresses].
 
 ## Service Endpoint
 
@@ -749,6 +739,15 @@ The schemas are defined in [openapi.json].
 
 Actions are used to set or add a feed source, see [Set feed source] and/or [Add feed source].
 
+## Connect Token
+
+Connect Tokens can be used to create [Connections] between Qiy Nodes and are identified with a [Connect Token Url], see [Get connect token], [Request connect token], [Register connect token], and [List connect tokens].
+
+## Connection
+
+Connections can be created between Qiy Nodes using [Connect Tokens] and are identified with a Connection Url.
+See also [Get connection], [Request connection] and [List connections].
+
 ## Feed
 
 See [openapi.json]#components/schemas/qiy-node-credential
@@ -757,11 +756,7 @@ See [openapi.json]#components/schemas/qiy-node-credential
 
 See [openapi.json]#components/schemas/message
 
-## Qiy Node
-
-This section contains the Qiy Node related schemas.
-
-### Qiy Node Credential
+## Qiy Node Credential
 
 A Qiy Node Credential consists of:
 * an [RSA Private Key]
@@ -815,6 +810,8 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
+[Connect Token]: #connect-token
+[Connect Tokens]: #connect-token
 [Connection Create Endpoint]: #connection-create-endpoint
 [Connection Endpoint]: #connection-endpoint
 [Connection Feeds Endpoint]: #connection-feeds-endpoint

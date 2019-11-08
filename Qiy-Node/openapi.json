@@ -13,24 +13,6 @@
             "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
         }
     },
-    "servers": [
-        {
-            "url": "https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v0",
-            "description": "Proxy server"
-        },
-        {
-            "url": "https://dev2-user.testonly.digital-me.nl/user/v0",
-            "description": "Development 2 server"
-        },
-        {
-            "url": "https://user.dolden.net/user/v0",
-            "description": "Acceptance server"
-        },
-        {
-            "url": "https://user.digital-me.nl/user/v0",
-            "description": "Production server"
-        }
-    ],
     "paths": {
         "/api": {
             "get": {
@@ -55,9 +37,27 @@
                         "userAuthentication": []
                     }
                 ]
-            }
+            },
+            "servers": [
+                {
+                    "url": "https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v0",
+                    "description": "Proxy server"
+                },
+                {
+                    "url": "https://dev2-user.testonly.digital-me.nl/user/v0",
+                    "description": "Development 2 server"
+                },
+                {
+                    "url": "https://user.dolden.net/user/v0",
+                    "description": "Acceptance server"
+                },
+                {
+                    "url": "https://user.digital-me.nl/user/v0",
+                    "description": "Production server"
+                }
+            ]
         },
-        "/ConnectionCreateEndpoint": {
+        "/{ConnectionCreateEndpointPath}": {
             "post": {
                 "tags": [
                     "client.connection.request",
@@ -109,9 +109,29 @@
                         "userAuthentication": []
                     }
                 ]
-            }
+            },
+            "servers": [
+                {
+                    "description": "Connection Create Endpoint",
+                    "url": "{ConnectionCreateEndpointBaseUrl}",
+                    "variables": {
+                        "ConnectionCreateEndpointBaseUrl": {
+                            "description": "See [Connection Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectionCreateEndpointPath",
+                    "in": "path",
+                    "description": "Connection Create Endpoint path, for example 'user/connections/user/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         },
-        "/ConnectionEndpoint": {
+        "/{ConnectionUrlPath}": {
             "get": {
                 "tags": [
                     "client.connection.get",
@@ -129,9 +149,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Connection Url",
+                    "url": "{ConnectionBaseUrl}",
+                    "variables": {
+                        "ConnectionBaseUrl": {
+                            "description": "See [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectionUrlPath",
+                    "in": "path",
+                    "description": "Connection Url path, for example 'user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0' for the url 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.",
+                    "required": true
+                }
+            ]
         },
-        "/ConnectionListEndpoint": {
+        "/{ConnectionListEndpointPath}": {
             "get": {
                 "tags": [
                     "client.connections.list",
@@ -149,9 +189,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Connection List Endpoint",
+                    "url": "{ConnectionListEndpointBaseUrl}",
+                    "variables": {
+                        "ConnectionListEndpointBaseUrl": {
+                            "description": "See [Connection List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-list-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-list-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectionListEndpointPath",
+                    "in": "path",
+                    "description": "Connection List Endpoint path, for example 'user/connections/user/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         },
-        "/ConnectTokenEndpoint": {
+        "/{ConnectTokenUrlPath}": {
             "get": {
                 "tags": [
                     "client.connect token.get",
@@ -169,9 +229,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Connection Url",
+                    "url": "{ConnectionBaseUrl}",
+                    "variables": {
+                        "ConnectionBaseUrl": {
+                            "description": "See [Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectionUrlPath",
+                    "in": "path",
+                    "description": "Connection Url path, for example 'user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40' for the url 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'.",
+                    "required": true
+                }
+            ]
         },
-        "/ConnectTokenCreateEndpoint": {
+        "/{ConnectTokenCreateEndpointPath}": {
             "post": {
                 "tags": [
                     "client.connect token.register",
@@ -231,9 +311,29 @@
                         "userAuthentication": []
                     }
                 ]
-            }
+            },
+            "servers": [
+                {
+                    "description": "Connect Token Create Endpoint",
+                    "url": "{ConnectTokenCreateEndpointBaseUrl}",
+                    "variables": {
+                        "ConnectTokenCreateEndpointBaseUrl": {
+                            "description": "See [Connect Token Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectTokenCreateEndpointPath",
+                    "in": "path",
+                    "description": "Connect Token Create Endpoint path, for example 'connecttokens/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         },
-        "/ConnectTokenListEndpoint": {
+        "/{ConnectTokenListEndpointPath}": {
             "get": {
                 "tags": [
                     "client.connect tokens.list",
@@ -251,9 +351,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Connect Token List Endpoint",
+                    "url": "{ConnectTokenListEndpointBaseUrl}",
+                    "variables": {
+                        "ConnectTokenListEndpointBaseUrl": {
+                            "description": "See [Connect Token List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "ConnectTokenListEndpointPath",
+                    "in": "path",
+                    "description": "Connect Token List Endpoint path, for example 'user/connecttokens/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         },
-        "/EventCallbacksEndpoint": {
+        "/{EventCallbacksEndpointPath}": {
             "put": {
                 "tags": [
                     "client.configuration.event callback endpoints.set",
@@ -302,9 +422,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Event Callbacks Endpoint",
+                    "url": "{EventCallbacksEndpointBaseUrl}",
+                    "variables": {
+                        "EventCallbacksEndpointBaseUrl": {
+                            "description": "See [Event Callbacks Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "EventCallbacksEndpointPath",
+                    "in": "path",
+                    "description": "Event Callbacks Endpoint path, for example 'user/nodesettings/mgd_dev2/eventcallbacks' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2/eventcallbacks'.",
+                    "required": true
+                }
+            ]
         },
-        "/EventsEndpoint": {
+        "/{EventsEndpointPath}": {
             "get": {
                 "tags": [
                     "controller.events"
@@ -320,9 +460,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Events Endpoint",
+                    "url": "{EventsEndpointBaseUrl}",
+                    "variables": {
+                        "EventsEndpointBaseUrl": {
+                            "description": "See [Events Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-create-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "EventsEndpointPath",
+                    "in": "path",
+                    "description": "Events Endpoint path, for example 'user/events/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/events/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         },
-        "/MessagesEndpoint": {
+        "/{MessagesEndpointPath}": {
             "get": {
                 "tags": [
                     "client.messages.list",
@@ -394,9 +554,29 @@
                         "userAuthentication": []
                     }
                 ]
-            }
+            },
+            "servers": [
+                {
+                    "description": "Messages",
+                    "url": "{MessagesEndpointBaseUrl}",
+                    "variables": {
+                        "MessagesBaseUrl": {
+                            "description": "See [Messages Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#messages-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#messages-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "MessagesEndpointPath",
+                    "in": "path",
+                    "description": "Messages Endpoint path, for example 'user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0' for the url 'https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.",
+                    "required": true
+                }
+            ]
         },
-        "/NodeCreateEndpoint": {
+        "/{NodeCreateEndpointPath}": {
             "post": {
                 "tags": [
                     "controller.node.request"
@@ -432,9 +612,29 @@
                         "appAuthentication": []
                     }
                 ]
-            }
+            },
+            "servers": [
+                {
+                    "description": "NodeCreate Endpoint",
+                    "url": "{NodeCreateEndpointBaseUrl}",
+                    "variables": {
+                        "NodeCreateEndpointBaseUrl": {
+                            "description": "See [Node Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "NodeCreateEndpointPath",
+                    "in": "path",
+                    "description": "Node Create Endpoint path, for example 'nodes' for the endpoint 'https://user.digital-me.nl/nodes'.",
+                    "required": true
+                }
+            ]
         },
-        "/NodeSettingsEndpoint": {
+        "/{NodeSettingsEndpointPath}": {
             "get": {
                 "tags": [
                     "client.configuration.node settings.get",
@@ -485,9 +685,29 @@
                         "$ref": "#/components/responses/default"
                     }
                 }
-            }
+            },
+            "servers": [
+                {
+                    "description": "Node Settings Endpoint",
+                    "url": "{NodeSettingsEndpointBaseUrl}",
+                    "variables": {
+                        "NodeSettingsEndpointBaseUrl": {
+                            "description": "See [Node Settings Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "NodeSettingsEndpointPath",
+                    "in": "path",
+                    "description": "Node Settings Endpoint path, for example 'user/nodesettings/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         },
-        "/SelfEndpoint": {
+        "/{SelfEndpointPath}": {
             "delete": {
                 "tags": [
                     "controller.node.delete"
@@ -514,7 +734,27 @@
                         "userAuthentication": []
                     }
                 ]
-            }
+            },
+            "servers": [
+                {
+                    "description": "SelfEndpoint",
+                    "url": "{SelfEndpointBaseUrl}",
+                    "variables": {
+                        "SelfEndpointBaseUrl": {
+                            "description": "See [Self Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint)",
+                            "default": "https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint"
+                        }
+                    }
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "SelfEndpointPath",
+                    "in": "path",
+                    "description": "Self Endpoint path, for example 'user/owners/id/mgd_dev2' for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2'.",
+                    "required": true
+                }
+            ]
         }
     },
     "components": {

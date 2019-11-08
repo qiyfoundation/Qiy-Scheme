@@ -841,7 +841,37 @@ info:
   version: 1.1.0
 openapi: 3.0.0
 paths:
-  /ConnectTokenCreateEndpoint:
+  /api:
+    get:
+      description: See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#api-info)
+        and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)
+      operationId: api
+      responses:
+        '200':
+          $ref: '#/components/responses/api'
+        default:
+          $ref: '#/components/responses/default'
+      security:
+      - appAuthentication: []
+      - userAuthentication: []
+      tags:
+      - api
+    servers:
+    - description: Proxy server
+      url: https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v0
+    - description: Development 2 server
+      url: https://dev2-user.testonly.digital-me.nl/user/v0
+    - description: Acceptance server
+      url: https://user.dolden.net/user/v0
+    - description: Production server
+      url: https://user.digital-me.nl/user/v0
+  /{ConnectTokenCreateEndpointPath}:
+    parameters:
+    - description: Connect Token Create Endpoint path, for example 'connecttokens/mgd_dev2'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2'.
+      in: path
+      name: ConnectTokenCreateEndpointPath
+      required: true
     post:
       callbacks:
         stateHandled:
@@ -880,21 +910,14 @@ paths:
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
       x-url: $ConnectTokenCreateEndpointUrl
-  /ConnectTokenEndpoint:
-    get:
-      description: See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)
-      operationId: Get connect token
-      responses:
-        '200':
-          $ref: '#/components/responses/connectToken'
-        default:
-          $ref: '#/components/responses/default'
-      tags:
-      - client.connect token.get
-      - controller.connect token.get
-      - server.connect token.get
-      x-url: $ConnectTokenEndpointUrl
-  /ConnectTokenListEndpoint:
+    servers:
+    - description: Connect Token Create Endpoint
+      url: '{ConnectTokenCreateEndpointBaseUrl}'
+      variables:
+        ConnectTokenCreateEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint
+          description: See [Connect Token Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-create-endpoint)
+  /{ConnectTokenListEndpointPath}:
     get:
       description: See [List connect tokens](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connect-tokens)
       operationId: List connect tokens
@@ -908,7 +931,53 @@ paths:
       - controller.connect tokens.list
       - server.connect tokens.list
       x-url: $ConnectTokenListEndpointUrl
-  /ConnectionCreateEndpoint:
+    parameters:
+    - description: Connect Token List Endpoint path, for example 'user/connecttokens/mgd_dev2'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2'.
+      in: path
+      name: ConnectTokenListEndpointPath
+      required: true
+    servers:
+    - description: Connect Token List Endpoint
+      url: '{ConnectTokenListEndpointBaseUrl}'
+      variables:
+        ConnectTokenListEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint
+          description: See [Connect Token List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token-list-endpoint)
+  /{ConnectTokenUrlPath}:
+    get:
+      description: See [Get connect token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connect-token)
+      operationId: Get connect token
+      responses:
+        '200':
+          $ref: '#/components/responses/connectToken'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - client.connect token.get
+      - controller.connect token.get
+      - server.connect token.get
+      x-url: $ConnectTokenEndpointUrl
+    parameters:
+    - description: Connection Url path, for example 'user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'
+        for the url 'https://dev2-user.testonly.digital-me.nl/user/connecttokens/mgd_dev2/e95feef5-3fd4-4bcd-bb12-024633af8a40'.
+      in: path
+      name: ConnectionUrlPath
+      required: true
+    servers:
+    - description: Connection Url
+      url: '{ConnectionBaseUrl}'
+      variables:
+        ConnectionBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token
+          description: See [Connect Token](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connect-token)
+  /{ConnectionCreateEndpointPath}:
+    parameters:
+    - description: Connection Create Endpoint path, for example 'user/connections/user/mgd_dev2'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2'.
+      in: path
+      name: ConnectionCreateEndpointPath
+      required: true
     post:
       description: See [Request connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-connection)
       operationId: Request connection
@@ -940,21 +1009,14 @@ paths:
         stateHandled:
           $ref: '#/components/x-events/stateHandled'
       x-url: $ConnectionCreateEndpointUrl
-  /ConnectionEndpoint:
-    get:
-      description: See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connection)
-      operationId: Get connection
-      responses:
-        '200':
-          $ref: '#/components/responses/connection'
-        default:
-          $ref: '#/components/responses/default'
-      tags:
-      - client.connection.get
-      - controller.connection.get
-      - server.connection.get
-      x-url: $ConnectionEndpointUrl
-  /ConnectionListEndpoint:
+    servers:
+    - description: Connection Create Endpoint
+      url: '{ConnectionCreateEndpointBaseUrl}'
+      variables:
+        ConnectionCreateEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint
+          description: See [Connection Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-create-endpoint)
+  /{ConnectionListEndpointPath}:
     get:
       description: See [List connections](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-connections)
       operationId: List connections
@@ -968,7 +1030,47 @@ paths:
       - controller.connections.list
       - server.connections.list
       x-url: $ConnectionListEndpointUrl
-  /EventCallbacksEndpoint:
+    parameters:
+    - description: Connection List Endpoint path, for example 'user/connections/user/mgd_dev2'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2'.
+      in: path
+      name: ConnectionListEndpointPath
+      required: true
+    servers:
+    - description: Connection List Endpoint
+      url: '{ConnectionListEndpointBaseUrl}'
+      variables:
+        ConnectionListEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-list-endpoint
+          description: See [Connection List Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection-list-endpoint)
+  /{ConnectionUrlPath}:
+    get:
+      description: See [Get connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-connection)
+      operationId: Get connection
+      responses:
+        '200':
+          $ref: '#/components/responses/connection'
+        default:
+          $ref: '#/components/responses/default'
+      tags:
+      - client.connection.get
+      - controller.connection.get
+      - server.connection.get
+      x-url: $ConnectionEndpointUrl
+    parameters:
+    - description: Connection Url path, for example 'user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
+        for the url 'https://dev2-user.testonly.digital-me.nl/user/connections/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
+      in: path
+      name: ConnectionUrlPath
+      required: true
+    servers:
+    - description: Connection Url
+      url: '{ConnectionBaseUrl}'
+      variables:
+        ConnectionBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection
+          description: See [Connection](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#connection)
+  /{EventCallbacksEndpointPath}:
     get:
       description: See [Get event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-event-callback-endpoints)
       operationId: Get event callback endpoints
@@ -981,6 +1083,12 @@ paths:
       - client.configuration.event callback endpoints.get
       - server.configuration.event callback endpoints.get
       x-url: $EventCallbacksEndpointUrl
+    parameters:
+    - description: Event Callbacks Endpoint path, for example 'user/nodesettings/mgd_dev2/eventcallbacks'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2/eventcallbacks'.
+      in: path
+      name: EventCallbacksEndpointPath
+      required: true
     put:
       description: See [Set event callback endpoints](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-event-callback-endpoints)
       operationId: Set event callback endpoints
@@ -1002,7 +1110,14 @@ paths:
       - client.configuration.event callback endpoints.set
       - server.configuration.event callback endpoints.set
       x-url: $EventCallbacksEndpointUrl
-  /EventsEndpoint:
+    servers:
+    - description: Event Callbacks Endpoint
+      url: '{EventCallbacksEndpointBaseUrl}'
+      variables:
+        EventCallbacksEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint
+          description: See [Event Callbacks Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#event-callbacks-endpoint)
+  /{EventsEndpointPath}:
     get:
       description: See [Start listening to events](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#start-listening-to-events)
       operationId: Start listening to events
@@ -1014,7 +1129,20 @@ paths:
       tags:
       - controller.events
       x-url: $EventsEndpointUrl
-  /MessagesEndpoint:
+    parameters:
+    - description: Events Endpoint path, for example 'user/events/mgd_dev2' for the
+        endpoint 'https://dev2-user.testonly.digital-me.nl/user/events/mgd_dev2'.
+      in: path
+      name: EventsEndpointPath
+      required: true
+    servers:
+    - description: Events Endpoint
+      url: '{EventsEndpointBaseUrl}'
+      variables:
+        EventsEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-create-endpoint
+          description: See [Events Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#events-endpoint)
+  /{MessagesEndpointPath}:
     get:
       description: See [List messages](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#list-messages)
       operationId: List messages
@@ -1032,6 +1160,12 @@ paths:
       - controller.messages.list
       - server.messages.list
       x-url: $MessagesEndpointUrl
+    parameters:
+    - description: Messages Endpoint path, for example 'user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'
+        for the url 'https://dev2-user.testonly.digital-me.nl/user/mbox/user/mgd_dev2/016706d0-b3c1-4104-b6de-aacdf33230c0'.
+      in: path
+      name: MessagesEndpointPath
+      required: true
     post:
       description: See [Send message](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#send-message)
       operationId: Send message
@@ -1057,7 +1191,20 @@ paths:
       - controller.message.send
       - server.message.send
       x-url: $MessagesEndpointUrl
-  /NodeCreateEndpoint:
+    servers:
+    - description: Messages
+      url: '{MessagesEndpointBaseUrl}'
+      variables:
+        MessagesBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#messages-endpoint
+          description: See [Messages Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#messages-endpoint)
+  /{NodeCreateEndpointPath}:
+    parameters:
+    - description: Node Create Endpoint path, for example 'nodes' for the endpoint
+        'https://user.digital-me.nl/nodes'.
+      in: path
+      name: NodeCreateEndpointPath
+      required: true
     post:
       description: See [Request creation of Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#request-creation-of-qiy-node)
       operationId: Request creation of Qiy Node
@@ -1080,7 +1227,14 @@ paths:
       tags:
       - controller.node.request
       x-url: $NodeCreateEndpointUrl
-  /NodeSettingsEndpoint:
+    servers:
+    - description: NodeCreate Endpoint
+      url: '{NodeCreateEndpointBaseUrl}'
+      variables:
+        NodeCreateEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint
+          description: See [Node Create Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-create-endpoint)
+  /{NodeSettingsEndpointPath}:
     get:
       description: See [Get node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-node-settings)
       operationId: Get node settings
@@ -1094,6 +1248,12 @@ paths:
       - controller.configuration.node settings.get
       - server.configuration.node settings.get
       x-url: $NodeSettingsEndpointUrl
+    parameters:
+    - description: Node Settings Endpoint path, for example 'user/nodesettings/mgd_dev2'
+        for the endpoint 'https://dev2-user.testonly.digital-me.nl/user/nodesettings/mgd_dev2'.
+      in: path
+      name: NodeSettingsEndpointPath
+      required: true
     put:
       description: See [Set node settings](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#set-node-settings)
       operationId: Set node settings
@@ -1116,7 +1276,14 @@ paths:
       - controller.configuration.node settings.set
       - server.configuration.node settings.set
       x-url: $NodeSettingsEndpointUrl
-  /SelfEndpoint:
+    servers:
+    - description: Node Settings Endpoint
+      url: '{NodeSettingsEndpointBaseUrl}'
+      variables:
+        NodeSettingsEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint
+          description: See [Node Settings Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#node-settings-endpoint)
+  /{SelfEndpointPath}:
     delete:
       description: See [Delete Qiy Node](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#delete-qiy-node)
       operationId: Delete Qiy Node
@@ -1132,30 +1299,19 @@ paths:
       tags:
       - controller.node.delete
       x-url: $SelfEndpointUrl
-  /api:
-    get:
-      description: See [GET Api](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#api-info)
-        and/or [Get endpoint addresses](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#get-endpoint-addresses)
-      operationId: api
-      responses:
-        '200':
-          $ref: '#/components/responses/api'
-        default:
-          $ref: '#/components/responses/default'
-      security:
-      - appAuthentication: []
-      - userAuthentication: []
-      tags:
-      - api
+    parameters:
+    - description: Self Endpoint path, for example 'user/owners/id/mgd_dev2' for the
+        endpoint 'https://dev2-user.testonly.digital-me.nl/user/owners/id/mgd_dev2'.
+      in: path
+      name: SelfEndpointPath
+      required: true
+    servers:
+    - description: SelfEndpoint
+      url: '{SelfEndpointBaseUrl}'
+      variables:
+        SelfEndpointBaseUrl:
+          default: https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint
+          description: See [Self Endpoint](https://github.com/qiyfoundation/Qiy-Scheme/blob/review-board/Qiy-Node/Qiy%20Node%20API.md#self-endpoint)
 security:
 - appAuthentication: []
 - userAuthentication: []
-servers:
-- description: Proxy server
-  url: https://qiytesttool.pythonanywhere.com/qiy_nodes/qiy_node_api/proxy/v0
-- description: Development 2 server
-  url: https://dev2-user.testonly.digital-me.nl/user/v0
-- description: Acceptance server
-  url: https://user.dolden.net/user/v0
-- description: Production server
-  url: https://user.digital-me.nl/user/v0
