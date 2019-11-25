@@ -23,7 +23,7 @@ Service Providers are provided with at least three Qiy Nodes by their [Access Pr
 # Resource Access Management
 
 The Qiy Node API main feature is Resource Access Management;
-it can be used by a [controller] (eg Individual) to provide a [client] (eg Relying Party) access to a [Described Resource][Definitions Described Resource] (to provide a [Service][Definitions Service]) from a [Service Endpoint] protected by the [Server] (eg Data Provider) using [Feeds], for example using the following scenario:
+it can be used by a [controller] (eg Individual) to provide a [client] (eg Relying Party) access to a [Described Resource][Definitions Described Resource] (to provide a [Service][Definitions Service]) from a [Service Endpoint] protected by the server (eg Data Provider) using [Feeds], for example using the following scenario:
 * The server announces the available [Service][Definitions Service], see [Set service catalogue].
 * The controller connects with the server, see [Request connection].
 * The server identifies the controller (out of bounds).
@@ -806,7 +806,6 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Client Feed Request Callback Endpoint]: #client-feed-request-callback-endpoint
 [Client Feed Request Callback request]: https://fdriesenaar.github.io/Client/openapi.html#/Feeds/Request%20for%20feed%20callback
 [Client Feed Request Callback]: #client-feed-request-callback
-[Client]: https://fdriesenaar.github.io/openapi-doc.html#/client
 [Connect Token Create Endpoint]: #connect-token-create-endpoint
 [Connect Token Endpoint]: #connect-token-endpoint
 [Connect Token List Endpoint]: #connect-token-list-endpoint
@@ -854,16 +853,14 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Event Callback Endpoints]: #event-callback-endpoints
 [Event Callbacks Endpoint]: #event-callbacks-endpoint
 [Events]: #events
-[Feed Requests]: https://fdriesenaar.github.io/openapi-doc.html#/feeds
 [Feed]: #feed
 [Feeds Endpoint]: #feeds-endpoint
 [Feeds]: #feeds
-[Get /api]: https://fdriesenaar.github.io/openapi.html
+[Get /api]: https://fdriesenaar.github.io/openapi.html#/api/api
 [Get connect token request]: https://fdriesenaar.github.io/openapi.html#/Connect%20tokens/Get%20connect%20token
 [Get connect token]: #get-connect-token
 [Get connection request]: https://fdriesenaar.github.io/openapi.html#/Connections/Get%20connection
 [Get connection]: #get-connection
-[Get endpoint addresses request]: https://fdriesenaar.github.io/openapi-doc.html#/api/api
 [Get endpoint addresses]: #get-endpoint-addresses
 [Get event callback endpoints request]: https://fdriesenaar.github.io/openapi.html#/Event%20callback%20endpoints/Get%20event%20callback%20endpoints
 [Get event callback endpoints]: #get-event-callback-endpoints
@@ -915,7 +912,6 @@ User Action Messages are used for request for feed events, see [Request for feed
 [Server Request for Feed request]: https://fdriesenaar.github.io/Server/openapi.html#/Requests%20for%20feeds/Request%20for%20feed
 [Server Request for Feed]: #server-feed-request
 [Server Request for Feeds]: #server-feed-request
-[Server]: https://fdriesenaar.github.io/openapi-doc.html#/server
 [Service Access Endpoint]: #service-access-endpoint
 [Service Catalogue Endpoint]: #service-catalogue-endpoint
 [Service Endpoint]: #service-endpoint
